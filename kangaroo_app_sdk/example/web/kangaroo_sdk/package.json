@@ -1,0 +1,11 @@
+{
+  "name": "KangarooAppSDK",
+  "version": "1.0.0",
+  "main": "KangarooAppSDK.js",
+  "types": "KangarooAppSDK.d.ts",
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

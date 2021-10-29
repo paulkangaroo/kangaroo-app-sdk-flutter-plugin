@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/post_offer_facebook_share/offer_facebook_share_api_interface.dart';

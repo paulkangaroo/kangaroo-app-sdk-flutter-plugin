@@ -1,0 +1,27 @@
+name: kangaroo_app_sdk_web
+description: A new flutter plugin project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  kangaroo_app_sdk_platform_interface:
+    path: ../kangaroo_app_sdk_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      web:
+        pluginClass: KangarooAppSDKWebFlutterPlugin
+        fileName: kangaroo_app_sdk_web.dart
