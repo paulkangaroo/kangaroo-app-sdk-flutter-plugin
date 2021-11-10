@@ -201,30 +201,38 @@ packages:
   kangaroo_app_sdk_android:
     dependency: "direct main"
     description:
-      path: "../kangaroo_app_sdk_android"
-      relative: true
-    source: path
+      path: kangaroo_app_sdk_android
+      ref: HEAD
+      resolved-ref: "9c22de88f3d99161df1c356aca4699f976ee77cf"
+      url: "https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git"
+    source: git
     version: "0.0.1"
   kangaroo_app_sdk_ios:
     dependency: "direct main"
     description:
-      path: "../kangaroo_app_sdk_ios"
-      relative: true
-    source: path
+      path: kangaroo_app_sdk_ios
+      ref: HEAD
+      resolved-ref: "9c22de88f3d99161df1c356aca4699f976ee77cf"
+      url: "https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git"
+    source: git
     version: "0.0.1"
   kangaroo_app_sdk_platform_interface:
     dependency: "direct main"
     description:
-      path: "../kangaroo_app_sdk_platform_interface"
-      relative: true
-    source: path
+      path: kangaroo_app_sdk_platform_interface
+      ref: HEAD
+      resolved-ref: "9c22de88f3d99161df1c356aca4699f976ee77cf"
+      url: "https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git"
+    source: git
     version: "0.0.1"
   kangaroo_app_sdk_web:
     dependency: "direct main"
     description:
-      path: "../kangaroo_app_sdk_web"
-      relative: true
-    source: path
+      path: kangaroo_app_sdk_web
+      ref: HEAD
+      resolved-ref: "9c22de88f3d99161df1c356aca4699f976ee77cf"
+      url: "https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git"
+    source: git
     version: "0.0.1"
   logging:
     dependency: transitive
