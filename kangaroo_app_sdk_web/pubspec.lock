@@ -201,9 +201,11 @@ packages:
   kangaroo_app_sdk_platform_interface:
     dependency: "direct main"
     description:
-      path: "../kangaroo_app_sdk_platform_interface"
-      relative: true
-    source: path
+      path: kangaroo_app_sdk_platform_interface
+      ref: HEAD
+      resolved-ref: "0e6c59c3a0a0d29e0f640b842e37a69c45093101"
+      url: "https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git"
+    source: git
     version: "0.0.1"
   logging:
     dependency: transitive
