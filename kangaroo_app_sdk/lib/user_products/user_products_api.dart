@@ -3,8 +3,7 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart'
     show Result;
-export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_products/user_products_platform_interface.dart'
-    show UserProductsModel;
+export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_products/user_products_platform_interface.dart';
 
 class UserProductsApi {
   static getUserProducts() {

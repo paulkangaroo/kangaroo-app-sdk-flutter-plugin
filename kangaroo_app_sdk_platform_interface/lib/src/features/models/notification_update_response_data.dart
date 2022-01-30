@@ -5,6 +5,9 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business.dart';
 
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business.dart';
+
+
 part 'notification_update_response_data.g.dart';
 
 

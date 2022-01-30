@@ -3,6 +3,7 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
+
 part 'country.g.dart';
 
 /// A country model

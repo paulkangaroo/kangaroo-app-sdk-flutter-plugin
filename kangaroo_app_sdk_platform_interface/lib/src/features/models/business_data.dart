@@ -10,6 +10,14 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.da
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_category.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_category.dart';
+
 part 'business_data.g.dart';
 
 /// User Profile model class containing user data

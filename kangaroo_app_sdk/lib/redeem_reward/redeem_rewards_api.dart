@@ -3,8 +3,7 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart'
     show Result;
-export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/redeem_reward/redeem_rewards_platform_interface.dart'
-    show RedeemResponseModel, RedeemRequest;
+export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/redeem_reward/redeem_rewards_platform_interface.dart';
 
 class RedeemRewardsApi {
   static redeemReward({ 

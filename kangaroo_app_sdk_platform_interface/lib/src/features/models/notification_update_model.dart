@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_update_response_data.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_update_response_data.dart';
+
 part 'notification_update_model.g.dart';
 
 

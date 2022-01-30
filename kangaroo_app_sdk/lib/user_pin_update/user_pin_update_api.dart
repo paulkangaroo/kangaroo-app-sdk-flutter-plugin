@@ -3,8 +3,7 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart'
     show Result;
-export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_pin_update/user_pin_update_platform_interface.dart'
-    show UserProfileModel, UpdatePinRequest;
+export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_pin_update/user_pin_update_platform_interface.dart';
 
 class UserPinUpdateApi {
   static updatePin({ 

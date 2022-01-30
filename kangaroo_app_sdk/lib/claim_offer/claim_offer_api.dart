@@ -3,8 +3,7 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart'
     show Result;
-export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/claim_offer/claim_offer_platform_interface.dart'
-    show ClaimedOfferModel;
+export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/claim_offer/claim_offer_platform_interface.dart';
 
 class ClaimOfferApi {
   static claimOffer({ 

@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_model.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_model.dart';
+
 part 'redeem_response_data.g.dart';
 
 

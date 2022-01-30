@@ -3,6 +3,7 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
+
 part 'transaction.g.dart';
 
 /// Transaction model containting transaction details

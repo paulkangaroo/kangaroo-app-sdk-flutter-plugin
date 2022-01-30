@@ -10,6 +10,14 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.da
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch_address.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch_phone.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch_address.dart';
+
 part 'branch.g.dart';
 
 

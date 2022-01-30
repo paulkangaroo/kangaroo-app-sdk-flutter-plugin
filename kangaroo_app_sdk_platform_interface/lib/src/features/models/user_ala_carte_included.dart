@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/ala_carte_list.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/ala_carte_list.dart';
+
 part 'user_ala_carte_included.g.dart';
 
 

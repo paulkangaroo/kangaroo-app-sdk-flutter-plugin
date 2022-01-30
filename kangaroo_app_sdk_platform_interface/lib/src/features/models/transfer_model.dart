@@ -6,6 +6,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_from.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_to.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_from.dart';
+
 part 'transfer_model.g.dart';
 
 

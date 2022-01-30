@@ -3,6 +3,7 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
+
 part 'user_pin_reset_request.g.dart';
 
 /// User PIN reset request status

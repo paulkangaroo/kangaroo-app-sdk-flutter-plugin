@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/frequent_buyer_users_list.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/frequent_buyer_users_list.dart';
+
 part 'frequent_buyer_item_model.g.dart';
 
 

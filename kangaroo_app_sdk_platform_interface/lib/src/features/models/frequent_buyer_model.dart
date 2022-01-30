@@ -6,6 +6,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_pro
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/frequent_buyer_included.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_data.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/frequent_buyer_included.dart';
+
 part 'frequent_buyer_model.g.dart';
 
 /// Frequent Buyer Model containing list of Frequent Buyer program

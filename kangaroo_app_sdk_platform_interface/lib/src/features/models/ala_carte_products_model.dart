@@ -6,6 +6,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_pro
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_ala_carte_included.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_data.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_ala_carte_included.dart';
+
 part 'ala_carte_products_model.g.dart';
 
 /// User A la carte products model class containing user A la carte list

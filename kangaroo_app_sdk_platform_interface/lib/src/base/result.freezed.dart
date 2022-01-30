@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'result.dart';
@@ -577,10 +578,10 @@ class _$Unauthorized<T>
     implements Unauthorized<T> {
   const _$Unauthorized({this.code = 400, this.message = 'unauthorized'});
 
-  @JsonKey(defaultValue: 400)
+  @JsonKey()
   @override
   final int code;
-  @JsonKey(defaultValue: 'unauthorized')
+  @JsonKey()
   @override
   final String message;
 
@@ -603,12 +604,15 @@ class _$Unauthorized<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is Unauthorized<T> &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.message, message) || other.message == message));
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, code, message);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
@@ -745,10 +749,10 @@ class _$ErrorCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
 class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
   const _$Error({this.code = -1, this.message = 'unknown error'});
 
-  @JsonKey(defaultValue: -1)
+  @JsonKey()
   @override
   final int code;
-  @JsonKey(defaultValue: 'unknown error')
+  @JsonKey()
   @override
   final String message;
 
@@ -771,12 +775,15 @@ class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is Error<T> &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.message, message) || other.message == message));
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, code, message);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override

@@ -3,8 +3,7 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart'
     show Result;
-export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transfer_messages/transfer_messages_platform_interface.dart'
-    show TransferMessagesModel;
+export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transfer_messages/transfer_messages_platform_interface.dart';
 
 class TransferMessagesApi {
   static getTransferMessages({ 

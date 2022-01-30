@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/campaign_message.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/campaign_message.dart';
+
 part 'campaign_messages_model.g.dart';
 
 /// Contains a list of campaign messages sent to this user

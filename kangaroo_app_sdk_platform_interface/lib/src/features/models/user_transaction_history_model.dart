@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transaction.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transaction.dart';
+
 part 'user_transaction_history_model.g.dart';
 
 /// User Profile model class containing user data

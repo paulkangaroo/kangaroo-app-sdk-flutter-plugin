@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/social_media_list.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/social_media_list.dart';
+
 part 'social_media_included.g.dart';
 
 

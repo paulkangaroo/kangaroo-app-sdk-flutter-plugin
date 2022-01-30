@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/country.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/country.dart';
+
 part 'countries.g.dart';
 
 /// A list of countries supported by Kangaroo

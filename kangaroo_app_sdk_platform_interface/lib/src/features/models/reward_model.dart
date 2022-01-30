@@ -6,6 +6,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.da
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
+
 part 'reward_model.g.dart';
 
 

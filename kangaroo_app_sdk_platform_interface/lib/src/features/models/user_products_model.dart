@@ -6,6 +6,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_pro
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_products_included.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_data.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_products_included.dart';
+
 part 'user_products_model.g.dart';
 
 /// User Product model class containing user product list

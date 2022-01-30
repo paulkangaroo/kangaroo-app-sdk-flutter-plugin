@@ -3,8 +3,7 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart'
     show Result;
-export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_check_in/user_check_in_platform_interface.dart'
-    show EmptyResponse, CheckInRequest;
+export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_check_in/user_check_in_platform_interface.dart';
 
 class UserCheckInApi {
   static userCheckIn({ 

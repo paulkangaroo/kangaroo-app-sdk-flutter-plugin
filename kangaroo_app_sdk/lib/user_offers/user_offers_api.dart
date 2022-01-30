@@ -3,8 +3,7 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart'
     show Result;
-export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_offers/user_offers_platform_interface.dart'
-    show UserOffersModel;
+export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_offers/user_offers_platform_interface.dart';
 
 class UserOffersApi {
   static getUserOffers() {

@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/campaign.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/campaign.dart';
+
 part 'campaign_message.g.dart';
 
 /// Campaign Message. These are sent to the user by the business through Kangaroo's Marketing module. 

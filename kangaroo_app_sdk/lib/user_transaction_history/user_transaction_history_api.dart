@@ -3,8 +3,7 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart'
     show Result;
-export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transaction_history/user_transaction_history_platform_interface.dart'
-    show UserTransactionHistoryModel;
+export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transaction_history/user_transaction_history_platform_interface.dart';
 
 class UserTransactionHistoryApi {
   static getUserTransactionHistory() {

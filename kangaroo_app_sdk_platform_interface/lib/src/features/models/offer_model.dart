@@ -8,6 +8,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_tr
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_action.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_translation.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_action.dart';
+
 part 'offer_model.g.dart';
 
 

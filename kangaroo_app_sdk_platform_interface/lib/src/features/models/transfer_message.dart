@@ -8,6 +8,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_message_actions.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_model.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_message_gift_card_queue.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_message_actions.dart';
+
 part 'transfer_message.g.dart';
 
 /// Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet) 

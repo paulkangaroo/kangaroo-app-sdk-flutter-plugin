@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_message.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_message.dart';
+
 part 'transfer_recall_result_model.g.dart';
 
 /// Contains the result of a recalled transfer.

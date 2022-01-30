@@ -3,6 +3,7 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
+
 part 'business_category.g.dart';
 
 /// Details about this business' category. This can be something like cafe, boutique, etc... 

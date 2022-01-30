@@ -4,6 +4,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/redeem_response_data.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/redeem_response_data.dart';
+
 part 'redeem_response_model.g.dart';
 
 

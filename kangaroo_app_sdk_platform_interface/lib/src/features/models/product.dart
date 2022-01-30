@@ -6,6 +6,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/images.d
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/languages.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/images.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/languages.dart';
+
 part 'product.g.dart';
 
 

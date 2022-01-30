@@ -15,39 +15,39 @@ plugins {
     id("de.undercouch.download") version "4.1.2"
 }
 
-val kangarooApiVersion = "0.0.14"
+val kangarooApiVersion = "0.0.15"
 
 /**
  * Download api spec from github to build folder
  */
-val downloadZippedApiTask = "downloadZippedKangarooApiSpec".apply {
-    tasks.create(this) {
-        group = "kangaroo"
-    }.apply {
-        val url = "https://github.com/kangaroorewards/api-docs/archive/refs/tags/v$kangarooApiVersion.zip"
-        val urlListener = ApacheURLLister()
-        val files = urlListener.listFiles(java.net.URL(url))
-        println("********* URL TO DOWNLOAD $files")
-        download.configure(
-            delegateClosureOf<DownloadAction> {
-                src(url)
-                dest(File("$buildDir/apiSpec", "$kangarooApiVersion.zip"))
-            }
-        )
-    }
-}
+//val downloadZippedApiTask = "downloadZippedKangarooApiSpec".apply {
+//    tasks.create(this) {
+//        group = "kangaroo"
+//    }.apply {
+//        val url = "https://github.com/kangaroorewards/api-docs/archive/refs/tags/v$kangarooApiVersion.zip"
+//        val urlListener = ApacheURLLister()
+//        val files = urlListener.listFiles(java.net.URL(url))
+//        println("********* URL TO DOWNLOAD $files")
+//        download.configure(
+//            delegateClosureOf<DownloadAction> {
+//                src(url)
+//                dest(File("$buildDir/apiSpec", "$kangarooApiVersion.zip"))
+//            }
+//        )
+//    }
+//}
 
-val downloadApiTask = "downloadKangarooApiSpec".apply {
-    tasks.create(this) {
-        group = "kangaroo"
-    }.apply {
-        dependsOn(tasks.getByName(downloadZippedApiTask))
-        copy {
-            from(zipTree(File("$buildDir/apiSpec", "$kangarooApiVersion.zip")))
-            into("$buildDir/apiSpec")
-        }
-    }
-}
+//val downloadApiTask = "downloadKangarooApiSpec".apply {
+//    tasks.create(this) {
+//        group = "kangaroo"
+//    }.apply {
+//        dependsOn(tasks.getByName(downloadZippedApiTask))
+//        copy {
+//            from(zipTree(File("$buildDir/apiSpec", "$kangarooApiVersion.zip")))
+//            into("$buildDir/apiSpec")
+//        }
+//    }
+//}
 
 /**
  * Array of swagger spec files. We will use all files ending
