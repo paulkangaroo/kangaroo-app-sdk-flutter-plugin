@@ -1,5 +1,6 @@
 package com.kangaroo.flutterplugin.android
 
+import android.content.Context
 import androidx.annotation.NonNull
 import com.kangaroo.flutterplugin.android.features.pluginHandlerList
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -15,9 +16,10 @@ import kangaroorewards.appsdk.core.KangarooSdk
 @Suppress("unused")
 class KangarooAppSDKAndroidFlutterPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     private lateinit var methodChannel: MethodChannel
+    private lateinit var context: Context
 
     override fun onAttachedToActivity(activityBinding: ActivityPluginBinding) {
-        KangarooSdk(context = activityBinding.activity).initialize()
+        context = activityBinding.activity
     }
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: MethodChannel.Result) {
@@ -25,6 +27,9 @@ class KangarooAppSDKAndroidFlutterPlugin : FlutterPlugin, MethodCallHandler, Act
             if (call.method == it.methodChannel) {
                 result.success(it.onMethodCall(call))
             }
+        }
+        if (call.method == "core/methods/initializeSdk") {
+            result.success(KangarooAppSdk.initializeSdk(call, context))
         }
     }
 

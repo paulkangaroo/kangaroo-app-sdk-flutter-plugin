@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class KASDKOSToken, KASDKOSRuntimeQuery<__covariant RowType>, KASDKOSKtor_client_coreHttpRequestBuilder, KASDKOSKotlinUnit, KASDKOSKtor_httpHttpAuthHeader, KASDKOSModelOld, KASDKOSResult<__covariant T>, KASDKOSResultMetaData, KASDKOSResultIdle<__covariant T>, KASDKOSResultLoadingCompanion, KASDKOSResultLoading<__covariant T>, KASDKOSKotlinArray<T>, KASDKOSResultSuccessCompanion, KASDKOSResultSuccess<__covariant T>, KASDKOSResultUnauthorizedErrorCompanion, KASDKOSResultUnauthorizedError<__covariant T>, KASDKOSResultUnknownErrorCompanion, KASDKOSResultUnknownError<__covariant T>, KASDKOSResultMetaDataCompanion, KASDKOSSerializedResult<__covariant T>, KASDKOSSerializedResultIdleCompanion, KASDKOSSerializedResultIdle, KASDKOSSerializedResultLoadingCompanion, KASDKOSSerializedResultLoading, KASDKOSSerializedResultSuccessCompanion, KASDKOSSerializedResultSuccess, KASDKOSSerializedResultUnauthorizedErrorCompanion, KASDKOSSerializedResultUnauthorizedError, KASDKOSSerializedResultUnknownErrorCompanion, KASDKOSSerializedResultUnknownError, KASDKOSModel, KASDKOSLanguage, KASDKOSTranslation, KASDKOSRewardTranslation, KASDKOSModelCompanion, KASDKOSEmptyResponse, KASDKOSKangarooCacheCompanion, KASDKOSApi, KASDKOSBusinessApiCompanion, KASDKOSBusiness, KASDKOSCFlow<T>, KASDKOSBranchPhone, KASDKOSImage, KASDKOSBranchAddress, KASDKOSBranchCompanion, KASDKOSBranch, KASDKOSBranchAddressCompanion, KASDKOSBranchPhoneCompanion, KASDKOSBusinessData, KASDKOSBusinessBranchesData, KASDKOSBusinessCompanion, KASDKOSBusinessBranchesDataCompanion, KASDKOSBusinessCategoryCompanion, KASDKOSBusinessCategory, KASDKOSBusinessDataCompanion, KASDKOSImageCompanion, KASDKOSUserRegistrationApiCompanion, KASDKOSUserProfileModel, KASDKOSUserProfileDataCompanion, KASDKOSUserProfileData, KASDKOSUserProfileModelCompanion, KASDKOSUserPinResetRequestApiCompanion, KASDKOSUserPinResetRequest, KASDKOSUserPinResetRequestCompanion, KASDKOSOfferFacebookShareApiCompanion, KASDKOSUserProfileModel_, KASDKOSUserProfileData_Companion, KASDKOSUserProfileData_, KASDKOSUserProfileModel_Companion, KASDKOSAlaCarteProductsApiCompanion, KASDKOSAlaCarteProductsModel, KASDKOSProductItemModel, KASDKOSAlaCarteItemModelCompanion, KASDKOSAlaCarteItemModel, KASDKOSUserProfileData__, KASDKOSUserAlaCarteIncluded, KASDKOSAlaCarteProductsModelCompanion, KASDKOSErrorCompanion, KASDKOSError, KASDKOSImagesCompanion, KASDKOSImages, KASDKOSLanguage_Companion, KASDKOSLanguage_, KASDKOSLanguagesCompanion, KASDKOSLanguages, KASDKOSProductItemModelCompanion, KASDKOSUserAlaCarteIncludedCompanion, KASDKOSUserProfileData__Companion, KASDKOSSocialMediaApiCompanion, KASDKOSSocialMediaModel, KASDKOSError_Companion, KASDKOSError_, KASDKOSSocialMediaItemModel, KASDKOSSocialMediaIncludedCompanion, KASDKOSSocialMediaIncluded, KASDKOSSocialMediaItemModelCompanion, KASDKOSSocialMediaModelCompanion, KASDKOSUserPinUpdateApiCompanion, KASDKOSUserProfileModel__, KASDKOSUpdatePinRequest, KASDKOSUpdatePinRequestCompanion, KASDKOSUserProfileData___Companion, KASDKOSUserProfileData___, KASDKOSUserProfileModel__Companion, KASDKOSUserTransactionHistoryApiCompanion, KASDKOSUserTransactionHistoryModel, KASDKOSTransactionCompanion, KASDKOSTransaction, KASDKOSUserTransactionHistoryModelCompanion, KASDKOSTransferRecallApiCompanion, KASDKOSTransferRecallResultModel, KASDKOSImage_Companion, KASDKOSImage_, KASDKOSLanguage__Companion, KASDKOSLanguage__, KASDKOSOfferActionCompanion, KASDKOSOfferAction, KASDKOSOfferTranslation, KASDKOSOfferModelCompanion, KASDKOSOfferModel, KASDKOSOfferTranslationCompanion, KASDKOSTransferMessageGiftCardQueue, KASDKOSTransferMessageActions, KASDKOSTransferMessageCompanion, KASDKOSTransferMessage, KASDKOSTransferMessageActionsCompanion, KASDKOSTransferMessageGiftCardQueueCompanion, KASDKOSTransferRecallResultModelCompanion, KASDKOSBalanceTransferApiCompanion, KASDKOSTransferModel, KASDKOSTransferFromCompanion, KASDKOSTransferFrom, KASDKOSTransferTo, KASDKOSTransferModelCompanion, KASDKOSTransferToCompanion, KASDKOSFrequentBuyerApiCompanion, KASDKOSFrequentBuyerModel, KASDKOSError__Companion, KASDKOSError__, KASDKOSFrequentBuyerItemModel, KASDKOSFrequentBuyerIncludedCompanion, KASDKOSFrequentBuyerIncluded, KASDKOSFrequentBuyerUsersModel, KASDKOSFrequentBuyerItemModelCompanion, KASDKOSUserProfileData____, KASDKOSFrequentBuyerModelCompanion, KASDKOSFrequentBuyerUsersModelCompanion, KASDKOSUserProfileData____Companion, KASDKOSUserOffersApiCompanion, KASDKOSUserOffersModel, KASDKOSImage__Companion, KASDKOSImage__, KASDKOSLanguage___Companion, KASDKOSLanguage___, KASDKOSOfferAction_Companion, KASDKOSOfferAction_, KASDKOSOfferTranslation_, KASDKOSOfferModel_Companion, KASDKOSOfferModel_, KASDKOSOfferTranslation_Companion, KASDKOSUserOffersModelCompanion, KASDKOSClaimOfferApiCompanion, KASDKOSClaimedOfferModel, KASDKOSOfferModel__, KASDKOSClaimedOfferModelCompanion, KASDKOSImage___Companion, KASDKOSImage___, KASDKOSLanguage____Companion, KASDKOSLanguage____, KASDKOSOfferAction__Companion, KASDKOSOfferAction__, KASDKOSOfferTranslation__, KASDKOSOfferModel__Companion, KASDKOSOfferTranslation__Companion, KASDKOSUserProfileUpdateApiCompanion, KASDKOSUserProfileModel___, KASDKOSUserProfileData_____Companion, KASDKOSUserProfileData_____, KASDKOSUserProfileModel___Companion, KASDKOSRedeemRewardsApiCompanion, KASDKOSRedeemResponseModel, KASDKOSRedeemRequest, KASDKOSRedemptionModel, KASDKOSRedeemRequestCompanion, KASDKOSUserProfileModel____, KASDKOSRedeemResponseDataCompanion, KASDKOSRedeemResponseData, KASDKOSRedeemResponseModelCompanion, KASDKOSRedemptionModelCompanion, KASDKOSUserProfileData______Companion, KASDKOSUserProfileData______, KASDKOSUserProfileModel____Companion, KASDKOSUserCheckInApiCompanion, KASDKOSCheckInRequest, KASDKOSCheckInRequestCompanion, KASDKOSUpdateNotificationPreferencesApiCompanion, KASDKOSNotificationUpdateModel, KASDKOSNotificationPreferencesRequest, KASDKOSBusiness_Companion, KASDKOSBusiness_, KASDKOSNotificationPreferencesRequestCompanion, KASDKOSNotificationUpdateResponseData, KASDKOSNotificationUpdateModelCompanion, KASDKOSNotificationUpdateResponseDataCompanion, KASDKOSUserAuthenticationApiCompanion, KASDKOSUserAuthenticationModel, KASDKOSUserAuthenticationModelCompanion, KASDKOSUserProfileApiCompanion, KASDKOSUserProfileModel_____, KASDKOSUserProfileData_______Companion, KASDKOSUserProfileData_______, KASDKOSUserProfileModel_____Companion, KASDKOSCountriesApiCompanion, KASDKOSCountries, KASDKOSCountry, KASDKOSCountriesCompanion, KASDKOSCountryCompanion, KASDKOSUserPinResetApiCompanion, KASDKOSUserRewardsApiCompanion, KASDKOSUserRewardsModel, KASDKOSImage____Companion, KASDKOSImage____, KASDKOSLanguage_____Companion, KASDKOSLanguage_____, KASDKOSRewardTranslation_, KASDKOSRewardModelCompanion, KASDKOSRewardModel, KASDKOSRewardTranslation_Companion, KASDKOSUserRewardsDataCompanion, KASDKOSUserRewardsData, KASDKOSUserRewardsModelCompanion, KASDKOSCampaignMessagesApiCompanion, KASDKOSCampaignMessagesModel, KASDKOSBusinessCategory_Companion, KASDKOSBusinessCategory_, KASDKOSImage_____, KASDKOSBusinessData_Companion, KASDKOSBusinessData_, KASDKOSOfferModel___, KASDKOSCampaignCompanion, KASDKOSCampaign, KASDKOSCampaignMessageCompanion, KASDKOSCampaignMessage, KASDKOSCampaignMessagesModelCompanion, KASDKOSImage_____Companion, KASDKOSLanguage______Companion, KASDKOSLanguage______, KASDKOSOfferAction___Companion, KASDKOSOfferAction___, KASDKOSOfferTranslation___, KASDKOSOfferModel___Companion, KASDKOSOfferTranslation___Companion, KASDKOSUserProductsApiCompanion, KASDKOSUserProductsModel, KASDKOSError___Companion, KASDKOSError___, KASDKOSImages_Companion, KASDKOSImages_, KASDKOSLanguage_______Companion, KASDKOSLanguage_______, KASDKOSLanguages_Companion, KASDKOSLanguages_, KASDKOSProductCompanion, KASDKOSProduct, KASDKOSUserProductsIncludedCompanion, KASDKOSUserProductsIncluded, KASDKOSUserProfileData________, KASDKOSUserProductsModelCompanion, KASDKOSUserProfileData________Companion, KASDKOSTransferMessagesApiCompanion, KASDKOSTransferMessagesModel, KASDKOSImage______Companion, KASDKOSImage______, KASDKOSLanguage________Companion, KASDKOSLanguage________, KASDKOSOfferAction____Companion, KASDKOSOfferAction____, KASDKOSOfferTranslation____, KASDKOSOfferModel____Companion, KASDKOSOfferModel____, KASDKOSOfferTranslation____Companion, KASDKOSTransferMessageGiftCardQueue_, KASDKOSTransferMessageActions_, KASDKOSTransferMessage_Companion, KASDKOSTransferMessage_, KASDKOSTransferMessageActions_Companion, KASDKOSTransferMessageGiftCardQueue_Companion, KASDKOSTransferMessagesModelCompanion, KASDKOSKtor_httpHeadersBuilder, KASDKOSKtor_client_coreHttpRequestBuilderCompanion, KASDKOSKtor_client_coreHttpRequestData, KASDKOSKtor_httpURLBuilder, KASDKOSKtor_httpHttpMethod, KASDKOSKtor_httpHttpAuthHeaderCompanion, KASDKOSKtor_httpHeaderValueEncoding, KASDKOSKotlinThrowable, KASDKOSKotlinException, KASDKOSKotlinRuntimeException, KASDKOSKotlinIllegalStateException, KASDKOSRuntimeTransacterTransaction, KASDKOSKotlinByteArray, KASDKOSKtor_utilsStringValuesBuilder, KASDKOSKtor_httpUrl, KASDKOSKtor_httpOutgoingContent, KASDKOSKtor_utilsAttributeKey<T>, KASDKOSKtor_httpURLProtocol, KASDKOSKtor_httpParametersBuilder, KASDKOSKtor_httpURLBuilderCompanion, KASDKOSKotlinCancellationException, KASDKOSKtor_httpHttpMethodCompanion, KASDKOSKtor_httpHttpAuthHeaderParameterized, KASDKOSKtor_ioCharset, KASDKOSKotlinEnumCompanion, KASDKOSKotlinEnum<E>, KASDKOSKotlinx_serialization_coreSerializersModule, KASDKOSKotlinx_serialization_coreSerialKind, KASDKOSKotlinNothing, KASDKOSKotlinByteIterator, KASDKOSKtor_httpUrlCompanion, KASDKOSKtor_httpContentType, KASDKOSKtor_httpHttpStatusCode, KASDKOSKtor_httpURLProtocolCompanion, KASDKOSKtor_httpUrlEncodingOption, KASDKOSKtor_httpHeaderValueParam, KASDKOSKtor_ioCharsetCompanion, KASDKOSKtor_ioCharsetDecoder, KASDKOSKtor_ioCharsetEncoder, KASDKOSKtor_httpHeaderValueWithParametersCompanion, KASDKOSKtor_httpHeaderValueWithParameters, KASDKOSKtor_httpContentTypeCompanion, KASDKOSKtor_httpHttpStatusCodeCompanion, KASDKOSKotlinx_coroutines_coreAtomicDesc, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, KASDKOSKotlinx_coroutines_coreAtomicOp<__contravariant T>, KASDKOSKotlinx_coroutines_coreOpDescriptor, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNode, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
+@class KASDKOSToken, KASDKOSRuntimeQuery<__covariant RowType>, KASDKOSKtor_client_coreHttpRequestBuilder, KASDKOSKotlinUnit, KASDKOSKtor_httpHttpAuthHeader, KASDKOSModelOld, KASDKOSResult<__covariant T>, KASDKOSResultMetaData, KASDKOSResultIdle<__covariant T>, KASDKOSResultLoadingCompanion, KASDKOSResultLoading<__covariant T>, KASDKOSKotlinArray<T>, KASDKOSResultSuccessCompanion, KASDKOSResultSuccess<__covariant T>, KASDKOSResultUnauthorizedErrorCompanion, KASDKOSResultUnauthorizedError<__covariant T>, KASDKOSResultUnknownErrorCompanion, KASDKOSResultUnknownError<__covariant T>, KASDKOSResultMetaDataCompanion, KASDKOSSerializedResult<__covariant T>, KASDKOSSerializedResultIdleCompanion, KASDKOSSerializedResultIdle, KASDKOSSerializedResultLoadingCompanion, KASDKOSSerializedResultLoading, KASDKOSSerializedResultSuccessCompanion, KASDKOSSerializedResultSuccess, KASDKOSSerializedResultUnauthorizedErrorCompanion, KASDKOSSerializedResultUnauthorizedError, KASDKOSSerializedResultUnknownErrorCompanion, KASDKOSSerializedResultUnknownError, KASDKOSModel, KASDKOSLanguage, KASDKOSTranslation, KASDKOSRewardTranslation, KASDKOSModelCompanion, KASDKOSEmptyResponse, KASDKOSKangarooCacheCompanion, KASDKOSApi, KASDKOSBusinessApiCompanion, KASDKOSBusiness, KASDKOSCFlow<T>, KASDKOSBranchPhone, KASDKOSImage, KASDKOSBranchAddress, KASDKOSBranchCompanion, KASDKOSBranch, KASDKOSBranchAddressCompanion, KASDKOSBranchPhoneCompanion, KASDKOSBusinessData, KASDKOSBusinessBranchesData, KASDKOSBusinessCompanion, KASDKOSBusinessBranchesDataCompanion, KASDKOSBusinessCategoryCompanion, KASDKOSBusinessCategory, KASDKOSBusinessDataCompanion, KASDKOSImageCompanion, KASDKOSUserRegistrationApiCompanion, KASDKOSUserProfileModel, KASDKOSUserProfileDataCompanion, KASDKOSUserProfileData, KASDKOSUserProfileModelCompanion, KASDKOSUserPinResetRequestApiCompanion, KASDKOSUserPinResetRequest, KASDKOSUserPinResetRequestCompanion, KASDKOSOfferFacebookShareApiCompanion, KASDKOSUserProfileModel_, KASDKOSUserProfileBalanceDataCompanion, KASDKOSUserProfileBalanceData, KASDKOSUserProfileData_Companion, KASDKOSUserProfileData_, KASDKOSUserProfileIncludeCompanion, KASDKOSUserProfileInclude, KASDKOSUserProfileModel_Companion, KASDKOSAlaCarteProductsApiCompanion, KASDKOSAlaCarteProductsModel, KASDKOSProductItemModel, KASDKOSAlaCarteItemModelCompanion, KASDKOSAlaCarteItemModel, KASDKOSUserProfileData__, KASDKOSUserAlaCarteIncluded, KASDKOSAlaCarteProductsModelCompanion, KASDKOSErrorCompanion, KASDKOSError, KASDKOSImagesCompanion, KASDKOSImages, KASDKOSLanguage_Companion, KASDKOSLanguage_, KASDKOSLanguagesCompanion, KASDKOSLanguages, KASDKOSProductItemModelCompanion, KASDKOSUserAlaCarteIncludedCompanion, KASDKOSUserProfileData__Companion, KASDKOSSocialMediaApiCompanion, KASDKOSSocialMediaModel, KASDKOSError_Companion, KASDKOSError_, KASDKOSSocialMediaItemModel, KASDKOSSocialMediaIncludedCompanion, KASDKOSSocialMediaIncluded, KASDKOSSocialMediaItemModelCompanion, KASDKOSSocialMediaModelCompanion, KASDKOSUserPinUpdateApiCompanion, KASDKOSUserProfileModel__, KASDKOSUpdatePinRequest, KASDKOSUpdatePinRequestCompanion, KASDKOSUserProfileBalanceData_Companion, KASDKOSUserProfileBalanceData_, KASDKOSUserProfileData___Companion, KASDKOSUserProfileData___, KASDKOSUserProfileInclude_Companion, KASDKOSUserProfileInclude_, KASDKOSUserProfileModel__Companion, KASDKOSUserTransactionHistoryApiCompanion, KASDKOSUserTransactionHistoryModel, KASDKOSTransactionCompanion, KASDKOSTransaction, KASDKOSUserTransactionHistoryModelCompanion, KASDKOSTransferRecallApiCompanion, KASDKOSTransferRecallResultModel, KASDKOSImage_Companion, KASDKOSImage_, KASDKOSLanguage__Companion, KASDKOSLanguage__, KASDKOSOfferActionCompanion, KASDKOSOfferAction, KASDKOSOfferTranslation, KASDKOSOfferModelCompanion, KASDKOSOfferModel, KASDKOSOfferTranslationCompanion, KASDKOSTransferMessageGiftCardQueue, KASDKOSTransferMessageActions, KASDKOSTransferMessageCompanion, KASDKOSTransferMessage, KASDKOSTransferMessageActionsCompanion, KASDKOSTransferMessageGiftCardQueueCompanion, KASDKOSTransferRecallResultModelCompanion, KASDKOSBalanceTransferApiCompanion, KASDKOSTransferModel, KASDKOSTransferFromCompanion, KASDKOSTransferFrom, KASDKOSTransferTo, KASDKOSTransferModelCompanion, KASDKOSTransferToCompanion, KASDKOSFrequentBuyerApiCompanion, KASDKOSFrequentBuyerModel, KASDKOSError__Companion, KASDKOSError__, KASDKOSFrequentBuyerItemModel, KASDKOSFrequentBuyerIncludedCompanion, KASDKOSFrequentBuyerIncluded, KASDKOSFrequentBuyerUsersModel, KASDKOSFrequentBuyerItemModelCompanion, KASDKOSUserProfileData____, KASDKOSFrequentBuyerModelCompanion, KASDKOSFrequentBuyerUsersModelCompanion, KASDKOSUserProfileData____Companion, KASDKOSUserOffersApiCompanion, KASDKOSUserOffersModel, KASDKOSImage__Companion, KASDKOSImage__, KASDKOSLanguage___Companion, KASDKOSLanguage___, KASDKOSOfferAction_Companion, KASDKOSOfferAction_, KASDKOSOfferTranslation_, KASDKOSOfferModel_Companion, KASDKOSOfferModel_, KASDKOSOfferTranslation_Companion, KASDKOSUserOffersModelCompanion, KASDKOSClaimOfferApiCompanion, KASDKOSClaimedOfferModel, KASDKOSOfferModel__, KASDKOSClaimedOfferModelCompanion, KASDKOSImage___Companion, KASDKOSImage___, KASDKOSLanguage____Companion, KASDKOSLanguage____, KASDKOSOfferAction__Companion, KASDKOSOfferAction__, KASDKOSOfferTranslation__, KASDKOSOfferModel__Companion, KASDKOSOfferTranslation__Companion, KASDKOSUserProfileUpdateApiCompanion, KASDKOSUserProfileModel___, KASDKOSUserProfileBalanceData__Companion, KASDKOSUserProfileBalanceData__, KASDKOSUserProfileData_____Companion, KASDKOSUserProfileData_____, KASDKOSUserProfileInclude__Companion, KASDKOSUserProfileInclude__, KASDKOSUserProfileModel___Companion, KASDKOSRedeemRewardsApiCompanion, KASDKOSRedeemResponseModel, KASDKOSRedeemRequest, KASDKOSRedemptionModel, KASDKOSRedeemRequestCompanion, KASDKOSUserProfileModel____, KASDKOSRedeemResponseDataCompanion, KASDKOSRedeemResponseData, KASDKOSRedeemResponseModelCompanion, KASDKOSRedemptionModelCompanion, KASDKOSUserProfileBalanceData___Companion, KASDKOSUserProfileBalanceData___, KASDKOSUserProfileData______Companion, KASDKOSUserProfileData______, KASDKOSUserProfileInclude___Companion, KASDKOSUserProfileInclude___, KASDKOSUserProfileModel____Companion, KASDKOSUserCheckInApiCompanion, KASDKOSCheckInRequest, KASDKOSCheckInRequestCompanion, KASDKOSUpdateNotificationPreferencesApiCompanion, KASDKOSNotificationUpdateModel, KASDKOSNotificationPreferencesRequest, KASDKOSBusiness_Companion, KASDKOSBusiness_, KASDKOSNotificationPreferencesRequestCompanion, KASDKOSNotificationUpdateResponseData, KASDKOSNotificationUpdateModelCompanion, KASDKOSNotificationUpdateResponseDataCompanion, KASDKOSUserAuthenticationApiCompanion, KASDKOSUserAuthenticationModel, KASDKOSUserAuthenticationModelCompanion, KASDKOSUserProfileApiCompanion, KASDKOSUserProfileModel_____, KASDKOSUserProfileBalanceData____Companion, KASDKOSUserProfileBalanceData____, KASDKOSUserProfileData_______Companion, KASDKOSUserProfileData_______, KASDKOSUserProfileInclude____Companion, KASDKOSUserProfileInclude____, KASDKOSUserProfileModel_____Companion, KASDKOSCountriesApiCompanion, KASDKOSCountries, KASDKOSCountry, KASDKOSCountriesCompanion, KASDKOSCountryCompanion, KASDKOSUserPinResetApiCompanion, KASDKOSUserRewardsApiCompanion, KASDKOSUserRewardsModel, KASDKOSImage____Companion, KASDKOSImage____, KASDKOSLanguage_____Companion, KASDKOSLanguage_____, KASDKOSRewardTranslation_, KASDKOSRewardModelCompanion, KASDKOSRewardModel, KASDKOSRewardTranslation_Companion, KASDKOSUserRewardsDataCompanion, KASDKOSUserRewardsData, KASDKOSUserRewardsModelCompanion, KASDKOSCampaignMessagesApiCompanion, KASDKOSCampaignMessagesModel, KASDKOSBusinessCategory_Companion, KASDKOSBusinessCategory_, KASDKOSImage_____, KASDKOSBusinessData_Companion, KASDKOSBusinessData_, KASDKOSOfferModel___, KASDKOSCampaignCompanion, KASDKOSCampaign, KASDKOSCampaignMessageCompanion, KASDKOSCampaignMessage, KASDKOSCampaignMessagesModelCompanion, KASDKOSImage_____Companion, KASDKOSLanguage______Companion, KASDKOSLanguage______, KASDKOSOfferAction___Companion, KASDKOSOfferAction___, KASDKOSOfferTranslation___, KASDKOSOfferModel___Companion, KASDKOSOfferTranslation___Companion, KASDKOSUserProductsApiCompanion, KASDKOSUserProductsModel, KASDKOSError___Companion, KASDKOSError___, KASDKOSImages_Companion, KASDKOSImages_, KASDKOSLanguage_______Companion, KASDKOSLanguage_______, KASDKOSLanguages_Companion, KASDKOSLanguages_, KASDKOSProductCompanion, KASDKOSProduct, KASDKOSUserProductsIncludedCompanion, KASDKOSUserProductsIncluded, KASDKOSUserProfileData________, KASDKOSUserProductsModelCompanion, KASDKOSUserProfileData________Companion, KASDKOSTransferMessagesApiCompanion, KASDKOSTransferMessagesModel, KASDKOSImage______Companion, KASDKOSImage______, KASDKOSLanguage________Companion, KASDKOSLanguage________, KASDKOSOfferAction____Companion, KASDKOSOfferAction____, KASDKOSOfferTranslation____, KASDKOSOfferModel____Companion, KASDKOSOfferModel____, KASDKOSOfferTranslation____Companion, KASDKOSTransferMessageGiftCardQueue_, KASDKOSTransferMessageActions_, KASDKOSTransferMessage_Companion, KASDKOSTransferMessage_, KASDKOSTransferMessageActions_Companion, KASDKOSTransferMessageGiftCardQueue_Companion, KASDKOSTransferMessagesModelCompanion, KASDKOSKtor_httpHeadersBuilder, KASDKOSKtor_client_coreHttpRequestBuilderCompanion, KASDKOSKtor_client_coreHttpRequestData, KASDKOSKtor_httpURLBuilder, KASDKOSKtor_httpHttpMethod, KASDKOSKtor_httpHttpAuthHeaderCompanion, KASDKOSKtor_httpHeaderValueEncoding, KASDKOSKotlinThrowable, KASDKOSKotlinException, KASDKOSKotlinRuntimeException, KASDKOSKotlinIllegalStateException, KASDKOSRuntimeTransacterTransaction, KASDKOSKotlinByteArray, KASDKOSKtor_utilsStringValuesBuilder, KASDKOSKtor_httpUrl, KASDKOSKtor_httpOutgoingContent, KASDKOSKtor_utilsAttributeKey<T>, KASDKOSKtor_httpURLProtocol, KASDKOSKtor_httpParametersBuilder, KASDKOSKtor_httpURLBuilderCompanion, KASDKOSKotlinCancellationException, KASDKOSKtor_httpHttpMethodCompanion, KASDKOSKtor_httpHttpAuthHeaderParameterized, KASDKOSKtor_ioCharset, KASDKOSKotlinEnumCompanion, KASDKOSKotlinEnum<E>, KASDKOSKotlinx_serialization_coreSerializersModule, KASDKOSKotlinx_serialization_coreSerialKind, KASDKOSKotlinNothing, KASDKOSKotlinByteIterator, KASDKOSKtor_httpUrlCompanion, KASDKOSKtor_httpContentType, KASDKOSKtor_httpHttpStatusCode, KASDKOSKtor_httpURLProtocolCompanion, KASDKOSKtor_httpUrlEncodingOption, KASDKOSKtor_httpHeaderValueParam, KASDKOSKtor_ioCharsetCompanion, KASDKOSKtor_ioCharsetDecoder, KASDKOSKtor_ioCharsetEncoder, KASDKOSKtor_httpHeaderValueWithParametersCompanion, KASDKOSKtor_httpHeaderValueWithParameters, KASDKOSKtor_httpContentTypeCompanion, KASDKOSKtor_httpHttpStatusCodeCompanion, KASDKOSKotlinx_coroutines_coreAtomicDesc, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, KASDKOSKotlinx_coroutines_coreAtomicOp<__contravariant T>, KASDKOSKotlinx_coroutines_coreOpDescriptor, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNode, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
 
 @protocol KASDKOSRuntimeTransactionWithoutReturn, KASDKOSRuntimeTransactionWithReturn, KASDKOSRuntimeTransacter, KASDKOSKotlinx_serialization_coreKSerializer, KASDKOSKotlinx_coroutines_coreFlowCollector, KASDKOSKotlinx_coroutines_coreFlow, KASDKOSKtor_ioCloseable, KASDKOSKotlinSuspendFunction0, KASDKOSRuntimeSqlDriver, KASDKOSKangarooCacheQueries, KASDKOSKangarooCache, KASDKOSRuntimeSqlDriverSchema, KASDKOSRuntimeSqlCursor, KASDKOSRuntimeQueryListener, KASDKOSRuntimeTransactionCallbacks, KASDKOSKtor_httpHttpMessageBuilder, KASDKOSKtor_client_coreHttpClientEngineCapability, KASDKOSKtor_utilsAttributes, KASDKOSKotlinx_coroutines_coreJob, KASDKOSKotlinx_serialization_coreEncoder, KASDKOSKotlinx_serialization_coreSerialDescriptor, KASDKOSKotlinx_serialization_coreSerializationStrategy, KASDKOSKotlinx_serialization_coreDecoder, KASDKOSKotlinx_serialization_coreDeserializationStrategy, KASDKOSKotlinIterator, KASDKOSKotlinFunction, KASDKOSRuntimeSqlPreparedStatement, KASDKOSRuntimeCloseable, KASDKOSKtor_utilsStringValues, KASDKOSKotlinMapEntry, KASDKOSKtor_httpHeaders, KASDKOSKotlinx_coroutines_coreChildHandle, KASDKOSKotlinx_coroutines_coreChildJob, KASDKOSKotlinx_coroutines_coreDisposableHandle, KASDKOSKotlinSequence, KASDKOSKotlinx_coroutines_coreSelectClause0, KASDKOSKotlinCoroutineContextKey, KASDKOSKotlinCoroutineContextElement, KASDKOSKotlinCoroutineContext, KASDKOSKotlinComparable, KASDKOSKotlinx_serialization_coreCompositeEncoder, KASDKOSKotlinAnnotation, KASDKOSKotlinx_serialization_coreCompositeDecoder, KASDKOSKtor_httpParameters, KASDKOSKotlinx_coroutines_coreParentJob, KASDKOSKotlinx_coroutines_coreSelectInstance, KASDKOSKotlinx_serialization_coreSerializersModuleCollector, KASDKOSKotlinKClass, KASDKOSKotlinContinuation, KASDKOSKotlinKDeclarationContainer, KASDKOSKotlinKAnnotatedElement, KASDKOSKotlinKClassifier;
 
@@ -184,7 +184,7 @@ __attribute__((swift_name("KangarooSdk")))
  * Initializes the sdk. Accessing the sdk prior to running this command
  * will throw an exception
  */
-- (void)initialize __attribute__((swift_name("initialize()")));
+- (void)initializeApplicationKey:(NSString *)applicationKey clientId:(NSString *)clientId clientSecret:(NSString *)clientSecret __attribute__((swift_name("initialize(applicationKey:clientId:clientSecret:)")));
 @end;
 
 
@@ -1636,6 +1636,71 @@ __attribute__((swift_name("OfferFacebookShareApi.Companion")))
 
 
 /**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData")))
+@interface KASDKOSUserProfileBalanceData : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceDataCompanion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data
+ */
+- (KASDKOSUserProfileBalanceData *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData.Companion")))
+@interface KASDKOSUserProfileBalanceDataCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceDataCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
@@ -1785,12 +1850,67 @@ __attribute__((swift_name("UserProfileData_.Companion")))
 
 
 /**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude")))
+@interface KASDKOSUserProfileInclude : KASDKOSBase
+- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileIncludeCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSUserProfileBalanceData *)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Extra user profile data
+ */
+- (KASDKOSUserProfileInclude *)doCopyBalance:(KASDKOSUserProfileBalanceData *)balance __attribute__((swift_name("doCopy(balance:)")));
+
+/**
+ * Extra user profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Extra user profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Extra user profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSUserProfileBalanceData *balance __attribute__((swift_name("balance")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude.Companion")))
+@interface KASDKOSUserProfileIncludeCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Extra user profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileIncludeCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Extra user profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileModel_")))
 @interface KASDKOSUserProfileModel_ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData_ *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileData_ *)data included:(KASDKOSUserProfileInclude * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -1803,10 +1923,13 @@ __attribute__((swift_name("UserProfileModel_")))
 /** Contains all user profile data */
 - (KASDKOSUserProfileData_ *)component1 __attribute__((swift_name("component1()")));
 
+/** Contains user balance data */
+- (KASDKOSUserProfileInclude * _Nullable)component2 __attribute__((swift_name("component2()")));
+
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileModel_ *)doCopyData:(KASDKOSUserProfileData_ *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSUserProfileModel_ *)doCopyData:(KASDKOSUserProfileData_ *)data included:(KASDKOSUserProfileInclude * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Profile model class containing user data
@@ -1825,6 +1948,9 @@ __attribute__((swift_name("UserProfileModel_")))
 
 /** Contains all user profile data */
 @property (readonly) KASDKOSUserProfileData_ *data __attribute__((swift_name("data")));
+
+/** Contains user balance data */
+@property (readonly) KASDKOSUserProfileInclude * _Nullable included __attribute__((swift_name("included")));
 @end;
 
 
@@ -2564,6 +2690,71 @@ __attribute__((swift_name("UpdatePinRequest.Companion")))
 
 
 /**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData_")))
+@interface KASDKOSUserProfileBalanceData_ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceData_Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data
+ */
+- (KASDKOSUserProfileBalanceData_ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData_.Companion")))
+@interface KASDKOSUserProfileBalanceData_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceData_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
@@ -2713,12 +2904,67 @@ __attribute__((swift_name("UserProfileData___.Companion")))
 
 
 /**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude_")))
+@interface KASDKOSUserProfileInclude_ : KASDKOSBase
+- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData_ *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileInclude_Companion *companion __attribute__((swift_name("companion")));
+- (KASDKOSUserProfileBalanceData_ *)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Extra user profile data
+ */
+- (KASDKOSUserProfileInclude_ *)doCopyBalance:(KASDKOSUserProfileBalanceData_ *)balance __attribute__((swift_name("doCopy(balance:)")));
+
+/**
+ * Extra user profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Extra user profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Extra user profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSUserProfileBalanceData_ *balance __attribute__((swift_name("balance")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude_.Companion")))
+@interface KASDKOSUserProfileInclude_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Extra user profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileInclude_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Extra user profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileModel__")))
 @interface KASDKOSUserProfileModel__ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData___ *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileData___ *)data included:(KASDKOSUserProfileInclude_ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -2731,10 +2977,13 @@ __attribute__((swift_name("UserProfileModel__")))
 /** Contains all user profile data */
 - (KASDKOSUserProfileData___ *)component1 __attribute__((swift_name("component1()")));
 
+/** Contains user balance data */
+- (KASDKOSUserProfileInclude_ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileModel__ *)doCopyData:(KASDKOSUserProfileData___ *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSUserProfileModel__ *)doCopyData:(KASDKOSUserProfileData___ *)data included:(KASDKOSUserProfileInclude_ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Profile model class containing user data
@@ -2753,6 +3002,9 @@ __attribute__((swift_name("UserProfileModel__")))
 
 /** Contains all user profile data */
 @property (readonly) KASDKOSUserProfileData___ *data __attribute__((swift_name("data")));
+
+/** Contains user balance data */
+@property (readonly) KASDKOSUserProfileInclude_ * _Nullable included __attribute__((swift_name("included")));
 @end;
 
 
@@ -5048,6 +5300,71 @@ __attribute__((swift_name("UserProfileUpdateApi.Companion")))
 
 
 /**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData__")))
+@interface KASDKOSUserProfileBalanceData__ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceData__Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data
+ */
+- (KASDKOSUserProfileBalanceData__ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData__.Companion")))
+@interface KASDKOSUserProfileBalanceData__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceData__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
@@ -5197,12 +5514,67 @@ __attribute__((swift_name("UserProfileData_____.Companion")))
 
 
 /**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude__")))
+@interface KASDKOSUserProfileInclude__ : KASDKOSBase
+- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData__ *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileInclude__Companion *companion __attribute__((swift_name("companion")));
+- (KASDKOSUserProfileBalanceData__ *)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Extra user profile data
+ */
+- (KASDKOSUserProfileInclude__ *)doCopyBalance:(KASDKOSUserProfileBalanceData__ *)balance __attribute__((swift_name("doCopy(balance:)")));
+
+/**
+ * Extra user profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Extra user profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Extra user profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSUserProfileBalanceData__ *balance __attribute__((swift_name("balance")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude__.Companion")))
+@interface KASDKOSUserProfileInclude__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Extra user profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileInclude__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Extra user profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileModel___")))
 @interface KASDKOSUserProfileModel___ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData_____ *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileData_____ *)data included:(KASDKOSUserProfileInclude__ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -5215,10 +5587,13 @@ __attribute__((swift_name("UserProfileModel___")))
 /** Contains all user profile data */
 - (KASDKOSUserProfileData_____ *)component1 __attribute__((swift_name("component1()")));
 
+/** Contains user balance data */
+- (KASDKOSUserProfileInclude__ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileModel___ *)doCopyData:(KASDKOSUserProfileData_____ *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSUserProfileModel___ *)doCopyData:(KASDKOSUserProfileData_____ *)data included:(KASDKOSUserProfileInclude__ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Profile model class containing user data
@@ -5237,6 +5612,9 @@ __attribute__((swift_name("UserProfileModel___")))
 
 /** Contains all user profile data */
 @property (readonly) KASDKOSUserProfileData_____ *data __attribute__((swift_name("data")));
+
+/** Contains user balance data */
+@property (readonly) KASDKOSUserProfileInclude__ * _Nullable included __attribute__((swift_name("included")));
 @end;
 
 
@@ -5435,6 +5813,71 @@ __attribute__((swift_name("RedemptionModel.Companion")))
 
 
 /**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData___")))
+@interface KASDKOSUserProfileBalanceData___ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceData___Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data
+ */
+- (KASDKOSUserProfileBalanceData___ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData___.Companion")))
+@interface KASDKOSUserProfileBalanceData___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceData___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
@@ -5584,12 +6027,67 @@ __attribute__((swift_name("UserProfileData______.Companion")))
 
 
 /**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude___")))
+@interface KASDKOSUserProfileInclude___ : KASDKOSBase
+- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData___ *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileInclude___Companion *companion __attribute__((swift_name("companion")));
+- (KASDKOSUserProfileBalanceData___ *)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Extra user profile data
+ */
+- (KASDKOSUserProfileInclude___ *)doCopyBalance:(KASDKOSUserProfileBalanceData___ *)balance __attribute__((swift_name("doCopy(balance:)")));
+
+/**
+ * Extra user profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Extra user profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Extra user profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSUserProfileBalanceData___ *balance __attribute__((swift_name("balance")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude___.Companion")))
+@interface KASDKOSUserProfileInclude___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Extra user profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileInclude___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Extra user profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileModel____")))
 @interface KASDKOSUserProfileModel____ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData______ *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileData______ *)data included:(KASDKOSUserProfileInclude___ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -5602,10 +6100,13 @@ __attribute__((swift_name("UserProfileModel____")))
 /** Contains all user profile data */
 - (KASDKOSUserProfileData______ *)component1 __attribute__((swift_name("component1()")));
 
+/** Contains user balance data */
+- (KASDKOSUserProfileInclude___ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileModel____ *)doCopyData:(KASDKOSUserProfileData______ *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSUserProfileModel____ *)doCopyData:(KASDKOSUserProfileData______ *)data included:(KASDKOSUserProfileInclude___ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Profile model class containing user data
@@ -5624,6 +6125,9 @@ __attribute__((swift_name("UserProfileModel____")))
 
 /** Contains all user profile data */
 @property (readonly) KASDKOSUserProfileData______ *data __attribute__((swift_name("data")));
+
+/** Contains user balance data */
+@property (readonly) KASDKOSUserProfileInclude___ * _Nullable included __attribute__((swift_name("included")));
 @end;
 
 
@@ -5998,6 +6502,71 @@ __attribute__((swift_name("UserProfileApi.Companion")))
 
 
 /**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData____")))
+@interface KASDKOSUserProfileBalanceData____ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceData____Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data
+ */
+- (KASDKOSUserProfileBalanceData____ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData____.Companion")))
+@interface KASDKOSUserProfileBalanceData____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceData____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
@@ -6147,12 +6716,67 @@ __attribute__((swift_name("UserProfileData_______.Companion")))
 
 
 /**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude____")))
+@interface KASDKOSUserProfileInclude____ : KASDKOSBase
+- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData____ *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileInclude____Companion *companion __attribute__((swift_name("companion")));
+- (KASDKOSUserProfileBalanceData____ *)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Extra user profile data
+ */
+- (KASDKOSUserProfileInclude____ *)doCopyBalance:(KASDKOSUserProfileBalanceData____ *)balance __attribute__((swift_name("doCopy(balance:)")));
+
+/**
+ * Extra user profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Extra user profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Extra user profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSUserProfileBalanceData____ *balance __attribute__((swift_name("balance")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude____.Companion")))
+@interface KASDKOSUserProfileInclude____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Extra user profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileInclude____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Extra user profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileModel_____")))
 @interface KASDKOSUserProfileModel_____ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData_______ *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileData_______ *)data included:(KASDKOSUserProfileInclude____ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -6165,10 +6789,13 @@ __attribute__((swift_name("UserProfileModel_____")))
 /** Contains all user profile data */
 - (KASDKOSUserProfileData_______ *)component1 __attribute__((swift_name("component1()")));
 
+/** Contains user balance data */
+- (KASDKOSUserProfileInclude____ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileModel_____ *)doCopyData:(KASDKOSUserProfileData_______ *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSUserProfileModel_____ *)doCopyData:(KASDKOSUserProfileData_______ *)data included:(KASDKOSUserProfileInclude____ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Profile model class containing user data
@@ -6187,6 +6814,9 @@ __attribute__((swift_name("UserProfileModel_____")))
 
 /** Contains all user profile data */
 @property (readonly) KASDKOSUserProfileData_______ *data __attribute__((swift_name("data")));
+
+/** Contains user balance data */
+@property (readonly) KASDKOSUserProfileInclude____ * _Nullable included __attribute__((swift_name("included")));
 @end;
 
 

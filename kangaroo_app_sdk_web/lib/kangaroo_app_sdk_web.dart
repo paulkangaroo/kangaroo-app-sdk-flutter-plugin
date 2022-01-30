@@ -1,10 +1,14 @@
+// ignore_for_file: implementation_imports
+
 @JS('KangarooAppSDK')
 library kangaroo_app_sdk.js;
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:js/js.dart';
+import 'package:kangaroo_app_sdk_platform_interface/platform_interface/kangaroo_app_sdk_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
+import 'base/plugin_channel_handler.dart';
 import 'features/plugin_handler_list.dart';
 
 /// A web implementation of the sdk_wrapper_federated plugin.
@@ -18,14 +22,42 @@ class KangarooAppSDKWebFlutterPlugin extends PlatformInterface {
   }
 
   static void registerWith(Registrar? registrar) {
-    KangarooSdk().initialize();
+    // KangarooSdk().initialize();
     pluginHandlerList.forEach((pluginHandler) {
       pluginHandler.registerPluginHandler();
     });
+    KangarooAppSdkHandler().registerPluginHandler();
+  }
+}
+
+class KangarooAppSdkHandler extends KangarooAppSdkInterface
+    implements PluginChannelHandler {
+  @override
+  void registerPluginHandler() {
+    KangarooAppSdkInterface.instance = KangarooAppSdkHandler();
+  }
+
+  @override
+  initializeSdk({
+    final String? applicationKey,
+    final String? clientId,
+    final String? clientSecret,
+  }) {
+    KangarooSdk().initialize(
+      applicationKey,
+      clientId,
+      clientSecret,
+    );
   }
 }
 
 @JS('kangaroorewards.js.appsdk.KangarooSdk')
 class KangarooSdk {
-  external void initialize();
+  external KangarooSdk();
+
+  external void initialize(
+    String? applicationKey,
+    String? clientId,
+    String? clientSecret,
+  );
 }

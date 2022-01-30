@@ -29,6 +29,12 @@ dependencies:
 #      path: kangaroo_app_sdk_ios
 #      ref: members_app_dev
     path: ../kangaroo_app_sdk_ios
+#  kangaroo_app_sdk_macos:
+#    #    git:
+#    #      url: https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git
+#    #      path: kangaroo_app_sdk_ios
+#    #      ref: members_app_dev
+#    path: ../kangaroo_app_sdk_macos
   kangaroo_app_sdk_web:
 #    git:
 #      url: https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git

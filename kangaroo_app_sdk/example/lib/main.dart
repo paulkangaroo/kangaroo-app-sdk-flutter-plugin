@@ -2,12 +2,17 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:kangaroo_app_sdk/user_authentication/user_authentication_api.dart'
+    as UserAuthenticationApi;
 import 'package:kangaroo_app_sdk/user_authentication/user_authentication_api.dart';
-import 'package:kangaroo_app_sdk/user_offers/user_offers_api.dart';
-import 'package:kangaroo_app_sdk/user_pin_update/user_pin_update_api.dart';
-import 'package:kangaroo_app_sdk/user_profile/user_profile_api.dart';
-import 'package:kangaroo_app_sdk/user_rewards/user_rewards_api.dart';
-import 'package:kangaroo_app_sdk/user_transaction_history/user_transaction_history_api.dart';
+import 'package:kangaroo_app_sdk/user_pin_update/user_pin_update_api.dart'
+    as UserPinUpdateApi;
+import 'package:kangaroo_app_sdk/user_profile/user_profile_api.dart'
+    as UserProfileApi;
+import 'package:kangaroo_app_sdk/user_rewards/user_rewards_api.dart'
+    as UserRewardsApi;
+import 'package:kangaroo_app_sdk/user_transaction_history/user_transaction_history_api.dart'
+    as UserTransactionHistoryApi;
 
 void main() {
   runApp(MyApp());
@@ -22,7 +27,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    UserAuthenticationApi.authenticationStream.listen((authResult) {
+    UserAuthenticationApi.UserAuthenticationApi.authenticationStream
+        .listen((authResult) {
       authResult.when(
         idle: () {},
         loading: () => Fluttertoast.showToast(msg: "loading"),
@@ -37,27 +43,28 @@ class _MyAppState extends State<MyApp> {
   }
 
   authenticateUser() {
-    UserAuthenticationApi.authenticateUser(
+    UserAuthenticationApi.UserAuthenticationApi.authenticateUser(
       "support@kangaroorewards.com",
       "1111",
     );
   }
 
   getUserProfile() {
-    UserProfileApi.getUserProfile();
+    UserProfileApi.UserProfileApi.getUserProfile();
   }
 
   getRewards() {
-    UserRewardsApi.getUserRewards();
+    UserRewardsApi.UserRewardsApi.getUserRewards();
   }
 
   getTransactions() {
-    UserTransactionHistoryApi.getUserTransactionHistory();
+    UserTransactionHistoryApi.UserTransactionHistoryApi
+        .getUserTransactionHistory();
   }
 
   resetPin() {
-    UserPinUpdateApi.updatePin(
-        updatePinRequest: UpdatePinRequest(pinCode: "1111"));
+    UserPinUpdateApi.UserPinUpdateApi.updatePin(
+        updatePinRequest: UserPinUpdateApi.UpdatePinRequest(pinCode: "1111"));
   }
 
   @override
@@ -126,78 +133,78 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
-              StreamBuilder<Result<UserRewardsModel>>(
-                stream: UserRewardsApi.userRewardsStream,
+              StreamBuilder<Result<UserRewardsApi.UserRewardsModel>>(
+                stream: UserRewardsApi.UserRewardsApi.userRewardsStream,
                 initialData: Result.idle(),
                 builder: (context, _userTransactions) {
                   return _userTransactions.data?.when(
-                    idle: () => Text('transaction history is idle'),
-                    loading: () =>
-                        CircularProgressIndicator(color: Colors.brown),
-                    success: (userTransactions) {
-                      print("Flutter SDK rendering first reward");
-                      return Image.network(
-                          "${userTransactions?.data.catalogItems.randomItem().images?[0].large}");
-                    },
-                    unauthorized: (int code, String message) =>
-                        Text('error: $message'),
-                    error: (code, message) => Text('error: $message'),
-                  ) ??
+                        idle: () => Text('transaction history is idle'),
+                        loading: () =>
+                            CircularProgressIndicator(color: Colors.brown),
+                        success: (userTransactions) {
+                          print("Flutter SDK rendering first reward");
+                          return Image.network(
+                              "${userTransactions?.data.catalogItems.randomItem().images?[0].large}");
+                        },
+                        unauthorized: (int code, String message) =>
+                            Text('error: $message'),
+                        error: (code, message) => Text('error: $message'),
+                      ) ??
                       SizedBox();
                 },
               ),
-              StreamBuilder<Result<UserProfileModel>>(
-                stream: UserPinUpdateApi.userPinUpdateStream,
+              StreamBuilder<Result<UserPinUpdateApi.UserProfileModel>>(
+                stream: UserPinUpdateApi.UserPinUpdateApi.userPinUpdateStream,
                 initialData: Result.idle(),
                 builder: (context, _userPinUpdate) {
                   return _userPinUpdate.data?.when(
-                    idle: () => Text('pin updates are idle'),
-                    loading: () => CircularProgressIndicator(
-                        color: Colors.yellow.shade900),
-                    success: (userTransactions) => Text(
-                        "pin updated at: ${userTransactions?.data.updatedAt}"),
-                    unauthorized: (int code, String message) =>
-                        Text('error: $message'),
-                    error: (code, message) => Text('error: $message'),
-                  ) ??
+                        idle: () => Text('pin updates are idle'),
+                        loading: () => CircularProgressIndicator(
+                            color: Colors.yellow.shade900),
+                        success: (userTransactions) => Text(
+                            "pin updated at: ${userTransactions?.data.updatedAt}"),
+                        unauthorized: (int code, String message) =>
+                            Text('error: $message'),
+                        error: (code, message) => Text('error: $message'),
+                      ) ??
                       SizedBox();
                 },
               ),
-              StreamBuilder<Result<UserProfileModel>>(
-                stream: UserProfileApi.userProfileStream,
+              StreamBuilder<Result<UserProfileApi.UserProfileModel>>(
+                stream: UserProfileApi.UserProfileApi.userProfileStream,
                 initialData: Result.idle(),
                 builder: (context, _userProfile) {
                   return _userProfile.data?.when(
-                    idle: () => Text('profile is idle'),
-                    loading: () =>
-                        CircularProgressIndicator(color: Colors.purple),
-                    success: (userProfile) =>
-                        Image.network("${userProfile?.data.profilePhoto}"),
-                    unauthorized: (int code, String message) =>
-                        Text('profile has unauthorized error'),
-                    error: (code, message) =>
-                        Text('profile has unknown error'),
-                  ) ??
+                        idle: () => Text('profile is idle'),
+                        loading: () =>
+                            CircularProgressIndicator(color: Colors.purple),
+                        success: (userProfile) =>
+                            Image.network("${userProfile?.data.profilePhoto}"),
+                        unauthorized: (int code, String message) =>
+                            Text('profile has unauthorized error'),
+                        error: (code, message) =>
+                            Text('profile has unknown error'),
+                      ) ??
                       SizedBox();
                 },
               ),
-              StreamBuilder<Result<UserRewardsModel>>(
-                stream: UserRewardsApi.userRewardsStream,
+              StreamBuilder<Result<UserRewardsApi.UserRewardsModel>>(
+                stream: UserRewardsApi.UserRewardsApi.userRewardsStream,
                 initialData: Result.idle(),
                 builder: (context, _userRewards) {
                   return _userRewards.data?.when(
-                    idle: () => Text('rewards are idle'),
-                    loading: () =>
-                        CircularProgressIndicator(color: Colors.brown),
-                    success: (userRewards) {
-                      print("Flutter SDK rendering second reward");
-                      return Image.network(
-                          "${userRewards?.data.catalogItems.randomItem().images?[0].large}");
-                    },
-                    unauthorized: (int code, String message) =>
-                        Text('error: $message'),
-                    error: (code, message) => Text('error: $message'),
-                  ) ??
+                        idle: () => Text('rewards are idle'),
+                        loading: () =>
+                            CircularProgressIndicator(color: Colors.brown),
+                        success: (userRewards) {
+                          print("Flutter SDK rendering second reward");
+                          return Image.network(
+                              "${userRewards?.data.catalogItems.randomItem().images?[0].large}");
+                        },
+                        unauthorized: (int code, String message) =>
+                            Text('error: $message'),
+                        error: (code, message) => Text('error: $message'),
+                      ) ??
                       Text('error: null data');
                 },
               ),
