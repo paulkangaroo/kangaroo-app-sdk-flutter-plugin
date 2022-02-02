@@ -12,7 +12,7 @@ AlaCarteItemModel _$AlaCarteItemModelFromJson(Map<String, dynamic> json) =>
       points: json['points'] as int?,
       product: json['product'] == null
           ? null
-          : ProductItemModel.fromJson(json['product'] as Map<String, dynamic>),
+          : Product.fromJson(json['product'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$AlaCarteItemModelToJson(AlaCarteItemModel instance) =>

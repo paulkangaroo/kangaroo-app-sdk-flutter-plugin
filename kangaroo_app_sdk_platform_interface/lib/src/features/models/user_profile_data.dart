@@ -6,7 +6,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'user_profile_data.g.dart';
 
-/// User Profile model class containing user data hur dur
+/// User Profile model class containing user data
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class UserProfileData {
   ///Unique user ID. 

@@ -2,9 +2,9 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/product_item_model.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/product.dart';
 
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/product_item_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/product.dart';
 
 part 'ala_carte_item_model.g.dart';
 
@@ -15,7 +15,7 @@ class AlaCarteItemModel {
 
   final int? points;
 
-  final ProductItemModel? product;
+  final Product? product;
 
   AlaCarteItemModel({
     required this.id,

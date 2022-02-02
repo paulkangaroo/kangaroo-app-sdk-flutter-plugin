@@ -5,11 +5,13 @@ import com.kangaroo.flutterplugin.android.features.userAuthentication.UserAuthen
 import com.kangaroo.flutterplugin.android.features.claimOffer.ClaimOfferHandler
 import com.kangaroo.flutterplugin.android.features.userRegistration.UserRegistrationHandler
 import com.kangaroo.flutterplugin.android.features.userAlaCarte.AlaCarteProductsHandler
+import com.kangaroo.flutterplugin.android.features.banners.BannersHandler
 import com.kangaroo.flutterplugin.android.features.business.BusinessHandler
 import com.kangaroo.flutterplugin.android.features.userCampaignMessages.CampaignMessagesHandler
 import com.kangaroo.flutterplugin.android.features.countries.CountriesHandler
 import com.kangaroo.flutterplugin.android.features.frequentBuyer.FrequentBuyerHandler
 import com.kangaroo.flutterplugin.android.features.socialMedia.SocialMediaHandler
+import com.kangaroo.flutterplugin.android.features.tiers.TiersHandler
 import com.kangaroo.flutterplugin.android.features.userTransferMessages.TransferMessagesHandler
 import com.kangaroo.flutterplugin.android.features.userOffers.UserOffersHandler
 import com.kangaroo.flutterplugin.android.features.userProducts.UserProductsHandler
@@ -34,6 +36,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     AlaCarteProductsHandler(),
 
+    BannersHandler(),
+
     BusinessHandler(),
 
     CampaignMessagesHandler(),
@@ -43,6 +47,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     FrequentBuyerHandler(),
 
     SocialMediaHandler(),
+
+    TiersHandler(),
 
     TransferMessagesHandler(),
 

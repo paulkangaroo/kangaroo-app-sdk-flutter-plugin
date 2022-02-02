@@ -9,6 +9,8 @@ class PluginHandlerListHolder {
 
     AlaCarteProductsHandler(),
 
+    BannersHandler(),
+
     BusinessHandler(),
 
     CampaignMessagesHandler(),
@@ -18,6 +20,8 @@ class PluginHandlerListHolder {
     FrequentBuyerHandler(),
 
     SocialMediaHandler(),
+
+    TiersHandler(),
 
     TransferMessagesHandler(),
 

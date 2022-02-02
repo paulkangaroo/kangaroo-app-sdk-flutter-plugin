@@ -18,7 +18,7 @@ class UserProductsModel {
   ///Contains all user data 
   final UserProfileData data;
 
-  ///Contains all user products data  
+  ///Contains products available to this user 
   final UserProductsIncluded included;
 
   UserProductsModel({
