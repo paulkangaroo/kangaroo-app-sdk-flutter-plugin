@@ -8,7 +8,7 @@ part of 'campaign_message.dart';
 
 CampaignMessage _$CampaignMessageFromJson(Map<String, dynamic> json) =>
     CampaignMessage(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       cellEmail: json['cell_email'] as int?,
       subject: json['subject'] as String?,
       sentAt: json['sent_at'] as String?,

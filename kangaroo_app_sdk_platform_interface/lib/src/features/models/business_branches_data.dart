@@ -11,7 +11,7 @@ part 'business_branches_data.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class BusinessBranchesData {
-  final List<Branch> branches;
+  final List<Branch>? branches;
 
   BusinessBranchesData({
     required this.branches,

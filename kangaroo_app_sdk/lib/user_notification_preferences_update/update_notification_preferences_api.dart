@@ -7,14 +7,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UpdateNotificationPreferencesApi {
   static updateNotificationPreferences({ 
-    required final NotificationPreferencesRequest notificationPreferencesRequest,
+    required final NotificationSettingsData notificationPreferencesRequest,
   }) {
     UpdateNotificationPreferencesApiInterface.instance.updateNotificationPreferences( 
       notificationPreferencesRequest: notificationPreferencesRequest,
     );
   }
 
-  static Stream<Result<NotificationUpdateModel>> get updateNotificationPreferencesStream {
+  static Stream<Result<NotificationSettingsModel>> get updateNotificationPreferencesStream {
     return UpdateNotificationPreferencesApiInterface.instance.updateNotificationPreferencesStream;
   }
 }

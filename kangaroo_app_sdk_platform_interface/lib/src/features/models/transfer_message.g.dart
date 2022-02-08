@@ -8,7 +8,7 @@ part of 'transfer_message.dart';
 
 TransferMessage _$TransferMessageFromJson(Map<String, dynamic> json) =>
     TransferMessage(
-      id: json['id'] as int,
+      id: json['id'] as int?,
       typeId: json['type_id'] as int?,
       type: json['type'] as String?,
       description: json['description'] as String?,

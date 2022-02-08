@@ -11,7 +11,7 @@ part 'reward_translation.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class RewardTranslation {
-  final int id;
+  final int? id;
 
   final int? languageId;
 

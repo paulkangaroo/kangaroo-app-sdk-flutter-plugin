@@ -10,7 +10,7 @@ part 'transaction.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class Transaction {
   ///Unique transaction ID. 
-  final int id;
+  final int? id;
 
   ///The amount in $ for this transaction. 
   final double? amount;

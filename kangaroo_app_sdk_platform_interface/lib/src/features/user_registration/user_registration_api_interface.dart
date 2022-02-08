@@ -7,8 +7,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_registrati
 
 
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_model.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_model.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_data_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_data_model.dart';
 
 abstract class UserRegistrationApiInterface extends PlatformInterface {
   UserRegistrationApiInterface() : super(token: _token);
@@ -33,7 +33,7 @@ abstract class UserRegistrationApiInterface extends PlatformInterface {
     throw UnimplementedError('createAccount has not been implemented.');
   }
 
-  Stream<Result<UserProfileModel>> get userRegistrationStream {
+  Stream<Result<UserProfileDataModel>> get userRegistrationStream {
     throw UnimplementedError('getUserRegistrationStream has not been implemented.');
   }
 }

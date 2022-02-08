@@ -12,7 +12,7 @@ part 'countries.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class Countries {
   ///A list of countries supported by Kangaroo 
-  final List<Country> data;
+  final List<Country>? data;
 
   Countries({
     required this.data,

@@ -14,7 +14,7 @@ class TransferRecallApi {
     );
   }
 
-  static Stream<Result<TransferRecallResultModel>> get transferRecallStream {
+  static Stream<Result<TransferActionResultModel>> get transferRecallStream {
     return TransferRecallApiInterface.instance.transferRecallStream;
   }
 }

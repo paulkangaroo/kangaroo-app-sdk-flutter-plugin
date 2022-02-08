@@ -11,7 +11,7 @@ part 'banners_model.g.dart';
 /// Business banners. Used to display promotional material.
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class BannersModel {
-  final List<Banner> data;
+  final List<Banner>? data;
 
   BannersModel({
     required this.data,

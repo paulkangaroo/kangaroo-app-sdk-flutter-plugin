@@ -36,7 +36,7 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
   }
 
   @override
-  Stream<Result<UserProfileModel>> get userRegistrationStream {
+  Stream<Result<UserProfileDataModel>> get userRegistrationStream {
     var controller = StreamController<String>();
 
     UserRegistrationApi().observeUserRegistrationState(
@@ -47,12 +47,12 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
     return controller.stream.distinct().map((event) {
       dynamic result;
       try {
-        result = UserProfileModel.fromJson(jsonDecode(event));
+        result = UserProfileDataModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case UserProfileModel:
+        case UserProfileDataModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

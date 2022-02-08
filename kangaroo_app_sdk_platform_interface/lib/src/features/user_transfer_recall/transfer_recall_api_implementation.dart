@@ -24,16 +24,16 @@ class TransferRecallApiFederated extends TransferRecallApiInterface {
       const EventChannel("customer_sdk/events/recall_transfer");
 
   @override
-  Stream<Result<TransferRecallResultModel>> get transferRecallStream {
+  Stream<Result<TransferActionResultModel>> get transferRecallStream {
     return _transferRecallEvent.receiveBroadcastStream().distinct().map((event) {
       dynamic result;
       try {
-        result = TransferRecallResultModel.fromJson(jsonDecode(event));
+        result = TransferActionResultModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case TransferRecallResultModel:
+        case TransferActionResultModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

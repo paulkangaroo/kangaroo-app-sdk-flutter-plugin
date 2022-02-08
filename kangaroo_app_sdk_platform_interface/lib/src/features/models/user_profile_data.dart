@@ -51,10 +51,10 @@ class UserProfileData {
   ///Denotes whether this account has been enabled. 
   final bool? enabled;
 
-  ///Denotes whether the email address for this user has been verified 
+  ///Denotes whether the email address for this user has been verified. 
   final bool? emailVerified;
 
-  ///Denotes whether the phone number for this user has been verified 
+  ///Denotes whether the phone number for this user has been verified. 
   final bool? phoneVerified;
 
   UserProfileData({

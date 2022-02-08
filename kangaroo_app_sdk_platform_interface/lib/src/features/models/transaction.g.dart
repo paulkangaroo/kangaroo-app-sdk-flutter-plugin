@@ -7,7 +7,7 @@ part of 'transaction.dart';
 // **************************************************************************
 
 Transaction _$TransactionFromJson(Map<String, dynamic> json) => Transaction(
-      id: json['id'] as int,
+      id: json['id'] as int?,
       amount: (json['amount'] as num?)?.toDouble(),
       points: (json['points'] as num?)?.toDouble(),
       name: json['name'] as String?,

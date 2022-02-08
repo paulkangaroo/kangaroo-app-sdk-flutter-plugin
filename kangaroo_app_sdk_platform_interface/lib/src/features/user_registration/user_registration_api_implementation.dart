@@ -30,16 +30,16 @@ class UserRegistrationApiFederated extends UserRegistrationApiInterface {
       const EventChannel("customer_sdk/events/create_account");
 
   @override
-  Stream<Result<UserProfileModel>> get userRegistrationStream {
+  Stream<Result<UserProfileDataModel>> get userRegistrationStream {
     return _userRegistrationEvent.receiveBroadcastStream().distinct().map((event) {
       dynamic result;
       try {
-        result = UserProfileModel.fromJson(jsonDecode(event));
+        result = UserProfileDataModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case UserProfileModel:
+        case UserProfileDataModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

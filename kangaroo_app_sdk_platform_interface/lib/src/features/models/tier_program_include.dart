@@ -12,7 +12,7 @@ part 'tier_program_include.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class TierProgramInclude {
   ///Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.  
-  final Tiers tiers;
+  final Tiers? tiers;
 
   TierProgramInclude({
     required this.tiers,

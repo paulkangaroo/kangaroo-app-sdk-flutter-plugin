@@ -15,7 +15,7 @@ part 'campaign.g.dart';
 /// The core campaign object for this campaign. This might include data such as the original html content of the campaign, sms or push data, or offers and rewards attached to this campaign. 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class Campaign {
-  final int id;
+  final int? id;
 
   final String? subject;
 

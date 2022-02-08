@@ -8,7 +8,7 @@ part of 'reward_translation.dart';
 
 RewardTranslation _$RewardTranslationFromJson(Map<String, dynamic> json) =>
     RewardTranslation(
-      id: json['id'] as int,
+      id: json['id'] as int?,
       languageId: json['language_id'] as int?,
       title: json['title'] as String?,
       description: json['description'] as String?,

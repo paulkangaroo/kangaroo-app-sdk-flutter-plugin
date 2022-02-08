@@ -11,7 +11,7 @@ part 'user_products_included.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class UserProductsIncluded {
-  final ProductsList products;
+  final ProductsList? products;
 
   UserProductsIncluded({
     required this.products,

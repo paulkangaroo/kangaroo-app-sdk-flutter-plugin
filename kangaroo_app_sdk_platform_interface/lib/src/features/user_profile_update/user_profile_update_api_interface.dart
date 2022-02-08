@@ -30,7 +30,7 @@ abstract class UserProfileUpdateApiInterface extends PlatformInterface {
         final String? birthDate,
         final String? language,
         final String? gender,
-        final String? profilePhoto = "facebook_share",
+        final String? profilePhoto,
     }) {
     throw UnimplementedError('updateUserProfile has not been implemented.');
   }

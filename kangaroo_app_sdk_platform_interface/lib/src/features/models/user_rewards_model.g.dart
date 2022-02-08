@@ -8,10 +8,12 @@ part of 'user_rewards_model.dart';
 
 UserRewardsModel _$UserRewardsModelFromJson(Map<String, dynamic> json) =>
     UserRewardsModel(
-      data: UserRewardsData.fromJson(json['data'] as Map<String, dynamic>),
+      data: json['data'] == null
+          ? null
+          : UserRewardsData.fromJson(json['data'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$UserRewardsModelToJson(UserRewardsModel instance) =>
     <String, dynamic>{
-      'data': instance.data.toJson(),
+      'data': instance.data?.toJson(),
     };

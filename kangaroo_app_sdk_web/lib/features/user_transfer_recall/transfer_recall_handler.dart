@@ -30,7 +30,7 @@ class TransferRecallHandler extends TransferRecallApiInterface
   }
 
   @override
-  Stream<Result<TransferRecallResultModel>> get transferRecallStream {
+  Stream<Result<TransferActionResultModel>> get transferRecallStream {
     var controller = StreamController<String>();
 
     TransferRecallApi().observeTransferRecallState(
@@ -41,12 +41,12 @@ class TransferRecallHandler extends TransferRecallApiInterface
     return controller.stream.distinct().map((event) {
       dynamic result;
       try {
-        result = TransferRecallResultModel.fromJson(jsonDecode(event));
+        result = TransferActionResultModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case TransferRecallResultModel:
+        case TransferActionResultModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

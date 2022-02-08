@@ -27,7 +27,7 @@ class UserProfileUpdateHandler extends UserProfileUpdateApiInterface
         final String? birthDate,
         final String? language,
         final String? gender,
-        final String? profilePhoto = "facebook_share"
+        final String? profilePhoto
     }) {
     UserProfileUpdateApi().updateUserProfile(
       firstName,

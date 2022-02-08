@@ -20,7 +20,7 @@ part 'transfer_message.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class TransferMessage {
   ///The unique ID of this transfer. 
-  final int id;
+  final int? id;
 
   ///The type ID of this transfer. 
   final int? typeId;

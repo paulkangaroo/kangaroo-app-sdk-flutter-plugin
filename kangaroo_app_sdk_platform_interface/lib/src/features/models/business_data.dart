@@ -20,11 +20,11 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business
 
 part 'business_data.g.dart';
 
-/// User Profile model class containing user data
+/// Business profile data
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class BusinessData {
   ///Unique business ID. 
-  final String id;
+  final String? id;
 
   ///The name of this business 
   final String? name;

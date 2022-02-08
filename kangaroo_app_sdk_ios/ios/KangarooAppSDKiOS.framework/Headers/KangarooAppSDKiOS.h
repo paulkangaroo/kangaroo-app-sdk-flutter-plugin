@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class KASDKOSToken, KASDKOSRuntimeQuery<__covariant RowType>, KASDKOSKtor_client_coreHttpRequestBuilder, KASDKOSKotlinUnit, KASDKOSKtor_httpHttpAuthHeader, KASDKOSModelOld, KASDKOSResult<__covariant T>, KASDKOSResultMetaData, KASDKOSResultIdle<__covariant T>, KASDKOSResultLoadingCompanion, KASDKOSResultLoading<__covariant T>, KASDKOSKotlinArray<T>, KASDKOSResultSuccessCompanion, KASDKOSResultSuccess<__covariant T>, KASDKOSResultUnauthorizedErrorCompanion, KASDKOSResultUnauthorizedError<__covariant T>, KASDKOSResultUnknownErrorCompanion, KASDKOSResultUnknownError<__covariant T>, KASDKOSResultMetaDataCompanion, KASDKOSSerializedResult<__covariant T>, KASDKOSSerializedResultIdleCompanion, KASDKOSSerializedResultIdle, KASDKOSSerializedResultLoadingCompanion, KASDKOSSerializedResultLoading, KASDKOSSerializedResultSuccessCompanion, KASDKOSSerializedResultSuccess, KASDKOSSerializedResultUnauthorizedErrorCompanion, KASDKOSSerializedResultUnauthorizedError, KASDKOSSerializedResultUnknownErrorCompanion, KASDKOSSerializedResultUnknownError, KASDKOSModel, KASDKOSLanguage, KASDKOSTranslation, KASDKOSRewardTranslation, KASDKOSModelCompanion, KASDKOSEmptyResponse, KASDKOSKangarooCacheCompanion, KASDKOSApi, KASDKOSBusinessApiCompanion, KASDKOSBusiness, KASDKOSCFlow<T>, KASDKOSBranchPhone, KASDKOSImage, KASDKOSBranchAddress, KASDKOSBranchCompanion, KASDKOSBranch, KASDKOSBranchAddressCompanion, KASDKOSBranchPhoneCompanion, KASDKOSBusinessData, KASDKOSBusinessBranchesData, KASDKOSBusinessCompanion, KASDKOSBusinessBranchesDataCompanion, KASDKOSBusinessCategoryCompanion, KASDKOSBusinessCategory, KASDKOSBusinessDataCompanion, KASDKOSImageCompanion, KASDKOSUserRegistrationApiCompanion, KASDKOSUserProfileModel, KASDKOSUserProfileDataCompanion, KASDKOSUserProfileData, KASDKOSUserProfileModelCompanion, KASDKOSUserPinResetRequestApiCompanion, KASDKOSUserPinResetRequest, KASDKOSUserPinResetRequestCompanion, KASDKOSOfferFacebookShareApiCompanion, KASDKOSUserProfileModel_, KASDKOSUserProfileBalanceDataCompanion, KASDKOSUserProfileBalanceData, KASDKOSUserProfileData_Companion, KASDKOSUserProfileData_, KASDKOSUserProfileIncludeCompanion, KASDKOSUserProfileInclude, KASDKOSUserProfileModel_Companion, KASDKOSAlaCarteProductsApiCompanion, KASDKOSAlaCarteProductsModel, KASDKOSProduct, KASDKOSAlaCarteItemModelCompanion, KASDKOSAlaCarteItemModel, KASDKOSUserProfileData__, KASDKOSUserAlaCarteIncluded, KASDKOSAlaCarteProductsModelCompanion, KASDKOSErrorCompanion, KASDKOSError, KASDKOSImagesCompanion, KASDKOSImages, KASDKOSLanguage_Companion, KASDKOSLanguage_, KASDKOSLanguagesCompanion, KASDKOSLanguages, KASDKOSProductCompanion, KASDKOSProductItemModelCompanion, KASDKOSProductItemModel, KASDKOSUserAlaCarteIncludedCompanion, KASDKOSUserProfileData__Companion, KASDKOSSocialMediaApiCompanion, KASDKOSSocialMediaModel, KASDKOSError_Companion, KASDKOSError_, KASDKOSSocialMediaItemModel, KASDKOSSocialMediaIncludedCompanion, KASDKOSSocialMediaIncluded, KASDKOSSocialMediaItemModelCompanion, KASDKOSSocialMediaModelCompanion, KASDKOSUserPinUpdateApiCompanion, KASDKOSUserProfileModel__, KASDKOSUpdatePinRequest, KASDKOSUpdatePinRequestCompanion, KASDKOSUserProfileBalanceData_Companion, KASDKOSUserProfileBalanceData_, KASDKOSUserProfileData___Companion, KASDKOSUserProfileData___, KASDKOSUserProfileInclude_Companion, KASDKOSUserProfileInclude_, KASDKOSUserProfileModel__Companion, KASDKOSUserTransactionHistoryApiCompanion, KASDKOSUserTransactionHistoryModel, KASDKOSTransactionCompanion, KASDKOSTransaction, KASDKOSUserTransactionHistoryModelCompanion, KASDKOSTransferRecallApiCompanion, KASDKOSTransferRecallResultModel, KASDKOSImage_Companion, KASDKOSImage_, KASDKOSLanguage__Companion, KASDKOSLanguage__, KASDKOSOfferActionCompanion, KASDKOSOfferAction, KASDKOSOfferTranslation, KASDKOSOfferModelCompanion, KASDKOSOfferModel, KASDKOSOfferTranslationCompanion, KASDKOSTransferMessageGiftCardQueue, KASDKOSTransferMessageActions, KASDKOSTransferMessageCompanion, KASDKOSTransferMessage, KASDKOSTransferMessageActionsCompanion, KASDKOSTransferMessageGiftCardQueueCompanion, KASDKOSTransferRecallResultModelCompanion, KASDKOSBalanceTransferApiCompanion, KASDKOSTransferModel, KASDKOSTransferFromCompanion, KASDKOSTransferFrom, KASDKOSTransferTo, KASDKOSTransferModelCompanion, KASDKOSTransferToCompanion, KASDKOSFrequentBuyerApiCompanion, KASDKOSFrequentBuyerModel, KASDKOSError__Companion, KASDKOSError__, KASDKOSFrequentBuyerItemModel, KASDKOSFrequentBuyerIncludedCompanion, KASDKOSFrequentBuyerIncluded, KASDKOSFrequentBuyerUsersModel, KASDKOSFrequentBuyerItemModelCompanion, KASDKOSUserProfileData____, KASDKOSFrequentBuyerModelCompanion, KASDKOSFrequentBuyerUsersModelCompanion, KASDKOSUserProfileData____Companion, KASDKOSUserOffersApiCompanion, KASDKOSUserOffersModel, KASDKOSImage__Companion, KASDKOSImage__, KASDKOSLanguage___Companion, KASDKOSLanguage___, KASDKOSOfferAction_Companion, KASDKOSOfferAction_, KASDKOSOfferTranslation_, KASDKOSOfferModel_Companion, KASDKOSOfferModel_, KASDKOSOfferTranslation_Companion, KASDKOSUserOffersModelCompanion, KASDKOSClaimOfferApiCompanion, KASDKOSClaimedOfferModel, KASDKOSOfferModel__, KASDKOSClaimedOfferModelCompanion, KASDKOSImage___Companion, KASDKOSImage___, KASDKOSLanguage____Companion, KASDKOSLanguage____, KASDKOSOfferAction__Companion, KASDKOSOfferAction__, KASDKOSOfferTranslation__, KASDKOSOfferModel__Companion, KASDKOSOfferTranslation__Companion, KASDKOSUserProfileUpdateApiCompanion, KASDKOSUserProfileModel___, KASDKOSUserProfileBalanceData__Companion, KASDKOSUserProfileBalanceData__, KASDKOSUserProfileData_____Companion, KASDKOSUserProfileData_____, KASDKOSUserProfileInclude__Companion, KASDKOSUserProfileInclude__, KASDKOSUserProfileModel___Companion, KASDKOSRedeemRewardsApiCompanion, KASDKOSRedeemResponseModel, KASDKOSRedeemRequest, KASDKOSRedemptionModel, KASDKOSRedeemRequestCompanion, KASDKOSUserProfileModel____, KASDKOSRedeemResponseDataCompanion, KASDKOSRedeemResponseData, KASDKOSRedeemResponseModelCompanion, KASDKOSRedemptionModelCompanion, KASDKOSUserProfileBalanceData___Companion, KASDKOSUserProfileBalanceData___, KASDKOSUserProfileData______Companion, KASDKOSUserProfileData______, KASDKOSUserProfileInclude___Companion, KASDKOSUserProfileInclude___, KASDKOSUserProfileModel____Companion, KASDKOSUserCheckInApiCompanion, KASDKOSCheckInRequest, KASDKOSCheckInRequestCompanion, KASDKOSUpdateNotificationPreferencesApiCompanion, KASDKOSNotificationUpdateModel, KASDKOSNotificationPreferencesRequest, KASDKOSBusiness_Companion, KASDKOSBusiness_, KASDKOSNotificationPreferencesRequestCompanion, KASDKOSNotificationUpdateResponseData, KASDKOSNotificationUpdateModelCompanion, KASDKOSNotificationUpdateResponseDataCompanion, KASDKOSUserAuthenticationApiCompanion, KASDKOSUserAuthenticationModel, KASDKOSUserAuthenticationModelCompanion, KASDKOSUserProfileApiCompanion, KASDKOSUserProfileModel_____, KASDKOSUserProfileBalanceData____Companion, KASDKOSUserProfileBalanceData____, KASDKOSUserProfileData_______Companion, KASDKOSUserProfileData_______, KASDKOSUserProfileInclude____Companion, KASDKOSUserProfileInclude____, KASDKOSUserProfileModel_____Companion, KASDKOSCountriesApiCompanion, KASDKOSCountries, KASDKOSCountry, KASDKOSCountriesCompanion, KASDKOSCountryCompanion, KASDKOSUserPinResetApiCompanion, KASDKOSUserRewardsApiCompanion, KASDKOSUserRewardsModel, KASDKOSImage____Companion, KASDKOSImage____, KASDKOSLanguage_____Companion, KASDKOSLanguage_____, KASDKOSRewardTranslation_, KASDKOSRewardModelCompanion, KASDKOSRewardModel, KASDKOSRewardTranslation_Companion, KASDKOSUserRewardsDataCompanion, KASDKOSUserRewardsData, KASDKOSUserRewardsModelCompanion, KASDKOSCampaignMessagesApiCompanion, KASDKOSCampaignMessagesModel, KASDKOSBusinessCategory_Companion, KASDKOSBusinessCategory_, KASDKOSImage_____, KASDKOSBusinessData_Companion, KASDKOSBusinessData_, KASDKOSOfferModel___, KASDKOSCampaignCompanion, KASDKOSCampaign, KASDKOSCampaignMessageCompanion, KASDKOSCampaignMessage, KASDKOSCampaignMessagesModelCompanion, KASDKOSImage_____Companion, KASDKOSLanguage______Companion, KASDKOSLanguage______, KASDKOSOfferAction___Companion, KASDKOSOfferAction___, KASDKOSOfferTranslation___, KASDKOSOfferModel___Companion, KASDKOSOfferTranslation___Companion, KASDKOSUserProductsApiCompanion, KASDKOSUserProductsModel, KASDKOSError___Companion, KASDKOSError___, KASDKOSImages_Companion, KASDKOSImages_, KASDKOSLanguage_______Companion, KASDKOSLanguage_______, KASDKOSLanguages_Companion, KASDKOSLanguages_, KASDKOSProduct_Companion, KASDKOSProduct_, KASDKOSUserProductsIncludedCompanion, KASDKOSUserProductsIncluded, KASDKOSUserProfileData________, KASDKOSUserProductsModelCompanion, KASDKOSUserProfileData________Companion, KASDKOSTransferMessagesApiCompanion, KASDKOSTransferMessagesModel, KASDKOSImage______Companion, KASDKOSImage______, KASDKOSLanguage________Companion, KASDKOSLanguage________, KASDKOSOfferAction____Companion, KASDKOSOfferAction____, KASDKOSOfferTranslation____, KASDKOSOfferModel____Companion, KASDKOSOfferModel____, KASDKOSOfferTranslation____Companion, KASDKOSTransferMessageGiftCardQueue_, KASDKOSTransferMessageActions_, KASDKOSTransferMessage_Companion, KASDKOSTransferMessage_, KASDKOSTransferMessageActions_Companion, KASDKOSTransferMessageGiftCardQueue_Companion, KASDKOSTransferMessagesModelCompanion, KASDKOSKtor_httpHeadersBuilder, KASDKOSKtor_client_coreHttpRequestBuilderCompanion, KASDKOSKtor_client_coreHttpRequestData, KASDKOSKtor_httpURLBuilder, KASDKOSKtor_httpHttpMethod, KASDKOSKtor_httpHttpAuthHeaderCompanion, KASDKOSKtor_httpHeaderValueEncoding, KASDKOSKotlinThrowable, KASDKOSKotlinException, KASDKOSKotlinRuntimeException, KASDKOSKotlinIllegalStateException, KASDKOSRuntimeTransacterTransaction, KASDKOSKotlinByteArray, KASDKOSKtor_utilsStringValuesBuilder, KASDKOSKtor_httpUrl, KASDKOSKtor_httpOutgoingContent, KASDKOSKtor_utilsAttributeKey<T>, KASDKOSKtor_httpURLProtocol, KASDKOSKtor_httpParametersBuilder, KASDKOSKtor_httpURLBuilderCompanion, KASDKOSKotlinCancellationException, KASDKOSKtor_httpHttpMethodCompanion, KASDKOSKtor_httpHttpAuthHeaderParameterized, KASDKOSKtor_ioCharset, KASDKOSKotlinEnumCompanion, KASDKOSKotlinEnum<E>, KASDKOSKotlinx_serialization_coreSerializersModule, KASDKOSKotlinx_serialization_coreSerialKind, KASDKOSKotlinNothing, KASDKOSKotlinByteIterator, KASDKOSKtor_httpUrlCompanion, KASDKOSKtor_httpContentType, KASDKOSKtor_httpHttpStatusCode, KASDKOSKtor_httpURLProtocolCompanion, KASDKOSKtor_httpUrlEncodingOption, KASDKOSKtor_httpHeaderValueParam, KASDKOSKtor_ioCharsetCompanion, KASDKOSKtor_ioCharsetDecoder, KASDKOSKtor_ioCharsetEncoder, KASDKOSKtor_httpHeaderValueWithParametersCompanion, KASDKOSKtor_httpHeaderValueWithParameters, KASDKOSKtor_httpContentTypeCompanion, KASDKOSKtor_httpHttpStatusCodeCompanion, KASDKOSKotlinx_coroutines_coreAtomicDesc, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, KASDKOSKotlinx_coroutines_coreAtomicOp<__contravariant T>, KASDKOSKotlinx_coroutines_coreOpDescriptor, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNode, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
+@class KASDKOSToken, KASDKOSRuntimeQuery<__covariant RowType>, KASDKOSKtor_client_coreHttpRequestBuilder, KASDKOSKotlinUnit, KASDKOSKtor_httpHttpAuthHeader, KASDKOSModelOld, KASDKOSResult<__covariant T>, KASDKOSResultMetaData, KASDKOSResultIdle<__covariant T>, KASDKOSResultLoadingCompanion, KASDKOSResultLoading<__covariant T>, KASDKOSKotlinArray<T>, KASDKOSResultSuccessCompanion, KASDKOSResultSuccess<__covariant T>, KASDKOSResultUnauthorizedErrorCompanion, KASDKOSResultUnauthorizedError<__covariant T>, KASDKOSResultUnknownErrorCompanion, KASDKOSResultUnknownError<__covariant T>, KASDKOSResultMetaDataCompanion, KASDKOSSerializedResult<__covariant T>, KASDKOSSerializedResultIdleCompanion, KASDKOSSerializedResultIdle, KASDKOSSerializedResultLoadingCompanion, KASDKOSSerializedResultLoading, KASDKOSSerializedResultSuccessCompanion, KASDKOSSerializedResultSuccess, KASDKOSSerializedResultUnauthorizedErrorCompanion, KASDKOSSerializedResultUnauthorizedError, KASDKOSSerializedResultUnknownErrorCompanion, KASDKOSSerializedResultUnknownError, KASDKOSModel, KASDKOSLanguage, KASDKOSTranslation, KASDKOSRewardTranslation, KASDKOSModelCompanion, KASDKOSEmptyResponse, KASDKOSKangarooCacheCompanion, KASDKOSApi, KASDKOSBusinessApiCompanion, KASDKOSBusiness, KASDKOSCFlow<T>, KASDKOSBranchPhone, KASDKOSImage, KASDKOSBranchAddress, KASDKOSBranchCompanion, KASDKOSBranch, KASDKOSBranchAddressCompanion, KASDKOSBranchPhoneCompanion, KASDKOSBusinessData, KASDKOSBusinessBranchesData, KASDKOSBusinessCompanion, KASDKOSBusinessBranchesDataCompanion, KASDKOSBusinessCategoryCompanion, KASDKOSBusinessCategory, KASDKOSBusinessDataCompanion, KASDKOSImageCompanion, KASDKOSUserRegistrationApiCompanion, KASDKOSUserProfileDataModel, KASDKOSUserProfileDataCompanion, KASDKOSUserProfileData, KASDKOSUserProfileDataModelCompanion, KASDKOSUserProfileModelCompanion, KASDKOSUserProfileModel, KASDKOSBannersApiCompanion, KASDKOSBannersModel, KASDKOSLanguage_, KASDKOSBannerCompanion, KASDKOSBanner, KASDKOSBannersModelCompanion, KASDKOSLanguage_Companion, KASDKOSTiersApiCompanion, KASDKOSUserProfileWithTierProgram, KASDKOSTierLevelCompanion, KASDKOSTierLevel, KASDKOSTiers, KASDKOSTierProgramIncludeCompanion, KASDKOSTierProgramInclude, KASDKOSTiersCompanion, KASDKOSUserProfileData_Companion, KASDKOSUserProfileData_, KASDKOSUserProfileDataModel_Companion, KASDKOSUserProfileDataModel_, KASDKOSUserProfileWithTierProgramCompanion, KASDKOSGiftCardDepositApiCompanion, KASDKOSTransferActionResultModel, KASDKOSImage_Companion, KASDKOSImage_, KASDKOSLanguage__Companion, KASDKOSLanguage__, KASDKOSOfferActionCompanion, KASDKOSOfferAction, KASDKOSOfferTranslation, KASDKOSOfferModelCompanion, KASDKOSOfferModel, KASDKOSOfferTranslationCompanion, KASDKOSTransferMessage, KASDKOSTransferActionResultModelCompanion, KASDKOSTransferMessageGiftCardQueue, KASDKOSTransferMessageActions, KASDKOSTransferMessageCompanion, KASDKOSTransferMessageActionsCompanion, KASDKOSTransferMessageGiftCardQueueCompanion, KASDKOSUserPinResetRequestApiCompanion, KASDKOSUserPinResetRequest, KASDKOSUserPinResetRequestCompanion, KASDKOSOfferFacebookShareApiCompanion, KASDKOSUserProfileModel_, KASDKOSReferralProgramCompanion, KASDKOSReferralProgram, KASDKOSReferralProgramIncludeCompanion, KASDKOSReferralProgramInclude, KASDKOSTierProgressCompanion, KASDKOSTierProgress, KASDKOSUserBalanceCompanion, KASDKOSUserBalance, KASDKOSUserProfileBalanceDataCompanion, KASDKOSUserProfileBalanceData, KASDKOSUserProfileData__Companion, KASDKOSUserProfileData__, KASDKOSUserProfileDataModel__Companion, KASDKOSUserProfileDataModel__, KASDKOSUserProfileIncludeCompanion, KASDKOSUserProfileInclude, KASDKOSUserProfileModel_Companion, KASDKOSAlaCarteProductsApiCompanion, KASDKOSAlaCarteProductsModel, KASDKOSProduct, KASDKOSAlaCarteItemModelCompanion, KASDKOSAlaCarteItemModel, KASDKOSUserProfileDataModel___, KASDKOSUserAlaCarteIncluded, KASDKOSAlaCarteProductsModelCompanion, KASDKOSErrorCompanion, KASDKOSError, KASDKOSImagesCompanion, KASDKOSImages, KASDKOSLanguage___Companion, KASDKOSLanguage___, KASDKOSLanguagesCompanion, KASDKOSLanguages, KASDKOSProductCompanion, KASDKOSProductItemModelCompanion, KASDKOSProductItemModel, KASDKOSUserAlaCarteIncludedCompanion, KASDKOSUserProfileData___Companion, KASDKOSUserProfileData___, KASDKOSUserProfileDataModel___Companion, KASDKOSPayPalPaymentApiCompanion, KASDKOSPayPalPaymentModel, KASDKOSPayPalPaymentGiftCard, KASDKOSPayPalPaymentCompanion, KASDKOSPayPalPayment, KASDKOSPayPalPaymentGiftCardCompanion, KASDKOSPayPalPaymentModelCompanion, KASDKOSGetNotificationPreferencesApiCompanion, KASDKOSNotificationSettingsModel, KASDKOSBusinessCategory_Companion, KASDKOSBusinessCategory_, KASDKOSImage__, KASDKOSBusinessData_Companion, KASDKOSBusinessData_, KASDKOSImage__Companion, KASDKOSNotificationSettingsDataCompanion, KASDKOSNotificationSettingsData, KASDKOSNotificationSettingsModelCompanion, KASDKOSUserPinUpdateApiCompanion, KASDKOSUserProfileModel__, KASDKOSUpdatePinRequest, KASDKOSReferralProgram_Companion, KASDKOSReferralProgram_, KASDKOSReferralProgramInclude_Companion, KASDKOSReferralProgramInclude_, KASDKOSTierProgress_Companion, KASDKOSTierProgress_, KASDKOSUpdatePinRequestCompanion, KASDKOSUserBalance_Companion, KASDKOSUserBalance_, KASDKOSUserProfileBalanceData_Companion, KASDKOSUserProfileBalanceData_, KASDKOSUserProfileData____Companion, KASDKOSUserProfileData____, KASDKOSUserProfileDataModel____Companion, KASDKOSUserProfileDataModel____, KASDKOSUserProfileInclude_Companion, KASDKOSUserProfileInclude_, KASDKOSUserProfileModel__Companion, KASDKOSSocialMediaApiCompanion, KASDKOSSocialMediaModel, KASDKOSError_Companion, KASDKOSError_, KASDKOSSocialMediaItemModel, KASDKOSSocialMediaIncludedCompanion, KASDKOSSocialMediaIncluded, KASDKOSSocialMediaItemModelCompanion, KASDKOSSocialMediaModelCompanion, KASDKOSUserTransactionHistoryApiCompanion, KASDKOSUserTransactionHistoryModel, KASDKOSTransactionCompanion, KASDKOSTransaction, KASDKOSUserTransactionHistoryModelCompanion, KASDKOSTransferRecallApiCompanion, KASDKOSTransferActionResultModel_, KASDKOSImage___Companion, KASDKOSImage___, KASDKOSLanguage____Companion, KASDKOSLanguage____, KASDKOSOfferAction_Companion, KASDKOSOfferAction_, KASDKOSOfferTranslation_, KASDKOSOfferModel_Companion, KASDKOSOfferModel_, KASDKOSOfferTranslation_Companion, KASDKOSTransferMessage_, KASDKOSTransferActionResultModel_Companion, KASDKOSTransferMessageGiftCardQueue_, KASDKOSTransferMessageActions_, KASDKOSTransferMessage_Companion, KASDKOSTransferMessageActions_Companion, KASDKOSTransferMessageGiftCardQueue_Companion, KASDKOSTransferRecallResultModelCompanion, KASDKOSTransferRecallResultModel, KASDKOSBusinessesApiCompanion, KASDKOSBusinesses, KASDKOSBranchPhone_, KASDKOSImage____, KASDKOSBranchAddress_, KASDKOSBranch_Companion, KASDKOSBranch_, KASDKOSBranchAddress_Companion, KASDKOSBranchPhone_Companion, KASDKOSBusinessData__, KASDKOSBusinessBranchesData_, KASDKOSBusiness_Companion, KASDKOSBusiness_, KASDKOSBusinessBranchesData_Companion, KASDKOSBusinessCategory__Companion, KASDKOSBusinessCategory__, KASDKOSBusinessData__Companion, KASDKOSBusinessesCompanion, KASDKOSImage____Companion, KASDKOSBalanceTransferApiCompanion, KASDKOSTransferModel, KASDKOSTransferFromCompanion, KASDKOSTransferFrom, KASDKOSTransferTo, KASDKOSTransferModelCompanion, KASDKOSTransferToCompanion, KASDKOSSocialMediaLinksApiCompanion, KASDKOSSocialMediaLinksModel, KASDKOSSocialMediaModel_, KASDKOSSocialMediaLinksIncludedCompanion, KASDKOSSocialMediaLinksIncluded, KASDKOSUserProfileDataModel_____, KASDKOSSocialMediaLinksModelCompanion, KASDKOSSocialMediaModel_Companion, KASDKOSUserProfileDataModel_____Companion, KASDKOSGiftCardsApiCompanion, KASDKOSGiftCardsModel, KASDKOSGiftCardActionCompanion, KASDKOSGiftCardAction, KASDKOSImage_____, KASDKOSGiftCardTranslation, KASDKOSGiftCardModelCompanion, KASDKOSGiftCardModel, KASDKOSLanguage_____, KASDKOSGiftCardTranslationCompanion, KASDKOSGiftCardsModelCompanion, KASDKOSImage_____Companion, KASDKOSLanguage_____Companion, KASDKOSFrequentBuyerApiCompanion, KASDKOSFrequentBuyerModel, KASDKOSError__Companion, KASDKOSError__, KASDKOSFrequentBuyerItemModel, KASDKOSFrequentBuyerIncludedCompanion, KASDKOSFrequentBuyerIncluded, KASDKOSFrequentBuyerUsersModel, KASDKOSFrequentBuyerItemModelCompanion, KASDKOSUserProfileDataModel______, KASDKOSFrequentBuyerModelCompanion, KASDKOSFrequentBuyerUsersModelCompanion, KASDKOSUserProfileData_____Companion, KASDKOSUserProfileData_____, KASDKOSUserProfileDataModel______Companion, KASDKOSUserOffersApiCompanion, KASDKOSUserOffersModel, KASDKOSImage______Companion, KASDKOSImage______, KASDKOSLanguage______Companion, KASDKOSLanguage______, KASDKOSOfferAction__Companion, KASDKOSOfferAction__, KASDKOSOfferTranslation__, KASDKOSOfferModel__Companion, KASDKOSOfferModel__, KASDKOSOfferTranslation__Companion, KASDKOSUserOffersModelCompanion, KASDKOSFrequentBuyerProgramsApiCompanion, KASDKOSFrequentBuyerProgramsModel, KASDKOSFrequentBuyerProgramModelCompanion, KASDKOSFrequentBuyerProgramModel, KASDKOSFrequentBuyerProgramsIncludedCompanion, KASDKOSFrequentBuyerProgramsIncluded, KASDKOSUserProfileDataModel_______, KASDKOSFrequentBuyerProgramsModelCompanion, KASDKOSUserProfileDataModel_______Companion, KASDKOSClaimOfferApiCompanion, KASDKOSClaimedOfferModel, KASDKOSOfferModel___, KASDKOSClaimedOfferModelCompanion, KASDKOSImage_______Companion, KASDKOSImage_______, KASDKOSLanguage_______Companion, KASDKOSLanguage_______, KASDKOSOfferAction___Companion, KASDKOSOfferAction___, KASDKOSOfferTranslation___, KASDKOSOfferModel___Companion, KASDKOSOfferTranslation___Companion, KASDKOSUserProfileUpdateApiCompanion, KASDKOSUserProfileModel___, KASDKOSReferralProgram__Companion, KASDKOSReferralProgram__, KASDKOSReferralProgramInclude__Companion, KASDKOSReferralProgramInclude__, KASDKOSTierProgress__Companion, KASDKOSTierProgress__, KASDKOSUserBalance__Companion, KASDKOSUserBalance__, KASDKOSUserProfileBalanceData__Companion, KASDKOSUserProfileBalanceData__, KASDKOSUserProfileData______Companion, KASDKOSUserProfileData______, KASDKOSUserProfileDataModel________Companion, KASDKOSUserProfileDataModel________, KASDKOSUserProfileInclude__Companion, KASDKOSUserProfileInclude__, KASDKOSUserProfileModel___Companion, KASDKOSRedeemRewardsApiCompanion, KASDKOSRedeemResponseModel, KASDKOSRedeemRequest, KASDKOSRedemptionModel, KASDKOSRedeemRequestCompanion, KASDKOSUserProfileModel____, KASDKOSRedeemResponseDataCompanion, KASDKOSRedeemResponseData, KASDKOSRedeemResponseModelCompanion, KASDKOSRedemptionModelCompanion, KASDKOSReferralProgram___Companion, KASDKOSReferralProgram___, KASDKOSReferralProgramInclude___Companion, KASDKOSReferralProgramInclude___, KASDKOSTierProgress___Companion, KASDKOSTierProgress___, KASDKOSUserBalance___Companion, KASDKOSUserBalance___, KASDKOSUserProfileBalanceData___Companion, KASDKOSUserProfileBalanceData___, KASDKOSUserProfileData_______Companion, KASDKOSUserProfileData_______, KASDKOSUserProfileDataModel_________Companion, KASDKOSUserProfileDataModel_________, KASDKOSUserProfileInclude___Companion, KASDKOSUserProfileInclude___, KASDKOSUserProfileModel____Companion, KASDKOSUserCheckInApiCompanion, KASDKOSCheckInRequest, KASDKOSCheckInRequestCompanion, KASDKOSUpdateNotificationPreferencesApiCompanion, KASDKOSNotificationSettingsModel_, KASDKOSNotificationSettingsData_, KASDKOSBusiness__Companion, KASDKOSBusiness__, KASDKOSBusinessCategory___Companion, KASDKOSBusinessCategory___, KASDKOSImage________, KASDKOSBusinessData___Companion, KASDKOSBusinessData___, KASDKOSImage________Companion, KASDKOSNotificationPreferencesRequestCompanion, KASDKOSNotificationPreferencesRequest, KASDKOSNotificationSettingsData_Companion, KASDKOSNotificationSettingsModel_Companion, KASDKOSNotificationUpdateListModel2Companion, KASDKOSNotificationUpdateListModel2, KASDKOSNotificationUpdateResponseData, KASDKOSNotificationUpdateModelCompanion, KASDKOSNotificationUpdateModel, KASDKOSNotificationUpdateResponseDataCompanion, KASDKOSUserAuthenticationApiCompanion, KASDKOSUserAuthenticationModel, KASDKOSUserAuthenticationModelCompanion, KASDKOSUserProfileApiCompanion, KASDKOSUserProfileModel_____, KASDKOSReferralProgram____Companion, KASDKOSReferralProgram____, KASDKOSReferralProgramInclude____Companion, KASDKOSReferralProgramInclude____, KASDKOSTierProgress____Companion, KASDKOSTierProgress____, KASDKOSUserBalance____Companion, KASDKOSUserBalance____, KASDKOSUserProfileBalanceData____Companion, KASDKOSUserProfileBalanceData____, KASDKOSUserProfileData________Companion, KASDKOSUserProfileData________, KASDKOSUserProfileDataModel__________Companion, KASDKOSUserProfileDataModel__________, KASDKOSUserProfileInclude____Companion, KASDKOSUserProfileInclude____, KASDKOSUserProfileModel_____Companion, KASDKOSCountriesApiCompanion, KASDKOSCountries, KASDKOSCountry, KASDKOSCountriesCompanion, KASDKOSCountryCompanion, KASDKOSUserPinResetApiCompanion, KASDKOSGiftCardPurchaseApiCompanion, KASDKOSGiftCardPayPalPaymentResponseModel, KASDKOSGiftCardPurchaseRequest, KASDKOSGiftCardPayPalPaymentCompanion, KASDKOSGiftCardPayPalPayment, KASDKOSGiftCardPayPalPaymentResponseData, KASDKOSGiftCardPayPalPaymentResponseCompanion, KASDKOSGiftCardPayPalPaymentResponse, KASDKOSGiftCardPurchaseResponseGiftCardData, KASDKOSUserBalance_____, KASDKOSGiftCardPayPalPaymentResponseDataCompanion, KASDKOSGiftCardPayPalPaymentResponseModelCompanion, KASDKOSGiftCardPurchaseRequestCompanion, KASDKOSGiftCardPurchaseResponseGiftCardDataCompanion, KASDKOSUserBalance_____Companion, KASDKOSUserRewardsApiCompanion, KASDKOSUserRewardsModel, KASDKOSImage_________Companion, KASDKOSImage_________, KASDKOSLanguage________Companion, KASDKOSLanguage________, KASDKOSRewardTranslation_, KASDKOSRewardModelCompanion, KASDKOSRewardModel, KASDKOSRewardTranslation_Companion, KASDKOSUserRewardsDataCompanion, KASDKOSUserRewardsData, KASDKOSUserRewardsModelCompanion, KASDKOSCampaignMessagesApiCompanion, KASDKOSCampaignMessagesModel, KASDKOSBusinessCategory____Companion, KASDKOSBusinessCategory____, KASDKOSImage__________, KASDKOSBusinessData____Companion, KASDKOSBusinessData____, KASDKOSOfferModel____, KASDKOSCampaignCompanion, KASDKOSCampaign, KASDKOSCampaignMessageCompanion, KASDKOSCampaignMessage, KASDKOSCampaignMessagesModelCompanion, KASDKOSImage__________Companion, KASDKOSLanguage_________Companion, KASDKOSLanguage_________, KASDKOSOfferAction____Companion, KASDKOSOfferAction____, KASDKOSOfferTranslation____, KASDKOSOfferModel____Companion, KASDKOSOfferTranslation____Companion, KASDKOSUserProductsApiCompanion, KASDKOSUserProductsModel, KASDKOSError___Companion, KASDKOSError___, KASDKOSImages_Companion, KASDKOSImages_, KASDKOSLanguage__________Companion, KASDKOSLanguage__________, KASDKOSLanguages_Companion, KASDKOSLanguages_, KASDKOSProduct_Companion, KASDKOSProduct_, KASDKOSUserProductsIncludedCompanion, KASDKOSUserProductsIncluded, KASDKOSUserProfileDataModel___________, KASDKOSUserProductsModelCompanion, KASDKOSUserProfileData_________Companion, KASDKOSUserProfileData_________, KASDKOSUserProfileDataModel___________Companion, KASDKOSTransferMessagesApiCompanion, KASDKOSTransferMessagesModel, KASDKOSImage___________Companion, KASDKOSImage___________, KASDKOSLanguage___________Companion, KASDKOSLanguage___________, KASDKOSOfferAction_____Companion, KASDKOSOfferAction_____, KASDKOSOfferTranslation_____, KASDKOSOfferModel_____Companion, KASDKOSOfferModel_____, KASDKOSOfferTranslation_____Companion, KASDKOSTransferMessageGiftCardQueue__, KASDKOSTransferMessageActions__, KASDKOSTransferMessage__Companion, KASDKOSTransferMessage__, KASDKOSTransferMessageActions__Companion, KASDKOSTransferMessageGiftCardQueue__Companion, KASDKOSTransferMessagesModelCompanion, KASDKOSKtor_httpHeadersBuilder, KASDKOSKtor_client_coreHttpRequestBuilderCompanion, KASDKOSKtor_client_coreHttpRequestData, KASDKOSKtor_httpURLBuilder, KASDKOSKtor_httpHttpMethod, KASDKOSKtor_httpHttpAuthHeaderCompanion, KASDKOSKtor_httpHeaderValueEncoding, KASDKOSKotlinThrowable, KASDKOSKotlinException, KASDKOSKotlinRuntimeException, KASDKOSKotlinIllegalStateException, KASDKOSRuntimeTransacterTransaction, KASDKOSKotlinByteArray, KASDKOSKtor_utilsStringValuesBuilder, KASDKOSKtor_httpUrl, KASDKOSKtor_httpOutgoingContent, KASDKOSKtor_utilsAttributeKey<T>, KASDKOSKtor_httpURLProtocol, KASDKOSKtor_httpParametersBuilder, KASDKOSKtor_httpURLBuilderCompanion, KASDKOSKotlinCancellationException, KASDKOSKtor_httpHttpMethodCompanion, KASDKOSKtor_httpHttpAuthHeaderParameterized, KASDKOSKtor_ioCharset, KASDKOSKotlinEnumCompanion, KASDKOSKotlinEnum<E>, KASDKOSKotlinx_serialization_coreSerializersModule, KASDKOSKotlinx_serialization_coreSerialKind, KASDKOSKotlinNothing, KASDKOSKotlinByteIterator, KASDKOSKtor_httpUrlCompanion, KASDKOSKtor_httpContentType, KASDKOSKtor_httpHttpStatusCode, KASDKOSKtor_httpURLProtocolCompanion, KASDKOSKtor_httpUrlEncodingOption, KASDKOSKtor_httpHeaderValueParam, KASDKOSKtor_ioCharsetCompanion, KASDKOSKtor_ioCharsetDecoder, KASDKOSKtor_ioCharsetEncoder, KASDKOSKtor_httpHeaderValueWithParametersCompanion, KASDKOSKtor_httpHeaderValueWithParameters, KASDKOSKtor_httpContentTypeCompanion, KASDKOSKtor_httpHttpStatusCodeCompanion, KASDKOSKotlinx_coroutines_coreAtomicDesc, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, KASDKOSKotlinx_coroutines_coreAtomicOp<__contravariant T>, KASDKOSKotlinx_coroutines_coreOpDescriptor, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNode, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, KASDKOSKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>;
 
 @protocol KASDKOSRuntimeTransactionWithoutReturn, KASDKOSRuntimeTransactionWithReturn, KASDKOSRuntimeTransacter, KASDKOSKotlinx_serialization_coreKSerializer, KASDKOSKotlinx_coroutines_coreFlowCollector, KASDKOSKotlinx_coroutines_coreFlow, KASDKOSKtor_ioCloseable, KASDKOSKotlinSuspendFunction0, KASDKOSRuntimeSqlDriver, KASDKOSKangarooCacheQueries, KASDKOSKangarooCache, KASDKOSRuntimeSqlDriverSchema, KASDKOSRuntimeSqlCursor, KASDKOSRuntimeQueryListener, KASDKOSRuntimeTransactionCallbacks, KASDKOSKtor_httpHttpMessageBuilder, KASDKOSKtor_client_coreHttpClientEngineCapability, KASDKOSKtor_utilsAttributes, KASDKOSKotlinx_coroutines_coreJob, KASDKOSKotlinx_serialization_coreEncoder, KASDKOSKotlinx_serialization_coreSerialDescriptor, KASDKOSKotlinx_serialization_coreSerializationStrategy, KASDKOSKotlinx_serialization_coreDecoder, KASDKOSKotlinx_serialization_coreDeserializationStrategy, KASDKOSKotlinIterator, KASDKOSKotlinFunction, KASDKOSRuntimeSqlPreparedStatement, KASDKOSRuntimeCloseable, KASDKOSKtor_utilsStringValues, KASDKOSKotlinMapEntry, KASDKOSKtor_httpHeaders, KASDKOSKotlinx_coroutines_coreChildHandle, KASDKOSKotlinx_coroutines_coreChildJob, KASDKOSKotlinx_coroutines_coreDisposableHandle, KASDKOSKotlinSequence, KASDKOSKotlinx_coroutines_coreSelectClause0, KASDKOSKotlinCoroutineContextKey, KASDKOSKotlinCoroutineContextElement, KASDKOSKotlinCoroutineContext, KASDKOSKotlinComparable, KASDKOSKotlinx_serialization_coreCompositeEncoder, KASDKOSKotlinAnnotation, KASDKOSKotlinx_serialization_coreCompositeDecoder, KASDKOSKtor_httpParameters, KASDKOSKotlinx_coroutines_coreParentJob, KASDKOSKotlinx_coroutines_coreSelectInstance, KASDKOSKotlinx_serialization_coreSerializersModuleCollector, KASDKOSKotlinKClass, KASDKOSKotlinContinuation, KASDKOSKotlinKDeclarationContainer, KASDKOSKotlinKAnnotatedElement, KASDKOSKotlinKClassifier;
 
@@ -951,7 +951,7 @@ __attribute__((swift_name("BranchPhone.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Business")))
 @interface KASDKOSBusiness : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSBusinessData *)data include:(KASDKOSBusinessBranchesData *)include __attribute__((swift_name("init(data:include:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSBusinessData * _Nullable)data included:(KASDKOSBusinessBranchesData * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -962,15 +962,15 @@ __attribute__((swift_name("Business")))
 @property (class, readonly, getter=companion) KASDKOSBusinessCompanion *companion __attribute__((swift_name("companion")));
 
 /** Details about a business */
-- (KASDKOSBusinessData *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBusinessData * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /** Details about a business&#39; branches */
-- (KASDKOSBusinessBranchesData *)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSBusinessBranchesData * _Nullable)component2 __attribute__((swift_name("component2()")));
 
 /**
  * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
  */
-- (KASDKOSBusiness *)doCopyData:(KASDKOSBusinessData *)data include:(KASDKOSBusinessBranchesData *)include __attribute__((swift_name("doCopy(data:include:)")));
+- (KASDKOSBusiness *)doCopyData:(KASDKOSBusinessData * _Nullable)data included:(KASDKOSBusinessBranchesData * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
@@ -988,10 +988,10 @@ __attribute__((swift_name("Business")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Details about a business */
-@property (readonly) KASDKOSBusinessData *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSBusinessData * _Nullable data __attribute__((swift_name("data")));
 
 /** Details about a business&#39; branches */
-@property (readonly) KASDKOSBusinessBranchesData *include __attribute__((swift_name("include")));
+@property (readonly) KASDKOSBusinessBranchesData * _Nullable included __attribute__((swift_name("included")));
 @end;
 
 
@@ -1019,14 +1019,14 @@ __attribute__((swift_name("Business.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("BusinessBranchesData")))
 @interface KASDKOSBusinessBranchesData : KASDKOSBase
-- (instancetype)initWithBranches:(NSArray<KASDKOSBranch *> *)branches __attribute__((swift_name("init(branches:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithBranches:(NSArray<KASDKOSBranch *> * _Nullable)branches __attribute__((swift_name("init(branches:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSBusinessBranchesDataCompanion *companion __attribute__((swift_name("companion")));
-- (NSArray<KASDKOSBranch *> *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSBusinessBranchesData *)doCopyBranches:(NSArray<KASDKOSBranch *> *)branches __attribute__((swift_name("doCopy(branches:)")));
+- (NSArray<KASDKOSBranch *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBusinessBranchesData *)doCopyBranches:(NSArray<KASDKOSBranch *> * _Nullable)branches __attribute__((swift_name("doCopy(branches:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSArray<KASDKOSBranch *> *branches __attribute__((swift_name("branches")));
+@property (readonly) NSArray<KASDKOSBranch *> * _Nullable branches __attribute__((swift_name("branches")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1112,16 +1112,16 @@ __attribute__((swift_name("BusinessCategory.Companion")))
 
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("BusinessData")))
 @interface KASDKOSBusinessData : KASDKOSBase
-- (instancetype)initWithId:(NSString *)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage * _Nullable)logo logoTransparentBackground:(KASDKOSImage * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage * _Nullable)coverPhoto category:(KASDKOSBusinessCategory * _Nullable)category __attribute__((swift_name("init(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage * _Nullable)logo logoTransparentBackground:(KASDKOSImage * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage * _Nullable)coverPhoto category:(KASDKOSBusinessCategory * _Nullable)category __attribute__((swift_name("init(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSBusinessDataCompanion *companion __attribute__((swift_name("companion")));
 
 /** Unique business ID. */
-- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (KASDKOSBusinessCategory * _Nullable)component10 __attribute__((swift_name("component10()")));
 
 /** The name of this business */
@@ -1143,22 +1143,22 @@ __attribute__((swift_name("BusinessData")))
 - (KASDKOSImage * _Nullable)component9 __attribute__((swift_name("component9()")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
-- (KASDKOSBusinessData *)doCopyId:(NSString *)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage * _Nullable)logo logoTransparentBackground:(KASDKOSImage * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage * _Nullable)coverPhoto category:(KASDKOSBusinessCategory * _Nullable)category __attribute__((swift_name("doCopy(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)")));
+- (KASDKOSBusinessData *)doCopyId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage * _Nullable)logo logoTransparentBackground:(KASDKOSImage * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage * _Nullable)coverPhoto category:(KASDKOSBusinessCategory * _Nullable)category __attribute__((swift_name("doCopy(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 - (NSString *)description __attribute__((swift_name("description()")));
 
@@ -1171,7 +1171,7 @@ __attribute__((swift_name("BusinessData")))
 @property (readonly) KASDKOSImage * _Nullable coverPhoto __attribute__((swift_name("coverPhoto")));
 
 /** Unique business ID. */
-@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
 @property (readonly) KASDKOSImage * _Nullable logo __attribute__((swift_name("logo")));
 @property (readonly) KASDKOSImage * _Nullable logoTransparentBackground __attribute__((swift_name("logoTransparentBackground")));
 
@@ -1187,7 +1187,7 @@ __attribute__((swift_name("BusinessData")))
 
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("BusinessData.Companion")))
@@ -1195,14 +1195,14 @@ __attribute__((swift_name("BusinessData.Companion")))
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) KASDKOSBusinessDataCompanion *shared __attribute__((swift_name("shared")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
@@ -1258,8 +1258,8 @@ __attribute__((swift_name("UserRegistrationApi")))
 /**
  * Register a new user. Either a phone number or an email address is required.
  */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel *> *> *)createAccountEmail:(NSString * _Nullable)email phone:(NSString * _Nullable)phone countryCode:(NSString * _Nullable)countryCode language:(NSString * _Nullable)language __attribute__((swift_name("createAccount(email:phone:countryCode:language:)")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel *> *> *userRegistrationState __attribute__((swift_name("userRegistrationState")));
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileDataModel *> *> *)createAccountEmail:(NSString * _Nullable)email phone:(NSString * _Nullable)phone countryCode:(NSString * _Nullable)countryCode language:(NSString * _Nullable)language __attribute__((swift_name("createAccount(email:phone:countryCode:language:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileDataModel *> *> *userRegistrationState __attribute__((swift_name("userRegistrationState")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1299,10 +1299,10 @@ __attribute__((swift_name("UserProfileData")))
 /** Denotes whether this account has been enabled. */
 - (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 
 /** Email address identifying this user. */
@@ -1361,7 +1361,7 @@ __attribute__((swift_name("UserProfileData")))
 /** Email address identifying this user. */
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
 
 /** Denotes whether this account has been enabled. */
@@ -1385,7 +1385,7 @@ __attribute__((swift_name("UserProfileData")))
 /** Phone number associated with this user. */
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
 
 /** Profile photo url associated with this user. */
@@ -1413,6 +1413,162 @@ __attribute__((swift_name("UserProfileData.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) KASDKOSUserProfileDataCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel")))
+@interface KASDKOSUserProfileDataModel : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel.Companion")))
+@interface KASDKOSUserProfileDataModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModelCompanion *shared __attribute__((swift_name("shared")));
 
 /**
  * User Profile model class containing user data
@@ -1488,47 +1644,144 @@ __attribute__((swift_name("UserProfileModel.Companion")))
 
 
 /**
- * Request a PIN reset. Either a phone number or email address is required If successful, a verification code will be sent by either email or SMS message.  [Api] class
+ * Acquires business banners. [Api] class
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserPinResetRequestApi")))
-@interface KASDKOSUserPinResetRequestApi : KASDKOSApi
+__attribute__((swift_name("BannersApi")))
+@interface KASDKOSBannersApi : KASDKOSApi
 
 /**
- * Request a PIN reset. Either a phone number or email address is required If successful, a verification code will be sent by either email or SMS message.  [Api] class
+ * Acquires business banners. [Api] class
  */
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 
 /**
- * Request a PIN reset. Either a phone number or email address is required If successful, a verification code will be sent by either email or SMS message.  [Api] class
+ * Acquires business banners. [Api] class
  */
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) KASDKOSUserPinResetRequestApiCompanion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSBannersApiCompanion *companion __attribute__((swift_name("companion")));
 
 /**
- * Request a PIN reset. Either a phone number or email address is required If successful, a verification code will be sent by either email or SMS message.
+ * Acquires business banners.
  */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserPinResetRequest *> *> *)requestPinResetMode:(NSString *)mode email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone countryCode:(NSString * _Nullable)countryCode __attribute__((swift_name("requestPinReset(mode:email:phone:countryCode:)")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserPinResetRequest *> *> *userPinResetRequestState __attribute__((swift_name("userPinResetRequestState")));
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSBannersModel *> *> *)getBanners __attribute__((swift_name("getBanners()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSBannersModel *> *> *bannersState __attribute__((swift_name("bannersState")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserPinResetRequestApi.Companion")))
-@interface KASDKOSUserPinResetRequestApiCompanion : KASDKOSBase
+__attribute__((swift_name("BannersApi.Companion")))
+@interface KASDKOSBannersApiCompanion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserPinResetRequestApiCompanion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSBannersApiCompanion *shared __attribute__((swift_name("shared")));
 @end;
 
 
 /**
- * User PIN reset request status
+ * A business banner.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserPinResetRequest")))
-@interface KASDKOSUserPinResetRequest : KASDKOSModel
-- (instancetype)initWithStatusCode:(int32_t)statusCode message:(NSString *)message description:(NSString *)description __attribute__((swift_name("init(statusCode:message:description:)"))) __attribute__((objc_designated_initializer));
+__attribute__((swift_name("Banner")))
+@interface KASDKOSBanner : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id type:(KASDKOSInt * _Nullable)type imagePath:(NSString * _Nullable)imagePath link:(NSString * _Nullable)link createdAt:(NSString * _Nullable)createdAt publishedAt:(NSString * _Nullable)publishedAt expiresAt:(NSString * _Nullable)expiresAt language:(KASDKOSLanguage_ * _Nullable)language __attribute__((swift_name("init(id:type:imagePath:link:createdAt:publishedAt:expiresAt:language:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBannerCompanion *companion __attribute__((swift_name("companion")));
+
+/** Unique banner id. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The banner type. */
+- (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSLanguage_ * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/**
+ * A business banner.
+ */
+- (KASDKOSBanner *)doCopyId:(KASDKOSLong * _Nullable)id type:(KASDKOSInt * _Nullable)type imagePath:(NSString * _Nullable)imagePath link:(NSString * _Nullable)link createdAt:(NSString * _Nullable)createdAt publishedAt:(NSString * _Nullable)publishedAt expiresAt:(NSString * _Nullable)expiresAt language:(KASDKOSLanguage_ * _Nullable)language __attribute__((swift_name("doCopy(id:type:imagePath:link:createdAt:publishedAt:expiresAt:language:)")));
+
+/**
+ * A business banner.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A business banner.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A business banner.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable expiresAt __attribute__((swift_name("expiresAt")));
+
+/** Unique banner id. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable imagePath __attribute__((swift_name("imagePath")));
+@property (readonly) KASDKOSLanguage_ * _Nullable language __attribute__((swift_name("language")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable publishedAt __attribute__((swift_name("publishedAt")));
+
+/** The banner type. */
+@property (readonly) KASDKOSInt * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+
+/**
+ * A business banner.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Banner.Companion")))
+@interface KASDKOSBannerCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A business banner.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBannerCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A business banner.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Business banners. Used to display promotional material.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BannersModel")))
+@interface KASDKOSBannersModel : KASDKOSModel
+- (instancetype)initWithData:(NSArray<KASDKOSBanner *> * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -1536,165 +1789,354 @@ __attribute__((swift_name("UserPinResetRequest")))
  */
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSUserPinResetRequestCompanion *companion __attribute__((swift_name("companion")));
-
-/** The response code for the pin reset request. Anything within the 200 range indicates a success  */
-- (int32_t)component1 __attribute__((swift_name("component1()")));
-
-/** The message and status returned by the pin reset request */
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-
-/** A description of the pin reset request */
-- (NSString *)component3 __attribute__((swift_name("component3()")));
+@property (class, readonly, getter=companion) KASDKOSBannersModelCompanion *companion __attribute__((swift_name("companion")));
+- (NSArray<KASDKOSBanner *> * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /**
- * User PIN reset request status
+ * Business banners. Used to display promotional material.
  */
-- (KASDKOSUserPinResetRequest *)doCopyStatusCode:(int32_t)statusCode message:(NSString *)message description:(NSString *)description __attribute__((swift_name("doCopy(statusCode:message:description:)")));
+- (KASDKOSBannersModel *)doCopyData:(NSArray<KASDKOSBanner *> * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
 
 /**
- * User PIN reset request status
+ * Business banners. Used to display promotional material.
  */
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 
 /**
- * User PIN reset request status
+ * Business banners. Used to display promotional material.
  */
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 
 /**
- * User PIN reset request status
+ * Business banners. Used to display promotional material.
  */
 - (NSString *)description __attribute__((swift_name("description()")));
-
-/** A description of the pin reset request */
-@property (readonly) NSString *description_ __attribute__((swift_name("description_")));
-
-/** The message and status returned by the pin reset request */
-@property (readonly) NSString *message __attribute__((swift_name("message")));
-
-/** The response code for the pin reset request. Anything within the 200 range indicates a success  */
-@property (readonly) int32_t statusCode __attribute__((swift_name("statusCode")));
+@property (readonly) NSArray<KASDKOSBanner *> * _Nullable data __attribute__((swift_name("data")));
 @end;
 
 
 /**
- * User PIN reset request status
+ * Business banners. Used to display promotional material.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserPinResetRequest.Companion")))
-@interface KASDKOSUserPinResetRequestCompanion : KASDKOSBase
+__attribute__((swift_name("BannersModel.Companion")))
+@interface KASDKOSBannersModelCompanion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
- * User PIN reset request status
+ * Business banners. Used to display promotional material.
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserPinResetRequestCompanion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSBannersModelCompanion *shared __attribute__((swift_name("shared")));
 
 /**
- * User PIN reset request status
+ * Business banners. Used to display promotional material.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language_")))
+@interface KASDKOSLanguage_ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSLanguage_Companion *companion __attribute__((swift_name("companion")));
+
+/** The Kangaroo ID of this language. */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The full name of this language (English, French, Spanish) */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSLanguage_ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+@property (readonly) NSString * _Nullable abbreviation __attribute__((swift_name("abbreviation")));
+
+/** The Kangaroo ID of this language. */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The full name of this language (English, French, Spanish) */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language_.Companion")))
+@interface KASDKOSLanguage_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSLanguage_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Acquires information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.  [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TiersApi")))
+@interface KASDKOSTiersApi : KASDKOSApi
+
+/**
+ * Acquires information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.  [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Acquires information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.  [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSTiersApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Acquires information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileWithTierProgram *> *> *)getTiers __attribute__((swift_name("getTiers()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileWithTierProgram *> *> *tiersState __attribute__((swift_name("tiersState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TiersApi.Companion")))
+@interface KASDKOSTiersApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTiersApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+
+/**
+ * Represents a single tier level.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierLevel")))
+@interface KASDKOSTierLevel : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id name:(NSString * _Nullable)name reachSpend:(KASDKOSLong * _Nullable)reachSpend reachVisits:(KASDKOSLong * _Nullable)reachVisits reachPoints:(KASDKOSLong * _Nullable)reachPoints __attribute__((swift_name("init(id:name:reachSpend:reachVisits:reachPoints:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTierLevelCompanion *companion __attribute__((swift_name("companion")));
+
+/** The ID for this tier. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The name of this tier level. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The amount of money spent required to reach this tier. */
+- (KASDKOSLong * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The amount of visits made to reach this tier. */
+- (KASDKOSLong * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The amount of points acquired that is required to reach this tier. */
+- (KASDKOSLong * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/**
+ * Represents a single tier level.
+ */
+- (KASDKOSTierLevel *)doCopyId:(KASDKOSLong * _Nullable)id name:(NSString * _Nullable)name reachSpend:(KASDKOSLong * _Nullable)reachSpend reachVisits:(KASDKOSLong * _Nullable)reachVisits reachPoints:(KASDKOSLong * _Nullable)reachPoints __attribute__((swift_name("doCopy(id:name:reachSpend:reachVisits:reachPoints:)")));
+
+/**
+ * Represents a single tier level.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Represents a single tier level.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Represents a single tier level.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The ID for this tier. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** The name of this tier level. */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+
+/** The amount of points acquired that is required to reach this tier. */
+@property (readonly) KASDKOSLong * _Nullable reachPoints __attribute__((swift_name("reachPoints")));
+
+/** The amount of money spent required to reach this tier. */
+@property (readonly) KASDKOSLong * _Nullable reachSpend __attribute__((swift_name("reachSpend")));
+
+/** The amount of visits made to reach this tier. */
+@property (readonly) KASDKOSLong * _Nullable reachVisits __attribute__((swift_name("reachVisits")));
+@end;
+
+
+/**
+ * Represents a single tier level.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierLevel.Companion")))
+@interface KASDKOSTierLevelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Represents a single tier level.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTierLevelCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Represents a single tier level.
  */
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 
 /**
- * Notify Kangaroo that an offer has been shared to facebook [Api] class
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferFacebookShareApi")))
-@interface KASDKOSOfferFacebookShareApi : KASDKOSApi
+__attribute__((swift_name("TierProgramInclude")))
+@interface KASDKOSTierProgramInclude : KASDKOSBase
+- (instancetype)initWithTiers:(KASDKOSTiers * _Nullable)tiers __attribute__((swift_name("init(tiers:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTierProgramIncludeCompanion *companion __attribute__((swift_name("companion")));
+
+/** Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.  */
+- (KASDKOSTiers * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /**
- * Notify Kangaroo that an offer has been shared to facebook [Api] class
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
  */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+- (KASDKOSTierProgramInclude *)doCopyTiers:(KASDKOSTiers * _Nullable)tiers __attribute__((swift_name("doCopy(tiers:)")));
 
 /**
- * Notify Kangaroo that an offer has been shared to facebook [Api] class
- */
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) KASDKOSOfferFacebookShareApiCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * Notify Kangaroo that an offer has been shared to facebook
- */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel_ *> *> *)postOfferFacebookShareOfferId:(NSString *)offerId include:(NSString *)include facebookUserId:(NSString *)facebookUserId type:(NSString *)type friendsCount:(NSString *)friendsCount __attribute__((swift_name("postOfferFacebookShare(offerId:include:facebookUserId:type:friendsCount:)")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel_ *> *> *offerFacebookShareState __attribute__((swift_name("offerFacebookShareState")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferFacebookShareApi.Companion")))
-@interface KASDKOSOfferFacebookShareApiCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferFacebookShareApiCompanion *shared __attribute__((swift_name("shared")));
-@end;
-
-
-/**
- * User Profile balance data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileBalanceData")))
-@interface KASDKOSUserProfileBalanceData : KASDKOSBase
-- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceDataCompanion *companion __attribute__((swift_name("companion")));
-
-/** The number of points this user currently has. */
-- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
-
-/** The amount of store credit in the users&#39; e-wallet. */
-- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
-
-/**
- * User Profile balance data
- */
-- (KASDKOSUserProfileBalanceData *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
-
-/**
- * User Profile balance data
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
  */
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 
 /**
- * User Profile balance data
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
  */
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 
 /**
- * User Profile balance data
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
  */
 - (NSString *)description __attribute__((swift_name("description()")));
 
-/** The amount of store credit in the users&#39; e-wallet. */
-@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
-
-/** The number of points this user currently has. */
-@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+/** Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.  */
+@property (readonly) KASDKOSTiers * _Nullable tiers __attribute__((swift_name("tiers")));
 @end;
 
 
 /**
- * User Profile balance data
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileBalanceData.Companion")))
-@interface KASDKOSUserProfileBalanceDataCompanion : KASDKOSBase
+__attribute__((swift_name("TierProgramInclude.Companion")))
+@interface KASDKOSTierProgramIncludeCompanion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
- * User Profile balance data
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceDataCompanion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSTierProgramIncludeCompanion *shared __attribute__((swift_name("shared")));
 
 /**
- * User Profile balance data
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Tiers")))
+@interface KASDKOSTiers : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id tierSequence:(NSArray<KASDKOSInt *> * _Nullable)tierSequence tierRelations:(KASDKOSInt * _Nullable)tierRelations resetType:(KASDKOSInt * _Nullable)resetType ressetPeriodMonth:(KASDKOSInt * _Nullable)ressetPeriodMonth basePreviousPeriod:(KASDKOSInt * _Nullable)basePreviousPeriod enabled:(KASDKOSBoolean * _Nullable)enabled tierLevels:(NSArray<KASDKOSTierLevel *> * _Nullable)tierLevels __attribute__((swift_name("init(id:tierSequence:tierRelations:resetType:ressetPeriodMonth:basePreviousPeriod:enabled:tierLevels:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTiersCompanion *companion __attribute__((swift_name("companion")));
+
+/** The ID for this tier program. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The sequence for this tier program. */
+- (NSArray<KASDKOSInt *> * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSInt * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSInt * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The month in which this tier program will reset. */
+- (KASDKOSInt * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSInt * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Whether this tier program is currently enabled or disabled. */
+- (KASDKOSBoolean * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** The various tier levels within this tier program. */
+- (NSArray<KASDKOSTierLevel *> * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/**
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
+- (KASDKOSTiers *)doCopyId:(KASDKOSLong * _Nullable)id tierSequence:(NSArray<KASDKOSInt *> * _Nullable)tierSequence tierRelations:(KASDKOSInt * _Nullable)tierRelations resetType:(KASDKOSInt * _Nullable)resetType ressetPeriodMonth:(KASDKOSInt * _Nullable)ressetPeriodMonth basePreviousPeriod:(KASDKOSInt * _Nullable)basePreviousPeriod enabled:(KASDKOSBoolean * _Nullable)enabled tierLevels:(NSArray<KASDKOSTierLevel *> * _Nullable)tierLevels __attribute__((swift_name("doCopy(id:tierSequence:tierRelations:resetType:ressetPeriodMonth:basePreviousPeriod:enabled:tierLevels:)")));
+
+/**
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSInt * _Nullable basePreviousPeriod __attribute__((swift_name("basePreviousPeriod")));
+
+/** Whether this tier program is currently enabled or disabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** The ID for this tier program. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSInt * _Nullable resetType __attribute__((swift_name("resetType")));
+
+/** The month in which this tier program will reset. */
+@property (readonly) KASDKOSInt * _Nullable ressetPeriodMonth __attribute__((swift_name("ressetPeriodMonth")));
+
+/** The various tier levels within this tier program. */
+@property (readonly) NSArray<KASDKOSTierLevel *> * _Nullable tierLevels __attribute__((swift_name("tierLevels")));
+@property (readonly) KASDKOSInt * _Nullable tierRelations __attribute__((swift_name("tierRelations")));
+
+/** The sequence for this tier program. */
+@property (readonly) NSArray<KASDKOSInt *> * _Nullable tierSequence __attribute__((swift_name("tierSequence")));
+@end;
+
+
+/**
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Tiers.Companion")))
+@interface KASDKOSTiersCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTiersCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.
  */
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
@@ -1727,10 +2169,10 @@ __attribute__((swift_name("UserProfileData_")))
 /** Denotes whether this account has been enabled. */
 - (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 
 /** Email address identifying this user. */
@@ -1789,7 +2231,7 @@ __attribute__((swift_name("UserProfileData_")))
 /** Email address identifying this user. */
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
 
 /** Denotes whether this account has been enabled. */
@@ -1813,7 +2255,7 @@ __attribute__((swift_name("UserProfileData_")))
 /** Phone number associated with this user. */
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
 
 /** Profile photo url associated with this user. */
@@ -1850,508 +2292,20 @@ __attribute__((swift_name("UserProfileData_.Companion")))
 
 
 /**
- * Extra user profile data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileInclude")))
-@interface KASDKOSUserProfileInclude : KASDKOSBase
-- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileIncludeCompanion *companion __attribute__((swift_name("companion")));
-- (KASDKOSUserProfileBalanceData *)component1 __attribute__((swift_name("component1()")));
-
-/**
- * Extra user profile data
- */
-- (KASDKOSUserProfileInclude *)doCopyBalance:(KASDKOSUserProfileBalanceData *)balance __attribute__((swift_name("doCopy(balance:)")));
-
-/**
- * Extra user profile data
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * Extra user profile data
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * Extra user profile data
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSUserProfileBalanceData *balance __attribute__((swift_name("balance")));
-@end;
-
-
-/**
- * Extra user profile data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileInclude.Companion")))
-@interface KASDKOSUserProfileIncludeCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * Extra user profile data
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileIncludeCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * Extra user profile data
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileModel_")))
-@interface KASDKOSUserProfileModel_ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData_ *)data included:(KASDKOSUserProfileInclude * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSUserProfileModel_Companion *companion __attribute__((swift_name("companion")));
-
-/** Contains all user profile data */
-- (KASDKOSUserProfileData_ *)component1 __attribute__((swift_name("component1()")));
-
-/** Contains user balance data */
-- (KASDKOSUserProfileInclude * _Nullable)component2 __attribute__((swift_name("component2()")));
-
-/**
- * User Profile model class containing user data
- */
-- (KASDKOSUserProfileModel_ *)doCopyData:(KASDKOSUserProfileData_ *)data included:(KASDKOSUserProfileInclude * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
-
-/**
- * User Profile model class containing user data
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * User Profile model class containing user data
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * User Profile model class containing user data
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** Contains all user profile data */
-@property (readonly) KASDKOSUserProfileData_ *data __attribute__((swift_name("data")));
-
-/** Contains user balance data */
-@property (readonly) KASDKOSUserProfileInclude * _Nullable included __attribute__((swift_name("included")));
-@end;
-
-
-/**
- * User Profile model class containing user data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileModel_.Companion")))
-@interface KASDKOSUserProfileModel_Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * User Profile model class containing user data
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileModel_Companion *shared __attribute__((swift_name("shared")));
-
-/**
- * User Profile model class containing user data
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * Get user A la carte list [Api] class
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("AlaCarteProductsApi")))
-@interface KASDKOSAlaCarteProductsApi : KASDKOSApi
-
-/**
- * Get user A la carte list [Api] class
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-
-/**
- * Get user A la carte list [Api] class
- */
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) KASDKOSAlaCarteProductsApiCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * Get user A la carte list
- */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSAlaCarteProductsModel *> *> *)getAlaCarteProducts __attribute__((swift_name("getAlaCarteProducts()")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSAlaCarteProductsModel *> *> *alaCarteProductsState __attribute__((swift_name("alaCarteProductsState")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("AlaCarteProductsApi.Companion")))
-@interface KASDKOSAlaCarteProductsApiCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSAlaCarteProductsApiCompanion *shared __attribute__((swift_name("shared")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("AlaCarteItemModel")))
-@interface KASDKOSAlaCarteItemModel : KASDKOSModel
-- (instancetype)initWithId:(KASDKOSInt * _Nullable)id points:(KASDKOSInt * _Nullable)points product:(KASDKOSProduct * _Nullable)product __attribute__((swift_name("init(id:points:product:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSAlaCarteItemModelCompanion *companion __attribute__((swift_name("companion")));
-- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (KASDKOSProduct * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSAlaCarteItemModel *)doCopyId:(KASDKOSInt * _Nullable)id points:(KASDKOSInt * _Nullable)points product:(KASDKOSProduct * _Nullable)product __attribute__((swift_name("doCopy(id:points:product:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
-@property (readonly) KASDKOSInt * _Nullable points __attribute__((swift_name("points")));
-@property (readonly) KASDKOSProduct * _Nullable product __attribute__((swift_name("product")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("AlaCarteItemModel.Companion")))
-@interface KASDKOSAlaCarteItemModelCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSAlaCarteItemModelCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * User A la carte products model class containing user A la carte list
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("AlaCarteProductsModel")))
-@interface KASDKOSAlaCarteProductsModel : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData__ *)data included:(KASDKOSUserAlaCarteIncluded *)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSAlaCarteProductsModelCompanion *companion __attribute__((swift_name("companion")));
-
-/** Contains all user data */
-- (KASDKOSUserProfileData__ *)component1 __attribute__((swift_name("component1()")));
-
-/** Contains all A la carte items */
-- (KASDKOSUserAlaCarteIncluded *)component2 __attribute__((swift_name("component2()")));
-
-/**
- * User A la carte products model class containing user A la carte list
- */
-- (KASDKOSAlaCarteProductsModel *)doCopyData:(KASDKOSUserProfileData__ *)data included:(KASDKOSUserAlaCarteIncluded *)included __attribute__((swift_name("doCopy(data:included:)")));
-
-/**
- * User A la carte products model class containing user A la carte list
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * User A la carte products model class containing user A la carte list
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * User A la carte products model class containing user A la carte list
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** Contains all user data */
-@property (readonly) KASDKOSUserProfileData__ *data __attribute__((swift_name("data")));
-
-/** Contains all A la carte items */
-@property (readonly) KASDKOSUserAlaCarteIncluded *included __attribute__((swift_name("included")));
-@end;
-
-
-/**
- * User A la carte products model class containing user A la carte list
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("AlaCarteProductsModel.Companion")))
-@interface KASDKOSAlaCarteProductsModelCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * User A la carte products model class containing user A la carte list
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSAlaCarteProductsModelCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * User A la carte products model class containing user A la carte list
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Error")))
-@interface KASDKOSError : KASDKOSBase
-- (instancetype)initWithCode:(int32_t)code message:(NSString *)message __attribute__((swift_name("init(code:message:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSErrorCompanion *companion __attribute__((swift_name("companion")));
-- (int32_t)component1 __attribute__((swift_name("component1()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-- (KASDKOSError *)doCopyCode:(int32_t)code message:(NSString *)message __attribute__((swift_name("doCopy(code:message:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) int32_t code __attribute__((swift_name("code")));
-@property (readonly) NSString *message __attribute__((swift_name("message")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Error.Companion")))
-@interface KASDKOSErrorCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSErrorCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Images")))
-@interface KASDKOSImages : KASDKOSBase
-- (instancetype)initWithPath:(NSString * _Nullable)path large:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(path:large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSImagesCompanion *companion __attribute__((swift_name("companion")));
-- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (KASDKOSImages *)doCopyPath:(NSString * _Nullable)path large:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(path:large:medium:thumbnail:default:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
-@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
-@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
-@property (readonly) NSString * _Nullable path __attribute__((swift_name("path")));
-@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Images.Companion")))
-@interface KASDKOSImagesCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSImagesCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language_")))
-@interface KASDKOSLanguage_ : KASDKOSBase
-- (instancetype)initWithId:(KASDKOSInt * _Nullable)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSLanguage_Companion *companion __attribute__((swift_name("companion")));
-- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage_ *)doCopyId:(KASDKOSInt * _Nullable)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable abbreviation __attribute__((swift_name("abbreviation")));
-@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
-@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language_.Companion")))
-@interface KASDKOSLanguage_Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSLanguage_Companion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Languages")))
-@interface KASDKOSLanguages : KASDKOSBase
-- (instancetype)initWithLanguageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description language:(KASDKOSLanguage_ * _Nullable)language __attribute__((swift_name("init(languageId:title:description:language:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSLanguagesCompanion *companion __attribute__((swift_name("companion")));
-- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage_ * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSLanguages *)doCopyLanguageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description language:(KASDKOSLanguage_ * _Nullable)language __attribute__((swift_name("doCopy(languageId:title:description:language:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
-@property (readonly) KASDKOSLanguage_ * _Nullable language __attribute__((swift_name("language")));
-@property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
-@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Languages.Companion")))
-@interface KASDKOSLanguagesCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSLanguagesCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Product")))
-@interface KASDKOSProduct : KASDKOSModel
-- (instancetype)initWithId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title description:(NSString * _Nullable)description images:(NSArray<KASDKOSImages *> * _Nullable)images productSku:(NSString * _Nullable)productSku actualPrice:(KASDKOSFloat * _Nullable)actualPrice realPrice:(KASDKOSFloat * _Nullable)realPrice termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link productLanguages:(NSArray<KASDKOSLanguages *> * _Nullable)productLanguages __attribute__((swift_name("init(id:title:description:images:productSku:actualPrice:realPrice:termsConditions:link:productLanguages:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSProductCompanion *companion __attribute__((swift_name("companion")));
-- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSArray<KASDKOSLanguages *> * _Nullable)component10 __attribute__((swift_name("component10()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSArray<KASDKOSImages *> * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (KASDKOSFloat * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (KASDKOSFloat * _Nullable)component7 __attribute__((swift_name("component7()")));
-- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
-- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (KASDKOSProduct *)doCopyId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title description:(NSString * _Nullable)description images:(NSArray<KASDKOSImages *> * _Nullable)images productSku:(NSString * _Nullable)productSku actualPrice:(KASDKOSFloat * _Nullable)actualPrice realPrice:(KASDKOSFloat * _Nullable)realPrice termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link productLanguages:(NSArray<KASDKOSLanguages *> * _Nullable)productLanguages __attribute__((swift_name("doCopy(id:title:description:images:productSku:actualPrice:realPrice:termsConditions:link:productLanguages:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSFloat * _Nullable actualPrice __attribute__((swift_name("actualPrice")));
-@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
-@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
-@property (readonly) NSArray<KASDKOSImages *> * _Nullable images __attribute__((swift_name("images")));
-@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
-@property (readonly) NSArray<KASDKOSLanguages *> * _Nullable productLanguages __attribute__((swift_name("productLanguages")));
-@property (readonly) NSString * _Nullable productSku __attribute__((swift_name("productSku")));
-@property (readonly) KASDKOSFloat * _Nullable realPrice __attribute__((swift_name("realPrice")));
-@property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
-@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Product.Companion")))
-@interface KASDKOSProductCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSProductCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ProductItemModel")))
-@interface KASDKOSProductItemModel : KASDKOSModel
-- (instancetype)initWithId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title description:(NSString * _Nullable)description images:(NSArray<KASDKOSImages *> * _Nullable)images productSku:(NSString * _Nullable)productSku termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link productLanguages:(NSArray<KASDKOSLanguages *> * _Nullable)productLanguages __attribute__((swift_name("init(id:title:description:images:productSku:termsConditions:link:productLanguages:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSProductItemModelCompanion *companion __attribute__((swift_name("companion")));
-- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (NSArray<KASDKOSImages *> * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
-- (NSArray<KASDKOSLanguages *> * _Nullable)component8 __attribute__((swift_name("component8()")));
-- (KASDKOSProductItemModel *)doCopyId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title description:(NSString * _Nullable)description images:(NSArray<KASDKOSImages *> * _Nullable)images productSku:(NSString * _Nullable)productSku termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link productLanguages:(NSArray<KASDKOSLanguages *> * _Nullable)productLanguages __attribute__((swift_name("doCopy(id:title:description:images:productSku:termsConditions:link:productLanguages:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
-@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
-@property (readonly) NSArray<KASDKOSImages *> * _Nullable images __attribute__((swift_name("images")));
-@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
-@property (readonly) NSArray<KASDKOSLanguages *> * _Nullable productLanguages __attribute__((swift_name("productLanguages")));
-@property (readonly) NSString * _Nullable productSku __attribute__((swift_name("productSku")));
-@property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
-@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ProductItemModel.Companion")))
-@interface KASDKOSProductItemModelCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSProductItemModelCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserAlaCarteIncluded")))
-@interface KASDKOSUserAlaCarteIncluded : KASDKOSBase
-- (instancetype)initWithProductRewards:(NSArray<KASDKOSAlaCarteItemModel *> *)productRewards __attribute__((swift_name("init(productRewards:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserAlaCarteIncludedCompanion *companion __attribute__((swift_name("companion")));
-- (NSArray<KASDKOSAlaCarteItemModel *> *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSUserAlaCarteIncluded *)doCopyProductRewards:(NSArray<KASDKOSAlaCarteItemModel *> *)productRewards __attribute__((swift_name("doCopy(productRewards:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSArray<KASDKOSAlaCarteItemModel *> *productRewards __attribute__((swift_name("productRewards")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserAlaCarteIncluded.Companion")))
-@interface KASDKOSUserAlaCarteIncludedCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserAlaCarteIncludedCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * User Profile model class containing user data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData__")))
-@interface KASDKOSUserProfileData__ : KASDKOSBase
+__attribute__((swift_name("UserProfileDataModel_")))
+@interface KASDKOSUserProfileDataModel_ : KASDKOSModel
 - (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileData__Companion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel_Companion *companion __attribute__((swift_name("companion")));
 
 /** Unique user ID. */
 - (NSString *)component1 __attribute__((swift_name("component1()")));
@@ -2371,10 +2325,10 @@ __attribute__((swift_name("UserProfileData__")))
 /** Denotes whether this account has been enabled. */
 - (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 
 /** Email address identifying this user. */
@@ -2404,7 +2358,7 @@ __attribute__((swift_name("UserProfileData__")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileData__ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+- (KASDKOSUserProfileDataModel_ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
 
 /**
  * User Profile model class containing user data
@@ -2433,7 +2387,7 @@ __attribute__((swift_name("UserProfileData__")))
 /** Email address identifying this user. */
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
 
 /** Denotes whether this account has been enabled. */
@@ -2457,7 +2411,7 @@ __attribute__((swift_name("UserProfileData__")))
 /** Phone number associated with this user. */
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
 
 /** Profile photo url associated with this user. */
@@ -2475,8 +2429,8 @@ __attribute__((swift_name("UserProfileData__")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData__.Companion")))
-@interface KASDKOSUserProfileData__Companion : KASDKOSBase
+__attribute__((swift_name("UserProfileDataModel_.Companion")))
+@interface KASDKOSUserProfileDataModel_Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -2484,7 +2438,7 @@ __attribute__((swift_name("UserProfileData__.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileData__Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel_Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * User Profile model class containing user data
@@ -2494,91 +2448,12 @@ __attribute__((swift_name("UserProfileData__.Companion")))
 
 
 /**
- * Get Social Media List [Api] class
+ * User Profile model class containing user data and tier program data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SocialMediaApi")))
-@interface KASDKOSSocialMediaApi : KASDKOSApi
-
-/**
- * Get Social Media List [Api] class
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-
-/**
- * Get Social Media List [Api] class
- */
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) KASDKOSSocialMediaApiCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * Get Social Media List
- */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSSocialMediaModel *> *> *)getSocialMedia __attribute__((swift_name("getSocialMedia()")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSSocialMediaModel *> *> *socialMediaState __attribute__((swift_name("socialMediaState")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SocialMediaApi.Companion")))
-@interface KASDKOSSocialMediaApiCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSSocialMediaApiCompanion *shared __attribute__((swift_name("shared")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Error_")))
-@interface KASDKOSError_ : KASDKOSBase
-- (instancetype)initWithCode:(int32_t)code message:(NSString *)message __attribute__((swift_name("init(code:message:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSError_Companion *companion __attribute__((swift_name("companion")));
-- (int32_t)component1 __attribute__((swift_name("component1()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-- (KASDKOSError_ *)doCopyCode:(int32_t)code message:(NSString *)message __attribute__((swift_name("doCopy(code:message:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) int32_t code __attribute__((swift_name("code")));
-@property (readonly) NSString *message __attribute__((swift_name("message")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Error_.Companion")))
-@interface KASDKOSError_Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSError_Companion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SocialMediaIncluded")))
-@interface KASDKOSSocialMediaIncluded : KASDKOSBase
-- (instancetype)initWithSocialMedia:(NSArray<KASDKOSSocialMediaItemModel *> *)socialMedia __attribute__((swift_name("init(socialMedia:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSSocialMediaIncludedCompanion *companion __attribute__((swift_name("companion")));
-- (NSArray<KASDKOSSocialMediaItemModel *> *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSSocialMediaIncluded *)doCopySocialMedia:(NSArray<KASDKOSSocialMediaItemModel *> *)socialMedia __attribute__((swift_name("doCopy(socialMedia:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSArray<KASDKOSSocialMediaItemModel *> *socialMedia __attribute__((swift_name("socialMedia")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SocialMediaIncluded.Companion")))
-@interface KASDKOSSocialMediaIncludedCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSSocialMediaIncludedCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SocialMediaItemModel")))
-@interface KASDKOSSocialMediaItemModel : KASDKOSModel
-- (instancetype)initWithIcon:(NSString * _Nullable)icon url:(NSString * _Nullable)url __attribute__((swift_name("init(icon:url:)"))) __attribute__((objc_designated_initializer));
+__attribute__((swift_name("UserProfileWithTierProgram")))
+@interface KASDKOSUserProfileWithTierProgram : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel_ * _Nullable)data included:(KASDKOSTierProgramInclude * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -2586,726 +2461,96 @@ __attribute__((swift_name("SocialMediaItemModel")))
  */
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSSocialMediaItemModelCompanion *companion __attribute__((swift_name("companion")));
-- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (KASDKOSSocialMediaItemModel *)doCopyIcon:(NSString * _Nullable)icon url:(NSString * _Nullable)url __attribute__((swift_name("doCopy(icon:url:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable icon __attribute__((swift_name("icon")));
-@property (readonly) NSString * _Nullable url __attribute__((swift_name("url")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SocialMediaItemModel.Companion")))
-@interface KASDKOSSocialMediaItemModelCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSSocialMediaItemModelCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * Social Media Model containing list of all social media links
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SocialMediaModel")))
-@interface KASDKOSSocialMediaModel : KASDKOSModel
-- (instancetype)initWithIncluded:(KASDKOSSocialMediaIncluded * _Nullable)included __attribute__((swift_name("init(included:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSSocialMediaModelCompanion *companion __attribute__((swift_name("companion")));
-
-/** Contains all Social media links */
-- (KASDKOSSocialMediaIncluded * _Nullable)component1 __attribute__((swift_name("component1()")));
-
-/**
- * Social Media Model containing list of all social media links
- */
-- (KASDKOSSocialMediaModel *)doCopyIncluded:(KASDKOSSocialMediaIncluded * _Nullable)included __attribute__((swift_name("doCopy(included:)")));
-
-/**
- * Social Media Model containing list of all social media links
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * Social Media Model containing list of all social media links
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * Social Media Model containing list of all social media links
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** Contains all Social media links */
-@property (readonly) KASDKOSSocialMediaIncluded * _Nullable included __attribute__((swift_name("included")));
-@end;
-
-
-/**
- * Social Media Model containing list of all social media links
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("SocialMediaModel.Companion")))
-@interface KASDKOSSocialMediaModelCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * Social Media Model containing list of all social media links
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSSocialMediaModelCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * Social Media Model containing list of all social media links
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * Update a users' PIN [Api] class
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserPinUpdateApi")))
-@interface KASDKOSUserPinUpdateApi : KASDKOSApi
-
-/**
- * Update a users' PIN [Api] class
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-
-/**
- * Update a users' PIN [Api] class
- */
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) KASDKOSUserPinUpdateApiCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * Update a users' PIN
- */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel__ *> *> *)updatePinUpdatePinRequest:(KASDKOSUpdatePinRequest *)updatePinRequest __attribute__((swift_name("updatePin(updatePinRequest:)")));
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel__ *> *> *)updatePinMethods:(NSDictionary<NSString *, id> *)methods __attribute__((swift_name("updatePin(methods:)")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel__ *> *> *userPinUpdateState __attribute__((swift_name("userPinUpdateState")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserPinUpdateApi.Companion")))
-@interface KASDKOSUserPinUpdateApiCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserPinUpdateApiCompanion *shared __attribute__((swift_name("shared")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UpdatePinRequest")))
-@interface KASDKOSUpdatePinRequest : KASDKOSBase
-- (instancetype)initWithPinCode:(NSString *)pinCode __attribute__((swift_name("init(pinCode:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUpdatePinRequestCompanion *companion __attribute__((swift_name("companion")));
-
-/** The new PIN */
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSUpdatePinRequest *)doCopyPinCode:(NSString *)pinCode __attribute__((swift_name("doCopy(pinCode:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** The new PIN */
-@property (readonly) NSString *pinCode __attribute__((swift_name("pinCode")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UpdatePinRequest.Companion")))
-@interface KASDKOSUpdatePinRequestCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUpdatePinRequestCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * User Profile balance data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileBalanceData_")))
-@interface KASDKOSUserProfileBalanceData_ : KASDKOSBase
-- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceData_Companion *companion __attribute__((swift_name("companion")));
-
-/** The number of points this user currently has. */
-- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
-
-/** The amount of store credit in the users&#39; e-wallet. */
-- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
-
-/**
- * User Profile balance data
- */
-- (KASDKOSUserProfileBalanceData_ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
-
-/**
- * User Profile balance data
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * User Profile balance data
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * User Profile balance data
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** The amount of store credit in the users&#39; e-wallet. */
-@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
-
-/** The number of points this user currently has. */
-@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
-@end;
-
-
-/**
- * User Profile balance data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileBalanceData_.Companion")))
-@interface KASDKOSUserProfileBalanceData_Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * User Profile balance data
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceData_Companion *shared __attribute__((swift_name("shared")));
-
-/**
- * User Profile balance data
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * User Profile model class containing user data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData___")))
-@interface KASDKOSUserProfileData___ : KASDKOSBase
-- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileData___Companion *companion __attribute__((swift_name("companion")));
-
-/** Unique user ID. */
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-
-/** Country code associated with this user. */
-- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
-
-/** Profile photo url associated with this user. */
-- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
-
-/** Date the account for this user was created. */
-- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
-
-/** Date the account for this user was last updated. */
-- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
-
-/** Denotes whether this account has been enabled. */
-- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
-
-/** Denotes whether the email address for this user has been verified */
-- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
-
-/** Denotes whether the phone number for this user has been verified */
-- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
-
-/** Email address identifying this user. */
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-
-/** Phone number associated with this user. */
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-
-/** First name associated with this user. */
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-
-/** Last name associated with this user. */
-- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
-
-/** Unique QR code identifying this user. */
-- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
-
-/** Gender associated with this user. */
-- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
-
-/** Date of birth associated with this user. */
-- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
-
-/** Primary language assocaited with this user. */
-- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
-
-/**
- * User Profile model class containing user data
- */
-- (KASDKOSUserProfileData___ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
-
-/**
- * User Profile model class containing user data
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * User Profile model class containing user data
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * User Profile model class containing user data
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** Date of birth associated with this user. */
-@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
-
-/** Country code associated with this user. */
-@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
-
-/** Date the account for this user was created. */
-@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
-
-/** Email address identifying this user. */
-@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
-
-/** Denotes whether the email address for this user has been verified */
-@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
-
-/** Denotes whether this account has been enabled. */
-@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
-
-/** First name associated with this user. */
-@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
-
-/** Gender associated with this user. */
-@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
-
-/** Unique user ID. */
-@property (readonly) NSString *id __attribute__((swift_name("id")));
-
-/** Primary language assocaited with this user. */
-@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
-
-/** Last name associated with this user. */
-@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
-
-/** Phone number associated with this user. */
-@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
-
-/** Denotes whether the phone number for this user has been verified */
-@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
-
-/** Profile photo url associated with this user. */
-@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
-
-/** Unique QR code identifying this user. */
-@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
-
-/** Date the account for this user was last updated. */
-@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
-@end;
-
-
-/**
- * User Profile model class containing user data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData___.Companion")))
-@interface KASDKOSUserProfileData___Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * User Profile model class containing user data
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileData___Companion *shared __attribute__((swift_name("shared")));
-
-/**
- * User Profile model class containing user data
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * Extra user profile data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileInclude_")))
-@interface KASDKOSUserProfileInclude_ : KASDKOSBase
-- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData_ *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileInclude_Companion *companion __attribute__((swift_name("companion")));
-- (KASDKOSUserProfileBalanceData_ *)component1 __attribute__((swift_name("component1()")));
-
-/**
- * Extra user profile data
- */
-- (KASDKOSUserProfileInclude_ *)doCopyBalance:(KASDKOSUserProfileBalanceData_ *)balance __attribute__((swift_name("doCopy(balance:)")));
-
-/**
- * Extra user profile data
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * Extra user profile data
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * Extra user profile data
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSUserProfileBalanceData_ *balance __attribute__((swift_name("balance")));
-@end;
-
-
-/**
- * Extra user profile data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileInclude_.Companion")))
-@interface KASDKOSUserProfileInclude_Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * Extra user profile data
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileInclude_Companion *shared __attribute__((swift_name("shared")));
-
-/**
- * Extra user profile data
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * User Profile model class containing user data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileModel__")))
-@interface KASDKOSUserProfileModel__ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData___ *)data included:(KASDKOSUserProfileInclude_ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSUserProfileModel__Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSUserProfileWithTierProgramCompanion *companion __attribute__((swift_name("companion")));
 
 /** Contains all user profile data */
-- (KASDKOSUserProfileData___ *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserProfileDataModel_ * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /** Contains user balance data */
-- (KASDKOSUserProfileInclude_ * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSTierProgramInclude * _Nullable)component2 __attribute__((swift_name("component2()")));
 
 /**
- * User Profile model class containing user data
+ * User Profile model class containing user data and tier program data
  */
-- (KASDKOSUserProfileModel__ *)doCopyData:(KASDKOSUserProfileData___ *)data included:(KASDKOSUserProfileInclude_ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+- (KASDKOSUserProfileWithTierProgram *)doCopyData:(KASDKOSUserProfileDataModel_ * _Nullable)data included:(KASDKOSTierProgramInclude * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
- * User Profile model class containing user data
+ * User Profile model class containing user data and tier program data
  */
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 
 /**
- * User Profile model class containing user data
+ * User Profile model class containing user data and tier program data
  */
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 
 /**
- * User Profile model class containing user data
+ * User Profile model class containing user data and tier program data
  */
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Contains all user profile data */
-@property (readonly) KASDKOSUserProfileData___ *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSUserProfileDataModel_ * _Nullable data __attribute__((swift_name("data")));
 
 /** Contains user balance data */
-@property (readonly) KASDKOSUserProfileInclude_ * _Nullable included __attribute__((swift_name("included")));
+@property (readonly) KASDKOSTierProgramInclude * _Nullable included __attribute__((swift_name("included")));
 @end;
 
 
 /**
- * User Profile model class containing user data
+ * User Profile model class containing user data and tier program data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileModel__.Companion")))
-@interface KASDKOSUserProfileModel__Companion : KASDKOSBase
+__attribute__((swift_name("UserProfileWithTierProgram.Companion")))
+@interface KASDKOSUserProfileWithTierProgramCompanion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
- * User Profile model class containing user data
+ * User Profile model class containing user data and tier program data
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileModel__Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileWithTierProgramCompanion *shared __attribute__((swift_name("shared")));
 
 /**
- * User Profile model class containing user data
+ * User Profile model class containing user data and tier program data
  */
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 
 /**
- * Get transaction history this user. [Api] class
+ * Deposit a giftcard [Api] class
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserTransactionHistoryApi")))
-@interface KASDKOSUserTransactionHistoryApi : KASDKOSApi
+__attribute__((swift_name("GiftCardDepositApi")))
+@interface KASDKOSGiftCardDepositApi : KASDKOSApi
 
 /**
- * Get transaction history this user. [Api] class
+ * Deposit a giftcard [Api] class
  */
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 
 /**
- * Get transaction history this user. [Api] class
+ * Deposit a giftcard [Api] class
  */
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) KASDKOSUserTransactionHistoryApiCompanion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSGiftCardDepositApiCompanion *companion __attribute__((swift_name("companion")));
 
 /**
- * Get transaction history this user.
+ * Deposit a giftcard
  */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserTransactionHistoryModel *> *> *)getUserTransactionHistory __attribute__((swift_name("getUserTransactionHistory()")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserTransactionHistoryModel *> *> *userTransactionHistoryState __attribute__((swift_name("userTransactionHistoryState")));
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSTransferActionResultModel *> *> *)depositGiftCardDepositId:(NSString *)depositId __attribute__((swift_name("depositGiftCard(depositId:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSTransferActionResultModel *> *> *giftCardDepositState __attribute__((swift_name("giftCardDepositState")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserTransactionHistoryApi.Companion")))
-@interface KASDKOSUserTransactionHistoryApiCompanion : KASDKOSBase
+__attribute__((swift_name("GiftCardDepositApi.Companion")))
+@interface KASDKOSGiftCardDepositApiCompanion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserTransactionHistoryApiCompanion *shared __attribute__((swift_name("shared")));
-@end;
-
-
-/**
- * Transaction model containting transaction details
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Transaction")))
-@interface KASDKOSTransaction : KASDKOSBase
-- (instancetype)initWithId:(int64_t)id amount:(KASDKOSDouble * _Nullable)amount points:(KASDKOSDouble * _Nullable)points name:(NSString * _Nullable)name transactionType:(KASDKOSInt * _Nullable)transactionType createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt __attribute__((swift_name("init(id:amount:points:name:transactionType:createdAt:updatedAt:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSTransactionCompanion *companion __attribute__((swift_name("companion")));
-
-/** Unique transaction ID. */
-- (int64_t)component1 __attribute__((swift_name("component1()")));
-
-/** The amount in $ for this transaction. */
-- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
-
-/** The amount in points for this transaction. */
-- (KASDKOSDouble * _Nullable)component3 __attribute__((swift_name("component3()")));
-
-/** The transaction label. */
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-
-/** The transaction type ID. */
-- (KASDKOSInt * _Nullable)component5 __attribute__((swift_name("component5()")));
-
-/** Date the transaction was created. */
-- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
-
-/** Date the transaction was last updated. */
-- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
-
-/**
- * Transaction model containting transaction details
- */
-- (KASDKOSTransaction *)doCopyId:(int64_t)id amount:(KASDKOSDouble * _Nullable)amount points:(KASDKOSDouble * _Nullable)points name:(NSString * _Nullable)name transactionType:(KASDKOSInt * _Nullable)transactionType createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt __attribute__((swift_name("doCopy(id:amount:points:name:transactionType:createdAt:updatedAt:)")));
-
-/**
- * Transaction model containting transaction details
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * Transaction model containting transaction details
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * Transaction model containting transaction details
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** The amount in $ for this transaction. */
-@property (readonly) KASDKOSDouble * _Nullable amount __attribute__((swift_name("amount")));
-
-/** Date the transaction was created. */
-@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
-
-/** Unique transaction ID. */
-@property (readonly) int64_t id __attribute__((swift_name("id")));
-
-/** The transaction label. */
-@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
-
-/** The amount in points for this transaction. */
-@property (readonly) KASDKOSDouble * _Nullable points __attribute__((swift_name("points")));
-
-/** The transaction type ID. */
-@property (readonly) KASDKOSInt * _Nullable transactionType __attribute__((swift_name("transactionType")));
-
-/** Date the transaction was last updated. */
-@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
-@end;
-
-
-/**
- * Transaction model containting transaction details
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Transaction.Companion")))
-@interface KASDKOSTransactionCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * Transaction model containting transaction details
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSTransactionCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * Transaction model containting transaction details
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * User Profile model class containing user data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserTransactionHistoryModel")))
-@interface KASDKOSUserTransactionHistoryModel : KASDKOSModel
-- (instancetype)initWithData:(NSArray<KASDKOSTransaction *> *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSUserTransactionHistoryModelCompanion *companion __attribute__((swift_name("companion")));
-
-/** Contains user transaction history. */
-- (NSArray<KASDKOSTransaction *> *)component1 __attribute__((swift_name("component1()")));
-
-/**
- * User Profile model class containing user data
- */
-- (KASDKOSUserTransactionHistoryModel *)doCopyData:(NSArray<KASDKOSTransaction *> *)data __attribute__((swift_name("doCopy(data:)")));
-
-/**
- * User Profile model class containing user data
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * User Profile model class containing user data
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * User Profile model class containing user data
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** Contains user transaction history. */
-@property (readonly) NSArray<KASDKOSTransaction *> *data __attribute__((swift_name("data")));
-@end;
-
-
-/**
- * User Profile model class containing user data
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserTransactionHistoryModel.Companion")))
-@interface KASDKOSUserTransactionHistoryModelCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * User Profile model class containing user data
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserTransactionHistoryModelCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * User Profile model class containing user data
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * Recall a transfer. This could be a points transfer, e-wallet transfer, or a gift card  [Api] class
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferRecallApi")))
-@interface KASDKOSTransferRecallApi : KASDKOSApi
-
-/**
- * Recall a transfer. This could be a points transfer, e-wallet transfer, or a gift card  [Api] class
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-
-/**
- * Recall a transfer. This could be a points transfer, e-wallet transfer, or a gift card  [Api] class
- */
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) KASDKOSTransferRecallApiCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * Recall a transfer. This could be a points transfer, e-wallet transfer, or a gift card
- */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSTransferRecallResultModel *> *> *)recallTransferRecallId:(NSString *)recallId __attribute__((swift_name("recallTransfer(recallId:)")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSTransferRecallResultModel *> *> *transferRecallState __attribute__((swift_name("transferRecallState")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferRecallApi.Companion")))
-@interface KASDKOSTransferRecallApiCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSTransferRecallApiCompanion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardDepositApiCompanion *shared __attribute__((swift_name("shared")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -3660,16 +2905,78 @@ __attribute__((swift_name("OfferTranslation.Companion")))
 
 
 /**
+ * Contains the result of a transfer action.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferActionResultModel")))
+@interface KASDKOSTransferActionResultModel : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSTransferMessage * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSTransferActionResultModelCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSTransferMessage * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (KASDKOSTransferActionResultModel *)doCopyData:(KASDKOSTransferMessage * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSTransferMessage * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+
+/**
+ * Contains the result of a transfer action.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferActionResultModel.Companion")))
+@interface KASDKOSTransferActionResultModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Contains the result of a transfer action.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransferActionResultModelCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TransferMessage")))
 @interface KASDKOSTransferMessage : KASDKOSBase
-- (instancetype)initWithId:(int64_t)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions *> * _Nullable)actions __attribute__((swift_name("init(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions *> * _Nullable)actions __attribute__((swift_name("init(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSTransferMessageCompanion *companion __attribute__((swift_name("companion")));
 
 /** The unique ID of this transfer. */
-- (int64_t)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (KASDKOSTransferMessageGiftCardQueue * _Nullable)component10 __attribute__((swift_name("component10()")));
 - (NSArray<KASDKOSTransferMessageActions *> * _Nullable)component11 __attribute__((swift_name("component11()")));
 
@@ -3698,7 +3005,7 @@ __attribute__((swift_name("TransferMessage")))
 /**
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
  */
-- (KASDKOSTransferMessage *)doCopyId:(int64_t)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions *> * _Nullable)actions __attribute__((swift_name("doCopy(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)")));
+- (KASDKOSTransferMessage *)doCopyId:(KASDKOSLong * _Nullable)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions *> * _Nullable)actions __attribute__((swift_name("doCopy(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)")));
 
 /**
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
@@ -3728,7 +3035,7 @@ __attribute__((swift_name("TransferMessage")))
 @property (readonly) KASDKOSBoolean * _Nullable hidden __attribute__((swift_name("hidden")));
 
 /** The unique ID of this transfer. */
-@property (readonly) int64_t id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
 
 /** The gift card in this transfer if applicable. Gift cards are an offer sub-type in Kangaroo.  */
 @property (readonly) KASDKOSOfferModel * _Nullable offer __attribute__((swift_name("offer")));
@@ -3869,12 +3176,4151 @@ __attribute__((swift_name("TransferMessageGiftCardQueue.Companion")))
 
 
 /**
+ * Request a PIN reset. Either a phone number or email address is required If successful, a verification code will be sent by either email or SMS message.  [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserPinResetRequestApi")))
+@interface KASDKOSUserPinResetRequestApi : KASDKOSApi
+
+/**
+ * Request a PIN reset. Either a phone number or email address is required If successful, a verification code will be sent by either email or SMS message.  [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Request a PIN reset. Either a phone number or email address is required If successful, a verification code will be sent by either email or SMS message.  [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSUserPinResetRequestApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Request a PIN reset. Either a phone number or email address is required If successful, a verification code will be sent by either email or SMS message.
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserPinResetRequest *> *> *)requestPinResetMode:(NSString *)mode email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone countryCode:(NSString * _Nullable)countryCode __attribute__((swift_name("requestPinReset(mode:email:phone:countryCode:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserPinResetRequest *> *> *userPinResetRequestState __attribute__((swift_name("userPinResetRequestState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserPinResetRequestApi.Companion")))
+@interface KASDKOSUserPinResetRequestApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserPinResetRequestApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+
+/**
+ * User PIN reset request status
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserPinResetRequest")))
+@interface KASDKOSUserPinResetRequest : KASDKOSModel
+- (instancetype)initWithStatusCode:(int32_t)statusCode message:(NSString *)message description:(NSString *)description __attribute__((swift_name("init(statusCode:message:description:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserPinResetRequestCompanion *companion __attribute__((swift_name("companion")));
+
+/** The response code for the pin reset request. Anything within the 200 range indicates a success  */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** The message and status returned by the pin reset request */
+- (NSString *)component2 __attribute__((swift_name("component2()")));
+
+/** A description of the pin reset request */
+- (NSString *)component3 __attribute__((swift_name("component3()")));
+
+/**
+ * User PIN reset request status
+ */
+- (KASDKOSUserPinResetRequest *)doCopyStatusCode:(int32_t)statusCode message:(NSString *)message description:(NSString *)description __attribute__((swift_name("doCopy(statusCode:message:description:)")));
+
+/**
+ * User PIN reset request status
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User PIN reset request status
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User PIN reset request status
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A description of the pin reset request */
+@property (readonly) NSString *description_ __attribute__((swift_name("description_")));
+
+/** The message and status returned by the pin reset request */
+@property (readonly) NSString *message __attribute__((swift_name("message")));
+
+/** The response code for the pin reset request. Anything within the 200 range indicates a success  */
+@property (readonly) int32_t statusCode __attribute__((swift_name("statusCode")));
+@end;
+
+
+/**
+ * User PIN reset request status
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserPinResetRequest.Companion")))
+@interface KASDKOSUserPinResetRequestCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User PIN reset request status
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserPinResetRequestCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User PIN reset request status
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Notify Kangaroo that an offer has been shared to facebook [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferFacebookShareApi")))
+@interface KASDKOSOfferFacebookShareApi : KASDKOSApi
+
+/**
+ * Notify Kangaroo that an offer has been shared to facebook [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Notify Kangaroo that an offer has been shared to facebook [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSOfferFacebookShareApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Notify Kangaroo that an offer has been shared to facebook
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel_ *> *> *)postOfferFacebookShareOfferId:(NSString *)offerId include:(NSString *)include facebookUserId:(NSString *)facebookUserId type:(NSString *)type friendsCount:(NSString *)friendsCount __attribute__((swift_name("postOfferFacebookShare(offerId:include:facebookUserId:type:friendsCount:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel_ *> *> *offerFacebookShareState __attribute__((swift_name("offerFacebookShareState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferFacebookShareApi.Companion")))
+@interface KASDKOSOfferFacebookShareApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSOfferFacebookShareApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+
+/**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram")))
+@interface KASDKOSReferralProgram : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("init(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgramCompanion *companion __attribute__((swift_name("companion")));
+
+/** The unique id of this referral program. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+- (KASDKOSDouble * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The number of points the new customer will earn. */
+- (KASDKOSLong * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The number of points the new customer who made the referral will earn. */
+- (KASDKOSLong * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+- (KASDKOSLong * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Denotes whether this referral program is currently active. */
+- (KASDKOSBoolean * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+- (KASDKOSBoolean * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** A link that can be shared to prospective referrals. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * A referral program
+ */
+- (KASDKOSReferralProgram *)doCopyId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("doCopy(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)")));
+
+/**
+ * A referral program
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A referral program
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A referral program
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+@property (readonly) KASDKOSDouble * _Nullable condMinAmount __attribute__((swift_name("condMinAmount")));
+
+/** Denotes whether this referral program is currently active. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+@property (readonly) KASDKOSLong * _Nullable expiresIn __attribute__((swift_name("expiresIn")));
+
+/** The unique id of this referral program. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+@property (readonly) KASDKOSBoolean * _Nullable linkReferralEnabled __attribute__((swift_name("linkReferralEnabled")));
+
+/** The number of points the new customer will earn. */
+@property (readonly) KASDKOSLong * _Nullable refereeEarns __attribute__((swift_name("refereeEarns")));
+
+/** The number of points the new customer who made the referral will earn. */
+@property (readonly) KASDKOSLong * _Nullable refererEarns __attribute__((swift_name("refererEarns")));
+
+/** A link that can be shared to prospective referrals. */
+@property (readonly) NSString * _Nullable referralLink __attribute__((swift_name("referralLink")));
+@property (readonly) NSString * _Nullable ruleName __attribute__((swift_name("ruleName")));
+@end;
+
+
+/**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram.Companion")))
+@interface KASDKOSReferralProgramCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A referral program
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgramCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A referral program
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude")))
+@interface KASDKOSReferralProgramInclude : KASDKOSBase
+- (instancetype)initWithReferralPrograms:(NSArray<KASDKOSReferralProgram *> * _Nullable)referralPrograms __attribute__((swift_name("init(referralPrograms:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgramIncludeCompanion *companion __attribute__((swift_name("companion")));
+
+/** A List of referral programs. */
+- (NSArray<KASDKOSReferralProgram *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (KASDKOSReferralProgramInclude *)doCopyReferralPrograms:(NSArray<KASDKOSReferralProgram *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(referralPrograms:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A List of referral programs. */
+@property (readonly) NSArray<KASDKOSReferralProgram *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude.Companion")))
+@interface KASDKOSReferralProgramIncludeCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Contains data about the referral program for this business.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgramIncludeCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress")))
+@interface KASDKOSTierProgress : KASDKOSBase
+- (instancetype)initWithStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("init(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTierProgressCompanion *companion __attribute__((swift_name("companion")));
+
+/** The start date for this tier session. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The name of the user&#39;s current tier level  */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The name of the user&#39;s next tier level.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+- (KASDKOSFloat * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+- (KASDKOSLong * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (KASDKOSTierProgress *)doCopyStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("doCopy(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+@property (readonly) NSString * _Nullable endDate __attribute__((swift_name("endDate")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+@property (readonly) KASDKOSLong * _Nullable leftPoints __attribute__((swift_name("leftPoints")));
+
+/** The name of the user&#39;s next tier level.  */
+@property (readonly) NSString * _Nullable nextTierLevel __attribute__((swift_name("nextTierLevel")));
+
+/** The start date for this tier session. */
+@property (readonly) NSString * _Nullable startDate __attribute__((swift_name("startDate")));
+
+/** The name of the user&#39;s current tier level  */
+@property (readonly) NSString * _Nullable tierLevel __attribute__((swift_name("tierLevel")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+@property (readonly) NSString * _Nullable tierLevelLive __attribute__((swift_name("tierLevelLive")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+@property (readonly) KASDKOSFloat * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress.Companion")))
+@interface KASDKOSTierProgressCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTierProgressCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance")))
+@interface KASDKOSUserBalance : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserBalanceCompanion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data.
+ */
+- (KASDKOSUserBalance *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance.Companion")))
+@interface KASDKOSUserBalanceCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserBalanceCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData")))
+@interface KASDKOSUserProfileBalanceData : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceDataCompanion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data
+ */
+- (KASDKOSUserProfileBalanceData *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData.Companion")))
+@interface KASDKOSUserProfileBalanceDataCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceDataCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileData__")))
+@interface KASDKOSUserProfileData__ : KASDKOSBase
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileData__Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileData__ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileData__.Companion")))
+@interface KASDKOSUserProfileData__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileData__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel__")))
+@interface KASDKOSUserProfileDataModel__ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel__Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel__ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel__.Companion")))
+@interface KASDKOSUserProfileDataModel__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude")))
+@interface KASDKOSUserProfileInclude : KASDKOSBase
+- (instancetype)initWithBalance:(KASDKOSUserBalance * _Nullable)balance tierProgress:(KASDKOSTierProgress * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram *> * _Nullable)referralPrograms __attribute__((swift_name("init(balance:tierProgress:referralPrograms:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileIncludeCompanion *companion __attribute__((swift_name("companion")));
+
+/** User Profile balance data. */
+- (KASDKOSUserBalance * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** User&#39;s tier progress and status. */
+- (KASDKOSTierProgress * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** A list of referral programs the user has access to. */
+- (NSArray<KASDKOSReferralProgram *> * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/**
+ * Extra user profile data
+ */
+- (KASDKOSUserProfileInclude *)doCopyBalance:(KASDKOSUserBalance * _Nullable)balance tierProgress:(KASDKOSTierProgress * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(balance:tierProgress:referralPrograms:)")));
+
+/**
+ * Extra user profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Extra user profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Extra user profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** User Profile balance data. */
+@property (readonly) KASDKOSUserBalance * _Nullable balance __attribute__((swift_name("balance")));
+
+/** A list of referral programs the user has access to. */
+@property (readonly) NSArray<KASDKOSReferralProgram *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+
+/** User&#39;s tier progress and status. */
+@property (readonly) KASDKOSTierProgress * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude.Companion")))
+@interface KASDKOSUserProfileIncludeCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Extra user profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileIncludeCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Extra user profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileModel_")))
+@interface KASDKOSUserProfileModel_ : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel__ * _Nullable)data included:(KASDKOSUserProfileInclude * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileModel_Companion *companion __attribute__((swift_name("companion")));
+
+/** Contains all user profile data */
+- (KASDKOSUserProfileDataModel__ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Contains user balance data */
+- (KASDKOSUserProfileInclude * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileModel_ *)doCopyData:(KASDKOSUserProfileDataModel__ * _Nullable)data included:(KASDKOSUserProfileInclude * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Contains all user profile data */
+@property (readonly) KASDKOSUserProfileDataModel__ * _Nullable data __attribute__((swift_name("data")));
+
+/** Contains user balance data */
+@property (readonly) KASDKOSUserProfileInclude * _Nullable included __attribute__((swift_name("included")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileModel_.Companion")))
+@interface KASDKOSUserProfileModel_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileModel_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Get user A la carte list [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AlaCarteProductsApi")))
+@interface KASDKOSAlaCarteProductsApi : KASDKOSApi
+
+/**
+ * Get user A la carte list [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Get user A la carte list [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSAlaCarteProductsApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Get user A la carte list
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSAlaCarteProductsModel *> *> *)getAlaCarteProducts __attribute__((swift_name("getAlaCarteProducts()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSAlaCarteProductsModel *> *> *alaCarteProductsState __attribute__((swift_name("alaCarteProductsState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AlaCarteProductsApi.Companion")))
+@interface KASDKOSAlaCarteProductsApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSAlaCarteProductsApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AlaCarteItemModel")))
+@interface KASDKOSAlaCarteItemModel : KASDKOSModel
+- (instancetype)initWithId:(KASDKOSInt * _Nullable)id points:(KASDKOSInt * _Nullable)points product:(KASDKOSProduct * _Nullable)product __attribute__((swift_name("init(id:points:product:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSAlaCarteItemModelCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSProduct * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSAlaCarteItemModel *)doCopyId:(KASDKOSInt * _Nullable)id points:(KASDKOSInt * _Nullable)points product:(KASDKOSProduct * _Nullable)product __attribute__((swift_name("doCopy(id:points:product:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSInt * _Nullable points __attribute__((swift_name("points")));
+@property (readonly) KASDKOSProduct * _Nullable product __attribute__((swift_name("product")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AlaCarteItemModel.Companion")))
+@interface KASDKOSAlaCarteItemModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSAlaCarteItemModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User A la carte products model class containing user A la carte list
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AlaCarteProductsModel")))
+@interface KASDKOSAlaCarteProductsModel : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel___ * _Nullable)data included:(KASDKOSUserAlaCarteIncluded * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSAlaCarteProductsModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** Contains all user data */
+- (KASDKOSUserProfileDataModel___ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Contains all A la carte items */
+- (KASDKOSUserAlaCarteIncluded * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User A la carte products model class containing user A la carte list
+ */
+- (KASDKOSAlaCarteProductsModel *)doCopyData:(KASDKOSUserProfileDataModel___ * _Nullable)data included:(KASDKOSUserAlaCarteIncluded * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+
+/**
+ * User A la carte products model class containing user A la carte list
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User A la carte products model class containing user A la carte list
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User A la carte products model class containing user A la carte list
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Contains all user data */
+@property (readonly) KASDKOSUserProfileDataModel___ * _Nullable data __attribute__((swift_name("data")));
+
+/** Contains all A la carte items */
+@property (readonly) KASDKOSUserAlaCarteIncluded * _Nullable included __attribute__((swift_name("included")));
+@end;
+
+
+/**
+ * User A la carte products model class containing user A la carte list
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AlaCarteProductsModel.Companion")))
+@interface KASDKOSAlaCarteProductsModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User A la carte products model class containing user A la carte list
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSAlaCarteProductsModelCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User A la carte products model class containing user A la carte list
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Error")))
+@interface KASDKOSError : KASDKOSBase
+- (instancetype)initWithCode:(int32_t)code message:(NSString *)message __attribute__((swift_name("init(code:message:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSErrorCompanion *companion __attribute__((swift_name("companion")));
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+- (NSString *)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSError *)doCopyCode:(int32_t)code message:(NSString *)message __attribute__((swift_name("doCopy(code:message:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t code __attribute__((swift_name("code")));
+@property (readonly) NSString *message __attribute__((swift_name("message")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Error.Companion")))
+@interface KASDKOSErrorCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSErrorCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Images")))
+@interface KASDKOSImages : KASDKOSBase
+- (instancetype)initWithPath:(NSString * _Nullable)path large:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(path:large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSImagesCompanion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSImages *)doCopyPath:(NSString * _Nullable)path large:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(path:large:medium:thumbnail:default:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
+@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
+@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
+@property (readonly) NSString * _Nullable path __attribute__((swift_name("path")));
+@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Images.Companion")))
+@interface KASDKOSImagesCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSImagesCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language___")))
+@interface KASDKOSLanguage___ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSLanguage___Companion *companion __attribute__((swift_name("companion")));
+
+/** The Kangaroo ID of this language. */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The full name of this language (English, French, Spanish) */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSLanguage___ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+@property (readonly) NSString * _Nullable abbreviation __attribute__((swift_name("abbreviation")));
+
+/** The Kangaroo ID of this language. */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The full name of this language (English, French, Spanish) */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language___.Companion")))
+@interface KASDKOSLanguage___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSLanguage___Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Languages")))
+@interface KASDKOSLanguages : KASDKOSBase
+- (instancetype)initWithLanguageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description language:(KASDKOSLanguage___ * _Nullable)language __attribute__((swift_name("init(languageId:title:description:language:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSLanguagesCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSLanguage___ * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSLanguages *)doCopyLanguageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description language:(KASDKOSLanguage___ * _Nullable)language __attribute__((swift_name("doCopy(languageId:title:description:language:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
+@property (readonly) KASDKOSLanguage___ * _Nullable language __attribute__((swift_name("language")));
+@property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Languages.Companion")))
+@interface KASDKOSLanguagesCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSLanguagesCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Product")))
+@interface KASDKOSProduct : KASDKOSModel
+- (instancetype)initWithId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title description:(NSString * _Nullable)description images:(NSArray<KASDKOSImages *> * _Nullable)images productSku:(NSString * _Nullable)productSku actualPrice:(KASDKOSFloat * _Nullable)actualPrice realPrice:(KASDKOSFloat * _Nullable)realPrice termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link productLanguages:(NSArray<KASDKOSLanguages *> * _Nullable)productLanguages __attribute__((swift_name("init(id:title:description:images:productSku:actualPrice:realPrice:termsConditions:link:productLanguages:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSProductCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSArray<KASDKOSLanguages *> * _Nullable)component10 __attribute__((swift_name("component10()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSArray<KASDKOSImages *> * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSFloat * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (KASDKOSFloat * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (KASDKOSProduct *)doCopyId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title description:(NSString * _Nullable)description images:(NSArray<KASDKOSImages *> * _Nullable)images productSku:(NSString * _Nullable)productSku actualPrice:(KASDKOSFloat * _Nullable)actualPrice realPrice:(KASDKOSFloat * _Nullable)realPrice termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link productLanguages:(NSArray<KASDKOSLanguages *> * _Nullable)productLanguages __attribute__((swift_name("doCopy(id:title:description:images:productSku:actualPrice:realPrice:termsConditions:link:productLanguages:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSFloat * _Nullable actualPrice __attribute__((swift_name("actualPrice")));
+@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
+@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) NSArray<KASDKOSImages *> * _Nullable images __attribute__((swift_name("images")));
+@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
+@property (readonly) NSArray<KASDKOSLanguages *> * _Nullable productLanguages __attribute__((swift_name("productLanguages")));
+@property (readonly) NSString * _Nullable productSku __attribute__((swift_name("productSku")));
+@property (readonly) KASDKOSFloat * _Nullable realPrice __attribute__((swift_name("realPrice")));
+@property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Product.Companion")))
+@interface KASDKOSProductCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSProductCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ProductItemModel")))
+@interface KASDKOSProductItemModel : KASDKOSModel
+- (instancetype)initWithId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title description:(NSString * _Nullable)description images:(NSArray<KASDKOSImages *> * _Nullable)images productSku:(NSString * _Nullable)productSku termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link productLanguages:(NSArray<KASDKOSLanguages *> * _Nullable)productLanguages __attribute__((swift_name("init(id:title:description:images:productSku:termsConditions:link:productLanguages:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSProductItemModelCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSArray<KASDKOSImages *> * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (NSArray<KASDKOSLanguages *> * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (KASDKOSProductItemModel *)doCopyId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title description:(NSString * _Nullable)description images:(NSArray<KASDKOSImages *> * _Nullable)images productSku:(NSString * _Nullable)productSku termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link productLanguages:(NSArray<KASDKOSLanguages *> * _Nullable)productLanguages __attribute__((swift_name("doCopy(id:title:description:images:productSku:termsConditions:link:productLanguages:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
+@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) NSArray<KASDKOSImages *> * _Nullable images __attribute__((swift_name("images")));
+@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
+@property (readonly) NSArray<KASDKOSLanguages *> * _Nullable productLanguages __attribute__((swift_name("productLanguages")));
+@property (readonly) NSString * _Nullable productSku __attribute__((swift_name("productSku")));
+@property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ProductItemModel.Companion")))
+@interface KASDKOSProductItemModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSProductItemModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserAlaCarteIncluded")))
+@interface KASDKOSUserAlaCarteIncluded : KASDKOSBase
+- (instancetype)initWithProductRewards:(NSArray<KASDKOSAlaCarteItemModel *> * _Nullable)productRewards __attribute__((swift_name("init(productRewards:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserAlaCarteIncludedCompanion *companion __attribute__((swift_name("companion")));
+- (NSArray<KASDKOSAlaCarteItemModel *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserAlaCarteIncluded *)doCopyProductRewards:(NSArray<KASDKOSAlaCarteItemModel *> * _Nullable)productRewards __attribute__((swift_name("doCopy(productRewards:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<KASDKOSAlaCarteItemModel *> * _Nullable productRewards __attribute__((swift_name("productRewards")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserAlaCarteIncluded.Companion")))
+@interface KASDKOSUserAlaCarteIncludedCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserAlaCarteIncludedCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileData___")))
+@interface KASDKOSUserProfileData___ : KASDKOSBase
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileData___Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileData___ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileData___.Companion")))
+@interface KASDKOSUserProfileData___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileData___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel___")))
+@interface KASDKOSUserProfileDataModel___ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel___Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel___ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel___.Companion")))
+@interface KASDKOSUserProfileDataModel___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Create a paypal payment  [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PayPalPaymentApi")))
+@interface KASDKOSPayPalPaymentApi : KASDKOSApi
+
+/**
+ * Create a paypal payment  [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Create a paypal payment  [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSPayPalPaymentApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Create a paypal payment
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSPayPalPaymentModel *> *> *)makePayPalPaymentIntent:(NSString *)intent provider:(NSString *)provider giftcardId:(int32_t)giftcardId paypalReturnUrl:(NSString *)paypalReturnUrl paypalCancelUrl:(NSString *)paypalCancelUrl __attribute__((swift_name("makePayPalPayment(intent:provider:giftcardId:paypalReturnUrl:paypalCancelUrl:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSPayPalPaymentModel *> *> *payPalPaymentState __attribute__((swift_name("payPalPaymentState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PayPalPaymentApi.Companion")))
+@interface KASDKOSPayPalPaymentApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSPayPalPaymentApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+
+/**
+ * A paypal payment response data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PayPalPayment")))
+@interface KASDKOSPayPalPayment : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id provider:(NSString * _Nullable)provider status:(NSString * _Nullable)status approvalUrl:(NSString * _Nullable)approvalUrl giftcard:(KASDKOSPayPalPaymentGiftCard * _Nullable)giftcard __attribute__((swift_name("init(id:provider:status:approvalUrl:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSPayPalPaymentCompanion *companion __attribute__((swift_name("companion")));
+
+/** Unique payment ID. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** A giftcard received from a paypal payment  */
+- (KASDKOSPayPalPaymentGiftCard * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/**
+ * A paypal payment response data
+ */
+- (KASDKOSPayPalPayment *)doCopyId:(NSString * _Nullable)id provider:(NSString * _Nullable)provider status:(NSString * _Nullable)status approvalUrl:(NSString * _Nullable)approvalUrl giftcard:(KASDKOSPayPalPaymentGiftCard * _Nullable)giftcard __attribute__((swift_name("doCopy(id:provider:status:approvalUrl:giftcard:)")));
+
+/**
+ * A paypal payment response data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A paypal payment response data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A paypal payment response data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable approvalUrl __attribute__((swift_name("approvalUrl")));
+
+/** A giftcard received from a paypal payment  */
+@property (readonly) KASDKOSPayPalPaymentGiftCard * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** Unique payment ID. */
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) NSString * _Nullable provider __attribute__((swift_name("provider")));
+@property (readonly) NSString * _Nullable status __attribute__((swift_name("status")));
+@end;
+
+
+/**
+ * A paypal payment response data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PayPalPayment.Companion")))
+@interface KASDKOSPayPalPaymentCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A paypal payment response data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSPayPalPaymentCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A paypal payment response data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * A giftcard received from a paypal payment
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PayPalPaymentGiftCard")))
+@interface KASDKOSPayPalPaymentGiftCard : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title price:(KASDKOSFloat * _Nullable)price currency:(NSString * _Nullable)currency quantity:(KASDKOSInt * _Nullable)quantity __attribute__((swift_name("init(id:title:price:currency:quantity:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSPayPalPaymentGiftCardCompanion *companion __attribute__((swift_name("companion")));
+
+/** Unique gift card ID. */
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSFloat * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSInt * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/**
+ * A giftcard received from a paypal payment
+ */
+- (KASDKOSPayPalPaymentGiftCard *)doCopyId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title price:(KASDKOSFloat * _Nullable)price currency:(NSString * _Nullable)currency quantity:(KASDKOSInt * _Nullable)quantity __attribute__((swift_name("doCopy(id:title:price:currency:quantity:)")));
+
+/**
+ * A giftcard received from a paypal payment
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A giftcard received from a paypal payment
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A giftcard received from a paypal payment
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable currency __attribute__((swift_name("currency")));
+
+/** Unique gift card ID. */
+@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSFloat * _Nullable price __attribute__((swift_name("price")));
+@property (readonly) KASDKOSInt * _Nullable quantity __attribute__((swift_name("quantity")));
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+@end;
+
+
+/**
+ * A giftcard received from a paypal payment
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PayPalPaymentGiftCard.Companion")))
+@interface KASDKOSPayPalPaymentGiftCardCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A giftcard received from a paypal payment
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSPayPalPaymentGiftCardCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A giftcard received from a paypal payment
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * A paypal payment response
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PayPalPaymentModel")))
+@interface KASDKOSPayPalPaymentModel : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSPayPalPayment * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSPayPalPaymentModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** A paypal payment response data */
+- (KASDKOSPayPalPayment * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * A paypal payment response
+ */
+- (KASDKOSPayPalPaymentModel *)doCopyData:(KASDKOSPayPalPayment * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+
+/**
+ * A paypal payment response
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A paypal payment response
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A paypal payment response
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A paypal payment response data */
+@property (readonly) KASDKOSPayPalPayment * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+
+/**
+ * A paypal payment response
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PayPalPaymentModel.Companion")))
+@interface KASDKOSPayPalPaymentModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A paypal payment response
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSPayPalPaymentModelCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A paypal payment response
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Get a users notification settings.  [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetNotificationPreferencesApi")))
+@interface KASDKOSGetNotificationPreferencesApi : KASDKOSApi
+
+/**
+ * Get a users notification settings.  [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Get a users notification settings.  [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSGetNotificationPreferencesApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Get a users notification settings.
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSNotificationSettingsModel *> *> *)getNotificationPreferences __attribute__((swift_name("getNotificationPreferences()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSNotificationSettingsModel *> *> *getNotificationPreferencesState __attribute__((swift_name("getNotificationPreferencesState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GetNotificationPreferencesApi.Companion")))
+@interface KASDKOSGetNotificationPreferencesApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGetNotificationPreferencesApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessCategory_")))
+@interface KASDKOSBusinessCategory_ : KASDKOSBase
+- (instancetype)initWithName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("init(name:icon:code:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBusinessCategory_Companion *companion __attribute__((swift_name("companion")));
+
+/** Name of this category */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Url to this category&#39;s icon */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Unique ategory code for this category */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (KASDKOSBusinessCategory_ *)doCopyName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("doCopy(name:icon:code:)")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Unique ategory code for this category */
+@property (readonly) NSString * _Nullable code __attribute__((swift_name("code")));
+
+/** Url to this category&#39;s icon */
+@property (readonly) NSString * _Nullable icon __attribute__((swift_name("icon")));
+
+/** Name of this category */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessCategory_.Companion")))
+@interface KASDKOSBusinessCategory_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessCategory_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Business profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessData_")))
+@interface KASDKOSBusinessData_ : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage__ * _Nullable)logo logoTransparentBackground:(KASDKOSImage__ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage__ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory_ * _Nullable)category __attribute__((swift_name("init(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBusinessData_Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique business ID. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBusinessCategory_ * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** The name of this business */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The manner in which this business rewards its customers. This can be by purchase amount of by visit to the store  */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** Whether this is a conglomerate business. Conglomerate businesses are umbrellas for multiple business&#39; in Kangaroo  */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Whether this is a white label business. White label business&#39; don&#39;t appear in the Kangaroo Mobile Customer app, as they usually have their own app.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** General about text for the business */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (KASDKOSImage__ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSImage__ * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (KASDKOSImage__ * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * Business profile data
+ */
+- (KASDKOSBusinessData_ *)doCopyId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage__ * _Nullable)logo logoTransparentBackground:(KASDKOSImage__ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage__ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory_ * _Nullable)category __attribute__((swift_name("doCopy(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)")));
+
+/**
+ * Business profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Business profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Business profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** General about text for the business */
+@property (readonly) NSString * _Nullable about __attribute__((swift_name("about")));
+@property (readonly) KASDKOSBusinessCategory_ * _Nullable category __attribute__((swift_name("category")));
+
+/** Whether this is a conglomerate business. Conglomerate businesses are umbrellas for multiple business&#39; in Kangaroo  */
+@property (readonly) NSString * _Nullable conglomerate __attribute__((swift_name("conglomerate")));
+@property (readonly) KASDKOSImage__ * _Nullable coverPhoto __attribute__((swift_name("coverPhoto")));
+
+/** Unique business ID. */
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSImage__ * _Nullable logo __attribute__((swift_name("logo")));
+@property (readonly) KASDKOSImage__ * _Nullable logoTransparentBackground __attribute__((swift_name("logoTransparentBackground")));
+
+/** The manner in which this business rewards its customers. This can be by purchase amount of by visit to the store  */
+@property (readonly) NSString * _Nullable loyaltyType __attribute__((swift_name("loyaltyType")));
+
+/** The name of this business */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+
+/** Whether this is a white label business. White label business&#39; don&#39;t appear in the Kangaroo Mobile Customer app, as they usually have their own app.  */
+@property (readonly) NSString * _Nullable whiteLabel __attribute__((swift_name("whiteLabel")));
+@end;
+
+
+/**
+ * Business profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessData_.Companion")))
+@interface KASDKOSBusinessData_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Business profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessData_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Business profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image__")))
+@interface KASDKOSImage__ : KASDKOSBase
+- (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSImage__Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSImage__ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
+@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
+@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
+@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image__.Companion")))
+@interface KASDKOSImage__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSImage__Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationSettingsData")))
+@interface KASDKOSNotificationSettingsData : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id business:(KASDKOSBusinessData_ * _Nullable)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("init(id:business:allowEmail:allowSms:allowPush:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSNotificationSettingsDataCompanion *companion __attribute__((swift_name("companion")));
+
+/** The notification settings id. This is not required when updating notification settings.  */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The business who these settings this affect. This is not required when updating notification settings.  */
+- (KASDKOSBusinessData_ * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSBoolean * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSNotificationSettingsData *)doCopyId:(NSString * _Nullable)id business:(KASDKOSBusinessData_ * _Nullable)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("doCopy(id:business:allowEmail:allowSms:allowPush:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSBoolean * _Nullable allowEmail __attribute__((swift_name("allowEmail")));
+@property (readonly) KASDKOSBoolean * _Nullable allowPush __attribute__((swift_name("allowPush")));
+@property (readonly) KASDKOSBoolean * _Nullable allowSms __attribute__((swift_name("allowSms")));
+
+/** The business who these settings this affect. This is not required when updating notification settings.  */
+@property (readonly) KASDKOSBusinessData_ * _Nullable business __attribute__((swift_name("business")));
+
+/** The notification settings id. This is not required when updating notification settings.  */
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationSettingsData.Companion")))
+@interface KASDKOSNotificationSettingsDataCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSNotificationSettingsDataCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationSettingsModel")))
+@interface KASDKOSNotificationSettingsModel : KASDKOSModel
+- (instancetype)initWithData:(NSArray<KASDKOSNotificationSettingsData *> * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSNotificationSettingsModelCompanion *companion __attribute__((swift_name("companion")));
+- (NSArray<KASDKOSNotificationSettingsData *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSNotificationSettingsModel *)doCopyData:(NSArray<KASDKOSNotificationSettingsData *> * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<KASDKOSNotificationSettingsData *> * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationSettingsModel.Companion")))
+@interface KASDKOSNotificationSettingsModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSNotificationSettingsModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Update a users' PIN [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserPinUpdateApi")))
+@interface KASDKOSUserPinUpdateApi : KASDKOSApi
+
+/**
+ * Update a users' PIN [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Update a users' PIN [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSUserPinUpdateApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Update a users' PIN
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel__ *> *> *)updatePinUpdatePinRequest:(KASDKOSUpdatePinRequest *)updatePinRequest __attribute__((swift_name("updatePin(updatePinRequest:)")));
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel__ *> *> *)updatePinMethods:(NSDictionary<NSString *, id> *)methods __attribute__((swift_name("updatePin(methods:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserProfileModel__ *> *> *userPinUpdateState __attribute__((swift_name("userPinUpdateState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserPinUpdateApi.Companion")))
+@interface KASDKOSUserPinUpdateApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserPinUpdateApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+
+/**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram_")))
+@interface KASDKOSReferralProgram_ : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("init(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgram_Companion *companion __attribute__((swift_name("companion")));
+
+/** The unique id of this referral program. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+- (KASDKOSDouble * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The number of points the new customer will earn. */
+- (KASDKOSLong * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The number of points the new customer who made the referral will earn. */
+- (KASDKOSLong * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+- (KASDKOSLong * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Denotes whether this referral program is currently active. */
+- (KASDKOSBoolean * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+- (KASDKOSBoolean * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** A link that can be shared to prospective referrals. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * A referral program
+ */
+- (KASDKOSReferralProgram_ *)doCopyId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("doCopy(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)")));
+
+/**
+ * A referral program
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A referral program
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A referral program
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+@property (readonly) KASDKOSDouble * _Nullable condMinAmount __attribute__((swift_name("condMinAmount")));
+
+/** Denotes whether this referral program is currently active. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+@property (readonly) KASDKOSLong * _Nullable expiresIn __attribute__((swift_name("expiresIn")));
+
+/** The unique id of this referral program. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+@property (readonly) KASDKOSBoolean * _Nullable linkReferralEnabled __attribute__((swift_name("linkReferralEnabled")));
+
+/** The number of points the new customer will earn. */
+@property (readonly) KASDKOSLong * _Nullable refereeEarns __attribute__((swift_name("refereeEarns")));
+
+/** The number of points the new customer who made the referral will earn. */
+@property (readonly) KASDKOSLong * _Nullable refererEarns __attribute__((swift_name("refererEarns")));
+
+/** A link that can be shared to prospective referrals. */
+@property (readonly) NSString * _Nullable referralLink __attribute__((swift_name("referralLink")));
+@property (readonly) NSString * _Nullable ruleName __attribute__((swift_name("ruleName")));
+@end;
+
+
+/**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram_.Companion")))
+@interface KASDKOSReferralProgram_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A referral program
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgram_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A referral program
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude_")))
+@interface KASDKOSReferralProgramInclude_ : KASDKOSBase
+- (instancetype)initWithReferralPrograms:(NSArray<KASDKOSReferralProgram_ *> * _Nullable)referralPrograms __attribute__((swift_name("init(referralPrograms:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgramInclude_Companion *companion __attribute__((swift_name("companion")));
+
+/** A List of referral programs. */
+- (NSArray<KASDKOSReferralProgram_ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (KASDKOSReferralProgramInclude_ *)doCopyReferralPrograms:(NSArray<KASDKOSReferralProgram_ *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(referralPrograms:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A List of referral programs. */
+@property (readonly) NSArray<KASDKOSReferralProgram_ *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude_.Companion")))
+@interface KASDKOSReferralProgramInclude_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Contains data about the referral program for this business.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgramInclude_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress_")))
+@interface KASDKOSTierProgress_ : KASDKOSBase
+- (instancetype)initWithStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("init(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTierProgress_Companion *companion __attribute__((swift_name("companion")));
+
+/** The start date for this tier session. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The name of the user&#39;s current tier level  */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The name of the user&#39;s next tier level.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+- (KASDKOSFloat * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+- (KASDKOSLong * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (KASDKOSTierProgress_ *)doCopyStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("doCopy(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+@property (readonly) NSString * _Nullable endDate __attribute__((swift_name("endDate")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+@property (readonly) KASDKOSLong * _Nullable leftPoints __attribute__((swift_name("leftPoints")));
+
+/** The name of the user&#39;s next tier level.  */
+@property (readonly) NSString * _Nullable nextTierLevel __attribute__((swift_name("nextTierLevel")));
+
+/** The start date for this tier session. */
+@property (readonly) NSString * _Nullable startDate __attribute__((swift_name("startDate")));
+
+/** The name of the user&#39;s current tier level  */
+@property (readonly) NSString * _Nullable tierLevel __attribute__((swift_name("tierLevel")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+@property (readonly) NSString * _Nullable tierLevelLive __attribute__((swift_name("tierLevelLive")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+@property (readonly) KASDKOSFloat * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress_.Companion")))
+@interface KASDKOSTierProgress_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTierProgress_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UpdatePinRequest")))
+@interface KASDKOSUpdatePinRequest : KASDKOSBase
+- (instancetype)initWithPinCode:(NSString *)pinCode __attribute__((swift_name("init(pinCode:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUpdatePinRequestCompanion *companion __attribute__((swift_name("companion")));
+
+/** The new PIN */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUpdatePinRequest *)doCopyPinCode:(NSString *)pinCode __attribute__((swift_name("doCopy(pinCode:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The new PIN */
+@property (readonly) NSString *pinCode __attribute__((swift_name("pinCode")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UpdatePinRequest.Companion")))
+@interface KASDKOSUpdatePinRequestCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUpdatePinRequestCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance_")))
+@interface KASDKOSUserBalance_ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserBalance_Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data.
+ */
+- (KASDKOSUserBalance_ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance_.Companion")))
+@interface KASDKOSUserBalance_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserBalance_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData_")))
+@interface KASDKOSUserProfileBalanceData_ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileBalanceData_Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data
+ */
+- (KASDKOSUserProfileBalanceData_ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileBalanceData_.Companion")))
+@interface KASDKOSUserProfileBalanceData_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileBalanceData_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileData____")))
+@interface KASDKOSUserProfileData____ : KASDKOSBase
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileData____Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileData____ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileData____.Companion")))
+@interface KASDKOSUserProfileData____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileData____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel____")))
+@interface KASDKOSUserProfileDataModel____ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel____Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel____ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel____.Companion")))
+@interface KASDKOSUserProfileDataModel____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude_")))
+@interface KASDKOSUserProfileInclude_ : KASDKOSBase
+- (instancetype)initWithBalance:(KASDKOSUserBalance_ * _Nullable)balance tierProgress:(KASDKOSTierProgress_ * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram_ *> * _Nullable)referralPrograms __attribute__((swift_name("init(balance:tierProgress:referralPrograms:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserProfileInclude_Companion *companion __attribute__((swift_name("companion")));
+
+/** User Profile balance data. */
+- (KASDKOSUserBalance_ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** User&#39;s tier progress and status. */
+- (KASDKOSTierProgress_ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** A list of referral programs the user has access to. */
+- (NSArray<KASDKOSReferralProgram_ *> * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/**
+ * Extra user profile data
+ */
+- (KASDKOSUserProfileInclude_ *)doCopyBalance:(KASDKOSUserBalance_ * _Nullable)balance tierProgress:(KASDKOSTierProgress_ * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram_ *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(balance:tierProgress:referralPrograms:)")));
+
+/**
+ * Extra user profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Extra user profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Extra user profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** User Profile balance data. */
+@property (readonly) KASDKOSUserBalance_ * _Nullable balance __attribute__((swift_name("balance")));
+
+/** A list of referral programs the user has access to. */
+@property (readonly) NSArray<KASDKOSReferralProgram_ *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+
+/** User&#39;s tier progress and status. */
+@property (readonly) KASDKOSTierProgress_ * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
+@end;
+
+
+/**
+ * Extra user profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileInclude_.Companion")))
+@interface KASDKOSUserProfileInclude_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Extra user profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileInclude_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Extra user profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileModel__")))
+@interface KASDKOSUserProfileModel__ : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel____ * _Nullable)data included:(KASDKOSUserProfileInclude_ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileModel__Companion *companion __attribute__((swift_name("companion")));
+
+/** Contains all user profile data */
+- (KASDKOSUserProfileDataModel____ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Contains user balance data */
+- (KASDKOSUserProfileInclude_ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileModel__ *)doCopyData:(KASDKOSUserProfileDataModel____ * _Nullable)data included:(KASDKOSUserProfileInclude_ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Contains all user profile data */
+@property (readonly) KASDKOSUserProfileDataModel____ * _Nullable data __attribute__((swift_name("data")));
+
+/** Contains user balance data */
+@property (readonly) KASDKOSUserProfileInclude_ * _Nullable included __attribute__((swift_name("included")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileModel__.Companion")))
+@interface KASDKOSUserProfileModel__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileModel__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Get Social Media List [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaApi")))
+@interface KASDKOSSocialMediaApi : KASDKOSApi
+
+/**
+ * Get Social Media List [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Get Social Media List [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSSocialMediaApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Get Social Media List
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSSocialMediaModel *> *> *)getSocialMedia __attribute__((swift_name("getSocialMedia()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSSocialMediaModel *> *> *socialMediaState __attribute__((swift_name("socialMediaState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaApi.Companion")))
+@interface KASDKOSSocialMediaApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSSocialMediaApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Error_")))
+@interface KASDKOSError_ : KASDKOSBase
+- (instancetype)initWithCode:(int32_t)code message:(NSString *)message __attribute__((swift_name("init(code:message:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSError_Companion *companion __attribute__((swift_name("companion")));
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+- (NSString *)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSError_ *)doCopyCode:(int32_t)code message:(NSString *)message __attribute__((swift_name("doCopy(code:message:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t code __attribute__((swift_name("code")));
+@property (readonly) NSString *message __attribute__((swift_name("message")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Error_.Companion")))
+@interface KASDKOSError_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSError_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaIncluded")))
+@interface KASDKOSSocialMediaIncluded : KASDKOSBase
+- (instancetype)initWithSocialMedia:(NSArray<KASDKOSSocialMediaItemModel *> *)socialMedia __attribute__((swift_name("init(socialMedia:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSSocialMediaIncludedCompanion *companion __attribute__((swift_name("companion")));
+- (NSArray<KASDKOSSocialMediaItemModel *> *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSSocialMediaIncluded *)doCopySocialMedia:(NSArray<KASDKOSSocialMediaItemModel *> *)socialMedia __attribute__((swift_name("doCopy(socialMedia:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<KASDKOSSocialMediaItemModel *> *socialMedia __attribute__((swift_name("socialMedia")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaIncluded.Companion")))
+@interface KASDKOSSocialMediaIncludedCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSSocialMediaIncludedCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaItemModel")))
+@interface KASDKOSSocialMediaItemModel : KASDKOSModel
+- (instancetype)initWithIcon:(NSString * _Nullable)icon url:(NSString * _Nullable)url __attribute__((swift_name("init(icon:url:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSSocialMediaItemModelCompanion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSSocialMediaItemModel *)doCopyIcon:(NSString * _Nullable)icon url:(NSString * _Nullable)url __attribute__((swift_name("doCopy(icon:url:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable icon __attribute__((swift_name("icon")));
+@property (readonly) NSString * _Nullable url __attribute__((swift_name("url")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaItemModel.Companion")))
+@interface KASDKOSSocialMediaItemModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSSocialMediaItemModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Social Media Model containing list of all social media links
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaModel")))
+@interface KASDKOSSocialMediaModel : KASDKOSModel
+- (instancetype)initWithIncluded:(KASDKOSSocialMediaIncluded * _Nullable)included __attribute__((swift_name("init(included:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSSocialMediaModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** Contains all Social media links */
+- (KASDKOSSocialMediaIncluded * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Social Media Model containing list of all social media links
+ */
+- (KASDKOSSocialMediaModel *)doCopyIncluded:(KASDKOSSocialMediaIncluded * _Nullable)included __attribute__((swift_name("doCopy(included:)")));
+
+/**
+ * Social Media Model containing list of all social media links
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Social Media Model containing list of all social media links
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Social Media Model containing list of all social media links
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Contains all Social media links */
+@property (readonly) KASDKOSSocialMediaIncluded * _Nullable included __attribute__((swift_name("included")));
+@end;
+
+
+/**
+ * Social Media Model containing list of all social media links
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaModel.Companion")))
+@interface KASDKOSSocialMediaModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Social Media Model containing list of all social media links
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSSocialMediaModelCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Social Media Model containing list of all social media links
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Get transaction history this user. [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserTransactionHistoryApi")))
+@interface KASDKOSUserTransactionHistoryApi : KASDKOSApi
+
+/**
+ * Get transaction history this user. [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Get transaction history this user. [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSUserTransactionHistoryApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Get transaction history this user.
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSUserTransactionHistoryModel *> *> *)getUserTransactionHistory __attribute__((swift_name("getUserTransactionHistory()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSUserTransactionHistoryModel *> *> *userTransactionHistoryState __attribute__((swift_name("userTransactionHistoryState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserTransactionHistoryApi.Companion")))
+@interface KASDKOSUserTransactionHistoryApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserTransactionHistoryApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+
+/**
+ * Transaction model containting transaction details
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Transaction")))
+@interface KASDKOSTransaction : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id amount:(KASDKOSDouble * _Nullable)amount points:(KASDKOSDouble * _Nullable)points name:(NSString * _Nullable)name transactionType:(KASDKOSInt * _Nullable)transactionType createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt __attribute__((swift_name("init(id:amount:points:name:transactionType:createdAt:updatedAt:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTransactionCompanion *companion __attribute__((swift_name("companion")));
+
+/** Unique transaction ID. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount in $ for this transaction. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The amount in points for this transaction. */
+- (KASDKOSDouble * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The transaction label. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The transaction type ID. */
+- (KASDKOSInt * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Date the transaction was created. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Date the transaction was last updated. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * Transaction model containting transaction details
+ */
+- (KASDKOSTransaction *)doCopyId:(KASDKOSLong * _Nullable)id amount:(KASDKOSDouble * _Nullable)amount points:(KASDKOSDouble * _Nullable)points name:(NSString * _Nullable)name transactionType:(KASDKOSInt * _Nullable)transactionType createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt __attribute__((swift_name("doCopy(id:amount:points:name:transactionType:createdAt:updatedAt:)")));
+
+/**
+ * Transaction model containting transaction details
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Transaction model containting transaction details
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Transaction model containting transaction details
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount in $ for this transaction. */
+@property (readonly) KASDKOSDouble * _Nullable amount __attribute__((swift_name("amount")));
+
+/** Date the transaction was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Unique transaction ID. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** The transaction label. */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+
+/** The amount in points for this transaction. */
+@property (readonly) KASDKOSDouble * _Nullable points __attribute__((swift_name("points")));
+
+/** The transaction type ID. */
+@property (readonly) KASDKOSInt * _Nullable transactionType __attribute__((swift_name("transactionType")));
+
+/** Date the transaction was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * Transaction model containting transaction details
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Transaction.Companion")))
+@interface KASDKOSTransactionCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Transaction model containting transaction details
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransactionCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Transaction model containting transaction details
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserTransactionHistoryModel")))
+@interface KASDKOSUserTransactionHistoryModel : KASDKOSModel
+- (instancetype)initWithData:(NSArray<KASDKOSTransaction *> * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserTransactionHistoryModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** Contains user transaction history. */
+- (NSArray<KASDKOSTransaction *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserTransactionHistoryModel *)doCopyData:(NSArray<KASDKOSTransaction *> * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Contains user transaction history. */
+@property (readonly) NSArray<KASDKOSTransaction *> * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserTransactionHistoryModel.Companion")))
+@interface KASDKOSUserTransactionHistoryModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserTransactionHistoryModelCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Recall a transfer. This could be a points transfer, e-wallet transfer, or a gift card  [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferRecallApi")))
+@interface KASDKOSTransferRecallApi : KASDKOSApi
+
+/**
+ * Recall a transfer. This could be a points transfer, e-wallet transfer, or a gift card  [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Recall a transfer. This could be a points transfer, e-wallet transfer, or a gift card  [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSTransferRecallApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Recall a transfer. This could be a points transfer, e-wallet transfer, or a gift card
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSTransferActionResultModel_ *> *> *)recallTransferRecallId:(NSString *)recallId __attribute__((swift_name("recallTransfer(recallId:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSTransferActionResultModel_ *> *> *transferRecallState __attribute__((swift_name("transferRecallState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferRecallApi.Companion")))
+@interface KASDKOSTransferRecallApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransferRecallApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image___")))
+@interface KASDKOSImage___ : KASDKOSBase
+- (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSImage___Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSImage___ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
+@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
+@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
+@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image___.Companion")))
+@interface KASDKOSImage___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSImage___Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language____")))
+@interface KASDKOSLanguage____ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSLanguage____Companion *companion __attribute__((swift_name("companion")));
+
+/** The Kangaroo ID of this language. */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The full name of this language (English, French, Spanish) */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSLanguage____ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+@property (readonly) NSString * _Nullable abbreviation __attribute__((swift_name("abbreviation")));
+
+/** The Kangaroo ID of this language. */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The full name of this language (English, French, Spanish) */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language____.Companion")))
+@interface KASDKOSLanguage____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSLanguage____Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferAction_")))
+@interface KASDKOSOfferAction_ : KASDKOSBase
+- (instancetype)initWithType:(NSString * _Nullable)type __attribute__((swift_name("init(type:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSOfferAction_Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSOfferAction_ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferAction_.Companion")))
+@interface KASDKOSOfferAction_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSOfferAction_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferModel_")))
+@interface KASDKOSOfferModel_ : KASDKOSModel
+- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage___ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation_ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction_ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSOfferModel_Companion *companion __attribute__((swift_name("companion")));
+
+/** A unique ID identifying this reward */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** The minimum purchase amount for this offer to be applied */
+- (KASDKOSDouble * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** The maximum purchase amount for this offer to be applied. */
+- (KASDKOSDouble * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Whether this offer must be claimed on a mobile app before being used in store.  */
+- (KASDKOSBoolean * _Nullable)component12 __attribute__((swift_name("component12()")));
+- (KASDKOSInt * _Nullable)component13 __attribute__((swift_name("component13()")));
+- (NSArray<NSString *> * _Nullable)component14 __attribute__((swift_name("component14()")));
+- (NSString * _Nullable)component15 __attribute__((swift_name("component15()")));
+- (NSString * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** The offer type. This can be a free product, dollar based discount, percentage based discount, point multiplier, bonus points, and free shipping.  */
+- (NSString * _Nullable)component17 __attribute__((swift_name("component17()")));
+
+/** The offer title. */
+- (NSString * _Nullable)component18 __attribute__((swift_name("component18()")));
+
+/** The offer description. */
+- (NSString * _Nullable)component19 __attribute__((swift_name("component19()")));
+
+/** The amount of points required for this offer to be applied. Only used for Convertible Coupons  */
+- (KASDKOSLong * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The unique slug for this offer */
+- (NSString * _Nullable)component20 __attribute__((swift_name("component20()")));
+
+/** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
+- (NSArray<KASDKOSImage___ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
+
+/** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
+- (KASDKOSBoolean * _Nullable)component22 __attribute__((swift_name("component22()")));
+
+/** The terms and conditions attached to this offer. */
+- (NSString * _Nullable)component23 __attribute__((swift_name("component23()")));
+
+/** The external link attached to this offer. */
+- (NSString * _Nullable)component24 __attribute__((swift_name("component24()")));
+
+/** A list of translations of this offer into different languages. */
+- (NSArray<KASDKOSOfferTranslation_ *> * _Nullable)component25 __attribute__((swift_name("component25()")));
+
+/** A list of possible actions to perform on this offer. */
+- (NSArray<KASDKOSOfferAction_ *> * _Nullable)component26 __attribute__((swift_name("component26()")));
+
+/** The publication date of this offer. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The expiration date of this offer. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Whether this offer is currently published or not. */
+- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Whether this is a convertible coupon. Convertible coupons are automatically added to the customers account when the point threshold is met. The points are automatically deducted from the users&#39; account.  */
+- (KASDKOSBoolean * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The real value  (in $) of this offer */
+- (KASDKOSDouble * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** The discount value (in $) of this offer */
+- (KASDKOSDouble * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
+- (KASDKOSDouble * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (KASDKOSOfferModel_ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage___ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation_ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction_ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A list of possible actions to perform on this offer. */
+@property (readonly) NSArray<KASDKOSOfferAction_ *> * _Nullable actions __attribute__((swift_name("actions")));
+
+/** Whether this offer must be claimed on a mobile app before being used in store.  */
+@property (readonly) KASDKOSBoolean * _Nullable appsOnly __attribute__((swift_name("appsOnly")));
+
+/** Whether this is a convertible coupon. Convertible coupons are automatically added to the customers account when the point threshold is met. The points are automatically deducted from the users&#39; account.  */
+@property (readonly) KASDKOSBoolean * _Nullable couponConvertible __attribute__((swift_name("couponConvertible")));
+
+/** The offer description. */
+@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
+
+/** The discount value (in $) of this offer */
+@property (readonly) KASDKOSDouble * _Nullable discountValue __attribute__((swift_name("discountValue")));
+
+/** The expiration date of this offer. */
+@property (readonly) NSString * _Nullable expiresAt __attribute__((swift_name("expiresAt")));
+@property (readonly) NSArray<NSString *> * _Nullable freqDetails __attribute__((swift_name("freqDetails")));
+
+/** A unique ID identifying this reward */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
+@property (readonly) NSArray<KASDKOSImage___ *> * _Nullable images __attribute__((swift_name("images")));
+
+/** Whether this offer is currently published or not. */
+@property (readonly) KASDKOSBoolean * _Nullable isPublished __attribute__((swift_name("isPublished")));
+
+/** The external link attached to this offer. */
+@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
+
+/** The maximum purchase amount for this offer to be applied. */
+@property (readonly) KASDKOSDouble * _Nullable maxPurchase __attribute__((swift_name("maxPurchase")));
+
+/** The minimum purchase amount for this offer to be applied */
+@property (readonly) KASDKOSDouble * _Nullable minPurchase __attribute__((swift_name("minPurchase")));
+
+/** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
+@property (readonly) KASDKOSDouble * _Nullable multipFactor __attribute__((swift_name("multipFactor")));
+
+/** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
+@property (readonly) KASDKOSBoolean * _Nullable neverExpiresFlag __attribute__((swift_name("neverExpiresFlag")));
+@property (readonly) KASDKOSInt * _Nullable offerFrequencyId __attribute__((swift_name("offerFrequencyId")));
+
+/** A list of translations of this offer into different languages. */
+@property (readonly) NSArray<KASDKOSOfferTranslation_ *> * _Nullable offerLanguages __attribute__((swift_name("offerLanguages")));
+@property (readonly) NSString * _Nullable peakFrom __attribute__((swift_name("peakFrom")));
+@property (readonly) NSString * _Nullable peakTo __attribute__((swift_name("peakTo")));
+
+/** The amount of points required for this offer to be applied. Only used for Convertible Coupons  */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+
+/** The publication date of this offer. */
+@property (readonly) NSString * _Nullable publishAt __attribute__((swift_name("publishAt")));
+
+/** The real value  (in $) of this offer */
+@property (readonly) KASDKOSDouble * _Nullable realValue __attribute__((swift_name("realValue")));
+
+/** The unique slug for this offer */
+@property (readonly) NSString * _Nullable slug __attribute__((swift_name("slug")));
+
+/** The terms and conditions attached to this offer. */
+@property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
+
+/** The offer title. */
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+
+/** The offer type. This can be a free product, dollar based discount, percentage based discount, point multiplier, bonus points, and free shipping.  */
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferModel_.Companion")))
+@interface KASDKOSOfferModel_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSOfferModel_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * A language translation of this offer.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferTranslation_")))
+@interface KASDKOSOfferTranslation_ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage____ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSOfferTranslation_Companion *companion __attribute__((swift_name("companion")));
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** The ID of this specific translation */
+- (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The translated offer title. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The translated offer description. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The translated offer terms and conditions. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The language appropriate link of this offer. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The language for which this translation applies. */
+- (KASDKOSLanguage____ * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * A language translation of this offer.
+ */
+- (KASDKOSOfferTranslation_ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage____ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
+
+/**
+ * A language translation of this offer.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A language translation of this offer.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A language translation of this offer.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The language for which this translation applies. */
+@property (readonly) KASDKOSLanguage____ * _Nullable language __attribute__((swift_name("language")));
+
+/** The ID of this specific translation */
+@property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
+
+/** The translated offer description. */
+@property (readonly) NSString * _Nullable offerDescription __attribute__((swift_name("offerDescription")));
+
+/** The language appropriate link of this offer. */
+@property (readonly) NSString * _Nullable offerLink __attribute__((swift_name("offerLink")));
+
+/** The translated offer terms and conditions. */
+@property (readonly) NSString * _Nullable offerTermsConditions __attribute__((swift_name("offerTermsConditions")));
+
+/** The translated offer title. */
+@property (readonly) NSString * _Nullable offerTitle __attribute__((swift_name("offerTitle")));
+@end;
+
+
+/**
+ * A language translation of this offer.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferTranslation_.Companion")))
+@interface KASDKOSOfferTranslation_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A language translation of this offer.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSOfferTranslation_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A language translation of this offer.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Contains the result of a transfer action.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferActionResultModel_")))
+@interface KASDKOSTransferActionResultModel_ : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSTransferMessage_ * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSTransferActionResultModel_Companion *companion __attribute__((swift_name("companion")));
+- (KASDKOSTransferMessage_ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (KASDKOSTransferActionResultModel_ *)doCopyData:(KASDKOSTransferMessage_ * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSTransferMessage_ * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+
+/**
+ * Contains the result of a transfer action.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferActionResultModel_.Companion")))
+@interface KASDKOSTransferActionResultModel_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Contains the result of a transfer action.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransferActionResultModel_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Contains the result of a transfer action.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferMessage_")))
+@interface KASDKOSTransferMessage_ : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel_ * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue_ * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions_ *> * _Nullable)actions __attribute__((swift_name("init(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTransferMessage_Companion *companion __attribute__((swift_name("companion")));
+
+/** The unique ID of this transfer. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSTransferMessageGiftCardQueue_ * _Nullable)component10 __attribute__((swift_name("component10()")));
+- (NSArray<KASDKOSTransferMessageActions_ *> * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** The type ID of this transfer. */
+- (KASDKOSLong * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** A string representation of this transfer type. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The description of this transfer. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The amount of points sent in this transfer. */
+- (KASDKOSLong * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The amount in $ sent in this transfer. */
+- (KASDKOSDouble * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (KASDKOSBoolean * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** The orignal send date of this transfer. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** The gift card in this transfer if applicable. Gift cards are an offer sub-type in Kangaroo.  */
+- (KASDKOSOfferModel_ * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
+ */
+- (KASDKOSTransferMessage_ *)doCopyId:(KASDKOSLong * _Nullable)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel_ * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue_ * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions_ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)")));
+
+/**
+ * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<KASDKOSTransferMessageActions_ *> * _Nullable actions __attribute__((swift_name("actions")));
+
+/** The amount in $ sent in this transfer. */
+@property (readonly) KASDKOSDouble * _Nullable amount __attribute__((swift_name("amount")));
+
+/** The orignal send date of this transfer. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** The description of this transfer. */
+@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
+@property (readonly) KASDKOSTransferMessageGiftCardQueue_ * _Nullable giftCardQueue __attribute__((swift_name("giftCardQueue")));
+@property (readonly) KASDKOSBoolean * _Nullable hidden __attribute__((swift_name("hidden")));
+
+/** The unique ID of this transfer. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** The gift card in this transfer if applicable. Gift cards are an offer sub-type in Kangaroo.  */
+@property (readonly) KASDKOSOfferModel_ * _Nullable offer __attribute__((swift_name("offer")));
+
+/** The amount of points sent in this transfer. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+
+/** A string representation of this transfer type. */
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+
+/** The type ID of this transfer. */
+@property (readonly) KASDKOSLong * _Nullable typeId __attribute__((swift_name("typeId")));
+@end;
+
+
+/**
+ * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferMessage_.Companion")))
+@interface KASDKOSTransferMessage_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransferMessage_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferMessageActions_")))
+@interface KASDKOSTransferMessageActions_ : KASDKOSBase
+- (instancetype)initWithType:(NSString * _Nullable)type __attribute__((swift_name("init(type:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTransferMessageActions_Companion *companion __attribute__((swift_name("companion")));
+
+/** The action type. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSTransferMessageActions_ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The action type. */
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferMessageActions_.Companion")))
+@interface KASDKOSTransferMessageActions_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransferMessageActions_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferMessageGiftCardQueue_")))
+@interface KASDKOSTransferMessageGiftCardQueue_ : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id enabled:(KASDKOSBoolean * _Nullable)enabled senderName:(NSString * _Nullable)senderName recipientName:(NSString * _Nullable)recipientName emailPhone:(NSString * _Nullable)emailPhone points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount createdAt:(NSString * _Nullable)createdAt scheduledAt:(NSString * _Nullable)scheduledAt __attribute__((swift_name("init(id:enabled:senderName:recipientName:emailPhone:points:amount:createdAt:scheduledAt:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTransferMessageGiftCardQueue_Companion *companion __attribute__((swift_name("companion")));
+
+/** The unique ID of this gift_card_queue */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Whether this item is enabled. Usually true. */
+- (KASDKOSBoolean * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The name of the sender of this transfer. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The name of the recipient of this transfer. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The phone number or email address that this transfer was sent to.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The amount of points sent in this transfer. */
+- (KASDKOSLong * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The amount in $ sent in this transfer. */
+- (KASDKOSDouble * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** The orignal creation date of this transfer. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** The original scheduled delivery date of this transfer. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (KASDKOSTransferMessageGiftCardQueue_ *)doCopyId:(KASDKOSLong * _Nullable)id enabled:(KASDKOSBoolean * _Nullable)enabled senderName:(NSString * _Nullable)senderName recipientName:(NSString * _Nullable)recipientName emailPhone:(NSString * _Nullable)emailPhone points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount createdAt:(NSString * _Nullable)createdAt scheduledAt:(NSString * _Nullable)scheduledAt __attribute__((swift_name("doCopy(id:enabled:senderName:recipientName:emailPhone:points:amount:createdAt:scheduledAt:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount in $ sent in this transfer. */
+@property (readonly) KASDKOSDouble * _Nullable amount __attribute__((swift_name("amount")));
+
+/** The orignal creation date of this transfer. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** The phone number or email address that this transfer was sent to.  */
+@property (readonly) NSString * _Nullable emailPhone __attribute__((swift_name("emailPhone")));
+
+/** Whether this item is enabled. Usually true. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** The unique ID of this gift_card_queue */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** The amount of points sent in this transfer. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+
+/** The name of the recipient of this transfer. */
+@property (readonly) NSString * _Nullable recipientName __attribute__((swift_name("recipientName")));
+
+/** The original scheduled delivery date of this transfer. */
+@property (readonly) NSString * _Nullable scheduledAt __attribute__((swift_name("scheduledAt")));
+
+/** The name of the sender of this transfer. */
+@property (readonly) NSString * _Nullable senderName __attribute__((swift_name("senderName")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferMessageGiftCardQueue_.Companion")))
+@interface KASDKOSTransferMessageGiftCardQueue_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransferMessageGiftCardQueue_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * Contains the result of a recalled transfer.
  */
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TransferRecallResultModel")))
 @interface KASDKOSTransferRecallResultModel : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSTransferMessage *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSTransferMessage_ * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -3883,12 +7329,12 @@ __attribute__((swift_name("TransferRecallResultModel")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 @property (class, readonly, getter=companion) KASDKOSTransferRecallResultModelCompanion *companion __attribute__((swift_name("companion")));
-- (KASDKOSTransferMessage *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSTransferMessage_ * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /**
  * Contains the result of a recalled transfer.
  */
-- (KASDKOSTransferRecallResultModel *)doCopyData:(KASDKOSTransferMessage *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSTransferRecallResultModel *)doCopyData:(KASDKOSTransferMessage_ * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
 
 /**
  * Contains the result of a recalled transfer.
@@ -3904,7 +7350,7 @@ __attribute__((swift_name("TransferRecallResultModel")))
  * Contains the result of a recalled transfer.
  */
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSTransferMessage *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSTransferMessage_ * _Nullable data __attribute__((swift_name("data")));
 @end;
 
 
@@ -3926,6 +7372,510 @@ __attribute__((swift_name("TransferRecallResultModel.Companion")))
 /**
  * Contains the result of a recalled transfer.
  */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Get a list of businesses associated with this user account and application [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessesApi")))
+@interface KASDKOSBusinessesApi : KASDKOSApi
+
+/**
+ * Get a list of businesses associated with this user account and application [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Get a list of businesses associated with this user account and application [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSBusinessesApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Get a list of businesses associated with this user account and application
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSBusinesses *> *> *)getBusinesses __attribute__((swift_name("getBusinesses()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSBusinesses *> *> *businessesState __attribute__((swift_name("businessesState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessesApi.Companion")))
+@interface KASDKOSBusinessesApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessesApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Branch_")))
+@interface KASDKOSBranch_ : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id name:(NSString * _Nullable)name webSite:(NSString * _Nullable)webSite phone:(KASDKOSBranchPhone_ * _Nullable)phone logo:(KASDKOSImage____ * _Nullable)logo coverPhoto:(KASDKOSImage____ * _Nullable)coverPhoto address:(KASDKOSBranchAddress_ * _Nullable)address __attribute__((swift_name("init(id:name:webSite:phone:logo:coverPhoto:address:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBranch_Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique ID for this branch */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The name of this branch */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The website for this branch */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBranchPhone_ * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSImage____ * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSImage____ * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (KASDKOSBranchAddress_ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSBranch_ *)doCopyId:(NSString * _Nullable)id name:(NSString * _Nullable)name webSite:(NSString * _Nullable)webSite phone:(KASDKOSBranchPhone_ * _Nullable)phone logo:(KASDKOSImage____ * _Nullable)logo coverPhoto:(KASDKOSImage____ * _Nullable)coverPhoto address:(KASDKOSBranchAddress_ * _Nullable)address __attribute__((swift_name("doCopy(id:name:webSite:phone:logo:coverPhoto:address:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSBranchAddress_ * _Nullable address __attribute__((swift_name("address")));
+@property (readonly) KASDKOSImage____ * _Nullable coverPhoto __attribute__((swift_name("coverPhoto")));
+
+/** Unique ID for this branch */
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSImage____ * _Nullable logo __attribute__((swift_name("logo")));
+
+/** The name of this branch */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@property (readonly) KASDKOSBranchPhone_ * _Nullable phone __attribute__((swift_name("phone")));
+
+/** The website for this branch */
+@property (readonly) NSString * _Nullable webSite __attribute__((swift_name("webSite")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Branch_.Companion")))
+@interface KASDKOSBranch_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBranch_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BranchAddress_")))
+@interface KASDKOSBranchAddress_ : KASDKOSBase
+- (instancetype)initWithFormatted:(NSString * _Nullable)formatted street:(NSString * _Nullable)street city:(NSString * _Nullable)city region:(NSString * _Nullable)region country:(NSString * _Nullable)country lat:(KASDKOSFloat * _Nullable)lat long:(KASDKOSFloat * _Nullable)long_ __attribute__((swift_name("init(formatted:street:city:region:country:lat:long:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBranchAddress_Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSFloat * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (KASDKOSFloat * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSBranchAddress_ *)doCopyFormatted:(NSString * _Nullable)formatted street:(NSString * _Nullable)street city:(NSString * _Nullable)city region:(NSString * _Nullable)region country:(NSString * _Nullable)country lat:(KASDKOSFloat * _Nullable)lat long:(KASDKOSFloat * _Nullable)long_ __attribute__((swift_name("doCopy(formatted:street:city:region:country:lat:long:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable city __attribute__((swift_name("city")));
+@property (readonly) NSString * _Nullable country __attribute__((swift_name("country")));
+@property (readonly) NSString * _Nullable formatted __attribute__((swift_name("formatted")));
+@property (readonly) KASDKOSFloat * _Nullable lat __attribute__((swift_name("lat")));
+@property (readonly, getter=long) KASDKOSFloat * _Nullable long_ __attribute__((swift_name("long_")));
+@property (readonly) NSString * _Nullable region __attribute__((swift_name("region")));
+@property (readonly) NSString * _Nullable street __attribute__((swift_name("street")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BranchAddress_.Companion")))
+@interface KASDKOSBranchAddress_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBranchAddress_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BranchPhone_")))
+@interface KASDKOSBranchPhone_ : KASDKOSBase
+- (instancetype)initWithNumber:(NSString * _Nullable)number countryCode:(NSString * _Nullable)countryCode nationalFormat:(NSString * _Nullable)nationalFormat intlFormat:(NSString * _Nullable)intlFormat __attribute__((swift_name("init(number:countryCode:nationalFormat:intlFormat:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBranchPhone_Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSBranchPhone_ *)doCopyNumber:(NSString * _Nullable)number countryCode:(NSString * _Nullable)countryCode nationalFormat:(NSString * _Nullable)nationalFormat intlFormat:(NSString * _Nullable)intlFormat __attribute__((swift_name("doCopy(number:countryCode:nationalFormat:intlFormat:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+@property (readonly) NSString * _Nullable intlFormat __attribute__((swift_name("intlFormat")));
+@property (readonly) NSString * _Nullable nationalFormat __attribute__((swift_name("nationalFormat")));
+@property (readonly) NSString * _Nullable number __attribute__((swift_name("number")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BranchPhone_.Companion")))
+@interface KASDKOSBranchPhone_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBranchPhone_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Business_")))
+@interface KASDKOSBusiness_ : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSBusinessData__ * _Nullable)data include:(KASDKOSBusinessBranchesData_ * _Nullable)include __attribute__((swift_name("init(data:include:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSBusiness_Companion *companion __attribute__((swift_name("companion")));
+
+/** Details about a business */
+- (KASDKOSBusinessData__ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Details about a business&#39; branches */
+- (KASDKOSBusinessBranchesData_ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
+ */
+- (KASDKOSBusiness_ *)doCopyData:(KASDKOSBusinessData__ * _Nullable)data include:(KASDKOSBusinessBranchesData_ * _Nullable)include __attribute__((swift_name("doCopy(data:include:)")));
+
+/**
+ * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Details about a business */
+@property (readonly) KASDKOSBusinessData__ * _Nullable data __attribute__((swift_name("data")));
+
+/** Details about a business&#39; branches */
+@property (readonly) KASDKOSBusinessBranchesData_ * _Nullable include __attribute__((swift_name("include")));
+@end;
+
+
+/**
+ * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Business_.Companion")))
+@interface KASDKOSBusiness_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusiness_Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessBranchesData_")))
+@interface KASDKOSBusinessBranchesData_ : KASDKOSBase
+- (instancetype)initWithBranches:(NSArray<KASDKOSBranch_ *> * _Nullable)branches __attribute__((swift_name("init(branches:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBusinessBranchesData_Companion *companion __attribute__((swift_name("companion")));
+- (NSArray<KASDKOSBranch_ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBusinessBranchesData_ *)doCopyBranches:(NSArray<KASDKOSBranch_ *> * _Nullable)branches __attribute__((swift_name("doCopy(branches:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<KASDKOSBranch_ *> * _Nullable branches __attribute__((swift_name("branches")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessBranchesData_.Companion")))
+@interface KASDKOSBusinessBranchesData_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessBranchesData_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessCategory__")))
+@interface KASDKOSBusinessCategory__ : KASDKOSBase
+- (instancetype)initWithName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("init(name:icon:code:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBusinessCategory__Companion *companion __attribute__((swift_name("companion")));
+
+/** Name of this category */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Url to this category&#39;s icon */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Unique ategory code for this category */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (KASDKOSBusinessCategory__ *)doCopyName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("doCopy(name:icon:code:)")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Unique ategory code for this category */
+@property (readonly) NSString * _Nullable code __attribute__((swift_name("code")));
+
+/** Url to this category&#39;s icon */
+@property (readonly) NSString * _Nullable icon __attribute__((swift_name("icon")));
+
+/** Name of this category */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessCategory__.Companion")))
+@interface KASDKOSBusinessCategory__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessCategory__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Business profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessData__")))
+@interface KASDKOSBusinessData__ : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage____ * _Nullable)logo logoTransparentBackground:(KASDKOSImage____ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage____ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory__ * _Nullable)category __attribute__((swift_name("init(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBusinessData__Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique business ID. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBusinessCategory__ * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** The name of this business */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The manner in which this business rewards its customers. This can be by purchase amount of by visit to the store  */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** Whether this is a conglomerate business. Conglomerate businesses are umbrellas for multiple business&#39; in Kangaroo  */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Whether this is a white label business. White label business&#39; don&#39;t appear in the Kangaroo Mobile Customer app, as they usually have their own app.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** General about text for the business */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (KASDKOSImage____ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSImage____ * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (KASDKOSImage____ * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * Business profile data
+ */
+- (KASDKOSBusinessData__ *)doCopyId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage____ * _Nullable)logo logoTransparentBackground:(KASDKOSImage____ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage____ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory__ * _Nullable)category __attribute__((swift_name("doCopy(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)")));
+
+/**
+ * Business profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Business profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Business profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** General about text for the business */
+@property (readonly) NSString * _Nullable about __attribute__((swift_name("about")));
+@property (readonly) KASDKOSBusinessCategory__ * _Nullable category __attribute__((swift_name("category")));
+
+/** Whether this is a conglomerate business. Conglomerate businesses are umbrellas for multiple business&#39; in Kangaroo  */
+@property (readonly) NSString * _Nullable conglomerate __attribute__((swift_name("conglomerate")));
+@property (readonly) KASDKOSImage____ * _Nullable coverPhoto __attribute__((swift_name("coverPhoto")));
+
+/** Unique business ID. */
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSImage____ * _Nullable logo __attribute__((swift_name("logo")));
+@property (readonly) KASDKOSImage____ * _Nullable logoTransparentBackground __attribute__((swift_name("logoTransparentBackground")));
+
+/** The manner in which this business rewards its customers. This can be by purchase amount of by visit to the store  */
+@property (readonly) NSString * _Nullable loyaltyType __attribute__((swift_name("loyaltyType")));
+
+/** The name of this business */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+
+/** Whether this is a white label business. White label business&#39; don&#39;t appear in the Kangaroo Mobile Customer app, as they usually have their own app.  */
+@property (readonly) NSString * _Nullable whiteLabel __attribute__((swift_name("whiteLabel")));
+@end;
+
+
+/**
+ * Business profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessData__.Companion")))
+@interface KASDKOSBusinessData__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Business profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessData__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Business profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * A list of businesses associated with this user and this app. Usually there will only be one business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Businesses")))
+@interface KASDKOSBusinesses : KASDKOSModel
+- (instancetype)initWithData:(NSArray<KASDKOSBusinessData__ *> * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSBusinessesCompanion *companion __attribute__((swift_name("companion")));
+
+/** A list of businesses for this user and this app. */
+- (NSArray<KASDKOSBusinessData__ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * A list of businesses associated with this user and this app. Usually there will only be one business.
+ */
+- (KASDKOSBusinesses *)doCopyData:(NSArray<KASDKOSBusinessData__ *> * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+
+/**
+ * A list of businesses associated with this user and this app. Usually there will only be one business.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A list of businesses associated with this user and this app. Usually there will only be one business.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A list of businesses associated with this user and this app. Usually there will only be one business.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A list of businesses for this user and this app. */
+@property (readonly) NSArray<KASDKOSBusinessData__ *> * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+
+/**
+ * A list of businesses associated with this user and this app. Usually there will only be one business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Businesses.Companion")))
+@interface KASDKOSBusinessesCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A list of businesses associated with this user and this app. Usually there will only be one business.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessesCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A list of businesses associated with this user and this app. Usually there will only be one business.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image____")))
+@interface KASDKOSImage____ : KASDKOSBase
+- (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSImage____Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSImage____ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
+@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
+@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
+@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image____.Companion")))
+@interface KASDKOSImage____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSImage____Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
@@ -3965,16 +7915,89 @@ __attribute__((swift_name("BalanceTransferApi.Companion")))
 @property (class, readonly, getter=shared) KASDKOSBalanceTransferApiCompanion *shared __attribute__((swift_name("shared")));
 @end;
 
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferFrom")))
+@interface KASDKOSTransferFrom : KASDKOSBase
+- (instancetype)initWithName:(NSString * _Nullable)name __attribute__((swift_name("init(name:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTransferFromCompanion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSTransferFrom *)doCopyName:(NSString * _Nullable)name __attribute__((swift_name("doCopy(name:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferFrom.Companion")))
+@interface KASDKOSTransferFromCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransferFromCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferModel")))
+@interface KASDKOSTransferModel : KASDKOSModel
+- (instancetype)initWithIntent:(NSString *)intent businessId:(NSString *)businessId language:(NSString *)language from:(KASDKOSTransferFrom *)from to:(KASDKOSTransferTo *)to points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount __attribute__((swift_name("init(intent:businessId:language:from:to:points:amount:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSTransferModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** The transfer intent for this transfer. This can be transfer_amount or transfer_points  */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (NSString *)component2 __attribute__((swift_name("component2()")));
+
+/** The two character language code of the language that this transfer should be sent in.  */
+- (NSString *)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSTransferFrom *)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSTransferTo *)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSLong * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (KASDKOSDouble * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSTransferModel *)doCopyIntent:(NSString *)intent businessId:(NSString *)businessId language:(NSString *)language from:(KASDKOSTransferFrom *)from to:(KASDKOSTransferTo *)to points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount __attribute__((swift_name("doCopy(intent:businessId:language:from:to:points:amount:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSDouble * _Nullable amount __attribute__((swift_name("amount")));
+@property (readonly) NSString *businessId __attribute__((swift_name("businessId")));
+@property (readonly) KASDKOSTransferFrom *from __attribute__((swift_name("from")));
+
+/** The transfer intent for this transfer. This can be transfer_amount or transfer_points  */
+@property (readonly) NSString *intent __attribute__((swift_name("intent")));
+
+/** The two character language code of the language that this transfer should be sent in.  */
+@property (readonly) NSString *language __attribute__((swift_name("language")));
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@property (readonly) KASDKOSTransferTo *to __attribute__((swift_name("to")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TransferModel.Companion")))
+@interface KASDKOSTransferModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTransferModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
 
 /**
  * The recipient data for this transfer. Either a phone number or an email address is required. If a phone number is used, the two character ISO country code must be supplied as well.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferFrom")))
-@interface KASDKOSTransferFrom : KASDKOSBase
-- (instancetype)initWithName:(NSString *)name phone:(NSString * _Nullable)phone countryCode:(NSString * _Nullable)countryCode email:(NSString * _Nullable)email __attribute__((swift_name("init(name:phone:countryCode:email:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSTransferFromCompanion *companion __attribute__((swift_name("companion")));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
+__attribute__((swift_name("TransferTo")))
+@interface KASDKOSTransferTo : KASDKOSBase
+- (instancetype)initWithName:(NSString * _Nullable)name phone:(NSString * _Nullable)phone countryCode:(NSString * _Nullable)countryCode email:(NSString * _Nullable)email __attribute__((swift_name("init(name:phone:countryCode:email:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTransferToCompanion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
@@ -3982,7 +8005,7 @@ __attribute__((swift_name("TransferFrom")))
 /**
  * The recipient data for this transfer. Either a phone number or an email address is required. If a phone number is used, the two character ISO country code must be supplied as well.
  */
-- (KASDKOSTransferFrom *)doCopyName:(NSString *)name phone:(NSString * _Nullable)phone countryCode:(NSString * _Nullable)countryCode email:(NSString * _Nullable)email __attribute__((swift_name("doCopy(name:phone:countryCode:email:)")));
+- (KASDKOSTransferTo *)doCopyName:(NSString * _Nullable)name phone:(NSString * _Nullable)phone countryCode:(NSString * _Nullable)countryCode email:(NSString * _Nullable)email __attribute__((swift_name("doCopy(name:phone:countryCode:email:)")));
 
 /**
  * The recipient data for this transfer. Either a phone number or an email address is required. If a phone number is used, the two character ISO country code must be supplied as well.
@@ -4000,7 +8023,7 @@ __attribute__((swift_name("TransferFrom")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 @end;
 
@@ -4009,8 +8032,8 @@ __attribute__((swift_name("TransferFrom")))
  * The recipient data for this transfer. Either a phone number or an email address is required. If a phone number is used, the two character ISO country code must be supplied as well.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferFrom.Companion")))
-@interface KASDKOSTransferFromCompanion : KASDKOSBase
+__attribute__((swift_name("TransferTo.Companion")))
+@interface KASDKOSTransferToCompanion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -4018,7 +8041,7 @@ __attribute__((swift_name("TransferFrom.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSTransferFromCompanion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSTransferToCompanion *shared __attribute__((swift_name("shared")));
 
 /**
  * The recipient data for this transfer. Either a phone number or an email address is required. If a phone number is used, the two character ISO country code must be supplied as well.
@@ -4026,10 +8049,72 @@ __attribute__((swift_name("TransferFrom.Companion")))
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
+
+/**
+ * Get a list of social media links for this business [Api] class
+ */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferModel")))
-@interface KASDKOSTransferModel : KASDKOSModel
-- (instancetype)initWithIntent:(NSString *)intent language:(NSString *)language points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount to:(KASDKOSTransferTo * _Nullable)to from:(KASDKOSTransferFrom * _Nullable)from __attribute__((swift_name("init(intent:language:points:amount:to:from:)"))) __attribute__((objc_designated_initializer));
+__attribute__((swift_name("SocialMediaLinksApi")))
+@interface KASDKOSSocialMediaLinksApi : KASDKOSApi
+
+/**
+ * Get a list of social media links for this business [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Get a list of social media links for this business [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSSocialMediaLinksApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Get a list of social media links for this business
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSSocialMediaLinksModel *> *> *)getSocialMediaLinks __attribute__((swift_name("getSocialMediaLinks()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSSocialMediaLinksModel *> *> *socialMediaLinksState __attribute__((swift_name("socialMediaLinksState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaLinksApi.Companion")))
+@interface KASDKOSSocialMediaLinksApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSSocialMediaLinksApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaLinksIncluded")))
+@interface KASDKOSSocialMediaLinksIncluded : KASDKOSBase
+- (instancetype)initWithSocialMedia:(NSArray<KASDKOSSocialMediaModel_ *> * _Nullable)socialMedia __attribute__((swift_name("init(socialMedia:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSSocialMediaLinksIncludedCompanion *companion __attribute__((swift_name("companion")));
+- (NSArray<KASDKOSSocialMediaModel_ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSSocialMediaLinksIncluded *)doCopySocialMedia:(NSArray<KASDKOSSocialMediaModel_ *> * _Nullable)socialMedia __attribute__((swift_name("doCopy(socialMedia:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<KASDKOSSocialMediaModel_ *> * _Nullable socialMedia __attribute__((swift_name("socialMedia")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaLinksIncluded.Companion")))
+@interface KASDKOSSocialMediaLinksIncludedCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSSocialMediaLinksIncludedCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Social media links for this business
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SocialMediaLinksModel")))
+@interface KASDKOSSocialMediaLinksModel : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel_____ * _Nullable)data included:(KASDKOSSocialMediaLinksIncluded * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -4037,63 +8122,647 @@ __attribute__((swift_name("TransferModel")))
  */
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSTransferModelCompanion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSSocialMediaLinksModelCompanion *companion __attribute__((swift_name("companion")));
 
-/** The transfer intent for this transfer. This can be transfer_amount or transfer_points  */
-- (NSString *)component1 __attribute__((swift_name("component1()")));
+/** Contains all user data */
+- (KASDKOSUserProfileDataModel_____ * _Nullable)component1 __attribute__((swift_name("component1()")));
 
-/** The two character language code of the language that this transfer should be sent in.  */
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-- (KASDKOSLong * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSDouble * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSTransferTo * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (KASDKOSTransferFrom * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (KASDKOSTransferModel *)doCopyIntent:(NSString *)intent language:(NSString *)language points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount to:(KASDKOSTransferTo * _Nullable)to from:(KASDKOSTransferFrom * _Nullable)from __attribute__((swift_name("doCopy(intent:language:points:amount:to:from:)")));
+/** Contains social media links */
+- (KASDKOSSocialMediaLinksIncluded * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * Social media links for this business
+ */
+- (KASDKOSSocialMediaLinksModel *)doCopyData:(KASDKOSUserProfileDataModel_____ * _Nullable)data included:(KASDKOSSocialMediaLinksIncluded * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+
+/**
+ * Social media links for this business
+ */
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Social media links for this business
+ */
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Social media links for this business
+ */
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSDouble * _Nullable amount __attribute__((swift_name("amount")));
-@property (readonly) KASDKOSTransferFrom * _Nullable from __attribute__((swift_name("from")));
 
-/** The transfer intent for this transfer. This can be transfer_amount or transfer_points  */
-@property (readonly) NSString *intent __attribute__((swift_name("intent")));
+/** Contains all user data */
+@property (readonly) KASDKOSUserProfileDataModel_____ * _Nullable data __attribute__((swift_name("data")));
 
-/** The two character language code of the language that this transfer should be sent in.  */
-@property (readonly) NSString *language __attribute__((swift_name("language")));
-@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
-@property (readonly) KASDKOSTransferTo * _Nullable to __attribute__((swift_name("to")));
+/** Contains social media links */
+@property (readonly) KASDKOSSocialMediaLinksIncluded * _Nullable included __attribute__((swift_name("included")));
 @end;
 
+
+/**
+ * Social media links for this business
+ */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferModel.Companion")))
-@interface KASDKOSTransferModelCompanion : KASDKOSBase
+__attribute__((swift_name("SocialMediaLinksModel.Companion")))
+@interface KASDKOSSocialMediaLinksModelCompanion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Social media links for this business
+ */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSTransferModelCompanion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSSocialMediaLinksModelCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Social media links for this business
+ */
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferTo")))
-@interface KASDKOSTransferTo : KASDKOSBase
-- (instancetype)initWithName:(NSString *)name __attribute__((swift_name("init(name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSTransferToCompanion *companion __attribute__((swift_name("companion")));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSTransferTo *)doCopyName:(NSString *)name __attribute__((swift_name("doCopy(name:)")));
+__attribute__((swift_name("SocialMediaModel_")))
+@interface KASDKOSSocialMediaModel_ : KASDKOSModel
+- (instancetype)initWithIcon:(NSString * _Nullable)icon url:(NSString * _Nullable)url __attribute__((swift_name("init(icon:url:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSSocialMediaModel_Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSSocialMediaModel_ *)doCopyIcon:(NSString * _Nullable)icon url:(NSString * _Nullable)url __attribute__((swift_name("doCopy(icon:url:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) NSString * _Nullable icon __attribute__((swift_name("icon")));
+@property (readonly) NSString * _Nullable url __attribute__((swift_name("url")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferTo.Companion")))
-@interface KASDKOSTransferToCompanion : KASDKOSBase
+__attribute__((swift_name("SocialMediaModel_.Companion")))
+@interface KASDKOSSocialMediaModel_Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSTransferToCompanion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSSocialMediaModel_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel_____")))
+@interface KASDKOSUserProfileDataModel_____ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel_____Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel_____ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel_____.Companion")))
+@interface KASDKOSUserProfileDataModel_____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel_____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Get a list of gift cards available for purchase [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardsApi")))
+@interface KASDKOSGiftCardsApi : KASDKOSApi
+
+/**
+ * Get a list of gift cards available for purchase [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Get a list of gift cards available for purchase [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSGiftCardsApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Get a list of gift cards available for purchase
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSGiftCardsModel *> *> *)getGiftCards __attribute__((swift_name("getGiftCards()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSGiftCardsModel *> *> *giftCardsState __attribute__((swift_name("giftCardsState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardsApi.Companion")))
+@interface KASDKOSGiftCardsApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardsApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardAction")))
+@interface KASDKOSGiftCardAction : KASDKOSBase
+- (instancetype)initWithType:(NSString * _Nullable)type __attribute__((swift_name("init(type:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSGiftCardActionCompanion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSGiftCardAction *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardAction.Companion")))
+@interface KASDKOSGiftCardActionCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardActionCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardModel")))
+@interface KASDKOSGiftCardModel : KASDKOSModel
+- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage_____ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSGiftCardTranslation *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSGiftCardAction *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSGiftCardModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** A unique ID identifying this reward */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSDouble * _Nullable)component10 __attribute__((swift_name("component10()")));
+- (KASDKOSDouble * _Nullable)component11 __attribute__((swift_name("component11()")));
+- (KASDKOSBoolean * _Nullable)component12 __attribute__((swift_name("component12()")));
+- (KASDKOSInt * _Nullable)component13 __attribute__((swift_name("component13()")));
+- (NSArray<NSString *> * _Nullable)component14 __attribute__((swift_name("component14()")));
+- (NSString * _Nullable)component15 __attribute__((swift_name("component15()")));
+- (NSString * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** The offer type. This is a gift card.  */
+- (NSString * _Nullable)component17 __attribute__((swift_name("component17()")));
+
+/** The gift card title. */
+- (NSString * _Nullable)component18 __attribute__((swift_name("component18()")));
+
+/** The gift card description. */
+- (NSString * _Nullable)component19 __attribute__((swift_name("component19()")));
+- (KASDKOSLong * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The unique slug for this gift card */
+- (NSString * _Nullable)component20 __attribute__((swift_name("component20()")));
+
+/** The images attached to this gift ard. There are 3 available sizes: thumbnail, medium, and large.  */
+- (NSArray<KASDKOSImage_____ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
+
+/** Whether this gift card ever expires or not. If false, this gift card is available indefinitely (provided any other requirements are met)  */
+- (KASDKOSBoolean * _Nullable)component22 __attribute__((swift_name("component22()")));
+
+/** The terms and conditions attached to this gift card. */
+- (NSString * _Nullable)component23 __attribute__((swift_name("component23()")));
+
+/** The external link attached to this gift card. */
+- (NSString * _Nullable)component24 __attribute__((swift_name("component24()")));
+
+/** A list of translations of this gift card into different languages. */
+- (NSArray<KASDKOSGiftCardTranslation *> * _Nullable)component25 __attribute__((swift_name("component25()")));
+
+/** A list of possible actions to perform on this gift card. */
+- (NSArray<KASDKOSGiftCardAction *> * _Nullable)component26 __attribute__((swift_name("component26()")));
+
+/** The publication date of this offer. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The expiration date of this offer. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Whether this offer is currently published or not. */
+- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Whether this is a convertible coupon. Convertible coupons are automatically added to the customers account when the point threshold is met. The points are automatically deducted from the users&#39; account.  */
+- (KASDKOSBoolean * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The real value  (in $) of this gift card */
+- (KASDKOSDouble * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** The discount value (in $) of this gift card */
+- (KASDKOSDouble * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (KASDKOSDouble * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (KASDKOSGiftCardModel *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage_____ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSGiftCardTranslation *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSGiftCardAction *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A list of possible actions to perform on this gift card. */
+@property (readonly) NSArray<KASDKOSGiftCardAction *> * _Nullable actions __attribute__((swift_name("actions")));
+@property (readonly) KASDKOSBoolean * _Nullable appsOnly __attribute__((swift_name("appsOnly")));
+
+/** Whether this is a convertible coupon. Convertible coupons are automatically added to the customers account when the point threshold is met. The points are automatically deducted from the users&#39; account.  */
+@property (readonly) KASDKOSBoolean * _Nullable couponConvertible __attribute__((swift_name("couponConvertible")));
+
+/** The gift card description. */
+@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
+
+/** The discount value (in $) of this gift card */
+@property (readonly) KASDKOSDouble * _Nullable discountValue __attribute__((swift_name("discountValue")));
+
+/** The expiration date of this offer. */
+@property (readonly) NSString * _Nullable expiresAt __attribute__((swift_name("expiresAt")));
+@property (readonly) NSArray<NSString *> * _Nullable freqDetails __attribute__((swift_name("freqDetails")));
+
+/** A unique ID identifying this reward */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The images attached to this gift ard. There are 3 available sizes: thumbnail, medium, and large.  */
+@property (readonly) NSArray<KASDKOSImage_____ *> * _Nullable images __attribute__((swift_name("images")));
+
+/** Whether this offer is currently published or not. */
+@property (readonly) KASDKOSBoolean * _Nullable isPublished __attribute__((swift_name("isPublished")));
+
+/** The external link attached to this gift card. */
+@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
+@property (readonly) KASDKOSDouble * _Nullable maxPurchase __attribute__((swift_name("maxPurchase")));
+@property (readonly) KASDKOSDouble * _Nullable minPurchase __attribute__((swift_name("minPurchase")));
+@property (readonly) KASDKOSDouble * _Nullable multipFactor __attribute__((swift_name("multipFactor")));
+
+/** Whether this gift card ever expires or not. If false, this gift card is available indefinitely (provided any other requirements are met)  */
+@property (readonly) KASDKOSBoolean * _Nullable neverExpiresFlag __attribute__((swift_name("neverExpiresFlag")));
+@property (readonly) KASDKOSInt * _Nullable offerFrequencyId __attribute__((swift_name("offerFrequencyId")));
+
+/** A list of translations of this gift card into different languages. */
+@property (readonly) NSArray<KASDKOSGiftCardTranslation *> * _Nullable offerLanguages __attribute__((swift_name("offerLanguages")));
+@property (readonly) NSString * _Nullable peakFrom __attribute__((swift_name("peakFrom")));
+@property (readonly) NSString * _Nullable peakTo __attribute__((swift_name("peakTo")));
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+
+/** The publication date of this offer. */
+@property (readonly) NSString * _Nullable publishAt __attribute__((swift_name("publishAt")));
+
+/** The real value  (in $) of this gift card */
+@property (readonly) KASDKOSDouble * _Nullable realValue __attribute__((swift_name("realValue")));
+
+/** The unique slug for this gift card */
+@property (readonly) NSString * _Nullable slug __attribute__((swift_name("slug")));
+
+/** The terms and conditions attached to this gift card. */
+@property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
+
+/** The gift card title. */
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+
+/** The offer type. This is a gift card.  */
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardModel.Companion")))
+@interface KASDKOSGiftCardModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * A language translation of this gift card.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardTranslation")))
+@interface KASDKOSGiftCardTranslation : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage_____ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSGiftCardTranslationCompanion *companion __attribute__((swift_name("companion")));
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** The ID of this specific translation */
+- (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The translated gift card title. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The translated gift card description. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The translated gift card terms and conditions. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The language appropriate link of this gift card. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The language for which this translation applies. */
+- (KASDKOSLanguage_____ * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * A language translation of this gift card.
+ */
+- (KASDKOSGiftCardTranslation *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage_____ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
+
+/**
+ * A language translation of this gift card.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A language translation of this gift card.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A language translation of this gift card.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The language for which this translation applies. */
+@property (readonly) KASDKOSLanguage_____ * _Nullable language __attribute__((swift_name("language")));
+
+/** The ID of this specific translation */
+@property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
+
+/** The translated gift card description. */
+@property (readonly) NSString * _Nullable offerDescription __attribute__((swift_name("offerDescription")));
+
+/** The language appropriate link of this gift card. */
+@property (readonly) NSString * _Nullable offerLink __attribute__((swift_name("offerLink")));
+
+/** The translated gift card terms and conditions. */
+@property (readonly) NSString * _Nullable offerTermsConditions __attribute__((swift_name("offerTermsConditions")));
+
+/** The translated gift card title. */
+@property (readonly) NSString * _Nullable offerTitle __attribute__((swift_name("offerTitle")));
+@end;
+
+
+/**
+ * A language translation of this gift card.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardTranslation.Companion")))
+@interface KASDKOSGiftCardTranslationCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A language translation of this gift card.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardTranslationCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A language translation of this gift card.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardsModel")))
+@interface KASDKOSGiftCardsModel : KASDKOSModel
+- (instancetype)initWithData:(NSArray<KASDKOSGiftCardModel *> *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSGiftCardsModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** A list of all gift cards available to this user */
+- (NSArray<KASDKOSGiftCardModel *> *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSGiftCardsModel *)doCopyData:(NSArray<KASDKOSGiftCardModel *> *)data __attribute__((swift_name("doCopy(data:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A list of all gift cards available to this user */
+@property (readonly) NSArray<KASDKOSGiftCardModel *> *data __attribute__((swift_name("data")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardsModel.Companion")))
+@interface KASDKOSGiftCardsModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardsModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image_____")))
+@interface KASDKOSImage_____ : KASDKOSBase
+- (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSImage_____Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSImage_____ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
+@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
+@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
+@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image_____.Companion")))
+@interface KASDKOSImage_____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSImage_____Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language_____")))
+@interface KASDKOSLanguage_____ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSLanguage_____Companion *companion __attribute__((swift_name("companion")));
+
+/** The Kangaroo ID of this language. */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The full name of this language (English, French, Spanish) */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSLanguage_____ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+@property (readonly) NSString * _Nullable abbreviation __attribute__((swift_name("abbreviation")));
+
+/** The Kangaroo ID of this language. */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The full name of this language (English, French, Spanish) */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language_____.Companion")))
+@interface KASDKOSLanguage_____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSLanguage_____Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
@@ -4229,7 +8898,7 @@ __attribute__((swift_name("FrequentBuyerItemModel.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FrequentBuyerModel")))
 @interface KASDKOSFrequentBuyerModel : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData____ *)data included:(KASDKOSFrequentBuyerIncluded *)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel______ *)data included:(KASDKOSFrequentBuyerIncluded *)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -4240,7 +8909,7 @@ __attribute__((swift_name("FrequentBuyerModel")))
 @property (class, readonly, getter=companion) KASDKOSFrequentBuyerModelCompanion *companion __attribute__((swift_name("companion")));
 
 /** Contains all user data */
-- (KASDKOSUserProfileData____ *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserProfileDataModel______ *)component1 __attribute__((swift_name("component1()")));
 
 /** Contains all Frequent buyer items */
 - (KASDKOSFrequentBuyerIncluded *)component2 __attribute__((swift_name("component2()")));
@@ -4248,7 +8917,7 @@ __attribute__((swift_name("FrequentBuyerModel")))
 /**
  * Frequent Buyer Model containing list of Frequent Buyer program
  */
-- (KASDKOSFrequentBuyerModel *)doCopyData:(KASDKOSUserProfileData____ *)data included:(KASDKOSFrequentBuyerIncluded *)included __attribute__((swift_name("doCopy(data:included:)")));
+- (KASDKOSFrequentBuyerModel *)doCopyData:(KASDKOSUserProfileDataModel______ *)data included:(KASDKOSFrequentBuyerIncluded *)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * Frequent Buyer Model containing list of Frequent Buyer program
@@ -4266,7 +8935,7 @@ __attribute__((swift_name("FrequentBuyerModel")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Contains all user data */
-@property (readonly) KASDKOSUserProfileData____ *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSUserProfileDataModel______ *data __attribute__((swift_name("data")));
 
 /** Contains all Frequent buyer items */
 @property (readonly) KASDKOSFrequentBuyerIncluded *included __attribute__((swift_name("included")));
@@ -4333,10 +9002,10 @@ __attribute__((swift_name("FrequentBuyerUsersModel.Companion")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData____")))
-@interface KASDKOSUserProfileData____ : KASDKOSBase
+__attribute__((swift_name("UserProfileData_____")))
+@interface KASDKOSUserProfileData_____ : KASDKOSBase
 - (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileData____Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSUserProfileData_____Companion *companion __attribute__((swift_name("companion")));
 
 /** Unique user ID. */
 - (NSString *)component1 __attribute__((swift_name("component1()")));
@@ -4356,10 +9025,10 @@ __attribute__((swift_name("UserProfileData____")))
 /** Denotes whether this account has been enabled. */
 - (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 
 /** Email address identifying this user. */
@@ -4389,7 +9058,7 @@ __attribute__((swift_name("UserProfileData____")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileData____ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+- (KASDKOSUserProfileData_____ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
 
 /**
  * User Profile model class containing user data
@@ -4418,7 +9087,7 @@ __attribute__((swift_name("UserProfileData____")))
 /** Email address identifying this user. */
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
 
 /** Denotes whether this account has been enabled. */
@@ -4442,7 +9111,7 @@ __attribute__((swift_name("UserProfileData____")))
 /** Phone number associated with this user. */
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
 
 /** Profile photo url associated with this user. */
@@ -4460,8 +9129,8 @@ __attribute__((swift_name("UserProfileData____")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData____.Companion")))
-@interface KASDKOSUserProfileData____Companion : KASDKOSBase
+__attribute__((swift_name("UserProfileData_____.Companion")))
+@interface KASDKOSUserProfileData_____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -4469,7 +9138,163 @@ __attribute__((swift_name("UserProfileData____.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileData____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileData_____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel______")))
+@interface KASDKOSUserProfileDataModel______ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel______Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel______ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel______.Companion")))
+@interface KASDKOSUserProfileDataModel______Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel______Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * User Profile model class containing user data
@@ -4513,15 +9338,15 @@ __attribute__((swift_name("UserOffersApi.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image__")))
-@interface KASDKOSImage__ : KASDKOSBase
+__attribute__((swift_name("Image______")))
+@interface KASDKOSImage______ : KASDKOSBase
 - (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSImage__Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSImage______Companion *companion __attribute__((swift_name("companion")));
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSImage__ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (KASDKOSImage______ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -4532,20 +9357,20 @@ __attribute__((swift_name("Image__")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image__.Companion")))
-@interface KASDKOSImage__Companion : KASDKOSBase
+__attribute__((swift_name("Image______.Companion")))
+@interface KASDKOSImage______Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSImage__Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSImage______Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language___")))
-@interface KASDKOSLanguage___ : KASDKOSBase
+__attribute__((swift_name("Language______")))
+@interface KASDKOSLanguage______ : KASDKOSBase
 - (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSLanguage___Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSLanguage______Companion *companion __attribute__((swift_name("companion")));
 
 /** The Kangaroo ID of this language. */
 - (int32_t)component1 __attribute__((swift_name("component1()")));
@@ -4555,7 +9380,7 @@ __attribute__((swift_name("Language___")))
 
 /** The full name of this language (English, French, Spanish) */
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage___ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (KASDKOSLanguage______ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -4571,461 +9396,12 @@ __attribute__((swift_name("Language___")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language___.Companion")))
-@interface KASDKOSLanguage___Companion : KASDKOSBase
+__attribute__((swift_name("Language______.Companion")))
+@interface KASDKOSLanguage______Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSLanguage___Companion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferAction_")))
-@interface KASDKOSOfferAction_ : KASDKOSBase
-- (instancetype)initWithType:(NSString * _Nullable)type __attribute__((swift_name("init(type:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSOfferAction_Companion *companion __attribute__((swift_name("companion")));
-- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSOfferAction_ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferAction_.Companion")))
-@interface KASDKOSOfferAction_Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferAction_Companion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferModel_")))
-@interface KASDKOSOfferModel_ : KASDKOSModel
-- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage__ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation_ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction_ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSOfferModel_Companion *companion __attribute__((swift_name("companion")));
-
-/** A unique ID identifying this reward */
-- (int32_t)component1 __attribute__((swift_name("component1()")));
-
-/** The minimum purchase amount for this offer to be applied */
-- (KASDKOSDouble * _Nullable)component10 __attribute__((swift_name("component10()")));
-
-/** The maximum purchase amount for this offer to be applied. */
-- (KASDKOSDouble * _Nullable)component11 __attribute__((swift_name("component11()")));
-
-/** Whether this offer must be claimed on a mobile app before being used in store.  */
-- (KASDKOSBoolean * _Nullable)component12 __attribute__((swift_name("component12()")));
-- (KASDKOSInt * _Nullable)component13 __attribute__((swift_name("component13()")));
-- (NSArray<NSString *> * _Nullable)component14 __attribute__((swift_name("component14()")));
-- (NSString * _Nullable)component15 __attribute__((swift_name("component15()")));
-- (NSString * _Nullable)component16 __attribute__((swift_name("component16()")));
-
-/** The offer type. This can be a free product, dollar based discount, percentage based discount, point multiplier, bonus points, and free shipping.  */
-- (NSString * _Nullable)component17 __attribute__((swift_name("component17()")));
-
-/** The offer title. */
-- (NSString * _Nullable)component18 __attribute__((swift_name("component18()")));
-
-/** The offer description. */
-- (NSString * _Nullable)component19 __attribute__((swift_name("component19()")));
-
-/** The amount of points required for this offer to be applied. Only used for Convertible Coupons  */
-- (KASDKOSLong * _Nullable)component2 __attribute__((swift_name("component2()")));
-
-/** The unique slug for this offer */
-- (NSString * _Nullable)component20 __attribute__((swift_name("component20()")));
-
-/** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
-- (NSArray<KASDKOSImage__ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
-
-/** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
-- (KASDKOSBoolean * _Nullable)component22 __attribute__((swift_name("component22()")));
-
-/** The terms and conditions attached to this offer. */
-- (NSString * _Nullable)component23 __attribute__((swift_name("component23()")));
-
-/** The external link attached to this offer. */
-- (NSString * _Nullable)component24 __attribute__((swift_name("component24()")));
-
-/** A list of translations of this offer into different languages. */
-- (NSArray<KASDKOSOfferTranslation_ *> * _Nullable)component25 __attribute__((swift_name("component25()")));
-
-/** A list of possible actions to perform on this offer. */
-- (NSArray<KASDKOSOfferAction_ *> * _Nullable)component26 __attribute__((swift_name("component26()")));
-
-/** The publication date of this offer. */
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-
-/** The expiration date of this offer. */
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-
-/** Whether this offer is currently published or not. */
-- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
-
-/** Whether this is a convertible coupon. Convertible coupons are automatically added to the customers account when the point threshold is met. The points are automatically deducted from the users&#39; account.  */
-- (KASDKOSBoolean * _Nullable)component6 __attribute__((swift_name("component6()")));
-
-/** The real value  (in $) of this offer */
-- (KASDKOSDouble * _Nullable)component7 __attribute__((swift_name("component7()")));
-
-/** The discount value (in $) of this offer */
-- (KASDKOSDouble * _Nullable)component8 __attribute__((swift_name("component8()")));
-
-/** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
-- (KASDKOSDouble * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (KASDKOSOfferModel_ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage__ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation_ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction_ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** A list of possible actions to perform on this offer. */
-@property (readonly) NSArray<KASDKOSOfferAction_ *> * _Nullable actions __attribute__((swift_name("actions")));
-
-/** Whether this offer must be claimed on a mobile app before being used in store.  */
-@property (readonly) KASDKOSBoolean * _Nullable appsOnly __attribute__((swift_name("appsOnly")));
-
-/** Whether this is a convertible coupon. Convertible coupons are automatically added to the customers account when the point threshold is met. The points are automatically deducted from the users&#39; account.  */
-@property (readonly) KASDKOSBoolean * _Nullable couponConvertible __attribute__((swift_name("couponConvertible")));
-
-/** The offer description. */
-@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
-
-/** The discount value (in $) of this offer */
-@property (readonly) KASDKOSDouble * _Nullable discountValue __attribute__((swift_name("discountValue")));
-
-/** The expiration date of this offer. */
-@property (readonly) NSString * _Nullable expiresAt __attribute__((swift_name("expiresAt")));
-@property (readonly) NSArray<NSString *> * _Nullable freqDetails __attribute__((swift_name("freqDetails")));
-
-/** A unique ID identifying this reward */
-@property (readonly) int32_t id __attribute__((swift_name("id")));
-
-/** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
-@property (readonly) NSArray<KASDKOSImage__ *> * _Nullable images __attribute__((swift_name("images")));
-
-/** Whether this offer is currently published or not. */
-@property (readonly) KASDKOSBoolean * _Nullable isPublished __attribute__((swift_name("isPublished")));
-
-/** The external link attached to this offer. */
-@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
-
-/** The maximum purchase amount for this offer to be applied. */
-@property (readonly) KASDKOSDouble * _Nullable maxPurchase __attribute__((swift_name("maxPurchase")));
-
-/** The minimum purchase amount for this offer to be applied */
-@property (readonly) KASDKOSDouble * _Nullable minPurchase __attribute__((swift_name("minPurchase")));
-
-/** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
-@property (readonly) KASDKOSDouble * _Nullable multipFactor __attribute__((swift_name("multipFactor")));
-
-/** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
-@property (readonly) KASDKOSBoolean * _Nullable neverExpiresFlag __attribute__((swift_name("neverExpiresFlag")));
-@property (readonly) KASDKOSInt * _Nullable offerFrequencyId __attribute__((swift_name("offerFrequencyId")));
-
-/** A list of translations of this offer into different languages. */
-@property (readonly) NSArray<KASDKOSOfferTranslation_ *> * _Nullable offerLanguages __attribute__((swift_name("offerLanguages")));
-@property (readonly) NSString * _Nullable peakFrom __attribute__((swift_name("peakFrom")));
-@property (readonly) NSString * _Nullable peakTo __attribute__((swift_name("peakTo")));
-
-/** The amount of points required for this offer to be applied. Only used for Convertible Coupons  */
-@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
-
-/** The publication date of this offer. */
-@property (readonly) NSString * _Nullable publishAt __attribute__((swift_name("publishAt")));
-
-/** The real value  (in $) of this offer */
-@property (readonly) KASDKOSDouble * _Nullable realValue __attribute__((swift_name("realValue")));
-
-/** The unique slug for this offer */
-@property (readonly) NSString * _Nullable slug __attribute__((swift_name("slug")));
-
-/** The terms and conditions attached to this offer. */
-@property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
-
-/** The offer title. */
-@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
-
-/** The offer type. This can be a free product, dollar based discount, percentage based discount, point multiplier, bonus points, and free shipping.  */
-@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferModel_.Companion")))
-@interface KASDKOSOfferModel_Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferModel_Companion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * A language translation of this offer.
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferTranslation_")))
-@interface KASDKOSOfferTranslation_ : KASDKOSBase
-- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage___ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSOfferTranslation_Companion *companion __attribute__((swift_name("companion")));
-- (int32_t)component1 __attribute__((swift_name("component1()")));
-
-/** The ID of this specific translation */
-- (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
-
-/** The translated offer title. */
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-
-/** The translated offer description. */
-- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
-
-/** The translated offer terms and conditions. */
-- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
-
-/** The language appropriate link of this offer. */
-- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
-
-/** The language for which this translation applies. */
-- (KASDKOSLanguage___ * _Nullable)component7 __attribute__((swift_name("component7()")));
-
-/**
- * A language translation of this offer.
- */
-- (KASDKOSOfferTranslation_ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage___ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
-
-/**
- * A language translation of this offer.
- */
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-
-/**
- * A language translation of this offer.
- */
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-
-/**
- * A language translation of this offer.
- */
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) int32_t id __attribute__((swift_name("id")));
-
-/** The language for which this translation applies. */
-@property (readonly) KASDKOSLanguage___ * _Nullable language __attribute__((swift_name("language")));
-
-/** The ID of this specific translation */
-@property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
-
-/** The translated offer description. */
-@property (readonly) NSString * _Nullable offerDescription __attribute__((swift_name("offerDescription")));
-
-/** The language appropriate link of this offer. */
-@property (readonly) NSString * _Nullable offerLink __attribute__((swift_name("offerLink")));
-
-/** The translated offer terms and conditions. */
-@property (readonly) NSString * _Nullable offerTermsConditions __attribute__((swift_name("offerTermsConditions")));
-
-/** The translated offer title. */
-@property (readonly) NSString * _Nullable offerTitle __attribute__((swift_name("offerTitle")));
-@end;
-
-
-/**
- * A language translation of this offer.
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferTranslation_.Companion")))
-@interface KASDKOSOfferTranslation_Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-
-/**
- * A language translation of this offer.
- */
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferTranslation_Companion *shared __attribute__((swift_name("shared")));
-
-/**
- * A language translation of this offer.
- */
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserOffersModel")))
-@interface KASDKOSUserOffersModel : KASDKOSModel
-- (instancetype)initWithData:(NSArray<KASDKOSOfferModel_ *> *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSUserOffersModelCompanion *companion __attribute__((swift_name("companion")));
-
-/** A list of all offers available to this user */
-- (NSArray<KASDKOSOfferModel_ *> *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSUserOffersModel *)doCopyData:(NSArray<KASDKOSOfferModel_ *> *)data __attribute__((swift_name("doCopy(data:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** A list of all offers available to this user */
-@property (readonly) NSArray<KASDKOSOfferModel_ *> *data __attribute__((swift_name("data")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserOffersModel.Companion")))
-@interface KASDKOSUserOffersModelCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserOffersModelCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-
-/**
- * Claim an offer. Once it has been claimed it will be available to be used towards a purchase.  [Api] class
- */
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ClaimOfferApi")))
-@interface KASDKOSClaimOfferApi : KASDKOSApi
-
-/**
- * Claim an offer. Once it has been claimed it will be available to be used towards a purchase.  [Api] class
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-
-/**
- * Claim an offer. Once it has been claimed it will be available to be used towards a purchase.  [Api] class
- */
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (class, readonly, getter=companion) KASDKOSClaimOfferApiCompanion *companion __attribute__((swift_name("companion")));
-
-/**
- * Claim an offer. Once it has been claimed it will be available to be used towards a purchase.
- */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSClaimedOfferModel *> *> *)claimOfferOfferId:(int32_t)offerId customerId:(NSString *)customerId __attribute__((swift_name("claimOffer(offerId:customerId:)")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSClaimedOfferModel *> *> *claimOfferState __attribute__((swift_name("claimOfferState")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ClaimOfferApi.Companion")))
-@interface KASDKOSClaimOfferApiCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSClaimOfferApiCompanion *shared __attribute__((swift_name("shared")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ClaimedOfferModel")))
-@interface KASDKOSClaimedOfferModel : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSOfferModel__ *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
-
-/**
- * Base DAO object returned from Network results and Database queries.
- * Should be Serializable.
- */
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-+ (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSClaimedOfferModelCompanion *companion __attribute__((swift_name("companion")));
-- (KASDKOSOfferModel__ *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSClaimedOfferModel *)doCopyData:(KASDKOSOfferModel__ *)data __attribute__((swift_name("doCopy(data:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSOfferModel__ *data __attribute__((swift_name("data")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ClaimedOfferModel.Companion")))
-@interface KASDKOSClaimedOfferModelCompanion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSClaimedOfferModelCompanion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image___")))
-@interface KASDKOSImage___ : KASDKOSBase
-- (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSImage___Companion *companion __attribute__((swift_name("companion")));
-- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSImage___ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
-@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
-@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
-@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image___.Companion")))
-@interface KASDKOSImage___Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSImage___Companion *shared __attribute__((swift_name("shared")));
-- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language____")))
-@interface KASDKOSLanguage____ : KASDKOSBase
-- (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSLanguage____Companion *companion __attribute__((swift_name("companion")));
-
-/** The Kangaroo ID of this language. */
-- (int32_t)component1 __attribute__((swift_name("component1()")));
-
-/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
-- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
-
-/** The full name of this language (English, French, Spanish) */
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage____ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-
-/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
-@property (readonly) NSString * _Nullable abbreviation __attribute__((swift_name("abbreviation")));
-
-/** The Kangaroo ID of this language. */
-@property (readonly) int32_t id __attribute__((swift_name("id")));
-
-/** The full name of this language (English, French, Spanish) */
-@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language____.Companion")))
-@interface KASDKOSLanguage____Companion : KASDKOSBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSLanguage____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSLanguage______Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
@@ -5055,7 +9431,7 @@ __attribute__((swift_name("OfferAction__.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OfferModel__")))
 @interface KASDKOSOfferModel__ : KASDKOSModel
-- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage___ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation__ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction__ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage______ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation__ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction__ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -5097,7 +9473,7 @@ __attribute__((swift_name("OfferModel__")))
 - (NSString * _Nullable)component20 __attribute__((swift_name("component20()")));
 
 /** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
-- (NSArray<KASDKOSImage___ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
+- (NSArray<KASDKOSImage______ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
 
 /** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
 - (KASDKOSBoolean * _Nullable)component22 __attribute__((swift_name("component22()")));
@@ -5134,7 +9510,7 @@ __attribute__((swift_name("OfferModel__")))
 
 /** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
 - (KASDKOSDouble * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (KASDKOSOfferModel__ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage___ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation__ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction__ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
+- (KASDKOSOfferModel__ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage______ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation__ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction__ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -5162,7 +9538,7 @@ __attribute__((swift_name("OfferModel__")))
 @property (readonly) int32_t id __attribute__((swift_name("id")));
 
 /** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
-@property (readonly) NSArray<KASDKOSImage___ *> * _Nullable images __attribute__((swift_name("images")));
+@property (readonly) NSArray<KASDKOSImage______ *> * _Nullable images __attribute__((swift_name("images")));
 
 /** Whether this offer is currently published or not. */
 @property (readonly) KASDKOSBoolean * _Nullable isPublished __attribute__((swift_name("isPublished")));
@@ -5227,7 +9603,7 @@ __attribute__((swift_name("OfferModel__.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OfferTranslation__")))
 @interface KASDKOSOfferTranslation__ : KASDKOSBase
-- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage____ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage______ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSOfferTranslation__Companion *companion __attribute__((swift_name("companion")));
 - (int32_t)component1 __attribute__((swift_name("component1()")));
 
@@ -5247,12 +9623,12 @@ __attribute__((swift_name("OfferTranslation__")))
 - (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
 
 /** The language for which this translation applies. */
-- (KASDKOSLanguage____ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSLanguage______ * _Nullable)component7 __attribute__((swift_name("component7()")));
 
 /**
  * A language translation of this offer.
  */
-- (KASDKOSOfferTranslation__ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage____ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
+- (KASDKOSOfferTranslation__ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage______ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
 
 /**
  * A language translation of this offer.
@@ -5271,7 +9647,7 @@ __attribute__((swift_name("OfferTranslation__")))
 @property (readonly) int32_t id __attribute__((swift_name("id")));
 
 /** The language for which this translation applies. */
-@property (readonly) KASDKOSLanguage____ * _Nullable language __attribute__((swift_name("language")));
+@property (readonly) KASDKOSLanguage______ * _Nullable language __attribute__((swift_name("language")));
 
 /** The ID of this specific translation */
 @property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
@@ -5304,6 +9680,783 @@ __attribute__((swift_name("OfferTranslation__.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) KASDKOSOfferTranslation__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A language translation of this offer.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserOffersModel")))
+@interface KASDKOSUserOffersModel : KASDKOSModel
+- (instancetype)initWithData:(NSArray<KASDKOSOfferModel__ *> *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserOffersModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** A list of all offers available to this user */
+- (NSArray<KASDKOSOfferModel__ *> *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserOffersModel *)doCopyData:(NSArray<KASDKOSOfferModel__ *> *)data __attribute__((swift_name("doCopy(data:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A list of all offers available to this user */
+@property (readonly) NSArray<KASDKOSOfferModel__ *> *data __attribute__((swift_name("data")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserOffersModel.Companion")))
+@interface KASDKOSUserOffersModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserOffersModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Get a list of frequent buyer programs for this business [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("FrequentBuyerProgramsApi")))
+@interface KASDKOSFrequentBuyerProgramsApi : KASDKOSApi
+
+/**
+ * Get a list of frequent buyer programs for this business [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Get a list of frequent buyer programs for this business [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSFrequentBuyerProgramsApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Get a list of frequent buyer programs for this business
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSFrequentBuyerProgramsModel *> *> *)getFrequentBuyerPrograms __attribute__((swift_name("getFrequentBuyerPrograms()")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSFrequentBuyerProgramsModel *> *> *frequentBuyerProgramsState __attribute__((swift_name("frequentBuyerProgramsState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("FrequentBuyerProgramsApi.Companion")))
+@interface KASDKOSFrequentBuyerProgramsApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSFrequentBuyerProgramsApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("FrequentBuyerProgramModel")))
+@interface KASDKOSFrequentBuyerProgramModel : KASDKOSModel
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id enabled:(KASDKOSBoolean * _Nullable)enabled title:(NSString * _Nullable)title buyUnits:(KASDKOSLong * _Nullable)buyUnits getUnits:(KASDKOSLong * _Nullable)getUnits resetInterval:(KASDKOSLong * _Nullable)resetInterval createdAt:(NSString * _Nullable)createdAt __attribute__((swift_name("init(id:enabled:title:buyUnits:getUnits:resetInterval:createdAt:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSFrequentBuyerProgramModelCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBoolean * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSLong * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSLong * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSLong * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSFrequentBuyerProgramModel *)doCopyId:(KASDKOSLong * _Nullable)id enabled:(KASDKOSBoolean * _Nullable)enabled title:(NSString * _Nullable)title buyUnits:(KASDKOSLong * _Nullable)buyUnits getUnits:(KASDKOSLong * _Nullable)getUnits resetInterval:(KASDKOSLong * _Nullable)resetInterval createdAt:(NSString * _Nullable)createdAt __attribute__((swift_name("doCopy(id:enabled:title:buyUnits:getUnits:resetInterval:createdAt:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSLong * _Nullable buyUnits __attribute__((swift_name("buyUnits")));
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+@property (readonly) KASDKOSLong * _Nullable getUnits __attribute__((swift_name("getUnits")));
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSLong * _Nullable resetInterval __attribute__((swift_name("resetInterval")));
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("FrequentBuyerProgramModel.Companion")))
+@interface KASDKOSFrequentBuyerProgramModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSFrequentBuyerProgramModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("FrequentBuyerProgramsIncluded")))
+@interface KASDKOSFrequentBuyerProgramsIncluded : KASDKOSBase
+- (instancetype)initWithFrequentBuyerPrograms:(NSArray<KASDKOSFrequentBuyerProgramModel *> * _Nullable)frequentBuyerPrograms __attribute__((swift_name("init(frequentBuyerPrograms:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSFrequentBuyerProgramsIncludedCompanion *companion __attribute__((swift_name("companion")));
+- (NSArray<KASDKOSFrequentBuyerProgramModel *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSFrequentBuyerProgramsIncluded *)doCopyFrequentBuyerPrograms:(NSArray<KASDKOSFrequentBuyerProgramModel *> * _Nullable)frequentBuyerPrograms __attribute__((swift_name("doCopy(frequentBuyerPrograms:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<KASDKOSFrequentBuyerProgramModel *> * _Nullable frequentBuyerPrograms __attribute__((swift_name("frequentBuyerPrograms")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("FrequentBuyerProgramsIncluded.Companion")))
+@interface KASDKOSFrequentBuyerProgramsIncludedCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSFrequentBuyerProgramsIncludedCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Frequent buyer programs for this business
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("FrequentBuyerProgramsModel")))
+@interface KASDKOSFrequentBuyerProgramsModel : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel_______ * _Nullable)data included:(KASDKOSFrequentBuyerProgramsIncluded * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSFrequentBuyerProgramsModelCompanion *companion __attribute__((swift_name("companion")));
+
+/** Contains all user data */
+- (KASDKOSUserProfileDataModel_______ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Contains frequent buyer programs */
+- (KASDKOSFrequentBuyerProgramsIncluded * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * Frequent buyer programs for this business
+ */
+- (KASDKOSFrequentBuyerProgramsModel *)doCopyData:(KASDKOSUserProfileDataModel_______ * _Nullable)data included:(KASDKOSFrequentBuyerProgramsIncluded * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+
+/**
+ * Frequent buyer programs for this business
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Frequent buyer programs for this business
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Frequent buyer programs for this business
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Contains all user data */
+@property (readonly) KASDKOSUserProfileDataModel_______ * _Nullable data __attribute__((swift_name("data")));
+
+/** Contains frequent buyer programs */
+@property (readonly) KASDKOSFrequentBuyerProgramsIncluded * _Nullable included __attribute__((swift_name("included")));
+@end;
+
+
+/**
+ * Frequent buyer programs for this business
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("FrequentBuyerProgramsModel.Companion")))
+@interface KASDKOSFrequentBuyerProgramsModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Frequent buyer programs for this business
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSFrequentBuyerProgramsModelCompanion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Frequent buyer programs for this business
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel_______")))
+@interface KASDKOSUserProfileDataModel_______ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel_______Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel_______ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel_______.Companion")))
+@interface KASDKOSUserProfileDataModel_______Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel_______Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Claim an offer. Once it has been claimed it will be available to be used towards a purchase.  [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ClaimOfferApi")))
+@interface KASDKOSClaimOfferApi : KASDKOSApi
+
+/**
+ * Claim an offer. Once it has been claimed it will be available to be used towards a purchase.  [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Claim an offer. Once it has been claimed it will be available to be used towards a purchase.  [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSClaimOfferApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Claim an offer. Once it has been claimed it will be available to be used towards a purchase.
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSClaimedOfferModel *> *> *)claimOfferOfferId:(int32_t)offerId customerId:(NSString *)customerId __attribute__((swift_name("claimOffer(offerId:customerId:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSClaimedOfferModel *> *> *claimOfferState __attribute__((swift_name("claimOfferState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ClaimOfferApi.Companion")))
+@interface KASDKOSClaimOfferApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSClaimOfferApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ClaimedOfferModel")))
+@interface KASDKOSClaimedOfferModel : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSOfferModel___ * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSClaimedOfferModelCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSOfferModel___ * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSClaimedOfferModel *)doCopyData:(KASDKOSOfferModel___ * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSOfferModel___ * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ClaimedOfferModel.Companion")))
+@interface KASDKOSClaimedOfferModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSClaimedOfferModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image_______")))
+@interface KASDKOSImage_______ : KASDKOSBase
+- (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSImage_______Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSImage_______ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
+@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
+@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
+@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image_______.Companion")))
+@interface KASDKOSImage_______Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSImage_______Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language_______")))
+@interface KASDKOSLanguage_______ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSLanguage_______Companion *companion __attribute__((swift_name("companion")));
+
+/** The Kangaroo ID of this language. */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The full name of this language (English, French, Spanish) */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSLanguage_______ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
+@property (readonly) NSString * _Nullable abbreviation __attribute__((swift_name("abbreviation")));
+
+/** The Kangaroo ID of this language. */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The full name of this language (English, French, Spanish) */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Language_______.Companion")))
+@interface KASDKOSLanguage_______Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSLanguage_______Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferAction___")))
+@interface KASDKOSOfferAction___ : KASDKOSBase
+- (instancetype)initWithType:(NSString * _Nullable)type __attribute__((swift_name("init(type:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSOfferAction___Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSOfferAction___ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferAction___.Companion")))
+@interface KASDKOSOfferAction___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSOfferAction___Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferModel___")))
+@interface KASDKOSOfferModel___ : KASDKOSModel
+- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage_______ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation___ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction___ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSOfferModel___Companion *companion __attribute__((swift_name("companion")));
+
+/** A unique ID identifying this reward */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** The minimum purchase amount for this offer to be applied */
+- (KASDKOSDouble * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** The maximum purchase amount for this offer to be applied. */
+- (KASDKOSDouble * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Whether this offer must be claimed on a mobile app before being used in store.  */
+- (KASDKOSBoolean * _Nullable)component12 __attribute__((swift_name("component12()")));
+- (KASDKOSInt * _Nullable)component13 __attribute__((swift_name("component13()")));
+- (NSArray<NSString *> * _Nullable)component14 __attribute__((swift_name("component14()")));
+- (NSString * _Nullable)component15 __attribute__((swift_name("component15()")));
+- (NSString * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** The offer type. This can be a free product, dollar based discount, percentage based discount, point multiplier, bonus points, and free shipping.  */
+- (NSString * _Nullable)component17 __attribute__((swift_name("component17()")));
+
+/** The offer title. */
+- (NSString * _Nullable)component18 __attribute__((swift_name("component18()")));
+
+/** The offer description. */
+- (NSString * _Nullable)component19 __attribute__((swift_name("component19()")));
+
+/** The amount of points required for this offer to be applied. Only used for Convertible Coupons  */
+- (KASDKOSLong * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The unique slug for this offer */
+- (NSString * _Nullable)component20 __attribute__((swift_name("component20()")));
+
+/** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
+- (NSArray<KASDKOSImage_______ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
+
+/** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
+- (KASDKOSBoolean * _Nullable)component22 __attribute__((swift_name("component22()")));
+
+/** The terms and conditions attached to this offer. */
+- (NSString * _Nullable)component23 __attribute__((swift_name("component23()")));
+
+/** The external link attached to this offer. */
+- (NSString * _Nullable)component24 __attribute__((swift_name("component24()")));
+
+/** A list of translations of this offer into different languages. */
+- (NSArray<KASDKOSOfferTranslation___ *> * _Nullable)component25 __attribute__((swift_name("component25()")));
+
+/** A list of possible actions to perform on this offer. */
+- (NSArray<KASDKOSOfferAction___ *> * _Nullable)component26 __attribute__((swift_name("component26()")));
+
+/** The publication date of this offer. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The expiration date of this offer. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Whether this offer is currently published or not. */
+- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Whether this is a convertible coupon. Convertible coupons are automatically added to the customers account when the point threshold is met. The points are automatically deducted from the users&#39; account.  */
+- (KASDKOSBoolean * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The real value  (in $) of this offer */
+- (KASDKOSDouble * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** The discount value (in $) of this offer */
+- (KASDKOSDouble * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
+- (KASDKOSDouble * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (KASDKOSOfferModel___ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage_______ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation___ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction___ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A list of possible actions to perform on this offer. */
+@property (readonly) NSArray<KASDKOSOfferAction___ *> * _Nullable actions __attribute__((swift_name("actions")));
+
+/** Whether this offer must be claimed on a mobile app before being used in store.  */
+@property (readonly) KASDKOSBoolean * _Nullable appsOnly __attribute__((swift_name("appsOnly")));
+
+/** Whether this is a convertible coupon. Convertible coupons are automatically added to the customers account when the point threshold is met. The points are automatically deducted from the users&#39; account.  */
+@property (readonly) KASDKOSBoolean * _Nullable couponConvertible __attribute__((swift_name("couponConvertible")));
+
+/** The offer description. */
+@property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
+
+/** The discount value (in $) of this offer */
+@property (readonly) KASDKOSDouble * _Nullable discountValue __attribute__((swift_name("discountValue")));
+
+/** The expiration date of this offer. */
+@property (readonly) NSString * _Nullable expiresAt __attribute__((swift_name("expiresAt")));
+@property (readonly) NSArray<NSString *> * _Nullable freqDetails __attribute__((swift_name("freqDetails")));
+
+/** A unique ID identifying this reward */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
+@property (readonly) NSArray<KASDKOSImage_______ *> * _Nullable images __attribute__((swift_name("images")));
+
+/** Whether this offer is currently published or not. */
+@property (readonly) KASDKOSBoolean * _Nullable isPublished __attribute__((swift_name("isPublished")));
+
+/** The external link attached to this offer. */
+@property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
+
+/** The maximum purchase amount for this offer to be applied. */
+@property (readonly) KASDKOSDouble * _Nullable maxPurchase __attribute__((swift_name("maxPurchase")));
+
+/** The minimum purchase amount for this offer to be applied */
+@property (readonly) KASDKOSDouble * _Nullable minPurchase __attribute__((swift_name("minPurchase")));
+
+/** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
+@property (readonly) KASDKOSDouble * _Nullable multipFactor __attribute__((swift_name("multipFactor")));
+
+/** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
+@property (readonly) KASDKOSBoolean * _Nullable neverExpiresFlag __attribute__((swift_name("neverExpiresFlag")));
+@property (readonly) KASDKOSInt * _Nullable offerFrequencyId __attribute__((swift_name("offerFrequencyId")));
+
+/** A list of translations of this offer into different languages. */
+@property (readonly) NSArray<KASDKOSOfferTranslation___ *> * _Nullable offerLanguages __attribute__((swift_name("offerLanguages")));
+@property (readonly) NSString * _Nullable peakFrom __attribute__((swift_name("peakFrom")));
+@property (readonly) NSString * _Nullable peakTo __attribute__((swift_name("peakTo")));
+
+/** The amount of points required for this offer to be applied. Only used for Convertible Coupons  */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+
+/** The publication date of this offer. */
+@property (readonly) NSString * _Nullable publishAt __attribute__((swift_name("publishAt")));
+
+/** The real value  (in $) of this offer */
+@property (readonly) KASDKOSDouble * _Nullable realValue __attribute__((swift_name("realValue")));
+
+/** The unique slug for this offer */
+@property (readonly) NSString * _Nullable slug __attribute__((swift_name("slug")));
+
+/** The terms and conditions attached to this offer. */
+@property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
+
+/** The offer title. */
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+
+/** The offer type. This can be a free product, dollar based discount, percentage based discount, point multiplier, bonus points, and free shipping.  */
+@property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferModel___.Companion")))
+@interface KASDKOSOfferModel___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSOfferModel___Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * A language translation of this offer.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferTranslation___")))
+@interface KASDKOSOfferTranslation___ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage_______ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSOfferTranslation___Companion *companion __attribute__((swift_name("companion")));
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** The ID of this specific translation */
+- (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The translated offer title. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The translated offer description. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The translated offer terms and conditions. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The language appropriate link of this offer. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The language for which this translation applies. */
+- (KASDKOSLanguage_______ * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * A language translation of this offer.
+ */
+- (KASDKOSOfferTranslation___ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage_______ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
+
+/**
+ * A language translation of this offer.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A language translation of this offer.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A language translation of this offer.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The language for which this translation applies. */
+@property (readonly) KASDKOSLanguage_______ * _Nullable language __attribute__((swift_name("language")));
+
+/** The ID of this specific translation */
+@property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
+
+/** The translated offer description. */
+@property (readonly) NSString * _Nullable offerDescription __attribute__((swift_name("offerDescription")));
+
+/** The language appropriate link of this offer. */
+@property (readonly) NSString * _Nullable offerLink __attribute__((swift_name("offerLink")));
+
+/** The translated offer terms and conditions. */
+@property (readonly) NSString * _Nullable offerTermsConditions __attribute__((swift_name("offerTermsConditions")));
+
+/** The translated offer title. */
+@property (readonly) NSString * _Nullable offerTitle __attribute__((swift_name("offerTitle")));
+@end;
+
+
+/**
+ * A language translation of this offer.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OfferTranslation___.Companion")))
+@interface KASDKOSOfferTranslation___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A language translation of this offer.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSOfferTranslation___Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * A language translation of this offer.
@@ -5344,6 +10497,328 @@ __attribute__((swift_name("UserProfileUpdateApi.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) KASDKOSUserProfileUpdateApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+
+/**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram__")))
+@interface KASDKOSReferralProgram__ : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("init(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgram__Companion *companion __attribute__((swift_name("companion")));
+
+/** The unique id of this referral program. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+- (KASDKOSDouble * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The number of points the new customer will earn. */
+- (KASDKOSLong * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The number of points the new customer who made the referral will earn. */
+- (KASDKOSLong * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+- (KASDKOSLong * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Denotes whether this referral program is currently active. */
+- (KASDKOSBoolean * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+- (KASDKOSBoolean * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** A link that can be shared to prospective referrals. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * A referral program
+ */
+- (KASDKOSReferralProgram__ *)doCopyId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("doCopy(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)")));
+
+/**
+ * A referral program
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A referral program
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A referral program
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+@property (readonly) KASDKOSDouble * _Nullable condMinAmount __attribute__((swift_name("condMinAmount")));
+
+/** Denotes whether this referral program is currently active. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+@property (readonly) KASDKOSLong * _Nullable expiresIn __attribute__((swift_name("expiresIn")));
+
+/** The unique id of this referral program. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+@property (readonly) KASDKOSBoolean * _Nullable linkReferralEnabled __attribute__((swift_name("linkReferralEnabled")));
+
+/** The number of points the new customer will earn. */
+@property (readonly) KASDKOSLong * _Nullable refereeEarns __attribute__((swift_name("refereeEarns")));
+
+/** The number of points the new customer who made the referral will earn. */
+@property (readonly) KASDKOSLong * _Nullable refererEarns __attribute__((swift_name("refererEarns")));
+
+/** A link that can be shared to prospective referrals. */
+@property (readonly) NSString * _Nullable referralLink __attribute__((swift_name("referralLink")));
+@property (readonly) NSString * _Nullable ruleName __attribute__((swift_name("ruleName")));
+@end;
+
+
+/**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram__.Companion")))
+@interface KASDKOSReferralProgram__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A referral program
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgram__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A referral program
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude__")))
+@interface KASDKOSReferralProgramInclude__ : KASDKOSBase
+- (instancetype)initWithReferralPrograms:(NSArray<KASDKOSReferralProgram__ *> * _Nullable)referralPrograms __attribute__((swift_name("init(referralPrograms:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgramInclude__Companion *companion __attribute__((swift_name("companion")));
+
+/** A List of referral programs. */
+- (NSArray<KASDKOSReferralProgram__ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (KASDKOSReferralProgramInclude__ *)doCopyReferralPrograms:(NSArray<KASDKOSReferralProgram__ *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(referralPrograms:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A List of referral programs. */
+@property (readonly) NSArray<KASDKOSReferralProgram__ *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude__.Companion")))
+@interface KASDKOSReferralProgramInclude__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Contains data about the referral program for this business.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgramInclude__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress__")))
+@interface KASDKOSTierProgress__ : KASDKOSBase
+- (instancetype)initWithStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("init(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTierProgress__Companion *companion __attribute__((swift_name("companion")));
+
+/** The start date for this tier session. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The name of the user&#39;s current tier level  */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The name of the user&#39;s next tier level.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+- (KASDKOSFloat * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+- (KASDKOSLong * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (KASDKOSTierProgress__ *)doCopyStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("doCopy(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+@property (readonly) NSString * _Nullable endDate __attribute__((swift_name("endDate")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+@property (readonly) KASDKOSLong * _Nullable leftPoints __attribute__((swift_name("leftPoints")));
+
+/** The name of the user&#39;s next tier level.  */
+@property (readonly) NSString * _Nullable nextTierLevel __attribute__((swift_name("nextTierLevel")));
+
+/** The start date for this tier session. */
+@property (readonly) NSString * _Nullable startDate __attribute__((swift_name("startDate")));
+
+/** The name of the user&#39;s current tier level  */
+@property (readonly) NSString * _Nullable tierLevel __attribute__((swift_name("tierLevel")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+@property (readonly) NSString * _Nullable tierLevelLive __attribute__((swift_name("tierLevelLive")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+@property (readonly) KASDKOSFloat * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress__.Companion")))
+@interface KASDKOSTierProgress__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTierProgress__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance__")))
+@interface KASDKOSUserBalance__ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserBalance__Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data.
+ */
+- (KASDKOSUserBalance__ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance__.Companion")))
+@interface KASDKOSUserBalance__Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserBalance__Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 
@@ -5416,10 +10891,10 @@ __attribute__((swift_name("UserProfileBalanceData__.Companion")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData_____")))
-@interface KASDKOSUserProfileData_____ : KASDKOSBase
+__attribute__((swift_name("UserProfileData______")))
+@interface KASDKOSUserProfileData______ : KASDKOSBase
 - (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileData_____Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSUserProfileData______Companion *companion __attribute__((swift_name("companion")));
 
 /** Unique user ID. */
 - (NSString *)component1 __attribute__((swift_name("component1()")));
@@ -5439,10 +10914,10 @@ __attribute__((swift_name("UserProfileData_____")))
 /** Denotes whether this account has been enabled. */
 - (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 
 /** Email address identifying this user. */
@@ -5472,7 +10947,7 @@ __attribute__((swift_name("UserProfileData_____")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileData_____ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+- (KASDKOSUserProfileData______ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
 
 /**
  * User Profile model class containing user data
@@ -5501,7 +10976,7 @@ __attribute__((swift_name("UserProfileData_____")))
 /** Email address identifying this user. */
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
 
 /** Denotes whether this account has been enabled. */
@@ -5525,7 +11000,7 @@ __attribute__((swift_name("UserProfileData_____")))
 /** Phone number associated with this user. */
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
 
 /** Profile photo url associated with this user. */
@@ -5543,8 +11018,8 @@ __attribute__((swift_name("UserProfileData_____")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData_____.Companion")))
-@interface KASDKOSUserProfileData_____Companion : KASDKOSBase
+__attribute__((swift_name("UserProfileData______.Companion")))
+@interface KASDKOSUserProfileData______Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -5552,7 +11027,163 @@ __attribute__((swift_name("UserProfileData_____.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileData_____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileData______Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel________")))
+@interface KASDKOSUserProfileDataModel________ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel________Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel________ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel________.Companion")))
+@interface KASDKOSUserProfileDataModel________Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel________Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * User Profile model class containing user data
@@ -5567,14 +11198,22 @@ __attribute__((swift_name("UserProfileData_____.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileInclude__")))
 @interface KASDKOSUserProfileInclude__ : KASDKOSBase
-- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData__ *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithBalance:(KASDKOSUserBalance__ * _Nullable)balance tierProgress:(KASDKOSTierProgress__ * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram__ *> * _Nullable)referralPrograms __attribute__((swift_name("init(balance:tierProgress:referralPrograms:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSUserProfileInclude__Companion *companion __attribute__((swift_name("companion")));
-- (KASDKOSUserProfileBalanceData__ *)component1 __attribute__((swift_name("component1()")));
+
+/** User Profile balance data. */
+- (KASDKOSUserBalance__ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** User&#39;s tier progress and status. */
+- (KASDKOSTierProgress__ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** A list of referral programs the user has access to. */
+- (NSArray<KASDKOSReferralProgram__ *> * _Nullable)component3 __attribute__((swift_name("component3()")));
 
 /**
  * Extra user profile data
  */
-- (KASDKOSUserProfileInclude__ *)doCopyBalance:(KASDKOSUserProfileBalanceData__ *)balance __attribute__((swift_name("doCopy(balance:)")));
+- (KASDKOSUserProfileInclude__ *)doCopyBalance:(KASDKOSUserBalance__ * _Nullable)balance tierProgress:(KASDKOSTierProgress__ * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram__ *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(balance:tierProgress:referralPrograms:)")));
 
 /**
  * Extra user profile data
@@ -5590,7 +11229,15 @@ __attribute__((swift_name("UserProfileInclude__")))
  * Extra user profile data
  */
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSUserProfileBalanceData__ *balance __attribute__((swift_name("balance")));
+
+/** User Profile balance data. */
+@property (readonly) KASDKOSUserBalance__ * _Nullable balance __attribute__((swift_name("balance")));
+
+/** A list of referral programs the user has access to. */
+@property (readonly) NSArray<KASDKOSReferralProgram__ *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+
+/** User&#39;s tier progress and status. */
+@property (readonly) KASDKOSTierProgress__ * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
 @end;
 
 
@@ -5622,7 +11269,7 @@ __attribute__((swift_name("UserProfileInclude__.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileModel___")))
 @interface KASDKOSUserProfileModel___ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData_____ *)data included:(KASDKOSUserProfileInclude__ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel________ * _Nullable)data included:(KASDKOSUserProfileInclude__ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -5633,7 +11280,7 @@ __attribute__((swift_name("UserProfileModel___")))
 @property (class, readonly, getter=companion) KASDKOSUserProfileModel___Companion *companion __attribute__((swift_name("companion")));
 
 /** Contains all user profile data */
-- (KASDKOSUserProfileData_____ *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserProfileDataModel________ * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /** Contains user balance data */
 - (KASDKOSUserProfileInclude__ * _Nullable)component2 __attribute__((swift_name("component2()")));
@@ -5641,7 +11288,7 @@ __attribute__((swift_name("UserProfileModel___")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileModel___ *)doCopyData:(KASDKOSUserProfileData_____ *)data included:(KASDKOSUserProfileInclude__ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+- (KASDKOSUserProfileModel___ *)doCopyData:(KASDKOSUserProfileDataModel________ * _Nullable)data included:(KASDKOSUserProfileInclude__ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Profile model class containing user data
@@ -5659,7 +11306,7 @@ __attribute__((swift_name("UserProfileModel___")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Contains all user profile data */
-@property (readonly) KASDKOSUserProfileData_____ *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSUserProfileDataModel________ * _Nullable data __attribute__((swift_name("data")));
 
 /** Contains user balance data */
 @property (readonly) KASDKOSUserProfileInclude__ * _Nullable included __attribute__((swift_name("included")));
@@ -5861,6 +11508,328 @@ __attribute__((swift_name("RedemptionModel.Companion")))
 
 
 /**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram___")))
+@interface KASDKOSReferralProgram___ : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("init(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgram___Companion *companion __attribute__((swift_name("companion")));
+
+/** The unique id of this referral program. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+- (KASDKOSDouble * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The number of points the new customer will earn. */
+- (KASDKOSLong * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The number of points the new customer who made the referral will earn. */
+- (KASDKOSLong * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+- (KASDKOSLong * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Denotes whether this referral program is currently active. */
+- (KASDKOSBoolean * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+- (KASDKOSBoolean * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** A link that can be shared to prospective referrals. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * A referral program
+ */
+- (KASDKOSReferralProgram___ *)doCopyId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("doCopy(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)")));
+
+/**
+ * A referral program
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A referral program
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A referral program
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+@property (readonly) KASDKOSDouble * _Nullable condMinAmount __attribute__((swift_name("condMinAmount")));
+
+/** Denotes whether this referral program is currently active. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+@property (readonly) KASDKOSLong * _Nullable expiresIn __attribute__((swift_name("expiresIn")));
+
+/** The unique id of this referral program. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+@property (readonly) KASDKOSBoolean * _Nullable linkReferralEnabled __attribute__((swift_name("linkReferralEnabled")));
+
+/** The number of points the new customer will earn. */
+@property (readonly) KASDKOSLong * _Nullable refereeEarns __attribute__((swift_name("refereeEarns")));
+
+/** The number of points the new customer who made the referral will earn. */
+@property (readonly) KASDKOSLong * _Nullable refererEarns __attribute__((swift_name("refererEarns")));
+
+/** A link that can be shared to prospective referrals. */
+@property (readonly) NSString * _Nullable referralLink __attribute__((swift_name("referralLink")));
+@property (readonly) NSString * _Nullable ruleName __attribute__((swift_name("ruleName")));
+@end;
+
+
+/**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram___.Companion")))
+@interface KASDKOSReferralProgram___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A referral program
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgram___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A referral program
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude___")))
+@interface KASDKOSReferralProgramInclude___ : KASDKOSBase
+- (instancetype)initWithReferralPrograms:(NSArray<KASDKOSReferralProgram___ *> * _Nullable)referralPrograms __attribute__((swift_name("init(referralPrograms:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgramInclude___Companion *companion __attribute__((swift_name("companion")));
+
+/** A List of referral programs. */
+- (NSArray<KASDKOSReferralProgram___ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (KASDKOSReferralProgramInclude___ *)doCopyReferralPrograms:(NSArray<KASDKOSReferralProgram___ *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(referralPrograms:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A List of referral programs. */
+@property (readonly) NSArray<KASDKOSReferralProgram___ *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude___.Companion")))
+@interface KASDKOSReferralProgramInclude___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Contains data about the referral program for this business.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgramInclude___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress___")))
+@interface KASDKOSTierProgress___ : KASDKOSBase
+- (instancetype)initWithStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("init(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTierProgress___Companion *companion __attribute__((swift_name("companion")));
+
+/** The start date for this tier session. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The name of the user&#39;s current tier level  */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The name of the user&#39;s next tier level.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+- (KASDKOSFloat * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+- (KASDKOSLong * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (KASDKOSTierProgress___ *)doCopyStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("doCopy(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+@property (readonly) NSString * _Nullable endDate __attribute__((swift_name("endDate")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+@property (readonly) KASDKOSLong * _Nullable leftPoints __attribute__((swift_name("leftPoints")));
+
+/** The name of the user&#39;s next tier level.  */
+@property (readonly) NSString * _Nullable nextTierLevel __attribute__((swift_name("nextTierLevel")));
+
+/** The start date for this tier session. */
+@property (readonly) NSString * _Nullable startDate __attribute__((swift_name("startDate")));
+
+/** The name of the user&#39;s current tier level  */
+@property (readonly) NSString * _Nullable tierLevel __attribute__((swift_name("tierLevel")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+@property (readonly) NSString * _Nullable tierLevelLive __attribute__((swift_name("tierLevelLive")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+@property (readonly) KASDKOSFloat * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress___.Companion")))
+@interface KASDKOSTierProgress___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTierProgress___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance___")))
+@interface KASDKOSUserBalance___ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserBalance___Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data.
+ */
+- (KASDKOSUserBalance___ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance___.Companion")))
+@interface KASDKOSUserBalance___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserBalance___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile balance data
  */
 __attribute__((objc_subclassing_restricted))
@@ -5929,10 +11898,10 @@ __attribute__((swift_name("UserProfileBalanceData___.Companion")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData______")))
-@interface KASDKOSUserProfileData______ : KASDKOSBase
+__attribute__((swift_name("UserProfileData_______")))
+@interface KASDKOSUserProfileData_______ : KASDKOSBase
 - (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileData______Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSUserProfileData_______Companion *companion __attribute__((swift_name("companion")));
 
 /** Unique user ID. */
 - (NSString *)component1 __attribute__((swift_name("component1()")));
@@ -5952,10 +11921,10 @@ __attribute__((swift_name("UserProfileData______")))
 /** Denotes whether this account has been enabled. */
 - (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 
 /** Email address identifying this user. */
@@ -5985,7 +11954,7 @@ __attribute__((swift_name("UserProfileData______")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileData______ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+- (KASDKOSUserProfileData_______ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
 
 /**
  * User Profile model class containing user data
@@ -6014,7 +11983,7 @@ __attribute__((swift_name("UserProfileData______")))
 /** Email address identifying this user. */
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
 
 /** Denotes whether this account has been enabled. */
@@ -6038,7 +12007,7 @@ __attribute__((swift_name("UserProfileData______")))
 /** Phone number associated with this user. */
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
 
 /** Profile photo url associated with this user. */
@@ -6056,8 +12025,8 @@ __attribute__((swift_name("UserProfileData______")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData______.Companion")))
-@interface KASDKOSUserProfileData______Companion : KASDKOSBase
+__attribute__((swift_name("UserProfileData_______.Companion")))
+@interface KASDKOSUserProfileData_______Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -6065,7 +12034,163 @@ __attribute__((swift_name("UserProfileData______.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileData______Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileData_______Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel_________")))
+@interface KASDKOSUserProfileDataModel_________ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel_________Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel_________ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel_________.Companion")))
+@interface KASDKOSUserProfileDataModel_________Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel_________Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * User Profile model class containing user data
@@ -6080,14 +12205,22 @@ __attribute__((swift_name("UserProfileData______.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileInclude___")))
 @interface KASDKOSUserProfileInclude___ : KASDKOSBase
-- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData___ *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithBalance:(KASDKOSUserBalance___ * _Nullable)balance tierProgress:(KASDKOSTierProgress___ * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram___ *> * _Nullable)referralPrograms __attribute__((swift_name("init(balance:tierProgress:referralPrograms:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSUserProfileInclude___Companion *companion __attribute__((swift_name("companion")));
-- (KASDKOSUserProfileBalanceData___ *)component1 __attribute__((swift_name("component1()")));
+
+/** User Profile balance data. */
+- (KASDKOSUserBalance___ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** User&#39;s tier progress and status. */
+- (KASDKOSTierProgress___ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** A list of referral programs the user has access to. */
+- (NSArray<KASDKOSReferralProgram___ *> * _Nullable)component3 __attribute__((swift_name("component3()")));
 
 /**
  * Extra user profile data
  */
-- (KASDKOSUserProfileInclude___ *)doCopyBalance:(KASDKOSUserProfileBalanceData___ *)balance __attribute__((swift_name("doCopy(balance:)")));
+- (KASDKOSUserProfileInclude___ *)doCopyBalance:(KASDKOSUserBalance___ * _Nullable)balance tierProgress:(KASDKOSTierProgress___ * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram___ *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(balance:tierProgress:referralPrograms:)")));
 
 /**
  * Extra user profile data
@@ -6103,7 +12236,15 @@ __attribute__((swift_name("UserProfileInclude___")))
  * Extra user profile data
  */
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSUserProfileBalanceData___ *balance __attribute__((swift_name("balance")));
+
+/** User Profile balance data. */
+@property (readonly) KASDKOSUserBalance___ * _Nullable balance __attribute__((swift_name("balance")));
+
+/** A list of referral programs the user has access to. */
+@property (readonly) NSArray<KASDKOSReferralProgram___ *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+
+/** User&#39;s tier progress and status. */
+@property (readonly) KASDKOSTierProgress___ * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
 @end;
 
 
@@ -6135,7 +12276,7 @@ __attribute__((swift_name("UserProfileInclude___.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileModel____")))
 @interface KASDKOSUserProfileModel____ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData______ *)data included:(KASDKOSUserProfileInclude___ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel_________ * _Nullable)data included:(KASDKOSUserProfileInclude___ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -6146,7 +12287,7 @@ __attribute__((swift_name("UserProfileModel____")))
 @property (class, readonly, getter=companion) KASDKOSUserProfileModel____Companion *companion __attribute__((swift_name("companion")));
 
 /** Contains all user profile data */
-- (KASDKOSUserProfileData______ *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserProfileDataModel_________ * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /** Contains user balance data */
 - (KASDKOSUserProfileInclude___ * _Nullable)component2 __attribute__((swift_name("component2()")));
@@ -6154,7 +12295,7 @@ __attribute__((swift_name("UserProfileModel____")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileModel____ *)doCopyData:(KASDKOSUserProfileData______ *)data included:(KASDKOSUserProfileInclude___ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+- (KASDKOSUserProfileModel____ *)doCopyData:(KASDKOSUserProfileDataModel_________ * _Nullable)data included:(KASDKOSUserProfileInclude___ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Profile model class containing user data
@@ -6172,7 +12313,7 @@ __attribute__((swift_name("UserProfileModel____")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Contains all user profile data */
-@property (readonly) KASDKOSUserProfileData______ *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSUserProfileDataModel_________ * _Nullable data __attribute__((swift_name("data")));
 
 /** Contains user balance data */
 @property (readonly) KASDKOSUserProfileInclude___ * _Nullable included __attribute__((swift_name("included")));
@@ -6283,9 +12424,9 @@ __attribute__((swift_name("UpdateNotificationPreferencesApi")))
 /**
  * Update a users notification settings. This will enable or disable push, sms, and or email notifications from the selected business.
  */
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSNotificationUpdateModel *> *> *)updateNotificationPreferencesNotificationPreferencesRequest:(KASDKOSNotificationPreferencesRequest *)notificationPreferencesRequest __attribute__((swift_name("updateNotificationPreferences(notificationPreferencesRequest:)")));
-- (KASDKOSCFlow<KASDKOSResult<KASDKOSNotificationUpdateModel *> *> *)updateNotificationPreferencesMethods:(NSDictionary<NSString *, id> *)methods __attribute__((swift_name("updateNotificationPreferences(methods:)")));
-@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSNotificationUpdateModel *> *> *updateNotificationPreferencesState __attribute__((swift_name("updateNotificationPreferencesState")));
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSNotificationSettingsModel_ *> *> *)updateNotificationPreferencesNotificationPreferencesRequest:(KASDKOSNotificationSettingsData_ *)notificationPreferencesRequest __attribute__((swift_name("updateNotificationPreferences(notificationPreferencesRequest:)")));
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSNotificationSettingsModel_ *> *> *)updateNotificationPreferencesMethods:(NSDictionary<NSString *, id> *)methods __attribute__((swift_name("updateNotificationPreferences(methods:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSNotificationSettingsModel_ *> *> *updateNotificationPreferencesState __attribute__((swift_name("updateNotificationPreferencesState")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -6298,17 +12439,17 @@ __attribute__((swift_name("UpdateNotificationPreferencesApi.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Business_")))
-@interface KASDKOSBusiness_ : KASDKOSBase
+__attribute__((swift_name("Business__")))
+@interface KASDKOSBusiness__ : KASDKOSBase
 - (instancetype)initWithId:(NSString *)id name:(NSString *)name __attribute__((swift_name("init(id:name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSBusiness_Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSBusiness__Companion *companion __attribute__((swift_name("companion")));
 
 /** A unique ID identifying this business. */
 - (NSString *)component1 __attribute__((swift_name("component1()")));
 
 /** The name of this business */
 - (NSString *)component2 __attribute__((swift_name("component2()")));
-- (KASDKOSBusiness_ *)doCopyId:(NSString *)id name:(NSString *)name __attribute__((swift_name("doCopy(id:name:)")));
+- (KASDKOSBusiness__ *)doCopyId:(NSString *)id name:(NSString *)name __attribute__((swift_name("doCopy(id:name:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -6321,28 +12462,225 @@ __attribute__((swift_name("Business_")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Business_.Companion")))
-@interface KASDKOSBusiness_Companion : KASDKOSBase
+__attribute__((swift_name("Business__.Companion")))
+@interface KASDKOSBusiness__Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSBusiness_Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSBusiness__Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessCategory___")))
+@interface KASDKOSBusinessCategory___ : KASDKOSBase
+- (instancetype)initWithName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("init(name:icon:code:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBusinessCategory___Companion *companion __attribute__((swift_name("companion")));
+
+/** Name of this category */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** Url to this category&#39;s icon */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Unique ategory code for this category */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (KASDKOSBusinessCategory___ *)doCopyName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("doCopy(name:icon:code:)")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Unique ategory code for this category */
+@property (readonly) NSString * _Nullable code __attribute__((swift_name("code")));
+
+/** Url to this category&#39;s icon */
+@property (readonly) NSString * _Nullable icon __attribute__((swift_name("icon")));
+
+/** Name of this category */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+@end;
+
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessCategory___.Companion")))
+@interface KASDKOSBusinessCategory___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessCategory___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Details about this business' category. This can be something like cafe, boutique, etc...
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Business profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessData___")))
+@interface KASDKOSBusinessData___ : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage________ * _Nullable)logo logoTransparentBackground:(KASDKOSImage________ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage________ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory___ * _Nullable)category __attribute__((swift_name("init(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBusinessData___Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique business ID. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBusinessCategory___ * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** The name of this business */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The manner in which this business rewards its customers. This can be by purchase amount of by visit to the store  */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** Whether this is a conglomerate business. Conglomerate businesses are umbrellas for multiple business&#39; in Kangaroo  */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Whether this is a white label business. White label business&#39; don&#39;t appear in the Kangaroo Mobile Customer app, as they usually have their own app.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** General about text for the business */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+- (KASDKOSImage________ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSImage________ * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (KASDKOSImage________ * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * Business profile data
+ */
+- (KASDKOSBusinessData___ *)doCopyId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage________ * _Nullable)logo logoTransparentBackground:(KASDKOSImage________ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage________ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory___ * _Nullable)category __attribute__((swift_name("doCopy(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)")));
+
+/**
+ * Business profile data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Business profile data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Business profile data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** General about text for the business */
+@property (readonly) NSString * _Nullable about __attribute__((swift_name("about")));
+@property (readonly) KASDKOSBusinessCategory___ * _Nullable category __attribute__((swift_name("category")));
+
+/** Whether this is a conglomerate business. Conglomerate businesses are umbrellas for multiple business&#39; in Kangaroo  */
+@property (readonly) NSString * _Nullable conglomerate __attribute__((swift_name("conglomerate")));
+@property (readonly) KASDKOSImage________ * _Nullable coverPhoto __attribute__((swift_name("coverPhoto")));
+
+/** Unique business ID. */
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSImage________ * _Nullable logo __attribute__((swift_name("logo")));
+@property (readonly) KASDKOSImage________ * _Nullable logoTransparentBackground __attribute__((swift_name("logoTransparentBackground")));
+
+/** The manner in which this business rewards its customers. This can be by purchase amount of by visit to the store  */
+@property (readonly) NSString * _Nullable loyaltyType __attribute__((swift_name("loyaltyType")));
+
+/** The name of this business */
+@property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
+
+/** Whether this is a white label business. White label business&#39; don&#39;t appear in the Kangaroo Mobile Customer app, as they usually have their own app.  */
+@property (readonly) NSString * _Nullable whiteLabel __attribute__((swift_name("whiteLabel")));
+@end;
+
+
+/**
+ * Business profile data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("BusinessData___.Companion")))
+@interface KASDKOSBusinessData___Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Business profile data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSBusinessData___Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Business profile data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image________")))
+@interface KASDKOSImage________ : KASDKOSBase
+- (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSImage________Companion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSImage________ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly, getter=default) KASDKOSBoolean * _Nullable default_ __attribute__((swift_name("default_")));
+@property (readonly) NSString * _Nullable large __attribute__((swift_name("large")));
+@property (readonly) NSString * _Nullable medium __attribute__((swift_name("medium")));
+@property (readonly) NSString * _Nullable thumbnail __attribute__((swift_name("thumbnail")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Image________.Companion")))
+@interface KASDKOSImage________Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSImage________Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("NotificationPreferencesRequest")))
 @interface KASDKOSNotificationPreferencesRequest : KASDKOSBase
-- (instancetype)initWithId:(NSString *)id business:(KASDKOSBusiness_ *)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("init(id:business:allowEmail:allowSms:allowPush:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id business:(KASDKOSBusiness__ *)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("init(id:business:allowEmail:allowSms:allowPush:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSNotificationPreferencesRequestCompanion *companion __attribute__((swift_name("companion")));
 - (NSString *)component1 __attribute__((swift_name("component1()")));
 
 /** The business who&#39;s notification settings this request applies to.  */
-- (KASDKOSBusiness_ *)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSBusiness__ *)component2 __attribute__((swift_name("component2()")));
 - (KASDKOSBoolean * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
 - (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (KASDKOSNotificationPreferencesRequest *)doCopyId:(NSString *)id business:(KASDKOSBusiness_ *)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("doCopy(id:business:allowEmail:allowSms:allowPush:)")));
+- (KASDKOSNotificationPreferencesRequest *)doCopyId:(NSString *)id business:(KASDKOSBusiness__ *)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("doCopy(id:business:allowEmail:allowSms:allowPush:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -6351,7 +12689,7 @@ __attribute__((swift_name("NotificationPreferencesRequest")))
 @property (readonly) KASDKOSBoolean * _Nullable allowSms __attribute__((swift_name("allowSms")));
 
 /** The business who&#39;s notification settings this request applies to.  */
-@property (readonly) KASDKOSBusiness_ *business __attribute__((swift_name("business")));
+@property (readonly) KASDKOSBusiness__ *business __attribute__((swift_name("business")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @end;
 
@@ -6362,6 +12700,121 @@ __attribute__((swift_name("NotificationPreferencesRequest.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) KASDKOSNotificationPreferencesRequestCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationSettingsData_")))
+@interface KASDKOSNotificationSettingsData_ : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id business:(KASDKOSBusinessData___ * _Nullable)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("init(id:business:allowEmail:allowSms:allowPush:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSNotificationSettingsData_Companion *companion __attribute__((swift_name("companion")));
+
+/** The notification settings id. This is not required when updating notification settings.  */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The business who these settings this affect. This is not required when updating notification settings.  */
+- (KASDKOSBusinessData___ * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSBoolean * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSNotificationSettingsData_ *)doCopyId:(NSString * _Nullable)id business:(KASDKOSBusinessData___ * _Nullable)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("doCopy(id:business:allowEmail:allowSms:allowPush:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSBoolean * _Nullable allowEmail __attribute__((swift_name("allowEmail")));
+@property (readonly) KASDKOSBoolean * _Nullable allowPush __attribute__((swift_name("allowPush")));
+@property (readonly) KASDKOSBoolean * _Nullable allowSms __attribute__((swift_name("allowSms")));
+
+/** The business who these settings this affect. This is not required when updating notification settings.  */
+@property (readonly) KASDKOSBusinessData___ * _Nullable business __attribute__((swift_name("business")));
+
+/** The notification settings id. This is not required when updating notification settings.  */
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationSettingsData_.Companion")))
+@interface KASDKOSNotificationSettingsData_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSNotificationSettingsData_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationSettingsModel_")))
+@interface KASDKOSNotificationSettingsModel_ : KASDKOSModel
+- (instancetype)initWithData:(NSArray<KASDKOSNotificationSettingsData_ *> * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSNotificationSettingsModel_Companion *companion __attribute__((swift_name("companion")));
+- (NSArray<KASDKOSNotificationSettingsData_ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSNotificationSettingsModel_ *)doCopyData:(NSArray<KASDKOSNotificationSettingsData_ *> * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSArray<KASDKOSNotificationSettingsData_ *> * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationSettingsModel_.Companion")))
+@interface KASDKOSNotificationSettingsModel_Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSNotificationSettingsModel_Companion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationUpdateListModel2")))
+@interface KASDKOSNotificationUpdateListModel2 : KASDKOSModel
+- (instancetype)initWithId:(NSString * _Nullable)id business:(KASDKOSBusinessData___ * _Nullable)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("init(id:business:allowEmail:allowSms:allowPush:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSNotificationUpdateListModel2Companion *companion __attribute__((swift_name("companion")));
+
+/** The notification settings id. This is not required when updating notification settings.  */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The business who these settings this affect. This is not required when updating notification settings.  */
+- (KASDKOSBusinessData___ * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSBoolean * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSNotificationUpdateListModel2 *)doCopyId:(NSString * _Nullable)id business:(KASDKOSBusinessData___ * _Nullable)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("doCopy(id:business:allowEmail:allowSms:allowPush:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSBoolean * _Nullable allowEmail __attribute__((swift_name("allowEmail")));
+@property (readonly) KASDKOSBoolean * _Nullable allowPush __attribute__((swift_name("allowPush")));
+@property (readonly) KASDKOSBoolean * _Nullable allowSms __attribute__((swift_name("allowSms")));
+
+/** The business who these settings this affect. This is not required when updating notification settings.  */
+@property (readonly) KASDKOSBusinessData___ * _Nullable business __attribute__((swift_name("business")));
+
+/** The notification settings id. This is not required when updating notification settings.  */
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NotificationUpdateListModel2.Companion")))
+@interface KASDKOSNotificationUpdateListModel2Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSNotificationUpdateListModel2Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
@@ -6398,21 +12851,21 @@ __attribute__((swift_name("NotificationUpdateModel.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("NotificationUpdateResponseData")))
 @interface KASDKOSNotificationUpdateResponseData : KASDKOSBase
-- (instancetype)initWithId:(NSString *)id business:(KASDKOSBusiness_ *)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("init(id:business:allowEmail:allowSms:allowPush:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString *)id business:(KASDKOSBusiness__ *)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("init(id:business:allowEmail:allowSms:allowPush:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSNotificationUpdateResponseDataCompanion *companion __attribute__((swift_name("companion")));
 - (NSString *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSBusiness_ *)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSBusiness__ *)component2 __attribute__((swift_name("component2()")));
 - (KASDKOSBoolean * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
 - (KASDKOSBoolean * _Nullable)component5 __attribute__((swift_name("component5()")));
-- (KASDKOSNotificationUpdateResponseData *)doCopyId:(NSString *)id business:(KASDKOSBusiness_ *)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("doCopy(id:business:allowEmail:allowSms:allowPush:)")));
+- (KASDKOSNotificationUpdateResponseData *)doCopyId:(NSString *)id business:(KASDKOSBusiness__ *)business allowEmail:(KASDKOSBoolean * _Nullable)allowEmail allowSms:(KASDKOSBoolean * _Nullable)allowSms allowPush:(KASDKOSBoolean * _Nullable)allowPush __attribute__((swift_name("doCopy(id:business:allowEmail:allowSms:allowPush:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) KASDKOSBoolean * _Nullable allowEmail __attribute__((swift_name("allowEmail")));
 @property (readonly) KASDKOSBoolean * _Nullable allowPush __attribute__((swift_name("allowPush")));
 @property (readonly) KASDKOSBoolean * _Nullable allowSms __attribute__((swift_name("allowSms")));
-@property (readonly) KASDKOSBusiness_ *business __attribute__((swift_name("business")));
+@property (readonly) KASDKOSBusiness__ *business __attribute__((swift_name("business")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @end;
 
@@ -6550,6 +13003,328 @@ __attribute__((swift_name("UserProfileApi.Companion")))
 
 
 /**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram____")))
+@interface KASDKOSReferralProgram____ : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("init(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgram____Companion *companion __attribute__((swift_name("companion")));
+
+/** The unique id of this referral program. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+- (KASDKOSDouble * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The number of points the new customer will earn. */
+- (KASDKOSLong * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The number of points the new customer who made the referral will earn. */
+- (KASDKOSLong * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+- (KASDKOSLong * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Denotes whether this referral program is currently active. */
+- (KASDKOSBoolean * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+- (KASDKOSBoolean * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** A link that can be shared to prospective referrals. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * A referral program
+ */
+- (KASDKOSReferralProgram____ *)doCopyId:(KASDKOSLong * _Nullable)id ruleName:(NSString * _Nullable)ruleName condMinAmount:(KASDKOSDouble * _Nullable)condMinAmount refereeEarns:(KASDKOSLong * _Nullable)refereeEarns refererEarns:(KASDKOSLong * _Nullable)refererEarns expiresIn:(KASDKOSLong * _Nullable)expiresIn enabled:(KASDKOSBoolean * _Nullable)enabled linkReferralEnabled:(KASDKOSBoolean * _Nullable)linkReferralEnabled referralLink:(NSString * _Nullable)referralLink __attribute__((swift_name("doCopy(id:ruleName:condMinAmount:refereeEarns:refererEarns:expiresIn:enabled:linkReferralEnabled:referralLink:)")));
+
+/**
+ * A referral program
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * A referral program
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * A referral program
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The minimum purchawe amount required for a succesful referral. */
+@property (readonly) KASDKOSDouble * _Nullable condMinAmount __attribute__((swift_name("condMinAmount")));
+
+/** Denotes whether this referral program is currently active. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** The number of days the new customer has to sign up in order for a referral to be sucessful.  */
+@property (readonly) KASDKOSLong * _Nullable expiresIn __attribute__((swift_name("expiresIn")));
+
+/** The unique id of this referral program. */
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+
+/** Denotes whether this referral program has enabled share links. Referral share links are links that the customer can send to prospective referrals. A User can sign up to the business through this link in order to complete the referral.  */
+@property (readonly) KASDKOSBoolean * _Nullable linkReferralEnabled __attribute__((swift_name("linkReferralEnabled")));
+
+/** The number of points the new customer will earn. */
+@property (readonly) KASDKOSLong * _Nullable refereeEarns __attribute__((swift_name("refereeEarns")));
+
+/** The number of points the new customer who made the referral will earn. */
+@property (readonly) KASDKOSLong * _Nullable refererEarns __attribute__((swift_name("refererEarns")));
+
+/** A link that can be shared to prospective referrals. */
+@property (readonly) NSString * _Nullable referralLink __attribute__((swift_name("referralLink")));
+@property (readonly) NSString * _Nullable ruleName __attribute__((swift_name("ruleName")));
+@end;
+
+
+/**
+ * A referral program
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgram____.Companion")))
+@interface KASDKOSReferralProgram____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * A referral program
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgram____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * A referral program
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude____")))
+@interface KASDKOSReferralProgramInclude____ : KASDKOSBase
+- (instancetype)initWithReferralPrograms:(NSArray<KASDKOSReferralProgram____ *> * _Nullable)referralPrograms __attribute__((swift_name("init(referralPrograms:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSReferralProgramInclude____Companion *companion __attribute__((swift_name("companion")));
+
+/** A List of referral programs. */
+- (NSArray<KASDKOSReferralProgram____ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (KASDKOSReferralProgramInclude____ *)doCopyReferralPrograms:(NSArray<KASDKOSReferralProgram____ *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(referralPrograms:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** A List of referral programs. */
+@property (readonly) NSArray<KASDKOSReferralProgram____ *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+@end;
+
+
+/**
+ * Contains data about the referral program for this business.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ReferralProgramInclude____.Companion")))
+@interface KASDKOSReferralProgramInclude____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Contains data about the referral program for this business.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSReferralProgramInclude____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Contains data about the referral program for this business.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress____")))
+@interface KASDKOSTierProgress____ : KASDKOSBase
+- (instancetype)initWithStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("init(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTierProgress____Companion *companion __attribute__((swift_name("companion")));
+
+/** The start date for this tier session. */
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The name of the user&#39;s current tier level  */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** The name of the user&#39;s next tier level.  */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+- (KASDKOSFloat * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+- (KASDKOSLong * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (KASDKOSTierProgress____ *)doCopyStartDate:(NSString * _Nullable)startDate endDate:(NSString * _Nullable)endDate tierLevel:(NSString * _Nullable)tierLevel tierLevelLive:(NSString * _Nullable)tierLevelLive nextTierLevel:(NSString * _Nullable)nextTierLevel tierProgress:(KASDKOSFloat * _Nullable)tierProgress leftPoints:(KASDKOSLong * _Nullable)leftPoints __attribute__((swift_name("doCopy(startDate:endDate:tierLevel:tierLevelLive:nextTierLevel:tierProgress:leftPoints:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The end date for this tier session. The tier will be reset once this date is reached.  */
+@property (readonly) NSString * _Nullable endDate __attribute__((swift_name("endDate")));
+
+/** The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. */
+@property (readonly) KASDKOSLong * _Nullable leftPoints __attribute__((swift_name("leftPoints")));
+
+/** The name of the user&#39;s next tier level.  */
+@property (readonly) NSString * _Nullable nextTierLevel __attribute__((swift_name("nextTierLevel")));
+
+/** The start date for this tier session. */
+@property (readonly) NSString * _Nullable startDate __attribute__((swift_name("startDate")));
+
+/** The name of the user&#39;s current tier level  */
+@property (readonly) NSString * _Nullable tierLevel __attribute__((swift_name("tierLevel")));
+
+/** The name of the user&#39;s current tier level. Tiers are recalculated once per day, as such \&quot;tier_level\&quot; may not be completely up to date.  */
+@property (readonly) NSString * _Nullable tierLevelLive __attribute__((swift_name("tierLevelLive")));
+
+/** The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  */
+@property (readonly) KASDKOSFloat * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
+@end;
+
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("TierProgress____.Companion")))
+@interface KASDKOSTierProgress____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSTierProgress____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance____")))
+@interface KASDKOSUserBalance____ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserBalance____Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data.
+ */
+- (KASDKOSUserBalance____ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance____.Companion")))
+@interface KASDKOSUserBalance____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserBalance____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * User Profile balance data
  */
 __attribute__((objc_subclassing_restricted))
@@ -6618,10 +13393,10 @@ __attribute__((swift_name("UserProfileBalanceData____.Companion")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData_______")))
-@interface KASDKOSUserProfileData_______ : KASDKOSBase
+__attribute__((swift_name("UserProfileData________")))
+@interface KASDKOSUserProfileData________ : KASDKOSBase
 - (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileData_______Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSUserProfileData________Companion *companion __attribute__((swift_name("companion")));
 
 /** Unique user ID. */
 - (NSString *)component1 __attribute__((swift_name("component1()")));
@@ -6641,10 +13416,10 @@ __attribute__((swift_name("UserProfileData_______")))
 /** Denotes whether this account has been enabled. */
 - (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 
 /** Email address identifying this user. */
@@ -6674,7 +13449,7 @@ __attribute__((swift_name("UserProfileData_______")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileData_______ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+- (KASDKOSUserProfileData________ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
 
 /**
  * User Profile model class containing user data
@@ -6703,7 +13478,7 @@ __attribute__((swift_name("UserProfileData_______")))
 /** Email address identifying this user. */
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
 
 /** Denotes whether this account has been enabled. */
@@ -6727,7 +13502,7 @@ __attribute__((swift_name("UserProfileData_______")))
 /** Phone number associated with this user. */
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
 
 /** Profile photo url associated with this user. */
@@ -6745,8 +13520,8 @@ __attribute__((swift_name("UserProfileData_______")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData_______.Companion")))
-@interface KASDKOSUserProfileData_______Companion : KASDKOSBase
+__attribute__((swift_name("UserProfileData________.Companion")))
+@interface KASDKOSUserProfileData________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -6754,7 +13529,163 @@ __attribute__((swift_name("UserProfileData_______.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileData_______Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileData________Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel__________")))
+@interface KASDKOSUserProfileDataModel__________ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel__________Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel__________ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel__________.Companion")))
+@interface KASDKOSUserProfileDataModel__________Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel__________Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * User Profile model class containing user data
@@ -6769,14 +13700,22 @@ __attribute__((swift_name("UserProfileData_______.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileInclude____")))
 @interface KASDKOSUserProfileInclude____ : KASDKOSBase
-- (instancetype)initWithBalance:(KASDKOSUserProfileBalanceData____ *)balance __attribute__((swift_name("init(balance:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithBalance:(KASDKOSUserBalance____ * _Nullable)balance tierProgress:(KASDKOSTierProgress____ * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram____ *> * _Nullable)referralPrograms __attribute__((swift_name("init(balance:tierProgress:referralPrograms:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSUserProfileInclude____Companion *companion __attribute__((swift_name("companion")));
-- (KASDKOSUserProfileBalanceData____ *)component1 __attribute__((swift_name("component1()")));
+
+/** User Profile balance data. */
+- (KASDKOSUserBalance____ * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** User&#39;s tier progress and status. */
+- (KASDKOSTierProgress____ * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** A list of referral programs the user has access to. */
+- (NSArray<KASDKOSReferralProgram____ *> * _Nullable)component3 __attribute__((swift_name("component3()")));
 
 /**
  * Extra user profile data
  */
-- (KASDKOSUserProfileInclude____ *)doCopyBalance:(KASDKOSUserProfileBalanceData____ *)balance __attribute__((swift_name("doCopy(balance:)")));
+- (KASDKOSUserProfileInclude____ *)doCopyBalance:(KASDKOSUserBalance____ * _Nullable)balance tierProgress:(KASDKOSTierProgress____ * _Nullable)tierProgress referralPrograms:(NSArray<KASDKOSReferralProgram____ *> * _Nullable)referralPrograms __attribute__((swift_name("doCopy(balance:tierProgress:referralPrograms:)")));
 
 /**
  * Extra user profile data
@@ -6792,7 +13731,15 @@ __attribute__((swift_name("UserProfileInclude____")))
  * Extra user profile data
  */
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSUserProfileBalanceData____ *balance __attribute__((swift_name("balance")));
+
+/** User Profile balance data. */
+@property (readonly) KASDKOSUserBalance____ * _Nullable balance __attribute__((swift_name("balance")));
+
+/** A list of referral programs the user has access to. */
+@property (readonly) NSArray<KASDKOSReferralProgram____ *> * _Nullable referralPrograms __attribute__((swift_name("referralPrograms")));
+
+/** User&#39;s tier progress and status. */
+@property (readonly) KASDKOSTierProgress____ * _Nullable tierProgress __attribute__((swift_name("tierProgress")));
 @end;
 
 
@@ -6824,7 +13771,7 @@ __attribute__((swift_name("UserProfileInclude____.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProfileModel_____")))
 @interface KASDKOSUserProfileModel_____ : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData_______ *)data included:(KASDKOSUserProfileInclude____ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel__________ * _Nullable)data included:(KASDKOSUserProfileInclude____ * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -6835,7 +13782,7 @@ __attribute__((swift_name("UserProfileModel_____")))
 @property (class, readonly, getter=companion) KASDKOSUserProfileModel_____Companion *companion __attribute__((swift_name("companion")));
 
 /** Contains all user profile data */
-- (KASDKOSUserProfileData_______ *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserProfileDataModel__________ * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /** Contains user balance data */
 - (KASDKOSUserProfileInclude____ * _Nullable)component2 __attribute__((swift_name("component2()")));
@@ -6843,7 +13790,7 @@ __attribute__((swift_name("UserProfileModel_____")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileModel_____ *)doCopyData:(KASDKOSUserProfileData_______ *)data included:(KASDKOSUserProfileInclude____ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
+- (KASDKOSUserProfileModel_____ *)doCopyData:(KASDKOSUserProfileDataModel__________ * _Nullable)data included:(KASDKOSUserProfileInclude____ * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Profile model class containing user data
@@ -6861,7 +13808,7 @@ __attribute__((swift_name("UserProfileModel_____")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Contains all user profile data */
-@property (readonly) KASDKOSUserProfileData_______ *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSUserProfileDataModel__________ * _Nullable data __attribute__((swift_name("data")));
 
 /** Contains user balance data */
 @property (readonly) KASDKOSUserProfileInclude____ * _Nullable included __attribute__((swift_name("included")));
@@ -6931,7 +13878,7 @@ __attribute__((swift_name("CountriesApi.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Countries")))
 @interface KASDKOSCountries : KASDKOSModel
-- (instancetype)initWithData:(NSArray<KASDKOSCountry *> *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(NSArray<KASDKOSCountry *> * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -6942,12 +13889,12 @@ __attribute__((swift_name("Countries")))
 @property (class, readonly, getter=companion) KASDKOSCountriesCompanion *companion __attribute__((swift_name("companion")));
 
 /** A list of countries supported by Kangaroo */
-- (NSArray<KASDKOSCountry *> *)component1 __attribute__((swift_name("component1()")));
+- (NSArray<KASDKOSCountry *> * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /**
  * A list of countries supported by Kangaroo
  */
-- (KASDKOSCountries *)doCopyData:(NSArray<KASDKOSCountry *> *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSCountries *)doCopyData:(NSArray<KASDKOSCountry *> * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
 
 /**
  * A list of countries supported by Kangaroo
@@ -6965,7 +13912,7 @@ __attribute__((swift_name("Countries")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** A list of countries supported by Kangaroo */
-@property (readonly) NSArray<KASDKOSCountry *> *data __attribute__((swift_name("data")));
+@property (readonly) NSArray<KASDKOSCountry *> * _Nullable data __attribute__((swift_name("data")));
 @end;
 
 
@@ -6997,11 +13944,11 @@ __attribute__((swift_name("Countries.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Country")))
 @interface KASDKOSCountry : KASDKOSBase
-- (instancetype)initWithId:(int32_t)id name:(NSString * _Nullable)name code:(NSString * _Nullable)code codeIso3:(NSString * _Nullable)codeIso3 phoneCode:(KASDKOSInt * _Nullable)phoneCode __attribute__((swift_name("init(id:name:code:codeIso3:phoneCode:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(KASDKOSInt * _Nullable)id name:(NSString * _Nullable)name code:(NSString * _Nullable)code codeIso3:(NSString * _Nullable)codeIso3 phoneCode:(KASDKOSInt * _Nullable)phoneCode __attribute__((swift_name("init(id:name:code:codeIso3:phoneCode:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSCountryCompanion *companion __attribute__((swift_name("companion")));
 
 /** Unique country ID. */
-- (int32_t)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /** The name of this country */
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
@@ -7018,7 +13965,7 @@ __attribute__((swift_name("Country")))
 /**
  * A country model
  */
-- (KASDKOSCountry *)doCopyId:(int32_t)id name:(NSString * _Nullable)name code:(NSString * _Nullable)code codeIso3:(NSString * _Nullable)codeIso3 phoneCode:(KASDKOSInt * _Nullable)phoneCode __attribute__((swift_name("doCopy(id:name:code:codeIso3:phoneCode:)")));
+- (KASDKOSCountry *)doCopyId:(KASDKOSInt * _Nullable)id name:(NSString * _Nullable)name code:(NSString * _Nullable)code codeIso3:(NSString * _Nullable)codeIso3 phoneCode:(KASDKOSInt * _Nullable)phoneCode __attribute__((swift_name("doCopy(id:name:code:codeIso3:phoneCode:)")));
 
 /**
  * A country model
@@ -7042,7 +13989,7 @@ __attribute__((swift_name("Country")))
 @property (readonly) NSString * _Nullable codeIso3 __attribute__((swift_name("codeIso3")));
 
 /** Unique country ID. */
-@property (readonly) int32_t id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
 
 /** The name of this country */
 @property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
@@ -7110,6 +14057,278 @@ __attribute__((swift_name("UserPinResetApi.Companion")))
 
 
 /**
+ * Purchase a gift card [Api] class
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPurchaseApi")))
+@interface KASDKOSGiftCardPurchaseApi : KASDKOSApi
+
+/**
+ * Purchase a gift card [Api] class
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Purchase a gift card [Api] class
+ */
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) KASDKOSGiftCardPurchaseApiCompanion *companion __attribute__((swift_name("companion")));
+
+/**
+ * Purchase a gift card
+ */
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSGiftCardPayPalPaymentResponseModel *> *> *)purchaseGiftCardPurchaseGiftCardRequest:(KASDKOSGiftCardPurchaseRequest *)purchaseGiftCardRequest __attribute__((swift_name("purchaseGiftCard(purchaseGiftCardRequest:)")));
+- (KASDKOSCFlow<KASDKOSResult<KASDKOSGiftCardPayPalPaymentResponseModel *> *> *)purchaseGiftCardMethods:(NSDictionary<NSString *, id> *)methods __attribute__((swift_name("purchaseGiftCard(methods:)")));
+@property (readonly) KASDKOSCFlow<KASDKOSResult<KASDKOSGiftCardPayPalPaymentResponseModel *> *> *giftCardPurchaseState __attribute__((swift_name("giftCardPurchaseState")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPurchaseApi.Companion")))
+@interface KASDKOSGiftCardPurchaseApiCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardPurchaseApiCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPayPalPayment")))
+@interface KASDKOSGiftCardPayPalPayment : KASDKOSBase
+- (instancetype)initWithIntent:(KASDKOSBoolean * _Nullable)intent provider:(NSString * _Nullable)provider giftcardId:(NSString * _Nullable)giftcardId paypalPayment:(NSString * _Nullable)paypalPayment __attribute__((swift_name("init(intent:provider:giftcardId:paypalPayment:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSGiftCardPayPalPaymentCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSBoolean * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSGiftCardPayPalPayment *)doCopyIntent:(KASDKOSBoolean * _Nullable)intent provider:(NSString * _Nullable)provider giftcardId:(NSString * _Nullable)giftcardId paypalPayment:(NSString * _Nullable)paypalPayment __attribute__((swift_name("doCopy(intent:provider:giftcardId:paypalPayment:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable giftcardId __attribute__((swift_name("giftcardId")));
+@property (readonly) KASDKOSBoolean * _Nullable intent __attribute__((swift_name("intent")));
+@property (readonly) NSString * _Nullable paypalPayment __attribute__((swift_name("paypalPayment")));
+@property (readonly) NSString * _Nullable provider __attribute__((swift_name("provider")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPayPalPayment.Companion")))
+@interface KASDKOSGiftCardPayPalPaymentCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardPayPalPaymentCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPayPalPaymentResponse")))
+@interface KASDKOSGiftCardPayPalPaymentResponse : KASDKOSBase
+- (instancetype)initWithData:(KASDKOSGiftCardPayPalPaymentResponseData * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSGiftCardPayPalPaymentResponseCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSGiftCardPayPalPaymentResponseData * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSGiftCardPayPalPaymentResponse *)doCopyData:(KASDKOSGiftCardPayPalPaymentResponseData * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSGiftCardPayPalPaymentResponseData * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPayPalPaymentResponse.Companion")))
+@interface KASDKOSGiftCardPayPalPaymentResponseCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardPayPalPaymentResponseCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPayPalPaymentResponseData")))
+@interface KASDKOSGiftCardPayPalPaymentResponseData : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id provider:(NSString * _Nullable)provider giftcard:(KASDKOSGiftCardPurchaseResponseGiftCardData * _Nullable)giftcard balance:(KASDKOSUserBalance_____ * _Nullable)balance __attribute__((swift_name("init(id:provider:giftcard:balance:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSGiftCardPayPalPaymentResponseDataCompanion *companion __attribute__((swift_name("companion")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSGiftCardPurchaseResponseGiftCardData * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSUserBalance_____ * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSGiftCardPayPalPaymentResponseData *)doCopyId:(NSString * _Nullable)id provider:(NSString * _Nullable)provider giftcard:(KASDKOSGiftCardPurchaseResponseGiftCardData * _Nullable)giftcard balance:(KASDKOSUserBalance_____ * _Nullable)balance __attribute__((swift_name("doCopy(id:provider:giftcard:balance:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSUserBalance_____ * _Nullable balance __attribute__((swift_name("balance")));
+@property (readonly) KASDKOSGiftCardPurchaseResponseGiftCardData * _Nullable giftcard __attribute__((swift_name("giftcard")));
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) NSString * _Nullable provider __attribute__((swift_name("provider")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPayPalPaymentResponseData.Companion")))
+@interface KASDKOSGiftCardPayPalPaymentResponseDataCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardPayPalPaymentResponseDataCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPayPalPaymentResponseModel")))
+@interface KASDKOSGiftCardPayPalPaymentResponseModel : KASDKOSModel
+- (instancetype)initWithData:(KASDKOSGiftCardPayPalPaymentResponseData * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSGiftCardPayPalPaymentResponseModelCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSGiftCardPayPalPaymentResponseData * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSGiftCardPayPalPaymentResponseModel *)doCopyData:(KASDKOSGiftCardPayPalPaymentResponseData * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) KASDKOSGiftCardPayPalPaymentResponseData * _Nullable data __attribute__((swift_name("data")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPayPalPaymentResponseModel.Companion")))
+@interface KASDKOSGiftCardPayPalPaymentResponseModelCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardPayPalPaymentResponseModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPurchaseRequest")))
+@interface KASDKOSGiftCardPurchaseRequest : KASDKOSBase
+- (instancetype)initWithIntent:(NSString *)intent provider:(NSString *)provider giftcardId:(int32_t)giftcardId paypalPayment:(KASDKOSGiftCardPayPalPayment *)paypalPayment __attribute__((swift_name("init(intent:provider:giftcardId:paypalPayment:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSGiftCardPurchaseRequestCompanion *companion __attribute__((swift_name("companion")));
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (NSString *)component2 __attribute__((swift_name("component2()")));
+- (int32_t)component3 __attribute__((swift_name("component3()")));
+- (KASDKOSGiftCardPayPalPayment *)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSGiftCardPurchaseRequest *)doCopyIntent:(NSString *)intent provider:(NSString *)provider giftcardId:(int32_t)giftcardId paypalPayment:(KASDKOSGiftCardPayPalPayment *)paypalPayment __attribute__((swift_name("doCopy(intent:provider:giftcardId:paypalPayment:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t giftcardId __attribute__((swift_name("giftcardId")));
+@property (readonly) NSString *intent __attribute__((swift_name("intent")));
+@property (readonly) KASDKOSGiftCardPayPalPayment *paypalPayment __attribute__((swift_name("paypalPayment")));
+@property (readonly) NSString *provider __attribute__((swift_name("provider")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPurchaseRequest.Companion")))
+@interface KASDKOSGiftCardPurchaseRequestCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardPurchaseRequestCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPurchaseResponseGiftCardData")))
+@interface KASDKOSGiftCardPurchaseResponseGiftCardData : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title price:(KASDKOSDouble * _Nullable)price currency:(NSString * _Nullable)currency quantity:(NSString * _Nullable)quantity __attribute__((swift_name("init(id:title:price:currency:quantity:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSGiftCardPurchaseResponseGiftCardDataCompanion *companion __attribute__((swift_name("companion")));
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+- (KASDKOSDouble * _Nullable)component3 __attribute__((swift_name("component3()")));
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+- (KASDKOSGiftCardPurchaseResponseGiftCardData *)doCopyId:(KASDKOSInt * _Nullable)id title:(NSString * _Nullable)title price:(KASDKOSDouble * _Nullable)price currency:(NSString * _Nullable)currency quantity:(NSString * _Nullable)quantity __attribute__((swift_name("doCopy(id:title:price:currency:quantity:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable currency __attribute__((swift_name("currency")));
+@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSDouble * _Nullable price __attribute__((swift_name("price")));
+@property (readonly) NSString * _Nullable quantity __attribute__((swift_name("quantity")));
+@property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GiftCardPurchaseResponseGiftCardData.Companion")))
+@interface KASDKOSGiftCardPurchaseResponseGiftCardDataCompanion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSGiftCardPurchaseResponseGiftCardDataCompanion *shared __attribute__((swift_name("shared")));
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance_____")))
+@interface KASDKOSUserBalance_____ : KASDKOSBase
+- (instancetype)initWithPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("init(points:giftcard:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSUserBalance_____Companion *companion __attribute__((swift_name("companion")));
+
+/** The number of points this user currently has. */
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+- (KASDKOSDouble * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/**
+ * User Profile balance data.
+ */
+- (KASDKOSUserBalance_____ *)doCopyPoints:(KASDKOSLong * _Nullable)points giftcard:(KASDKOSDouble * _Nullable)giftcard __attribute__((swift_name("doCopy(points:giftcard:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile balance data.
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** The amount of store credit in the users&#39; e-wallet. */
+@property (readonly) KASDKOSDouble * _Nullable giftcard __attribute__((swift_name("giftcard")));
+
+/** The number of points this user currently has. */
+@property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
+@end;
+
+
+/**
+ * User Profile balance data.
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserBalance_____.Companion")))
+@interface KASDKOSUserBalance_____Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile balance data.
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserBalance_____Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile balance data.
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
  * Get a list of rewards available to this user. [Api] class
  */
 __attribute__((objc_subclassing_restricted))
@@ -7144,15 +14363,15 @@ __attribute__((swift_name("UserRewardsApi.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image____")))
-@interface KASDKOSImage____ : KASDKOSBase
+__attribute__((swift_name("Image_________")))
+@interface KASDKOSImage_________ : KASDKOSBase
 - (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSImage____Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSImage_________Companion *companion __attribute__((swift_name("companion")));
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSImage____ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (KASDKOSImage_________ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -7163,20 +14382,20 @@ __attribute__((swift_name("Image____")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image____.Companion")))
-@interface KASDKOSImage____Companion : KASDKOSBase
+__attribute__((swift_name("Image_________.Companion")))
+@interface KASDKOSImage_________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSImage____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSImage_________Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language_____")))
-@interface KASDKOSLanguage_____ : KASDKOSBase
+__attribute__((swift_name("Language________")))
+@interface KASDKOSLanguage________ : KASDKOSBase
 - (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSLanguage_____Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSLanguage________Companion *companion __attribute__((swift_name("companion")));
 
 /** The Kangaroo ID of this language. */
 - (int32_t)component1 __attribute__((swift_name("component1()")));
@@ -7186,7 +14405,7 @@ __attribute__((swift_name("Language_____")))
 
 /** The full name of this language (English, French, Spanish) */
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage_____ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (KASDKOSLanguage________ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -7202,19 +14421,19 @@ __attribute__((swift_name("Language_____")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language_____.Companion")))
-@interface KASDKOSLanguage_____Companion : KASDKOSBase
+__attribute__((swift_name("Language________.Companion")))
+@interface KASDKOSLanguage________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSLanguage_____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSLanguage________Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("RewardModel")))
 @interface KASDKOSRewardModel : KASDKOSModel
-- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished amount:(KASDKOSFloat * _Nullable)amount realValue:(KASDKOSFloat * _Nullable)realValue discountValue:(KASDKOSFloat * _Nullable)discountValue partnerReward:(KASDKOSBoolean * _Nullable)partnerReward redeemForGiftCard:(KASDKOSBoolean * _Nullable)redeemForGiftCard type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage____ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link rewardLanguages:(NSArray<KASDKOSRewardTranslation_ *> * _Nullable)rewardLanguages __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:amount:realValue:discountValue:partnerReward:redeemForGiftCard:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:rewardLanguages:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(KASDKOSInt * _Nullable)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished amount:(KASDKOSFloat * _Nullable)amount realValue:(KASDKOSFloat * _Nullable)realValue discountValue:(KASDKOSFloat * _Nullable)discountValue partnerReward:(KASDKOSBoolean * _Nullable)partnerReward redeemForGiftCard:(KASDKOSBoolean * _Nullable)redeemForGiftCard type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage_________ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link rewardLanguages:(NSArray<KASDKOSRewardTranslation_ *> * _Nullable)rewardLanguages __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:amount:realValue:discountValue:partnerReward:redeemForGiftCard:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:rewardLanguages:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -7225,13 +14444,13 @@ __attribute__((swift_name("RewardModel")))
 @property (class, readonly, getter=companion) KASDKOSRewardModelCompanion *companion __attribute__((swift_name("companion")));
 
 /** A unique ID identifying this reward */
-- (int32_t)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (KASDKOSBoolean * _Nullable)component10 __attribute__((swift_name("component10()")));
 - (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
 - (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
 - (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
 - (NSString * _Nullable)component14 __attribute__((swift_name("component14()")));
-- (NSArray<KASDKOSImage____ *> * _Nullable)component15 __attribute__((swift_name("component15()")));
+- (NSArray<KASDKOSImage_________ *> * _Nullable)component15 __attribute__((swift_name("component15()")));
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 - (NSString * _Nullable)component17 __attribute__((swift_name("component17()")));
 - (NSString * _Nullable)component18 __attribute__((swift_name("component18()")));
@@ -7244,7 +14463,7 @@ __attribute__((swift_name("RewardModel")))
 - (KASDKOSFloat * _Nullable)component7 __attribute__((swift_name("component7()")));
 - (KASDKOSFloat * _Nullable)component8 __attribute__((swift_name("component8()")));
 - (KASDKOSBoolean * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (KASDKOSRewardModel *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished amount:(KASDKOSFloat * _Nullable)amount realValue:(KASDKOSFloat * _Nullable)realValue discountValue:(KASDKOSFloat * _Nullable)discountValue partnerReward:(KASDKOSBoolean * _Nullable)partnerReward redeemForGiftCard:(KASDKOSBoolean * _Nullable)redeemForGiftCard type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage____ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link rewardLanguages:(NSArray<KASDKOSRewardTranslation_ *> * _Nullable)rewardLanguages __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:amount:realValue:discountValue:partnerReward:redeemForGiftCard:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:rewardLanguages:)")));
+- (KASDKOSRewardModel *)doCopyId:(KASDKOSInt * _Nullable)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished amount:(KASDKOSFloat * _Nullable)amount realValue:(KASDKOSFloat * _Nullable)realValue discountValue:(KASDKOSFloat * _Nullable)discountValue partnerReward:(KASDKOSBoolean * _Nullable)partnerReward redeemForGiftCard:(KASDKOSBoolean * _Nullable)redeemForGiftCard type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage_________ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link rewardLanguages:(NSArray<KASDKOSRewardTranslation_ *> * _Nullable)rewardLanguages __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:amount:realValue:discountValue:partnerReward:redeemForGiftCard:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:rewardLanguages:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -7254,8 +14473,8 @@ __attribute__((swift_name("RewardModel")))
 @property (readonly) NSString * _Nullable expiresAt __attribute__((swift_name("expiresAt")));
 
 /** A unique ID identifying this reward */
-@property (readonly) int32_t id __attribute__((swift_name("id")));
-@property (readonly) NSArray<KASDKOSImage____ *> * _Nullable images __attribute__((swift_name("images")));
+@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) NSArray<KASDKOSImage_________ *> * _Nullable images __attribute__((swift_name("images")));
 @property (readonly) KASDKOSBoolean * _Nullable isPublished __attribute__((swift_name("isPublished")));
 @property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
 @property (readonly) KASDKOSBoolean * _Nullable neverExpiresFlag __attribute__((swift_name("neverExpiresFlag")));
@@ -7284,22 +14503,22 @@ __attribute__((swift_name("RewardModel.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("RewardTranslation_")))
 @interface KASDKOSRewardTranslation_ : KASDKOSBase
-- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link language:(KASDKOSLanguage_____ * _Nullable)language __attribute__((swift_name("init(id:languageId:title:description:termsConditions:link:language:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(KASDKOSInt * _Nullable)id languageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link language:(KASDKOSLanguage________ * _Nullable)language __attribute__((swift_name("init(id:languageId:title:description:termsConditions:link:language:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSRewardTranslation_Companion *companion __attribute__((swift_name("companion")));
-- (int32_t)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
 - (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
 - (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (KASDKOSLanguage_____ * _Nullable)component7 __attribute__((swift_name("component7()")));
-- (KASDKOSRewardTranslation_ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link language:(KASDKOSLanguage_____ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:title:description:termsConditions:link:language:)")));
+- (KASDKOSLanguage________ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSRewardTranslation_ *)doCopyId:(KASDKOSInt * _Nullable)id languageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link language:(KASDKOSLanguage________ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:title:description:termsConditions:link:language:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
-@property (readonly) int32_t id __attribute__((swift_name("id")));
-@property (readonly) KASDKOSLanguage_____ * _Nullable language __attribute__((swift_name("language")));
+@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSLanguage________ * _Nullable language __attribute__((swift_name("language")));
 @property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
 @property (readonly) NSString * _Nullable link __attribute__((swift_name("link")));
 @property (readonly) NSString * _Nullable termsConditions __attribute__((swift_name("termsConditions")));
@@ -7319,18 +14538,18 @@ __attribute__((swift_name("RewardTranslation_.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserRewardsData")))
 @interface KASDKOSUserRewardsData : KASDKOSBase
-- (instancetype)initWithCatalogItems:(NSArray<KASDKOSRewardModel *> *)catalogItems __attribute__((swift_name("init(catalogItems:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCatalogItems:(NSArray<KASDKOSRewardModel *> * _Nullable)catalogItems __attribute__((swift_name("init(catalogItems:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSUserRewardsDataCompanion *companion __attribute__((swift_name("companion")));
 
 /** Contains a list of all rewards available to this user */
-- (NSArray<KASDKOSRewardModel *> *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSUserRewardsData *)doCopyCatalogItems:(NSArray<KASDKOSRewardModel *> *)catalogItems __attribute__((swift_name("doCopy(catalogItems:)")));
+- (NSArray<KASDKOSRewardModel *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserRewardsData *)doCopyCatalogItems:(NSArray<KASDKOSRewardModel *> * _Nullable)catalogItems __attribute__((swift_name("doCopy(catalogItems:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Contains a list of all rewards available to this user */
-@property (readonly) NSArray<KASDKOSRewardModel *> *catalogItems __attribute__((swift_name("catalogItems")));
+@property (readonly) NSArray<KASDKOSRewardModel *> * _Nullable catalogItems __attribute__((swift_name("catalogItems")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -7346,7 +14565,7 @@ __attribute__((swift_name("UserRewardsData.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserRewardsModel")))
 @interface KASDKOSUserRewardsModel : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserRewardsData *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserRewardsData * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -7357,14 +14576,14 @@ __attribute__((swift_name("UserRewardsModel")))
 @property (class, readonly, getter=companion) KASDKOSUserRewardsModelCompanion *companion __attribute__((swift_name("companion")));
 
 /** Contains a list of all rewards available to this user */
-- (KASDKOSUserRewardsData *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSUserRewardsModel *)doCopyData:(KASDKOSUserRewardsData *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSUserRewardsData * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserRewardsModel *)doCopyData:(KASDKOSUserRewardsData * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Contains a list of all rewards available to this user */
-@property (readonly) KASDKOSUserRewardsData *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSUserRewardsData * _Nullable data __attribute__((swift_name("data")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -7417,10 +14636,10 @@ __attribute__((swift_name("CampaignMessagesApi.Companion")))
  * Details about this business' category. This can be something like cafe, boutique, etc...
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("BusinessCategory_")))
-@interface KASDKOSBusinessCategory_ : KASDKOSBase
+__attribute__((swift_name("BusinessCategory____")))
+@interface KASDKOSBusinessCategory____ : KASDKOSBase
 - (instancetype)initWithName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("init(name:icon:code:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSBusinessCategory_Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSBusinessCategory____Companion *companion __attribute__((swift_name("companion")));
 
 /** Name of this category */
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
@@ -7434,7 +14653,7 @@ __attribute__((swift_name("BusinessCategory_")))
 /**
  * Details about this business' category. This can be something like cafe, boutique, etc...
  */
-- (KASDKOSBusinessCategory_ *)doCopyName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("doCopy(name:icon:code:)")));
+- (KASDKOSBusinessCategory____ *)doCopyName:(NSString * _Nullable)name icon:(NSString * _Nullable)icon code:(NSString * _Nullable)code __attribute__((swift_name("doCopy(name:icon:code:)")));
 
 /**
  * Details about this business' category. This can be something like cafe, boutique, etc...
@@ -7466,8 +14685,8 @@ __attribute__((swift_name("BusinessCategory_")))
  * Details about this business' category. This can be something like cafe, boutique, etc...
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("BusinessCategory_.Companion")))
-@interface KASDKOSBusinessCategory_Companion : KASDKOSBase
+__attribute__((swift_name("BusinessCategory____.Companion")))
+@interface KASDKOSBusinessCategory____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -7475,7 +14694,7 @@ __attribute__((swift_name("BusinessCategory_.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSBusinessCategory_Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSBusinessCategory____Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * Details about this business' category. This can be something like cafe, boutique, etc...
@@ -7485,17 +14704,17 @@ __attribute__((swift_name("BusinessCategory_.Companion")))
 
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("BusinessData_")))
-@interface KASDKOSBusinessData_ : KASDKOSBase
-- (instancetype)initWithId:(NSString *)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage_____ * _Nullable)logo logoTransparentBackground:(KASDKOSImage_____ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage_____ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory_ * _Nullable)category __attribute__((swift_name("init(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSBusinessData_Companion *companion __attribute__((swift_name("companion")));
+__attribute__((swift_name("BusinessData____")))
+@interface KASDKOSBusinessData____ : KASDKOSBase
+- (instancetype)initWithId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage__________ * _Nullable)logo logoTransparentBackground:(KASDKOSImage__________ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage__________ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory____ * _Nullable)category __attribute__((swift_name("init(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSBusinessData____Companion *companion __attribute__((swift_name("companion")));
 
 /** Unique business ID. */
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSBusinessCategory_ * _Nullable)component10 __attribute__((swift_name("component10()")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBusinessCategory____ * _Nullable)component10 __attribute__((swift_name("component10()")));
 
 /** The name of this business */
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
@@ -7511,42 +14730,42 @@ __attribute__((swift_name("BusinessData_")))
 
 /** General about text for the business */
 - (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
-- (KASDKOSImage_____ * _Nullable)component7 __attribute__((swift_name("component7()")));
-- (KASDKOSImage_____ * _Nullable)component8 __attribute__((swift_name("component8()")));
-- (KASDKOSImage_____ * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (KASDKOSImage__________ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSImage__________ * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (KASDKOSImage__________ * _Nullable)component9 __attribute__((swift_name("component9()")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
-- (KASDKOSBusinessData_ *)doCopyId:(NSString *)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage_____ * _Nullable)logo logoTransparentBackground:(KASDKOSImage_____ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage_____ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory_ * _Nullable)category __attribute__((swift_name("doCopy(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)")));
+- (KASDKOSBusinessData____ *)doCopyId:(NSString * _Nullable)id name:(NSString * _Nullable)name loyaltyType:(NSString * _Nullable)loyaltyType conglomerate:(NSString * _Nullable)conglomerate whiteLabel:(NSString * _Nullable)whiteLabel about:(NSString * _Nullable)about logo:(KASDKOSImage__________ * _Nullable)logo logoTransparentBackground:(KASDKOSImage__________ * _Nullable)logoTransparentBackground coverPhoto:(KASDKOSImage__________ * _Nullable)coverPhoto category:(KASDKOSBusinessCategory____ * _Nullable)category __attribute__((swift_name("doCopy(id:name:loyaltyType:conglomerate:whiteLabel:about:logo:logoTransparentBackground:coverPhoto:category:)")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** General about text for the business */
 @property (readonly) NSString * _Nullable about __attribute__((swift_name("about")));
-@property (readonly) KASDKOSBusinessCategory_ * _Nullable category __attribute__((swift_name("category")));
+@property (readonly) KASDKOSBusinessCategory____ * _Nullable category __attribute__((swift_name("category")));
 
 /** Whether this is a conglomerate business. Conglomerate businesses are umbrellas for multiple business&#39; in Kangaroo  */
 @property (readonly) NSString * _Nullable conglomerate __attribute__((swift_name("conglomerate")));
-@property (readonly) KASDKOSImage_____ * _Nullable coverPhoto __attribute__((swift_name("coverPhoto")));
+@property (readonly) KASDKOSImage__________ * _Nullable coverPhoto __attribute__((swift_name("coverPhoto")));
 
 /** Unique business ID. */
-@property (readonly) NSString *id __attribute__((swift_name("id")));
-@property (readonly) KASDKOSImage_____ * _Nullable logo __attribute__((swift_name("logo")));
-@property (readonly) KASDKOSImage_____ * _Nullable logoTransparentBackground __attribute__((swift_name("logoTransparentBackground")));
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSImage__________ * _Nullable logo __attribute__((swift_name("logo")));
+@property (readonly) KASDKOSImage__________ * _Nullable logoTransparentBackground __attribute__((swift_name("logoTransparentBackground")));
 
 /** The manner in which this business rewards its customers. This can be by purchase amount of by visit to the store  */
 @property (readonly) NSString * _Nullable loyaltyType __attribute__((swift_name("loyaltyType")));
@@ -7560,22 +14779,22 @@ __attribute__((swift_name("BusinessData_")))
 
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("BusinessData_.Companion")))
-@interface KASDKOSBusinessData_Companion : KASDKOSBase
+__attribute__((swift_name("BusinessData____.Companion")))
+@interface KASDKOSBusinessData____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSBusinessData_Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSBusinessData____Companion *shared __attribute__((swift_name("shared")));
 
 /**
- * User Profile model class containing user data
+ * Business profile data
  */
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
@@ -7587,10 +14806,10 @@ __attribute__((swift_name("BusinessData_.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Campaign")))
 @interface KASDKOSCampaign : KASDKOSBase
-- (instancetype)initWithId:(int64_t)id subject:(NSString * _Nullable)subject htmlContent:(NSString * _Nullable)htmlContent plainContent:(NSString * _Nullable)plainContent pushTitle:(NSString * _Nullable)pushTitle pushBody:(NSString * _Nullable)pushBody pushLink:(NSString * _Nullable)pushLink pushImage:(NSString * _Nullable)pushImage offers:(NSArray<KASDKOSOfferModel___ *> * _Nullable)offers business:(KASDKOSBusinessData_ * _Nullable)business __attribute__((swift_name("init(id:subject:htmlContent:plainContent:pushTitle:pushBody:pushLink:pushImage:offers:business:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id subject:(NSString * _Nullable)subject htmlContent:(NSString * _Nullable)htmlContent plainContent:(NSString * _Nullable)plainContent pushTitle:(NSString * _Nullable)pushTitle pushBody:(NSString * _Nullable)pushBody pushLink:(NSString * _Nullable)pushLink pushImage:(NSString * _Nullable)pushImage offers:(NSArray<KASDKOSOfferModel____ *> * _Nullable)offers business:(KASDKOSBusinessData____ * _Nullable)business __attribute__((swift_name("init(id:subject:htmlContent:plainContent:pushTitle:pushBody:pushLink:pushImage:offers:business:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSCampaignCompanion *companion __attribute__((swift_name("companion")));
-- (int64_t)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSBusinessData_ * _Nullable)component10 __attribute__((swift_name("component10()")));
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSBusinessData____ * _Nullable)component10 __attribute__((swift_name("component10()")));
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
@@ -7598,12 +14817,12 @@ __attribute__((swift_name("Campaign")))
 - (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
 - (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
 - (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
-- (NSArray<KASDKOSOfferModel___ *> * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (NSArray<KASDKOSOfferModel____ *> * _Nullable)component9 __attribute__((swift_name("component9()")));
 
 /**
  * The core campaign object for this campaign. This might include data such as the original html content of the campaign, sms or push data, or offers and rewards attached to this campaign.
  */
-- (KASDKOSCampaign *)doCopyId:(int64_t)id subject:(NSString * _Nullable)subject htmlContent:(NSString * _Nullable)htmlContent plainContent:(NSString * _Nullable)plainContent pushTitle:(NSString * _Nullable)pushTitle pushBody:(NSString * _Nullable)pushBody pushLink:(NSString * _Nullable)pushLink pushImage:(NSString * _Nullable)pushImage offers:(NSArray<KASDKOSOfferModel___ *> * _Nullable)offers business:(KASDKOSBusinessData_ * _Nullable)business __attribute__((swift_name("doCopy(id:subject:htmlContent:plainContent:pushTitle:pushBody:pushLink:pushImage:offers:business:)")));
+- (KASDKOSCampaign *)doCopyId:(KASDKOSLong * _Nullable)id subject:(NSString * _Nullable)subject htmlContent:(NSString * _Nullable)htmlContent plainContent:(NSString * _Nullable)plainContent pushTitle:(NSString * _Nullable)pushTitle pushBody:(NSString * _Nullable)pushBody pushLink:(NSString * _Nullable)pushLink pushImage:(NSString * _Nullable)pushImage offers:(NSArray<KASDKOSOfferModel____ *> * _Nullable)offers business:(KASDKOSBusinessData____ * _Nullable)business __attribute__((swift_name("doCopy(id:subject:htmlContent:plainContent:pushTitle:pushBody:pushLink:pushImage:offers:business:)")));
 
 /**
  * The core campaign object for this campaign. This might include data such as the original html content of the campaign, sms or push data, or offers and rewards attached to this campaign.
@@ -7619,10 +14838,10 @@ __attribute__((swift_name("Campaign")))
  * The core campaign object for this campaign. This might include data such as the original html content of the campaign, sms or push data, or offers and rewards attached to this campaign.
  */
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) KASDKOSBusinessData_ * _Nullable business __attribute__((swift_name("business")));
+@property (readonly) KASDKOSBusinessData____ * _Nullable business __attribute__((swift_name("business")));
 @property (readonly) NSString * _Nullable htmlContent __attribute__((swift_name("htmlContent")));
-@property (readonly) int64_t id __attribute__((swift_name("id")));
-@property (readonly) NSArray<KASDKOSOfferModel___ *> * _Nullable offers __attribute__((swift_name("offers")));
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
+@property (readonly) NSArray<KASDKOSOfferModel____ *> * _Nullable offers __attribute__((swift_name("offers")));
 @property (readonly) NSString * _Nullable plainContent __attribute__((swift_name("plainContent")));
 @property (readonly) NSString * _Nullable pushBody __attribute__((swift_name("pushBody")));
 @property (readonly) NSString * _Nullable pushImage __attribute__((swift_name("pushImage")));
@@ -7660,11 +14879,11 @@ __attribute__((swift_name("Campaign.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CampaignMessage")))
 @interface KASDKOSCampaignMessage : KASDKOSBase
-- (instancetype)initWithId:(NSString *)id cellEmail:(KASDKOSInt * _Nullable)cellEmail subject:(NSString * _Nullable)subject sentAt:(NSString * _Nullable)sentAt message:(NSString * _Nullable)message campaign:(KASDKOSCampaign * _Nullable)campaign __attribute__((swift_name("init(id:cellEmail:subject:sentAt:message:campaign:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(NSString * _Nullable)id cellEmail:(KASDKOSInt * _Nullable)cellEmail subject:(NSString * _Nullable)subject sentAt:(NSString * _Nullable)sentAt message:(NSString * _Nullable)message campaign:(KASDKOSCampaign * _Nullable)campaign __attribute__((swift_name("init(id:cellEmail:subject:sentAt:message:campaign:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSCampaignMessageCompanion *companion __attribute__((swift_name("companion")));
 
 /** Unique campaign ID. */
-- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /** The original delivery method for this campaign */
 - (KASDKOSInt * _Nullable)component2 __attribute__((swift_name("component2()")));
@@ -7682,7 +14901,7 @@ __attribute__((swift_name("CampaignMessage")))
 /**
  * Campaign Message. These are sent to the user by the business through Kangaroo's Marketing module.
  */
-- (KASDKOSCampaignMessage *)doCopyId:(NSString *)id cellEmail:(KASDKOSInt * _Nullable)cellEmail subject:(NSString * _Nullable)subject sentAt:(NSString * _Nullable)sentAt message:(NSString * _Nullable)message campaign:(KASDKOSCampaign * _Nullable)campaign __attribute__((swift_name("doCopy(id:cellEmail:subject:sentAt:message:campaign:)")));
+- (KASDKOSCampaignMessage *)doCopyId:(NSString * _Nullable)id cellEmail:(KASDKOSInt * _Nullable)cellEmail subject:(NSString * _Nullable)subject sentAt:(NSString * _Nullable)sentAt message:(NSString * _Nullable)message campaign:(KASDKOSCampaign * _Nullable)campaign __attribute__((swift_name("doCopy(id:cellEmail:subject:sentAt:message:campaign:)")));
 
 /**
  * Campaign Message. These are sent to the user by the business through Kangaroo's Marketing module.
@@ -7704,7 +14923,7 @@ __attribute__((swift_name("CampaignMessage")))
 @property (readonly) KASDKOSInt * _Nullable cellEmail __attribute__((swift_name("cellEmail")));
 
 /** Unique campaign ID. */
-@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSString * _Nullable id __attribute__((swift_name("id")));
 
 /** A short / simple message for this campaign. */
 @property (readonly) NSString * _Nullable message __attribute__((swift_name("message")));
@@ -7745,7 +14964,7 @@ __attribute__((swift_name("CampaignMessage.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CampaignMessagesModel")))
 @interface KASDKOSCampaignMessagesModel : KASDKOSModel
-- (instancetype)initWithData:(NSArray<KASDKOSCampaignMessage *> *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(NSArray<KASDKOSCampaignMessage *> * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -7756,12 +14975,12 @@ __attribute__((swift_name("CampaignMessagesModel")))
 @property (class, readonly, getter=companion) KASDKOSCampaignMessagesModelCompanion *companion __attribute__((swift_name("companion")));
 
 /** List of campaign messages. */
-- (NSArray<KASDKOSCampaignMessage *> *)component1 __attribute__((swift_name("component1()")));
+- (NSArray<KASDKOSCampaignMessage *> * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /**
  * Contains a list of campaign messages sent to this user
  */
-- (KASDKOSCampaignMessagesModel *)doCopyData:(NSArray<KASDKOSCampaignMessage *> *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSCampaignMessagesModel *)doCopyData:(NSArray<KASDKOSCampaignMessage *> * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
 
 /**
  * Contains a list of campaign messages sent to this user
@@ -7779,7 +14998,7 @@ __attribute__((swift_name("CampaignMessagesModel")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** List of campaign messages. */
-@property (readonly) NSArray<KASDKOSCampaignMessage *> *data __attribute__((swift_name("data")));
+@property (readonly) NSArray<KASDKOSCampaignMessage *> * _Nullable data __attribute__((swift_name("data")));
 @end;
 
 
@@ -7805,15 +15024,15 @@ __attribute__((swift_name("CampaignMessagesModel.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image_____")))
-@interface KASDKOSImage_____ : KASDKOSBase
+__attribute__((swift_name("Image__________")))
+@interface KASDKOSImage__________ : KASDKOSBase
 - (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSImage_____Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSImage__________Companion *companion __attribute__((swift_name("companion")));
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSImage_____ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (KASDKOSImage__________ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -7824,20 +15043,20 @@ __attribute__((swift_name("Image_____")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image_____.Companion")))
-@interface KASDKOSImage_____Companion : KASDKOSBase
+__attribute__((swift_name("Image__________.Companion")))
+@interface KASDKOSImage__________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSImage_____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSImage__________Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language______")))
-@interface KASDKOSLanguage______ : KASDKOSBase
+__attribute__((swift_name("Language_________")))
+@interface KASDKOSLanguage_________ : KASDKOSBase
 - (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSLanguage______Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSLanguage_________Companion *companion __attribute__((swift_name("companion")));
 
 /** The Kangaroo ID of this language. */
 - (int32_t)component1 __attribute__((swift_name("component1()")));
@@ -7847,7 +15066,7 @@ __attribute__((swift_name("Language______")))
 
 /** The full name of this language (English, French, Spanish) */
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage______ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (KASDKOSLanguage_________ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -7863,22 +15082,22 @@ __attribute__((swift_name("Language______")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language______.Companion")))
-@interface KASDKOSLanguage______Companion : KASDKOSBase
+__attribute__((swift_name("Language_________.Companion")))
+@interface KASDKOSLanguage_________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSLanguage______Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSLanguage_________Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferAction___")))
-@interface KASDKOSOfferAction___ : KASDKOSBase
+__attribute__((swift_name("OfferAction____")))
+@interface KASDKOSOfferAction____ : KASDKOSBase
 - (instancetype)initWithType:(NSString * _Nullable)type __attribute__((swift_name("init(type:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSOfferAction___Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSOfferAction____Companion *companion __attribute__((swift_name("companion")));
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSOfferAction___ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
+- (KASDKOSOfferAction____ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -7886,19 +15105,19 @@ __attribute__((swift_name("OfferAction___")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferAction___.Companion")))
-@interface KASDKOSOfferAction___Companion : KASDKOSBase
+__attribute__((swift_name("OfferAction____.Companion")))
+@interface KASDKOSOfferAction____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferAction___Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSOfferAction____Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferModel___")))
-@interface KASDKOSOfferModel___ : KASDKOSModel
-- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage_____ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation___ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction___ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
+__attribute__((swift_name("OfferModel____")))
+@interface KASDKOSOfferModel____ : KASDKOSModel
+- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage__________ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation____ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction____ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -7906,7 +15125,7 @@ __attribute__((swift_name("OfferModel___")))
  */
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSOfferModel___Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSOfferModel____Companion *companion __attribute__((swift_name("companion")));
 
 /** A unique ID identifying this reward */
 - (int32_t)component1 __attribute__((swift_name("component1()")));
@@ -7940,7 +15159,7 @@ __attribute__((swift_name("OfferModel___")))
 - (NSString * _Nullable)component20 __attribute__((swift_name("component20()")));
 
 /** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
-- (NSArray<KASDKOSImage_____ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
+- (NSArray<KASDKOSImage__________ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
 
 /** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
 - (KASDKOSBoolean * _Nullable)component22 __attribute__((swift_name("component22()")));
@@ -7952,10 +15171,10 @@ __attribute__((swift_name("OfferModel___")))
 - (NSString * _Nullable)component24 __attribute__((swift_name("component24()")));
 
 /** A list of translations of this offer into different languages. */
-- (NSArray<KASDKOSOfferTranslation___ *> * _Nullable)component25 __attribute__((swift_name("component25()")));
+- (NSArray<KASDKOSOfferTranslation____ *> * _Nullable)component25 __attribute__((swift_name("component25()")));
 
 /** A list of possible actions to perform on this offer. */
-- (NSArray<KASDKOSOfferAction___ *> * _Nullable)component26 __attribute__((swift_name("component26()")));
+- (NSArray<KASDKOSOfferAction____ *> * _Nullable)component26 __attribute__((swift_name("component26()")));
 
 /** The publication date of this offer. */
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
@@ -7977,13 +15196,13 @@ __attribute__((swift_name("OfferModel___")))
 
 /** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
 - (KASDKOSDouble * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (KASDKOSOfferModel___ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage_____ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation___ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction___ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
+- (KASDKOSOfferModel____ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage__________ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation____ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction____ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** A list of possible actions to perform on this offer. */
-@property (readonly) NSArray<KASDKOSOfferAction___ *> * _Nullable actions __attribute__((swift_name("actions")));
+@property (readonly) NSArray<KASDKOSOfferAction____ *> * _Nullable actions __attribute__((swift_name("actions")));
 
 /** Whether this offer must be claimed on a mobile app before being used in store.  */
 @property (readonly) KASDKOSBoolean * _Nullable appsOnly __attribute__((swift_name("appsOnly")));
@@ -8005,7 +15224,7 @@ __attribute__((swift_name("OfferModel___")))
 @property (readonly) int32_t id __attribute__((swift_name("id")));
 
 /** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
-@property (readonly) NSArray<KASDKOSImage_____ *> * _Nullable images __attribute__((swift_name("images")));
+@property (readonly) NSArray<KASDKOSImage__________ *> * _Nullable images __attribute__((swift_name("images")));
 
 /** Whether this offer is currently published or not. */
 @property (readonly) KASDKOSBoolean * _Nullable isPublished __attribute__((swift_name("isPublished")));
@@ -8027,7 +15246,7 @@ __attribute__((swift_name("OfferModel___")))
 @property (readonly) KASDKOSInt * _Nullable offerFrequencyId __attribute__((swift_name("offerFrequencyId")));
 
 /** A list of translations of this offer into different languages. */
-@property (readonly) NSArray<KASDKOSOfferTranslation___ *> * _Nullable offerLanguages __attribute__((swift_name("offerLanguages")));
+@property (readonly) NSArray<KASDKOSOfferTranslation____ *> * _Nullable offerLanguages __attribute__((swift_name("offerLanguages")));
 @property (readonly) NSString * _Nullable peakFrom __attribute__((swift_name("peakFrom")));
 @property (readonly) NSString * _Nullable peakTo __attribute__((swift_name("peakTo")));
 
@@ -8054,12 +15273,12 @@ __attribute__((swift_name("OfferModel___")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferModel___.Companion")))
-@interface KASDKOSOfferModel___Companion : KASDKOSBase
+__attribute__((swift_name("OfferModel____.Companion")))
+@interface KASDKOSOfferModel____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferModel___Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSOfferModel____Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
@@ -8068,10 +15287,10 @@ __attribute__((swift_name("OfferModel___.Companion")))
  * A language translation of this offer.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferTranslation___")))
-@interface KASDKOSOfferTranslation___ : KASDKOSBase
-- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage______ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSOfferTranslation___Companion *companion __attribute__((swift_name("companion")));
+__attribute__((swift_name("OfferTranslation____")))
+@interface KASDKOSOfferTranslation____ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage_________ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSOfferTranslation____Companion *companion __attribute__((swift_name("companion")));
 - (int32_t)component1 __attribute__((swift_name("component1()")));
 
 /** The ID of this specific translation */
@@ -8090,12 +15309,12 @@ __attribute__((swift_name("OfferTranslation___")))
 - (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
 
 /** The language for which this translation applies. */
-- (KASDKOSLanguage______ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSLanguage_________ * _Nullable)component7 __attribute__((swift_name("component7()")));
 
 /**
  * A language translation of this offer.
  */
-- (KASDKOSOfferTranslation___ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage______ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
+- (KASDKOSOfferTranslation____ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage_________ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
 
 /**
  * A language translation of this offer.
@@ -8114,7 +15333,7 @@ __attribute__((swift_name("OfferTranslation___")))
 @property (readonly) int32_t id __attribute__((swift_name("id")));
 
 /** The language for which this translation applies. */
-@property (readonly) KASDKOSLanguage______ * _Nullable language __attribute__((swift_name("language")));
+@property (readonly) KASDKOSLanguage_________ * _Nullable language __attribute__((swift_name("language")));
 
 /** The ID of this specific translation */
 @property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
@@ -8137,8 +15356,8 @@ __attribute__((swift_name("OfferTranslation___")))
  * A language translation of this offer.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferTranslation___.Companion")))
-@interface KASDKOSOfferTranslation___Companion : KASDKOSBase
+__attribute__((swift_name("OfferTranslation____.Companion")))
+@interface KASDKOSOfferTranslation____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -8146,7 +15365,7 @@ __attribute__((swift_name("OfferTranslation___.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferTranslation___Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSOfferTranslation____Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * A language translation of this offer.
@@ -8246,47 +15465,59 @@ __attribute__((swift_name("Images_.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language_______")))
-@interface KASDKOSLanguage_______ : KASDKOSBase
-- (instancetype)initWithId:(KASDKOSInt * _Nullable)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSLanguage_______Companion *companion __attribute__((swift_name("companion")));
-- (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
+__attribute__((swift_name("Language__________")))
+@interface KASDKOSLanguage__________ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSLanguage__________Companion *companion __attribute__((swift_name("companion")));
+
+/** The Kangaroo ID of this language. */
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** The full name of this language (English, French, Spanish) */
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage_______ *)doCopyId:(KASDKOSInt * _Nullable)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (KASDKOSLanguage__________ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
+
+/** A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  */
 @property (readonly) NSString * _Nullable abbreviation __attribute__((swift_name("abbreviation")));
-@property (readonly) KASDKOSInt * _Nullable id __attribute__((swift_name("id")));
+
+/** The Kangaroo ID of this language. */
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+
+/** The full name of this language (English, French, Spanish) */
 @property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language_______.Companion")))
-@interface KASDKOSLanguage_______Companion : KASDKOSBase
+__attribute__((swift_name("Language__________.Companion")))
+@interface KASDKOSLanguage__________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSLanguage_______Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSLanguage__________Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Languages_")))
 @interface KASDKOSLanguages_ : KASDKOSBase
-- (instancetype)initWithLanguageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description language:(KASDKOSLanguage_______ * _Nullable)language __attribute__((swift_name("init(languageId:title:description:language:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithLanguageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description language:(KASDKOSLanguage__________ * _Nullable)language __attribute__((swift_name("init(languageId:title:description:language:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSLanguages_Companion *companion __attribute__((swift_name("companion")));
 - (KASDKOSInt * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage_______ * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSLanguages_ *)doCopyLanguageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description language:(KASDKOSLanguage_______ * _Nullable)language __attribute__((swift_name("doCopy(languageId:title:description:language:)")));
+- (KASDKOSLanguage__________ * _Nullable)component4 __attribute__((swift_name("component4()")));
+- (KASDKOSLanguages_ *)doCopyLanguageId:(KASDKOSInt * _Nullable)languageId title:(NSString * _Nullable)title description:(NSString * _Nullable)description language:(KASDKOSLanguage__________ * _Nullable)language __attribute__((swift_name("doCopy(languageId:title:description:language:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
-@property (readonly) KASDKOSLanguage_______ * _Nullable language __attribute__((swift_name("language")));
+@property (readonly) KASDKOSLanguage__________ * _Nullable language __attribute__((swift_name("language")));
 @property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
 @property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
 @end;
@@ -8352,14 +15583,14 @@ __attribute__((swift_name("Product_.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProductsIncluded")))
 @interface KASDKOSUserProductsIncluded : KASDKOSBase
-- (instancetype)initWithProducts:(NSArray<KASDKOSProduct_ *> *)products __attribute__((swift_name("init(products:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithProducts:(NSArray<KASDKOSProduct_ *> * _Nullable)products __attribute__((swift_name("init(products:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) KASDKOSUserProductsIncludedCompanion *companion __attribute__((swift_name("companion")));
-- (NSArray<KASDKOSProduct_ *> *)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSUserProductsIncluded *)doCopyProducts:(NSArray<KASDKOSProduct_ *> *)products __attribute__((swift_name("doCopy(products:)")));
+- (NSArray<KASDKOSProduct_ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserProductsIncluded *)doCopyProducts:(NSArray<KASDKOSProduct_ *> * _Nullable)products __attribute__((swift_name("doCopy(products:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSArray<KASDKOSProduct_ *> *products __attribute__((swift_name("products")));
+@property (readonly) NSArray<KASDKOSProduct_ *> * _Nullable products __attribute__((swift_name("products")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -8379,7 +15610,7 @@ __attribute__((swift_name("UserProductsIncluded.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserProductsModel")))
 @interface KASDKOSUserProductsModel : KASDKOSModel
-- (instancetype)initWithData:(KASDKOSUserProfileData________ *)data included:(KASDKOSUserProductsIncluded *)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(KASDKOSUserProfileDataModel___________ * _Nullable)data included:(KASDKOSUserProductsIncluded * _Nullable)included __attribute__((swift_name("init(data:included:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -8390,15 +15621,15 @@ __attribute__((swift_name("UserProductsModel")))
 @property (class, readonly, getter=companion) KASDKOSUserProductsModelCompanion *companion __attribute__((swift_name("companion")));
 
 /** Contains all user data */
-- (KASDKOSUserProfileData________ *)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSUserProfileDataModel___________ * _Nullable)component1 __attribute__((swift_name("component1()")));
 
-/** Containrs products available to this user */
-- (KASDKOSUserProductsIncluded *)component2 __attribute__((swift_name("component2()")));
+/** Contains products available to this user */
+- (KASDKOSUserProductsIncluded * _Nullable)component2 __attribute__((swift_name("component2()")));
 
 /**
  * User Product model class containing user product list
  */
-- (KASDKOSUserProductsModel *)doCopyData:(KASDKOSUserProfileData________ *)data included:(KASDKOSUserProductsIncluded *)included __attribute__((swift_name("doCopy(data:included:)")));
+- (KASDKOSUserProductsModel *)doCopyData:(KASDKOSUserProfileDataModel___________ * _Nullable)data included:(KASDKOSUserProductsIncluded * _Nullable)included __attribute__((swift_name("doCopy(data:included:)")));
 
 /**
  * User Product model class containing user product list
@@ -8416,10 +15647,10 @@ __attribute__((swift_name("UserProductsModel")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** Contains all user data */
-@property (readonly) KASDKOSUserProfileData________ *data __attribute__((swift_name("data")));
+@property (readonly) KASDKOSUserProfileDataModel___________ * _Nullable data __attribute__((swift_name("data")));
 
-/** Containrs products available to this user */
-@property (readonly) KASDKOSUserProductsIncluded *included __attribute__((swift_name("included")));
+/** Contains products available to this user */
+@property (readonly) KASDKOSUserProductsIncluded * _Nullable included __attribute__((swift_name("included")));
 @end;
 
 
@@ -8449,10 +15680,10 @@ __attribute__((swift_name("UserProductsModel.Companion")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData________")))
-@interface KASDKOSUserProfileData________ : KASDKOSBase
+__attribute__((swift_name("UserProfileData_________")))
+@interface KASDKOSUserProfileData_________ : KASDKOSBase
 - (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSUserProfileData________Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSUserProfileData_________Companion *companion __attribute__((swift_name("companion")));
 
 /** Unique user ID. */
 - (NSString *)component1 __attribute__((swift_name("component1()")));
@@ -8472,10 +15703,10 @@ __attribute__((swift_name("UserProfileData________")))
 /** Denotes whether this account has been enabled. */
 - (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 - (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
 
 /** Email address identifying this user. */
@@ -8505,7 +15736,7 @@ __attribute__((swift_name("UserProfileData________")))
 /**
  * User Profile model class containing user data
  */
-- (KASDKOSUserProfileData________ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+- (KASDKOSUserProfileData_________ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
 
 /**
  * User Profile model class containing user data
@@ -8534,7 +15765,7 @@ __attribute__((swift_name("UserProfileData________")))
 /** Email address identifying this user. */
 @property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
 
-/** Denotes whether the email address for this user has been verified */
+/** Denotes whether the email address for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
 
 /** Denotes whether this account has been enabled. */
@@ -8558,7 +15789,7 @@ __attribute__((swift_name("UserProfileData________")))
 /** Phone number associated with this user. */
 @property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
 
-/** Denotes whether the phone number for this user has been verified */
+/** Denotes whether the phone number for this user has been verified. */
 @property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
 
 /** Profile photo url associated with this user. */
@@ -8576,8 +15807,8 @@ __attribute__((swift_name("UserProfileData________")))
  * User Profile model class containing user data
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UserProfileData________.Companion")))
-@interface KASDKOSUserProfileData________Companion : KASDKOSBase
+__attribute__((swift_name("UserProfileData_________.Companion")))
+@interface KASDKOSUserProfileData_________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -8585,7 +15816,163 @@ __attribute__((swift_name("UserProfileData________.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSUserProfileData________Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileData_________Companion *shared __attribute__((swift_name("shared")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel___________")))
+@interface KASDKOSUserProfileDataModel___________ : KASDKOSModel
+- (instancetype)initWithId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("init(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * Base DAO object returned from Network results and Database queries.
+ * Should be Serializable.
+ */
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
++ (instancetype)new __attribute__((unavailable));
+@property (class, readonly, getter=companion) KASDKOSUserProfileDataModel___________Companion *companion __attribute__((swift_name("companion")));
+
+/** Unique user ID. */
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+
+/** Country code associated with this user. */
+- (NSString * _Nullable)component10 __attribute__((swift_name("component10()")));
+
+/** Profile photo url associated with this user. */
+- (NSString * _Nullable)component11 __attribute__((swift_name("component11()")));
+
+/** Date the account for this user was created. */
+- (NSString * _Nullable)component12 __attribute__((swift_name("component12()")));
+
+/** Date the account for this user was last updated. */
+- (NSString * _Nullable)component13 __attribute__((swift_name("component13()")));
+
+/** Denotes whether this account has been enabled. */
+- (KASDKOSBoolean * _Nullable)component14 __attribute__((swift_name("component14()")));
+
+/** Denotes whether the email address for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component15 __attribute__((swift_name("component15()")));
+
+/** Denotes whether the phone number for this user has been verified. */
+- (KASDKOSBoolean * _Nullable)component16 __attribute__((swift_name("component16()")));
+
+/** Email address identifying this user. */
+- (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
+
+/** Phone number associated with this user. */
+- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
+
+/** First name associated with this user. */
+- (NSString * _Nullable)component4 __attribute__((swift_name("component4()")));
+
+/** Last name associated with this user. */
+- (NSString * _Nullable)component5 __attribute__((swift_name("component5()")));
+
+/** Unique QR code identifying this user. */
+- (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
+
+/** Gender associated with this user. */
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+
+/** Date of birth associated with this user. */
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+
+/** Primary language assocaited with this user. */
+- (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (KASDKOSUserProfileDataModel___________ *)doCopyId:(NSString *)id email:(NSString * _Nullable)email phone:(NSString * _Nullable)phone firstName:(NSString * _Nullable)firstName lastName:(NSString * _Nullable)lastName qrcode:(NSString * _Nullable)qrcode gender:(NSString * _Nullable)gender birthDate:(NSString * _Nullable)birthDate language:(NSString * _Nullable)language countryCode:(NSString * _Nullable)countryCode profilePhoto:(NSString * _Nullable)profilePhoto createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt enabled:(KASDKOSBoolean * _Nullable)enabled emailVerified:(KASDKOSBoolean * _Nullable)emailVerified phoneVerified:(KASDKOSBoolean * _Nullable)phoneVerified __attribute__((swift_name("doCopy(id:email:phone:firstName:lastName:qrcode:gender:birthDate:language:countryCode:profilePhoto:createdAt:updatedAt:enabled:emailVerified:phoneVerified:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+
+/**
+ * User Profile model class containing user data
+ */
+- (NSString *)description __attribute__((swift_name("description()")));
+
+/** Date of birth associated with this user. */
+@property (readonly) NSString * _Nullable birthDate __attribute__((swift_name("birthDate")));
+
+/** Country code associated with this user. */
+@property (readonly) NSString * _Nullable countryCode __attribute__((swift_name("countryCode")));
+
+/** Date the account for this user was created. */
+@property (readonly) NSString * _Nullable createdAt __attribute__((swift_name("createdAt")));
+
+/** Email address identifying this user. */
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+
+/** Denotes whether the email address for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable emailVerified __attribute__((swift_name("emailVerified")));
+
+/** Denotes whether this account has been enabled. */
+@property (readonly) KASDKOSBoolean * _Nullable enabled __attribute__((swift_name("enabled")));
+
+/** First name associated with this user. */
+@property (readonly) NSString * _Nullable firstName __attribute__((swift_name("firstName")));
+
+/** Gender associated with this user. */
+@property (readonly) NSString * _Nullable gender __attribute__((swift_name("gender")));
+
+/** Unique user ID. */
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+
+/** Primary language assocaited with this user. */
+@property (readonly) NSString * _Nullable language __attribute__((swift_name("language")));
+
+/** Last name associated with this user. */
+@property (readonly) NSString * _Nullable lastName __attribute__((swift_name("lastName")));
+
+/** Phone number associated with this user. */
+@property (readonly) NSString * _Nullable phone __attribute__((swift_name("phone")));
+
+/** Denotes whether the phone number for this user has been verified. */
+@property (readonly) KASDKOSBoolean * _Nullable phoneVerified __attribute__((swift_name("phoneVerified")));
+
+/** Profile photo url associated with this user. */
+@property (readonly) NSString * _Nullable profilePhoto __attribute__((swift_name("profilePhoto")));
+
+/** Unique QR code identifying this user. */
+@property (readonly) NSString * _Nullable qrcode __attribute__((swift_name("qrcode")));
+
+/** Date the account for this user was last updated. */
+@property (readonly) NSString * _Nullable updatedAt __attribute__((swift_name("updatedAt")));
+@end;
+
+
+/**
+ * User Profile model class containing user data
+ */
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UserProfileDataModel___________.Companion")))
+@interface KASDKOSUserProfileDataModel___________Companion : KASDKOSBase
++ (instancetype)alloc __attribute__((unavailable));
+
+/**
+ * User Profile model class containing user data
+ */
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) KASDKOSUserProfileDataModel___________Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * User Profile model class containing user data
@@ -8629,15 +16016,15 @@ __attribute__((swift_name("TransferMessagesApi.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image______")))
-@interface KASDKOSImage______ : KASDKOSBase
+__attribute__((swift_name("Image___________")))
+@interface KASDKOSImage___________ : KASDKOSBase
 - (instancetype)initWithLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("init(large:medium:thumbnail:default:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSImage______Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSImage___________Companion *companion __attribute__((swift_name("companion")));
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
 - (NSString * _Nullable)component2 __attribute__((swift_name("component2()")));
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
 - (KASDKOSBoolean * _Nullable)component4 __attribute__((swift_name("component4()")));
-- (KASDKOSImage______ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
+- (KASDKOSImage___________ *)doCopyLarge:(NSString * _Nullable)large medium:(NSString * _Nullable)medium thumbnail:(NSString * _Nullable)thumbnail default:(KASDKOSBoolean * _Nullable)default_ __attribute__((swift_name("doCopy(large:medium:thumbnail:default:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -8648,20 +16035,20 @@ __attribute__((swift_name("Image______")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Image______.Companion")))
-@interface KASDKOSImage______Companion : KASDKOSBase
+__attribute__((swift_name("Image___________.Companion")))
+@interface KASDKOSImage___________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSImage______Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSImage___________Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language________")))
-@interface KASDKOSLanguage________ : KASDKOSBase
+__attribute__((swift_name("Language___________")))
+@interface KASDKOSLanguage___________ : KASDKOSBase
 - (instancetype)initWithId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("init(id:abbreviation:name:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSLanguage________Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSLanguage___________Companion *companion __attribute__((swift_name("companion")));
 
 /** The Kangaroo ID of this language. */
 - (int32_t)component1 __attribute__((swift_name("component1()")));
@@ -8671,7 +16058,7 @@ __attribute__((swift_name("Language________")))
 
 /** The full name of this language (English, French, Spanish) */
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (KASDKOSLanguage________ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
+- (KASDKOSLanguage___________ *)doCopyId:(int32_t)id abbreviation:(NSString * _Nullable)abbreviation name:(NSString * _Nullable)name __attribute__((swift_name("doCopy(id:abbreviation:name:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -8687,22 +16074,22 @@ __attribute__((swift_name("Language________")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Language________.Companion")))
-@interface KASDKOSLanguage________Companion : KASDKOSBase
+__attribute__((swift_name("Language___________.Companion")))
+@interface KASDKOSLanguage___________Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSLanguage________Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSLanguage___________Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferAction____")))
-@interface KASDKOSOfferAction____ : KASDKOSBase
+__attribute__((swift_name("OfferAction_____")))
+@interface KASDKOSOfferAction_____ : KASDKOSBase
 - (instancetype)initWithType:(NSString * _Nullable)type __attribute__((swift_name("init(type:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSOfferAction____Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSOfferAction_____Companion *companion __attribute__((swift_name("companion")));
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSOfferAction____ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
+- (KASDKOSOfferAction_____ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -8710,19 +16097,19 @@ __attribute__((swift_name("OfferAction____")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferAction____.Companion")))
-@interface KASDKOSOfferAction____Companion : KASDKOSBase
+__attribute__((swift_name("OfferAction_____.Companion")))
+@interface KASDKOSOfferAction_____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferAction____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSOfferAction_____Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferModel____")))
-@interface KASDKOSOfferModel____ : KASDKOSModel
-- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage______ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation____ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction____ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
+__attribute__((swift_name("OfferModel_____")))
+@interface KASDKOSOfferModel_____ : KASDKOSModel
+- (instancetype)initWithId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage___________ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation_____ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction_____ *> * _Nullable)actions __attribute__((swift_name("init(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -8730,7 +16117,7 @@ __attribute__((swift_name("OfferModel____")))
  */
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
-@property (class, readonly, getter=companion) KASDKOSOfferModel____Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSOfferModel_____Companion *companion __attribute__((swift_name("companion")));
 
 /** A unique ID identifying this reward */
 - (int32_t)component1 __attribute__((swift_name("component1()")));
@@ -8764,7 +16151,7 @@ __attribute__((swift_name("OfferModel____")))
 - (NSString * _Nullable)component20 __attribute__((swift_name("component20()")));
 
 /** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
-- (NSArray<KASDKOSImage______ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
+- (NSArray<KASDKOSImage___________ *> * _Nullable)component21 __attribute__((swift_name("component21()")));
 
 /** Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  */
 - (KASDKOSBoolean * _Nullable)component22 __attribute__((swift_name("component22()")));
@@ -8776,10 +16163,10 @@ __attribute__((swift_name("OfferModel____")))
 - (NSString * _Nullable)component24 __attribute__((swift_name("component24()")));
 
 /** A list of translations of this offer into different languages. */
-- (NSArray<KASDKOSOfferTranslation____ *> * _Nullable)component25 __attribute__((swift_name("component25()")));
+- (NSArray<KASDKOSOfferTranslation_____ *> * _Nullable)component25 __attribute__((swift_name("component25()")));
 
 /** A list of possible actions to perform on this offer. */
-- (NSArray<KASDKOSOfferAction____ *> * _Nullable)component26 __attribute__((swift_name("component26()")));
+- (NSArray<KASDKOSOfferAction_____ *> * _Nullable)component26 __attribute__((swift_name("component26()")));
 
 /** The publication date of this offer. */
 - (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
@@ -8801,13 +16188,13 @@ __attribute__((swift_name("OfferModel____")))
 
 /** The multiplication factor of this offer. This only applies to Point Multiplier offers.  */
 - (KASDKOSDouble * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (KASDKOSOfferModel____ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage______ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation____ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction____ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
+- (KASDKOSOfferModel_____ *)doCopyId:(int32_t)id points:(KASDKOSLong * _Nullable)points publishAt:(NSString * _Nullable)publishAt expiresAt:(NSString * _Nullable)expiresAt isPublished:(KASDKOSBoolean * _Nullable)isPublished couponConvertible:(KASDKOSBoolean * _Nullable)couponConvertible realValue:(KASDKOSDouble * _Nullable)realValue discountValue:(KASDKOSDouble * _Nullable)discountValue multipFactor:(KASDKOSDouble * _Nullable)multipFactor minPurchase:(KASDKOSDouble * _Nullable)minPurchase maxPurchase:(KASDKOSDouble * _Nullable)maxPurchase appsOnly:(KASDKOSBoolean * _Nullable)appsOnly offerFrequencyId:(KASDKOSInt * _Nullable)offerFrequencyId freqDetails:(NSArray<NSString *> * _Nullable)freqDetails peakFrom:(NSString * _Nullable)peakFrom peakTo:(NSString * _Nullable)peakTo type:(NSString * _Nullable)type title:(NSString * _Nullable)title description:(NSString * _Nullable)description slug:(NSString * _Nullable)slug images:(NSArray<KASDKOSImage___________ *> * _Nullable)images neverExpiresFlag:(KASDKOSBoolean * _Nullable)neverExpiresFlag termsConditions:(NSString * _Nullable)termsConditions link:(NSString * _Nullable)link offerLanguages:(NSArray<KASDKOSOfferTranslation_____ *> * _Nullable)offerLanguages actions:(NSArray<KASDKOSOfferAction_____ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:points:publishAt:expiresAt:isPublished:couponConvertible:realValue:discountValue:multipFactor:minPurchase:maxPurchase:appsOnly:offerFrequencyId:freqDetails:peakFrom:peakTo:type:title:description:slug:images:neverExpiresFlag:termsConditions:link:offerLanguages:actions:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** A list of possible actions to perform on this offer. */
-@property (readonly) NSArray<KASDKOSOfferAction____ *> * _Nullable actions __attribute__((swift_name("actions")));
+@property (readonly) NSArray<KASDKOSOfferAction_____ *> * _Nullable actions __attribute__((swift_name("actions")));
 
 /** Whether this offer must be claimed on a mobile app before being used in store.  */
 @property (readonly) KASDKOSBoolean * _Nullable appsOnly __attribute__((swift_name("appsOnly")));
@@ -8829,7 +16216,7 @@ __attribute__((swift_name("OfferModel____")))
 @property (readonly) int32_t id __attribute__((swift_name("id")));
 
 /** The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  */
-@property (readonly) NSArray<KASDKOSImage______ *> * _Nullable images __attribute__((swift_name("images")));
+@property (readonly) NSArray<KASDKOSImage___________ *> * _Nullable images __attribute__((swift_name("images")));
 
 /** Whether this offer is currently published or not. */
 @property (readonly) KASDKOSBoolean * _Nullable isPublished __attribute__((swift_name("isPublished")));
@@ -8851,7 +16238,7 @@ __attribute__((swift_name("OfferModel____")))
 @property (readonly) KASDKOSInt * _Nullable offerFrequencyId __attribute__((swift_name("offerFrequencyId")));
 
 /** A list of translations of this offer into different languages. */
-@property (readonly) NSArray<KASDKOSOfferTranslation____ *> * _Nullable offerLanguages __attribute__((swift_name("offerLanguages")));
+@property (readonly) NSArray<KASDKOSOfferTranslation_____ *> * _Nullable offerLanguages __attribute__((swift_name("offerLanguages")));
 @property (readonly) NSString * _Nullable peakFrom __attribute__((swift_name("peakFrom")));
 @property (readonly) NSString * _Nullable peakTo __attribute__((swift_name("peakTo")));
 
@@ -8878,12 +16265,12 @@ __attribute__((swift_name("OfferModel____")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferModel____.Companion")))
-@interface KASDKOSOfferModel____Companion : KASDKOSBase
+__attribute__((swift_name("OfferModel_____.Companion")))
+@interface KASDKOSOfferModel_____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferModel____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSOfferModel_____Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
@@ -8892,10 +16279,10 @@ __attribute__((swift_name("OfferModel____.Companion")))
  * A language translation of this offer.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferTranslation____")))
-@interface KASDKOSOfferTranslation____ : KASDKOSBase
-- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage________ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSOfferTranslation____Companion *companion __attribute__((swift_name("companion")));
+__attribute__((swift_name("OfferTranslation_____")))
+@interface KASDKOSOfferTranslation_____ : KASDKOSBase
+- (instancetype)initWithId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage___________ * _Nullable)language __attribute__((swift_name("init(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSOfferTranslation_____Companion *companion __attribute__((swift_name("companion")));
 - (int32_t)component1 __attribute__((swift_name("component1()")));
 
 /** The ID of this specific translation */
@@ -8914,12 +16301,12 @@ __attribute__((swift_name("OfferTranslation____")))
 - (NSString * _Nullable)component6 __attribute__((swift_name("component6()")));
 
 /** The language for which this translation applies. */
-- (KASDKOSLanguage________ * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (KASDKOSLanguage___________ * _Nullable)component7 __attribute__((swift_name("component7()")));
 
 /**
  * A language translation of this offer.
  */
-- (KASDKOSOfferTranslation____ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage________ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
+- (KASDKOSOfferTranslation_____ *)doCopyId:(int32_t)id languageId:(KASDKOSInt * _Nullable)languageId offerTitle:(NSString * _Nullable)offerTitle offerDescription:(NSString * _Nullable)offerDescription offerTermsConditions:(NSString * _Nullable)offerTermsConditions offerLink:(NSString * _Nullable)offerLink language:(KASDKOSLanguage___________ * _Nullable)language __attribute__((swift_name("doCopy(id:languageId:offerTitle:offerDescription:offerTermsConditions:offerLink:language:)")));
 
 /**
  * A language translation of this offer.
@@ -8938,7 +16325,7 @@ __attribute__((swift_name("OfferTranslation____")))
 @property (readonly) int32_t id __attribute__((swift_name("id")));
 
 /** The language for which this translation applies. */
-@property (readonly) KASDKOSLanguage________ * _Nullable language __attribute__((swift_name("language")));
+@property (readonly) KASDKOSLanguage___________ * _Nullable language __attribute__((swift_name("language")));
 
 /** The ID of this specific translation */
 @property (readonly) KASDKOSInt * _Nullable languageId __attribute__((swift_name("languageId")));
@@ -8961,8 +16348,8 @@ __attribute__((swift_name("OfferTranslation____")))
  * A language translation of this offer.
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OfferTranslation____.Companion")))
-@interface KASDKOSOfferTranslation____Companion : KASDKOSBase
+__attribute__((swift_name("OfferTranslation_____.Companion")))
+@interface KASDKOSOfferTranslation_____Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -8970,7 +16357,7 @@ __attribute__((swift_name("OfferTranslation____.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSOfferTranslation____Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSOfferTranslation_____Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * A language translation of this offer.
@@ -8983,15 +16370,15 @@ __attribute__((swift_name("OfferTranslation____.Companion")))
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferMessage_")))
-@interface KASDKOSTransferMessage_ : KASDKOSBase
-- (instancetype)initWithId:(int64_t)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel____ * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue_ * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions_ *> * _Nullable)actions __attribute__((swift_name("init(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSTransferMessage_Companion *companion __attribute__((swift_name("companion")));
+__attribute__((swift_name("TransferMessage__")))
+@interface KASDKOSTransferMessage__ : KASDKOSBase
+- (instancetype)initWithId:(KASDKOSLong * _Nullable)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel_____ * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue__ * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions__ *> * _Nullable)actions __attribute__((swift_name("init(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) KASDKOSTransferMessage__Companion *companion __attribute__((swift_name("companion")));
 
 /** The unique ID of this transfer. */
-- (int64_t)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSTransferMessageGiftCardQueue_ * _Nullable)component10 __attribute__((swift_name("component10()")));
-- (NSArray<KASDKOSTransferMessageActions_ *> * _Nullable)component11 __attribute__((swift_name("component11()")));
+- (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
+- (KASDKOSTransferMessageGiftCardQueue__ * _Nullable)component10 __attribute__((swift_name("component10()")));
+- (NSArray<KASDKOSTransferMessageActions__ *> * _Nullable)component11 __attribute__((swift_name("component11()")));
 
 /** The type ID of this transfer. */
 - (KASDKOSLong * _Nullable)component2 __attribute__((swift_name("component2()")));
@@ -9013,12 +16400,12 @@ __attribute__((swift_name("TransferMessage_")))
 - (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
 
 /** The gift card in this transfer if applicable. Gift cards are an offer sub-type in Kangaroo.  */
-- (KASDKOSOfferModel____ * _Nullable)component9 __attribute__((swift_name("component9()")));
+- (KASDKOSOfferModel_____ * _Nullable)component9 __attribute__((swift_name("component9()")));
 
 /**
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
  */
-- (KASDKOSTransferMessage_ *)doCopyId:(int64_t)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel____ * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue_ * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions_ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)")));
+- (KASDKOSTransferMessage__ *)doCopyId:(KASDKOSLong * _Nullable)id typeId:(KASDKOSLong * _Nullable)typeId type:(NSString * _Nullable)type description:(NSString * _Nullable)description points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount hidden:(KASDKOSBoolean * _Nullable)hidden createdAt:(NSString * _Nullable)createdAt offer:(KASDKOSOfferModel_____ * _Nullable)offer giftCardQueue:(KASDKOSTransferMessageGiftCardQueue__ * _Nullable)giftCardQueue actions:(NSArray<KASDKOSTransferMessageActions__ *> * _Nullable)actions __attribute__((swift_name("doCopy(id:typeId:type:description:points:amount:hidden:createdAt:offer:giftCardQueue:actions:)")));
 
 /**
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
@@ -9034,7 +16421,7 @@ __attribute__((swift_name("TransferMessage_")))
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
  */
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSArray<KASDKOSTransferMessageActions_ *> * _Nullable actions __attribute__((swift_name("actions")));
+@property (readonly) NSArray<KASDKOSTransferMessageActions__ *> * _Nullable actions __attribute__((swift_name("actions")));
 
 /** The amount in $ sent in this transfer. */
 @property (readonly) KASDKOSDouble * _Nullable amount __attribute__((swift_name("amount")));
@@ -9044,14 +16431,14 @@ __attribute__((swift_name("TransferMessage_")))
 
 /** The description of this transfer. */
 @property (readonly) NSString * _Nullable description_ __attribute__((swift_name("description_")));
-@property (readonly) KASDKOSTransferMessageGiftCardQueue_ * _Nullable giftCardQueue __attribute__((swift_name("giftCardQueue")));
+@property (readonly) KASDKOSTransferMessageGiftCardQueue__ * _Nullable giftCardQueue __attribute__((swift_name("giftCardQueue")));
 @property (readonly) KASDKOSBoolean * _Nullable hidden __attribute__((swift_name("hidden")));
 
 /** The unique ID of this transfer. */
-@property (readonly) int64_t id __attribute__((swift_name("id")));
+@property (readonly) KASDKOSLong * _Nullable id __attribute__((swift_name("id")));
 
 /** The gift card in this transfer if applicable. Gift cards are an offer sub-type in Kangaroo.  */
-@property (readonly) KASDKOSOfferModel____ * _Nullable offer __attribute__((swift_name("offer")));
+@property (readonly) KASDKOSOfferModel_____ * _Nullable offer __attribute__((swift_name("offer")));
 
 /** The amount of points sent in this transfer. */
 @property (readonly) KASDKOSLong * _Nullable points __attribute__((swift_name("points")));
@@ -9068,8 +16455,8 @@ __attribute__((swift_name("TransferMessage_")))
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
  */
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferMessage_.Companion")))
-@interface KASDKOSTransferMessage_Companion : KASDKOSBase
+__attribute__((swift_name("TransferMessage__.Companion")))
+@interface KASDKOSTransferMessage__Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 
 /**
@@ -9077,7 +16464,7 @@ __attribute__((swift_name("TransferMessage_.Companion")))
  */
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSTransferMessage_Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSTransferMessage__Companion *shared __attribute__((swift_name("shared")));
 
 /**
  * Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet)
@@ -9086,14 +16473,14 @@ __attribute__((swift_name("TransferMessage_.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferMessageActions_")))
-@interface KASDKOSTransferMessageActions_ : KASDKOSBase
+__attribute__((swift_name("TransferMessageActions__")))
+@interface KASDKOSTransferMessageActions__ : KASDKOSBase
 - (instancetype)initWithType:(NSString * _Nullable)type __attribute__((swift_name("init(type:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSTransferMessageActions_Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSTransferMessageActions__Companion *companion __attribute__((swift_name("companion")));
 
 /** The action type. */
 - (NSString * _Nullable)component1 __attribute__((swift_name("component1()")));
-- (KASDKOSTransferMessageActions_ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
+- (KASDKOSTransferMessageActions__ *)doCopyType:(NSString * _Nullable)type __attribute__((swift_name("doCopy(type:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -9103,20 +16490,20 @@ __attribute__((swift_name("TransferMessageActions_")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferMessageActions_.Companion")))
-@interface KASDKOSTransferMessageActions_Companion : KASDKOSBase
+__attribute__((swift_name("TransferMessageActions__.Companion")))
+@interface KASDKOSTransferMessageActions__Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSTransferMessageActions_Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSTransferMessageActions__Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferMessageGiftCardQueue_")))
-@interface KASDKOSTransferMessageGiftCardQueue_ : KASDKOSBase
+__attribute__((swift_name("TransferMessageGiftCardQueue__")))
+@interface KASDKOSTransferMessageGiftCardQueue__ : KASDKOSBase
 - (instancetype)initWithId:(KASDKOSLong * _Nullable)id enabled:(KASDKOSBoolean * _Nullable)enabled senderName:(NSString * _Nullable)senderName recipientName:(NSString * _Nullable)recipientName emailPhone:(NSString * _Nullable)emailPhone points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount createdAt:(NSString * _Nullable)createdAt scheduledAt:(NSString * _Nullable)scheduledAt __attribute__((swift_name("init(id:enabled:senderName:recipientName:emailPhone:points:amount:createdAt:scheduledAt:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) KASDKOSTransferMessageGiftCardQueue_Companion *companion __attribute__((swift_name("companion")));
+@property (class, readonly, getter=companion) KASDKOSTransferMessageGiftCardQueue__Companion *companion __attribute__((swift_name("companion")));
 
 /** The unique ID of this gift_card_queue */
 - (KASDKOSLong * _Nullable)component1 __attribute__((swift_name("component1()")));
@@ -9144,7 +16531,7 @@ __attribute__((swift_name("TransferMessageGiftCardQueue_")))
 
 /** The original scheduled delivery date of this transfer. */
 - (NSString * _Nullable)component9 __attribute__((swift_name("component9()")));
-- (KASDKOSTransferMessageGiftCardQueue_ *)doCopyId:(KASDKOSLong * _Nullable)id enabled:(KASDKOSBoolean * _Nullable)enabled senderName:(NSString * _Nullable)senderName recipientName:(NSString * _Nullable)recipientName emailPhone:(NSString * _Nullable)emailPhone points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount createdAt:(NSString * _Nullable)createdAt scheduledAt:(NSString * _Nullable)scheduledAt __attribute__((swift_name("doCopy(id:enabled:senderName:recipientName:emailPhone:points:amount:createdAt:scheduledAt:)")));
+- (KASDKOSTransferMessageGiftCardQueue__ *)doCopyId:(KASDKOSLong * _Nullable)id enabled:(KASDKOSBoolean * _Nullable)enabled senderName:(NSString * _Nullable)senderName recipientName:(NSString * _Nullable)recipientName emailPhone:(NSString * _Nullable)emailPhone points:(KASDKOSLong * _Nullable)points amount:(KASDKOSDouble * _Nullable)amount createdAt:(NSString * _Nullable)createdAt scheduledAt:(NSString * _Nullable)scheduledAt __attribute__((swift_name("doCopy(id:enabled:senderName:recipientName:emailPhone:points:amount:createdAt:scheduledAt:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -9178,12 +16565,12 @@ __attribute__((swift_name("TransferMessageGiftCardQueue_")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("TransferMessageGiftCardQueue_.Companion")))
-@interface KASDKOSTransferMessageGiftCardQueue_Companion : KASDKOSBase
+__attribute__((swift_name("TransferMessageGiftCardQueue__.Companion")))
+@interface KASDKOSTransferMessageGiftCardQueue__Companion : KASDKOSBase
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) KASDKOSTransferMessageGiftCardQueue_Companion *shared __attribute__((swift_name("shared")));
+@property (class, readonly, getter=shared) KASDKOSTransferMessageGiftCardQueue__Companion *shared __attribute__((swift_name("shared")));
 - (id<KASDKOSKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
 @end;
 
@@ -9194,7 +16581,7 @@ __attribute__((swift_name("TransferMessageGiftCardQueue_.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TransferMessagesModel")))
 @interface KASDKOSTransferMessagesModel : KASDKOSModel
-- (instancetype)initWithData:(NSArray<KASDKOSTransferMessage_ *> *)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithData:(NSArray<KASDKOSTransferMessage__ *> * _Nullable)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * Base DAO object returned from Network results and Database queries.
@@ -9205,12 +16592,12 @@ __attribute__((swift_name("TransferMessagesModel")))
 @property (class, readonly, getter=companion) KASDKOSTransferMessagesModelCompanion *companion __attribute__((swift_name("companion")));
 
 /** List of transfer messages. */
-- (NSArray<KASDKOSTransferMessage_ *> *)component1 __attribute__((swift_name("component1()")));
+- (NSArray<KASDKOSTransferMessage__ *> * _Nullable)component1 __attribute__((swift_name("component1()")));
 
 /**
  * Contains a list of transfer messages sent to this user
  */
-- (KASDKOSTransferMessagesModel *)doCopyData:(NSArray<KASDKOSTransferMessage_ *> *)data __attribute__((swift_name("doCopy(data:)")));
+- (KASDKOSTransferMessagesModel *)doCopyData:(NSArray<KASDKOSTransferMessage__ *> * _Nullable)data __attribute__((swift_name("doCopy(data:)")));
 
 /**
  * Contains a list of transfer messages sent to this user
@@ -9228,7 +16615,7 @@ __attribute__((swift_name("TransferMessagesModel")))
 - (NSString *)description __attribute__((swift_name("description()")));
 
 /** List of transfer messages. */
-@property (readonly) NSArray<KASDKOSTransferMessage_ *> *data __attribute__((swift_name("data")));
+@property (readonly) NSArray<KASDKOSTransferMessage__ *> * _Nullable data __attribute__((swift_name("data")));
 @end;
 
 
@@ -9272,6 +16659,24 @@ __attribute__((swift_name("TransferMessagesModel.Companion")))
 - (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeUserRegistrationState __attribute__((swift_name("serializeUserRegistrationState()")));
 
 /**
+ * Serializes [BannersState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeBannersState __attribute__((swift_name("serializeBannersState()")));
+
+/**
+ * Serializes [TiersState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeTiersState __attribute__((swift_name("serializeTiersState()")));
+
+/**
+ * Serializes [GiftCardDepositState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeGiftCardDepositState __attribute__((swift_name("serializeGiftCardDepositState()")));
+
+/**
  * Serializes [UserPinResetRequestState]'s data and returns a new
  * [CFlow] containing data serialized as a JSON [String].
  */
@@ -9290,16 +16695,28 @@ __attribute__((swift_name("TransferMessagesModel.Companion")))
 - (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeAlaCarteProductsState __attribute__((swift_name("serializeAlaCarteProductsState()")));
 
 /**
- * Serializes [SocialMediaState]'s data and returns a new
+ * Serializes [PayPalPaymentState]'s data and returns a new
  * [CFlow] containing data serialized as a JSON [String].
  */
-- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeSocialMediaState __attribute__((swift_name("serializeSocialMediaState()")));
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializePayPalPaymentState __attribute__((swift_name("serializePayPalPaymentState()")));
+
+/**
+ * Serializes [GetNotificationPreferencesState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeGetNotificationPreferencesState __attribute__((swift_name("serializeGetNotificationPreferencesState()")));
 
 /**
  * Serializes [UserPinUpdateState]'s data and returns a new
  * [CFlow] containing data serialized as a JSON [String].
  */
 - (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeUserPinUpdateState __attribute__((swift_name("serializeUserPinUpdateState()")));
+
+/**
+ * Serializes [SocialMediaState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeSocialMediaState __attribute__((swift_name("serializeSocialMediaState()")));
 
 /**
  * Serializes [UserTransactionHistoryState]'s data and returns a new
@@ -9314,10 +16731,28 @@ __attribute__((swift_name("TransferMessagesModel.Companion")))
 - (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeTransferRecallState __attribute__((swift_name("serializeTransferRecallState()")));
 
 /**
+ * Serializes [BusinessesState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeBusinessesState __attribute__((swift_name("serializeBusinessesState()")));
+
+/**
  * Serializes [BalanceTransferState]'s data and returns a new
  * [CFlow] containing data serialized as a JSON [String].
  */
 - (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeBalanceTransferState __attribute__((swift_name("serializeBalanceTransferState()")));
+
+/**
+ * Serializes [SocialMediaLinksState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeSocialMediaLinksState __attribute__((swift_name("serializeSocialMediaLinksState()")));
+
+/**
+ * Serializes [GiftCardsState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeGiftCardsState __attribute__((swift_name("serializeGiftCardsState()")));
 
 /**
  * Serializes [FrequentBuyerState]'s data and returns a new
@@ -9330,6 +16765,12 @@ __attribute__((swift_name("TransferMessagesModel.Companion")))
  * [CFlow] containing data serialized as a JSON [String].
  */
 - (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeUserOffersState __attribute__((swift_name("serializeUserOffersState()")));
+
+/**
+ * Serializes [FrequentBuyerProgramsState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeFrequentBuyerProgramsState __attribute__((swift_name("serializeFrequentBuyerProgramsState()")));
 
 /**
  * Serializes [ClaimOfferState]'s data and returns a new
@@ -9384,6 +16825,12 @@ __attribute__((swift_name("TransferMessagesModel.Companion")))
  * [CFlow] containing data serialized as a JSON [String].
  */
 - (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeUserPinResetState __attribute__((swift_name("serializeUserPinResetState()")));
+
+/**
+ * Serializes [GiftCardPurchaseState]'s data and returns a new
+ * [CFlow] containing data serialized as a JSON [String].
+ */
+- (KASDKOSCFlow<KASDKOSSerializedResult<NSString *> *> *)serializeGiftCardPurchaseState __attribute__((swift_name("serializeGiftCardPurchaseState()")));
 
 /**
  * Serializes [UserRewardsState]'s data and returns a new

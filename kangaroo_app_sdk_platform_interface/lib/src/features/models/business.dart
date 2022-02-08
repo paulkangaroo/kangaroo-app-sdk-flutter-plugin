@@ -2,22 +2,28 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_branches_data.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_branches_data.dart';
 
 part 'business.g.dart';
 
-
+/// Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class Business {
-  ///A unique ID identifying this business. 
-  final String id;
+  ///Details about a business 
+  final BusinessData? data;
 
-  ///The name of this business 
-  final String name;
+  ///Details about a business&#39; branches 
+  final BusinessBranchesData? included;
 
   Business({
-    required this.id,
-required this.name,
+    required this.data,
+    required this.included,
   });
 
   factory Business.fromJson(Map<String, dynamic> data) => _$BusinessFromJson(data);

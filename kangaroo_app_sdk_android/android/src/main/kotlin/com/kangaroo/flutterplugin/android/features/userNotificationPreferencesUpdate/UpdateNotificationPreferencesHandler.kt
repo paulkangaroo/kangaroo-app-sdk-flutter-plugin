@@ -8,7 +8,7 @@ import kangaroorewards.appsdk.features.userNotificationPreferencesUpdate.UpdateN
 import kangaroorewards.appsdk.features.userNotificationPreferencesUpdate.serializeUpdateNotificationPreferencesState
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kangaroorewards.appsdk.features.userNotificationPreferencesUpdate.models.NotificationPreferencesRequest
+import kangaroorewards.appsdk.features.userNotificationPreferencesUpdate.models.NotificationSettingsData
 
 class UpdateNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null

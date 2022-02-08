@@ -9,23 +9,21 @@ part of 'transfer_model.dart';
 TransferModel _$TransferModelFromJson(Map<String, dynamic> json) =>
     TransferModel(
       intent: json['intent'] as String,
+      businessId: json['business_id'] as String,
       language: json['language'] as String,
+      from: TransferFrom.fromJson(json['from'] as Map<String, dynamic>),
+      to: TransferTo.fromJson(json['to'] as Map<String, dynamic>),
       points: json['points'] as int?,
       amount: (json['amount'] as num?)?.toDouble(),
-      to: json['to'] == null
-          ? null
-          : TransferTo.fromJson(json['to'] as Map<String, dynamic>),
-      from: json['from'] == null
-          ? null
-          : TransferFrom.fromJson(json['from'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$TransferModelToJson(TransferModel instance) =>
     <String, dynamic>{
       'intent': instance.intent,
+      'business_id': instance.businessId,
       'language': instance.language,
+      'from': instance.from.toJson(),
+      'to': instance.to.toJson(),
       'points': instance.points,
       'amount': instance.amount,
-      'to': instance.to?.toJson(),
-      'from': instance.from?.toJson(),
     };

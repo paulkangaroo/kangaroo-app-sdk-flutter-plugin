@@ -7,7 +7,7 @@ part of 'reward_model.dart';
 // **************************************************************************
 
 RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => RewardModel(
-      id: json['id'] as int,
+      id: json['id'] as int?,
       points: json['points'] as int?,
       publishAt: json['publish_at'] as String?,
       expiresAt: json['expires_at'] as String?,

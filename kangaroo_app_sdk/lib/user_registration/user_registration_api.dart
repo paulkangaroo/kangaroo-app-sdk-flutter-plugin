@@ -20,7 +20,7 @@ class UserRegistrationApi {
     );
   }
 
-  static Stream<Result<UserProfileModel>> get userRegistrationStream {
+  static Stream<Result<UserProfileDataModel>> get userRegistrationStream {
     return UserRegistrationApiInterface.instance.userRegistrationStream;
   }
 }

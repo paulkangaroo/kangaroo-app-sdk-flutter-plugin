@@ -7,11 +7,16 @@ part of 'business.dart';
 // **************************************************************************
 
 Business _$BusinessFromJson(Map<String, dynamic> json) => Business(
-      id: json['id'] as String,
-      name: json['name'] as String,
+      data: json['data'] == null
+          ? null
+          : BusinessData.fromJson(json['data'] as Map<String, dynamic>),
+      included: json['included'] == null
+          ? null
+          : BusinessBranchesData.fromJson(
+              json['included'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$BusinessToJson(Business instance) => <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
+      'data': instance.data?.toJson(),
+      'included': instance.included?.toJson(),
     };

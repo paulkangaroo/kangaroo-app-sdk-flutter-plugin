@@ -22,7 +22,7 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
 
   @override
   updateNotificationPreferences({ 
-        required final NotificationPreferencesRequest notificationPreferencesRequest
+        required final NotificationSettingsData notificationPreferencesRequest
     }) {
     UpdateNotificationPreferencesApi().updateNotificationPreferences(
       jsonEncode(notificationPreferencesRequest.toJson())
@@ -30,7 +30,7 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
   }
 
   @override
-  Stream<Result<NotificationUpdateModel>> get updateNotificationPreferencesStream {
+  Stream<Result<NotificationSettingsModel>> get updateNotificationPreferencesStream {
     var controller = StreamController<String>();
 
     UpdateNotificationPreferencesApi().observeUpdateNotificationPreferencesState(
@@ -41,12 +41,12 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
     return controller.stream.distinct().map((event) {
       dynamic result;
       try {
-        result = NotificationUpdateModel.fromJson(jsonDecode(event));
+        result = NotificationSettingsModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case NotificationUpdateModel:
+        case NotificationSettingsModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

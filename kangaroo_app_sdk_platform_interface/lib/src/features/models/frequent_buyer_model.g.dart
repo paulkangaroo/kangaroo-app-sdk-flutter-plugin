@@ -8,7 +8,7 @@ part of 'frequent_buyer_model.dart';
 
 FrequentBuyerModel _$FrequentBuyerModelFromJson(Map<String, dynamic> json) =>
     FrequentBuyerModel(
-      data: UserProfileData.fromJson(json['data'] as Map<String, dynamic>),
+      data: UserProfileDataModel.fromJson(json['data'] as Map<String, dynamic>),
       included: FrequentBuyerIncluded.fromJson(
           json['included'] as Map<String, dynamic>),
     );

@@ -12,7 +12,7 @@ part 'user_rewards_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class UserRewardsModel {
   ///Contains a list of all rewards available to this user 
-  final UserRewardsData data;
+  final UserRewardsData? data;
 
   UserRewardsModel({
     required this.data,

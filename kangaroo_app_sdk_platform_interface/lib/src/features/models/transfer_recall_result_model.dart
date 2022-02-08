@@ -11,7 +11,7 @@ part 'transfer_recall_result_model.g.dart';
 /// Contains the result of a recalled transfer.
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class TransferRecallResultModel {
-  final TransferMessage data;
+  final TransferMessage? data;
 
   TransferRecallResultModel({
     required this.data,

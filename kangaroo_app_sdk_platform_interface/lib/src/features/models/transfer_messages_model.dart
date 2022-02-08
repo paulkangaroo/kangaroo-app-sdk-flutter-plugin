@@ -12,7 +12,7 @@ part 'transfer_messages_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class TransferMessagesModel {
   ///List of transfer messages. 
-  final List<TransferMessage> data;
+  final List<TransferMessage>? data;
 
   TransferMessagesModel({
     required this.data,

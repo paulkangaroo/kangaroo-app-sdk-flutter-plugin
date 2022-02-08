@@ -7,7 +7,7 @@ part of 'campaign.dart';
 // **************************************************************************
 
 Campaign _$CampaignFromJson(Map<String, dynamic> json) => Campaign(
-      id: json['id'] as int,
+      id: json['id'] as int?,
       subject: json['subject'] as String?,
       htmlContent: json['html_content'] as String?,
       plainContent: json['plain_content'] as String?,

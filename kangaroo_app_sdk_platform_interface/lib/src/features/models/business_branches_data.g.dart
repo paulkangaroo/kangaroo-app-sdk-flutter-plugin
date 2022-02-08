@@ -9,13 +9,13 @@ part of 'business_branches_data.dart';
 BusinessBranchesData _$BusinessBranchesDataFromJson(
         Map<String, dynamic> json) =>
     BusinessBranchesData(
-      branches: (json['branches'] as List<dynamic>)
-          .map((e) => Branch.fromJson(e as Map<String, dynamic>))
+      branches: (json['branches'] as List<dynamic>?)
+          ?.map((e) => Branch.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$BusinessBranchesDataToJson(
         BusinessBranchesData instance) =>
     <String, dynamic>{
-      'branches': instance.branches.map((e) => e.toJson()).toList(),
+      'branches': instance.branches?.map((e) => e.toJson()).toList(),
     };

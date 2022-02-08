@@ -2,13 +2,18 @@ import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_web/features/user_authentication/user_authentication_handler.dart';
 import 'claim_offer/claim_offer_handler.dart';
 import 'user_registration/user_registration_handler.dart';
+import 'deposit_gift_card/gift_card_deposit_handler.dart';
 import 'user_ala_carte/ala_carte_products_handler.dart';
 import 'banners/banners_handler.dart';
 import 'business/business_handler.dart';
+import 'business_list/businesses_handler.dart';
 import 'user_campaign_messages/campaign_messages_handler.dart';
 import 'countries/countries_handler.dart';
 import 'frequent_buyer/frequent_buyer_handler.dart';
-import 'social_media/social_media_handler.dart';
+import 'frequent_buyer_programs/frequent_buyer_programs_handler.dart';
+import 'gift_cards/gift_cards_handler.dart';
+import 'user_notification_preferences/get_notification_preferences_handler.dart';
+import 'social_media_links/social_media_links_handler.dart';
 import 'tiers/tiers_handler.dart';
 import 'user_transfer_messages/transfer_messages_handler.dart';
 import 'user_offers/user_offers_handler.dart';
@@ -16,7 +21,9 @@ import 'user_products/user_products_handler.dart';
 import 'user_profile/user_profile_handler.dart';
 import 'user_rewards/user_rewards_handler.dart';
 import 'user_transaction_history/user_transaction_history_handler.dart';
+import 'make_pay_pal_payment/pay_pal_payment_handler.dart';
 import 'post_offer_facebook_share/offer_facebook_share_handler.dart';
+import 'make_gift_card_purchase/gift_card_purchase_handler.dart';
 import 'user_transfer_recall/transfer_recall_handler.dart';
 import 'redeem_reward/redeem_rewards_handler.dart';
 import 'user_pin_reset_request/user_pin_reset_request_handler.dart';
@@ -33,11 +40,15 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   UserRegistrationHandler(),
 
+  GiftCardDepositHandler(),
+
   AlaCarteProductsHandler(),
 
   BannersHandler(),
 
   BusinessHandler(),
+
+  BusinessesHandler(),
 
   CampaignMessagesHandler(),
 
@@ -45,7 +56,13 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   FrequentBuyerHandler(),
 
-  SocialMediaHandler(),
+  FrequentBuyerProgramsHandler(),
+
+  GiftCardsHandler(),
+
+  GetNotificationPreferencesHandler(),
+
+  SocialMediaLinksHandler(),
 
   TiersHandler(),
 
@@ -61,7 +78,11 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   UserTransactionHistoryHandler(),
 
+  PayPalPaymentHandler(),
+
   OfferFacebookShareHandler(),
+
+  GiftCardPurchaseHandler(),
 
   TransferRecallHandler(),
 

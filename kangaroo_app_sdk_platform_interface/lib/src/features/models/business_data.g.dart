@@ -7,7 +7,7 @@ part of 'business_data.dart';
 // **************************************************************************
 
 BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) => BusinessData(
-      id: json['id'] as String,
+      id: json['id'] as String?,
       name: json['name'] as String?,
       loyaltyType: json['loyalty_type'] as String?,
       conglomerate: json['conglomerate'] as String?,

@@ -7,8 +7,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_transfer_r
 
 
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_recall_result_model.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_recall_result_model.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_action_result_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_action_result_model.dart';
 
 abstract class TransferRecallApiInterface extends PlatformInterface {
   TransferRecallApiInterface() : super(token: _token);
@@ -30,7 +30,7 @@ abstract class TransferRecallApiInterface extends PlatformInterface {
     throw UnimplementedError('recallTransfer has not been implemented.');
   }
 
-  Stream<Result<TransferRecallResultModel>> get transferRecallStream {
+  Stream<Result<TransferActionResultModel>> get transferRecallStream {
     throw UnimplementedError('getTransferRecallStream has not been implemented.');
   }
 }

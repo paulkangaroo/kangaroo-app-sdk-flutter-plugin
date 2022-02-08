@@ -10,7 +10,7 @@ part 'country.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class Country {
   ///Unique country ID. 
-  final int id;
+  final int? id;
 
   ///The name of this country 
   final String? name;

@@ -16,7 +16,7 @@ class UserProfileUpdateApiFederated extends UserProfileUpdateApiInterface {
         final String? birthDate,
         final String? language,
         final String? gender,
-        final String? profilePhoto = "facebook_share"
+        final String? profilePhoto
     }) {
     sdkMethodChannel.invokeMethod('customer_sdk/methods/update_user_profile',
     {

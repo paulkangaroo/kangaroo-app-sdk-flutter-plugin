@@ -11,7 +11,7 @@ part 'claimed_offer_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class ClaimedOfferModel {
-  final OfferModel data;
+  final OfferModel? data;
 
   ClaimedOfferModel({
     required this.data,

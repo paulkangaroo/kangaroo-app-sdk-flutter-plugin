@@ -7,11 +7,15 @@ class PluginHandlerListHolder {
 
     UserRegistrationHandler(),
 
+    GiftCardDepositHandler(),
+
     AlaCarteProductsHandler(),
 
     BannersHandler(),
 
     BusinessHandler(),
+
+    BusinessesHandler(),
 
     CampaignMessagesHandler(),
 
@@ -19,7 +23,13 @@ class PluginHandlerListHolder {
 
     FrequentBuyerHandler(),
 
-    SocialMediaHandler(),
+    FrequentBuyerProgramsHandler(),
+
+    GiftCardsHandler(),
+
+    GetNotificationPreferencesHandler(),
+
+    SocialMediaLinksHandler(),
 
     TiersHandler(),
 
@@ -35,7 +45,11 @@ class PluginHandlerListHolder {
 
     UserTransactionHistoryHandler(),
 
+    PayPalPaymentHandler(),
+
     OfferFacebookShareHandler(),
+
+    GiftCardPurchaseHandler(),
 
     TransferRecallHandler(),
 

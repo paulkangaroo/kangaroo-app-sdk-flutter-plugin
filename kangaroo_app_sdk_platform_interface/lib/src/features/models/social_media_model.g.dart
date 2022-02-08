@@ -8,13 +8,12 @@ part of 'social_media_model.dart';
 
 SocialMediaModel _$SocialMediaModelFromJson(Map<String, dynamic> json) =>
     SocialMediaModel(
-      included: json['included'] == null
-          ? null
-          : SocialMediaIncluded.fromJson(
-              json['included'] as Map<String, dynamic>),
+      icon: json['icon'] as String?,
+      url: json['url'] as String?,
     );
 
 Map<String, dynamic> _$SocialMediaModelToJson(SocialMediaModel instance) =>
     <String, dynamic>{
-      'included': instance.included?.toJson(),
+      'icon': instance.icon,
+      'url': instance.url,
     };

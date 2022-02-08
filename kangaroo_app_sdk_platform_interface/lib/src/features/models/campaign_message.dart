@@ -12,7 +12,7 @@ part 'campaign_message.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class CampaignMessage {
   ///Unique campaign ID. 
-  final String id;
+  final String? id;
 
   ///The original delivery method for this campaign 
   final int? cellEmail;

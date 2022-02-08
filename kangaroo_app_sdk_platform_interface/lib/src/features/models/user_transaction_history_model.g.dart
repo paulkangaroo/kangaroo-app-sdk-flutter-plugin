@@ -9,13 +9,13 @@ part of 'user_transaction_history_model.dart';
 UserTransactionHistoryModel _$UserTransactionHistoryModelFromJson(
         Map<String, dynamic> json) =>
     UserTransactionHistoryModel(
-      data: (json['data'] as List<dynamic>)
-          .map((e) => Transaction.fromJson(e as Map<String, dynamic>))
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => Transaction.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$UserTransactionHistoryModelToJson(
         UserTransactionHistoryModel instance) =>
     <String, dynamic>{
-      'data': instance.data.map((e) => e.toJson()).toList(),
+      'data': instance.data?.map((e) => e.toJson()).toList(),
     };

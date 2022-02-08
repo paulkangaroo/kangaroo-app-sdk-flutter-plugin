@@ -11,7 +11,7 @@ part 'user_ala_carte_included.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class UserAlaCarteIncluded {
-  final AlaCarteList productRewards;
+  final AlaCarteList? productRewards;
 
   UserAlaCarteIncluded({
     required this.productRewards,

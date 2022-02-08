@@ -12,7 +12,7 @@ part 'user_transaction_history_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class UserTransactionHistoryModel {
   ///Contains user transaction history. 
-  final List<Transaction> data;
+  final List<Transaction>? data;
 
   UserTransactionHistoryModel({
     required this.data,

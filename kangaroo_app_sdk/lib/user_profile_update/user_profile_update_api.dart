@@ -12,7 +12,7 @@ class UserProfileUpdateApi {
     final String? birthDate,
     final String? language,
     final String? gender,
-    final String? profilePhoto = "facebook_share",
+    final String? profilePhoto,
   }) {
     UserProfileUpdateApiInterface.instance.updateUserProfile( 
       firstName: firstName,

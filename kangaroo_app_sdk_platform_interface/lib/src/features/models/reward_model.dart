@@ -16,7 +16,7 @@ part 'reward_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
 class RewardModel {
   ///A unique ID identifying this reward 
-  final int id;
+  final int? id;
 
   final int? points;
 
