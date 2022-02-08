@@ -8,23 +8,62 @@ part of 'user_profile_data_model.dart';
 
 UserProfileDataModel _$UserProfileDataModelFromJson(
         Map<String, dynamic> json) =>
-    UserProfileDataModel(
-      id: json['id'] as String,
-      email: json['email'] as String?,
-      phone: json['phone'] as String?,
-      firstName: json['first_name'] as String?,
-      lastName: json['last_name'] as String?,
-      qrcode: json['qrcode'] as String?,
-      gender: json['gender'] as String?,
-      birthDate: json['birth_date'] as String?,
-      language: json['language'] as String?,
-      countryCode: json['country_code'] as String?,
-      profilePhoto: json['profile_photo'] as String?,
-      createdAt: json['created_at'] as String?,
-      updatedAt: json['updated_at'] as String?,
-      enabled: json['enabled'] as bool?,
-      emailVerified: json['email_verified'] as bool?,
-      phoneVerified: json['phone_verified'] as bool?,
+    $checkedCreate(
+      'UserProfileDataModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'email',
+            'phone',
+            'first_name',
+            'last_name',
+            'qrcode',
+            'gender',
+            'birth_date',
+            'language',
+            'country_code',
+            'profile_photo',
+            'created_at',
+            'updated_at',
+            'enabled',
+            'email_verified',
+            'phone_verified'
+          ],
+        );
+        final val = UserProfileDataModel(
+          id: $checkedConvert('id', (v) => v as String?),
+          email: $checkedConvert('email', (v) => v as String?),
+          phone: $checkedConvert('phone', (v) => v as String?),
+          firstName: $checkedConvert('first_name', (v) => v as String?),
+          lastName: $checkedConvert('last_name', (v) => v as String?),
+          qrcode: $checkedConvert('qrcode', (v) => v as String?),
+          gender: $checkedConvert('gender', (v) => v as String?),
+          birthDate: $checkedConvert('birth_date', (v) => v as String?),
+          language: $checkedConvert('language', (v) => v as String?),
+          countryCode: $checkedConvert('country_code', (v) => v as String?),
+          profilePhoto: $checkedConvert('profile_photo', (v) => v as String?),
+          createdAt: $checkedConvert('created_at', (v) => v as String?),
+          updatedAt: $checkedConvert('updated_at', (v) => v as String?),
+          enabled: $checkedConvert('enabled', (v) => v as bool?),
+          emailVerified: $checkedConvert('email_verified', (v) => v as bool?),
+          phoneVerified: $checkedConvert('phone_verified', (v) => v as bool?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'firstName': 'first_name',
+        'lastName': 'last_name',
+        'birthDate': 'birth_date',
+        'countryCode': 'country_code',
+        'profilePhoto': 'profile_photo',
+        'createdAt': 'created_at',
+        'updatedAt': 'updated_at',
+        'emailVerified': 'email_verified',
+        'phoneVerified': 'phone_verified'
+      },
     );
 
 Map<String, dynamic> _$UserProfileDataModelToJson(

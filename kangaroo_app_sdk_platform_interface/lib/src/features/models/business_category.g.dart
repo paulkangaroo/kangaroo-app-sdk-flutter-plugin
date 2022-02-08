@@ -7,10 +7,21 @@ part of 'business_category.dart';
 // **************************************************************************
 
 BusinessCategory _$BusinessCategoryFromJson(Map<String, dynamic> json) =>
-    BusinessCategory(
-      name: json['name'] as String?,
-      icon: json['icon'] as String?,
-      code: json['code'] as String?,
+    $checkedCreate(
+      'BusinessCategory',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['name', 'icon', 'code'],
+        );
+        final val = BusinessCategory(
+          name: $checkedConvert('name', (v) => v as String?),
+          icon: $checkedConvert('icon', (v) => v as String?),
+          code: $checkedConvert('code', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$BusinessCategoryToJson(BusinessCategory instance) =>

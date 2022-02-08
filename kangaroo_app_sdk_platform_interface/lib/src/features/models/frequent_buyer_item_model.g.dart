@@ -8,17 +8,45 @@ part of 'frequent_buyer_item_model.dart';
 
 FrequentBuyerItemModel _$FrequentBuyerItemModelFromJson(
         Map<String, dynamic> json) =>
-    FrequentBuyerItemModel(
-      id: json['id'] as int?,
-      title: json['title'] as String?,
-      buyUnits: json['buy_units'] as int?,
-      getUnits: json['get_units'] as int?,
-      resetInterval: json['reset_interval'] as int?,
-      createdAt: json['created_at'] as String?,
-      frequentBuyerUsers: (json['frequent_buyer_users'] as List<dynamic>?)
-          ?.map((e) =>
-              FrequentBuyerUsersModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'FrequentBuyerItemModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'title',
+            'buy_units',
+            'get_units',
+            'reset_interval',
+            'created_at',
+            'frequent_buyer_users'
+          ],
+        );
+        final val = FrequentBuyerItemModel(
+          id: $checkedConvert('id', (v) => v as int?),
+          title: $checkedConvert('title', (v) => v as String?),
+          buyUnits: $checkedConvert('buy_units', (v) => v as int?),
+          getUnits: $checkedConvert('get_units', (v) => v as int?),
+          resetInterval: $checkedConvert('reset_interval', (v) => v as int?),
+          createdAt: $checkedConvert('created_at', (v) => v as String?),
+          frequentBuyerUsers: $checkedConvert(
+              'frequent_buyer_users',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => FrequentBuyerUsersModel.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'buyUnits': 'buy_units',
+        'getUnits': 'get_units',
+        'resetInterval': 'reset_interval',
+        'createdAt': 'created_at',
+        'frequentBuyerUsers': 'frequent_buyer_users'
+      },
     );
 
 Map<String, dynamic> _$FrequentBuyerItemModelToJson(

@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business
 part 'businesses.g.dart';
 
 /// A list of businesses associated with this user and this app. Usually there will only be one business. 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Businesses {
   ///A list of businesses for this user and this app. 
   final List<BusinessData>? data;

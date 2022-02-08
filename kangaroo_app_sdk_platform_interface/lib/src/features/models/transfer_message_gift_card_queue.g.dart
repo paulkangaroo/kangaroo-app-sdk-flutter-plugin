@@ -8,16 +8,44 @@ part of 'transfer_message_gift_card_queue.dart';
 
 TransferMessageGiftCardQueue _$TransferMessageGiftCardQueueFromJson(
         Map<String, dynamic> json) =>
-    TransferMessageGiftCardQueue(
-      id: json['id'] as int?,
-      enabled: json['enabled'] as bool?,
-      senderName: json['sender_name'] as String?,
-      recipientName: json['recipient_name'] as String?,
-      emailPhone: json['email_phone'] as String?,
-      points: json['points'] as int?,
-      amount: (json['amount'] as num?)?.toDouble(),
-      createdAt: json['created_at'] as String?,
-      scheduledAt: json['scheduled_at'] as String?,
+    $checkedCreate(
+      'TransferMessageGiftCardQueue',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'enabled',
+            'sender_name',
+            'recipient_name',
+            'email_phone',
+            'points',
+            'amount',
+            'created_at',
+            'scheduled_at'
+          ],
+        );
+        final val = TransferMessageGiftCardQueue(
+          id: $checkedConvert('id', (v) => v as int?),
+          enabled: $checkedConvert('enabled', (v) => v as bool?),
+          senderName: $checkedConvert('sender_name', (v) => v as String?),
+          recipientName: $checkedConvert('recipient_name', (v) => v as String?),
+          emailPhone: $checkedConvert('email_phone', (v) => v as String?),
+          points: $checkedConvert('points', (v) => v as int?),
+          amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
+          createdAt: $checkedConvert('created_at', (v) => v as String?),
+          scheduledAt: $checkedConvert('scheduled_at', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'senderName': 'sender_name',
+        'recipientName': 'recipient_name',
+        'emailPhone': 'email_phone',
+        'createdAt': 'created_at',
+        'scheduledAt': 'scheduled_at'
+      },
     );
 
 Map<String, dynamic> _$TransferMessageGiftCardQueueToJson(

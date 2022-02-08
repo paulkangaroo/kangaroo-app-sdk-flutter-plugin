@@ -13,7 +13,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business
 part 'campaign.g.dart';
 
 /// The core campaign object for this campaign. This might include data such as the original html content of the campaign, sms or push data, or offers and rewards attached to this campaign. 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Campaign {
   final int? id;
 

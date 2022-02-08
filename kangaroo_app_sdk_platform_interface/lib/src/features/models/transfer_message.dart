@@ -17,7 +17,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer
 part 'transfer_message.g.dart';
 
 /// Transfer Message. These are sent to the user by other users. They can be points or e-wallet transfers or gift cards (which is deposited into the users' e-wallet) 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferMessage {
   ///The unique ID of this transfer. 
   final int? id;

@@ -7,14 +7,33 @@ part of 'branch_address.dart';
 // **************************************************************************
 
 BranchAddress _$BranchAddressFromJson(Map<String, dynamic> json) =>
-    BranchAddress(
-      formatted: json['formatted'] as String?,
-      street: json['street'] as String?,
-      city: json['city'] as String?,
-      region: json['region'] as String?,
-      country: json['country'] as String?,
-      lat: (json['lat'] as num?)?.toDouble(),
-      long: (json['long'] as num?)?.toDouble(),
+    $checkedCreate(
+      'BranchAddress',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'formatted',
+            'street',
+            'city',
+            'region',
+            'country',
+            'lat',
+            'long'
+          ],
+        );
+        final val = BranchAddress(
+          formatted: $checkedConvert('formatted', (v) => v as String?),
+          street: $checkedConvert('street', (v) => v as String?),
+          city: $checkedConvert('city', (v) => v as String?),
+          region: $checkedConvert('region', (v) => v as String?),
+          country: $checkedConvert('country', (v) => v as String?),
+          lat: $checkedConvert('lat', (v) => (v as num?)?.toDouble()),
+          long: $checkedConvert('long', (v) => (v as num?)?.toDouble()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$BranchAddressToJson(BranchAddress instance) =>

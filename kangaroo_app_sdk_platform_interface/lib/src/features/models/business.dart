@@ -13,7 +13,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business
 part 'business.g.dart';
 
 /// Details about a business. Basic information is in main data field, while information on the business' branches are in the 'include' parameter 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Business {
   ///Details about a business 
   final BusinessData? data;

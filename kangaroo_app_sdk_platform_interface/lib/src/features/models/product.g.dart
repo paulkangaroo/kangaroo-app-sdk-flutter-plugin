@@ -6,21 +6,57 @@ part of 'product.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Product _$ProductFromJson(Map<String, dynamic> json) => Product(
-      id: json['id'] as int?,
-      title: json['title'] as String?,
-      description: json['description'] as String?,
-      images: (json['images'] as List<dynamic>?)
-          ?.map((e) => Images.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      productSku: json['product_sku'] as String?,
-      actualPrice: (json['actual_price'] as num?)?.toDouble(),
-      realPrice: (json['real_price'] as num?)?.toDouble(),
-      termsConditions: json['terms_conditions'] as String?,
-      link: json['link'] as String?,
-      productLanguages: (json['product_languages'] as List<dynamic>?)
-          ?.map((e) => Languages.fromJson(e as Map<String, dynamic>))
-          .toList(),
+Product _$ProductFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'Product',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'title',
+            'description',
+            'images',
+            'product_sku',
+            'actual_price',
+            'real_price',
+            'terms_conditions',
+            'link',
+            'product_languages'
+          ],
+        );
+        final val = Product(
+          id: $checkedConvert('id', (v) => v as int?),
+          title: $checkedConvert('title', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
+          images: $checkedConvert(
+              'images',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Images.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          productSku: $checkedConvert('product_sku', (v) => v as String?),
+          actualPrice:
+              $checkedConvert('actual_price', (v) => (v as num?)?.toDouble()),
+          realPrice:
+              $checkedConvert('real_price', (v) => (v as num?)?.toDouble()),
+          termsConditions:
+              $checkedConvert('terms_conditions', (v) => v as String?),
+          link: $checkedConvert('link', (v) => v as String?),
+          productLanguages: $checkedConvert(
+              'product_languages',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Languages.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'productSku': 'product_sku',
+        'actualPrice': 'actual_price',
+        'realPrice': 'real_price',
+        'termsConditions': 'terms_conditions',
+        'productLanguages': 'product_languages'
+      },
     );
 
 Map<String, dynamic> _$ProductToJson(Product instance) => <String, dynamic>{

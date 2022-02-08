@@ -13,7 +13,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer
 part 'transfer_model.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferModel {
   ///The transfer intent for this transfer. This can be transfer_amount or transfer_points  
   final String intent;

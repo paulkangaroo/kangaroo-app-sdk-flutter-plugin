@@ -6,10 +6,23 @@ part of 'businesses.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Businesses _$BusinessesFromJson(Map<String, dynamic> json) => Businesses(
-      data: (json['data'] as List<dynamic>?)
-          ?.map((e) => BusinessData.fromJson(e as Map<String, dynamic>))
-          .toList(),
+Businesses _$BusinessesFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'Businesses',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = Businesses(
+          data: $checkedConvert(
+              'data',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => BusinessData.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$BusinessesToJson(Businesses instance) =>

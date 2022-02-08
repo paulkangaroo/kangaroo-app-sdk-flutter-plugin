@@ -7,9 +7,20 @@ part of 'redemption_model.dart';
 // **************************************************************************
 
 RedemptionModel _$RedemptionModelFromJson(Map<String, dynamic> json) =>
-    RedemptionModel(
-      id: json['id'] as int,
-      quantity: json['quantity'] as int,
+    $checkedCreate(
+      'RedemptionModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['id', 'quantity'],
+        );
+        final val = RedemptionModel(
+          id: $checkedConvert('id', (v) => v as int),
+          quantity: $checkedConvert('quantity', (v) => v as int),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$RedemptionModelToJson(RedemptionModel instance) =>

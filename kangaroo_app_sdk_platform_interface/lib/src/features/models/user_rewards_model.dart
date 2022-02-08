@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_rew
 part 'user_rewards_model.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserRewardsModel {
   ///Contains a list of all rewards available to this user 
   final UserRewardsData? data;

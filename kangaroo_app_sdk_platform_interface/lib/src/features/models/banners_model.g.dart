@@ -6,10 +6,24 @@ part of 'banners_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-BannersModel _$BannersModelFromJson(Map<String, dynamic> json) => BannersModel(
-      data: (json['data'] as List<dynamic>?)
-          ?.map((e) => Banner.fromJson(e as Map<String, dynamic>))
-          .toList(),
+BannersModel _$BannersModelFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      'BannersModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = BannersModel(
+          data: $checkedConvert(
+              'data',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Banner.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$BannersModelToJson(BannersModel instance) =>

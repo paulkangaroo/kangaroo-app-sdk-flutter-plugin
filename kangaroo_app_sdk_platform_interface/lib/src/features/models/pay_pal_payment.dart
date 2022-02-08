@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/pay_pal_
 part 'pay_pal_payment.g.dart';
 
 /// A paypal payment response data 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PayPalPayment {
   ///Unique payment ID. 
   final String? id;

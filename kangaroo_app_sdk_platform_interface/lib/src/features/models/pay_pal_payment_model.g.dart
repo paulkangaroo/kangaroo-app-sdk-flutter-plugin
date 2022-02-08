@@ -7,10 +7,23 @@ part of 'pay_pal_payment_model.dart';
 // **************************************************************************
 
 PayPalPaymentModel _$PayPalPaymentModelFromJson(Map<String, dynamic> json) =>
-    PayPalPaymentModel(
-      data: json['data'] == null
-          ? null
-          : PayPalPayment.fromJson(json['data'] as Map<String, dynamic>),
+    $checkedCreate(
+      'PayPalPaymentModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = PayPalPaymentModel(
+          data: $checkedConvert(
+              'data',
+              (v) => v == null
+                  ? null
+                  : PayPalPayment.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$PayPalPaymentModelToJson(PayPalPaymentModel instance) =>

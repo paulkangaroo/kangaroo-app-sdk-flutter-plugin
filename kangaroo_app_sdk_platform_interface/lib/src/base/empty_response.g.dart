@@ -7,7 +7,18 @@ part of 'empty_response.dart';
 // **************************************************************************
 
 EmptyResponse _$EmptyResponseFromJson(Map<String, dynamic> json) =>
-    EmptyResponse();
+    $checkedCreate(
+      'EmptyResponse',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [],
+        );
+        final val = EmptyResponse();
+        return val;
+      },
+    );
 
 Map<String, dynamic> _$EmptyResponseToJson(EmptyResponse instance) =>
     <String, dynamic>{};

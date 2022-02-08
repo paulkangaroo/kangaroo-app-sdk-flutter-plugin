@@ -7,26 +7,60 @@ part of 'transfer_message.dart';
 // **************************************************************************
 
 TransferMessage _$TransferMessageFromJson(Map<String, dynamic> json) =>
-    TransferMessage(
-      id: json['id'] as int?,
-      typeId: json['type_id'] as int?,
-      type: json['type'] as String?,
-      description: json['description'] as String?,
-      points: json['points'] as int?,
-      amount: (json['amount'] as num?)?.toDouble(),
-      hidden: json['hidden'] as bool?,
-      createdAt: json['created_at'] as String?,
-      offer: json['offer'] == null
-          ? null
-          : OfferModel.fromJson(json['offer'] as Map<String, dynamic>),
-      giftCardQueue: json['gift_card_queue'] == null
-          ? null
-          : TransferMessageGiftCardQueue.fromJson(
-              json['gift_card_queue'] as Map<String, dynamic>),
-      actions: (json['actions'] as List<dynamic>?)
-          ?.map(
-              (e) => TransferMessageActions.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'TransferMessage',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'type_id',
+            'type',
+            'description',
+            'points',
+            'amount',
+            'hidden',
+            'created_at',
+            'offer',
+            'gift_card_queue',
+            'actions'
+          ],
+        );
+        final val = TransferMessage(
+          id: $checkedConvert('id', (v) => v as int?),
+          typeId: $checkedConvert('type_id', (v) => v as int?),
+          type: $checkedConvert('type', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
+          points: $checkedConvert('points', (v) => v as int?),
+          amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
+          hidden: $checkedConvert('hidden', (v) => v as bool?),
+          createdAt: $checkedConvert('created_at', (v) => v as String?),
+          offer: $checkedConvert(
+              'offer',
+              (v) => v == null
+                  ? null
+                  : OfferModel.fromJson(v as Map<String, dynamic>)),
+          giftCardQueue: $checkedConvert(
+              'gift_card_queue',
+              (v) => v == null
+                  ? null
+                  : TransferMessageGiftCardQueue.fromJson(
+                      v as Map<String, dynamic>)),
+          actions: $checkedConvert(
+              'actions',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => TransferMessageActions.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'typeId': 'type_id',
+        'createdAt': 'created_at',
+        'giftCardQueue': 'gift_card_queue'
+      },
     );
 
 Map<String, dynamic> _$TransferMessageToJson(TransferMessage instance) =>

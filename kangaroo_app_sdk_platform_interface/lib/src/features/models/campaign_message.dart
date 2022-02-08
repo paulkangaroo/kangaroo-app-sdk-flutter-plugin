@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/campaign
 part 'campaign_message.g.dart';
 
 /// Campaign Message. These are sent to the user by the business through Kangaroo's Marketing module. 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CampaignMessage {
   ///Unique campaign ID. 
   final String? id;

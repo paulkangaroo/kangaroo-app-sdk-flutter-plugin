@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'offer_action.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class OfferAction {
   final String? type;
 

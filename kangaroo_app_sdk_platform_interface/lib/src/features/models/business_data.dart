@@ -21,7 +21,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business
 part 'business_data.g.dart';
 
 /// Business profile data
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class BusinessData {
   ///Unique business ID. 
   final String? id;

@@ -6,9 +6,20 @@ part of 'user_balance.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserBalance _$UserBalanceFromJson(Map<String, dynamic> json) => UserBalance(
-      points: json['points'] as int?,
-      giftcard: (json['giftcard'] as num?)?.toDouble(),
+UserBalance _$UserBalanceFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'UserBalance',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['points', 'giftcard'],
+        );
+        final val = UserBalance(
+          points: $checkedConvert('points', (v) => v as int?),
+          giftcard: $checkedConvert('giftcard', (v) => (v as num?)?.toDouble()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$UserBalanceToJson(UserBalance instance) =>

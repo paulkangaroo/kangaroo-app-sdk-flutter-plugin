@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'tier_level.g.dart';
 
 /// Represents a single tier level.
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TierLevel {
   ///The ID for this tier. 
   final int? id;

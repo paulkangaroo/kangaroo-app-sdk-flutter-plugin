@@ -8,10 +8,25 @@ part of 'user_ala_carte_included.dart';
 
 UserAlaCarteIncluded _$UserAlaCarteIncludedFromJson(
         Map<String, dynamic> json) =>
-    UserAlaCarteIncluded(
-      productRewards: (json['product_rewards'] as List<dynamic>?)
-          ?.map((e) => AlaCarteItemModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'UserAlaCarteIncluded',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['product_rewards'],
+        );
+        final val = UserAlaCarteIncluded(
+          productRewards: $checkedConvert(
+              'product_rewards',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      AlaCarteItemModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'productRewards': 'product_rewards'},
     );
 
 Map<String, dynamic> _$UserAlaCarteIncludedToJson(

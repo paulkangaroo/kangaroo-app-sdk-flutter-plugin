@@ -29,10 +29,12 @@ import 'redeem_reward/redeem_rewards_handler.dart';
 import 'user_pin_reset_request/user_pin_reset_request_handler.dart';
 import 'user_pin_reset_with_verification_code/user_pin_reset_handler.dart';
 import 'user_balance_transfer/balance_transfer_handler.dart';
+import 'user_unsubscribe/user_unsubscribe_handler.dart';
 import 'user_notification_preferences_update/update_notification_preferences_handler.dart';
 import 'user_pin_update/user_pin_update_handler.dart';
 import 'user_profile_update/user_profile_update_handler.dart';
 import 'user_check_in/user_check_in_handler.dart';
+import 'user_verification/user_account_verification_handler.dart';
 
 
 List<PluginChannelHandler> pluginHandlerList = [
@@ -94,6 +96,8 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   BalanceTransferHandler(),
 
+  UserUnsubscribeHandler(),
+
   UpdateNotificationPreferencesHandler(),
 
   UserPinUpdateHandler(),
@@ -101,6 +105,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   UserProfileUpdateHandler(),
 
   UserCheckInHandler(),
+
+  UserAccountVerificationHandler(),
 
   UserAuthenticationHandler()
 ];

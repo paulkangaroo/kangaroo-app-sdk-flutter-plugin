@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'redemption_model.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class RedemptionModel {
   ///A unique ID identifying this reward. 
   final int id;

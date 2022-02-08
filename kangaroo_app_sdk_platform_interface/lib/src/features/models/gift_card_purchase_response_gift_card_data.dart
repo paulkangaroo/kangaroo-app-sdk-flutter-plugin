@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'gift_card_purchase_response_gift_card_data.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class GiftCardPurchaseResponseGiftCardData {
   final int? id;
 

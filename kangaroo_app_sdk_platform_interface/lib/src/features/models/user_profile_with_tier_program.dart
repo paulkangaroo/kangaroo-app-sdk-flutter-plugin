@@ -13,7 +13,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_pro
 part 'user_profile_with_tier_program.g.dart';
 
 /// User Profile model class containing user data and tier program data 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProfileWithTierProgram {
   ///Contains all user profile data 
   final UserProfileDataModel? data;

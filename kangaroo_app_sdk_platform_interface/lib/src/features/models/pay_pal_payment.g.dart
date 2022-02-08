@@ -7,15 +7,34 @@ part of 'pay_pal_payment.dart';
 // **************************************************************************
 
 PayPalPayment _$PayPalPaymentFromJson(Map<String, dynamic> json) =>
-    PayPalPayment(
-      id: json['id'] as String?,
-      provider: json['provider'] as String?,
-      status: json['status'] as String?,
-      approvalUrl: json['approval_url'] as String?,
-      giftcard: json['giftcard'] == null
-          ? null
-          : PayPalPaymentGiftCard.fromJson(
-              json['giftcard'] as Map<String, dynamic>),
+    $checkedCreate(
+      'PayPalPayment',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'provider',
+            'status',
+            'approval_url',
+            'giftcard'
+          ],
+        );
+        final val = PayPalPayment(
+          id: $checkedConvert('id', (v) => v as String?),
+          provider: $checkedConvert('provider', (v) => v as String?),
+          status: $checkedConvert('status', (v) => v as String?),
+          approvalUrl: $checkedConvert('approval_url', (v) => v as String?),
+          giftcard: $checkedConvert(
+              'giftcard',
+              (v) => v == null
+                  ? null
+                  : PayPalPaymentGiftCard.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'approvalUrl': 'approval_url'},
     );
 
 Map<String, dynamic> _$PayPalPaymentToJson(PayPalPayment instance) =>

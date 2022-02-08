@@ -7,10 +7,23 @@ part of 'claimed_offer_model.dart';
 // **************************************************************************
 
 ClaimedOfferModel _$ClaimedOfferModelFromJson(Map<String, dynamic> json) =>
-    ClaimedOfferModel(
-      data: json['data'] == null
-          ? null
-          : OfferModel.fromJson(json['data'] as Map<String, dynamic>),
+    $checkedCreate(
+      'ClaimedOfferModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = ClaimedOfferModel(
+          data: $checkedConvert(
+              'data',
+              (v) => v == null
+                  ? null
+                  : OfferModel.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$ClaimedOfferModelToJson(ClaimedOfferModel instance) =>

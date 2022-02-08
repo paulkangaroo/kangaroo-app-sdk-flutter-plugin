@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'image.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Image {
   final String? large;
 

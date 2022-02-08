@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer
 part 'transfer_messages_model.g.dart';
 
 /// Contains a list of transfer messages sent to this user
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferMessagesModel {
   ///List of transfer messages. 
   final List<TransferMessage>? data;

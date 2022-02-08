@@ -7,10 +7,24 @@ part of 'user_rewards_data.dart';
 // **************************************************************************
 
 UserRewardsData _$UserRewardsDataFromJson(Map<String, dynamic> json) =>
-    UserRewardsData(
-      catalogItems: (json['catalog_items'] as List<dynamic>?)
-          ?.map((e) => RewardModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'UserRewardsData',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['catalog_items'],
+        );
+        final val = UserRewardsData(
+          catalogItems: $checkedConvert(
+              'catalog_items',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => RewardModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'catalogItems': 'catalog_items'},
     );
 
 Map<String, dynamic> _$UserRewardsDataToJson(UserRewardsData instance) =>

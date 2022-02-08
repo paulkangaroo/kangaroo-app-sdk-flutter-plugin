@@ -17,7 +17,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/referral
 part 'user_profile_include.g.dart';
 
 /// Extra user profile data
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProfileInclude {
   ///User Profile balance data. 
   final UserBalance? balance;

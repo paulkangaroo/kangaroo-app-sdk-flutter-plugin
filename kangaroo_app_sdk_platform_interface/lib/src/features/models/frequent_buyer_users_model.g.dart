@@ -8,10 +8,22 @@ part of 'frequent_buyer_users_model.dart';
 
 FrequentBuyerUsersModel _$FrequentBuyerUsersModelFromJson(
         Map<String, dynamic> json) =>
-    FrequentBuyerUsersModel(
-      id: json['id'] as int?,
-      status: json['status'] as int?,
-      purchasesCount: json['purchases_count'] as int?,
+    $checkedCreate(
+      'FrequentBuyerUsersModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['id', 'status', 'purchases_count'],
+        );
+        final val = FrequentBuyerUsersModel(
+          id: $checkedConvert('id', (v) => v as int?),
+          status: $checkedConvert('status', (v) => v as int?),
+          purchasesCount: $checkedConvert('purchases_count', (v) => v as int?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'purchasesCount': 'purchases_count'},
     );
 
 Map<String, dynamic> _$FrequentBuyerUsersModelToJson(

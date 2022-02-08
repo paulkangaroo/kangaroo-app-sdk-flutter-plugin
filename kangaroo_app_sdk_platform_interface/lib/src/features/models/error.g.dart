@@ -6,9 +6,20 @@ part of 'error.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Error _$ErrorFromJson(Map<String, dynamic> json) => Error(
-      code: json['code'] as int,
-      message: json['message'] as String,
+Error _$ErrorFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'Error',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['code', 'message'],
+        );
+        final val = Error(
+          code: $checkedConvert('code', (v) => v as int),
+          message: $checkedConvert('message', (v) => v as String),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$ErrorToJson(Error instance) => <String, dynamic>{

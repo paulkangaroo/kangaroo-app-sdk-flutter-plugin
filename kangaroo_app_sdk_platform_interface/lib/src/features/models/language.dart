@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'language.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Language {
   ///The Kangaroo ID of this language. 
   final int id;

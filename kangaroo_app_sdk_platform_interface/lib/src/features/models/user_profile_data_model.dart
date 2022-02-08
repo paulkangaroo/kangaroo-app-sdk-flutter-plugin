@@ -7,10 +7,10 @@ import 'package:json_annotation/json_annotation.dart';
 part 'user_profile_data_model.g.dart';
 
 /// User Profile model class containing user data
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProfileDataModel {
   ///Unique user ID. 
-  final String id;
+  final String? id;
 
   ///Email address identifying this user. 
   final String? email;

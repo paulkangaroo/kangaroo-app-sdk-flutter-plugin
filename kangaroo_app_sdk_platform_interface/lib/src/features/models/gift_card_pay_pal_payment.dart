@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'gift_card_pay_pal_payment.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class GiftCardPayPalPayment {
   final bool? intent;
 

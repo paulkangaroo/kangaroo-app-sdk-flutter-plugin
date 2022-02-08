@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'transfer_message_gift_card_queue.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferMessageGiftCardQueue {
   ///The unique ID of this gift_card_queue 
   final int? id;

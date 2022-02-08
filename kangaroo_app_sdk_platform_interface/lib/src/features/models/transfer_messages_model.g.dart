@@ -8,10 +8,24 @@ part of 'transfer_messages_model.dart';
 
 TransferMessagesModel _$TransferMessagesModelFromJson(
         Map<String, dynamic> json) =>
-    TransferMessagesModel(
-      data: (json['data'] as List<dynamic>?)
-          ?.map((e) => TransferMessage.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'TransferMessagesModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = TransferMessagesModel(
+          data: $checkedConvert(
+              'data',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      TransferMessage.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$TransferMessagesModelToJson(

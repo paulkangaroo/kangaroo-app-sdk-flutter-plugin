@@ -7,8 +7,20 @@ part of 'redeem_response_model.dart';
 // **************************************************************************
 
 RedeemResponseModel _$RedeemResponseModelFromJson(Map<String, dynamic> json) =>
-    RedeemResponseModel(
-      data: RedeemResponseData.fromJson(json['data'] as Map<String, dynamic>),
+    $checkedCreate(
+      'RedeemResponseModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = RedeemResponseModel(
+          data: $checkedConvert('data',
+              (v) => RedeemResponseData.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$RedeemResponseModelToJson(

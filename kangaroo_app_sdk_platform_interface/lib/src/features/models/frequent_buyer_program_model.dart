@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'frequent_buyer_program_model.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class FrequentBuyerProgramModel {
   final int? id;
 

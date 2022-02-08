@@ -7,12 +7,30 @@ part of 'redeem_request.dart';
 // **************************************************************************
 
 RedeemRequest _$RedeemRequestFromJson(Map<String, dynamic> json) =>
-    RedeemRequest(
-      branchId: json['branch_id'] as String,
-      catalogItems: (json['catalog_items'] as List<dynamic>)
-          .map((e) => RedemptionModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      intent: json['intent'] as String,
+    $checkedCreate(
+      'RedeemRequest',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['branch_id', 'catalog_items', 'intent'],
+        );
+        final val = RedeemRequest(
+          branchId: $checkedConvert('branch_id', (v) => v as String),
+          catalogItems: $checkedConvert(
+              'catalog_items',
+              (v) => (v as List<dynamic>)
+                  .map((e) =>
+                      RedemptionModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          intent: $checkedConvert('intent', (v) => v as String),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'branchId': 'branch_id',
+        'catalogItems': 'catalog_items'
+      },
     );
 
 Map<String, dynamic> _$RedeemRequestToJson(RedeemRequest instance) =>

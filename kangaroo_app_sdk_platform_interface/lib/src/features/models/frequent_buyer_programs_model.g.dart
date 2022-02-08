@@ -8,14 +8,29 @@ part of 'frequent_buyer_programs_model.dart';
 
 FrequentBuyerProgramsModel _$FrequentBuyerProgramsModelFromJson(
         Map<String, dynamic> json) =>
-    FrequentBuyerProgramsModel(
-      data: json['data'] == null
-          ? null
-          : UserProfileDataModel.fromJson(json['data'] as Map<String, dynamic>),
-      included: json['included'] == null
-          ? null
-          : FrequentBuyerProgramsIncluded.fromJson(
-              json['included'] as Map<String, dynamic>),
+    $checkedCreate(
+      'FrequentBuyerProgramsModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data', 'included'],
+        );
+        final val = FrequentBuyerProgramsModel(
+          data: $checkedConvert(
+              'data',
+              (v) => v == null
+                  ? null
+                  : UserProfileDataModel.fromJson(v as Map<String, dynamic>)),
+          included: $checkedConvert(
+              'included',
+              (v) => v == null
+                  ? null
+                  : FrequentBuyerProgramsIncluded.fromJson(
+                      v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$FrequentBuyerProgramsModelToJson(

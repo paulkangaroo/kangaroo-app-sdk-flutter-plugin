@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'branch_address.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class BranchAddress {
   final String? formatted;
 

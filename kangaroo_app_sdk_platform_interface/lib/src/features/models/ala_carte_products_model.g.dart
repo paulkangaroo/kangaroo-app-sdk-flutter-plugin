@@ -8,14 +8,28 @@ part of 'ala_carte_products_model.dart';
 
 AlaCarteProductsModel _$AlaCarteProductsModelFromJson(
         Map<String, dynamic> json) =>
-    AlaCarteProductsModel(
-      data: json['data'] == null
-          ? null
-          : UserProfileDataModel.fromJson(json['data'] as Map<String, dynamic>),
-      included: json['included'] == null
-          ? null
-          : UserAlaCarteIncluded.fromJson(
-              json['included'] as Map<String, dynamic>),
+    $checkedCreate(
+      'AlaCarteProductsModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data', 'included'],
+        );
+        final val = AlaCarteProductsModel(
+          data: $checkedConvert(
+              'data',
+              (v) => v == null
+                  ? null
+                  : UserProfileDataModel.fromJson(v as Map<String, dynamic>)),
+          included: $checkedConvert(
+              'included',
+              (v) => v == null
+                  ? null
+                  : UserAlaCarteIncluded.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$AlaCarteProductsModelToJson(

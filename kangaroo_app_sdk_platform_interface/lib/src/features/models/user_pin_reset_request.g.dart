@@ -7,10 +7,22 @@ part of 'user_pin_reset_request.dart';
 // **************************************************************************
 
 UserPinResetRequest _$UserPinResetRequestFromJson(Map<String, dynamic> json) =>
-    UserPinResetRequest(
-      statusCode: json['status_code'] as int,
-      message: json['message'] as String,
-      description: json['description'] as String,
+    $checkedCreate(
+      'UserPinResetRequest',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['status_code', 'message', 'description'],
+        );
+        final val = UserPinResetRequest(
+          statusCode: $checkedConvert('status_code', (v) => v as int),
+          message: $checkedConvert('message', (v) => v as String),
+          description: $checkedConvert('description', (v) => v as String),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'statusCode': 'status_code'},
     );
 
 Map<String, dynamic> _$UserPinResetRequestToJson(

@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'referral_program.g.dart';
 
 /// A referral program
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class ReferralProgram {
   ///The unique id of this referral program. 
   final int? id;

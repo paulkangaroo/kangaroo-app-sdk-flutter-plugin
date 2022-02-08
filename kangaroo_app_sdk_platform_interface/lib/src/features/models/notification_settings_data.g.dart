@@ -8,14 +8,38 @@ part of 'notification_settings_data.dart';
 
 NotificationSettingsData _$NotificationSettingsDataFromJson(
         Map<String, dynamic> json) =>
-    NotificationSettingsData(
-      id: json['id'] as String?,
-      business: json['business'] == null
-          ? null
-          : BusinessData.fromJson(json['business'] as Map<String, dynamic>),
-      allowEmail: json['allow_email'] as bool?,
-      allowSms: json['allow_sms'] as bool?,
-      allowPush: json['allow_push'] as bool?,
+    $checkedCreate(
+      'NotificationSettingsData',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'business',
+            'allow_email',
+            'allow_sms',
+            'allow_push'
+          ],
+        );
+        final val = NotificationSettingsData(
+          id: $checkedConvert('id', (v) => v as String?),
+          business: $checkedConvert(
+              'business',
+              (v) => v == null
+                  ? null
+                  : BusinessData.fromJson(v as Map<String, dynamic>)),
+          allowEmail: $checkedConvert('allow_email', (v) => v as bool?),
+          allowSms: $checkedConvert('allow_sms', (v) => v as bool?),
+          allowPush: $checkedConvert('allow_push', (v) => v as bool?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'allowEmail': 'allow_email',
+        'allowSms': 'allow_sms',
+        'allowPush': 'allow_push'
+      },
     );
 
 Map<String, dynamic> _$NotificationSettingsDataToJson(

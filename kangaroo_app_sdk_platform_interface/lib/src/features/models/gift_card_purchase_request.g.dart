@@ -8,12 +8,32 @@ part of 'gift_card_purchase_request.dart';
 
 GiftCardPurchaseRequest _$GiftCardPurchaseRequestFromJson(
         Map<String, dynamic> json) =>
-    GiftCardPurchaseRequest(
-      intent: json['intent'] as String,
-      provider: json['provider'] as String,
-      giftcardId: json['giftcard_id'] as int,
-      paypalPayment: GiftCardPayPalPayment.fromJson(
-          json['paypal_payment'] as Map<String, dynamic>),
+    $checkedCreate(
+      'GiftCardPurchaseRequest',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'intent',
+            'provider',
+            'giftcard_id',
+            'paypal_payment'
+          ],
+        );
+        final val = GiftCardPurchaseRequest(
+          intent: $checkedConvert('intent', (v) => v as String),
+          provider: $checkedConvert('provider', (v) => v as String),
+          giftcardId: $checkedConvert('giftcard_id', (v) => v as int),
+          paypalPayment: $checkedConvert('paypal_payment',
+              (v) => GiftCardPayPalPayment.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'giftcardId': 'giftcard_id',
+        'paypalPayment': 'paypal_payment'
+      },
     );
 
 Map<String, dynamic> _$GiftCardPurchaseRequestToJson(

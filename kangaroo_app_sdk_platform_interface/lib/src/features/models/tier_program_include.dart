@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/tiers.da
 part 'tier_program_include.g.dart';
 
 /// Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels. 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TierProgramInclude {
   ///Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.  
   final Tiers? tiers;

@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'business_category.g.dart';
 
 /// Details about this business' category. This can be something like cafe, boutique, etc... 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class BusinessCategory {
   ///Name of this category 
   final String? name;

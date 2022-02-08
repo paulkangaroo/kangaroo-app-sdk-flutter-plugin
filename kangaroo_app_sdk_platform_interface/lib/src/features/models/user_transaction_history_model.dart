@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transact
 part 'user_transaction_history_model.g.dart';
 
 /// User Profile model class containing user data
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserTransactionHistoryModel {
   ///Contains user transaction history. 
   final List<Transaction>? data;

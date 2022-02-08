@@ -8,11 +8,24 @@ part of 'notification_settings_model.dart';
 
 NotificationSettingsModel _$NotificationSettingsModelFromJson(
         Map<String, dynamic> json) =>
-    NotificationSettingsModel(
-      data: (json['data'] as List<dynamic>?)
-          ?.map((e) =>
-              NotificationSettingsData.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'NotificationSettingsModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = NotificationSettingsModel(
+          data: $checkedConvert(
+              'data',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => NotificationSettingsData.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$NotificationSettingsModelToJson(

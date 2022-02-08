@@ -13,7 +13,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_pro
 part 'user_profile_model.g.dart';
 
 /// User Profile model class containing user data
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProfileModel {
   ///Contains all user profile data 
   final UserProfileDataModel? data;

@@ -7,9 +7,21 @@ part of 'check_in_request.dart';
 // **************************************************************************
 
 CheckInRequest _$CheckInRequestFromJson(Map<String, dynamic> json) =>
-    CheckInRequest(
-      branchId: json['branch_id'] as String,
-      intent: json['intent'] as String,
+    $checkedCreate(
+      'CheckInRequest',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['branch_id', 'intent'],
+        );
+        final val = CheckInRequest(
+          branchId: $checkedConvert('branch_id', (v) => v as String),
+          intent: $checkedConvert('intent', (v) => v as String),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'branchId': 'branch_id'},
     );
 
 Map<String, dynamic> _$CheckInRequestToJson(CheckInRequest instance) =>

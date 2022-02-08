@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'user_authentication_model.g.dart';
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserAuthenticationModel{
   final int expiresIn;
   final String accessToken;

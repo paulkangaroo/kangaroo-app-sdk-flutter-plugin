@@ -7,16 +7,38 @@ part of 'redeem_response_data.dart';
 // **************************************************************************
 
 RedeemResponseData _$RedeemResponseDataFromJson(Map<String, dynamic> json) =>
-    RedeemResponseData(
-      id: json['id'] as int,
-      amount: (json['amount'] as num?)?.toDouble(),
-      points: json['points'] as int?,
-      name: json['name'] as String?,
-      createdAt: json['created_at'] as String?,
-      updatedAt: json['updated_at'] as String?,
-      customer: json['customer'] == null
-          ? null
-          : UserProfileModel.fromJson(json['customer'] as Map<String, dynamic>),
+    $checkedCreate(
+      'RedeemResponseData',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'amount',
+            'points',
+            'name',
+            'created_at',
+            'updated_at',
+            'customer'
+          ],
+        );
+        final val = RedeemResponseData(
+          id: $checkedConvert('id', (v) => v as int),
+          amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
+          points: $checkedConvert('points', (v) => v as int?),
+          name: $checkedConvert('name', (v) => v as String?),
+          createdAt: $checkedConvert('created_at', (v) => v as String?),
+          updatedAt: $checkedConvert('updated_at', (v) => v as String?),
+          customer: $checkedConvert(
+              'customer',
+              (v) => v == null
+                  ? null
+                  : UserProfileModel.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'createdAt': 'created_at', 'updatedAt': 'updated_at'},
     );
 
 Map<String, dynamic> _$RedeemResponseDataToJson(RedeemResponseData instance) =>

@@ -8,8 +8,19 @@ part of 'transfer_message_actions.dart';
 
 TransferMessageActions _$TransferMessageActionsFromJson(
         Map<String, dynamic> json) =>
-    TransferMessageActions(
-      type: json['type'] as String?,
+    $checkedCreate(
+      'TransferMessageActions',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['type'],
+        );
+        final val = TransferMessageActions(
+          type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$TransferMessageActionsToJson(

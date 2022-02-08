@@ -7,16 +7,48 @@ part of 'referral_program.dart';
 // **************************************************************************
 
 ReferralProgram _$ReferralProgramFromJson(Map<String, dynamic> json) =>
-    ReferralProgram(
-      id: json['id'] as int?,
-      ruleName: json['rule_name'] as String?,
-      condMinAmount: (json['cond_min_amount'] as num?)?.toDouble(),
-      refereeEarns: json['referee_earns'] as int?,
-      refererEarns: json['referer_earns'] as int?,
-      expiresIn: json['expires_in'] as int?,
-      enabled: json['enabled'] as bool?,
-      linkReferralEnabled: json['link_referral_enabled'] as bool?,
-      referralLink: json['referral_link'] as String?,
+    $checkedCreate(
+      'ReferralProgram',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'rule_name',
+            'cond_min_amount',
+            'referee_earns',
+            'referer_earns',
+            'expires_in',
+            'enabled',
+            'link_referral_enabled',
+            'referral_link'
+          ],
+        );
+        final val = ReferralProgram(
+          id: $checkedConvert('id', (v) => v as int?),
+          ruleName: $checkedConvert('rule_name', (v) => v as String?),
+          condMinAmount: $checkedConvert(
+              'cond_min_amount', (v) => (v as num?)?.toDouble()),
+          refereeEarns: $checkedConvert('referee_earns', (v) => v as int?),
+          refererEarns: $checkedConvert('referer_earns', (v) => v as int?),
+          expiresIn: $checkedConvert('expires_in', (v) => v as int?),
+          enabled: $checkedConvert('enabled', (v) => v as bool?),
+          linkReferralEnabled:
+              $checkedConvert('link_referral_enabled', (v) => v as bool?),
+          referralLink: $checkedConvert('referral_link', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'ruleName': 'rule_name',
+        'condMinAmount': 'cond_min_amount',
+        'refereeEarns': 'referee_earns',
+        'refererEarns': 'referer_earns',
+        'expiresIn': 'expires_in',
+        'linkReferralEnabled': 'link_referral_enabled',
+        'referralLink': 'referral_link'
+      },
     );
 
 Map<String, dynamic> _$ReferralProgramToJson(ReferralProgram instance) =>

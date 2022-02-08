@@ -8,10 +8,23 @@ part of 'transfer_action_result_model.dart';
 
 TransferActionResultModel _$TransferActionResultModelFromJson(
         Map<String, dynamic> json) =>
-    TransferActionResultModel(
-      data: json['data'] == null
-          ? null
-          : TransferMessage.fromJson(json['data'] as Map<String, dynamic>),
+    $checkedCreate(
+      'TransferActionResultModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = TransferActionResultModel(
+          data: $checkedConvert(
+              'data',
+              (v) => v == null
+                  ? null
+                  : TransferMessage.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$TransferActionResultModelToJson(

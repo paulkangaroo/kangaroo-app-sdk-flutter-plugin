@@ -7,9 +7,20 @@ part of 'social_media_model.dart';
 // **************************************************************************
 
 SocialMediaModel _$SocialMediaModelFromJson(Map<String, dynamic> json) =>
-    SocialMediaModel(
-      icon: json['icon'] as String?,
-      url: json['url'] as String?,
+    $checkedCreate(
+      'SocialMediaModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['icon', 'url'],
+        );
+        final val = SocialMediaModel(
+          icon: $checkedConvert('icon', (v) => v as String?),
+          url: $checkedConvert('url', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$SocialMediaModelToJson(SocialMediaModel instance) =>

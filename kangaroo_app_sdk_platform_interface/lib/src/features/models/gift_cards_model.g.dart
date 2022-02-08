@@ -7,10 +7,23 @@ part of 'gift_cards_model.dart';
 // **************************************************************************
 
 GiftCardsModel _$GiftCardsModelFromJson(Map<String, dynamic> json) =>
-    GiftCardsModel(
-      data: (json['data'] as List<dynamic>)
-          .map((e) => GiftCardModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'GiftCardsModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = GiftCardsModel(
+          data: $checkedConvert(
+              'data',
+              (v) => (v as List<dynamic>)
+                  .map((e) => GiftCardModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$GiftCardsModelToJson(GiftCardsModel instance) =>

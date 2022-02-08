@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'transaction.g.dart';
 
 /// Transaction model containting transaction details
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Transaction {
   ///Unique transaction ID. 
   final int? id;

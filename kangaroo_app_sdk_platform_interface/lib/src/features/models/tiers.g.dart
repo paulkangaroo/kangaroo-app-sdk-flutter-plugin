@@ -6,19 +6,50 @@ part of 'tiers.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Tiers _$TiersFromJson(Map<String, dynamic> json) => Tiers(
-      id: json['id'] as int?,
-      tierSequence: (json['tier_sequence'] as List<dynamic>?)
-          ?.map((e) => e as int)
-          .toList(),
-      tierRelations: json['tier_relations'] as int?,
-      resetType: json['reset_type'] as int?,
-      ressetPeriodMonth: json['resset_period_month'] as int?,
-      basePreviousPeriod: json['base_previous_period'] as int?,
-      enabled: json['enabled'] as bool?,
-      tierLevels: (json['tier_levels'] as List<dynamic>?)
-          ?.map((e) => TierLevel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+Tiers _$TiersFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'Tiers',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'tier_sequence',
+            'tier_relations',
+            'reset_type',
+            'resset_period_month',
+            'base_previous_period',
+            'enabled',
+            'tier_levels'
+          ],
+        );
+        final val = Tiers(
+          id: $checkedConvert('id', (v) => v as int?),
+          tierSequence: $checkedConvert('tier_sequence',
+              (v) => (v as List<dynamic>?)?.map((e) => e as int).toList()),
+          tierRelations: $checkedConvert('tier_relations', (v) => v as int?),
+          resetType: $checkedConvert('reset_type', (v) => v as int?),
+          ressetPeriodMonth:
+              $checkedConvert('resset_period_month', (v) => v as int?),
+          basePreviousPeriod:
+              $checkedConvert('base_previous_period', (v) => v as int?),
+          enabled: $checkedConvert('enabled', (v) => v as bool?),
+          tierLevels: $checkedConvert(
+              'tier_levels',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => TierLevel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'tierSequence': 'tier_sequence',
+        'tierRelations': 'tier_relations',
+        'resetType': 'reset_type',
+        'ressetPeriodMonth': 'resset_period_month',
+        'basePreviousPeriod': 'base_previous_period',
+        'tierLevels': 'tier_levels'
+      },
     );
 
 Map<String, dynamic> _$TiersToJson(Tiers instance) => <String, dynamic>{

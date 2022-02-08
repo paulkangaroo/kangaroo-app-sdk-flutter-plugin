@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'user_balance.g.dart';
 
 /// User Profile balance data.
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserBalance {
   ///The number of points this user currently has. 
   final int? points;

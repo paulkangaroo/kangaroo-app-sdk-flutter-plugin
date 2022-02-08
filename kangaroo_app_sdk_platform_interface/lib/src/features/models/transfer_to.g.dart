@@ -6,11 +6,23 @@ part of 'transfer_to.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-TransferTo _$TransferToFromJson(Map<String, dynamic> json) => TransferTo(
-      name: json['name'] as String?,
-      phone: json['phone'] as String?,
-      countryCode: json['country_code'] as String?,
-      email: json['email'] as String?,
+TransferTo _$TransferToFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'TransferTo',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['name', 'phone', 'country_code', 'email'],
+        );
+        final val = TransferTo(
+          name: $checkedConvert('name', (v) => v as String?),
+          phone: $checkedConvert('phone', (v) => v as String?),
+          countryCode: $checkedConvert('country_code', (v) => v as String?),
+          email: $checkedConvert('email', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'countryCode': 'country_code'},
     );
 
 Map<String, dynamic> _$TransferToToJson(TransferTo instance) =>

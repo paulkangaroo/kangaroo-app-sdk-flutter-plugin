@@ -8,10 +8,23 @@ part of 'business_branches_data.dart';
 
 BusinessBranchesData _$BusinessBranchesDataFromJson(
         Map<String, dynamic> json) =>
-    BusinessBranchesData(
-      branches: (json['branches'] as List<dynamic>?)
-          ?.map((e) => Branch.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'BusinessBranchesData',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['branches'],
+        );
+        final val = BusinessBranchesData(
+          branches: $checkedConvert(
+              'branches',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Branch.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$BusinessBranchesDataToJson(

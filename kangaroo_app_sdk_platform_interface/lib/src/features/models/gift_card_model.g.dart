@@ -7,41 +7,114 @@ part of 'gift_card_model.dart';
 // **************************************************************************
 
 GiftCardModel _$GiftCardModelFromJson(Map<String, dynamic> json) =>
-    GiftCardModel(
-      id: json['id'] as int,
-      points: json['points'] as int?,
-      publishAt: json['publish_at'] as String?,
-      expiresAt: json['expires_at'] as String?,
-      isPublished: json['is_published'] as bool?,
-      couponConvertible: json['coupon_convertible'] as bool?,
-      realValue: (json['real_value'] as num?)?.toDouble(),
-      discountValue: (json['discount_value'] as num?)?.toDouble(),
-      multipFactor: (json['multip_factor'] as num?)?.toDouble(),
-      minPurchase: (json['min_purchase'] as num?)?.toDouble(),
-      maxPurchase: (json['max_purchase'] as num?)?.toDouble(),
-      appsOnly: json['apps_only'] as bool?,
-      offerFrequencyId: json['offer_frequency_id'] as int?,
-      freqDetails: (json['freq_details'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      peakFrom: json['peak_from'] as String?,
-      peakTo: json['peak_to'] as String?,
-      type: json['type'] as String?,
-      title: json['title'] as String?,
-      description: json['description'] as String?,
-      slug: json['slug'] as String?,
-      images: (json['images'] as List<dynamic>?)
-          ?.map((e) => Image.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      neverExpiresFlag: json['never_expires_flag'] as bool?,
-      termsConditions: json['terms_conditions'] as String?,
-      link: json['link'] as String?,
-      offerLanguages: (json['offer_languages'] as List<dynamic>?)
-          ?.map((e) => GiftCardTranslation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      actions: (json['actions'] as List<dynamic>?)
-          ?.map((e) => GiftCardAction.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'GiftCardModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'points',
+            'publish_at',
+            'expires_at',
+            'is_published',
+            'coupon_convertible',
+            'real_value',
+            'discount_value',
+            'multip_factor',
+            'min_purchase',
+            'max_purchase',
+            'apps_only',
+            'offer_frequency_id',
+            'freq_details',
+            'peak_from',
+            'peak_to',
+            'type',
+            'title',
+            'description',
+            'slug',
+            'images',
+            'never_expires_flag',
+            'terms_conditions',
+            'link',
+            'offer_languages',
+            'actions'
+          ],
+        );
+        final val = GiftCardModel(
+          id: $checkedConvert('id', (v) => v as int),
+          points: $checkedConvert('points', (v) => v as int?),
+          publishAt: $checkedConvert('publish_at', (v) => v as String?),
+          expiresAt: $checkedConvert('expires_at', (v) => v as String?),
+          isPublished: $checkedConvert('is_published', (v) => v as bool?),
+          couponConvertible:
+              $checkedConvert('coupon_convertible', (v) => v as bool?),
+          realValue:
+              $checkedConvert('real_value', (v) => (v as num?)?.toDouble()),
+          discountValue:
+              $checkedConvert('discount_value', (v) => (v as num?)?.toDouble()),
+          multipFactor:
+              $checkedConvert('multip_factor', (v) => (v as num?)?.toDouble()),
+          minPurchase:
+              $checkedConvert('min_purchase', (v) => (v as num?)?.toDouble()),
+          maxPurchase:
+              $checkedConvert('max_purchase', (v) => (v as num?)?.toDouble()),
+          appsOnly: $checkedConvert('apps_only', (v) => v as bool?),
+          offerFrequencyId:
+              $checkedConvert('offer_frequency_id', (v) => v as int?),
+          freqDetails: $checkedConvert('freq_details',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          peakFrom: $checkedConvert('peak_from', (v) => v as String?),
+          peakTo: $checkedConvert('peak_to', (v) => v as String?),
+          type: $checkedConvert('type', (v) => v as String?),
+          title: $checkedConvert('title', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
+          slug: $checkedConvert('slug', (v) => v as String?),
+          images: $checkedConvert(
+              'images',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Image.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          neverExpiresFlag:
+              $checkedConvert('never_expires_flag', (v) => v as bool?),
+          termsConditions:
+              $checkedConvert('terms_conditions', (v) => v as String?),
+          link: $checkedConvert('link', (v) => v as String?),
+          offerLanguages: $checkedConvert(
+              'offer_languages',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      GiftCardTranslation.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          actions: $checkedConvert(
+              'actions',
+              (v) => (v as List<dynamic>?)
+                  ?.map(
+                      (e) => GiftCardAction.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'publishAt': 'publish_at',
+        'expiresAt': 'expires_at',
+        'isPublished': 'is_published',
+        'couponConvertible': 'coupon_convertible',
+        'realValue': 'real_value',
+        'discountValue': 'discount_value',
+        'multipFactor': 'multip_factor',
+        'minPurchase': 'min_purchase',
+        'maxPurchase': 'max_purchase',
+        'appsOnly': 'apps_only',
+        'offerFrequencyId': 'offer_frequency_id',
+        'freqDetails': 'freq_details',
+        'peakFrom': 'peak_from',
+        'peakTo': 'peak_to',
+        'neverExpiresFlag': 'never_expires_flag',
+        'termsConditions': 'terms_conditions',
+        'offerLanguages': 'offer_languages'
+      },
     );
 
 Map<String, dynamic> _$GiftCardModelToJson(GiftCardModel instance) =>

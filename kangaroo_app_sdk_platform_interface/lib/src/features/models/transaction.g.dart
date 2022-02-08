@@ -6,14 +6,39 @@ part of 'transaction.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Transaction _$TransactionFromJson(Map<String, dynamic> json) => Transaction(
-      id: json['id'] as int?,
-      amount: (json['amount'] as num?)?.toDouble(),
-      points: (json['points'] as num?)?.toDouble(),
-      name: json['name'] as String?,
-      transactionType: json['transaction_type'] as int?,
-      createdAt: json['created_at'] as String?,
-      updatedAt: json['updated_at'] as String?,
+Transaction _$TransactionFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'Transaction',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'amount',
+            'points',
+            'name',
+            'transaction_type',
+            'created_at',
+            'updated_at'
+          ],
+        );
+        final val = Transaction(
+          id: $checkedConvert('id', (v) => v as int?),
+          amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toDouble()),
+          name: $checkedConvert('name', (v) => v as String?),
+          transactionType:
+              $checkedConvert('transaction_type', (v) => v as int?),
+          createdAt: $checkedConvert('created_at', (v) => v as String?),
+          updatedAt: $checkedConvert('updated_at', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'transactionType': 'transaction_type',
+        'createdAt': 'created_at',
+        'updatedAt': 'updated_at'
+      },
     );
 
 Map<String, dynamic> _$TransactionToJson(Transaction instance) =>

@@ -8,11 +8,24 @@ part of 'gift_card_pay_pal_payment_response_model.dart';
 
 GiftCardPayPalPaymentResponseModel _$GiftCardPayPalPaymentResponseModelFromJson(
         Map<String, dynamic> json) =>
-    GiftCardPayPalPaymentResponseModel(
-      data: json['data'] == null
-          ? null
-          : GiftCardPayPalPaymentResponseData.fromJson(
-              json['data'] as Map<String, dynamic>),
+    $checkedCreate(
+      'GiftCardPayPalPaymentResponseModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = GiftCardPayPalPaymentResponseModel(
+          data: $checkedConvert(
+              'data',
+              (v) => v == null
+                  ? null
+                  : GiftCardPayPalPaymentResponseData.fromJson(
+                      v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$GiftCardPayPalPaymentResponseModelToJson(

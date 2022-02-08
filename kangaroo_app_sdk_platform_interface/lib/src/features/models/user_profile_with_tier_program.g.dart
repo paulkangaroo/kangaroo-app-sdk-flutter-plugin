@@ -8,14 +8,28 @@ part of 'user_profile_with_tier_program.dart';
 
 UserProfileWithTierProgram _$UserProfileWithTierProgramFromJson(
         Map<String, dynamic> json) =>
-    UserProfileWithTierProgram(
-      data: json['data'] == null
-          ? null
-          : UserProfileDataModel.fromJson(json['data'] as Map<String, dynamic>),
-      included: json['included'] == null
-          ? null
-          : TierProgramInclude.fromJson(
-              json['included'] as Map<String, dynamic>),
+    $checkedCreate(
+      'UserProfileWithTierProgram',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data', 'included'],
+        );
+        final val = UserProfileWithTierProgram(
+          data: $checkedConvert(
+              'data',
+              (v) => v == null
+                  ? null
+                  : UserProfileDataModel.fromJson(v as Map<String, dynamic>)),
+          included: $checkedConvert(
+              'included',
+              (v) => v == null
+                  ? null
+                  : TierProgramInclude.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$UserProfileWithTierProgramToJson(

@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/campaign
 part 'campaign_messages_model.g.dart';
 
 /// Contains a list of campaign messages sent to this user
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CampaignMessagesModel {
   ///List of campaign messages. 
   final List<CampaignMessage>? data;

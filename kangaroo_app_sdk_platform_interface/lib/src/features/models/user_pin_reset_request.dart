@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'user_pin_reset_request.g.dart';
 
 /// User PIN reset request status
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserPinResetRequest {
   ///The response code for the pin reset request. Anything within the 200 range indicates a success  
   final int statusCode;

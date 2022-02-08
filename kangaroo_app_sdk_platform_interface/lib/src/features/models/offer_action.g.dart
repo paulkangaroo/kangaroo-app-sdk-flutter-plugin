@@ -6,8 +6,19 @@ part of 'offer_action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-OfferAction _$OfferActionFromJson(Map<String, dynamic> json) => OfferAction(
-      type: json['type'] as String?,
+OfferAction _$OfferActionFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'OfferAction',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['type'],
+        );
+        final val = OfferAction(
+          type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$OfferActionToJson(OfferAction instance) =>

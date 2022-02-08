@@ -8,14 +8,39 @@ part of 'frequent_buyer_program_model.dart';
 
 FrequentBuyerProgramModel _$FrequentBuyerProgramModelFromJson(
         Map<String, dynamic> json) =>
-    FrequentBuyerProgramModel(
-      id: json['id'] as int?,
-      enabled: json['enabled'] as bool?,
-      title: json['title'] as String?,
-      buyUnits: json['buy_units'] as int?,
-      getUnits: json['get_units'] as int?,
-      resetInterval: json['reset_interval'] as int?,
-      createdAt: json['created_at'] as String?,
+    $checkedCreate(
+      'FrequentBuyerProgramModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'enabled',
+            'title',
+            'buy_units',
+            'get_units',
+            'reset_interval',
+            'created_at'
+          ],
+        );
+        final val = FrequentBuyerProgramModel(
+          id: $checkedConvert('id', (v) => v as int?),
+          enabled: $checkedConvert('enabled', (v) => v as bool?),
+          title: $checkedConvert('title', (v) => v as String?),
+          buyUnits: $checkedConvert('buy_units', (v) => v as int?),
+          getUnits: $checkedConvert('get_units', (v) => v as int?),
+          resetInterval: $checkedConvert('reset_interval', (v) => v as int?),
+          createdAt: $checkedConvert('created_at', (v) => v as String?),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'buyUnits': 'buy_units',
+        'getUnits': 'get_units',
+        'resetInterval': 'reset_interval',
+        'createdAt': 'created_at'
+      },
     );
 
 Map<String, dynamic> _$FrequentBuyerProgramModelToJson(

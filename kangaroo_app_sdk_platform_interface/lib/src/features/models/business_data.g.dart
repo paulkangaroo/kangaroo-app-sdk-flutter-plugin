@@ -6,26 +6,59 @@ part of 'business_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) => BusinessData(
-      id: json['id'] as String?,
-      name: json['name'] as String?,
-      loyaltyType: json['loyalty_type'] as String?,
-      conglomerate: json['conglomerate'] as String?,
-      whiteLabel: json['white_label'] as String?,
-      about: json['about'] as String?,
-      logo: json['logo'] == null
-          ? null
-          : Image.fromJson(json['logo'] as Map<String, dynamic>),
-      logoTransparentBackground: json['logo_transparent_background'] == null
-          ? null
-          : Image.fromJson(
-              json['logo_transparent_background'] as Map<String, dynamic>),
-      coverPhoto: json['cover_photo'] == null
-          ? null
-          : Image.fromJson(json['cover_photo'] as Map<String, dynamic>),
-      category: json['category'] == null
-          ? null
-          : BusinessCategory.fromJson(json['category'] as Map<String, dynamic>),
+BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      'BusinessData',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'name',
+            'loyalty_type',
+            'conglomerate',
+            'white_label',
+            'about',
+            'logo',
+            'logo_transparent_background',
+            'cover_photo',
+            'category'
+          ],
+        );
+        final val = BusinessData(
+          id: $checkedConvert('id', (v) => v as String?),
+          name: $checkedConvert('name', (v) => v as String?),
+          loyaltyType: $checkedConvert('loyalty_type', (v) => v as String?),
+          conglomerate: $checkedConvert('conglomerate', (v) => v as String?),
+          whiteLabel: $checkedConvert('white_label', (v) => v as String?),
+          about: $checkedConvert('about', (v) => v as String?),
+          logo: $checkedConvert(
+              'logo',
+              (v) =>
+                  v == null ? null : Image.fromJson(v as Map<String, dynamic>)),
+          logoTransparentBackground: $checkedConvert(
+              'logo_transparent_background',
+              (v) =>
+                  v == null ? null : Image.fromJson(v as Map<String, dynamic>)),
+          coverPhoto: $checkedConvert(
+              'cover_photo',
+              (v) =>
+                  v == null ? null : Image.fromJson(v as Map<String, dynamic>)),
+          category: $checkedConvert(
+              'category',
+              (v) => v == null
+                  ? null
+                  : BusinessCategory.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'loyaltyType': 'loyalty_type',
+        'whiteLabel': 'white_label',
+        'logoTransparentBackground': 'logo_transparent_background',
+        'coverPhoto': 'cover_photo'
+      },
     );
 
 Map<String, dynamic> _$BusinessDataToJson(BusinessData instance) =>

@@ -7,15 +7,36 @@ part of 'campaign_message.dart';
 // **************************************************************************
 
 CampaignMessage _$CampaignMessageFromJson(Map<String, dynamic> json) =>
-    CampaignMessage(
-      id: json['id'] as String?,
-      cellEmail: json['cell_email'] as int?,
-      subject: json['subject'] as String?,
-      sentAt: json['sent_at'] as String?,
-      message: json['message'] as String?,
-      campaign: json['campaign'] == null
-          ? null
-          : Campaign.fromJson(json['campaign'] as Map<String, dynamic>),
+    $checkedCreate(
+      'CampaignMessage',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'cell_email',
+            'subject',
+            'sent_at',
+            'message',
+            'campaign'
+          ],
+        );
+        final val = CampaignMessage(
+          id: $checkedConvert('id', (v) => v as String?),
+          cellEmail: $checkedConvert('cell_email', (v) => v as int?),
+          subject: $checkedConvert('subject', (v) => v as String?),
+          sentAt: $checkedConvert('sent_at', (v) => v as String?),
+          message: $checkedConvert('message', (v) => v as String?),
+          campaign: $checkedConvert(
+              'campaign',
+              (v) => v == null
+                  ? null
+                  : Campaign.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'cellEmail': 'cell_email', 'sentAt': 'sent_at'},
     );
 
 Map<String, dynamic> _$CampaignMessageToJson(CampaignMessage instance) =>

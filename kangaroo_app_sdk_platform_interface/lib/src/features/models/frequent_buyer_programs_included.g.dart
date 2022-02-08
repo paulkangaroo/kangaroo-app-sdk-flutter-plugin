@@ -8,11 +8,25 @@ part of 'frequent_buyer_programs_included.dart';
 
 FrequentBuyerProgramsIncluded _$FrequentBuyerProgramsIncludedFromJson(
         Map<String, dynamic> json) =>
-    FrequentBuyerProgramsIncluded(
-      frequentBuyerPrograms: (json['frequent_buyer_programs'] as List<dynamic>?)
-          ?.map((e) =>
-              FrequentBuyerProgramModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'FrequentBuyerProgramsIncluded',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['frequent_buyer_programs'],
+        );
+        final val = FrequentBuyerProgramsIncluded(
+          frequentBuyerPrograms: $checkedConvert(
+              'frequent_buyer_programs',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => FrequentBuyerProgramModel.fromJson(
+                      e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'frequentBuyerPrograms': 'frequent_buyer_programs'},
     );
 
 Map<String, dynamic> _$FrequentBuyerProgramsIncludedToJson(

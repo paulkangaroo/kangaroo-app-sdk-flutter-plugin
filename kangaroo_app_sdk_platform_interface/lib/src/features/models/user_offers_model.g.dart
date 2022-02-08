@@ -7,10 +7,23 @@ part of 'user_offers_model.dart';
 // **************************************************************************
 
 UserOffersModel _$UserOffersModelFromJson(Map<String, dynamic> json) =>
-    UserOffersModel(
-      data: (json['data'] as List<dynamic>)
-          .map((e) => OfferModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'UserOffersModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = UserOffersModel(
+          data: $checkedConvert(
+              'data',
+              (v) => (v as List<dynamic>)
+                  .map((e) => OfferModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$UserOffersModelToJson(UserOffersModel instance) =>

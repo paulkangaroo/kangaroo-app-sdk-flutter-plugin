@@ -8,10 +8,23 @@ part of 'user_transaction_history_model.dart';
 
 UserTransactionHistoryModel _$UserTransactionHistoryModelFromJson(
         Map<String, dynamic> json) =>
-    UserTransactionHistoryModel(
-      data: (json['data'] as List<dynamic>?)
-          ?.map((e) => Transaction.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'UserTransactionHistoryModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = UserTransactionHistoryModel(
+          data: $checkedConvert(
+              'data',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Transaction.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$UserTransactionHistoryModelToJson(

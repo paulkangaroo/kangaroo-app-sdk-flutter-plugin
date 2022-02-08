@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'tier_progress.g.dart';
 
 /// Represents a users' tier progress within their current tier. This also includes other useful information about the tier such as start and end dates, as well as the next tier the user will reach. 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TierProgress {
   ///The start date for this tier session. 
   final String? startDate;

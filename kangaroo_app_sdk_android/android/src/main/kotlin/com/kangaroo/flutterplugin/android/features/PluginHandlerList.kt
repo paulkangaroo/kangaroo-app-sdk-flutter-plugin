@@ -31,10 +31,12 @@ import com.kangaroo.flutterplugin.android.features.redeemReward.RedeemRewardsHan
 import com.kangaroo.flutterplugin.android.features.userPinResetRequest.UserPinResetRequestHandler
 import com.kangaroo.flutterplugin.android.features.userPinResetWithVerificationCode.UserPinResetHandler
 import com.kangaroo.flutterplugin.android.features.userBalanceTransfer.BalanceTransferHandler
+import com.kangaroo.flutterplugin.android.features.userUnsubscribe.UserUnsubscribeHandler
 import com.kangaroo.flutterplugin.android.features.userNotificationPreferencesUpdate.UpdateNotificationPreferencesHandler
 import com.kangaroo.flutterplugin.android.features.userPinUpdate.UserPinUpdateHandler
 import com.kangaroo.flutterplugin.android.features.userProfileUpdate.UserProfileUpdateHandler
 import com.kangaroo.flutterplugin.android.features.userCheckIn.UserCheckInHandler
+import com.kangaroo.flutterplugin.android.features.userVerification.UserAccountVerificationHandler
 
 val pluginHandlerList: List<PluginChannelHandler> = listOf(
     ClaimOfferHandler(),
@@ -95,6 +97,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     BalanceTransferHandler(),
 
+    UserUnsubscribeHandler(),
+
     UpdateNotificationPreferencesHandler(),
 
     UserPinUpdateHandler(),
@@ -102,6 +106,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     UserProfileUpdateHandler(),
 
     UserCheckInHandler(),
+
+    UserAccountVerificationHandler(),
 
     UserAuthenticationHandler()
 )

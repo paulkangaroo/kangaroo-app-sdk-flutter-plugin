@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'country.g.dart';
 
 /// A country model
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Country {
   ///Unique country ID. 
   final int? id;

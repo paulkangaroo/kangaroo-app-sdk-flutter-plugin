@@ -8,10 +8,24 @@ part of 'campaign_messages_model.dart';
 
 CampaignMessagesModel _$CampaignMessagesModelFromJson(
         Map<String, dynamic> json) =>
-    CampaignMessagesModel(
-      data: (json['data'] as List<dynamic>?)
-          ?.map((e) => CampaignMessage.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'CampaignMessagesModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data'],
+        );
+        final val = CampaignMessagesModel(
+          data: $checkedConvert(
+              'data',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      CampaignMessage.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$CampaignMessagesModelToJson(

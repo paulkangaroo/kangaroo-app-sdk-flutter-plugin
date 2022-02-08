@@ -9,7 +9,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/country.
 part 'countries.g.dart';
 
 /// A list of countries supported by Kangaroo
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Countries {
   ///A list of countries supported by Kangaroo 
   final List<Country>? data;

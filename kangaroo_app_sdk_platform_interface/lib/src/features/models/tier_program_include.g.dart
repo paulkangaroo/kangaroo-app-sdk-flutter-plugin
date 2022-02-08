@@ -7,10 +7,22 @@ part of 'tier_program_include.dart';
 // **************************************************************************
 
 TierProgramInclude _$TierProgramIncludeFromJson(Map<String, dynamic> json) =>
-    TierProgramInclude(
-      tiers: json['tiers'] == null
-          ? null
-          : Tiers.fromJson(json['tiers'] as Map<String, dynamic>),
+    $checkedCreate(
+      'TierProgramInclude',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['tiers'],
+        );
+        final val = TierProgramInclude(
+          tiers: $checkedConvert(
+              'tiers',
+              (v) =>
+                  v == null ? null : Tiers.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$TierProgramIncludeToJson(TierProgramInclude instance) =>

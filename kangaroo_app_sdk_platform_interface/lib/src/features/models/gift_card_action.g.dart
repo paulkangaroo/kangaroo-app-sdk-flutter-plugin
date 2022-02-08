@@ -7,8 +7,19 @@ part of 'gift_card_action.dart';
 // **************************************************************************
 
 GiftCardAction _$GiftCardActionFromJson(Map<String, dynamic> json) =>
-    GiftCardAction(
-      type: json['type'] as String?,
+    $checkedCreate(
+      'GiftCardAction',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['type'],
+        );
+        final val = GiftCardAction(
+          type: $checkedConvert('type', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$GiftCardActionToJson(GiftCardAction instance) =>

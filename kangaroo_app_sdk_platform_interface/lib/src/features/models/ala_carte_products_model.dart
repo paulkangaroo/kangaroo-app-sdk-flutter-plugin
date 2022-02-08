@@ -13,7 +13,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_ala
 part 'ala_carte_products_model.g.dart';
 
 /// User A la carte products model class containing user A la carte list
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class AlaCarteProductsModel {
   ///Contains all user data 
   final UserProfileDataModel? data;

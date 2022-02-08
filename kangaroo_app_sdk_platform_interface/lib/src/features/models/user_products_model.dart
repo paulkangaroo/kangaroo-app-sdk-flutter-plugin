@@ -13,7 +13,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_pro
 part 'user_products_model.g.dart';
 
 /// User Product model class containing user product list
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProductsModel {
   ///Contains all user data 
   final UserProfileDataModel? data;

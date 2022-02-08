@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'pay_pal_payment_gift_card.g.dart';
 
 /// A giftcard received from a paypal payment 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PayPalPaymentGiftCard {
   ///Unique gift card ID. 
   final int? id;

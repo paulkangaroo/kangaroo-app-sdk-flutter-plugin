@@ -13,7 +13,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/frequent
 part 'frequent_buyer_programs_model.g.dart';
 
 /// Frequent buyer programs for this business
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class FrequentBuyerProgramsModel {
   ///Contains all user data 
   final UserProfileDataModel? data;

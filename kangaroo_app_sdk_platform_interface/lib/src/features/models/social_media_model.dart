@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'social_media_model.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class SocialMediaModel {
   final String? icon;
 

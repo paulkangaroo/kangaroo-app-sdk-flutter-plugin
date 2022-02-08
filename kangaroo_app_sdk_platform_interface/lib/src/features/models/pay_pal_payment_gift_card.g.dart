@@ -8,12 +8,23 @@ part of 'pay_pal_payment_gift_card.dart';
 
 PayPalPaymentGiftCard _$PayPalPaymentGiftCardFromJson(
         Map<String, dynamic> json) =>
-    PayPalPaymentGiftCard(
-      id: json['id'] as int?,
-      title: json['title'] as String?,
-      price: (json['price'] as num?)?.toDouble(),
-      currency: json['currency'] as String?,
-      quantity: json['quantity'] as int?,
+    $checkedCreate(
+      'PayPalPaymentGiftCard',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['id', 'title', 'price', 'currency', 'quantity'],
+        );
+        final val = PayPalPaymentGiftCard(
+          id: $checkedConvert('id', (v) => v as int?),
+          title: $checkedConvert('title', (v) => v as String?),
+          price: $checkedConvert('price', (v) => (v as num?)?.toDouble()),
+          currency: $checkedConvert('currency', (v) => v as String?),
+          quantity: $checkedConvert('quantity', (v) => v as int?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$PayPalPaymentGiftCardToJson(

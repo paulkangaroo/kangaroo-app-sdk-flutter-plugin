@@ -61,6 +61,8 @@ class PluginHandlerListHolder {
 
     BalanceTransferHandler(),
 
+    UserUnsubscribeHandler(),
+
     UpdateNotificationPreferencesHandler(),
 
     UserPinUpdateHandler(),
@@ -68,6 +70,8 @@ class PluginHandlerListHolder {
     UserProfileUpdateHandler(),
 
     UserCheckInHandler(),
+
+    UserAccountVerificationHandler(),
 
     UserAuthenticationHandler()
         ]

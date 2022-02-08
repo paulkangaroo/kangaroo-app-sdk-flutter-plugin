@@ -11,7 +11,7 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business
 part 'notification_settings_data.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class NotificationSettingsData {
   ///The notification settings id. This is not required when updating notification settings.  
   final String? id;

@@ -6,30 +6,83 @@ part of 'reward_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => RewardModel(
-      id: json['id'] as int?,
-      points: json['points'] as int?,
-      publishAt: json['publish_at'] as String?,
-      expiresAt: json['expires_at'] as String?,
-      isPublished: json['is_published'] as bool?,
-      amount: (json['amount'] as num?)?.toDouble(),
-      realValue: (json['real_value'] as num?)?.toDouble(),
-      discountValue: (json['discount_value'] as num?)?.toDouble(),
-      partnerReward: json['partner_reward'] as bool?,
-      redeemForGiftCard: json['redeem_for_gift_card'] as bool?,
-      type: json['type'] as String?,
-      title: json['title'] as String?,
-      description: json['description'] as String?,
-      slug: json['slug'] as String?,
-      images: (json['images'] as List<dynamic>?)
-          ?.map((e) => Image.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      neverExpiresFlag: json['never_expires_flag'] as bool?,
-      termsConditions: json['terms_conditions'] as String?,
-      link: json['link'] as String?,
-      rewardLanguages: (json['reward_languages'] as List<dynamic>?)
-          ?.map((e) => RewardTranslation.fromJson(e as Map<String, dynamic>))
-          .toList(),
+RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'RewardModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'points',
+            'publish_at',
+            'expires_at',
+            'is_published',
+            'amount',
+            'real_value',
+            'discount_value',
+            'partner_reward',
+            'redeem_for_gift_card',
+            'type',
+            'title',
+            'description',
+            'slug',
+            'images',
+            'never_expires_flag',
+            'terms_conditions',
+            'link',
+            'reward_languages'
+          ],
+        );
+        final val = RewardModel(
+          id: $checkedConvert('id', (v) => v as int?),
+          points: $checkedConvert('points', (v) => v as int?),
+          publishAt: $checkedConvert('publish_at', (v) => v as String?),
+          expiresAt: $checkedConvert('expires_at', (v) => v as String?),
+          isPublished: $checkedConvert('is_published', (v) => v as bool?),
+          amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
+          realValue:
+              $checkedConvert('real_value', (v) => (v as num?)?.toDouble()),
+          discountValue:
+              $checkedConvert('discount_value', (v) => (v as num?)?.toDouble()),
+          partnerReward: $checkedConvert('partner_reward', (v) => v as bool?),
+          redeemForGiftCard:
+              $checkedConvert('redeem_for_gift_card', (v) => v as bool?),
+          type: $checkedConvert('type', (v) => v as String?),
+          title: $checkedConvert('title', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
+          slug: $checkedConvert('slug', (v) => v as String?),
+          images: $checkedConvert(
+              'images',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => Image.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          neverExpiresFlag:
+              $checkedConvert('never_expires_flag', (v) => v as bool?),
+          termsConditions:
+              $checkedConvert('terms_conditions', (v) => v as String?),
+          link: $checkedConvert('link', (v) => v as String?),
+          rewardLanguages: $checkedConvert(
+              'reward_languages',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      RewardTranslation.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'publishAt': 'publish_at',
+        'expiresAt': 'expires_at',
+        'isPublished': 'is_published',
+        'realValue': 'real_value',
+        'discountValue': 'discount_value',
+        'partnerReward': 'partner_reward',
+        'redeemForGiftCard': 'redeem_for_gift_card',
+        'neverExpiresFlag': 'never_expires_flag',
+        'termsConditions': 'terms_conditions',
+        'rewardLanguages': 'reward_languages'
+      },
     );
 
 Map<String, dynamic> _$RewardModelToJson(RewardModel instance) =>

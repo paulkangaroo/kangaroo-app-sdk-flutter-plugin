@@ -8,10 +8,25 @@ part of 'social_media_links_included.dart';
 
 SocialMediaLinksIncluded _$SocialMediaLinksIncludedFromJson(
         Map<String, dynamic> json) =>
-    SocialMediaLinksIncluded(
-      socialMedia: (json['social_media'] as List<dynamic>?)
-          ?.map((e) => SocialMediaModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+    $checkedCreate(
+      'SocialMediaLinksIncluded',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['social_media'],
+        );
+        final val = SocialMediaLinksIncluded(
+          socialMedia: $checkedConvert(
+              'social_media',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      SocialMediaModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {'socialMedia': 'social_media'},
     );
 
 Map<String, dynamic> _$SocialMediaLinksIncludedToJson(

@@ -7,14 +7,28 @@ part of 'user_profile_model.dart';
 // **************************************************************************
 
 UserProfileModel _$UserProfileModelFromJson(Map<String, dynamic> json) =>
-    UserProfileModel(
-      data: json['data'] == null
-          ? null
-          : UserProfileDataModel.fromJson(json['data'] as Map<String, dynamic>),
-      included: json['included'] == null
-          ? null
-          : UserProfileInclude.fromJson(
-              json['included'] as Map<String, dynamic>),
+    $checkedCreate(
+      'UserProfileModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['data', 'included'],
+        );
+        final val = UserProfileModel(
+          data: $checkedConvert(
+              'data',
+              (v) => v == null
+                  ? null
+                  : UserProfileDataModel.fromJson(v as Map<String, dynamic>)),
+          included: $checkedConvert(
+              'included',
+              (v) => v == null
+                  ? null
+                  : UserProfileInclude.fromJson(v as Map<String, dynamic>)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$UserProfileModelToJson(UserProfileModel instance) =>

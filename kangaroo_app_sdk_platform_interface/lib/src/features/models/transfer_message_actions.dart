@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'transfer_message_actions.g.dart';
 
 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferMessageActions {
   ///The action type. 
   final String? type;

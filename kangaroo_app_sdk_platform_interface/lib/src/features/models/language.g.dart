@@ -6,10 +6,21 @@ part of 'language.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Language _$LanguageFromJson(Map<String, dynamic> json) => Language(
-      id: json['id'] as int,
-      abbreviation: json['abbreviation'] as String?,
-      name: json['name'] as String?,
+Language _$LanguageFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'Language',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const ['id', 'abbreviation', 'name'],
+        );
+        final val = Language(
+          id: $checkedConvert('id', (v) => v as int),
+          abbreviation: $checkedConvert('abbreviation', (v) => v as String?),
+          name: $checkedConvert('name', (v) => v as String?),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$LanguageToJson(Language instance) => <String, dynamic>{

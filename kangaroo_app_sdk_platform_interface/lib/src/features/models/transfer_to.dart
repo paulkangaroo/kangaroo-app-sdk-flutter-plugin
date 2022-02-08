@@ -7,7 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'transfer_to.g.dart';
 
 /// The recipient data for this transfer. Either a phone number or an email address is required. If a phone number is used, the two character ISO country code must be supplied as well. 
-@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake)
+@JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferTo {
   final String? name;
 
