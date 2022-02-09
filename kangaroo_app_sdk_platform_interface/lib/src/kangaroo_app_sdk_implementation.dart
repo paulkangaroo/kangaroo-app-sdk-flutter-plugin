@@ -15,4 +15,14 @@ class KangarooAppSdkFederated extends KangarooAppSdkInterface {
       'clientSecret': clientSecret,
     });
   }
+
+  @override
+  Future<String> getSession() async {
+    return await sdkMethodChannel.invokeMethod('core/methods/getSession');
+  }
+
+  @override
+  killSession() {
+    sdkMethodChannel.invokeMethod('core/methods/killSession');
+  }
 }

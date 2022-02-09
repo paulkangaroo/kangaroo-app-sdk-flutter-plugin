@@ -12,4 +12,12 @@ class KangarooAppSdk {
       clientSecret: clientSecret,
     );
   }
+
+  static Future<String> getSession() {
+    return KangarooAppSdkInterface.instance.getSession();
+  }
+
+  static killSession() {
+    KangarooAppSdkInterface.instance.killSession();
+  }
 }

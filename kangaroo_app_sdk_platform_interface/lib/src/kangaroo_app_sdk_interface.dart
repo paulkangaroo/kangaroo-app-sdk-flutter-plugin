@@ -24,4 +24,8 @@ abstract class KangarooAppSdkInterface extends PlatformInterface {
   }) {
     throw UnimplementedError('initialize sdk has not been implemented.');
   }
+
+  Future<String> getSession();
+
+  killSession();
 }

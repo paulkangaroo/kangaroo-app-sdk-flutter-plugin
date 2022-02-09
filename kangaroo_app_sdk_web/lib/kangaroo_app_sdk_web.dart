@@ -22,7 +22,6 @@ class KangarooAppSDKWebFlutterPlugin extends PlatformInterface {
   }
 
   static void registerWith(Registrar? registrar) {
-    // KangarooSdk().initialize();
     pluginHandlerList.forEach((pluginHandler) {
       pluginHandler.registerPluginHandler();
     });
@@ -49,6 +48,16 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
       clientSecret,
     );
   }
+
+  @override
+  Future<String> getSession() {
+    return KangarooSdk().getSession();
+  }
+
+  @override
+  killSession() {
+    KangarooSdk().killSession();
+  }
 }
 
 @JS('kangaroorewards.js.appsdk.KangarooSdk')
@@ -60,4 +69,8 @@ class KangarooSdk {
     String? clientId,
     String? clientSecret,
   );
+
+  external Future<String> getSession();
+
+  external void killSession();
 }
