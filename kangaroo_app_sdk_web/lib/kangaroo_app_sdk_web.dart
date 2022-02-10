@@ -41,11 +41,13 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
     final String? applicationKey,
     final String? clientId,
     final String? clientSecret,
+    final String? preferredLanguage = "en",
   }) {
     KangarooSdk().initialize(
       applicationKey,
       clientId,
       clientSecret,
+      preferredLanguage,
     );
   }
 
@@ -58,6 +60,16 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
   killSession() {
     KangarooSdk().killSession();
   }
+
+  @override
+  Future<String> getPreferredLanguage() {
+    return KangarooSdk().getPreferredLanguage();
+  }
+
+  @override
+  setPreferredLanguage(String preferredLanguage) {
+    KangarooSdk().setPreferredLanguage(preferredLanguage);
+  }
 }
 
 @JS('kangaroorewards.js.appsdk.KangarooSdk')
@@ -68,9 +80,14 @@ class KangarooSdk {
     String? applicationKey,
     String? clientId,
     String? clientSecret,
+    preferredLanguage,
   );
 
   external Future<String> getSession();
 
   external void killSession();
+
+  external Future<String> getPreferredLanguage();
+
+  external void setPreferredLanguage(String? preferredLanguage);
 }

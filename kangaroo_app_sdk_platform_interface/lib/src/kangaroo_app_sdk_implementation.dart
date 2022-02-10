@@ -8,11 +8,13 @@ class KangarooAppSdkFederated extends KangarooAppSdkInterface {
     final String? applicationKey,
     final String? clientId,
     final String? clientSecret,
+    final String? preferredLanguage = "en",
   }) {
     sdkMethodChannel.invokeMethod('core/methods/initializeSdk', {
       'applicationKey': applicationKey,
       'clientId': clientId,
       'clientSecret': clientSecret,
+      'preferredLanguage': preferredLanguage,
     });
   }
 
@@ -24,5 +26,18 @@ class KangarooAppSdkFederated extends KangarooAppSdkInterface {
   @override
   killSession() {
     sdkMethodChannel.invokeMethod('core/methods/killSession');
+  }
+
+  @override
+  setPreferredLanguage(String preferredLanguage) {
+    sdkMethodChannel.invokeMethod('core/methods/setPreferredLanguage', {
+      'preferredLanguage': preferredLanguage,
+    });
+  }
+
+  @override
+  getPreferredLanguage() async {
+    return await sdkMethodChannel
+        .invokeMethod('core/methods/getPreferredLanguage');
   }
 }
