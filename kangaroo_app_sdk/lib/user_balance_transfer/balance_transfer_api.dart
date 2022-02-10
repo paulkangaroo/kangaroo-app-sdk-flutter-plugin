@@ -7,14 +7,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class BalanceTransferApi {
   static transfer({ 
-    required final TransferModel transferRequest,
+    required final TransferRequestModel transferRequest,
   }) {
     BalanceTransferApiInterface.instance.transfer( 
       transferRequest: transferRequest,
     );
   }
 
-  static Stream<Result<EmptyResponse>> get balanceTransferStream {
+  static Stream<Result<TransferResponseModel>> get balanceTransferStream {
     return BalanceTransferApiInterface.instance.balanceTransferStream;
   }
 }

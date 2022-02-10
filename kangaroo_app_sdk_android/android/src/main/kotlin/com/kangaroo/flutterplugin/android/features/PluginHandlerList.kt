@@ -16,6 +16,7 @@ import com.kangaroo.flutterplugin.android.features.frequentBuyerPrograms.Frequen
 import com.kangaroo.flutterplugin.android.features.giftCards.GiftCardsHandler
 import com.kangaroo.flutterplugin.android.features.userNotificationPreferences.GetNotificationPreferencesHandler
 import com.kangaroo.flutterplugin.android.features.socialMediaLinks.SocialMediaLinksHandler
+import com.kangaroo.flutterplugin.android.features.strings.StringsHandler
 import com.kangaroo.flutterplugin.android.features.tiers.TiersHandler
 import com.kangaroo.flutterplugin.android.features.userTransferMessages.TransferMessagesHandler
 import com.kangaroo.flutterplugin.android.features.userOffers.UserOffersHandler
@@ -66,6 +67,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     GetNotificationPreferencesHandler(),
 
     SocialMediaLinksHandler(),
+
+    StringsHandler(),
 
     TiersHandler(),
 

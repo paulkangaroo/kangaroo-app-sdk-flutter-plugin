@@ -25,6 +25,7 @@ abstract class UserPinResetApiInterface extends PlatformInterface {
 
   requestPinReset({ 
         required final int verificationCode,
+        required final int pinCode,
         final String? email,
         final String? phone,
         final String? countryCode,

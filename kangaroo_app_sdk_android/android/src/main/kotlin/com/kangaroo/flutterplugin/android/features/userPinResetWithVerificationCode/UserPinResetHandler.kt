@@ -29,6 +29,7 @@ class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
         fun requestPinReset(call: MethodCall): Unit? {
             UserPinResetApi().requestPinReset(
                 verificationCode = call.argument<Int>("verificationCode") as Int,
+                pinCode = call.argument<Int>("pinCode") as Int,
                 email = call.argument<String?>("email"),
                 phone = call.argument<String?>("phone"),
                 countryCode = call.argument<String?>("countryCode")

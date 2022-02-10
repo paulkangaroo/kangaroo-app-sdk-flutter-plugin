@@ -31,6 +31,8 @@ class PluginHandlerListHolder {
 
     SocialMediaLinksHandler(),
 
+    StringsHandler(),
+
     TiersHandler(),
 
     TransferMessagesHandler(),

@@ -8,7 +8,7 @@ import kangaroorewards.appsdk.features.userBalanceTransfer.BalanceTransferApi
 import kangaroorewards.appsdk.features.userBalanceTransfer.serializeBalanceTransferState
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kangaroorewards.appsdk.features.userBalanceTransfer.models.TransferModel
+import kangaroorewards.appsdk.features.userBalanceTransfer.models.TransferRequestModel
 
 class BalanceTransferHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null

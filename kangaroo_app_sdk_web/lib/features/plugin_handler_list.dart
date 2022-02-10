@@ -14,6 +14,7 @@ import 'frequent_buyer_programs/frequent_buyer_programs_handler.dart';
 import 'gift_cards/gift_cards_handler.dart';
 import 'user_notification_preferences/get_notification_preferences_handler.dart';
 import 'social_media_links/social_media_links_handler.dart';
+import 'strings/strings_handler.dart';
 import 'tiers/tiers_handler.dart';
 import 'user_transfer_messages/transfer_messages_handler.dart';
 import 'user_offers/user_offers_handler.dart';
@@ -65,6 +66,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   GetNotificationPreferencesHandler(),
 
   SocialMediaLinksHandler(),
+
+  StringsHandler(),
 
   TiersHandler(),
 

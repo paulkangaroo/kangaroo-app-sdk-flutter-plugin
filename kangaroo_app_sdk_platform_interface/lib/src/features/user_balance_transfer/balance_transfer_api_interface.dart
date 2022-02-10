@@ -3,11 +3,12 @@ library kangaroo_app_sdk_platform_interface;
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/result.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/user_balance_transfer/balance_transfer_api_implementation.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_model.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_model.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_request_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_request_model.dart';
+
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_response_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer_response_model.dart';
 
 abstract class BalanceTransferApiInterface extends PlatformInterface {
   BalanceTransferApiInterface() : super(token: _token);
@@ -24,12 +25,12 @@ abstract class BalanceTransferApiInterface extends PlatformInterface {
   }
 
   transfer({ 
-        required final TransferModel transferRequest,
+        required final TransferRequestModel transferRequest,
     }) {
     throw UnimplementedError('transfer has not been implemented.');
   }
 
-  Stream<Result<EmptyResponse>> get balanceTransferStream {
+  Stream<Result<TransferResponseModel>> get balanceTransferStream {
     throw UnimplementedError('getBalanceTransferStream has not been implemented.');
   }
 }

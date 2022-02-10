@@ -9,19 +9,19 @@ part 'gift_card_pay_pal_payment.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class GiftCardPayPalPayment {
-  final bool? intent;
+  final String paymentId;
 
-  final String? provider;
+  final String payerId;
 
-  final String? giftcardId;
+  final String token;
 
-  final String? paypalPayment;
+  final bool? success;
 
   GiftCardPayPalPayment({
-    required this.intent,
-    required this.provider,
-    required this.giftcardId,
-    required this.paypalPayment,
+    required this.paymentId,
+required this.payerId,
+required this.token,
+    required this.success,
   });
 
   factory GiftCardPayPalPayment.fromJson(Map<String, dynamic> data) => _$GiftCardPayPalPaymentFromJson(data);

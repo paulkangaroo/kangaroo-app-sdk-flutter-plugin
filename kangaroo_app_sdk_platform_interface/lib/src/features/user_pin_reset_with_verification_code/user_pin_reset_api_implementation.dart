@@ -12,6 +12,7 @@ class UserPinResetApiFederated extends UserPinResetApiInterface {
   @override
   requestPinReset({ 
         required final int verificationCode,
+        required final int pinCode,
         final String? email,
         final String? phone,
         final String? countryCode
@@ -19,6 +20,7 @@ class UserPinResetApiFederated extends UserPinResetApiInterface {
     sdkMethodChannel.invokeMethod('customer_sdk/methods/request_pin_reset',
     {
       'verificationCode' : verificationCode,
+      'pinCode' : pinCode,
       'email' : email,
       'phone' : phone,
       'countryCode' : countryCode

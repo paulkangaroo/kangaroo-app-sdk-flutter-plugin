@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/strings/strings_api_interface.dart';

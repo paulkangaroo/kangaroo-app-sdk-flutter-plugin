@@ -26,12 +26,14 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
         }
         if let myArgs = args as? [String: Any],
                         let verificationCode = myArgs["verificationCode"] as? Int32,
+                let pinCode = myArgs["pinCode"] as? Int32,
                 let email = myArgs["email"] as? String?,
                 let phone = myArgs["phone"] as? String?,
                 let countryCode = myArgs["countryCode"] as? String?
             {
             UserPinResetApi().requestPinReset(
                 verificationCode: verificationCode,
+                pinCode: pinCode,
                 email: email,
                 phone: phone,
                 countryCode: countryCode

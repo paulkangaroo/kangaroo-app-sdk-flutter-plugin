@@ -9,31 +9,27 @@ import 'dart:convert';
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
-import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_balance_transfer/balance_transfer_platform_interface.dart';
+import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/strings/strings_platform_interface.dart';
 
 
-class BalanceTransferHandler extends BalanceTransferApiInterface
+class StringsHandler extends StringsApiInterface
     implements PluginChannelHandler{
 
   @override
   void registerPluginHandler() {
-    BalanceTransferApiInterface.instance = BalanceTransferHandler();
+    StringsApiInterface.instance = StringsHandler();
   }
 
   @override
-  transfer({ 
-        required final TransferRequestModel transferRequest
-    }) {
-    BalanceTransferApi().transfer(
-      jsonEncode(transferRequest.toJson())
-    );
+  getStrings() {
+    StringsApi().getStrings();
   }
 
   @override
-  Stream<Result<TransferResponseModel>> get balanceTransferStream {
+  Stream<Result<ApplicationStringsModel>> get stringsStream {
     var controller = StreamController<String>();
 
-    BalanceTransferApi().observeBalanceTransferState(
+    StringsApi().observeStringsState(
       allowInterop((success) => {controller.add(success)}),
       allowInterop((error) => {print("Flutter Response: $error")}),
     );
@@ -41,12 +37,12 @@ class BalanceTransferHandler extends BalanceTransferApiInterface
     return controller.stream.distinct().map((event) {
       dynamic result;
       try {
-        result = TransferResponseModel.fromJson(jsonDecode(event));
+        result = ApplicationStringsModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case TransferResponseModel:
+        case ApplicationStringsModel:
           return Success(data: result);
         case State:
           return mapState(result as State);
@@ -57,15 +53,13 @@ class BalanceTransferHandler extends BalanceTransferApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.userBalanceTransfer.BalanceTransferApi')
-class BalanceTransferApi {
-  external BalanceTransferApi();
+@JS('kangaroorewards.js.appsdk.features.strings.StringsApi')
+class StringsApi {
+  external StringsApi();
 
-  external void transfer( 
-        String transferRequest
-    );
+  external void getStrings();
 
-  external void observeBalanceTransferState(
+  external void observeStringsState(
     Function(String) onData,
     Function(String) onStreamError,
   );

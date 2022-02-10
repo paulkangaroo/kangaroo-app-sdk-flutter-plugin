@@ -8,26 +8,10 @@ part of 'user_authentication_model.dart';
 
 UserAuthenticationModel _$UserAuthenticationModelFromJson(
         Map<String, dynamic> json) =>
-    $checkedCreate(
-      'UserAuthenticationModel',
-      json,
-      ($checkedConvert) {
-        $checkKeys(
-          json,
-          allowedKeys: const ['expires_in', 'access_token', 'refresh_token'],
-        );
-        final val = UserAuthenticationModel(
-          expiresIn: $checkedConvert('expires_in', (v) => v as int),
-          accessToken: $checkedConvert('access_token', (v) => v as String),
-          refreshToken: $checkedConvert('refresh_token', (v) => v as String),
-        );
-        return val;
-      },
-      fieldKeyMap: const {
-        'expiresIn': 'expires_in',
-        'accessToken': 'access_token',
-        'refreshToken': 'refresh_token'
-      },
+    UserAuthenticationModel(
+      expiresIn: json['expires_in'] as int,
+      accessToken: json['access_token'] as String,
+      refreshToken: json['refresh_token'] as String,
     );
 
 Map<String, dynamic> _$UserAuthenticationModelToJson(

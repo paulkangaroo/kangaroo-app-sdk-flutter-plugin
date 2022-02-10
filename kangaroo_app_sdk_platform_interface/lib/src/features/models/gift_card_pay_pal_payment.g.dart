@@ -14,32 +14,24 @@ GiftCardPayPalPayment _$GiftCardPayPalPaymentFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          allowedKeys: const [
-            'intent',
-            'provider',
-            'giftcard_id',
-            'paypal_payment'
-          ],
+          allowedKeys: const ['payment_id', 'payer_id', 'token', 'success'],
         );
         final val = GiftCardPayPalPayment(
-          intent: $checkedConvert('intent', (v) => v as bool?),
-          provider: $checkedConvert('provider', (v) => v as String?),
-          giftcardId: $checkedConvert('giftcard_id', (v) => v as String?),
-          paypalPayment: $checkedConvert('paypal_payment', (v) => v as String?),
+          paymentId: $checkedConvert('payment_id', (v) => v as String),
+          payerId: $checkedConvert('payer_id', (v) => v as String),
+          token: $checkedConvert('token', (v) => v as String),
+          success: $checkedConvert('success', (v) => v as bool?),
         );
         return val;
       },
-      fieldKeyMap: const {
-        'giftcardId': 'giftcard_id',
-        'paypalPayment': 'paypal_payment'
-      },
+      fieldKeyMap: const {'paymentId': 'payment_id', 'payerId': 'payer_id'},
     );
 
 Map<String, dynamic> _$GiftCardPayPalPaymentToJson(
         GiftCardPayPalPayment instance) =>
     <String, dynamic>{
-      'intent': instance.intent,
-      'provider': instance.provider,
-      'giftcard_id': instance.giftcardId,
-      'paypal_payment': instance.paypalPayment,
+      'payment_id': instance.paymentId,
+      'payer_id': instance.payerId,
+      'token': instance.token,
+      'success': instance.success,
     };
