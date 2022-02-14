@@ -21,16 +21,15 @@ abstract class KangarooAppSdkInterface extends PlatformInterface {
     final String? applicationKey,
     final String? clientId,
     final String? clientSecret,
-    final String? preferredLanguage = "en",
   }) {
     throw UnimplementedError('initialize sdk has not been implemented.');
   }
 
-  Future<String> getSession();
+  Future<String?> getSession();
 
   killSession();
 
-  Future<String> getPreferredLanguage();
+  Future<String?> getPreferredLanguage();
 
   setPreferredLanguage(String preferredLanguage);
 }

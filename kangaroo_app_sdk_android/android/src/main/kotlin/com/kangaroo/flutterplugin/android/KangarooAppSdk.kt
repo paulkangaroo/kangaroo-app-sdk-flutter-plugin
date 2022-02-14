@@ -21,5 +21,26 @@ class KangarooAppSdk {
             )
             return null
         }
+
+        fun getSession(call: MethodCall, context: Context): String? {
+            return KangarooSdk(context).getSession()
+        }
+
+        fun killSession(call: MethodCall, context: Context): Unit? {
+            KangarooSdk(context).killSession()
+            return null
+        }
+
+        fun setPreferredLanguage(call: MethodCall, context: Context): Unit? {
+            val language  = call.argument<String?>("preferredLanguage") ?: ""
+            println("preferred language android: $language")
+            KangarooSdk(context).setPreferredLanguage(language)
+            return null;
+        }
+
+        fun getPreferredLanguage(call: MethodCall, context: Context): String? {
+            return KangarooSdk(context).getPreferredLanguage()
+        }
+
     }
 }

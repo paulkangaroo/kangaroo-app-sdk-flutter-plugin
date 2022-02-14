@@ -2,7 +2,7 @@ group 'com.kangaroo.appsdk'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.4.21'
+    ext.kotlin_version = '1.5.30'
     repositories {
         google()
         jcenter()
@@ -17,7 +17,8 @@ buildscript {
 rootProject.allprojects {
     repositories {
         mavenLocal()
-        maven { url "https://kotlin.bintray.com/kotlinx" }
+//        maven { url "https://kotlin.bintray.com/kotlinx" }
+//        mavenCentral()
         google()
         jcenter()
     }
@@ -45,8 +46,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
 
     /* Required in order to use coroutines from the Kangaroo SDK */
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
-
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
     implementation 'org.reflections:reflections:0.10.1'
 
     /* Comment out this dependency when building as it will clash with flutter code */

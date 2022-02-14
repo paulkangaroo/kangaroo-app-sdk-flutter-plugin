@@ -8,18 +8,16 @@ class KangarooAppSdkFederated extends KangarooAppSdkInterface {
     final String? applicationKey,
     final String? clientId,
     final String? clientSecret,
-    final String? preferredLanguage = "en",
   }) {
     sdkMethodChannel.invokeMethod('core/methods/initializeSdk', {
       'applicationKey': applicationKey,
       'clientId': clientId,
       'clientSecret': clientSecret,
-      'preferredLanguage': preferredLanguage,
     });
   }
 
   @override
-  Future<String> getSession() async {
+  Future<String?> getSession() async {
     return await sdkMethodChannel.invokeMethod('core/methods/getSession');
   }
 
@@ -36,7 +34,7 @@ class KangarooAppSdkFederated extends KangarooAppSdkInterface {
   }
 
   @override
-  getPreferredLanguage() async {
+  Future<String?> getPreferredLanguage() async {
     return await sdkMethodChannel
         .invokeMethod('core/methods/getPreferredLanguage');
   }

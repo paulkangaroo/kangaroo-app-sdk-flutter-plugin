@@ -41,18 +41,16 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
     final String? applicationKey,
     final String? clientId,
     final String? clientSecret,
-    final String? preferredLanguage = "en",
   }) {
     KangarooSdk().initialize(
       applicationKey,
       clientId,
       clientSecret,
-      preferredLanguage,
     );
   }
 
   @override
-  Future<String> getSession() {
+  Future<String?> getSession() {
     return KangarooSdk().getSession();
   }
 
@@ -62,7 +60,7 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
   }
 
   @override
-  Future<String> getPreferredLanguage() {
+  Future<String?> getPreferredLanguage() {
     return KangarooSdk().getPreferredLanguage();
   }
 
@@ -80,14 +78,13 @@ class KangarooSdk {
     String? applicationKey,
     String? clientId,
     String? clientSecret,
-    preferredLanguage,
   );
 
-  external Future<String> getSession();
+  external Future<String?> getSession();
 
   external void killSession();
 
-  external Future<String> getPreferredLanguage();
+  external Future<String?> getPreferredLanguage();
 
   external void setPreferredLanguage(String? preferredLanguage);
 }

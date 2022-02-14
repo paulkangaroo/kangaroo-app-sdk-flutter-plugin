@@ -30,6 +30,14 @@ class KangarooAppSDKAndroidFlutterPlugin : FlutterPlugin, MethodCallHandler, Act
         }
         if (call.method == "core/methods/initializeSdk") {
             result.success(KangarooAppSdk.initializeSdk(call, context))
+        } else if (call.method == "core/methods/getSession") {
+            result.success(KangarooAppSdk.getSession(call, context))
+        } else if (call.method == "core/methods/killSession") {
+            result.success(KangarooAppSdk.killSession(call, context))
+        } else if (call.method == "core/methods/setPreferredLanguage") {
+            result.success(KangarooAppSdk.setPreferredLanguage(call, context))
+        } else if (call.method == "core/methods/getPreferredLanguage") {
+            result.success(KangarooAppSdk.getPreferredLanguage(call, context))
         }
     }
 

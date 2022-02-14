@@ -4,18 +4,15 @@ class KangarooAppSdk {
   static initializeSdk(
     String applicationKey,
     String clientId,
-    String clientSecret, {
-    String preferredLanguage = "en",
-  }) {
+    String clientSecret,) {
     KangarooAppSdkInterface.instance.initializeSdk(
       applicationKey: applicationKey,
       clientId: clientId,
       clientSecret: clientSecret,
-      preferredLanguage: preferredLanguage,
     );
   }
 
-  static Future<String> getPreferredLanguage() {
+  static Future<String?> getPreferredLanguage() {
     return KangarooAppSdkInterface.instance.getPreferredLanguage();
   }
 
@@ -23,7 +20,7 @@ class KangarooAppSdk {
     KangarooAppSdkInterface.instance.setPreferredLanguage(preferredLanguage);
   }
 
-  static Future<String> getSession() {
+  static Future<String?> getSession() {
     return KangarooAppSdkInterface.instance.getSession();
   }
 
