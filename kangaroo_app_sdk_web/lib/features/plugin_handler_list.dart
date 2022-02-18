@@ -9,7 +9,6 @@ import 'business/business_handler.dart';
 import 'business_list/businesses_handler.dart';
 import 'user_campaign_messages/campaign_messages_handler.dart';
 import 'countries/countries_handler.dart';
-import 'frequent_buyer/frequent_buyer_handler.dart';
 import 'frequent_buyer_programs/frequent_buyer_programs_handler.dart';
 import 'gift_cards/gift_cards_handler.dart';
 import 'user_notification_preferences/get_notification_preferences_handler.dart';
@@ -56,8 +55,6 @@ List<PluginChannelHandler> pluginHandlerList = [
   CampaignMessagesHandler(),
 
   CountriesHandler(),
-
-  FrequentBuyerHandler(),
 
   FrequentBuyerProgramsHandler(),
 

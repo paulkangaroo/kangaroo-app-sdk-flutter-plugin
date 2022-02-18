@@ -22,10 +22,10 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
 
   @override
   updateNotificationPreferences({ 
-        required final NotificationSettingsData notificationPreferencesRequest
+        required final NotificationSettingsUpdateRequest notificationPreferencesRequest
     }) {
     UpdateNotificationPreferencesApi().updateNotificationPreferences(
-      jsonEncode(notificationPreferencesRequest.toJson())
+      jsonEncode(notificationPreferencesRequest)
     );
   }
 

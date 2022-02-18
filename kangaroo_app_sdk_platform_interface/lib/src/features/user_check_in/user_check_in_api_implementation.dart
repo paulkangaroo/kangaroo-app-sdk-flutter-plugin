@@ -5,7 +5,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/base.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/result.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/state.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/user_check_in/user_check_in_api_interface.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart';
+
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/check_in_request.dart';
 
 class UserCheckInApiFederated extends UserCheckInApiInterface {
@@ -15,7 +15,7 @@ class UserCheckInApiFederated extends UserCheckInApiInterface {
     }) {
     sdkMethodChannel.invokeMethod('customer_sdk/methods/user_check_in',
     {
-      'checkInRequest' : jsonEncode(checkInRequest.toJson())
+      'checkInRequest' : jsonEncode(checkInRequest)
     }
     );
   }
@@ -24,16 +24,16 @@ class UserCheckInApiFederated extends UserCheckInApiInterface {
       const EventChannel("customer_sdk/events/user_check_in");
 
   @override
-  Stream<Result<EmptyResponse>> get userCheckInStream {
+  Stream<Result<CheckInResponseModel>> get userCheckInStream {
     return _userCheckInEvent.receiveBroadcastStream().distinct().map((event) {
       dynamic result;
       try {
-        result = EmptyResponse.fromJson(jsonDecode(event));
+        result = CheckInResponseModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case EmptyResponse:
+        case CheckInResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

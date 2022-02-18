@@ -15,7 +15,7 @@ class UserPinUpdateApiFederated extends UserPinUpdateApiInterface {
     }) {
     sdkMethodChannel.invokeMethod('customer_sdk/methods/update_pin',
     {
-      'updatePinRequest' : jsonEncode(updatePinRequest.toJson())
+      'updatePinRequest' : jsonEncode(updatePinRequest)
     }
     );
   }

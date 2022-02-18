@@ -11,7 +11,6 @@ import com.kangaroo.flutterplugin.android.features.business.BusinessHandler
 import com.kangaroo.flutterplugin.android.features.businessList.BusinessesHandler
 import com.kangaroo.flutterplugin.android.features.userCampaignMessages.CampaignMessagesHandler
 import com.kangaroo.flutterplugin.android.features.countries.CountriesHandler
-import com.kangaroo.flutterplugin.android.features.frequentBuyer.FrequentBuyerHandler
 import com.kangaroo.flutterplugin.android.features.frequentBuyerPrograms.FrequentBuyerProgramsHandler
 import com.kangaroo.flutterplugin.android.features.giftCards.GiftCardsHandler
 import com.kangaroo.flutterplugin.android.features.userNotificationPreferences.GetNotificationPreferencesHandler
@@ -57,8 +56,6 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     CampaignMessagesHandler(),
 
     CountriesHandler(),
-
-    FrequentBuyerHandler(),
 
     FrequentBuyerProgramsHandler(),
 

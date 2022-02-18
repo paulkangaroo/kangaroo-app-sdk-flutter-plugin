@@ -15,7 +15,7 @@ class RedeemRewardsApiFederated extends RedeemRewardsApiInterface {
     }) {
     sdkMethodChannel.invokeMethod('customer_sdk/methods/redeem_reward',
     {
-      'redeemRequest' : jsonEncode(redeemRequest.toJson())
+      'redeemRequest' : jsonEncode(redeemRequest)
     }
     );
   }

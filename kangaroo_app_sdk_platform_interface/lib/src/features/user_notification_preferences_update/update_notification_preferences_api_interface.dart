@@ -4,8 +4,8 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/result.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/user_notification_preferences_update/update_notification_preferences_api_implementation.dart';
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_settings_data.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_settings_data.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_settings_update_request.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_settings_update_request.dart';
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_settings_model.dart';
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_settings_model.dart';
@@ -25,7 +25,7 @@ abstract class UpdateNotificationPreferencesApiInterface extends PlatformInterfa
   }
 
   updateNotificationPreferences({ 
-        required final NotificationSettingsData notificationPreferencesRequest,
+        required final NotificationSettingsUpdateRequest notificationPreferencesRequest,
     }) {
     throw UnimplementedError('updateNotificationPreferences has not been implemented.');
   }

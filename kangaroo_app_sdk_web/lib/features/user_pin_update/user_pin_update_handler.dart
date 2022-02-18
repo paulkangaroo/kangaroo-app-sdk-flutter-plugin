@@ -25,7 +25,7 @@ class UserPinUpdateHandler extends UserPinUpdateApiInterface
         required final UpdatePinRequest updatePinRequest
     }) {
     UserPinUpdateApi().updatePin(
-      jsonEncode(updatePinRequest.toJson())
+      jsonEncode(updatePinRequest)
     );
   }
 

@@ -25,7 +25,7 @@ class BalanceTransferHandler extends BalanceTransferApiInterface
         required final TransferRequestModel transferRequest
     }) {
     BalanceTransferApi().transfer(
-      jsonEncode(transferRequest.toJson())
+      jsonEncode(transferRequest)
     );
   }
 

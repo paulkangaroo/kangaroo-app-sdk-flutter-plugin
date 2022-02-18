@@ -6,16 +6,16 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/result.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/state.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/user_notification_preferences_update/update_notification_preferences_api_interface.dart';
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_settings_data.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_settings_update_request.dart';
 
 class UpdateNotificationPreferencesApiFederated extends UpdateNotificationPreferencesApiInterface {
   @override
   updateNotificationPreferences({ 
-        required final NotificationSettingsData notificationPreferencesRequest
+        required final NotificationSettingsUpdateRequest notificationPreferencesRequest
     }) {
     sdkMethodChannel.invokeMethod('customer_sdk/methods/update_notification_preferences',
     {
-      'notificationPreferencesRequest' : jsonEncode(notificationPreferencesRequest.toJson())
+      'notificationPreferencesRequest' : jsonEncode(notificationPreferencesRequest)
     }
     );
   }

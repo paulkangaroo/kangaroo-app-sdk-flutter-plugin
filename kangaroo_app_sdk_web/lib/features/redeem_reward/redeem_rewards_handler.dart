@@ -25,7 +25,7 @@ class RedeemRewardsHandler extends RedeemRewardsApiInterface
         required final RedeemRequest redeemRequest
     }) {
     RedeemRewardsApi().redeemReward(
-      jsonEncode(redeemRequest.toJson())
+      jsonEncode(redeemRequest)
     );
   }
 

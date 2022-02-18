@@ -15,7 +15,7 @@ class GiftCardPurchaseApiFederated extends GiftCardPurchaseApiInterface {
     }) {
     sdkMethodChannel.invokeMethod('customer_sdk/methods/purchase_gift_card',
     {
-      'purchaseGiftCardRequest' : jsonEncode(purchaseGiftCardRequest.toJson())
+      'purchaseGiftCardRequest' : jsonEncode(purchaseGiftCardRequest)
     }
     );
   }

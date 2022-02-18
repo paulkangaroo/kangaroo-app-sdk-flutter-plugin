@@ -2,10 +2,10 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_business_payload.dart';
 
 
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_business_payload.dart';
 
 
 part 'notification_settings_data.g.dart';
@@ -16,8 +16,7 @@ class NotificationSettingsData {
   ///The notification settings id. This is not required when updating notification settings.  
   final String? id;
 
-  ///The business who these settings this affect. This is not required when updating notification settings.  
-  final BusinessData? business;
+  final NotificationBusinessPayload? business;
 
   final bool? allowEmail;
 

@@ -10,7 +10,7 @@ import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_check_in/user_check_in_platform_interface.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart';
+
 
 class UserCheckInHandler extends UserCheckInApiInterface
     implements PluginChannelHandler{
@@ -25,12 +25,12 @@ class UserCheckInHandler extends UserCheckInApiInterface
         required final CheckInRequest checkInRequest
     }) {
     UserCheckInApi().userCheckIn(
-      jsonEncode(checkInRequest.toJson())
+      jsonEncode(checkInRequest)
     );
   }
 
   @override
-  Stream<Result<EmptyResponse>> get userCheckInStream {
+  Stream<Result<CheckInResponseModel>> get userCheckInStream {
     var controller = StreamController<String>();
 
     UserCheckInApi().observeUserCheckInState(
@@ -41,12 +41,12 @@ class UserCheckInHandler extends UserCheckInApiInterface
     return controller.stream.distinct().map((event) {
       dynamic result;
       try {
-        result = EmptyResponse.fromJson(jsonDecode(event));
+        result = CheckInResponseModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case EmptyResponse:
+        case CheckInResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

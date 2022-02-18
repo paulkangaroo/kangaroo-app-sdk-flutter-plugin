@@ -28,7 +28,8 @@ NotificationSettingsData _$NotificationSettingsDataFromJson(
               'business',
               (v) => v == null
                   ? null
-                  : BusinessData.fromJson(v as Map<String, dynamic>)),
+                  : NotificationBusinessPayload.fromJson(
+                      v as Map<String, dynamic>)),
           allowEmail: $checkedConvert('allow_email', (v) => v as bool?),
           allowSms: $checkedConvert('allow_sms', (v) => v as bool?),
           allowPush: $checkedConvert('allow_push', (v) => v as bool?),

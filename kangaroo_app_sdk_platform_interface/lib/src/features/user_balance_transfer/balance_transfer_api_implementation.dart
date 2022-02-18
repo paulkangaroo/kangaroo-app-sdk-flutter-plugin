@@ -15,7 +15,7 @@ class BalanceTransferApiFederated extends BalanceTransferApiInterface {
     }) {
     sdkMethodChannel.invokeMethod('customer_sdk/methods/transfer',
     {
-      'transferRequest' : jsonEncode(transferRequest.toJson())
+      'transferRequest' : jsonEncode(transferRequest)
     }
     );
   }

@@ -14,7 +14,7 @@ class UserCheckInApi {
     );
   }
 
-  static Stream<Result<EmptyResponse>> get userCheckInStream {
+  static Stream<Result<CheckInResponseModel>> get userCheckInStream {
     return UserCheckInApiInterface.instance.userCheckInStream;
   }
 }

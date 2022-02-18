@@ -21,8 +21,6 @@ class PluginHandlerListHolder {
 
     CountriesHandler(),
 
-    FrequentBuyerHandler(),
-
     FrequentBuyerProgramsHandler(),
 
     GiftCardsHandler(),

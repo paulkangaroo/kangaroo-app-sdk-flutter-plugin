@@ -25,7 +25,7 @@ class GiftCardPurchaseHandler extends GiftCardPurchaseApiInterface
         required final GiftCardPurchaseRequest purchaseGiftCardRequest
     }) {
     GiftCardPurchaseApi().purchaseGiftCard(
-      jsonEncode(purchaseGiftCardRequest.toJson())
+      jsonEncode(purchaseGiftCardRequest)
     );
   }
 
