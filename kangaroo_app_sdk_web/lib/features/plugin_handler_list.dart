@@ -26,6 +26,7 @@ import 'post_offer_facebook_share/offer_facebook_share_handler.dart';
 import 'make_gift_card_purchase/gift_card_purchase_handler.dart';
 import 'user_transfer_recall/transfer_recall_handler.dart';
 import 'redeem_reward/redeem_rewards_handler.dart';
+import 'push_token_registration/push_token_registration_handler.dart';
 import 'user_pin_reset_request/user_pin_reset_request_handler.dart';
 import 'user_pin_reset_with_verification_code/user_pin_reset_handler.dart';
 import 'user_balance_transfer/balance_transfer_handler.dart';
@@ -89,6 +90,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   TransferRecallHandler(),
 
   RedeemRewardsHandler(),
+
+  PushTokenRegistrationHandler(),
 
   UserPinResetRequestHandler(),
 

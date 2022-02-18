@@ -28,6 +28,7 @@ import com.kangaroo.flutterplugin.android.features.postOfferFacebookShare.OfferF
 import com.kangaroo.flutterplugin.android.features.makeGiftCardPurchase.GiftCardPurchaseHandler
 import com.kangaroo.flutterplugin.android.features.userTransferRecall.TransferRecallHandler
 import com.kangaroo.flutterplugin.android.features.redeemReward.RedeemRewardsHandler
+import com.kangaroo.flutterplugin.android.features.pushTokenRegistration.PushTokenRegistrationHandler
 import com.kangaroo.flutterplugin.android.features.userPinResetRequest.UserPinResetRequestHandler
 import com.kangaroo.flutterplugin.android.features.userPinResetWithVerificationCode.UserPinResetHandler
 import com.kangaroo.flutterplugin.android.features.userBalanceTransfer.BalanceTransferHandler
@@ -90,6 +91,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     TransferRecallHandler(),
 
     RedeemRewardsHandler(),
+
+    PushTokenRegistrationHandler(),
 
     UserPinResetRequestHandler(),
 

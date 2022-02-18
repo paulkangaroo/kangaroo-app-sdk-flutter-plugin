@@ -55,6 +55,8 @@ class PluginHandlerListHolder {
 
     RedeemRewardsHandler(),
 
+    PushTokenRegistrationHandler(),
+
     UserPinResetRequestHandler(),
 
     UserPinResetHandler(),
