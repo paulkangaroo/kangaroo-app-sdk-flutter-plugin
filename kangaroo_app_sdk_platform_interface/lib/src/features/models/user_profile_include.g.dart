@@ -13,7 +13,12 @@ UserProfileInclude _$UserProfileIncludeFromJson(Map<String, dynamic> json) =>
       ($checkedConvert) {
         $checkKeys(
           json,
-          allowedKeys: const ['balance', 'tier_progress', 'referral_programs'],
+          allowedKeys: const [
+            'balance',
+            'tier_level',
+            'tier_progress',
+            'referral_programs'
+          ],
         );
         final val = UserProfileInclude(
           balance: $checkedConvert(
@@ -21,6 +26,11 @@ UserProfileInclude _$UserProfileIncludeFromJson(Map<String, dynamic> json) =>
               (v) => v == null
                   ? null
                   : UserBalance.fromJson(v as Map<String, dynamic>)),
+          tierLevel: $checkedConvert(
+              'tier_level',
+              (v) => v == null
+                  ? null
+                  : TierLevel.fromJson(v as Map<String, dynamic>)),
           tierProgress: $checkedConvert(
               'tier_progress',
               (v) => v == null
@@ -36,6 +46,7 @@ UserProfileInclude _$UserProfileIncludeFromJson(Map<String, dynamic> json) =>
         return val;
       },
       fieldKeyMap: const {
+        'tierLevel': 'tier_level',
         'tierProgress': 'tier_progress',
         'referralPrograms': 'referral_programs'
       },
@@ -44,6 +55,7 @@ UserProfileInclude _$UserProfileIncludeFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$UserProfileIncludeToJson(UserProfileInclude instance) =>
     <String, dynamic>{
       'balance': instance.balance?.toJson(),
+      'tier_level': instance.tierLevel?.toJson(),
       'tier_progress': instance.tierProgress?.toJson(),
       'referral_programs':
           instance.referralPrograms?.map((e) => e.toJson()).toList(),

@@ -4,11 +4,15 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_balance.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_level.dart';
+
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_progress.dart';
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/referral_program.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_balance.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_level.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_progress.dart';
 
@@ -22,7 +26,10 @@ class UserProfileInclude {
   ///User Profile balance data. 
   final UserBalance? balance;
 
-  ///User&#39;s tier progress and status. 
+  ///User&#39;s tier status.  
+  final TierLevel? tierLevel;
+
+  ///User&#39;s tier progress and status. If a user&#39;s tier status is statically fixed, this will be null as they do not progress from tier to tier.  
   final TierProgress? tierProgress;
 
   ///A list of referral programs the user has access to. 
@@ -30,6 +37,7 @@ class UserProfileInclude {
 
   UserProfileInclude({
     required this.balance,
+    required this.tierLevel,
     required this.tierProgress,
     required this.referralPrograms,
   });
