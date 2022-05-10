@@ -4,11 +4,14 @@ class KangarooAppSdk {
   static initializeSdk(
     String applicationKey,
     String clientId,
-    String clientSecret,) {
+    String clientSecret,
+    String environment,
+  ) {
     KangarooAppSdkInterface.instance.initializeSdk(
       applicationKey: applicationKey,
       clientId: clientId,
       clientSecret: clientSecret,
+      environment: environment,
     );
   }
 

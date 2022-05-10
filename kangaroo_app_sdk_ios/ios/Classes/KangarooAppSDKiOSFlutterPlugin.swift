@@ -33,12 +33,14 @@ public class KangarooAppSDKiOSFlutterPlugin: NSObject, FlutterPlugin {
                 if let myArgs = args as? [String: Any],
                                 let applicationKey = myArgs["applicationKey"] as? String?,
                         let clientId = myArgs["clientId"] as? String?,
-                        let clientSecret = myArgs["clientSecret"] as? String?
+                        let clientSecret = myArgs["clientSecret"] as? String?,
+                        let environment = myArgs["environment"] as? String?
                     {
                     kangarooSdk.initialize(
                         applicationKey: applicationKey ?? "",
                         clientId: clientId ?? "",
-                        clientSecret: clientSecret ?? ""
+                        clientSecret: clientSecret ?? "",
+                        environment: environment ?? "production"
                     )
                 }
         } else if (call.method == "core/methods/getSession") {

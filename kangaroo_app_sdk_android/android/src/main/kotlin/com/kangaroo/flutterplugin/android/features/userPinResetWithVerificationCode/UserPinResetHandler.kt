@@ -12,13 +12,13 @@ class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null
 
     override val methodChannel: String
-        get() = "customer_sdk/methods/request_pin_reset"
+        get() = "customer_sdk/methods/reset_pin"
 
     override val eventChannel: String
-        get() = "customer_sdk/events/request_pin_reset"
+        get() = "customer_sdk/events/reset_pin"
 
     override fun onMethodCall(call: MethodCall): Unit? {
-        return requestPinReset(call)
+        return resetPin(call)
     }
 
     override fun getStreamHandler(): EventChannel.StreamHandler {
@@ -26,8 +26,8 @@ class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun requestPinReset(call: MethodCall): Unit? {
-            UserPinResetApi().requestPinReset(
+        fun resetPin(call: MethodCall): Unit? {
+            UserPinResetApi().resetPin(
                 verificationCode = call.argument<Int>("verificationCode") as Int,
                 pinCode = call.argument<Int>("pinCode") as Int,
                 email = call.argument<String?>("email"),

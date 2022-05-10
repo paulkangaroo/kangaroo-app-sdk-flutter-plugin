@@ -23,14 +23,14 @@ abstract class UserPinResetApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-  requestPinReset({ 
+  resetPin({ 
         required final int verificationCode,
         required final int pinCode,
         final String? email,
         final String? phone,
         final String? countryCode,
     }) {
-    throw UnimplementedError('requestPinReset has not been implemented.');
+    throw UnimplementedError('resetPin has not been implemented.');
   }
 
   Stream<Result<EmptyResponse>> get userPinResetStream {

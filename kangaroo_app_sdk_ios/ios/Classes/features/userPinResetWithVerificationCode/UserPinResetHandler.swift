@@ -5,12 +5,12 @@ import KangarooAppSDKiOS
 class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
 
-    var methodChannel: String = "customer_sdk/methods/request_pin_reset"
+    var methodChannel: String = "customer_sdk/methods/reset_pin"
 
-    var eventChannel: String = "customer_sdk/events/request_pin_reset"
+    var eventChannel: String = "customer_sdk/events/reset_pin"
 
     func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserPinResetHandler.requestPinReset(call: call)
+        UserPinResetHandler.resetPin(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,7 +18,7 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
     }
 
 
-    static func requestPinReset(call: FlutterMethodCall) {
+    static func resetPin(call: FlutterMethodCall) {
         
 
         guard let args = call.arguments else {
@@ -31,7 +31,7 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
                 let phone = myArgs["phone"] as? String?,
                 let countryCode = myArgs["countryCode"] as? String?
             {
-            UserPinResetApi().requestPinReset(
+            UserPinResetApi().resetPin(
                 verificationCode: verificationCode,
                 pinCode: pinCode,
                 email: email,

@@ -144,7 +144,7 @@ class _MyAppState extends State<MyApp> {
                         success: (userTransactions) {
                           print("Flutter SDK rendering first reward");
                           return Image.network(
-                              "${userTransactions?.data.catalogItems.randomItem().images?[0].large}");
+                              "${userTransactions?.data?.catalogItems?.randomItem().images?[0].large}");
                         },
                         unauthorized: (int code, String message) =>
                             Text('error: $message'),
@@ -162,7 +162,7 @@ class _MyAppState extends State<MyApp> {
                         loading: () => CircularProgressIndicator(
                             color: Colors.yellow.shade900),
                         success: (userTransactions) => Text(
-                            "pin updated at: ${userTransactions?.data.updatedAt}"),
+                            "pin updated at: ${userTransactions?.data?.updatedAt}"),
                         unauthorized: (int code, String message) =>
                             Text('error: $message'),
                         error: (code, message) => Text('error: $message'),
@@ -179,7 +179,7 @@ class _MyAppState extends State<MyApp> {
                         loading: () =>
                             CircularProgressIndicator(color: Colors.purple),
                         success: (userProfile) =>
-                            Image.network("${userProfile?.data.profilePhoto}"),
+                            Image.network("${userProfile?.data?.profilePhoto}"),
                         unauthorized: (int code, String message) =>
                             Text('profile has unauthorized error'),
                         error: (code, message) =>
@@ -199,7 +199,7 @@ class _MyAppState extends State<MyApp> {
                         success: (userRewards) {
                           print("Flutter SDK rendering second reward");
                           return Image.network(
-                              "${userRewards?.data.catalogItems.randomItem().images?[0].large}");
+                              "${userRewards?.data?.catalogItems?.randomItem().images?[0].large}");
                         },
                         unauthorized: (int code, String message) =>
                             Text('error: $message'),

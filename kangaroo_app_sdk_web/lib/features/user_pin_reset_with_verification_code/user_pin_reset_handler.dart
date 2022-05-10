@@ -6,35 +6,29 @@ library kangaroo_app_sdk.js;
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
-import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_pin_reset_with_verification_code/user_pin_reset_platform_interface.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart';
+import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 
 class UserPinResetHandler extends UserPinResetApiInterface
-    implements PluginChannelHandler{
-
+    implements PluginChannelHandler {
   @override
   void registerPluginHandler() {
     UserPinResetApiInterface.instance = UserPinResetHandler();
   }
 
   @override
-  requestPinReset({ 
-        required final int verificationCode,
-        required final int pinCode,
-        final String? email,
-        final String? phone,
-        final String? countryCode
-    }) {
-    UserPinResetApi().requestPinReset(
-      verificationCode,
-      pinCode,
-      email,
-      phone,
-      countryCode
-    );
+  resetPin(
+      {required final int verificationCode,
+      required final int pinCode,
+      final String? email,
+      final String? phone,
+      final String? countryCode}) {
+    UserPinResetApi()
+        .resetPin(verificationCode, pinCode, email, phone, countryCode);
   }
 
   @override
@@ -48,8 +42,11 @@ class UserPinResetHandler extends UserPinResetApiInterface
 
     return controller.stream.distinct().map((event) {
       dynamic result;
+      debugPrint('empty response fresh state $result');
       try {
+        debugPrint('empty response decode attempt $result');
         result = EmptyResponse.fromJson(jsonDecode(event));
+        debugPrint('empty response decode success $result');
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
@@ -69,17 +66,11 @@ class UserPinResetHandler extends UserPinResetApiInterface
 class UserPinResetApi {
   external UserPinResetApi();
 
-  external void requestPinReset( 
-        int verificationCode,
-        int pinCode,
-        String? email,
-        String? phone,
-        String? countryCode
-    );
+  external void resetPin(int verificationCode, int pinCode, String? email,
+      String? phone, String? countryCode);
 
   external void observeUserPinResetState(
     Function(String) onData,
     Function(String) onStreamError,
   );
 }
-

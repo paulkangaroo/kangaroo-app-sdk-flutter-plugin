@@ -1,42 +1,42 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/base.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/result.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/state.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/user_pin_reset_with_verification_code/user_pin_reset_api_interface.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart';
-
 
 class UserPinResetApiFederated extends UserPinResetApiInterface {
   @override
-  requestPinReset({ 
-        required final int verificationCode,
-        required final int pinCode,
-        final String? email,
-        final String? phone,
-        final String? countryCode
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/request_pin_reset',
-    {
-      'verificationCode' : verificationCode,
-      'pinCode' : pinCode,
-      'email' : email,
-      'phone' : phone,
-      'countryCode' : countryCode
-    }
-    );
+  resetPin(
+      {required final int verificationCode,
+      required final int pinCode,
+      final String? email,
+      final String? phone,
+      final String? countryCode}) {
+    sdkMethodChannel.invokeMethod('customer_sdk/methods/reset_pin', {
+      'verificationCode': verificationCode,
+      'pinCode': pinCode,
+      'email': email,
+      'phone': phone,
+      'countryCode': countryCode
+    });
   }
 
   static const EventChannel _userPinResetEvent =
-      const EventChannel("customer_sdk/events/request_pin_reset");
+      const EventChannel("customer_sdk/events/reset_pin");
 
   @override
   Stream<Result<EmptyResponse>> get userPinResetStream {
     return _userPinResetEvent.receiveBroadcastStream().distinct().map((event) {
       dynamic result;
+      debugPrint('empty response fresh state $result');
       try {
+        debugPrint('empty response decode attempt $result');
         result = EmptyResponse.fromJson(jsonDecode(event));
+        debugPrint('empty response decode success $result');
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }

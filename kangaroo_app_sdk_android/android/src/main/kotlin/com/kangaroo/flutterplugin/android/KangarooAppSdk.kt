@@ -18,6 +18,7 @@ class KangarooAppSdk {
                 applicationKey = call.argument<String?>("applicationKey") ?: "",
                 clientId = call.argument<String?>("clientId") ?: "",
                 clientSecret = call.argument<String?>("clientSecret") ?: "",
+                environment = call.argument<String?>("environment") ?: "",
             )
             return null
         }
