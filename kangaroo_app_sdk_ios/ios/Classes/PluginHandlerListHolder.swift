@@ -27,6 +27,18 @@ class PluginHandlerListHolder {
 
     GetNotificationPreferencesHandler(),
 
+    PublicAlaCarteProductsHandler(),
+
+    PublicBannersHandler(),
+
+    PublicBranchesHandler(),
+
+    PublicOffersHandler(),
+
+    PublicProductsHandler(),
+
+    PublicRewardsHandler(),
+
     SocialMediaLinksHandler(),
 
     StringsHandler(),
@@ -34,6 +46,8 @@ class PluginHandlerListHolder {
     TiersHandler(),
 
     TransferMessagesHandler(),
+
+    UserCouponsHandler(),
 
     UserOffersHandler(),
 
@@ -45,6 +59,8 @@ class PluginHandlerListHolder {
 
     UserTransactionHistoryHandler(),
 
+    UserUsedCouponsHandler(),
+
     PayPalPaymentHandler(),
 
     OfferFacebookShareHandler(),
@@ -52,6 +68,8 @@ class PluginHandlerListHolder {
     GiftCardPurchaseHandler(),
 
     TransferRecallHandler(),
+
+    RedeemCouponsHandler(),
 
     RedeemRewardsHandler(),
 

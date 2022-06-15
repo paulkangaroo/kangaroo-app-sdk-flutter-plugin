@@ -12,19 +12,28 @@ import 'countries/countries_handler.dart';
 import 'frequent_buyer_programs/frequent_buyer_programs_handler.dart';
 import 'gift_cards/gift_cards_handler.dart';
 import 'user_notification_preferences/get_notification_preferences_handler.dart';
+import 'public_a_la_carte_products/public_ala_carte_products_handler.dart';
+import 'public_banners/public_banners_handler.dart';
+import 'public_branches/public_branches_handler.dart';
+import 'public_offers/public_offers_handler.dart';
+import 'public_products/public_products_handler.dart';
+import 'public_rewards/public_rewards_handler.dart';
 import 'social_media_links/social_media_links_handler.dart';
 import 'strings/strings_handler.dart';
 import 'tiers/tiers_handler.dart';
 import 'user_transfer_messages/transfer_messages_handler.dart';
+import 'user_coupons/user_coupons_handler.dart';
 import 'user_offers/user_offers_handler.dart';
 import 'user_products/user_products_handler.dart';
 import 'user_profile/user_profile_handler.dart';
 import 'user_rewards/user_rewards_handler.dart';
 import 'user_transaction_history/user_transaction_history_handler.dart';
+import 'user_used_coupons/user_used_coupons_handler.dart';
 import 'make_pay_pal_payment/pay_pal_payment_handler.dart';
 import 'post_offer_facebook_share/offer_facebook_share_handler.dart';
 import 'make_gift_card_purchase/gift_card_purchase_handler.dart';
 import 'user_transfer_recall/transfer_recall_handler.dart';
+import 'redeem_coupon/redeem_coupons_handler.dart';
 import 'redeem_reward/redeem_rewards_handler.dart';
 import 'push_token_registration/push_token_registration_handler.dart';
 import 'user_pin_reset_request/user_pin_reset_request_handler.dart';
@@ -63,6 +72,18 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   GetNotificationPreferencesHandler(),
 
+  PublicAlaCarteProductsHandler(),
+
+  PublicBannersHandler(),
+
+  PublicBranchesHandler(),
+
+  PublicOffersHandler(),
+
+  PublicProductsHandler(),
+
+  PublicRewardsHandler(),
+
   SocialMediaLinksHandler(),
 
   StringsHandler(),
@@ -70,6 +91,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   TiersHandler(),
 
   TransferMessagesHandler(),
+
+  UserCouponsHandler(),
 
   UserOffersHandler(),
 
@@ -81,6 +104,8 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   UserTransactionHistoryHandler(),
 
+  UserUsedCouponsHandler(),
+
   PayPalPaymentHandler(),
 
   OfferFacebookShareHandler(),
@@ -88,6 +113,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   GiftCardPurchaseHandler(),
 
   TransferRecallHandler(),
+
+  RedeemCouponsHandler(),
 
   RedeemRewardsHandler(),
 

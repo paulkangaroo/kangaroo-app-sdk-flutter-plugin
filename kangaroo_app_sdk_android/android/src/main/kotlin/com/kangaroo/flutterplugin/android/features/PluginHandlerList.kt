@@ -14,19 +14,28 @@ import com.kangaroo.flutterplugin.android.features.countries.CountriesHandler
 import com.kangaroo.flutterplugin.android.features.frequentBuyerPrograms.FrequentBuyerProgramsHandler
 import com.kangaroo.flutterplugin.android.features.giftCards.GiftCardsHandler
 import com.kangaroo.flutterplugin.android.features.userNotificationPreferences.GetNotificationPreferencesHandler
+import com.kangaroo.flutterplugin.android.features.publicALaCarteProducts.PublicAlaCarteProductsHandler
+import com.kangaroo.flutterplugin.android.features.publicBanners.PublicBannersHandler
+import com.kangaroo.flutterplugin.android.features.publicBranches.PublicBranchesHandler
+import com.kangaroo.flutterplugin.android.features.publicOffers.PublicOffersHandler
+import com.kangaroo.flutterplugin.android.features.publicProducts.PublicProductsHandler
+import com.kangaroo.flutterplugin.android.features.publicRewards.PublicRewardsHandler
 import com.kangaroo.flutterplugin.android.features.socialMediaLinks.SocialMediaLinksHandler
 import com.kangaroo.flutterplugin.android.features.strings.StringsHandler
 import com.kangaroo.flutterplugin.android.features.tiers.TiersHandler
 import com.kangaroo.flutterplugin.android.features.userTransferMessages.TransferMessagesHandler
+import com.kangaroo.flutterplugin.android.features.userCoupons.UserCouponsHandler
 import com.kangaroo.flutterplugin.android.features.userOffers.UserOffersHandler
 import com.kangaroo.flutterplugin.android.features.userProducts.UserProductsHandler
 import com.kangaroo.flutterplugin.android.features.userProfile.UserProfileHandler
 import com.kangaroo.flutterplugin.android.features.userRewards.UserRewardsHandler
 import com.kangaroo.flutterplugin.android.features.userTransactionHistory.UserTransactionHistoryHandler
+import com.kangaroo.flutterplugin.android.features.userUsedCoupons.UserUsedCouponsHandler
 import com.kangaroo.flutterplugin.android.features.makePayPalPayment.PayPalPaymentHandler
 import com.kangaroo.flutterplugin.android.features.postOfferFacebookShare.OfferFacebookShareHandler
 import com.kangaroo.flutterplugin.android.features.makeGiftCardPurchase.GiftCardPurchaseHandler
 import com.kangaroo.flutterplugin.android.features.userTransferRecall.TransferRecallHandler
+import com.kangaroo.flutterplugin.android.features.redeemCoupon.RedeemCouponsHandler
 import com.kangaroo.flutterplugin.android.features.redeemReward.RedeemRewardsHandler
 import com.kangaroo.flutterplugin.android.features.pushTokenRegistration.PushTokenRegistrationHandler
 import com.kangaroo.flutterplugin.android.features.userPinResetRequest.UserPinResetRequestHandler
@@ -64,6 +73,18 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     GetNotificationPreferencesHandler(),
 
+    PublicAlaCarteProductsHandler(),
+
+    PublicBannersHandler(),
+
+    PublicBranchesHandler(),
+
+    PublicOffersHandler(),
+
+    PublicProductsHandler(),
+
+    PublicRewardsHandler(),
+
     SocialMediaLinksHandler(),
 
     StringsHandler(),
@@ -71,6 +92,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     TiersHandler(),
 
     TransferMessagesHandler(),
+
+    UserCouponsHandler(),
 
     UserOffersHandler(),
 
@@ -82,6 +105,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     UserTransactionHistoryHandler(),
 
+    UserUsedCouponsHandler(),
+
     PayPalPaymentHandler(),
 
     OfferFacebookShareHandler(),
@@ -89,6 +114,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     GiftCardPurchaseHandler(),
 
     TransferRecallHandler(),
+
+    RedeemCouponsHandler(),
 
     RedeemRewardsHandler(),
 

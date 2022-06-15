@@ -3,7 +3,6 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  kangaroo_app_sdk
 )
 
 set(PLUGIN_BUNDLED_LIBRARIES)
