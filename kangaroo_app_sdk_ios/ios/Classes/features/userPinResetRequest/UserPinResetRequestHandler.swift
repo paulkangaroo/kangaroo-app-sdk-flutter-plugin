@@ -24,12 +24,12 @@ class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelH
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let mode = myArgs["mode"] as? String,
-                let email = myArgs["email"] as? String?,
-                let phone = myArgs["phone"] as? String?,
-                let countryCode = myArgs["countryCode"] as? String?
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let mode = myArgs["mode"] as? String else {return}
+                let email = myArgs["email"] as? String? ?? nil
+                let phone = myArgs["phone"] as? String? ?? nil
+                let countryCode = myArgs["countryCode"] as? String? ?? nil
+
             UserPinResetRequestApi().requestPinReset(
                 mode: mode,
                 email: email,

@@ -24,9 +24,9 @@ class GiftCardDepositHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let depositId = myArgs["depositId"] as? String
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let depositId = myArgs["depositId"] as? String else {return}
+
             GiftCardDepositApi().depositGiftCard(
                 depositId: depositId
             )

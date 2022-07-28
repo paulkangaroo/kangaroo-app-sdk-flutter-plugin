@@ -24,13 +24,13 @@ class UserAccountVerificationHandler: NSObject, FlutterStreamHandler, PluginChan
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let intent = myArgs["intent"] as? String,
-                let token = myArgs["token"] as? String,
-                let email = myArgs["email"] as? String?,
-                let phone = myArgs["phone"] as? String?,
-                let countryCode = myArgs["countryCode"] as? String?
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let intent = myArgs["intent"] as? String else {return}
+                guard let token = myArgs["token"] as? String else {return}
+                let email = myArgs["email"] as? String? ?? nil
+                let phone = myArgs["phone"] as? String? ?? nil
+                let countryCode = myArgs["countryCode"] as? String? ?? nil
+
             UserAccountVerificationApi().verifyAccount(
                 intent: intent,
                 token: token,

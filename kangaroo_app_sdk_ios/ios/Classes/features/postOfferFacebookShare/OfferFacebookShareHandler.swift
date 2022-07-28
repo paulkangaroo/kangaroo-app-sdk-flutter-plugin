@@ -24,13 +24,13 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let offerId = myArgs["offerId"] as? String,
-                let include = myArgs["include"] as? String,
-                let facebookUserId = myArgs["facebookUserId"] as? String,
-                let type = myArgs["type"] as? String,
-                let friendsCount = myArgs["friendsCount"] as? String
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let offerId = myArgs["offerId"] as? String else {return}
+                guard let include = myArgs["include"] as? String else {return}
+                guard let facebookUserId = myArgs["facebookUserId"] as? String else {return}
+                guard let type = myArgs["type"] as? String else {return}
+                guard let friendsCount = myArgs["friendsCount"] as? String else {return}
+
             OfferFacebookShareApi().postOfferFacebookShare(
                 offerId: offerId,
                 include: include,

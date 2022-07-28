@@ -24,14 +24,14 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let firstName = myArgs["firstName"] as? String?,
-                let lastName = myArgs["lastName"] as? String?,
-                let birthDate = myArgs["birthDate"] as? String?,
-                let language = myArgs["language"] as? String?,
-                let gender = myArgs["gender"] as? String?,
-                let profilePhoto = myArgs["profilePhoto"] as? String?
-            {
+        if let myArgs = args as? [String: Any] {
+                        let firstName = myArgs["firstName"] as? String? ?? nil
+                let lastName = myArgs["lastName"] as? String? ?? nil
+                let birthDate = myArgs["birthDate"] as? String? ?? nil
+                let language = myArgs["language"] as? String? ?? nil
+                let gender = myArgs["gender"] as? String? ?? nil
+                let profilePhoto = myArgs["profilePhoto"] as? String? ?? nil
+
             UserProfileUpdateApi().updateUserProfile(
                 firstName: firstName,
                 lastName: lastName,

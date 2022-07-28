@@ -24,13 +24,13 @@ class PayPalPaymentHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let intent = myArgs["intent"] as? String,
-                let provider = myArgs["provider"] as? String,
-                let giftcardId = myArgs["giftcardId"] as? Int32,
-                let paypalReturnUrl = myArgs["paypalReturnUrl"] as? String,
-                let paypalCancelUrl = myArgs["paypalCancelUrl"] as? String
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let intent = myArgs["intent"] as? String else {return}
+                guard let provider = myArgs["provider"] as? String else {return}
+                guard let giftcardId = myArgs["giftcardId"] as? Int32 else {return}
+                guard let paypalReturnUrl = myArgs["paypalReturnUrl"] as? String else {return}
+                guard let paypalCancelUrl = myArgs["paypalCancelUrl"] as? String else {return}
+
             PayPalPaymentApi().makePayPalPayment(
                 intent: intent,
                 provider: provider,

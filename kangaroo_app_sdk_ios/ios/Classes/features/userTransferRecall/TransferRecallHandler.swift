@@ -24,9 +24,9 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let recallId = myArgs["recallId"] as? String
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let recallId = myArgs["recallId"] as? String else {return}
+
             TransferRecallApi().recallTransfer(
                 recallId: recallId
             )

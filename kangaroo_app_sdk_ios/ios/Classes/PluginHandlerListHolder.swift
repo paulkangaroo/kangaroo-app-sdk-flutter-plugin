@@ -7,6 +7,8 @@ class PluginHandlerListHolder {
 
     UserRegistrationHandler(),
 
+    UserDeleteHandler(),
+
     GiftCardDepositHandler(),
 
     AlaCarteProductsHandler(),
@@ -15,11 +17,15 @@ class PluginHandlerListHolder {
 
     BusinessHandler(),
 
+    BranchesHandler(),
+
     BusinessesHandler(),
 
     CampaignMessagesHandler(),
 
     CountriesHandler(),
+
+    GetDefaultBusinessIdHandler(),
 
     FrequentBuyerProgramsHandler(),
 
@@ -33,6 +39,8 @@ class PluginHandlerListHolder {
 
     PublicBranchesHandler(),
 
+    PublicBusinessSettingsHandler(),
+
     PublicOffersHandler(),
 
     PublicProductsHandler(),
@@ -41,13 +49,35 @@ class PluginHandlerListHolder {
 
     SocialMediaLinksHandler(),
 
+    GetSpinToWinPrizesHandler(),
+
     StringsHandler(),
 
     TiersHandler(),
 
     TransferMessagesHandler(),
 
+    UserBusinessAlaCarteProductsHandler(),
+
+    UserBusinessBannersHandler(),
+
+    UserBusinessFrequentBuyerProgramsHandler(),
+
+    UserBusinessGiftCardsHandler(),
+
+    UserBusinessOffersHandler(),
+
+    UserBusinessProductsHandler(),
+
+    UserBusinessProfileHandler(),
+
+    UserBusinessRewardsHandler(),
+
+    UserBusinessSocialMediaLinksHandler(),
+
     UserCouponsHandler(),
+
+    UserDetailsHandler(),
 
     UserOffersHandler(),
 
@@ -82,6 +112,8 @@ class PluginHandlerListHolder {
     BalanceTransferHandler(),
 
     UserUnsubscribeHandler(),
+
+    UpdateDefaultBusinessIdHandler(),
 
     UpdateNotificationPreferencesHandler(),
 

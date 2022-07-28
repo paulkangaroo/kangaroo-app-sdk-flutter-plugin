@@ -24,10 +24,10 @@ class PushTokenRegistrationHandler: NSObject, FlutterStreamHandler, PluginChanne
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let androidDeviceToken = myArgs["androidDeviceToken"] as? String?,
-                let iosDeviceToken = myArgs["iosDeviceToken"] as? String?
-            {
+        if let myArgs = args as? [String: Any] {
+                        let androidDeviceToken = myArgs["androidDeviceToken"] as? String? ?? nil
+                let iosDeviceToken = myArgs["iosDeviceToken"] as? String? ?? nil
+
             PushTokenRegistrationApi().registerPushToken(
                 androidDeviceToken: androidDeviceToken,
                 iosDeviceToken: iosDeviceToken

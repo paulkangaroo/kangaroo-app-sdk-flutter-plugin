@@ -24,9 +24,9 @@ class CampaignMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let businessId = myArgs["businessId"] as? String
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return}
+
             CampaignMessagesApi().getCampaignMessages(
                 businessId: businessId
             )

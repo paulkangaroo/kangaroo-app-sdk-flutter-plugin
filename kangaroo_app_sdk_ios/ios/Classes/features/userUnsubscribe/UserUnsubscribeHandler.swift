@@ -24,10 +24,10 @@ class UserUnsubscribeHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let campaignId = myArgs["campaignId"] as? String,
-                let token = myArgs["token"] as? String
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let campaignId = myArgs["campaignId"] as? String else {return}
+                guard let token = myArgs["token"] as? String else {return}
+
             UserUnsubscribeApi().unsubscribe(
                 campaignId: campaignId,
                 token: token

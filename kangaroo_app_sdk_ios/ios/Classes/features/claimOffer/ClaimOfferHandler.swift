@@ -24,10 +24,10 @@ class ClaimOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         guard let args = call.arguments else {
             return
         }
-        if let myArgs = args as? [String: Any],
-                        let offerId = myArgs["offerId"] as? Int32,
-                let customerId = myArgs["customerId"] as? String
-            {
+        if let myArgs = args as? [String: Any] {
+                        guard let offerId = myArgs["offerId"] as? Int32 else {return}
+                guard let customerId = myArgs["customerId"] as? String else {return}
+
             ClaimOfferApi().claimOffer(
                 offerId: offerId,
                 customerId: customerId
