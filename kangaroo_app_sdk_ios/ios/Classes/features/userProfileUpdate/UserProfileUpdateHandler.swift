@@ -55,6 +55,8 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:
