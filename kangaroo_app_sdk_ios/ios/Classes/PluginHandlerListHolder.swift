@@ -109,6 +109,8 @@ class PluginHandlerListHolder {
 
     UserPinResetHandler(),
 
+    UserScanReceiptHandler(),
+
     BalanceTransferHandler(),
 
     UserUnsubscribeHandler(),

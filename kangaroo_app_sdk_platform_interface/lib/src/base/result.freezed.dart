@@ -12,44 +12,7 @@ part of 'result.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ResultTearOff {
-  const _$ResultTearOff();
-
-  Idle<T> idle<T>() {
-    return Idle<T>();
-  }
-
-  Loading<T> loading<T>() {
-    return Loading<T>();
-  }
-
-  Success<T> success<T>({T? data}) {
-    return Success<T>(
-      data: data,
-    );
-  }
-
-  Unauthorized<T> unauthorized<T>(
-      {int code = 400, String message = 'unauthorized'}) {
-    return Unauthorized<T>(
-      code: code,
-      message: message,
-    );
-  }
-
-  Error<T> error<T>({int code = -1, String message = 'unknown error'}) {
-    return Error<T>(
-      code: code,
-      message: message,
-    );
-  }
-}
-
-/// @nodoc
-const $Result = _$ResultTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Result<T> {
@@ -127,19 +90,19 @@ class _$ResultCopyWithImpl<T, $Res> implements $ResultCopyWith<T, $Res> {
 }
 
 /// @nodoc
-abstract class $IdleCopyWith<T, $Res> {
-  factory $IdleCopyWith(Idle<T> value, $Res Function(Idle<T>) then) =
-      _$IdleCopyWithImpl<T, $Res>;
+abstract class _$$IdleCopyWith<T, $Res> {
+  factory _$$IdleCopyWith(_$Idle<T> value, $Res Function(_$Idle<T>) then) =
+      __$$IdleCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class _$IdleCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
-    implements $IdleCopyWith<T, $Res> {
-  _$IdleCopyWithImpl(Idle<T> _value, $Res Function(Idle<T>) _then)
-      : super(_value, (v) => _then(v as Idle<T>));
+class __$$IdleCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
+    implements _$$IdleCopyWith<T, $Res> {
+  __$$IdleCopyWithImpl(_$Idle<T> _value, $Res Function(_$Idle<T>) _then)
+      : super(_value, (v) => _then(v as _$Idle<T>));
 
   @override
-  Idle<T> get _value => super._value as Idle<T>;
+  _$Idle<T> get _value => super._value as _$Idle<T>;
 }
 
 /// @nodoc
@@ -155,13 +118,13 @@ class _$Idle<T> with DiagnosticableTreeMixin implements Idle<T> {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'Result<$T>.idle'));
+    properties.add(DiagnosticsProperty('type', 'Result<$T>.idle'));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Idle<T>);
+        (other.runtimeType == runtimeType && other is _$Idle<T>);
   }
 
   @override
@@ -253,19 +216,21 @@ abstract class Idle<T> implements Result<T> {
 }
 
 /// @nodoc
-abstract class $LoadingCopyWith<T, $Res> {
-  factory $LoadingCopyWith(Loading<T> value, $Res Function(Loading<T>) then) =
-      _$LoadingCopyWithImpl<T, $Res>;
+abstract class _$$LoadingCopyWith<T, $Res> {
+  factory _$$LoadingCopyWith(
+          _$Loading<T> value, $Res Function(_$Loading<T>) then) =
+      __$$LoadingCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
-    implements $LoadingCopyWith<T, $Res> {
-  _$LoadingCopyWithImpl(Loading<T> _value, $Res Function(Loading<T>) _then)
-      : super(_value, (v) => _then(v as Loading<T>));
+class __$$LoadingCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
+    implements _$$LoadingCopyWith<T, $Res> {
+  __$$LoadingCopyWithImpl(
+      _$Loading<T> _value, $Res Function(_$Loading<T>) _then)
+      : super(_value, (v) => _then(v as _$Loading<T>));
 
   @override
-  Loading<T> get _value => super._value as Loading<T>;
+  _$Loading<T> get _value => super._value as _$Loading<T>;
 }
 
 /// @nodoc
@@ -281,13 +246,13 @@ class _$Loading<T> with DiagnosticableTreeMixin implements Loading<T> {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'Result<$T>.loading'));
+    properties.add(DiagnosticsProperty('type', 'Result<$T>.loading'));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Loading<T>);
+        (other.runtimeType == runtimeType && other is _$Loading<T>);
   }
 
   @override
@@ -379,26 +344,28 @@ abstract class Loading<T> implements Result<T> {
 }
 
 /// @nodoc
-abstract class $SuccessCopyWith<T, $Res> {
-  factory $SuccessCopyWith(Success<T> value, $Res Function(Success<T>) then) =
-      _$SuccessCopyWithImpl<T, $Res>;
+abstract class _$$SuccessCopyWith<T, $Res> {
+  factory _$$SuccessCopyWith(
+          _$Success<T> value, $Res Function(_$Success<T>) then) =
+      __$$SuccessCopyWithImpl<T, $Res>;
   $Res call({T? data});
 }
 
 /// @nodoc
-class _$SuccessCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
-    implements $SuccessCopyWith<T, $Res> {
-  _$SuccessCopyWithImpl(Success<T> _value, $Res Function(Success<T>) _then)
-      : super(_value, (v) => _then(v as Success<T>));
+class __$$SuccessCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
+    implements _$$SuccessCopyWith<T, $Res> {
+  __$$SuccessCopyWithImpl(
+      _$Success<T> _value, $Res Function(_$Success<T>) _then)
+      : super(_value, (v) => _then(v as _$Success<T>));
 
   @override
-  Success<T> get _value => super._value as Success<T>;
+  _$Success<T> get _value => super._value as _$Success<T>;
 
   @override
   $Res call({
     Object? data = freezed,
   }) {
-    return _then(Success<T>(
+    return _then(_$Success<T>(
       data: data == freezed
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -432,7 +399,7 @@ class _$Success<T> with DiagnosticableTreeMixin implements Success<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Success<T> &&
+            other is _$Success<T> &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
@@ -442,8 +409,8 @@ class _$Success<T> with DiagnosticableTreeMixin implements Success<T> {
 
   @JsonKey(ignore: true)
   @override
-  $SuccessCopyWith<T, Success<T>> get copyWith =>
-      _$SuccessCopyWithImpl<T, Success<T>>(this, _$identity);
+  _$$SuccessCopyWith<T, _$Success<T>> get copyWith =>
+      __$$SuccessCopyWithImpl<T, _$Success<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -527,38 +494,39 @@ class _$Success<T> with DiagnosticableTreeMixin implements Success<T> {
 }
 
 abstract class Success<T> implements Result<T> {
-  const factory Success({T? data}) = _$Success<T>;
+  const factory Success({final T? data}) = _$Success<T>;
 
   T? get data;
   @JsonKey(ignore: true)
-  $SuccessCopyWith<T, Success<T>> get copyWith =>
+  _$$SuccessCopyWith<T, _$Success<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UnauthorizedCopyWith<T, $Res> {
-  factory $UnauthorizedCopyWith(
-          Unauthorized<T> value, $Res Function(Unauthorized<T>) then) =
-      _$UnauthorizedCopyWithImpl<T, $Res>;
+abstract class _$$UnauthorizedCopyWith<T, $Res> {
+  factory _$$UnauthorizedCopyWith(
+          _$Unauthorized<T> value, $Res Function(_$Unauthorized<T>) then) =
+      __$$UnauthorizedCopyWithImpl<T, $Res>;
   $Res call({int code, String message});
 }
 
 /// @nodoc
-class _$UnauthorizedCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
-    implements $UnauthorizedCopyWith<T, $Res> {
-  _$UnauthorizedCopyWithImpl(
-      Unauthorized<T> _value, $Res Function(Unauthorized<T>) _then)
-      : super(_value, (v) => _then(v as Unauthorized<T>));
+class __$$UnauthorizedCopyWithImpl<T, $Res>
+    extends _$ResultCopyWithImpl<T, $Res>
+    implements _$$UnauthorizedCopyWith<T, $Res> {
+  __$$UnauthorizedCopyWithImpl(
+      _$Unauthorized<T> _value, $Res Function(_$Unauthorized<T>) _then)
+      : super(_value, (v) => _then(v as _$Unauthorized<T>));
 
   @override
-  Unauthorized<T> get _value => super._value as Unauthorized<T>;
+  _$Unauthorized<T> get _value => super._value as _$Unauthorized<T>;
 
   @override
   $Res call({
     Object? code = freezed,
     Object? message = freezed,
   }) {
-    return _then(Unauthorized<T>(
+    return _then(_$Unauthorized<T>(
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -578,11 +546,11 @@ class _$Unauthorized<T>
     implements Unauthorized<T> {
   const _$Unauthorized({this.code = 400, this.message = 'unauthorized'});
 
-  @JsonKey()
   @override
+  @JsonKey()
   final int code;
-  @JsonKey()
   @override
+  @JsonKey()
   final String message;
 
   @override
@@ -603,7 +571,7 @@ class _$Unauthorized<T>
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Unauthorized<T> &&
+            other is _$Unauthorized<T> &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.message, message));
   }
@@ -616,8 +584,8 @@ class _$Unauthorized<T>
 
   @JsonKey(ignore: true)
   @override
-  $UnauthorizedCopyWith<T, Unauthorized<T>> get copyWith =>
-      _$UnauthorizedCopyWithImpl<T, Unauthorized<T>>(this, _$identity);
+  _$$UnauthorizedCopyWith<T, _$Unauthorized<T>> get copyWith =>
+      __$$UnauthorizedCopyWithImpl<T, _$Unauthorized<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -701,37 +669,38 @@ class _$Unauthorized<T>
 }
 
 abstract class Unauthorized<T> implements Result<T> {
-  const factory Unauthorized({int code, String message}) = _$Unauthorized<T>;
+  const factory Unauthorized({final int code, final String message}) =
+      _$Unauthorized<T>;
 
   int get code;
   String get message;
   @JsonKey(ignore: true)
-  $UnauthorizedCopyWith<T, Unauthorized<T>> get copyWith =>
+  _$$UnauthorizedCopyWith<T, _$Unauthorized<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ErrorCopyWith<T, $Res> {
-  factory $ErrorCopyWith(Error<T> value, $Res Function(Error<T>) then) =
-      _$ErrorCopyWithImpl<T, $Res>;
+abstract class _$$ErrorCopyWith<T, $Res> {
+  factory _$$ErrorCopyWith(_$Error<T> value, $Res Function(_$Error<T>) then) =
+      __$$ErrorCopyWithImpl<T, $Res>;
   $Res call({int code, String message});
 }
 
 /// @nodoc
-class _$ErrorCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
-    implements $ErrorCopyWith<T, $Res> {
-  _$ErrorCopyWithImpl(Error<T> _value, $Res Function(Error<T>) _then)
-      : super(_value, (v) => _then(v as Error<T>));
+class __$$ErrorCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
+    implements _$$ErrorCopyWith<T, $Res> {
+  __$$ErrorCopyWithImpl(_$Error<T> _value, $Res Function(_$Error<T>) _then)
+      : super(_value, (v) => _then(v as _$Error<T>));
 
   @override
-  Error<T> get _value => super._value as Error<T>;
+  _$Error<T> get _value => super._value as _$Error<T>;
 
   @override
   $Res call({
     Object? code = freezed,
     Object? message = freezed,
   }) {
-    return _then(Error<T>(
+    return _then(_$Error<T>(
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -749,11 +718,11 @@ class _$ErrorCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
 class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
   const _$Error({this.code = -1, this.message = 'unknown error'});
 
-  @JsonKey()
   @override
+  @JsonKey()
   final int code;
-  @JsonKey()
   @override
+  @JsonKey()
   final String message;
 
   @override
@@ -774,7 +743,7 @@ class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Error<T> &&
+            other is _$Error<T> &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.message, message));
   }
@@ -787,8 +756,8 @@ class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
 
   @JsonKey(ignore: true)
   @override
-  $ErrorCopyWith<T, Error<T>> get copyWith =>
-      _$ErrorCopyWithImpl<T, Error<T>>(this, _$identity);
+  _$$ErrorCopyWith<T, _$Error<T>> get copyWith =>
+      __$$ErrorCopyWithImpl<T, _$Error<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -872,11 +841,11 @@ class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
 }
 
 abstract class Error<T> implements Result<T> {
-  const factory Error({int code, String message}) = _$Error<T>;
+  const factory Error({final int code, final String message}) = _$Error<T>;
 
   int get code;
   String get message;
   @JsonKey(ignore: true)
-  $ErrorCopyWith<T, Error<T>> get copyWith =>
+  _$$ErrorCopyWith<T, _$Error<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

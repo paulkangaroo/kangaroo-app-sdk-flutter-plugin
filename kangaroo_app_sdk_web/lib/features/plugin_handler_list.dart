@@ -53,6 +53,7 @@ import 'redeem_reward/redeem_rewards_handler.dart';
 import 'push_token_registration/push_token_registration_handler.dart';
 import 'user_pin_reset_request/user_pin_reset_request_handler.dart';
 import 'user_pin_reset_with_verification_code/user_pin_reset_handler.dart';
+import 'user_scan_receipt/user_scan_receipt_handler.dart';
 import 'user_balance_transfer/balance_transfer_handler.dart';
 import 'user_unsubscribe/user_unsubscribe_handler.dart';
 import 'update_default_business_id/update_default_business_id_handler.dart';
@@ -169,6 +170,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   UserPinResetRequestHandler(),
 
   UserPinResetHandler(),
+
+  UserScanReceiptHandler(),
 
   BalanceTransferHandler(),
 

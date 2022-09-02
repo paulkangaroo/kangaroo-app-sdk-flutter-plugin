@@ -55,6 +55,7 @@ import com.kangaroo.flutterplugin.android.features.redeemReward.RedeemRewardsHan
 import com.kangaroo.flutterplugin.android.features.pushTokenRegistration.PushTokenRegistrationHandler
 import com.kangaroo.flutterplugin.android.features.userPinResetRequest.UserPinResetRequestHandler
 import com.kangaroo.flutterplugin.android.features.userPinResetWithVerificationCode.UserPinResetHandler
+import com.kangaroo.flutterplugin.android.features.userScanReceipt.UserScanReceiptHandler
 import com.kangaroo.flutterplugin.android.features.userBalanceTransfer.BalanceTransferHandler
 import com.kangaroo.flutterplugin.android.features.userUnsubscribe.UserUnsubscribeHandler
 import com.kangaroo.flutterplugin.android.features.updateDefaultBusinessId.UpdateDefaultBusinessIdHandler
@@ -170,6 +171,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     UserPinResetRequestHandler(),
 
     UserPinResetHandler(),
+
+    UserScanReceiptHandler(),
 
     BalanceTransferHandler(),
 
