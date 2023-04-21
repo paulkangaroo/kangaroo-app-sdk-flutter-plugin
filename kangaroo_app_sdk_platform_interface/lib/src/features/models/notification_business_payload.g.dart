@@ -14,10 +14,11 @@ NotificationBusinessPayload _$NotificationBusinessPayloadFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          allowedKeys: const ['id'],
+          allowedKeys: const ['id', 'name'],
         );
         final val = NotificationBusinessPayload(
           id: $checkedConvert('id', (v) => v as String?),
+          name: $checkedConvert('name', (v) => v as String?),
         );
         return val;
       },
@@ -27,4 +28,5 @@ Map<String, dynamic> _$NotificationBusinessPayloadToJson(
         NotificationBusinessPayload instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'name': instance.name,
     };

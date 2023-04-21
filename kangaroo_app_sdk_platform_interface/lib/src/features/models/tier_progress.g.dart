@@ -20,7 +20,12 @@ TierProgress _$TierProgressFromJson(Map<String, dynamic> json) =>
             'tier_level_live',
             'next_tier_level',
             'tier_progress',
-            'left_points'
+            'left_points',
+            'left_amount',
+            'left_visits',
+            'total_points',
+            'total_amount',
+            'total_visits'
           ],
         );
         final val = TierProgress(
@@ -34,6 +39,13 @@ TierProgress _$TierProgressFromJson(Map<String, dynamic> json) =>
           tierProgress:
               $checkedConvert('tier_progress', (v) => (v as num?)?.toDouble()),
           leftPoints: $checkedConvert('left_points', (v) => v as int?),
+          leftAmount:
+              $checkedConvert('left_amount', (v) => (v as num?)?.toDouble()),
+          leftVisits: $checkedConvert('left_visits', (v) => v as int?),
+          totalPoints: $checkedConvert('total_points', (v) => v as int?),
+          totalAmount:
+              $checkedConvert('total_amount', (v) => (v as num?)?.toDouble()),
+          totalVisits: $checkedConvert('total_visits', (v) => v as int?),
         );
         return val;
       },
@@ -44,7 +56,12 @@ TierProgress _$TierProgressFromJson(Map<String, dynamic> json) =>
         'tierLevelLive': 'tier_level_live',
         'nextTierLevel': 'next_tier_level',
         'tierProgress': 'tier_progress',
-        'leftPoints': 'left_points'
+        'leftPoints': 'left_points',
+        'leftAmount': 'left_amount',
+        'leftVisits': 'left_visits',
+        'totalPoints': 'total_points',
+        'totalAmount': 'total_amount',
+        'totalVisits': 'total_visits'
       },
     );
 
@@ -57,4 +74,9 @@ Map<String, dynamic> _$TierProgressToJson(TierProgress instance) =>
       'next_tier_level': instance.nextTierLevel,
       'tier_progress': instance.tierProgress,
       'left_points': instance.leftPoints,
+      'left_amount': instance.leftAmount,
+      'left_visits': instance.leftVisits,
+      'total_points': instance.totalPoints,
+      'total_amount': instance.totalAmount,
+      'total_visits': instance.totalVisits,
     };

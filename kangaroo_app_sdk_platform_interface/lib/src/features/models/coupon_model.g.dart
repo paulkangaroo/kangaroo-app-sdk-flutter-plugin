@@ -14,6 +14,9 @@ CouponModel _$CouponModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           json,
           allowedKeys: const [
             'id',
+            'title',
+            'description',
+            'terms_conditions',
             'qrcode',
             'coupon_locked',
             'coupon_redeemed',
@@ -24,6 +27,10 @@ CouponModel _$CouponModelFromJson(Map<String, dynamic> json) => $checkedCreate(
         );
         final val = CouponModel(
           id: $checkedConvert('id', (v) => v as int?),
+          title: $checkedConvert('title', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
+          termsConditions:
+              $checkedConvert('terms_conditions', (v) => v as String?),
           qrcode: $checkedConvert('qrcode', (v) => v as String?),
           couponLocked: $checkedConvert('coupon_locked', (v) => v as bool?),
           couponRedeemed: $checkedConvert('coupon_redeemed', (v) => v as bool?),
@@ -38,6 +45,7 @@ CouponModel _$CouponModelFromJson(Map<String, dynamic> json) => $checkedCreate(
         return val;
       },
       fieldKeyMap: const {
+        'termsConditions': 'terms_conditions',
         'couponLocked': 'coupon_locked',
         'couponRedeemed': 'coupon_redeemed',
         'couponType': 'coupon_type',
@@ -48,6 +56,9 @@ CouponModel _$CouponModelFromJson(Map<String, dynamic> json) => $checkedCreate(
 Map<String, dynamic> _$CouponModelToJson(CouponModel instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'title': instance.title,
+      'description': instance.description,
+      'terms_conditions': instance.termsConditions,
       'qrcode': instance.qrcode,
       'coupon_locked': instance.couponLocked,
       'coupon_redeemed': instance.couponRedeemed,

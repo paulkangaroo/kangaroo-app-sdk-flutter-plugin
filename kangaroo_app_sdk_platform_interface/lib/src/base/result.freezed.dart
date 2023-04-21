@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'result.dart';
 
@@ -27,11 +27,11 @@ mixin _$Result<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? loading,
-    TResult Function(T? data)? success,
-    TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult? Function()? idle,
+    TResult? Function()? loading,
+    TResult? Function(T? data)? success,
+    TResult? Function(int code, String message)? unauthorized,
+    TResult? Function(int code, String message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,11 +55,11 @@ mixin _$Result<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Idle<T> value)? idle,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Unauthorized<T> value)? unauthorized,
-    TResult Function(Error<T> value)? error,
+    TResult? Function(Idle<T> value)? idle,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Unauthorized<T> value)? unauthorized,
+    TResult? Function(Error<T> value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -77,16 +77,18 @@ mixin _$Result<T> {
 /// @nodoc
 abstract class $ResultCopyWith<T, $Res> {
   factory $ResultCopyWith(Result<T> value, $Res Function(Result<T>) then) =
-      _$ResultCopyWithImpl<T, $Res>;
+      _$ResultCopyWithImpl<T, $Res, Result<T>>;
 }
 
 /// @nodoc
-class _$ResultCopyWithImpl<T, $Res> implements $ResultCopyWith<T, $Res> {
+class _$ResultCopyWithImpl<T, $Res, $Val extends Result<T>>
+    implements $ResultCopyWith<T, $Res> {
   _$ResultCopyWithImpl(this._value, this._then);
 
-  final Result<T> _value;
   // ignore: unused_field
-  final $Res Function(Result<T>) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -96,13 +98,11 @@ abstract class _$$IdleCopyWith<T, $Res> {
 }
 
 /// @nodoc
-class __$$IdleCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
+class __$$IdleCopyWithImpl<T, $Res>
+    extends _$ResultCopyWithImpl<T, $Res, _$Idle<T>>
     implements _$$IdleCopyWith<T, $Res> {
   __$$IdleCopyWithImpl(_$Idle<T> _value, $Res Function(_$Idle<T>) _then)
-      : super(_value, (v) => _then(v as _$Idle<T>));
-
-  @override
-  _$Idle<T> get _value => super._value as _$Idle<T>;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -145,11 +145,11 @@ class _$Idle<T> with DiagnosticableTreeMixin implements Idle<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? loading,
-    TResult Function(T? data)? success,
-    TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult? Function()? idle,
+    TResult? Function()? loading,
+    TResult? Function(T? data)? success,
+    TResult? Function(int code, String message)? unauthorized,
+    TResult? Function(int code, String message)? error,
   }) {
     return idle?.call();
   }
@@ -185,11 +185,11 @@ class _$Idle<T> with DiagnosticableTreeMixin implements Idle<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Idle<T> value)? idle,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Unauthorized<T> value)? unauthorized,
-    TResult Function(Error<T> value)? error,
+    TResult? Function(Idle<T> value)? idle,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Unauthorized<T> value)? unauthorized,
+    TResult? Function(Error<T> value)? error,
   }) {
     return idle?.call(this);
   }
@@ -223,14 +223,12 @@ abstract class _$$LoadingCopyWith<T, $Res> {
 }
 
 /// @nodoc
-class __$$LoadingCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
+class __$$LoadingCopyWithImpl<T, $Res>
+    extends _$ResultCopyWithImpl<T, $Res, _$Loading<T>>
     implements _$$LoadingCopyWith<T, $Res> {
   __$$LoadingCopyWithImpl(
       _$Loading<T> _value, $Res Function(_$Loading<T>) _then)
-      : super(_value, (v) => _then(v as _$Loading<T>));
-
-  @override
-  _$Loading<T> get _value => super._value as _$Loading<T>;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -273,11 +271,11 @@ class _$Loading<T> with DiagnosticableTreeMixin implements Loading<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? loading,
-    TResult Function(T? data)? success,
-    TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult? Function()? idle,
+    TResult? Function()? loading,
+    TResult? Function(T? data)? success,
+    TResult? Function(int code, String message)? unauthorized,
+    TResult? Function(int code, String message)? error,
   }) {
     return loading?.call();
   }
@@ -313,11 +311,11 @@ class _$Loading<T> with DiagnosticableTreeMixin implements Loading<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Idle<T> value)? idle,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Unauthorized<T> value)? unauthorized,
-    TResult Function(Error<T> value)? error,
+    TResult? Function(Idle<T> value)? idle,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Unauthorized<T> value)? unauthorized,
+    TResult? Function(Error<T> value)? error,
   }) {
     return loading?.call(this);
   }
@@ -348,25 +346,25 @@ abstract class _$$SuccessCopyWith<T, $Res> {
   factory _$$SuccessCopyWith(
           _$Success<T> value, $Res Function(_$Success<T>) then) =
       __$$SuccessCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T? data});
 }
 
 /// @nodoc
-class __$$SuccessCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
+class __$$SuccessCopyWithImpl<T, $Res>
+    extends _$ResultCopyWithImpl<T, $Res, _$Success<T>>
     implements _$$SuccessCopyWith<T, $Res> {
   __$$SuccessCopyWithImpl(
       _$Success<T> _value, $Res Function(_$Success<T>) _then)
-      : super(_value, (v) => _then(v as _$Success<T>));
+      : super(_value, _then);
 
-  @override
-  _$Success<T> get _value => super._value as _$Success<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? data = freezed,
   }) {
     return _then(_$Success<T>(
-      data: data == freezed
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as T?,
@@ -409,6 +407,7 @@ class _$Success<T> with DiagnosticableTreeMixin implements Success<T> {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SuccessCopyWith<T, _$Success<T>> get copyWith =>
       __$$SuccessCopyWithImpl<T, _$Success<T>>(this, _$identity);
 
@@ -427,11 +426,11 @@ class _$Success<T> with DiagnosticableTreeMixin implements Success<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? loading,
-    TResult Function(T? data)? success,
-    TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult? Function()? idle,
+    TResult? Function()? loading,
+    TResult? Function(T? data)? success,
+    TResult? Function(int code, String message)? unauthorized,
+    TResult? Function(int code, String message)? error,
   }) {
     return success?.call(data);
   }
@@ -467,11 +466,11 @@ class _$Success<T> with DiagnosticableTreeMixin implements Success<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Idle<T> value)? idle,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Unauthorized<T> value)? unauthorized,
-    TResult Function(Error<T> value)? error,
+    TResult? Function(Idle<T> value)? idle,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Unauthorized<T> value)? unauthorized,
+    TResult? Function(Error<T> value)? error,
   }) {
     return success?.call(this);
   }
@@ -507,31 +506,30 @@ abstract class _$$UnauthorizedCopyWith<T, $Res> {
   factory _$$UnauthorizedCopyWith(
           _$Unauthorized<T> value, $Res Function(_$Unauthorized<T>) then) =
       __$$UnauthorizedCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({int code, String message});
 }
 
 /// @nodoc
 class __$$UnauthorizedCopyWithImpl<T, $Res>
-    extends _$ResultCopyWithImpl<T, $Res>
+    extends _$ResultCopyWithImpl<T, $Res, _$Unauthorized<T>>
     implements _$$UnauthorizedCopyWith<T, $Res> {
   __$$UnauthorizedCopyWithImpl(
       _$Unauthorized<T> _value, $Res Function(_$Unauthorized<T>) _then)
-      : super(_value, (v) => _then(v as _$Unauthorized<T>));
+      : super(_value, _then);
 
-  @override
-  _$Unauthorized<T> get _value => super._value as _$Unauthorized<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? message = freezed,
+    Object? code = null,
+    Object? message = null,
   }) {
     return _then(_$Unauthorized<T>(
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as int,
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -572,18 +570,16 @@ class _$Unauthorized<T>
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Unauthorized<T> &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, code, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$UnauthorizedCopyWith<T, _$Unauthorized<T>> get copyWith =>
       __$$UnauthorizedCopyWithImpl<T, _$Unauthorized<T>>(this, _$identity);
 
@@ -602,11 +598,11 @@ class _$Unauthorized<T>
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? loading,
-    TResult Function(T? data)? success,
-    TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult? Function()? idle,
+    TResult? Function()? loading,
+    TResult? Function(T? data)? success,
+    TResult? Function(int code, String message)? unauthorized,
+    TResult? Function(int code, String message)? error,
   }) {
     return unauthorized?.call(code, message);
   }
@@ -642,11 +638,11 @@ class _$Unauthorized<T>
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Idle<T> value)? idle,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Unauthorized<T> value)? unauthorized,
-    TResult Function(Error<T> value)? error,
+    TResult? Function(Idle<T> value)? idle,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Unauthorized<T> value)? unauthorized,
+    TResult? Function(Error<T> value)? error,
   }) {
     return unauthorized?.call(this);
   }
@@ -683,29 +679,29 @@ abstract class Unauthorized<T> implements Result<T> {
 abstract class _$$ErrorCopyWith<T, $Res> {
   factory _$$ErrorCopyWith(_$Error<T> value, $Res Function(_$Error<T>) then) =
       __$$ErrorCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({int code, String message});
 }
 
 /// @nodoc
-class __$$ErrorCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
+class __$$ErrorCopyWithImpl<T, $Res>
+    extends _$ResultCopyWithImpl<T, $Res, _$Error<T>>
     implements _$$ErrorCopyWith<T, $Res> {
   __$$ErrorCopyWithImpl(_$Error<T> _value, $Res Function(_$Error<T>) _then)
-      : super(_value, (v) => _then(v as _$Error<T>));
+      : super(_value, _then);
 
-  @override
-  _$Error<T> get _value => super._value as _$Error<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
-    Object? message = freezed,
+    Object? code = null,
+    Object? message = null,
   }) {
     return _then(_$Error<T>(
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as int,
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -744,18 +740,16 @@ class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Error<T> &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, code, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ErrorCopyWith<T, _$Error<T>> get copyWith =>
       __$$ErrorCopyWithImpl<T, _$Error<T>>(this, _$identity);
 
@@ -774,11 +768,11 @@ class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? loading,
-    TResult Function(T? data)? success,
-    TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult? Function()? idle,
+    TResult? Function()? loading,
+    TResult? Function(T? data)? success,
+    TResult? Function(int code, String message)? unauthorized,
+    TResult? Function(int code, String message)? error,
   }) {
     return error?.call(code, message);
   }
@@ -814,11 +808,11 @@ class _$Error<T> with DiagnosticableTreeMixin implements Error<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Idle<T> value)? idle,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Unauthorized<T> value)? unauthorized,
-    TResult Function(Error<T> value)? error,
+    TResult? Function(Idle<T> value)? idle,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Unauthorized<T> value)? unauthorized,
+    TResult? Function(Error<T> value)? error,
   }) {
     return error?.call(this);
   }

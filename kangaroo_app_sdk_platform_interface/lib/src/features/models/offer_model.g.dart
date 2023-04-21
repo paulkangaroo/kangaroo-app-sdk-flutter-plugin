@@ -25,6 +25,7 @@ OfferModel _$OfferModelFromJson(Map<String, dynamic> json) => $checkedCreate(
             'min_purchase',
             'max_purchase',
             'apps_only',
+            'is_coupon_redeemed',
             'offer_frequency_id',
             'freq_details',
             'peak_from',
@@ -60,6 +61,8 @@ OfferModel _$OfferModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           maxPurchase:
               $checkedConvert('max_purchase', (v) => (v as num?)?.toDouble()),
           appsOnly: $checkedConvert('apps_only', (v) => v as bool?),
+          isCouponRedeemed:
+              $checkedConvert('is_coupon_redeemed', (v) => v as bool?),
           offerFrequencyId:
               $checkedConvert('offer_frequency_id', (v) => v as int?),
           freqDetails: $checkedConvert('freq_details',
@@ -105,6 +108,7 @@ OfferModel _$OfferModelFromJson(Map<String, dynamic> json) => $checkedCreate(
         'minPurchase': 'min_purchase',
         'maxPurchase': 'max_purchase',
         'appsOnly': 'apps_only',
+        'isCouponRedeemed': 'is_coupon_redeemed',
         'offerFrequencyId': 'offer_frequency_id',
         'freqDetails': 'freq_details',
         'peakFrom': 'peak_from',
@@ -129,6 +133,7 @@ Map<String, dynamic> _$OfferModelToJson(OfferModel instance) =>
       'min_purchase': instance.minPurchase,
       'max_purchase': instance.maxPurchase,
       'apps_only': instance.appsOnly,
+      'is_coupon_redeemed': instance.isCouponRedeemed,
       'offer_frequency_id': instance.offerFrequencyId,
       'freq_details': instance.freqDetails,
       'peak_from': instance.peakFrom,

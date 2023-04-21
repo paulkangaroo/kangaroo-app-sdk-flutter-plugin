@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userAuthentication.UserAuthenticationApi
-import kangaroorewards.appsdk.features.userAuthentication.serializeUserAuthenticationState
+import features.userAuthentication.UserAuthenticationApi
+import features.userAuthentication.serializeUserAuthenticationState
 
 class UserAuthenticationHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null
