@@ -21,6 +21,10 @@ class UserRegistrationHandler: NSObject, FlutterStreamHandler, PluginChannelHand
     static func createAccount(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

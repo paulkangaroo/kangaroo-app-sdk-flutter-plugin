@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.branches.BranchesApi
-import kangaroorewards.appsdk.features.branches.serializeBranchesState
+import features.branches.BranchesApi
+import features.branches.serializeBranchesState
 
 
 class BranchesHandler : EventChannel.StreamHandler, PluginChannelHandler {

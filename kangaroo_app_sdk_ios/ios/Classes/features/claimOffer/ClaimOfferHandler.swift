@@ -21,6 +21,10 @@ class ClaimOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     static func claimOffer(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

@@ -22,6 +22,10 @@ class UserUsedCouponsHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
         UserUsedCouponsApi().getUserUsedCoupons()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.tiers.TiersApi
-import kangaroorewards.appsdk.features.tiers.serializeTiersState
+import features.tiers.TiersApi
+import features.tiers.serializeTiersState
 
 
 class TiersHandler : EventChannel.StreamHandler, PluginChannelHandler {

@@ -22,6 +22,10 @@ class PublicRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
         PublicRewardsApi().getPublicRewards()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

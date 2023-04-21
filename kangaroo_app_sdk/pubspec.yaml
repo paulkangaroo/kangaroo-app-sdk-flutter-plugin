@@ -1,7 +1,7 @@
 name: kangaroo_app_sdk
-description: A new flutter plugin project.
+description: Kangaroo App SDK Flutter plugin core module.
 version: 0.0.1
-homepage:
+homepage: https://kangaroorewards.com/
 publish_to: none
 
 environment:

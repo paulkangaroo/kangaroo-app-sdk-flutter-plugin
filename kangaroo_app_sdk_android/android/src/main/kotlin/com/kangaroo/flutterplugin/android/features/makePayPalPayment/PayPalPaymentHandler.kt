@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.makePayPalPayment.PayPalPaymentApi
-import kangaroorewards.appsdk.features.makePayPalPayment.serializePayPalPaymentState
+import features.makePayPalPayment.PayPalPaymentApi
+import features.makePayPalPayment.serializePayPalPaymentState
 
 
 class PayPalPaymentHandler : EventChannel.StreamHandler, PluginChannelHandler {

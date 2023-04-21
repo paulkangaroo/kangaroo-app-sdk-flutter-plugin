@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.publicBanners.PublicBannersApi
-import kangaroorewards.appsdk.features.publicBanners.serializePublicBannersState
+import features.publicBanners.PublicBannersApi
+import features.publicBanners.serializePublicBannersState
 
 
 class PublicBannersHandler : EventChannel.StreamHandler, PluginChannelHandler {

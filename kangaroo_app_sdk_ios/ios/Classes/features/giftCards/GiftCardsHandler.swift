@@ -22,6 +22,10 @@ class GiftCardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         GiftCardsApi().getGiftCards()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

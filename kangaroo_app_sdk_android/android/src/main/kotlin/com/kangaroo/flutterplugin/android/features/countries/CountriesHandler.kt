@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.countries.CountriesApi
-import kangaroorewards.appsdk.features.countries.serializeCountriesState
+import features.countries.CountriesApi
+import features.countries.serializeCountriesState
 
 
 class CountriesHandler : EventChannel.StreamHandler, PluginChannelHandler {

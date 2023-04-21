@@ -27,8 +27,23 @@ class TierProgress {
   ///The users current tier progress in their \&quot;tier_level\&quot;. This will be a number between 0 and 1. A tier progress of 0.5 means that the user has made 50% progress in their current tier.  
   final double? tierProgress;
 
-  ///The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier. 
+  ///The amount of points left in the user&#39;s current tier progress. Once they have acquired this many more amount of points, they will be moved into the next tier.  
   final int? leftPoints;
+
+  ///The amount of spend left in the user&#39;s current tier progress. Once they have acquired this many more amount of spend, they will be moved into the next tier.  
+  final double? leftAmount;
+
+  ///The amount of visits left in the user&#39;s current tier progress. Once they have acquired this many more amount of visits, they will be moved into the next tier.  
+  final int? leftVisits;
+
+  ///Purchase points between start_date and end_date.  
+  final int? totalPoints;
+
+  ///Purchase amount between start_date and end_date.  
+  final double? totalAmount;
+
+  ///Purchase visits between start_date and end_date.  
+  final int? totalVisits;
 
   TierProgress({
     required this.startDate,
@@ -38,6 +53,11 @@ class TierProgress {
     required this.nextTierLevel,
     required this.tierProgress,
     required this.leftPoints,
+    required this.leftAmount,
+    required this.leftVisits,
+    required this.totalPoints,
+    required this.totalAmount,
+    required this.totalVisits,
   });
 
   factory TierProgress.fromJson(Map<String, dynamic> data) => _$TierProgressFromJson(data);

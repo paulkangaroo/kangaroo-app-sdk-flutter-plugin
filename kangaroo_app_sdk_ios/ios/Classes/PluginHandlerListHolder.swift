@@ -23,6 +23,8 @@ class PluginHandlerListHolder {
 
     CampaignMessagesHandler(),
 
+    GetConglomerateNotificationPreferencesHandler(),
+
     CountriesHandler(),
 
     GetDefaultBusinessIdHandler(),
@@ -92,6 +94,8 @@ class PluginHandlerListHolder {
     UserUsedCouponsHandler(),
 
     PayPalPaymentHandler(),
+
+    SocialMediaActionPerformHandler(),
 
     OfferFacebookShareHandler(),
 

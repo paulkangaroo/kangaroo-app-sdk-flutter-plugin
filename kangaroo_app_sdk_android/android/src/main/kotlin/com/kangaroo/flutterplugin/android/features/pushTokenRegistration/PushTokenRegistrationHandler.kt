@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.pushTokenRegistration.PushTokenRegistrationApi
-import kangaroorewards.appsdk.features.pushTokenRegistration.serializePushTokenRegistrationState
+import features.pushTokenRegistration.PushTokenRegistrationApi
+import features.pushTokenRegistration.serializePushTokenRegistrationState
 
 
 class PushTokenRegistrationHandler : EventChannel.StreamHandler, PluginChannelHandler {

@@ -21,6 +21,10 @@ class UserUnsubscribeHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
     static func unsubscribe(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

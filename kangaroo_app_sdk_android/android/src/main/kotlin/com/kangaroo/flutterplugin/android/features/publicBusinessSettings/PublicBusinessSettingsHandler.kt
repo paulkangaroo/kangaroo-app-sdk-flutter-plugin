@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.publicBusinessSettings.PublicBusinessSettingsApi
-import kangaroorewards.appsdk.features.publicBusinessSettings.serializePublicBusinessSettingsState
+import features.publicBusinessSettings.PublicBusinessSettingsApi
+import features.publicBusinessSettings.serializePublicBusinessSettingsState
 
 
 class PublicBusinessSettingsHandler : EventChannel.StreamHandler, PluginChannelHandler {

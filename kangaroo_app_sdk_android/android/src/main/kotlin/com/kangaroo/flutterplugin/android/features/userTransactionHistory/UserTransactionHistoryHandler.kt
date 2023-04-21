@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userTransactionHistory.UserTransactionHistoryApi
-import kangaroorewards.appsdk.features.userTransactionHistory.serializeUserTransactionHistoryState
+import features.userTransactionHistory.UserTransactionHistoryApi
+import features.userTransactionHistory.serializeUserTransactionHistoryState
 
 
 class UserTransactionHistoryHandler : EventChannel.StreamHandler, PluginChannelHandler {

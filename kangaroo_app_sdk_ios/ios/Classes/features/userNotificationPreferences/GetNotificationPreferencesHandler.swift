@@ -22,6 +22,10 @@ class GetNotificationPreferencesHandler: NSObject, FlutterStreamHandler, PluginC
         GetNotificationPreferencesApi().getNotificationPreferences()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

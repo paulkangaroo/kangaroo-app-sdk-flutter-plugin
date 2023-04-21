@@ -4,11 +4,11 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userNotificationPreferencesUpdate.UpdateNotificationPreferencesApi
-import kangaroorewards.appsdk.features.userNotificationPreferencesUpdate.serializeUpdateNotificationPreferencesState
+import features.userNotificationPreferencesUpdate.UpdateNotificationPreferencesApi
+import features.userNotificationPreferencesUpdate.serializeUpdateNotificationPreferencesState
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kangaroorewards.appsdk.features.userNotificationPreferencesUpdate.models.NotificationSettingsUpdateRequest
+import features.userNotificationPreferencesUpdate.models.NotificationSettingsUpdateRequest
 
 class UpdateNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null

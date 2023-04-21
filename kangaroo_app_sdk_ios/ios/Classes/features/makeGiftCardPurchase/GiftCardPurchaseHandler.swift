@@ -20,7 +20,12 @@ class GiftCardPurchaseHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
     static func purchaseGiftCard(call: FlutterMethodCall) {
         
+
+        
         GiftCardPurchaseApi().purchaseGiftCard(methods: call.arguments as! [String : Any])
+
+        
+
 
     }
 

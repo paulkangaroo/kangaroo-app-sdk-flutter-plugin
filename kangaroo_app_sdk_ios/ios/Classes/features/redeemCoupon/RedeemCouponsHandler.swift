@@ -20,7 +20,12 @@ class RedeemCouponsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
 
     static func redeemCoupon(call: FlutterMethodCall) {
         
+
+        
         RedeemCouponsApi().redeemCoupon(methods: call.arguments as! [String : Any])
+
+        
+
 
     }
 

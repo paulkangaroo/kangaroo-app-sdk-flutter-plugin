@@ -20,7 +20,12 @@ class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
     static func transfer(call: FlutterMethodCall) {
         
+
+        
         BalanceTransferApi().transfer(methods: call.arguments as! [String : Any])
+
+        
+
 
     }
 

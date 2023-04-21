@@ -21,6 +21,10 @@ class PushTokenRegistrationHandler: NSObject, FlutterStreamHandler, PluginChanne
     static func registerPushToken(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

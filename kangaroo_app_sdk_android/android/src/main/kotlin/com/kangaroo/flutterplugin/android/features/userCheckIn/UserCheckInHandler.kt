@@ -4,11 +4,11 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userCheckIn.UserCheckInApi
-import kangaroorewards.appsdk.features.userCheckIn.serializeUserCheckInState
+import features.userCheckIn.UserCheckInApi
+import features.userCheckIn.serializeUserCheckInState
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kangaroorewards.appsdk.features.userCheckIn.models.CheckInRequest
+import features.userCheckIn.models.CheckInRequest
 
 class UserCheckInHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null

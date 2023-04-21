@@ -4,11 +4,11 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.makeGiftCardPurchase.GiftCardPurchaseApi
-import kangaroorewards.appsdk.features.makeGiftCardPurchase.serializeGiftCardPurchaseState
+import features.makeGiftCardPurchase.GiftCardPurchaseApi
+import features.makeGiftCardPurchase.serializeGiftCardPurchaseState
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kangaroorewards.appsdk.features.makeGiftCardPurchase.models.GiftCardPurchaseRequest
+import features.makeGiftCardPurchase.models.GiftCardPurchaseRequest
 
 class GiftCardPurchaseHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null

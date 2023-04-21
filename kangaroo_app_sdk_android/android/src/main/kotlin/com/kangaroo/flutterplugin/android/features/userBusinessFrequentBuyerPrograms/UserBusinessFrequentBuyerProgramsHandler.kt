@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userBusinessFrequentBuyerPrograms.UserBusinessFrequentBuyerProgramsApi
-import kangaroorewards.appsdk.features.userBusinessFrequentBuyerPrograms.serializeUserBusinessFrequentBuyerProgramsState
+import features.userBusinessFrequentBuyerPrograms.UserBusinessFrequentBuyerProgramsApi
+import features.userBusinessFrequentBuyerPrograms.serializeUserBusinessFrequentBuyerProgramsState
 
 
 class UserBusinessFrequentBuyerProgramsHandler : EventChannel.StreamHandler, PluginChannelHandler {

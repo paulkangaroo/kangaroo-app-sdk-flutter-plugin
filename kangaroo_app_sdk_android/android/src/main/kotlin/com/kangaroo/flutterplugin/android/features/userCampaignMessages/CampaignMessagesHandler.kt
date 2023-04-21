@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userCampaignMessages.CampaignMessagesApi
-import kangaroorewards.appsdk.features.userCampaignMessages.serializeCampaignMessagesState
+import features.userCampaignMessages.CampaignMessagesApi
+import features.userCampaignMessages.serializeCampaignMessagesState
 
 
 class CampaignMessagesHandler : EventChannel.StreamHandler, PluginChannelHandler {

@@ -10,6 +10,7 @@ import 'business/business_handler.dart';
 import 'branches/branches_handler.dart';
 import 'business_list/businesses_handler.dart';
 import 'user_campaign_messages/campaign_messages_handler.dart';
+import 'user_conglomerate_notification_preferences/get_conglomerate_notification_preferences_handler.dart';
 import 'countries/countries_handler.dart';
 import 'get_default_business_id/get_default_business_id_handler.dart';
 import 'frequent_buyer_programs/frequent_buyer_programs_handler.dart';
@@ -45,6 +46,7 @@ import 'user_rewards/user_rewards_handler.dart';
 import 'user_transaction_history/user_transaction_history_handler.dart';
 import 'user_used_coupons/user_used_coupons_handler.dart';
 import 'make_pay_pal_payment/pay_pal_payment_handler.dart';
+import 'perform_social_media_action/social_media_action_perform_handler.dart';
 import 'post_offer_facebook_share/offer_facebook_share_handler.dart';
 import 'make_gift_card_purchase/gift_card_purchase_handler.dart';
 import 'user_transfer_recall/transfer_recall_handler.dart';
@@ -84,6 +86,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   BusinessesHandler(),
 
   CampaignMessagesHandler(),
+
+  GetConglomerateNotificationPreferencesHandler(),
 
   CountriesHandler(),
 
@@ -154,6 +158,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   UserUsedCouponsHandler(),
 
   PayPalPaymentHandler(),
+
+  SocialMediaActionPerformHandler(),
 
   OfferFacebookShareHandler(),
 

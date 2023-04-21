@@ -22,6 +22,10 @@ class BusinessesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         BusinessesApi().getBusinesses()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

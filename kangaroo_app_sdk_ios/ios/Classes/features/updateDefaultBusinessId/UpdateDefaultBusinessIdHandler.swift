@@ -21,6 +21,10 @@ class UpdateDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChan
     static func updateDefaultBusinessId(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

@@ -22,6 +22,10 @@ class StringsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         StringsApi().getStrings()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

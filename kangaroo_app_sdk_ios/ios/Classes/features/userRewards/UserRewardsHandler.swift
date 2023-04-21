@@ -22,6 +22,10 @@ class UserRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         UserRewardsApi().getUserRewards()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

@@ -22,6 +22,10 @@ class PublicBranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
         PublicBranchesApi().getPublicBranches()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

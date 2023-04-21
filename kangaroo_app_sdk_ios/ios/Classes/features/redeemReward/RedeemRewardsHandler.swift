@@ -20,7 +20,12 @@ class RedeemRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
 
     static func redeemReward(call: FlutterMethodCall) {
         
+
+        
         RedeemRewardsApi().redeemReward(methods: call.arguments as! [String : Any])
+
+        
+
 
     }
 

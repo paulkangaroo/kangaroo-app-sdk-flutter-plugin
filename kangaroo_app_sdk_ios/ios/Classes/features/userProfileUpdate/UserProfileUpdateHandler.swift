@@ -21,6 +21,10 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
     static func updateUserProfile(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

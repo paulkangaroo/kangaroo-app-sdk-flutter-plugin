@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.publicALaCarteProducts.PublicAlaCarteProductsApi
-import kangaroorewards.appsdk.features.publicALaCarteProducts.serializePublicAlaCarteProductsState
+import features.publicALaCarteProducts.PublicAlaCarteProductsApi
+import features.publicALaCarteProducts.serializePublicAlaCarteProductsState
 
 
 class PublicAlaCarteProductsHandler : EventChannel.StreamHandler, PluginChannelHandler {

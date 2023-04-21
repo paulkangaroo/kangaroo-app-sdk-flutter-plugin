@@ -4,11 +4,11 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userBalanceTransfer.BalanceTransferApi
-import kangaroorewards.appsdk.features.userBalanceTransfer.serializeBalanceTransferState
+import features.userBalanceTransfer.BalanceTransferApi
+import features.userBalanceTransfer.serializeBalanceTransferState
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kangaroorewards.appsdk.features.userBalanceTransfer.models.TransferRequestModel
+import features.userBalanceTransfer.models.TransferRequestModel
 
 class BalanceTransferHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null

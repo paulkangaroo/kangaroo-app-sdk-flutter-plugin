@@ -14,6 +14,15 @@ class CouponModel {
   ///A unique ID identifying this coupon 
   final int? id;
 
+  ///The coupon title. 
+  final String? title;
+
+  ///The coupon description. 
+  final String? description;
+
+  ///The terms and conditions attached to this coupon. 
+  final String? termsConditions;
+
   final String? qrcode;
 
   final bool? couponLocked;
@@ -28,6 +37,9 @@ class CouponModel {
 
   CouponModel({
     required this.id,
+    required this.title,
+    required this.description,
+    required this.termsConditions,
     required this.qrcode,
     required this.couponLocked,
     required this.couponRedeemed,

@@ -22,8 +22,8 @@ class UserPinResetHandler extends UserPinResetApiInterface
 
   @override
   resetPin({ 
-        required final int verificationCode,
-        required final int pinCode,
+        required final String verificationCode,
+        required final String pinCode,
         final String? email,
         final String? phone,
         final String? countryCode
@@ -70,8 +70,8 @@ class UserPinResetApi {
   external UserPinResetApi();
 
   external void resetPin( 
-        int verificationCode,
-        int pinCode,
+        String verificationCode,
+        String pinCode,
         String? email,
         String? phone,
         String? countryCode

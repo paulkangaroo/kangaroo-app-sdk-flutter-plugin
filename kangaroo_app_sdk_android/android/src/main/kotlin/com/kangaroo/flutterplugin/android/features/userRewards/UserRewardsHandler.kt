@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userRewards.UserRewardsApi
-import kangaroorewards.appsdk.features.userRewards.serializeUserRewardsState
+import features.userRewards.UserRewardsApi
+import features.userRewards.serializeUserRewardsState
 
 
 class UserRewardsHandler : EventChannel.StreamHandler, PluginChannelHandler {

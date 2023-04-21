@@ -28,6 +28,21 @@ class OfferTranslation {
   ///The language appropriate link of this offer. 
   final String? offerLink;
 
+  ///The translated coupon title. 
+  final String? couponTitle;
+
+  ///The translated coupon description. 
+  final String? couponDescription;
+
+  ///The translated coupon terms and conditions. 
+  final String? couponTermsConditions;
+
+  ///The language appropriate link of this coupon. 
+  final String? couponLink;
+
+  ///where is this coupon available at. 
+  final String? couponAvailableAt;
+
   ///The language for which this translation applies. 
   final Language? language;
 
@@ -38,6 +53,11 @@ class OfferTranslation {
     required this.offerDescription,
     required this.offerTermsConditions,
     required this.offerLink,
+    required this.couponTitle,
+    required this.couponDescription,
+    required this.couponTermsConditions,
+    required this.couponLink,
+    required this.couponAvailableAt,
     required this.language,
   });
 

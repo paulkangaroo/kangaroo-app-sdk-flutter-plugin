@@ -11,8 +11,11 @@ part 'notification_business_payload.g.dart';
 class NotificationBusinessPayload {
   final String? id;
 
+  final String? name;
+
   NotificationBusinessPayload({
     required this.id,
+    required this.name,
   });
 
   factory NotificationBusinessPayload.fromJson(Map<String, dynamic> data) => _$NotificationBusinessPayloadFromJson(data);

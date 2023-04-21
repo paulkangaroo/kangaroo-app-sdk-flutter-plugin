@@ -21,12 +21,16 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
     static func resetPin(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }
         if let myArgs = args as? [String: Any] {
-                        guard let verificationCode = myArgs["verificationCode"] as? Int32 else {return}
-                guard let pinCode = myArgs["pinCode"] as? Int32 else {return}
+                        guard let verificationCode = myArgs["verificationCode"] as? String else {return}
+                guard let pinCode = myArgs["pinCode"] as? String else {return}
                 let email = myArgs["email"] as? String? ?? nil
                 let phone = myArgs["phone"] as? String? ?? nil
                 let countryCode = myArgs["countryCode"] as? String? ?? nil

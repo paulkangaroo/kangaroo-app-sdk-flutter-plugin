@@ -4,22 +4,23 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'kangaroo_app_sdk_ios'
-  s.version          = '0.0.1'
-  s.summary          = 'A new flutter plugin project.'
+  s.version          = '0.0.01'
+  s.summary          = 'Kangaroo App SDK Flutter plugin iOS module.'
   s.description      = <<-DESC
-A new flutter plugin project.
+Kangaroo App SDK Flutter plugin iOS module.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://kangaroorewards.com/'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Kangaroo Rewards' => 'support@kangaroorewards.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
-  s.preserve_paths = 'KangarooAppSDKiOS.framework'
-  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework KangarooAppSDKiOS' }
-  s.vendored_frameworks = 'KangarooAppSDKiOS.framework'
-  s.static_framework = true
+  s.dependency 'KangarooAppSDK'
+#   s.platform = :ios, '9.0'
+#   s.preserve_paths = 'KangarooAppSDKiOS.xcframework/**/*'
+#   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework KangarooAppSDKiOS' }
+#   s.vendored_frameworks = 'KangarooAppSDKiOS.framework'
+#   s.static_framework = true
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }

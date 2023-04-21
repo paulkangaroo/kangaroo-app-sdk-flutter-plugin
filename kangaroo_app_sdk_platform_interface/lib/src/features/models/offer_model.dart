@@ -55,6 +55,8 @@ class OfferModel {
   ///Whether this offer must be claimed on a mobile app before being used in store.  
   final bool? appsOnly;
 
+  final bool? isCouponRedeemed;
+
   final int? offerFrequencyId;
 
   final List<String>? freqDetails;
@@ -106,6 +108,7 @@ class OfferModel {
     required this.minPurchase,
     required this.maxPurchase,
     required this.appsOnly,
+    required this.isCouponRedeemed,
     required this.offerFrequencyId,
     required this.freqDetails,
     required this.peakFrom,

@@ -7,8 +7,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserPinResetApi {
   static resetPin({ 
-    required final int verificationCode,
-    required final int pinCode,
+    required final String verificationCode,
+    required final String pinCode,
     final String? email,
     final String? phone,
     final String? countryCode,

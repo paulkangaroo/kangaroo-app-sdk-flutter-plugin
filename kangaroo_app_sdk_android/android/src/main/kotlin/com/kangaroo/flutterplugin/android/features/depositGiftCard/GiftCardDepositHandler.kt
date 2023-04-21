@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.depositGiftCard.GiftCardDepositApi
-import kangaroorewards.appsdk.features.depositGiftCard.serializeGiftCardDepositState
+import features.depositGiftCard.GiftCardDepositApi
+import features.depositGiftCard.serializeGiftCardDepositState
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 

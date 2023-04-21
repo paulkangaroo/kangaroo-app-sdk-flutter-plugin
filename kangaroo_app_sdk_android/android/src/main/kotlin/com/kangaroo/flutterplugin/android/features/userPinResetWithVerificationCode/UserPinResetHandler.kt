@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userPinResetWithVerificationCode.UserPinResetApi
-import kangaroorewards.appsdk.features.userPinResetWithVerificationCode.serializeUserPinResetState
+import features.userPinResetWithVerificationCode.UserPinResetApi
+import features.userPinResetWithVerificationCode.serializeUserPinResetState
 
 
 class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -28,8 +28,8 @@ class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         fun resetPin(call: MethodCall): Unit? {
             UserPinResetApi().resetPin(
-                verificationCode = call.argument<Int>("verificationCode") as Int,
-                pinCode = call.argument<Int>("pinCode") as Int,
+                verificationCode = call.argument<String>("verificationCode") as String,
+                pinCode = call.argument<String>("pinCode") as String,
                 email = call.argument<String?>("email"),
                 phone = call.argument<String?>("phone"),
                 countryCode = call.argument<String?>("countryCode")

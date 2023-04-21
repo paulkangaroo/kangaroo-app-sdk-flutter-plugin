@@ -21,6 +21,10 @@ class BusinessHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     static func getBusiness(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

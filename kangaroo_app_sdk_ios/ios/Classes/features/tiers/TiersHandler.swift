@@ -22,6 +22,10 @@ class TiersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         TiersApi().getTiers()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

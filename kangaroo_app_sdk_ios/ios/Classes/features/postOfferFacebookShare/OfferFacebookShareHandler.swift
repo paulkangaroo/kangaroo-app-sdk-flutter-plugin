@@ -21,6 +21,10 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
     static func postOfferFacebookShare(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

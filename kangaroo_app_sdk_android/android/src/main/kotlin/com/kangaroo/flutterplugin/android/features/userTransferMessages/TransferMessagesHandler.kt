@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userTransferMessages.TransferMessagesApi
-import kangaroorewards.appsdk.features.userTransferMessages.serializeTransferMessagesState
+import features.userTransferMessages.TransferMessagesApi
+import features.userTransferMessages.serializeTransferMessagesState
 
 
 class TransferMessagesHandler : EventChannel.StreamHandler, PluginChannelHandler {

@@ -11,14 +11,14 @@ group = "com.kangaroo"
 version = "1.0-SNAPSHOT"
 
 plugins {
-    id("com.kangaroorewards.codegen.plugin") version "1.5.0"
+    id("com.kangaroorewards.codegen.plugin") version "1.6.0"
     id("de.undercouch.download") version "4.1.2"
 }
 
-val kangarooApiVersion = "0.0.292"
+val kangarooApiVersion = "0.0.338"
 
 /**
- * Download api spec from github to build folder
+ * Download api spec from GitHub to build folder
  */
 val downloadZippedApiTask = "downloadZippedKangarooApiSpec".apply {
     tasks.create(this) {
@@ -37,6 +37,10 @@ val downloadZippedApiTask = "downloadZippedKangarooApiSpec".apply {
     }
 }
 
+/**
+ * Comment out this block in order to bypass re-downloading a fresh api
+ * spec on every run.
+ */
 val downloadApiTask = "downloadKangarooApiSpec".apply {
     tasks.create(this) {
         group = "kangaroo"

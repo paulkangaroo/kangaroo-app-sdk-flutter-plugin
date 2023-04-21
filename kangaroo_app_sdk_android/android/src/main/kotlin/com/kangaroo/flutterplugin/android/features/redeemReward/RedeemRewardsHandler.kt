@@ -4,11 +4,11 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.redeemReward.RedeemRewardsApi
-import kangaroorewards.appsdk.features.redeemReward.serializeRedeemRewardsState
+import features.redeemReward.RedeemRewardsApi
+import features.redeemReward.serializeRedeemRewardsState
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import kangaroorewards.appsdk.features.redeemReward.models.RedeemRequest
+import features.redeemReward.models.RedeemRequest
 
 class RedeemRewardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null

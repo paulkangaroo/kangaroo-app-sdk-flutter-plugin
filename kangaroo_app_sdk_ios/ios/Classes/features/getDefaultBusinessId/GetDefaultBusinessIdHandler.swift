@@ -21,6 +21,10 @@ class GetDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChannel
     static func getDefaultBusinessId(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

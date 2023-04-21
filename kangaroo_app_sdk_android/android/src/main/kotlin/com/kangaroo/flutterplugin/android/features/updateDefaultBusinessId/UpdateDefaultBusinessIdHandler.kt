@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.updateDefaultBusinessId.UpdateDefaultBusinessIdApi
-import kangaroorewards.appsdk.features.updateDefaultBusinessId.serializeUpdateDefaultBusinessIdState
+import features.updateDefaultBusinessId.UpdateDefaultBusinessIdApi
+import features.updateDefaultBusinessId.serializeUpdateDefaultBusinessIdState
 
 
 class UpdateDefaultBusinessIdHandler : EventChannel.StreamHandler, PluginChannelHandler {

@@ -21,6 +21,10 @@ class UserAccountVerificationHandler: NSObject, FlutterStreamHandler, PluginChan
     static func verifyAccount(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

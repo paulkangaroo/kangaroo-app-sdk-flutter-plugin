@@ -1,7 +1,7 @@
 name: kangaroo_app_sdk_macos
-description: A new flutter plugin project.
+description: Kangaroo App SDK Flutter plugin MacOS module.
 version: 0.0.1
-homepage:
+homepage: https://kangaroorewards.com/
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

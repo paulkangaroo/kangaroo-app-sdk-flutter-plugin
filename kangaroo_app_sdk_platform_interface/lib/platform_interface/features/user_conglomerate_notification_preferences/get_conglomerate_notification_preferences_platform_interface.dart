@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/user_conglomerate_notification_preferences/get_conglomerate_notification_preferences_api_interface.dart';

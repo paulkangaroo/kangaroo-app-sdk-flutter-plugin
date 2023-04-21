@@ -20,7 +20,12 @@ class UserCheckInHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     static func userCheckIn(call: FlutterMethodCall) {
         
+
+        
         UserCheckInApi().userCheckIn(methods: call.arguments as! [String : Any])
+
+        
+
 
     }
 

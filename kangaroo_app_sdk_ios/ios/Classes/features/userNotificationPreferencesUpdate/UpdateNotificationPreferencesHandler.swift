@@ -20,7 +20,12 @@ class UpdateNotificationPreferencesHandler: NSObject, FlutterStreamHandler, Plug
 
     static func updateNotificationPreferences(call: FlutterMethodCall) {
         
+
+        
         UpdateNotificationPreferencesApi().updateNotificationPreferences(methods: call.arguments as! [String : Any])
+
+        
+
 
     }
 

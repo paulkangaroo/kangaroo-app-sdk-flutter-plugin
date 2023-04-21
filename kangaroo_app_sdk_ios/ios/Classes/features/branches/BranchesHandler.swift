@@ -21,6 +21,10 @@ class BranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     static func getBusinessBranches(call: FlutterMethodCall) {
         
 
+        
+
+        
+
         guard let args = call.arguments else {
             return
         }

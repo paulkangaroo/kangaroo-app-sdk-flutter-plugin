@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.giftCards.GiftCardsApi
-import kangaroorewards.appsdk.features.giftCards.serializeGiftCardsState
+import features.giftCards.GiftCardsApi
+import features.giftCards.serializeGiftCardsState
 
 
 class GiftCardsHandler : EventChannel.StreamHandler, PluginChannelHandler {

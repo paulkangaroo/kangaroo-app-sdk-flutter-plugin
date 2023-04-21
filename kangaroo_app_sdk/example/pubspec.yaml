@@ -12,8 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  kangaroo_app_sdk:
-    path: ../
+#  kangaroo_app_sdk:
+#    path: ../
 
   json_annotation: ^4.1.0
   fluttertoast: ^8.0.8

@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.postOfferFacebookShare.OfferFacebookShareApi
-import kangaroorewards.appsdk.features.postOfferFacebookShare.serializeOfferFacebookShareState
+import features.postOfferFacebookShare.OfferFacebookShareApi
+import features.postOfferFacebookShare.serializeOfferFacebookShareState
 
 
 class OfferFacebookShareHandler : EventChannel.StreamHandler, PluginChannelHandler {

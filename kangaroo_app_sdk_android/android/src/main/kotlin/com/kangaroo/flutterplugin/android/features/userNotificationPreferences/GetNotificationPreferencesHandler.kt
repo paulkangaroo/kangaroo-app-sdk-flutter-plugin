@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userNotificationPreferences.GetNotificationPreferencesApi
-import kangaroorewards.appsdk.features.userNotificationPreferences.serializeGetNotificationPreferencesState
+import features.userNotificationPreferences.GetNotificationPreferencesApi
+import features.userNotificationPreferences.serializeGetNotificationPreferencesState
 
 
 class GetNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChannelHandler {

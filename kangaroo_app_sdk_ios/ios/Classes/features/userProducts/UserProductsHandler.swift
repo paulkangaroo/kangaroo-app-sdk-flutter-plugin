@@ -22,6 +22,10 @@ class UserProductsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
         UserProductsApi().getUserProducts()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

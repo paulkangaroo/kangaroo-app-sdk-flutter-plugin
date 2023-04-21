@@ -22,6 +22,10 @@ class UserDetailsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         UserDetailsApi().getUserDetails()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

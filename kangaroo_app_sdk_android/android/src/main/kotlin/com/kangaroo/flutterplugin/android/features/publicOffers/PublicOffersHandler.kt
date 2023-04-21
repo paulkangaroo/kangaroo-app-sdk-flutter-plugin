@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.publicOffers.PublicOffersApi
-import kangaroorewards.appsdk.features.publicOffers.serializePublicOffersState
+import features.publicOffers.PublicOffersApi
+import features.publicOffers.serializePublicOffersState
 
 
 class PublicOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {

@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userBusinessSocialMediaLinks.UserBusinessSocialMediaLinksApi
-import kangaroorewards.appsdk.features.userBusinessSocialMediaLinks.serializeUserBusinessSocialMediaLinksState
+import features.userBusinessSocialMediaLinks.UserBusinessSocialMediaLinksApi
+import features.userBusinessSocialMediaLinks.serializeUserBusinessSocialMediaLinksState
 
 
 class UserBusinessSocialMediaLinksHandler : EventChannel.StreamHandler, PluginChannelHandler {

@@ -4,8 +4,8 @@ import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
-import kangaroorewards.appsdk.features.userUnsubscribe.UserUnsubscribeApi
-import kangaroorewards.appsdk.features.userUnsubscribe.serializeUserUnsubscribeState
+import features.userUnsubscribe.UserUnsubscribeApi
+import features.userUnsubscribe.serializeUserUnsubscribeState
 
 
 class UserUnsubscribeHandler : EventChannel.StreamHandler, PluginChannelHandler {

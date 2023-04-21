@@ -12,6 +12,7 @@ import com.kangaroo.flutterplugin.android.features.business.BusinessHandler
 import com.kangaroo.flutterplugin.android.features.branches.BranchesHandler
 import com.kangaroo.flutterplugin.android.features.businessList.BusinessesHandler
 import com.kangaroo.flutterplugin.android.features.userCampaignMessages.CampaignMessagesHandler
+import com.kangaroo.flutterplugin.android.features.userConglomerateNotificationPreferences.GetConglomerateNotificationPreferencesHandler
 import com.kangaroo.flutterplugin.android.features.countries.CountriesHandler
 import com.kangaroo.flutterplugin.android.features.getDefaultBusinessId.GetDefaultBusinessIdHandler
 import com.kangaroo.flutterplugin.android.features.frequentBuyerPrograms.FrequentBuyerProgramsHandler
@@ -47,6 +48,7 @@ import com.kangaroo.flutterplugin.android.features.userRewards.UserRewardsHandle
 import com.kangaroo.flutterplugin.android.features.userTransactionHistory.UserTransactionHistoryHandler
 import com.kangaroo.flutterplugin.android.features.userUsedCoupons.UserUsedCouponsHandler
 import com.kangaroo.flutterplugin.android.features.makePayPalPayment.PayPalPaymentHandler
+import com.kangaroo.flutterplugin.android.features.performSocialMediaAction.SocialMediaActionPerformHandler
 import com.kangaroo.flutterplugin.android.features.postOfferFacebookShare.OfferFacebookShareHandler
 import com.kangaroo.flutterplugin.android.features.makeGiftCardPurchase.GiftCardPurchaseHandler
 import com.kangaroo.flutterplugin.android.features.userTransferRecall.TransferRecallHandler
@@ -85,6 +87,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     BusinessesHandler(),
 
     CampaignMessagesHandler(),
+
+    GetConglomerateNotificationPreferencesHandler(),
 
     CountriesHandler(),
 
@@ -155,6 +159,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     UserUsedCouponsHandler(),
 
     PayPalPaymentHandler(),
+
+    SocialMediaActionPerformHandler(),
 
     OfferFacebookShareHandler(),
 

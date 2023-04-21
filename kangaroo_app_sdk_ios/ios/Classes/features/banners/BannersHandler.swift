@@ -22,6 +22,10 @@ class BannersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         BannersApi().getBanners()
 
         
+
+        
+
+        
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
