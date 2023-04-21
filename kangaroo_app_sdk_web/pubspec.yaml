@@ -17,7 +17,7 @@ dependencies:
     git:
       url: https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git
       path: kangaroo_app_sdk_platform_interface
-      ref: members_app_dev
+      ref: multi-module
 
 dev_dependencies:
   flutter_test:

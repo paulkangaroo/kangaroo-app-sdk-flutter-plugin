@@ -15,25 +15,25 @@ dependencies:
     git:
       url: https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git
       path: kangaroo_app_sdk_platform_interface
-      ref: members_app_dev
+      ref: multi-module
 #    path: ../kangaroo_app_sdk_platform_interface
   kangaroo_app_sdk_android:
     git:
       url: https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git
       path: kangaroo_app_sdk_android
-      ref: members_app_dev
+      ref: multi-module
 #    path: ../kangaroo_app_sdk_android
   kangaroo_app_sdk_ios:
     git:
       url: https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git
       path: kangaroo_app_sdk_ios
-      ref: members_app_dev
+      ref: multi-module
 #    path: ../kangaroo_app_sdk_ios
   kangaroo_app_sdk_web:
     git:
       url: https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git
       path: kangaroo_app_sdk_web
-      ref: members_app_dev
+      ref: multi-module
 #    path: ../kangaroo_app_sdk_web
 
 dev_dependencies:
