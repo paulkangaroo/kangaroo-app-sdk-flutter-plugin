@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/get_spin_to_win_prizes/get_spin_to_win_prizes_api_interface.dart';
