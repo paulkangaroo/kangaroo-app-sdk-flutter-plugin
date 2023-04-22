@@ -15,7 +15,7 @@ dependencies:
     sdk: flutter
   kangaroo_app_sdk_platform_interface:
     git:
-      url: https://paulkangaroorewards@bitbucket.org/kangaroorewards/app-sdk-flutter-plugin.git
+      url: https://github.com/paulkangaroo/kangaroo-app-sdk-flutter-plugin.git
       path: kangaroo_app_sdk_platform_interface
       ref: multi-module
 
