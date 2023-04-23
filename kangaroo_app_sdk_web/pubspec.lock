@@ -213,7 +213,7 @@ packages:
     description:
       path: kangaroo_app_sdk_platform_interface
       ref: multi-module
-      resolved-ref: "1fbf1043da8de4454f7289f6e8082e887069edde"
+      resolved-ref: "5ca277731328395f4f7240864391344896dcb422"
       url: "https://github.com/paulkangaroo/kangaroo-app-sdk-flutter-plugin.git"
     source: git
     version: "0.0.1"
