@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -57,7 +57,7 @@ class TransferMessagesHandler extends TransferMessagesApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.userTransferMessages.TransferMessagesApi')
+@JS('js.features.userTransferMessages.TransferMessagesApi')
 class TransferMessagesApi {
   external TransferMessagesApi();
 

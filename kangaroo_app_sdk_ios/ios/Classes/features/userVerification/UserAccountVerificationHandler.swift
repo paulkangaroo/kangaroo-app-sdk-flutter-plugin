@@ -1,6 +1,6 @@
 import Foundation
 import Flutter
-import KangarooAppSDKiOS
+import KangarooAppSdkCustomer
 
 class UserAccountVerificationHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?

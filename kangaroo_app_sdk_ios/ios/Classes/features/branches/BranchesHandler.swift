@@ -1,6 +1,6 @@
 import Foundation
 import Flutter
-import KangarooAppSDKiOS
+import KangarooAppSdkCustomer
 
 class BranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?

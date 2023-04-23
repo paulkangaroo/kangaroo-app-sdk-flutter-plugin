@@ -1,6 +1,0 @@
-framework module KangarooAppSDKiOS {
-    umbrella header "KangarooAppSDKiOS.h"
-
-    export *
-    module * { export * }
-}

@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -57,7 +57,7 @@ class GetSpinToWinPrizesHandler extends GetSpinToWinPrizesApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.getSpinToWinPrizes.GetSpinToWinPrizesApi')
+@JS('js.features.getSpinToWinPrizes.GetSpinToWinPrizesApi')
 class GetSpinToWinPrizesApi {
   external GetSpinToWinPrizesApi();
 

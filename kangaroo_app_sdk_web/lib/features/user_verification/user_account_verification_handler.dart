@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -65,7 +65,7 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.userVerification.UserAccountVerificationApi')
+@JS('js.features.userVerification.UserAccountVerificationApi')
 class UserAccountVerificationApi {
   external UserAccountVerificationApi();
 

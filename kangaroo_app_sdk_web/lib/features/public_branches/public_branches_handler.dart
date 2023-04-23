@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -53,7 +53,7 @@ class PublicBranchesHandler extends PublicBranchesApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.publicBranches.PublicBranchesApi')
+@JS('js.features.publicBranches.PublicBranchesApi')
 class PublicBranchesApi {
   external PublicBranchesApi();
 

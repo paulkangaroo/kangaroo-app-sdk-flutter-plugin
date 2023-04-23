@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -53,7 +53,7 @@ class UserTransactionHistoryHandler extends UserTransactionHistoryApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.userTransactionHistory.UserTransactionHistoryApi')
+@JS('js.features.userTransactionHistory.UserTransactionHistoryApi')
 class UserTransactionHistoryApi {
   external UserTransactionHistoryApi();
 

@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -57,7 +57,7 @@ class UserBusinessSocialMediaLinksHandler extends UserBusinessSocialMediaLinksAp
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.userBusinessSocialMediaLinks.UserBusinessSocialMediaLinksApi')
+@JS('js.features.userBusinessSocialMediaLinks.UserBusinessSocialMediaLinksApi')
 class UserBusinessSocialMediaLinksApi {
   external UserBusinessSocialMediaLinksApi();
 

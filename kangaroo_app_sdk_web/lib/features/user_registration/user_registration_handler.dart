@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -63,7 +63,7 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.userRegistration.UserRegistrationApi')
+@JS('js.features.userRegistration.UserRegistrationApi')
 class UserRegistrationApi {
   external UserRegistrationApi();
 

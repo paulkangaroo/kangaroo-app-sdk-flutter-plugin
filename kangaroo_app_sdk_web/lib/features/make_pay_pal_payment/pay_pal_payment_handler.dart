@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -65,7 +65,7 @@ class PayPalPaymentHandler extends PayPalPaymentApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.makePayPalPayment.PayPalPaymentApi')
+@JS('js.features.makePayPalPayment.PayPalPaymentApi')
 class PayPalPaymentApi {
   external PayPalPaymentApi();
 

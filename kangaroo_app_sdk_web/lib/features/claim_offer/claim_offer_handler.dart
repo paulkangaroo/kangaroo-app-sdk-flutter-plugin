@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -59,7 +59,7 @@ class ClaimOfferHandler extends ClaimOfferApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.claimOffer.ClaimOfferApi')
+@JS('js.features.claimOffer.ClaimOfferApi')
 class ClaimOfferApi {
   external ClaimOfferApi();
 

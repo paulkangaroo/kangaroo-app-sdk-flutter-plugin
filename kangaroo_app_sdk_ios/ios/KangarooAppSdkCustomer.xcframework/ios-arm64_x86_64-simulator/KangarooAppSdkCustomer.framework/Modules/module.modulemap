@@ -1,0 +1,6 @@
+framework module KangarooAppSdkCustomer {
+    umbrella header "KangarooAppSdkCustomer.h"
+
+    export *
+    module * { export * }
+}

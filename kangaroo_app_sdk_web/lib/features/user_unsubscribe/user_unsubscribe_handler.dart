@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -59,7 +59,7 @@ class UserUnsubscribeHandler extends UserUnsubscribeApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.userUnsubscribe.UserUnsubscribeApi')
+@JS('js.features.userUnsubscribe.UserUnsubscribeApi')
 class UserUnsubscribeApi {
   external UserUnsubscribeApi();
 

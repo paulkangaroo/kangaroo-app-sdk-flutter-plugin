@@ -1,6 +1,6 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
+@JS('KangarooAppSDK-kangaroo-app-sdk-customer')
 library kangaroo_app_sdk.js;
 
 import 'dart:async';
@@ -53,7 +53,7 @@ class PublicAlaCarteProductsHandler extends PublicAlaCarteProductsApiInterface
   }
 }
 
-@JS('kangaroorewards.js.appsdk.features.publicALaCarteProducts.PublicAlaCarteProductsApi')
+@JS('js.features.publicALaCarteProducts.PublicAlaCarteProductsApi')
 class PublicAlaCarteProductsApi {
   external PublicAlaCarteProductsApi();
 
