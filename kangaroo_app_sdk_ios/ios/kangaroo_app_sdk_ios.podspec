@@ -15,12 +15,14 @@ Kangaroo App SDK Flutter plugin iOS module.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-# s.dependency 'KangarooAppSdkCustomer'
-  
-  # Kangaroo Customer SDK
-  s.preserve_paths = 'KangarooAppSdkCustomer.xcframework/**/*'
-  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework KangarooAppSdkCustomer' }
-  s.vendored_frameworks = 'KangarooAppSdkCustomer.xcframework'
+
+  # Public Kangaroo custoemr SDK
+  s.dependency 'KangarooAppSdkCustomer', '~> 1.0.025'
+
+  # Local Kangaroo Customer SDK
+#   s.preserve_paths = 'KangarooAppSdkCustomer.xcframework/**/*'
+#   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework KangarooAppSdkCustomer' }
+#   s.vendored_frameworks = 'KangarooAppSdkCustomer.xcframework'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
