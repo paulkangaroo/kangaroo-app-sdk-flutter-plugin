@@ -16,7 +16,7 @@ Kangaroo App SDK Flutter plugin iOS module.
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
 
-  # Public Kangaroo custoemr SDK
+  # Public Kangaroo customer SDK
   s.dependency 'KangarooAppSdkCustomer', '~> 1.0.025'
 
   # Local Kangaroo Customer SDK
