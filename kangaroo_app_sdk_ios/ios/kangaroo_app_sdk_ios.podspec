@@ -19,7 +19,7 @@ Kangaroo App SDK Flutter plugin iOS module.
   # Public Kangaroo customer SDK
   s.dependency 'KangarooAppSdkCustomer', '~> 1.0.025'
 
-  # Local Kangaroo Customer SDK
+  # Local Kangaroo customer SDK
 #   s.preserve_paths = 'KangarooAppSdkCustomer.xcframework/**/*'
 #   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework KangarooAppSdkCustomer' }
 #   s.vendored_frameworks = 'KangarooAppSdkCustomer.xcframework'
