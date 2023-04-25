@@ -1,7 +1,8 @@
 // ignore_for_file: implementation_imports
 
-@JS('KangarooAppSDK')
-library kangaroo_app_sdk.js;
+// @JS('KangarooAppSDK-kangaroo-app-sdk-customer')
+@JS('KangarooAppCustomerSDK')
+library kangaroo_app_customer_sdk.js;
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:js/js.dart';
