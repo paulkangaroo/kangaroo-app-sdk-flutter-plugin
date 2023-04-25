@@ -14,11 +14,11 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   kangaroo_app_sdk_platform_interface:
-#    git:
-#      url: https://github.com/paulkangaroo/kangaroo-app-sdk-flutter-plugin.git
-#      path: kangaroo_app_sdk_platform_interface
-#      ref: multi-module
-    path: ../kangaroo_app_sdk_platform_interface
+    git:
+      url: https://github.com/paulkangaroo/kangaroo-app-sdk-flutter-plugin.git
+      path: kangaroo_app_sdk_platform_interface
+      ref: multi-module
+#    path: ../kangaroo_app_sdk_platform_interface
 
 dev_dependencies:
   flutter_test:
