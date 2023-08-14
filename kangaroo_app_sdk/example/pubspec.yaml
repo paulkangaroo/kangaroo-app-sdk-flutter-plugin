@@ -15,6 +15,8 @@ dependencies:
   json_annotation: ^4.1.0
   fluttertoast: ^8.0.8
   cupertino_icons: ^1.0.2
+  kangaroo_app_sdk:
+    path: ../
 
 dev_dependencies:
   flutter_test:

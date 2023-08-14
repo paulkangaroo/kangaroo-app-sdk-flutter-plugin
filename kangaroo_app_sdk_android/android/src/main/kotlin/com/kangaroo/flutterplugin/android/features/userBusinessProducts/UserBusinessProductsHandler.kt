@@ -2,10 +2,10 @@ package com.kangaroo.flutterplugin.android.features.userBusinessProducts
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
-import io.flutter.plugin.common.EventChannel
-import io.flutter.plugin.common.MethodCall
 import features.userBusinessProducts.UserBusinessProductsApi
 import features.userBusinessProducts.serializeUserBusinessProductsState
+import io.flutter.plugin.common.EventChannel
+import io.flutter.plugin.common.MethodCall
 
 
 class UserBusinessProductsHandler : EventChannel.StreamHandler, PluginChannelHandler {

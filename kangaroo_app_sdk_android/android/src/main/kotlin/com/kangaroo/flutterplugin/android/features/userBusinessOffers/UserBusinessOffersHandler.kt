@@ -2,10 +2,10 @@ package com.kangaroo.flutterplugin.android.features.userBusinessOffers
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
-import io.flutter.plugin.common.EventChannel
-import io.flutter.plugin.common.MethodCall
 import features.userBusinessOffers.UserBusinessOffersApi
 import features.userBusinessOffers.serializeUserBusinessOffersState
+import io.flutter.plugin.common.EventChannel
+import io.flutter.plugin.common.MethodCall
 
 
 class UserBusinessOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -27,9 +27,9 @@ class UserBusinessOffersHandler : EventChannel.StreamHandler, PluginChannelHandl
 
     companion object {
         fun getUserBusinessOffers(call: MethodCall): Unit? {
-            UserBusinessOffersApi().getUserBusinessOffers(
-                businessId = call.argument<String>("businessId") as String
-            )
+//            UserBusinessOffersApi().getUserBusinessOffers(
+//                businessId = call.argument<String>("businessId") as String
+//            )
             return null
         }
     }

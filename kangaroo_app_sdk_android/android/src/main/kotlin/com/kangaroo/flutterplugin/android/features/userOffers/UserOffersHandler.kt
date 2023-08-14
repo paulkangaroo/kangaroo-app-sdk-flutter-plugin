@@ -27,7 +27,10 @@ class UserOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         fun getUserOffers(call: MethodCall): Unit? {
-            UserOffersApi().getUserOffers()
+            UserOffersApi().getUserOffers(
+                page = 1,
+                pageSize = 15
+            )
             return null
         }
     }

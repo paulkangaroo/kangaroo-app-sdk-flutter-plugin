@@ -2,20 +2,25 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:kangaroo_app_sdk/kangaroo_app_sdk.dart';
 import 'package:kangaroo_app_sdk/user_authentication/user_authentication_api.dart'
     as UserAuthenticationApi;
-import 'package:kangaroo_app_sdk/user_authentication/user_authentication_api.dart';
+import 'package:kangaroo_app_sdk/user_business_offers/user_business_offers_api.dart';
 import 'package:kangaroo_app_sdk/user_pin_update/user_pin_update_api.dart'
     as UserPinUpdateApi;
 import 'package:kangaroo_app_sdk/user_profile/user_profile_api.dart'
     as UserProfileApi;
-import 'package:kangaroo_app_sdk/user_rewards/user_rewards_api.dart'
-    as UserRewardsApi;
 import 'package:kangaroo_app_sdk/user_transaction_history/user_transaction_history_api.dart'
     as UserTransactionHistoryApi;
 
 void main() {
   runApp(MyApp());
+  KangarooAppSdk.initializeSdk(
+    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImJ1c2luZXNzSWQiOiIxMjUiLCJicmFuY2hJZCI6IjE2NCIsImNvYWxpdGlvbiI6IjAiLCJjb25nbG9tZXJhdGUiOiIwIn19.d67S2oT7E-HHJ8v-GhuLSkY_SEPWJVnf3n5Pl_U16KE',
+    '10125648',
+    'E1ahTZCex75kNOM4VDOMflwmXaCKaR6KzEJ6akYW',
+    'development',
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -43,6 +48,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   authenticateUser() {
+    debugPrint('authenticating...');
     UserAuthenticationApi.UserAuthenticationApi.authenticateUser(
       "support@kangaroorewards.com",
       "1111",
@@ -53,8 +59,24 @@ class _MyAppState extends State<MyApp> {
     UserProfileApi.UserProfileApi.getUserProfile();
   }
 
-  getRewards() {
-    UserRewardsApi.UserRewardsApi.getUserRewards();
+  getOffers() async {
+    final offerResult = await UserBusinessOffersApi.getUserBusinessOffers(
+      businessId: "11eaaa7a0e421b6ba65946e6f4ffefae",
+    );
+
+    offerResult?.whenOrNull(
+      success: (success) {
+        debugPrint('offer result success');
+        final offer = success?.included?.offers?.first;
+        debugPrint('offer result: ${offer?.title}');
+      },
+      unauthorized: (_, __) {
+        debugPrint('offer result unauthorized');
+      },
+      error: (errorCode, error) {
+        debugPrint('offer result error: $error');
+      },
+    );
   }
 
   getTransactions() {
@@ -72,7 +94,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Kangaroo SDK Sandbox'),
         ),
         body: SingleChildScrollView(
           physics: BouncingScrollPhysics(),
@@ -101,18 +123,18 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               MaterialButton(
-                onPressed: getRewards,
+                onPressed: getOffers,
                 color: Colors.yellow,
                 height: 100,
                 child: Center(
                   child: Text(
-                    'get user rewards',
+                    'get user offers',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
               MaterialButton(
-                onPressed: getRewards,
+                onPressed: getOffers,
                 color: Colors.red.shade300,
                 height: 100,
                 child: Center(
@@ -132,81 +154,6 @@ class _MyAppState extends State<MyApp> {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-              ),
-              StreamBuilder<Result<UserRewardsApi.UserRewardsModel>>(
-                stream: UserRewardsApi.UserRewardsApi.userRewardsStream,
-                initialData: Result.idle(),
-                builder: (context, _userTransactions) {
-                  return _userTransactions.data?.when(
-                        idle: () => Text('transaction history is idle'),
-                        loading: () =>
-                            CircularProgressIndicator(color: Colors.brown),
-                        success: (userTransactions) {
-                          print("Flutter SDK rendering first reward");
-                          return Image.network(
-                              "${userTransactions?.data?.catalogItems?.randomItem().images?[0].large}");
-                        },
-                        unauthorized: (int code, String message) =>
-                            Text('error: $message'),
-                        error: (code, message) => Text('error: $message'),
-                      ) ??
-                      SizedBox();
-                },
-              ),
-              StreamBuilder<Result<UserPinUpdateApi.UserProfileModel>>(
-                stream: UserPinUpdateApi.UserPinUpdateApi.userPinUpdateStream,
-                initialData: Result.idle(),
-                builder: (context, _userPinUpdate) {
-                  return _userPinUpdate.data?.when(
-                        idle: () => Text('pin updates are idle'),
-                        loading: () => CircularProgressIndicator(
-                            color: Colors.yellow.shade900),
-                        success: (userTransactions) => Text(
-                            "pin updated at: ${userTransactions?.data?.updatedAt}"),
-                        unauthorized: (int code, String message) =>
-                            Text('error: $message'),
-                        error: (code, message) => Text('error: $message'),
-                      ) ??
-                      SizedBox();
-                },
-              ),
-              StreamBuilder<Result<UserProfileApi.UserProfileModel>>(
-                stream: UserProfileApi.UserProfileApi.userProfileStream,
-                initialData: Result.idle(),
-                builder: (context, _userProfile) {
-                  return _userProfile.data?.when(
-                        idle: () => Text('profile is idle'),
-                        loading: () =>
-                            CircularProgressIndicator(color: Colors.purple),
-                        success: (userProfile) =>
-                            Image.network("${userProfile?.data?.profilePhoto}"),
-                        unauthorized: (int code, String message) =>
-                            Text('profile has unauthorized error'),
-                        error: (code, message) =>
-                            Text('profile has unknown error'),
-                      ) ??
-                      SizedBox();
-                },
-              ),
-              StreamBuilder<Result<UserRewardsApi.UserRewardsModel>>(
-                stream: UserRewardsApi.UserRewardsApi.userRewardsStream,
-                initialData: Result.idle(),
-                builder: (context, _userRewards) {
-                  return _userRewards.data?.when(
-                        idle: () => Text('rewards are idle'),
-                        loading: () =>
-                            CircularProgressIndicator(color: Colors.brown),
-                        success: (userRewards) {
-                          print("Flutter SDK rendering second reward");
-                          return Image.network(
-                              "${userRewards?.data?.catalogItems?.randomItem().images?[0].large}");
-                        },
-                        unauthorized: (int code, String message) =>
-                            Text('error: $message'),
-                        error: (code, message) => Text('error: $message'),
-                      ) ??
-                      Text('error: null data');
-                },
               ),
             ],
           ),
