@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/deposit_gift_card/gift_card_deposit_platform_interface.dart';
 
 class GiftCardDepositApi {
-  static depositGiftCard({ 
+  static Future<Result<TransferActionResultModel>?> depositGiftCard({ 
     required final String depositId,
   }) {
-    GiftCardDepositApiInterface.instance.depositGiftCard( 
+    return GiftCardDepositApiInterface.instance.depositGiftCard( 
       depositId: depositId,
     );
   }

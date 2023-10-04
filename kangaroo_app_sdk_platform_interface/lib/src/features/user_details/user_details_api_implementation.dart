@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_details/us
 
 class UserDetailsApiFederated extends UserDetailsApiInterface {
   @override
-  getUserDetails() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_details');
+Future<Result<UserDetailsModel>?> getUserDetails() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_details');
+
+    return UserDetailsApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _userDetailsEvent =

@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_campaign_m
 
 class CampaignMessagesApiFederated extends CampaignMessagesApiInterface {
   @override
-  getCampaignMessages({ 
+Future<Result<CampaignMessagesModel>?> getCampaignMessages({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_campaign_messages',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_campaign_messages',
     {
       'businessId' : businessId
     }
+    );
+
+    return CampaignMessagesApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

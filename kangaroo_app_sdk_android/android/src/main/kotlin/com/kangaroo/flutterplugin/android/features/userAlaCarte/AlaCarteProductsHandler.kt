@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.userAlaCarte
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.userAlaCarte.AlaCarteProductsApi
+import features.userAlaCarte.models.AlaCarteProductsModel
+
 import features.userAlaCarte.serializeAlaCarteProductsState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class AlaCarteProductsHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class AlaCarteProductsHandler : EventChannel.StreamHandler, PluginChannelHandler
     override val eventChannel: String
         get() = "customer_sdk/events/get_ala_carte_products"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getAlaCarteProducts(call)
     }
 
@@ -26,9 +33,15 @@ class AlaCarteProductsHandler : EventChannel.StreamHandler, PluginChannelHandler
     }
 
     companion object {
-        fun getAlaCarteProducts(call: MethodCall): Unit? {
-            AlaCarteProductsApi().getAlaCarteProducts()
-            return null
+        suspend fun getAlaCarteProducts(call: MethodCall): String? {
+            val result = AlaCarteProductsApi().getAlaCarteProducts().toJsonResult<AlaCarteProductsModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

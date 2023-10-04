@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_products/user_products_platform_interface.dart';
 
 class UserProductsApi {
-  static getUserProducts() {
-    UserProductsApiInterface.instance.getUserProducts();
+  static Future<Result<UserProductsModel>?> getUserProducts() {
+    return UserProductsApiInterface.instance.getUserProducts();
   }
 
   static Stream<Result<UserProductsModel>> get userProductsStream {

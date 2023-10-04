@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class CampaignMessagesHandler extends CampaignMessagesApiInterface
   getCampaignMessages({ 
         required final String businessId
     }) {
-    CampaignMessagesApi().getCampaignMessages(
-      businessId
+    final Future<String?> request = promiseToFuture<String?>(
+        CampaignMessagesApi().getCampaignMessages(
+        businessId
+    ),);
+
+    return CampaignMessagesApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class CampaignMessagesHandler extends CampaignMessagesApiInterface
 class CampaignMessagesApi {
   external CampaignMessagesApi();
 
-  external void getCampaignMessages( 
+  external dynamic getCampaignMessages( 
         String businessId
     );
 

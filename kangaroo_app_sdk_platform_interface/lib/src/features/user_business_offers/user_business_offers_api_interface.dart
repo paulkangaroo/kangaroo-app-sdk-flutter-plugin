@@ -2,12 +2,15 @@ library kangaroo_app_sdk_platform_interface;
 
 import 'dart:convert';
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_business_offers_model.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_offers/user_business_offers_api_implementation.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/base/result.dart';
+import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_offers/user_business_offers_api_implementation.dart';
 
-import '../../../platform_interface/base_platform_interface.dart';
 
+
+
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_business_offers_model.dart';
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_business_offers_model.dart';
 
 abstract class UserBusinessOffersApiInterface extends PlatformInterface {
@@ -15,8 +18,7 @@ abstract class UserBusinessOffersApiInterface extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static UserBusinessOffersApiInterface _instance =
-      UserBusinessOffersApiFederated();
+  static UserBusinessOffersApiInterface _instance = UserBusinessOffersApiFederated();
 
   static UserBusinessOffersApiInterface get instance => _instance;
 
@@ -25,15 +27,14 @@ abstract class UserBusinessOffersApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<Result<UserBusinessOffersModel>?> getUserBusinessOffers({
-    required final String businessId,
-  }) {
+Future<Result<UserBusinessOffersModel>?> getUserBusinessOffers({ 
+        required final String businessId,
+    }) {
     throw UnimplementedError('getUserBusinessOffers has not been implemented.');
   }
 
   Stream<Result<UserBusinessOffersModel>> get userBusinessOffersStream {
-    throw UnimplementedError(
-        'getUserBusinessOffersStream has not been implemented.');
+    throw UnimplementedError('getUserBusinessOffersStream has not been implemented.');
   }
 
   static Future<Result<UserBusinessOffersModel>?> deSerializedPlatformResponse(

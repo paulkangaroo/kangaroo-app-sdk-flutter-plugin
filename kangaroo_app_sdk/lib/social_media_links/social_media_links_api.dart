@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/social_media_links/social_media_links_platform_interface.dart';
 
 class SocialMediaLinksApi {
-  static getSocialMediaLinks() {
-    SocialMediaLinksApiInterface.instance.getSocialMediaLinks();
+  static Future<Result<SocialMediaLinksModel>?> getSocialMediaLinks() {
+    return SocialMediaLinksApiInterface.instance.getSocialMediaLinks();
   }
 
   static Stream<Result<SocialMediaLinksModel>> get socialMediaLinksStream {

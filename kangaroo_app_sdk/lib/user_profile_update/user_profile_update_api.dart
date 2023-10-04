@@ -6,7 +6,7 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_profile_update/user_profile_update_platform_interface.dart';
 
 class UserProfileUpdateApi {
-  static updateUserProfile({ 
+  static Future<Result<UserProfileModel>?> updateUserProfile({ 
     final String? firstName,
     final String? lastName,
     final String? birthDate,
@@ -14,7 +14,7 @@ class UserProfileUpdateApi {
     final String? gender,
     final String? profilePhoto,
   }) {
-    UserProfileUpdateApiInterface.instance.updateUserProfile( 
+    return UserProfileUpdateApiInterface.instance.updateUserProfile( 
       firstName: firstName,
       lastName: lastName,
       birthDate: birthDate,

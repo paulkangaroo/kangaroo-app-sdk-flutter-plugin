@@ -10,14 +10,14 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_verificati
 
 class UserAccountVerificationApiFederated extends UserAccountVerificationApiInterface {
   @override
-  verifyAccount({ 
+Future<Result<UserProfileModel>?> verifyAccount({ 
         required final String intent,
         required final String token,
         final String? email,
         final String? phone,
         final String? countryCode
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/verify_account',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/verify_account',
     {
       'intent' : intent,
       'token' : token,
@@ -25,6 +25,10 @@ class UserAccountVerificationApiFederated extends UserAccountVerificationApiInte
       'phone' : phone,
       'countryCode' : countryCode
     }
+    );
+
+    return UserAccountVerificationApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

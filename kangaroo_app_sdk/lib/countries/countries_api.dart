@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/countries/countries_platform_interface.dart';
 
 class CountriesApi {
-  static getCountries() {
-    CountriesApiInterface.instance.getCountries();
+  static Future<Result<Countries>?> getCountries() {
+    return CountriesApiInterface.instance.getCountries();
   }
 
   static Stream<Result<Countries>> get countriesStream {

@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer
 
 class BalanceTransferApiFederated extends BalanceTransferApiInterface {
   @override
-  transfer({ 
+Future<Result<TransferResponseModel>?> transfer({ 
         required final TransferRequestModel transferRequest
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/transfer',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/transfer',
     {
       'transferRequest' : jsonEncode(transferRequest)
     }
+    );
+
+    return BalanceTransferApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

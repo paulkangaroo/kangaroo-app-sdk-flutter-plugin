@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/branches/branch
 
 class BranchesApiFederated extends BranchesApiInterface {
   @override
-  getBusinessBranches({ 
+Future<Result<Business>?> getBusinessBranches({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_business_branches',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_business_branches',
     {
       'businessId' : businessId
     }
+    );
+
+    return BranchesApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

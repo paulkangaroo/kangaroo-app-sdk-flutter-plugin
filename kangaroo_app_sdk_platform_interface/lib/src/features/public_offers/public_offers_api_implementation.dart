@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_offers/p
 
 class PublicOffersApiFederated extends PublicOffersApiInterface {
   @override
-  getPublicOffers() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_offers');
+Future<Result<UserOffersModel>?> getPublicOffers() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_offers');
+
+    return PublicOffersApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _publicOffersEvent =

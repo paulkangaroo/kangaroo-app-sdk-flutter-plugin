@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/gift_cards/gift
 
 class GiftCardsApiFederated extends GiftCardsApiInterface {
   @override
-  getGiftCards() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_gift_cards');
+Future<Result<GiftCardsModel>?> getGiftCards() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_gift_cards');
+
+    return GiftCardsApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _giftCardsEvent =

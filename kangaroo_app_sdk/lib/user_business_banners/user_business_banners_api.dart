@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_banners/user_business_banners_platform_interface.dart';
 
 class UserBusinessBannersApi {
-  static getUserBusinessBanners({ 
+  static Future<Result<UserBusinessBannersModel>?> getUserBusinessBanners({ 
     required final String businessId,
   }) {
-    UserBusinessBannersApiInterface.instance.getUserBusinessBanners( 
+    return UserBusinessBannersApiInterface.instance.getUserBusinessBanners( 
       businessId: businessId,
     );
   }

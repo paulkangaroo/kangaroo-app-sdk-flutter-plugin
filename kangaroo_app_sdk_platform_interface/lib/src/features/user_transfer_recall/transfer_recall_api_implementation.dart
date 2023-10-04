@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_transfer_r
 
 class TransferRecallApiFederated extends TransferRecallApiInterface {
   @override
-  recallTransfer({ 
+Future<Result<TransferActionResultModel>?> recallTransfer({ 
         required final String recallId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/recall_transfer',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/recall_transfer',
     {
       'recallId' : recallId
     }
+    );
+
+    return TransferRecallApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_s
 
 class UserBusinessSocialMediaLinksApiFederated extends UserBusinessSocialMediaLinksApiInterface {
   @override
-  getUserBusinessSocialMediaLinks({ 
+Future<Result<SocialMediaLinksModel>?> getUserBusinessSocialMediaLinks({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_social_media_links',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_social_media_links',
     {
       'businessId' : businessId
     }
+    );
+
+    return UserBusinessSocialMediaLinksApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

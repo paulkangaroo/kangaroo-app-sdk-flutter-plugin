@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class PublicAlaCarteProductsHandler extends PublicAlaCarteProductsApiInterface
 
   @override
   getPublicAlaCarteProducts() {
-    PublicAlaCarteProductsApi().getPublicAlaCarteProducts();
+    final Future<String?> request = promiseToFuture<String?>(
+        PublicAlaCarteProductsApi().getPublicAlaCarteProducts());
+
+    return PublicAlaCarteProductsApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class PublicAlaCarteProductsHandler extends PublicAlaCarteProductsApiInterface
 class PublicAlaCarteProductsApi {
   external PublicAlaCarteProductsApi();
 
-  external void getPublicAlaCarteProducts();
+  external dynamic getPublicAlaCarteProducts();
 
   external void observePublicAlaCarteProductsState(
     Function(String) onData,

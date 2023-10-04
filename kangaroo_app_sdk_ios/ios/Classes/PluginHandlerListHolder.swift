@@ -3,9 +3,13 @@ import Foundation
 class PluginHandlerListHolder {
     static var pluginHandlerList: [PluginChannelHandler] =
         [
+    ArchiveInboxItemHandler(),
+
     ClaimOfferHandler(),
 
     UserRegistrationHandler(),
+
+    UserRegistrationWithCrmHandler(),
 
     UserDeleteHandler(),
 
@@ -27,7 +31,11 @@ class PluginHandlerListHolder {
 
     CountriesHandler(),
 
+    GetCrmFieldsHandler(),
+
     GetDefaultBusinessIdHandler(),
+
+    DrawsHandler(),
 
     FrequentBuyerProgramsHandler(),
 
@@ -43,9 +51,13 @@ class PluginHandlerListHolder {
 
     PublicBusinessSettingsHandler(),
 
+    PublicOfferHandler(),
+
     PublicOffersHandler(),
 
     PublicProductsHandler(),
+
+    PublicRewardHandler(),
 
     PublicRewardsHandler(),
 
@@ -76,6 +88,8 @@ class PluginHandlerListHolder {
     UserBusinessRewardsHandler(),
 
     UserBusinessSocialMediaLinksHandler(),
+
+    UserBusinessTiersHandler(),
 
     UserCouponsHandler(),
 

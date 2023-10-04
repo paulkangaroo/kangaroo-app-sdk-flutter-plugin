@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class PublicOffersHandler extends PublicOffersApiInterface
 
   @override
   getPublicOffers() {
-    PublicOffersApi().getPublicOffers();
+    final Future<String?> request = promiseToFuture<String?>(
+        PublicOffersApi().getPublicOffers());
+
+    return PublicOffersApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class PublicOffersHandler extends PublicOffersApiInterface
 class PublicOffersApi {
   external PublicOffersApi();
 
-  external void getPublicOffers();
+  external dynamic getPublicOffers();
 
   external void observePublicOffersState(
     Function(String) onData,

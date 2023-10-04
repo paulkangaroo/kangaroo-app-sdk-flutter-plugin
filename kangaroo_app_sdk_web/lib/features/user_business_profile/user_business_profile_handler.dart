@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class UserBusinessProfileHandler extends UserBusinessProfileApiInterface
   getUserBusinessProfile({ 
         required final String businessId
     }) {
-    UserBusinessProfileApi().getUserBusinessProfile(
-      businessId
+    final Future<String?> request = promiseToFuture<String?>(
+        UserBusinessProfileApi().getUserBusinessProfile(
+        businessId
+    ),);
+
+    return UserBusinessProfileApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class UserBusinessProfileHandler extends UserBusinessProfileApiInterface
 class UserBusinessProfileApi {
   external UserBusinessProfileApi();
 
-  external void getUserBusinessProfile( 
+  external dynamic getUserBusinessProfile( 
         String businessId
     );
 

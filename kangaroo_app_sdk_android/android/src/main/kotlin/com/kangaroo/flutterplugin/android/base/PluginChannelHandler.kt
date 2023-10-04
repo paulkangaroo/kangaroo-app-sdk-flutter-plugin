@@ -6,6 +6,6 @@ import io.flutter.plugin.common.MethodCall
 interface PluginChannelHandler {
     val methodChannel: String
     val eventChannel: String
-    fun onMethodCall(call: MethodCall): Unit?
+    suspend fun onMethodCall(call: MethodCall): Any?
     fun getStreamHandler(): EventChannel.StreamHandler
 }

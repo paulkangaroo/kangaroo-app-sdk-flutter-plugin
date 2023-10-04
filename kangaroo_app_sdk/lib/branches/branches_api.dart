@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/branches/branches_platform_interface.dart';
 
 class BranchesApi {
-  static getBusinessBranches({ 
+  static Future<Result<Business>?> getBusinessBranches({ 
     required final String businessId,
   }) {
-    BranchesApiInterface.instance.getBusinessBranches( 
+    return BranchesApiInterface.instance.getBusinessBranches( 
       businessId: businessId,
     );
   }

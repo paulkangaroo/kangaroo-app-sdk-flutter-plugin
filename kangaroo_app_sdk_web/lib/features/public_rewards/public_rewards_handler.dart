@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class PublicRewardsHandler extends PublicRewardsApiInterface
 
   @override
   getPublicRewards() {
-    PublicRewardsApi().getPublicRewards();
+    final Future<String?> request = promiseToFuture<String?>(
+        PublicRewardsApi().getPublicRewards());
+
+    return PublicRewardsApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class PublicRewardsHandler extends PublicRewardsApiInterface
 class PublicRewardsApi {
   external PublicRewardsApi();
 
-  external void getPublicRewards();
+  external dynamic getPublicRewards();
 
   external void observePublicRewardsState(
     Function(String) onData,

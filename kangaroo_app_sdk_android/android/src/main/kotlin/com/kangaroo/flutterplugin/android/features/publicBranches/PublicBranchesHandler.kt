@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.publicBranches
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.publicBranches.PublicBranchesApi
+import features.publicBranches.models.PublicBranchesModel
+
 import features.publicBranches.serializePublicBranchesState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class PublicBranchesHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class PublicBranchesHandler : EventChannel.StreamHandler, PluginChannelHandler {
     override val eventChannel: String
         get() = "customer_sdk/events/get_public_branches"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getPublicBranches(call)
     }
 
@@ -26,9 +33,15 @@ class PublicBranchesHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun getPublicBranches(call: MethodCall): Unit? {
-            PublicBranchesApi().getPublicBranches()
-            return null
+        suspend fun getPublicBranches(call: MethodCall): String? {
+            val result = PublicBranchesApi().getPublicBranches().toJsonResult<PublicBranchesModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

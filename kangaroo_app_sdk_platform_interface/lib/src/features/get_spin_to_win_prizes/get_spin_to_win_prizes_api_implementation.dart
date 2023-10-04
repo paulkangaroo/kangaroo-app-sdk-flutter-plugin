@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/get_spin_to_win
 
 class GetSpinToWinPrizesApiFederated extends GetSpinToWinPrizesApiInterface {
   @override
-  getSpinToWinPrizes({ 
+Future<Result<SpinToWinPrizesModel>?> getSpinToWinPrizes({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_spin_to_win_prizes',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_spin_to_win_prizes',
     {
       'businessId' : businessId
     }
+    );
+
+    return GetSpinToWinPrizesApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

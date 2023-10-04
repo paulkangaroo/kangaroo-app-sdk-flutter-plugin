@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class UserPinUpdateHandler extends UserPinUpdateApiInterface
   updatePin({ 
         required final UpdatePinRequest updatePinRequest
     }) {
-    UserPinUpdateApi().updatePin(
-      jsonEncode(updatePinRequest)
+    final Future<String?> request = promiseToFuture<String?>(
+        UserPinUpdateApi().updatePin(
+        jsonEncode(updatePinRequest)
+    ),);
+
+    return UserPinUpdateApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class UserPinUpdateHandler extends UserPinUpdateApiInterface
 class UserPinUpdateApi {
   external UserPinUpdateApi();
 
-  external void updatePin( 
+  external dynamic updatePin( 
         String updatePinRequest
     );
 

@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.strings
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.strings.StringsApi
+import features.strings.models.ApplicationStringsModel
+
 import features.strings.serializeStringsState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class StringsHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class StringsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     override val eventChannel: String
         get() = "customer_sdk/events/get_strings"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getStrings(call)
     }
 
@@ -26,9 +33,15 @@ class StringsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun getStrings(call: MethodCall): Unit? {
-            StringsApi().getStrings()
-            return null
+        suspend fun getStrings(call: MethodCall): String? {
+            val result = StringsApi().getStrings().toJsonResult<ApplicationStringsModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

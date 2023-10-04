@@ -6,14 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_verification/user_account_verification_platform_interface.dart';
 
 class UserAccountVerificationApi {
-  static verifyAccount({ 
+  static Future<Result<UserProfileModel>?> verifyAccount({ 
     required final String intent,
     required final String token,
     final String? email,
     final String? phone,
     final String? countryCode,
   }) {
-    UserAccountVerificationApiInterface.instance.verifyAccount( 
+    return UserAccountVerificationApiInterface.instance.verifyAccount( 
       intent: intent,
       token: token,
       email: email,

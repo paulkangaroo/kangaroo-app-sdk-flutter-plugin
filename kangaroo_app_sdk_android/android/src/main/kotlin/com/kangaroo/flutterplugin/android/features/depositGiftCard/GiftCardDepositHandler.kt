@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.depositGiftCard
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.depositGiftCard.GiftCardDepositApi
+import features.depositGiftCard.models.TransferActionResultModel
+
 import features.depositGiftCard.serializeGiftCardDepositState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
@@ -19,7 +26,7 @@ class GiftCardDepositHandler : EventChannel.StreamHandler, PluginChannelHandler 
     override val eventChannel: String
         get() = "customer_sdk/events/deposit_gift_card"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return depositGiftCard(call)
     }
 
@@ -28,11 +35,17 @@ class GiftCardDepositHandler : EventChannel.StreamHandler, PluginChannelHandler 
     }
 
     companion object {
-        fun depositGiftCard(call: MethodCall): Unit? {
-            GiftCardDepositApi().depositGiftCard(
+        suspend fun depositGiftCard(call: MethodCall): String? {
+            val result = GiftCardDepositApi().depositGiftCard(
                 depositId = call.argument<String>("depositId") as String
-            )
-            return null
+            ).toJsonResult<TransferActionResultModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

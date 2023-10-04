@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class GetNotificationPreferencesHandler extends GetNotificationPreferencesApiInt
 
   @override
   getNotificationPreferences() {
-    GetNotificationPreferencesApi().getNotificationPreferences();
+    final Future<String?> request = promiseToFuture<String?>(
+        GetNotificationPreferencesApi().getNotificationPreferences());
+
+    return GetNotificationPreferencesApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class GetNotificationPreferencesHandler extends GetNotificationPreferencesApiInt
 class GetNotificationPreferencesApi {
   external GetNotificationPreferencesApi();
 
-  external void getNotificationPreferences();
+  external dynamic getNotificationPreferences();
 
   external void observeGetNotificationPreferencesState(
     Function(String) onData,

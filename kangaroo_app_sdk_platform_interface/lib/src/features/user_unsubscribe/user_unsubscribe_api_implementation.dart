@@ -10,15 +10,19 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart
 
 class UserUnsubscribeApiFederated extends UserUnsubscribeApiInterface {
   @override
-  unsubscribe({ 
+Future<Result<EmptyResponse>?> unsubscribe({ 
         required final String campaignId,
         required final String token
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/unsubscribe',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/unsubscribe',
     {
       'campaignId' : campaignId,
       'token' : token
     }
+    );
+
+    return UserUnsubscribeApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

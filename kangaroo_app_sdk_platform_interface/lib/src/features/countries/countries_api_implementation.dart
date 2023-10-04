@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/countries/count
 
 class CountriesApiFederated extends CountriesApiInterface {
   @override
-  getCountries() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_countries');
+Future<Result<Countries>?> getCountries() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_countries');
+
+    return CountriesApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _countriesEvent =

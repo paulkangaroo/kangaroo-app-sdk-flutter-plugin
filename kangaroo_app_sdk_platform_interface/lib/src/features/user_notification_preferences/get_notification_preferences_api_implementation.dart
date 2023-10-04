@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_notificati
 
 class GetNotificationPreferencesApiFederated extends GetNotificationPreferencesApiInterface {
   @override
-  getNotificationPreferences() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_notification_preferences');
+Future<Result<NotificationSettingsModel>?> getNotificationPreferences() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_notification_preferences');
+
+    return GetNotificationPreferencesApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _getNotificationPreferencesEvent =

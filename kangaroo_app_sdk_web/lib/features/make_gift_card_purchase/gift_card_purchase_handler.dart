@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class GiftCardPurchaseHandler extends GiftCardPurchaseApiInterface
   purchaseGiftCard({ 
         required final GiftCardPurchaseRequest purchaseGiftCardRequest
     }) {
-    GiftCardPurchaseApi().purchaseGiftCard(
-      jsonEncode(purchaseGiftCardRequest)
+    final Future<String?> request = promiseToFuture<String?>(
+        GiftCardPurchaseApi().purchaseGiftCard(
+        jsonEncode(purchaseGiftCardRequest)
+    ),);
+
+    return GiftCardPurchaseApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class GiftCardPurchaseHandler extends GiftCardPurchaseApiInterface
 class GiftCardPurchaseApi {
   external GiftCardPurchaseApi();
 
-  external void purchaseGiftCard( 
+  external dynamic purchaseGiftCard( 
         String purchaseGiftCardRequest
     );
 

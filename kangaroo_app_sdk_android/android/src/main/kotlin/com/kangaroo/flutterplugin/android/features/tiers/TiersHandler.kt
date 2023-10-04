@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.tiers
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.tiers.TiersApi
+import features.tiers.models.UserProfileWithTierProgram
+
 import features.tiers.serializeTiersState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class TiersHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class TiersHandler : EventChannel.StreamHandler, PluginChannelHandler {
     override val eventChannel: String
         get() = "customer_sdk/events/get_tiers"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getTiers(call)
     }
 
@@ -26,9 +33,15 @@ class TiersHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun getTiers(call: MethodCall): Unit? {
-            TiersApi().getTiers()
-            return null
+        suspend fun getTiers(call: MethodCall): String? {
+            val result = TiersApi().getTiers().toJsonResult<UserProfileWithTierProgram>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

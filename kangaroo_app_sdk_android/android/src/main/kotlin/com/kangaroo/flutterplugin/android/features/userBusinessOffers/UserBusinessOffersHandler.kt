@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.userBusinessOffers
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
-import features.userBusinessOffers.UserBusinessOffersApi
-import features.userBusinessOffers.serializeUserBusinessOffersState
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
+import features.userBusinessOffers.UserBusinessOffersApi
+import features.userBusinessOffers.models.UserBusinessOffersModel
+
+import features.userBusinessOffers.serializeUserBusinessOffersState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class UserBusinessOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class UserBusinessOffersHandler : EventChannel.StreamHandler, PluginChannelHandl
     override val eventChannel: String
         get() = "customer_sdk/events/get_user_business_offers"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getUserBusinessOffers(call)
     }
 
@@ -26,11 +33,17 @@ class UserBusinessOffersHandler : EventChannel.StreamHandler, PluginChannelHandl
     }
 
     companion object {
-        fun getUserBusinessOffers(call: MethodCall): Unit? {
-//            UserBusinessOffersApi().getUserBusinessOffers(
-//                businessId = call.argument<String>("businessId") as String
-//            )
-            return null
+        suspend fun getUserBusinessOffers(call: MethodCall): String? {
+            val result = UserBusinessOffersApi().getUserBusinessOffers(
+                businessId = call.argument<String>("businessId") as String
+            ).toJsonResult<UserBusinessOffersModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

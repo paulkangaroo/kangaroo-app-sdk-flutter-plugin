@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_rewards/public_rewards_platform_interface.dart';
 
 class PublicRewardsApi {
-  static getPublicRewards() {
-    PublicRewardsApiInterface.instance.getPublicRewards();
+  static Future<Result<PublicRewardsModel>?> getPublicRewards() {
+    return PublicRewardsApiInterface.instance.getPublicRewards();
   }
 
   static Stream<Result<PublicRewardsModel>> get publicRewardsStream {

@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class GetConglomerateNotificationPreferencesHandler extends GetConglomerateNotif
 
   @override
   getConglomerateNotificationPreferences() {
-    GetConglomerateNotificationPreferencesApi().getConglomerateNotificationPreferences();
+    final Future<String?> request = promiseToFuture<String?>(
+        GetConglomerateNotificationPreferencesApi().getConglomerateNotificationPreferences());
+
+    return GetConglomerateNotificationPreferencesApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class GetConglomerateNotificationPreferencesHandler extends GetConglomerateNotif
 class GetConglomerateNotificationPreferencesApi {
   external GetConglomerateNotificationPreferencesApi();
 
-  external void getConglomerateNotificationPreferences();
+  external dynamic getConglomerateNotificationPreferences();
 
   external void observeGetConglomerateNotificationPreferencesState(
     Function(String) onData,

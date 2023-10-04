@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.userNotificationPreferences
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.userNotificationPreferences.GetNotificationPreferencesApi
+import features.userNotificationPreferences.models.NotificationSettingsModel
+
 import features.userNotificationPreferences.serializeGetNotificationPreferencesState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class GetNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class GetNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChan
     override val eventChannel: String
         get() = "customer_sdk/events/get_notification_preferences"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getNotificationPreferences(call)
     }
 
@@ -26,9 +33,15 @@ class GetNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChan
     }
 
     companion object {
-        fun getNotificationPreferences(call: MethodCall): Unit? {
-            GetNotificationPreferencesApi().getNotificationPreferences()
-            return null
+        suspend fun getNotificationPreferences(call: MethodCall): String? {
+            val result = GetNotificationPreferencesApi().getNotificationPreferences().toJsonResult<NotificationSettingsModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.userBusinessRewards
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.userBusinessRewards.UserBusinessRewardsApi
+import features.userBusinessRewards.models.UserBusinessRewardsModel
+
 import features.userBusinessRewards.serializeUserBusinessRewardsState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class UserBusinessRewardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class UserBusinessRewardsHandler : EventChannel.StreamHandler, PluginChannelHand
     override val eventChannel: String
         get() = "customer_sdk/events/get_user_business_rewards"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getUserBusinessRewards(call)
     }
 
@@ -26,11 +33,17 @@ class UserBusinessRewardsHandler : EventChannel.StreamHandler, PluginChannelHand
     }
 
     companion object {
-        fun getUserBusinessRewards(call: MethodCall): Unit? {
-            UserBusinessRewardsApi().getUserBusinessRewards(
+        suspend fun getUserBusinessRewards(call: MethodCall): String? {
+            val result = UserBusinessRewardsApi().getUserBusinessRewards(
                 businessId = call.argument<String>("businessId") as String
-            )
-            return null
+            ).toJsonResult<UserBusinessRewardsModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

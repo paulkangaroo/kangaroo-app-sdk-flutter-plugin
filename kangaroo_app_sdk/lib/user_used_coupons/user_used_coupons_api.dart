@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_used_coupons/user_used_coupons_platform_interface.dart';
 
 class UserUsedCouponsApi {
-  static getUserUsedCoupons() {
-    UserUsedCouponsApiInterface.instance.getUserUsedCoupons();
+  static Future<Result<UserCouponsModel>?> getUserUsedCoupons() {
+    return UserUsedCouponsApiInterface.instance.getUserUsedCoupons();
   }
 
   static Stream<Result<UserCouponsModel>> get userUsedCouponsStream {

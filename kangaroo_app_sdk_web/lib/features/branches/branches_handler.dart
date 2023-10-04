@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class BranchesHandler extends BranchesApiInterface
   getBusinessBranches({ 
         required final String businessId
     }) {
-    BranchesApi().getBusinessBranches(
-      businessId
+    final Future<String?> request = promiseToFuture<String?>(
+        BranchesApi().getBusinessBranches(
+        businessId
+    ),);
+
+    return BranchesApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class BranchesHandler extends BranchesApiInterface
 class BranchesApi {
   external BranchesApi();
 
-  external void getBusinessBranches( 
+  external dynamic getBusinessBranches( 
         String businessId
     );
 

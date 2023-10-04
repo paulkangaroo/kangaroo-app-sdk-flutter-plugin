@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_products/u
 
 class UserProductsApiFederated extends UserProductsApiInterface {
   @override
-  getUserProducts() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_products');
+Future<Result<UserProductsModel>?> getUserProducts() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_products');
+
+    return UserProductsApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _userProductsEvent =

@@ -9,23 +9,26 @@ import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
-import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_offers/user_business_offers_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
+import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_offers/user_business_offers_platform_interface.dart';
+
 
 class UserBusinessOffersHandler extends UserBusinessOffersApiInterface
-    implements PluginChannelHandler {
+    implements PluginChannelHandler{
+
   @override
   void registerPluginHandler() {
     UserBusinessOffersApiInterface.instance = UserBusinessOffersHandler();
   }
 
   @override
-  Future<Result<UserBusinessOffersModel>?> getUserBusinessOffers({
-    required final String businessId,
-  }) async {
+  getUserBusinessOffers({ 
+        required final String businessId
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-      UserBusinessOffersApi().getUserBusinessOffers(businessId),
-    );
+        UserBusinessOffersApi().getUserBusinessOffers(
+        businessId
+    ),);
 
     return UserBusinessOffersApiInterface.deSerializedPlatformResponse(
       request,
@@ -64,10 +67,13 @@ class UserBusinessOffersHandler extends UserBusinessOffersApiInterface
 class UserBusinessOffersApi {
   external UserBusinessOffersApi();
 
-  external dynamic getUserBusinessOffers(String businessId);
+  external dynamic getUserBusinessOffers( 
+        String businessId
+    );
 
   external void observeUserBusinessOffersState(
     Function(String) onData,
     Function(String) onStreamError,
   );
 }
+

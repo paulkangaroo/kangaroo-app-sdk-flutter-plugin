@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/deposit_gift_ca
 
 class GiftCardDepositApiFederated extends GiftCardDepositApiInterface {
   @override
-  depositGiftCard({ 
+Future<Result<TransferActionResultModel>?> depositGiftCard({ 
         required final String depositId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/deposit_gift_card',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/deposit_gift_card',
     {
       'depositId' : depositId
     }
+    );
+
+    return GiftCardDepositApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

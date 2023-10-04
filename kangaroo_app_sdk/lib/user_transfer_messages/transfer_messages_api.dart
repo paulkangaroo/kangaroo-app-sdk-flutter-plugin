@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transfer_messages/transfer_messages_platform_interface.dart';
 
 class TransferMessagesApi {
-  static getTransferMessages({ 
+  static Future<Result<TransferMessagesModel>?> getTransferMessages({ 
     required final String businessId,
   }) {
-    TransferMessagesApiInterface.instance.getTransferMessages( 
+    return TransferMessagesApiInterface.instance.getTransferMessages( 
       businessId: businessId,
     );
   }

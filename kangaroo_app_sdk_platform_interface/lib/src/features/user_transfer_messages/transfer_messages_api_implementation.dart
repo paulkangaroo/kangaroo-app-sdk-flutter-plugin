@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_transfer_m
 
 class TransferMessagesApiFederated extends TransferMessagesApiInterface {
   @override
-  getTransferMessages({ 
+Future<Result<TransferMessagesModel>?> getTransferMessages({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_transfer_messages',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_transfer_messages',
     {
       'businessId' : businessId
     }
+    );
+
+    return TransferMessagesApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

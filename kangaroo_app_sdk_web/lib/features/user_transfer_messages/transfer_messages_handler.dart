@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class TransferMessagesHandler extends TransferMessagesApiInterface
   getTransferMessages({ 
         required final String businessId
     }) {
-    TransferMessagesApi().getTransferMessages(
-      businessId
+    final Future<String?> request = promiseToFuture<String?>(
+        TransferMessagesApi().getTransferMessages(
+        businessId
+    ),);
+
+    return TransferMessagesApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class TransferMessagesHandler extends TransferMessagesApiInterface
 class TransferMessagesApi {
   external TransferMessagesApi();
 
-  external void getTransferMessages( 
+  external dynamic getTransferMessages( 
         String businessId
     );
 

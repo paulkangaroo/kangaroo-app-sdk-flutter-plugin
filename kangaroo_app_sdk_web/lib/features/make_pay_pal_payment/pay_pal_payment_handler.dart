@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -28,12 +29,17 @@ class PayPalPaymentHandler extends PayPalPaymentApiInterface
         required final String paypalReturnUrl,
         required final String paypalCancelUrl
     }) {
-    PayPalPaymentApi().makePayPalPayment(
-      intent,
+    final Future<String?> request = promiseToFuture<String?>(
+        PayPalPaymentApi().makePayPalPayment(
+        intent,
       provider,
       giftcardId,
       paypalReturnUrl,
       paypalCancelUrl
+    ),);
+
+    return PayPalPaymentApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -69,7 +75,7 @@ class PayPalPaymentHandler extends PayPalPaymentApiInterface
 class PayPalPaymentApi {
   external PayPalPaymentApi();
 
-  external void makePayPalPayment( 
+  external dynamic makePayPalPayment( 
         String intent,
         String provider,
         int giftcardId,

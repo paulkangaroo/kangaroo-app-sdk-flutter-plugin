@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.frequentBuyerPrograms
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.frequentBuyerPrograms.FrequentBuyerProgramsApi
+import features.frequentBuyerPrograms.models.FrequentBuyerProgramsModel
+
 import features.frequentBuyerPrograms.serializeFrequentBuyerProgramsState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class FrequentBuyerProgramsHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class FrequentBuyerProgramsHandler : EventChannel.StreamHandler, PluginChannelHa
     override val eventChannel: String
         get() = "customer_sdk/events/get_frequent_buyer_programs"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getFrequentBuyerPrograms(call)
     }
 
@@ -26,9 +33,15 @@ class FrequentBuyerProgramsHandler : EventChannel.StreamHandler, PluginChannelHa
     }
 
     companion object {
-        fun getFrequentBuyerPrograms(call: MethodCall): Unit? {
-            FrequentBuyerProgramsApi().getFrequentBuyerPrograms()
-            return null
+        suspend fun getFrequentBuyerPrograms(call: MethodCall): String? {
+            val result = FrequentBuyerProgramsApi().getFrequentBuyerPrograms().toJsonResult<FrequentBuyerProgramsModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

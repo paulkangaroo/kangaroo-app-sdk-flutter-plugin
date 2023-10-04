@@ -2,8 +2,10 @@ package com.kangaroo.flutterplugin.android.features
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.features.userAuthentication.UserAuthenticationHandler
+import com.kangaroo.flutterplugin.android.features.archiveInboxItem.ArchiveInboxItemHandler
 import com.kangaroo.flutterplugin.android.features.claimOffer.ClaimOfferHandler
 import com.kangaroo.flutterplugin.android.features.userRegistration.UserRegistrationHandler
+import com.kangaroo.flutterplugin.android.features.userRegistrationWithCrm.UserRegistrationWithCrmHandler
 import com.kangaroo.flutterplugin.android.features.userDelete.UserDeleteHandler
 import com.kangaroo.flutterplugin.android.features.depositGiftCard.GiftCardDepositHandler
 import com.kangaroo.flutterplugin.android.features.userAlaCarte.AlaCarteProductsHandler
@@ -14,7 +16,9 @@ import com.kangaroo.flutterplugin.android.features.businessList.BusinessesHandle
 import com.kangaroo.flutterplugin.android.features.userCampaignMessages.CampaignMessagesHandler
 import com.kangaroo.flutterplugin.android.features.userConglomerateNotificationPreferences.GetConglomerateNotificationPreferencesHandler
 import com.kangaroo.flutterplugin.android.features.countries.CountriesHandler
+import com.kangaroo.flutterplugin.android.features.getCrmFields.GetCrmFieldsHandler
 import com.kangaroo.flutterplugin.android.features.getDefaultBusinessId.GetDefaultBusinessIdHandler
+import com.kangaroo.flutterplugin.android.features.draws.DrawsHandler
 import com.kangaroo.flutterplugin.android.features.frequentBuyerPrograms.FrequentBuyerProgramsHandler
 import com.kangaroo.flutterplugin.android.features.giftCards.GiftCardsHandler
 import com.kangaroo.flutterplugin.android.features.userNotificationPreferences.GetNotificationPreferencesHandler
@@ -22,8 +26,10 @@ import com.kangaroo.flutterplugin.android.features.publicALaCarteProducts.Public
 import com.kangaroo.flutterplugin.android.features.publicBanners.PublicBannersHandler
 import com.kangaroo.flutterplugin.android.features.publicBranches.PublicBranchesHandler
 import com.kangaroo.flutterplugin.android.features.publicBusinessSettings.PublicBusinessSettingsHandler
+import com.kangaroo.flutterplugin.android.features.publicOffer.PublicOfferHandler
 import com.kangaroo.flutterplugin.android.features.publicOffers.PublicOffersHandler
 import com.kangaroo.flutterplugin.android.features.publicProducts.PublicProductsHandler
+import com.kangaroo.flutterplugin.android.features.publicReward.PublicRewardHandler
 import com.kangaroo.flutterplugin.android.features.publicRewards.PublicRewardsHandler
 import com.kangaroo.flutterplugin.android.features.socialMediaLinks.SocialMediaLinksHandler
 import com.kangaroo.flutterplugin.android.features.getSpinToWinPrizes.GetSpinToWinPrizesHandler
@@ -39,6 +45,7 @@ import com.kangaroo.flutterplugin.android.features.userBusinessProducts.UserBusi
 import com.kangaroo.flutterplugin.android.features.userBusinessProfile.UserBusinessProfileHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessRewards.UserBusinessRewardsHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessSocialMediaLinks.UserBusinessSocialMediaLinksHandler
+import com.kangaroo.flutterplugin.android.features.userBusinessTiers.UserBusinessTiersHandler
 import com.kangaroo.flutterplugin.android.features.userCoupons.UserCouponsHandler
 import com.kangaroo.flutterplugin.android.features.userDetails.UserDetailsHandler
 import com.kangaroo.flutterplugin.android.features.userOffers.UserOffersHandler
@@ -68,9 +75,13 @@ import com.kangaroo.flutterplugin.android.features.userCheckIn.UserCheckInHandle
 import com.kangaroo.flutterplugin.android.features.userVerification.UserAccountVerificationHandler
 
 val pluginHandlerList: List<PluginChannelHandler> = listOf(
+    ArchiveInboxItemHandler(),
+
     ClaimOfferHandler(),
 
     UserRegistrationHandler(),
+
+    UserRegistrationWithCrmHandler(),
 
     UserDeleteHandler(),
 
@@ -92,7 +103,11 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     CountriesHandler(),
 
+    GetCrmFieldsHandler(),
+
     GetDefaultBusinessIdHandler(),
+
+    DrawsHandler(),
 
     FrequentBuyerProgramsHandler(),
 
@@ -108,9 +123,13 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     PublicBusinessSettingsHandler(),
 
+    PublicOfferHandler(),
+
     PublicOffersHandler(),
 
     PublicProductsHandler(),
+
+    PublicRewardHandler(),
 
     PublicRewardsHandler(),
 
@@ -141,6 +160,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     UserBusinessRewardsHandler(),
 
     UserBusinessSocialMediaLinksHandler(),
+
+    UserBusinessTiersHandler(),
 
     UserCouponsHandler(),
 

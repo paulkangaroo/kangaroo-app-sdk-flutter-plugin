@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/get_default_business_id/get_default_business_id_platform_interface.dart';
 
 class GetDefaultBusinessIdApi {
-  static getDefaultBusinessId({ 
+  static Future<Result<DefaultBusiness>?> getDefaultBusinessId({ 
     required final String businessId,
   }) {
-    GetDefaultBusinessIdApiInterface.instance.getDefaultBusinessId( 
+    return GetDefaultBusinessIdApiInterface.instance.getDefaultBusinessId( 
       businessId: businessId,
     );
   }

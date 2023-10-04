@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_campaign_messages/campaign_messages_platform_interface.dart';
 
 class CampaignMessagesApi {
-  static getCampaignMessages({ 
+  static Future<Result<CampaignMessagesModel>?> getCampaignMessages({ 
     required final String businessId,
   }) {
-    CampaignMessagesApiInterface.instance.getCampaignMessages( 
+    return CampaignMessagesApiInterface.instance.getCampaignMessages( 
       businessId: businessId,
     );
   }

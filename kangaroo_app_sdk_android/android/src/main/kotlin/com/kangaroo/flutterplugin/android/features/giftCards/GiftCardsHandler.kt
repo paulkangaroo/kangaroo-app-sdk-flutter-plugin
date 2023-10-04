@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.giftCards
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.giftCards.GiftCardsApi
+import features.giftCards.models.GiftCardsModel
+
 import features.giftCards.serializeGiftCardsState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class GiftCardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class GiftCardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     override val eventChannel: String
         get() = "customer_sdk/events/get_gift_cards"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getGiftCards(call)
     }
 
@@ -26,9 +33,15 @@ class GiftCardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun getGiftCards(call: MethodCall): Unit? {
-            GiftCardsApi().getGiftCards()
-            return null
+        suspend fun getGiftCards(call: MethodCall): String? {
+            val result = GiftCardsApi().getGiftCards().toJsonResult<GiftCardsModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

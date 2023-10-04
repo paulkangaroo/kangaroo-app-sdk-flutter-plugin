@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class UserProfileHandler extends UserProfileApiInterface
 
   @override
   getUserProfile() {
-    UserProfileApi().getUserProfile();
+    final Future<String?> request = promiseToFuture<String?>(
+        UserProfileApi().getUserProfile());
+
+    return UserProfileApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class UserProfileHandler extends UserProfileApiInterface
 class UserProfileApi {
   external UserProfileApi();
 
-  external void getUserProfile();
+  external dynamic getUserProfile();
 
   external void observeUserProfileState(
     Function(String) onData,

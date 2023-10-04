@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class CountriesHandler extends CountriesApiInterface
 
   @override
   getCountries() {
-    CountriesApi().getCountries();
+    final Future<String?> request = promiseToFuture<String?>(
+        CountriesApi().getCountries());
+
+    return CountriesApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class CountriesHandler extends CountriesApiInterface
 class CountriesApi {
   external CountriesApi();
 
-  external void getCountries();
+  external dynamic getCountries();
 
   external void observeCountriesState(
     Function(String) onData,

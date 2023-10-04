@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class UserDeleteHandler extends UserDeleteApiInterface
 
   @override
   deleteUserAccount() {
-    UserDeleteApi().deleteUserAccount();
+    final Future<String?> request = promiseToFuture<String?>(
+        UserDeleteApi().deleteUserAccount());
+
+    return UserDeleteApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class UserDeleteHandler extends UserDeleteApiInterface
 class UserDeleteApi {
   external UserDeleteApi();
 
-  external void deleteUserAccount();
+  external dynamic deleteUserAccount();
 
   external void observeUserDeleteState(
     Function(String) onData,

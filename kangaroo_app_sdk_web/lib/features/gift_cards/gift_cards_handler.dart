@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class GiftCardsHandler extends GiftCardsApiInterface
 
   @override
   getGiftCards() {
-    GiftCardsApi().getGiftCards();
+    final Future<String?> request = promiseToFuture<String?>(
+        GiftCardsApi().getGiftCards());
+
+    return GiftCardsApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class GiftCardsHandler extends GiftCardsApiInterface
 class GiftCardsApi {
   external GiftCardsApi();
 
-  external void getGiftCards();
+  external dynamic getGiftCards();
 
   external void observeGiftCardsState(
     Function(String) onData,

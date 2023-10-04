@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -27,11 +28,16 @@ class UserPinResetRequestHandler extends UserPinResetRequestApiInterface
         final String? phone,
         final String? countryCode
     }) {
-    UserPinResetRequestApi().requestPinReset(
-      mode,
+    final Future<String?> request = promiseToFuture<String?>(
+        UserPinResetRequestApi().requestPinReset(
+        mode,
       email,
       phone,
       countryCode
+    ),);
+
+    return UserPinResetRequestApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -67,7 +73,7 @@ class UserPinResetRequestHandler extends UserPinResetRequestApiInterface
 class UserPinResetRequestApi {
   external UserPinResetRequestApi();
 
-  external void requestPinReset( 
+  external dynamic requestPinReset( 
         String mode,
         String? email,
         String? phone,

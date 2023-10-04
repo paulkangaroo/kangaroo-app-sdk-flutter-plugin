@@ -10,14 +10,14 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/post_offer_face
 
 class OfferFacebookShareApiFederated extends OfferFacebookShareApiInterface {
   @override
-  postOfferFacebookShare({ 
+Future<Result<UserProfileModel>?> postOfferFacebookShare({ 
         required final String offerId,
         final String include = "balance",
         required final String facebookUserId,
         final String type = "facebook_share",
         final String friendsCount = "1"
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/post_offer_facebook_share',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/post_offer_facebook_share',
     {
       'offerId' : offerId,
       'include' : include,
@@ -25,6 +25,10 @@ class OfferFacebookShareApiFederated extends OfferFacebookShareApiInterface {
       'type' : type,
       'friendsCount' : friendsCount
     }
+    );
+
+    return OfferFacebookShareApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

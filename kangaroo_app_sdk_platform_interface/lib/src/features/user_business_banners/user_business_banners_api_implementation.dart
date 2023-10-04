@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_b
 
 class UserBusinessBannersApiFederated extends UserBusinessBannersApiInterface {
   @override
-  getUserBusinessBanners({ 
+Future<Result<UserBusinessBannersModel>?> getUserBusinessBanners({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_banners',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_banners',
     {
       'businessId' : businessId
     }
+    );
+
+    return UserBusinessBannersApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

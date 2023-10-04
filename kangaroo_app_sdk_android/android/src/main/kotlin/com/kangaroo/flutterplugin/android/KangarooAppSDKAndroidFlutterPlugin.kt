@@ -10,6 +10,10 @@ import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /** sdk_wrapper_federatedPlugin */
 @Suppress("unused")
@@ -21,22 +25,34 @@ class KangarooAppSDKAndroidFlutterPlugin : FlutterPlugin, MethodCallHandler, Act
         context = activityBinding.activity
     }
 
+    private val mainScope = CoroutineScope(Dispatchers.Main)
+
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: MethodChannel.Result) {
         pluginHandlerList.forEach {
             if (call.method == it.methodChannel) {
-                result.success(it.onMethodCall(call))
+                mainScope.launch {
+                    withContext(Dispatchers.IO) {
+                        result.success(it.onMethodCall(call))
+                    }
+                }
             }
         }
-        if (call.method == "core/methods/initializeSdk") {
-            result.success(KangarooAppSdk.initializeSdk(call, context))
-        } else if (call.method == "core/methods/getSession") {
-            result.success(KangarooAppSdk.getSession(call, context))
-        } else if (call.method == "core/methods/killSession") {
-            result.success(KangarooAppSdk.killSession(call, context))
-        } else if (call.method == "core/methods/setPreferredLanguage") {
-            result.success(KangarooAppSdk.setPreferredLanguage(call, context))
-        } else if (call.method == "core/methods/getPreferredLanguage") {
-            result.success(KangarooAppSdk.getPreferredLanguage(call, context))
+        when (call.method) {
+            "core/methods/initializeSdk" -> {
+                result.success(KangarooAppSdk.initializeSdk(call, context))
+            }
+            "core/methods/getSession" -> {
+                result.success(KangarooAppSdk.getSession(call, context))
+            }
+            "core/methods/killSession" -> {
+                result.success(KangarooAppSdk.killSession(call, context))
+            }
+            "core/methods/setPreferredLanguage" -> {
+                result.success(KangarooAppSdk.setPreferredLanguage(call, context))
+            }
+            "core/methods/getPreferredLanguage" -> {
+                result.success(KangarooAppSdk.getPreferredLanguage(call, context))
+            }
         }
     }
 

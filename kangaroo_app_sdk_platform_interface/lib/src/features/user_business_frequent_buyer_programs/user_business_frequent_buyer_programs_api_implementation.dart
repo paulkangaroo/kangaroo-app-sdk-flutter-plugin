@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_f
 
 class UserBusinessFrequentBuyerProgramsApiFederated extends UserBusinessFrequentBuyerProgramsApiInterface {
   @override
-  getUserBusinessFrequentBuyerPrograms({ 
+Future<Result<FrequentBuyerProgramsModel>?> getUserBusinessFrequentBuyerPrograms({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_frequent_buyer_programs',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_frequent_buyer_programs',
     {
       'businessId' : businessId
     }
+    );
+
+    return UserBusinessFrequentBuyerProgramsApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

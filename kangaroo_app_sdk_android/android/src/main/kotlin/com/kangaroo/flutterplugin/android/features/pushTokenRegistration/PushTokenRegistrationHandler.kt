@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.pushTokenRegistration
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.pushTokenRegistration.PushTokenRegistrationApi
+import features.pushTokenRegistration.models.UserProfileModel
+
 import features.pushTokenRegistration.serializePushTokenRegistrationState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class PushTokenRegistrationHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class PushTokenRegistrationHandler : EventChannel.StreamHandler, PluginChannelHa
     override val eventChannel: String
         get() = "customer_sdk/events/register_push_token"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return registerPushToken(call)
     }
 
@@ -26,12 +33,18 @@ class PushTokenRegistrationHandler : EventChannel.StreamHandler, PluginChannelHa
     }
 
     companion object {
-        fun registerPushToken(call: MethodCall): Unit? {
-            PushTokenRegistrationApi().registerPushToken(
+        suspend fun registerPushToken(call: MethodCall): String? {
+            val result = PushTokenRegistrationApi().registerPushToken(
                 androidDeviceToken = call.argument<String?>("androidDeviceToken"),
                 iosDeviceToken = call.argument<String?>("iosDeviceToken")
-            )
-            return null
+            ).toJsonResult<UserProfileModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

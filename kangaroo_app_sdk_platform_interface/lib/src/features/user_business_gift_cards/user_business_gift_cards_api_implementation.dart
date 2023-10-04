@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_g
 
 class UserBusinessGiftCardsApiFederated extends UserBusinessGiftCardsApiInterface {
   @override
-  getUserBusinessGiftCards({ 
+Future<Result<UserBusinessGiftCardsModel>?> getUserBusinessGiftCards({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_gift_cards',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_gift_cards',
     {
       'businessId' : businessId
     }
+    );
+
+    return UserBusinessGiftCardsApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

@@ -6,11 +6,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/claim_offer/claim_offer_platform_interface.dart';
 
 class ClaimOfferApi {
-  static claimOffer({ 
+  static Future<Result<ClaimedOfferModel>?> claimOffer({ 
     required final int offerId,
     required final String customerId,
   }) {
-    ClaimOfferApiInterface.instance.claimOffer( 
+    return ClaimOfferApiInterface.instance.claimOffer( 
       offerId: offerId,
       customerId: customerId,
     );

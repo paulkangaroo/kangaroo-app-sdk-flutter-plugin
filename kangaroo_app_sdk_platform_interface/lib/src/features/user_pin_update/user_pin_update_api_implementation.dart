@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/update_p
 
 class UserPinUpdateApiFederated extends UserPinUpdateApiInterface {
   @override
-  updatePin({ 
+Future<Result<UserProfileModel>?> updatePin({ 
         required final UpdatePinRequest updatePinRequest
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/update_pin',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/update_pin',
     {
       'updatePinRequest' : jsonEncode(updatePinRequest)
     }
+    );
+
+    return UserPinUpdateApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

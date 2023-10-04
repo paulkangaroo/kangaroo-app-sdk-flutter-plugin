@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class BannersHandler extends BannersApiInterface
 
   @override
   getBanners() {
-    BannersApi().getBanners();
+    final Future<String?> request = promiseToFuture<String?>(
+        BannersApi().getBanners());
+
+    return BannersApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class BannersHandler extends BannersApiInterface
 class BannersApi {
   external BannersApi();
 
-  external void getBanners();
+  external dynamic getBanners();
 
   external void observeBannersState(
     Function(String) onData,

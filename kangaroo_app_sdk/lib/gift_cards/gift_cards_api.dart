@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/gift_cards/gift_cards_platform_interface.dart';
 
 class GiftCardsApi {
-  static getGiftCards() {
-    GiftCardsApiInterface.instance.getGiftCards();
+  static Future<Result<GiftCardsModel>?> getGiftCards() {
+    return GiftCardsApiInterface.instance.getGiftCards();
   }
 
   static Stream<Result<GiftCardsModel>> get giftCardsStream {

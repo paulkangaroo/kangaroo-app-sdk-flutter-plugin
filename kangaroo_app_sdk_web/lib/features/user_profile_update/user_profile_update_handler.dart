@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -29,13 +30,18 @@ class UserProfileUpdateHandler extends UserProfileUpdateApiInterface
         final String? gender,
         final String? profilePhoto
     }) {
-    UserProfileUpdateApi().updateUserProfile(
-      firstName,
+    final Future<String?> request = promiseToFuture<String?>(
+        UserProfileUpdateApi().updateUserProfile(
+        firstName,
       lastName,
       birthDate,
       language,
       gender,
       profilePhoto
+    ),);
+
+    return UserProfileUpdateApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -71,7 +77,7 @@ class UserProfileUpdateHandler extends UserProfileUpdateApiInterface
 class UserProfileUpdateApi {
   external UserProfileUpdateApi();
 
-  external void updateUserProfile( 
+  external dynamic updateUserProfile( 
         String? firstName,
         String? lastName,
         String? birthDate,

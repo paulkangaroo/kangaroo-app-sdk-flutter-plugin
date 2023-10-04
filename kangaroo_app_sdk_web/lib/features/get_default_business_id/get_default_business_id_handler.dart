@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class GetDefaultBusinessIdHandler extends GetDefaultBusinessIdApiInterface
   getDefaultBusinessId({ 
         required final String businessId
     }) {
-    GetDefaultBusinessIdApi().getDefaultBusinessId(
-      businessId
+    final Future<String?> request = promiseToFuture<String?>(
+        GetDefaultBusinessIdApi().getDefaultBusinessId(
+        businessId
+    ),);
+
+    return GetDefaultBusinessIdApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class GetDefaultBusinessIdHandler extends GetDefaultBusinessIdApiInterface
 class GetDefaultBusinessIdApi {
   external GetDefaultBusinessIdApi();
 
-  external void getDefaultBusinessId( 
+  external dynamic getDefaultBusinessId( 
         String businessId
     );
 

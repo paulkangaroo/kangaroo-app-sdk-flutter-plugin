@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.getDefaultBusinessId
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.getDefaultBusinessId.GetDefaultBusinessIdApi
+import features.getDefaultBusinessId.models.DefaultBusiness
+
 import features.getDefaultBusinessId.serializeGetDefaultBusinessIdState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class GetDefaultBusinessIdHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class GetDefaultBusinessIdHandler : EventChannel.StreamHandler, PluginChannelHan
     override val eventChannel: String
         get() = "customer_sdk/events/get_default_business_id"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getDefaultBusinessId(call)
     }
 
@@ -26,11 +33,17 @@ class GetDefaultBusinessIdHandler : EventChannel.StreamHandler, PluginChannelHan
     }
 
     companion object {
-        fun getDefaultBusinessId(call: MethodCall): Unit? {
-            GetDefaultBusinessIdApi().getDefaultBusinessId(
+        suspend fun getDefaultBusinessId(call: MethodCall): String? {
+            val result = GetDefaultBusinessIdApi().getDefaultBusinessId(
                 businessId = call.argument<String>("businessId") as String
-            )
-            return null
+            ).toJsonResult<DefaultBusiness>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

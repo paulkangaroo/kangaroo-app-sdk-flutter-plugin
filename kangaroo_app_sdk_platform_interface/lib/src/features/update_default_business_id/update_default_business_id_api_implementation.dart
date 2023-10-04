@@ -10,15 +10,19 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/update_default_
 
 class UpdateDefaultBusinessIdApiFederated extends UpdateDefaultBusinessIdApiInterface {
   @override
-  updateDefaultBusinessId({ 
+Future<Result<DefaultBusiness>?> updateDefaultBusinessId({ 
         required final String businessId,
         required final String defaultBusinessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/update_default_business_id',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/update_default_business_id',
     {
       'businessId' : businessId,
       'defaultBusinessId' : defaultBusinessId
     }
+    );
+
+    return UpdateDefaultBusinessIdApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

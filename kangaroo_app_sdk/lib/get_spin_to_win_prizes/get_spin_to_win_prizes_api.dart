@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/get_spin_to_win_prizes/get_spin_to_win_prizes_platform_interface.dart';
 
 class GetSpinToWinPrizesApi {
-  static getSpinToWinPrizes({ 
+  static Future<Result<SpinToWinPrizesModel>?> getSpinToWinPrizes({ 
     required final String businessId,
   }) {
-    GetSpinToWinPrizesApiInterface.instance.getSpinToWinPrizes( 
+    return GetSpinToWinPrizesApiInterface.instance.getSpinToWinPrizes( 
       businessId: businessId,
     );
   }

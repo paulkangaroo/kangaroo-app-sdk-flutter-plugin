@@ -6,14 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_pin_reset_with_verification_code/user_pin_reset_platform_interface.dart';
 
 class UserPinResetApi {
-  static resetPin({ 
+  static Future<Result<EmptyResponse>?> resetPin({ 
     required final String verificationCode,
     required final String pinCode,
     final String? email,
     final String? phone,
     final String? countryCode,
   }) {
-    UserPinResetApiInterface.instance.resetPin( 
+    return UserPinResetApiInterface.instance.resetPin( 
       verificationCode: verificationCode,
       pinCode: pinCode,
       email: email,

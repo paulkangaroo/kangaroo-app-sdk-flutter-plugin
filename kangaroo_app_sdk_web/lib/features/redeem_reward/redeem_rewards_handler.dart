@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class RedeemRewardsHandler extends RedeemRewardsApiInterface
   redeemReward({ 
         required final RedeemRequest redeemRequest
     }) {
-    RedeemRewardsApi().redeemReward(
-      jsonEncode(redeemRequest)
+    final Future<String?> request = promiseToFuture<String?>(
+        RedeemRewardsApi().redeemReward(
+        jsonEncode(redeemRequest)
+    ),);
+
+    return RedeemRewardsApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class RedeemRewardsHandler extends RedeemRewardsApiInterface
 class RedeemRewardsApi {
   external RedeemRewardsApi();
 
-  external void redeemReward( 
+  external dynamic redeemReward( 
         String redeemRequest
     );
 

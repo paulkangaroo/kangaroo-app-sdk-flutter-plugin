@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class PublicBusinessSettingsHandler extends PublicBusinessSettingsApiInterface
 
   @override
   getPublicBusinessSettings() {
-    PublicBusinessSettingsApi().getPublicBusinessSettings();
+    final Future<String?> request = promiseToFuture<String?>(
+        PublicBusinessSettingsApi().getPublicBusinessSettings());
+
+    return PublicBusinessSettingsApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class PublicBusinessSettingsHandler extends PublicBusinessSettingsApiInterface
 class PublicBusinessSettingsApi {
   external PublicBusinessSettingsApi();
 
-  external void getPublicBusinessSettings();
+  external dynamic getPublicBusinessSettings();
 
   external void observePublicBusinessSettingsState(
     Function(String) onData,

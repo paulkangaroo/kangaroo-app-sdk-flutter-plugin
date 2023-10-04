@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/gift_car
 
 class GiftCardPurchaseApiFederated extends GiftCardPurchaseApiInterface {
   @override
-  purchaseGiftCard({ 
+Future<Result<GiftCardPayPalPaymentResponseModel>?> purchaseGiftCard({ 
         required final GiftCardPurchaseRequest purchaseGiftCardRequest
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/purchase_gift_card',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/purchase_gift_card',
     {
       'purchaseGiftCardRequest' : jsonEncode(purchaseGiftCardRequest)
     }
+    );
+
+    return GiftCardPurchaseApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

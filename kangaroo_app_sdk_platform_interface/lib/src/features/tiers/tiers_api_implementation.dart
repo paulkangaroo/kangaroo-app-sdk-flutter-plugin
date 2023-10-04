@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/tiers/tiers_api
 
 class TiersApiFederated extends TiersApiInterface {
   @override
-  getTiers() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_tiers');
+Future<Result<UserProfileWithTierProgram>?> getTiers() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_tiers');
+
+    return TiersApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _tiersEvent =

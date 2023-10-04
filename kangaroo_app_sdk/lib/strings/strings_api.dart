@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/strings/strings_platform_interface.dart';
 
 class StringsApi {
-  static getStrings() {
-    StringsApiInterface.instance.getStrings();
+  static Future<Result<ApplicationStringsModel>?> getStrings() {
+    return StringsApiInterface.instance.getStrings();
   }
 
   static Stream<Result<ApplicationStringsModel>> get stringsStream {

@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class UserCheckInHandler extends UserCheckInApiInterface
   userCheckIn({ 
         required final CheckInRequest checkInRequest
     }) {
-    UserCheckInApi().userCheckIn(
-      jsonEncode(checkInRequest)
+    final Future<String?> request = promiseToFuture<String?>(
+        UserCheckInApi().userCheckIn(
+        jsonEncode(checkInRequest)
+    ),);
+
+    return UserCheckInApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class UserCheckInHandler extends UserCheckInApiInterface
 class UserCheckInApi {
   external UserCheckInApi();
 
-  external void userCheckIn( 
+  external dynamic userCheckIn( 
         String checkInRequest
     );
 

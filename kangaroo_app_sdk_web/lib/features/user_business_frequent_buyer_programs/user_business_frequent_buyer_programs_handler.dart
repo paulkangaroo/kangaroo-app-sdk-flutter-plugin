@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class UserBusinessFrequentBuyerProgramsHandler extends UserBusinessFrequentBuyer
   getUserBusinessFrequentBuyerPrograms({ 
         required final String businessId
     }) {
-    UserBusinessFrequentBuyerProgramsApi().getUserBusinessFrequentBuyerPrograms(
-      businessId
+    final Future<String?> request = promiseToFuture<String?>(
+        UserBusinessFrequentBuyerProgramsApi().getUserBusinessFrequentBuyerPrograms(
+        businessId
+    ),);
+
+    return UserBusinessFrequentBuyerProgramsApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class UserBusinessFrequentBuyerProgramsHandler extends UserBusinessFrequentBuyer
 class UserBusinessFrequentBuyerProgramsApi {
   external UserBusinessFrequentBuyerProgramsApi();
 
-  external void getUserBusinessFrequentBuyerPrograms( 
+  external dynamic getUserBusinessFrequentBuyerPrograms( 
         String businessId
     );
 

@@ -4,7 +4,9 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/language.dart';
 
+
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/language.dart';
+
 
 part 'banner.g.dart';
 
@@ -34,6 +36,9 @@ class Banner {
 
   final Language? language;
 
+  ///If this banners is archived or not. 
+  final bool? archived;
+
   Banner({
     required this.id,
     required this.type,
@@ -43,6 +48,7 @@ class Banner {
     required this.publishedAt,
     required this.expiresAt,
     required this.language,
+    required this.archived,
   });
 
   factory Banner.fromJson(Map<String, dynamic> data) => _$BannerFromJson(data);

@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class UserUsedCouponsHandler extends UserUsedCouponsApiInterface
 
   @override
   getUserUsedCoupons() {
-    UserUsedCouponsApi().getUserUsedCoupons();
+    final Future<String?> request = promiseToFuture<String?>(
+        UserUsedCouponsApi().getUserUsedCoupons());
+
+    return UserUsedCouponsApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class UserUsedCouponsHandler extends UserUsedCouponsApiInterface
 class UserUsedCouponsApi {
   external UserUsedCouponsApi();
 
-  external void getUserUsedCoupons();
+  external dynamic getUserUsedCoupons();
 
   external void observeUserUsedCouponsState(
     Function(String) onData,

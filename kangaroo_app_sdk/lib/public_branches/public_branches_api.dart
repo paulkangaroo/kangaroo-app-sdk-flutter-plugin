@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_branches/public_branches_platform_interface.dart';
 
 class PublicBranchesApi {
-  static getPublicBranches() {
-    PublicBranchesApiInterface.instance.getPublicBranches();
+  static Future<Result<PublicBranchesModel>?> getPublicBranches() {
+    return PublicBranchesApiInterface.instance.getPublicBranches();
   }
 
   static Stream<Result<PublicBranchesModel>> get publicBranchesStream {

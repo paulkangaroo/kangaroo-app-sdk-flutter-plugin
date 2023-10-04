@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class StringsHandler extends StringsApiInterface
 
   @override
   getStrings() {
-    StringsApi().getStrings();
+    final Future<String?> request = promiseToFuture<String?>(
+        StringsApi().getStrings());
+
+    return StringsApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class StringsHandler extends StringsApiInterface
 class StringsApi {
   external StringsApi();
 
-  external void getStrings();
+  external dynamic getStrings();
 
   external void observeStringsState(
     Function(String) onData,

@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -25,9 +26,14 @@ class ClaimOfferHandler extends ClaimOfferApiInterface
         required final int offerId,
         required final String customerId
     }) {
-    ClaimOfferApi().claimOffer(
-      offerId,
+    final Future<String?> request = promiseToFuture<String?>(
+        ClaimOfferApi().claimOffer(
+        offerId,
       customerId
+    ),);
+
+    return ClaimOfferApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -63,7 +69,7 @@ class ClaimOfferHandler extends ClaimOfferApiInterface
 class ClaimOfferApi {
   external ClaimOfferApi();
 
-  external void claimOffer( 
+  external dynamic claimOffer( 
         int offerId,
         String customerId
     );

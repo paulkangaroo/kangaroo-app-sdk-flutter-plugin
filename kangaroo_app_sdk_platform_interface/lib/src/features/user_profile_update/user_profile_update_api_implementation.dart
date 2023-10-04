@@ -10,15 +10,15 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_profile_up
 
 class UserProfileUpdateApiFederated extends UserProfileUpdateApiInterface {
   @override
-  updateUserProfile({ 
+Future<Result<UserProfileModel>?> updateUserProfile({ 
         final String? firstName,
         final String? lastName,
         final String? birthDate,
         final String? language,
         final String? gender,
         final String? profilePhoto
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/update_user_profile',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/update_user_profile',
     {
       'firstName' : firstName,
       'lastName' : lastName,
@@ -27,6 +27,10 @@ class UserProfileUpdateApiFederated extends UserProfileUpdateApiInterface {
       'gender' : gender,
       'profilePhoto' : profilePhoto
     }
+    );
+
+    return UserProfileUpdateApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

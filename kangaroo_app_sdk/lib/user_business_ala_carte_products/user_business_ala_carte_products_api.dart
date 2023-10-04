@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_ala_carte_products/user_business_ala_carte_products_platform_interface.dart';
 
 class UserBusinessAlaCarteProductsApi {
-  static getUserBusinessAlaCarteProducts({ 
+  static Future<Result<AlaCarteProductsModel>?> getUserBusinessAlaCarteProducts({ 
     required final String businessId,
   }) {
-    UserBusinessAlaCarteProductsApiInterface.instance.getUserBusinessAlaCarteProducts( 
+    return UserBusinessAlaCarteProductsApiInterface.instance.getUserBusinessAlaCarteProducts( 
       businessId: businessId,
     );
   }

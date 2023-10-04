@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class FrequentBuyerProgramsHandler extends FrequentBuyerProgramsApiInterface
 
   @override
   getFrequentBuyerPrograms() {
-    FrequentBuyerProgramsApi().getFrequentBuyerPrograms();
+    final Future<String?> request = promiseToFuture<String?>(
+        FrequentBuyerProgramsApi().getFrequentBuyerPrograms());
+
+    return FrequentBuyerProgramsApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class FrequentBuyerProgramsHandler extends FrequentBuyerProgramsApiInterface
 class FrequentBuyerProgramsApi {
   external FrequentBuyerProgramsApi();
 
-  external void getFrequentBuyerPrograms();
+  external dynamic getFrequentBuyerPrograms();
 
   external void observeFrequentBuyerProgramsState(
     Function(String) onData,

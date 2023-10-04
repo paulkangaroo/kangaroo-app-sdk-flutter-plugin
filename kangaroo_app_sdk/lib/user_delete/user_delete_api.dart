@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_delete/user_delete_platform_interface.dart';
 
 class UserDeleteApi {
-  static deleteUserAccount() {
-    UserDeleteApiInterface.instance.deleteUserAccount();
+  static Future<Result<EmptyResponse>?> deleteUserAccount() {
+    return UserDeleteApiInterface.instance.deleteUserAccount();
   }
 
   static Stream<Result<EmptyResponse>> get userDeleteStream {

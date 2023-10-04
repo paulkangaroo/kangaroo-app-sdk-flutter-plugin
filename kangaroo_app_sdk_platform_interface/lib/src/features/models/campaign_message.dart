@@ -23,6 +23,9 @@ class CampaignMessage {
   ///The original send date of this campaign. 
   final String? sentAt;
 
+  ///If this campaign message is archived or not. 
+  final bool? archived;
+
   ///A short / simple message for this campaign. 
   final String? message;
 
@@ -33,6 +36,7 @@ class CampaignMessage {
     required this.cellEmail,
     required this.subject,
     required this.sentAt,
+    required this.archived,
     required this.message,
     required this.campaign,
   });

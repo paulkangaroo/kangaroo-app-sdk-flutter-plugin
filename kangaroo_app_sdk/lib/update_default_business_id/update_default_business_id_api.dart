@@ -6,11 +6,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/update_default_business_id/update_default_business_id_platform_interface.dart';
 
 class UpdateDefaultBusinessIdApi {
-  static updateDefaultBusinessId({ 
+  static Future<Result<DefaultBusiness>?> updateDefaultBusinessId({ 
     required final String businessId,
     required final String defaultBusinessId,
   }) {
-    UpdateDefaultBusinessIdApiInterface.instance.updateDefaultBusinessId( 
+    return UpdateDefaultBusinessIdApiInterface.instance.updateDefaultBusinessId( 
       businessId: businessId,
       defaultBusinessId: defaultBusinessId,
     );

@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -25,9 +26,14 @@ class SocialMediaActionPerformHandler extends SocialMediaActionPerformApiInterfa
         required final PerformSocialMediaActionRequestModel performSocialMediaActionRequest,
         required final String businessId
     }) {
-    SocialMediaActionPerformApi().performSocialMediaAction(
-      jsonEncode(performSocialMediaActionRequest),
+    final Future<String?> request = promiseToFuture<String?>(
+        SocialMediaActionPerformApi().performSocialMediaAction(
+        jsonEncode(performSocialMediaActionRequest),
       businessId
+    ),);
+
+    return SocialMediaActionPerformApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -63,7 +69,7 @@ class SocialMediaActionPerformHandler extends SocialMediaActionPerformApiInterfa
 class SocialMediaActionPerformApi {
   external SocialMediaActionPerformApi();
 
-  external void performSocialMediaAction( 
+  external dynamic performSocialMediaAction( 
         String performSocialMediaActionRequest,
         String businessId
     );

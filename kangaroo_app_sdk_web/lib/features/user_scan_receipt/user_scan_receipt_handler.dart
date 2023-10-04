@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class UserScanReceiptHandler extends UserScanReceiptApiInterface
   scanReceipt({ 
         required final ScanReceiptRequest scanReceiptRequest
     }) {
-    UserScanReceiptApi().scanReceipt(
-      jsonEncode(scanReceiptRequest)
+    final Future<String?> request = promiseToFuture<String?>(
+        UserScanReceiptApi().scanReceipt(
+        jsonEncode(scanReceiptRequest)
+    ),);
+
+    return UserScanReceiptApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class UserScanReceiptHandler extends UserScanReceiptApiInterface
 class UserScanReceiptApi {
   external UserScanReceiptApi();
 
-  external void scanReceipt( 
+  external dynamic scanReceipt( 
         String scanReceiptRequest
     );
 

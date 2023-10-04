@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/get_default_bus
 
 class GetDefaultBusinessIdApiFederated extends GetDefaultBusinessIdApiInterface {
   @override
-  getDefaultBusinessId({ 
+Future<Result<DefaultBusiness>?> getDefaultBusinessId({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_default_business_id',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_default_business_id',
     {
       'businessId' : businessId
     }
+    );
+
+    return GetDefaultBusinessIdApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

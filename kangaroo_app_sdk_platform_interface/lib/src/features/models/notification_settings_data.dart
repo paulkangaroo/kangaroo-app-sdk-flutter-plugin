@@ -2,10 +2,10 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_business_payload.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_business.dart';
 
 
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_business_payload.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/notification_business.dart';
 
 
 part 'notification_settings_data.g.dart';
@@ -16,7 +16,7 @@ class NotificationSettingsData {
   ///The notification settings id. This is not required when updating notification settings.  
   final String? id;
 
-  final NotificationBusinessPayload? business;
+  final NotificationBusiness? business;
 
   final bool? allowEmail;
 
@@ -24,12 +24,15 @@ class NotificationSettingsData {
 
   final bool? allowPush;
 
+  final int? allowSmsStatus;
+
   NotificationSettingsData({
     required this.id,
     required this.business,
     required this.allowEmail,
     required this.allowSms,
     required this.allowPush,
+    required this.allowSmsStatus,
   });
 
   factory NotificationSettingsData.fromJson(Map<String, dynamic> data) => _$NotificationSettingsDataFromJson(data);

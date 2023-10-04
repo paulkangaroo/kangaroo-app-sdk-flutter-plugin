@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class UserBusinessSocialMediaLinksHandler extends UserBusinessSocialMediaLinksAp
   getUserBusinessSocialMediaLinks({ 
         required final String businessId
     }) {
-    UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
-      businessId
+    final Future<String?> request = promiseToFuture<String?>(
+        UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
+        businessId
+    ),);
+
+    return UserBusinessSocialMediaLinksApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class UserBusinessSocialMediaLinksHandler extends UserBusinessSocialMediaLinksAp
 class UserBusinessSocialMediaLinksApi {
   external UserBusinessSocialMediaLinksApi();
 
-  external void getUserBusinessSocialMediaLinks( 
+  external dynamic getUserBusinessSocialMediaLinks( 
         String businessId
     );
 

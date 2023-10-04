@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/banners/banners
 
 class BannersApiFederated extends BannersApiInterface {
   @override
-  getBanners() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_banners');
+Future<Result<BannersModel>?> getBanners() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_banners');
+
+    return BannersApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _bannersEvent =

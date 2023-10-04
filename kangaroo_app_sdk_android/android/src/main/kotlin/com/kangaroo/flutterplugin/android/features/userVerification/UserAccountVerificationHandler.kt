@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.userVerification
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.userVerification.UserAccountVerificationApi
+import features.userVerification.models.UserProfileModel
+
 import features.userVerification.serializeUserAccountVerificationState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class UserAccountVerificationHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class UserAccountVerificationHandler : EventChannel.StreamHandler, PluginChannel
     override val eventChannel: String
         get() = "customer_sdk/events/verify_account"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return verifyAccount(call)
     }
 
@@ -26,15 +33,21 @@ class UserAccountVerificationHandler : EventChannel.StreamHandler, PluginChannel
     }
 
     companion object {
-        fun verifyAccount(call: MethodCall): Unit? {
-            UserAccountVerificationApi().verifyAccount(
+        suspend fun verifyAccount(call: MethodCall): String? {
+            val result = UserAccountVerificationApi().verifyAccount(
                 intent = call.argument<String>("intent") as String,
                 token = call.argument<String>("token") as String,
                 email = call.argument<String?>("email"),
                 phone = call.argument<String?>("phone"),
                 countryCode = call.argument<String?>("countryCode")
-            )
-            return null
+            ).toJsonResult<UserProfileModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

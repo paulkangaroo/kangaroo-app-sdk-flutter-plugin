@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.publicOffers
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.publicOffers.PublicOffersApi
+import features.publicOffers.models.UserOffersModel
+
 import features.publicOffers.serializePublicOffersState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class PublicOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class PublicOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {
     override val eventChannel: String
         get() = "customer_sdk/events/get_public_offers"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getPublicOffers(call)
     }
 
@@ -26,9 +33,15 @@ class PublicOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun getPublicOffers(call: MethodCall): Unit? {
-            PublicOffersApi().getPublicOffers()
-            return null
+        suspend fun getPublicOffers(call: MethodCall): String? {
+            val result = PublicOffersApi().getPublicOffers().toJsonResult<UserOffersModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

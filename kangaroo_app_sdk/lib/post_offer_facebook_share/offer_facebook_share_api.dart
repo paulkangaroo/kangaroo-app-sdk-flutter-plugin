@@ -6,14 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/post_offer_facebook_share/offer_facebook_share_platform_interface.dart';
 
 class OfferFacebookShareApi {
-  static postOfferFacebookShare({ 
+  static Future<Result<UserProfileModel>?> postOfferFacebookShare({ 
     required final String offerId,
     final String include = "balance",
     required final String facebookUserId,
     final String type = "facebook_share",
     final String friendsCount = "1",
   }) {
-    OfferFacebookShareApiInterface.instance.postOfferFacebookShare( 
+    return OfferFacebookShareApiInterface.instance.postOfferFacebookShare( 
       offerId: offerId,
       include: include,
       facebookUserId: facebookUserId,

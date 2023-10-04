@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.postOfferFacebookShare
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.postOfferFacebookShare.OfferFacebookShareApi
+import features.postOfferFacebookShare.models.UserProfileModel
+
 import features.postOfferFacebookShare.serializeOfferFacebookShareState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class OfferFacebookShareHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class OfferFacebookShareHandler : EventChannel.StreamHandler, PluginChannelHandl
     override val eventChannel: String
         get() = "customer_sdk/events/post_offer_facebook_share"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return postOfferFacebookShare(call)
     }
 
@@ -26,15 +33,21 @@ class OfferFacebookShareHandler : EventChannel.StreamHandler, PluginChannelHandl
     }
 
     companion object {
-        fun postOfferFacebookShare(call: MethodCall): Unit? {
-            OfferFacebookShareApi().postOfferFacebookShare(
+        suspend fun postOfferFacebookShare(call: MethodCall): String? {
+            val result = OfferFacebookShareApi().postOfferFacebookShare(
                 offerId = call.argument<String>("offerId") as String,
                 include = call.argument<String>("include") as String,
                 facebookUserId = call.argument<String>("facebookUserId") as String,
                 type = call.argument<String>("type") as String,
                 friendsCount = call.argument<String>("friendsCount") as String
-            )
-            return null
+            ).toJsonResult<UserProfileModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

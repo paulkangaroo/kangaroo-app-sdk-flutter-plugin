@@ -10,19 +10,23 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_registrati
 
 class UserRegistrationApiFederated extends UserRegistrationApiInterface {
   @override
-  createAccount({ 
+Future<Result<UserProfileDataModel>?> createAccount({ 
         final String? email,
         final String? phone,
         final String? countryCode,
         final String? language
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/create_account',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/create_account',
     {
       'email' : email,
       'phone' : phone,
       'countryCode' : countryCode,
       'language' : language
     }
+    );
+
+    return UserRegistrationApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

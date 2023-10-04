@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -22,7 +23,12 @@ class UserTransactionHistoryHandler extends UserTransactionHistoryApiInterface
 
   @override
   getUserTransactionHistory() {
-    UserTransactionHistoryApi().getUserTransactionHistory();
+    final Future<String?> request = promiseToFuture<String?>(
+        UserTransactionHistoryApi().getUserTransactionHistory());
+
+    return UserTransactionHistoryApiInterface.deSerializedPlatformResponse(
+      request,
+    );
   }
 
   @override
@@ -57,7 +63,7 @@ class UserTransactionHistoryHandler extends UserTransactionHistoryApiInterface
 class UserTransactionHistoryApi {
   external UserTransactionHistoryApi();
 
-  external void getUserTransactionHistory();
+  external dynamic getUserTransactionHistory();
 
   external void observeUserTransactionHistoryState(
     Function(String) onData,

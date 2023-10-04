@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.businessList
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.businessList.BusinessesApi
+import features.businessList.models.Businesses
+
 import features.businessList.serializeBusinessesState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class BusinessesHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class BusinessesHandler : EventChannel.StreamHandler, PluginChannelHandler {
     override val eventChannel: String
         get() = "customer_sdk/events/get_businesses"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getBusinesses(call)
     }
 
@@ -26,9 +33,15 @@ class BusinessesHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun getBusinesses(call: MethodCall): Unit? {
-            BusinessesApi().getBusinesses()
-            return null
+        suspend fun getBusinesses(call: MethodCall): String? {
+            val result = BusinessesApi().getBusinesses().toJsonResult<Businesses>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

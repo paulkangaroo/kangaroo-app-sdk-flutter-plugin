@@ -10,14 +10,14 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/make_pay_pal_pa
 
 class PayPalPaymentApiFederated extends PayPalPaymentApiInterface {
   @override
-  makePayPalPayment({ 
+Future<Result<PayPalPaymentModel>?> makePayPalPayment({ 
         final String intent = "buy_giftcard",
         final String provider = "paypal",
         required final int giftcardId,
         required final String paypalReturnUrl,
         required final String paypalCancelUrl
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/make_pay_pal_payment',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/make_pay_pal_payment',
     {
       'intent' : intent,
       'provider' : provider,
@@ -25,6 +25,10 @@ class PayPalPaymentApiFederated extends PayPalPaymentApiInterface {
       'paypalReturnUrl' : paypalReturnUrl,
       'paypalCancelUrl' : paypalCancelUrl
     }
+    );
+
+    return PayPalPaymentApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

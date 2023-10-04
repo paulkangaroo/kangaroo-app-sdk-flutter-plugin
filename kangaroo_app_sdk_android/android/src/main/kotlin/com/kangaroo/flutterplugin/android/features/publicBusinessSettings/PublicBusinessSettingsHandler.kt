@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.publicBusinessSettings
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.publicBusinessSettings.PublicBusinessSettingsApi
+import features.publicBusinessSettings.models.PublicBusinessSettings
+
 import features.publicBusinessSettings.serializePublicBusinessSettingsState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class PublicBusinessSettingsHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class PublicBusinessSettingsHandler : EventChannel.StreamHandler, PluginChannelH
     override val eventChannel: String
         get() = "customer_sdk/events/get_public_business_settings"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getPublicBusinessSettings(call)
     }
 
@@ -26,9 +33,15 @@ class PublicBusinessSettingsHandler : EventChannel.StreamHandler, PluginChannelH
     }
 
     companion object {
-        fun getPublicBusinessSettings(call: MethodCall): Unit? {
-            PublicBusinessSettingsApi().getPublicBusinessSettings()
-            return null
+        suspend fun getPublicBusinessSettings(call: MethodCall): String? {
+            val result = PublicBusinessSettingsApi().getPublicBusinessSettings().toJsonResult<PublicBusinessSettings>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

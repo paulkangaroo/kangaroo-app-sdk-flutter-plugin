@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_rewards/user_business_rewards_platform_interface.dart';
 
 class UserBusinessRewardsApi {
-  static getUserBusinessRewards({ 
+  static Future<Result<UserBusinessRewardsModel>?> getUserBusinessRewards({ 
     required final String businessId,
   }) {
-    UserBusinessRewardsApiInterface.instance.getUserBusinessRewards( 
+    return UserBusinessRewardsApiInterface.instance.getUserBusinessRewards( 
       businessId: businessId,
     );
   }

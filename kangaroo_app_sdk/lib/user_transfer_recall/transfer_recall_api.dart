@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transfer_recall/transfer_recall_platform_interface.dart';
 
 class TransferRecallApi {
-  static recallTransfer({ 
+  static Future<Result<TransferActionResultModel>?> recallTransfer({ 
     required final String recallId,
   }) {
-    TransferRecallApiInterface.instance.recallTransfer( 
+    return TransferRecallApiInterface.instance.recallTransfer( 
       recallId: recallId,
     );
   }

@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_products/public_products_platform_interface.dart';
 
 class PublicProductsApi {
-  static getPublicProducts() {
-    PublicProductsApiInterface.instance.getPublicProducts();
+  static Future<Result<PublicProductsModel>?> getPublicProducts() {
+    return PublicProductsApiInterface.instance.getPublicProducts();
   }
 
   static Stream<Result<PublicProductsModel>> get publicProductsStream {

@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/business_list/b
 
 class BusinessesApiFederated extends BusinessesApiInterface {
   @override
-  getBusinesses() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_businesses');
+Future<Result<Businesses>?> getBusinesses() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_businesses');
+
+    return BusinessesApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _businessesEvent =

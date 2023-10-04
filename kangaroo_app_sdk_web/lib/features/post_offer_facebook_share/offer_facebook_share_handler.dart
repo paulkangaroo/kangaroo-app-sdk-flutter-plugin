@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -28,12 +29,17 @@ class OfferFacebookShareHandler extends OfferFacebookShareApiInterface
         final String type = "facebook_share",
         final String friendsCount = "1"
     }) {
-    OfferFacebookShareApi().postOfferFacebookShare(
-      offerId,
+    final Future<String?> request = promiseToFuture<String?>(
+        OfferFacebookShareApi().postOfferFacebookShare(
+        offerId,
       include,
       facebookUserId,
       type,
       friendsCount
+    ),);
+
+    return OfferFacebookShareApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -69,7 +75,7 @@ class OfferFacebookShareHandler extends OfferFacebookShareApiInterface
 class OfferFacebookShareApi {
   external OfferFacebookShareApi();
 
-  external void postOfferFacebookShare( 
+  external dynamic postOfferFacebookShare( 
         String offerId,
         String include,
         String facebookUserId,

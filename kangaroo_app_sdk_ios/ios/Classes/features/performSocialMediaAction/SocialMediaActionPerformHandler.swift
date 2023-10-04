@@ -33,7 +33,8 @@ class SocialMediaActionPerformHandler: NSObject, FlutterStreamHandler, PluginCha
 
             SocialMediaActionPerformApi().performSocialMediaAction(
                 methods: performSocialMediaActionRequest,
-                businessId: businessId
+                businessId: businessId,
+
             )
         }
         

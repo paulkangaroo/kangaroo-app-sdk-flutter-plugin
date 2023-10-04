@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -25,9 +26,14 @@ class UserUnsubscribeHandler extends UserUnsubscribeApiInterface
         required final String campaignId,
         required final String token
     }) {
-    UserUnsubscribeApi().unsubscribe(
-      campaignId,
+    final Future<String?> request = promiseToFuture<String?>(
+        UserUnsubscribeApi().unsubscribe(
+        campaignId,
       token
+    ),);
+
+    return UserUnsubscribeApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -63,7 +69,7 @@ class UserUnsubscribeHandler extends UserUnsubscribeApiInterface
 class UserUnsubscribeApi {
   external UserUnsubscribeApi();
 
-  external void unsubscribe( 
+  external dynamic unsubscribe( 
         String campaignId,
         String token
     );

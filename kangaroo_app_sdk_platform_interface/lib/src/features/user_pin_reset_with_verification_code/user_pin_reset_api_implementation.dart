@@ -10,14 +10,14 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart
 
 class UserPinResetApiFederated extends UserPinResetApiInterface {
   @override
-  resetPin({ 
+Future<Result<EmptyResponse>?> resetPin({ 
         required final String verificationCode,
         required final String pinCode,
         final String? email,
         final String? phone,
         final String? countryCode
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/reset_pin',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/reset_pin',
     {
       'verificationCode' : verificationCode,
       'pinCode' : pinCode,
@@ -25,6 +25,10 @@ class UserPinResetApiFederated extends UserPinResetApiInterface {
       'phone' : phone,
       'countryCode' : countryCode
     }
+    );
+
+    return UserPinResetApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

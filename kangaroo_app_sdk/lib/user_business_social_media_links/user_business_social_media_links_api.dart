@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_social_media_links/user_business_social_media_links_platform_interface.dart';
 
 class UserBusinessSocialMediaLinksApi {
-  static getUserBusinessSocialMediaLinks({ 
+  static Future<Result<SocialMediaLinksModel>?> getUserBusinessSocialMediaLinks({ 
     required final String businessId,
   }) {
-    UserBusinessSocialMediaLinksApiInterface.instance.getUserBusinessSocialMediaLinks( 
+    return UserBusinessSocialMediaLinksApiInterface.instance.getUserBusinessSocialMediaLinks( 
       businessId: businessId,
     );
   }

@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/make_gift_card_purchase/gift_card_purchase_platform_interface.dart';
 
 class GiftCardPurchaseApi {
-  static purchaseGiftCard({ 
+  static Future<Result<GiftCardPayPalPaymentResponseModel>?> purchaseGiftCard({ 
     required final GiftCardPurchaseRequest purchaseGiftCardRequest,
   }) {
-    GiftCardPurchaseApiInterface.instance.purchaseGiftCard( 
+    return GiftCardPurchaseApiInterface.instance.purchaseGiftCard( 
       purchaseGiftCardRequest: purchaseGiftCardRequest,
     );
   }

@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -25,9 +26,14 @@ class PushTokenRegistrationHandler extends PushTokenRegistrationApiInterface
         final String? androidDeviceToken,
         final String? iosDeviceToken
     }) {
-    PushTokenRegistrationApi().registerPushToken(
-      androidDeviceToken,
+    final Future<String?> request = promiseToFuture<String?>(
+        PushTokenRegistrationApi().registerPushToken(
+        androidDeviceToken,
       iosDeviceToken
+    ),);
+
+    return PushTokenRegistrationApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -63,7 +69,7 @@ class PushTokenRegistrationHandler extends PushTokenRegistrationApiInterface
 class PushTokenRegistrationApi {
   external PushTokenRegistrationApi();
 
-  external void registerPushToken( 
+  external dynamic registerPushToken( 
         String? androidDeviceToken,
         String? iosDeviceToken
     );

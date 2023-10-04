@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart
 
 class UserDeleteApiFederated extends UserDeleteApiInterface {
   @override
-  deleteUserAccount() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/delete_user_account');
+Future<Result<EmptyResponse>?> deleteUserAccount() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/delete_user_account');
+
+    return UserDeleteApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _userDeleteEvent =

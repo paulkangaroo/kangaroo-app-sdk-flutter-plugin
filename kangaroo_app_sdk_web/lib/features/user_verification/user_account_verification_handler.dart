@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -28,12 +29,17 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
         final String? phone,
         final String? countryCode
     }) {
-    UserAccountVerificationApi().verifyAccount(
-      intent,
+    final Future<String?> request = promiseToFuture<String?>(
+        UserAccountVerificationApi().verifyAccount(
+        intent,
       token,
       email,
       phone,
       countryCode
+    ),);
+
+    return UserAccountVerificationApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -69,7 +75,7 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
 class UserAccountVerificationApi {
   external UserAccountVerificationApi();
 
-  external void verifyAccount( 
+  external dynamic verifyAccount( 
         String intent,
         String token,
         String? email,

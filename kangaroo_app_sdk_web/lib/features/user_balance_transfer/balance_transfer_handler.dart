@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class BalanceTransferHandler extends BalanceTransferApiInterface
   transfer({ 
         required final TransferRequestModel transferRequest
     }) {
-    BalanceTransferApi().transfer(
-      jsonEncode(transferRequest)
+    final Future<String?> request = promiseToFuture<String?>(
+        BalanceTransferApi().transfer(
+        jsonEncode(transferRequest)
+    ),);
+
+    return BalanceTransferApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class BalanceTransferHandler extends BalanceTransferApiInterface
 class BalanceTransferApi {
   external BalanceTransferApi();
 
-  external void transfer( 
+  external dynamic transfer( 
         String transferRequest
     );
 

@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/check_in
 
 class UserCheckInApiFederated extends UserCheckInApiInterface {
   @override
-  userCheckIn({ 
+Future<Result<CheckInResponseModel>?> userCheckIn({ 
         required final CheckInRequest checkInRequest
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/user_check_in',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/user_check_in',
     {
       'checkInRequest' : jsonEncode(checkInRequest)
     }
+    );
+
+    return UserCheckInApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

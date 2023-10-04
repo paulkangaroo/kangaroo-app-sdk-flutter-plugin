@@ -10,15 +10,19 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/claim_offer/cla
 
 class ClaimOfferApiFederated extends ClaimOfferApiInterface {
   @override
-  claimOffer({ 
+Future<Result<ClaimedOfferModel>?> claimOffer({ 
         required final int offerId,
         required final String customerId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/claim_offer',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/claim_offer',
     {
       'offerId' : offerId,
       'customerId' : customerId
     }
+    );
+
+    return ClaimOfferApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

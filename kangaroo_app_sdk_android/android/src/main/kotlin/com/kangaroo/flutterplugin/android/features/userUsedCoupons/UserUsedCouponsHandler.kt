@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.userUsedCoupons
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.userUsedCoupons.UserUsedCouponsApi
+import features.userUsedCoupons.models.UserCouponsModel
+
 import features.userUsedCoupons.serializeUserUsedCouponsState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class UserUsedCouponsHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class UserUsedCouponsHandler : EventChannel.StreamHandler, PluginChannelHandler 
     override val eventChannel: String
         get() = "customer_sdk/events/get_user_used_coupons"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getUserUsedCoupons(call)
     }
 
@@ -26,9 +33,15 @@ class UserUsedCouponsHandler : EventChannel.StreamHandler, PluginChannelHandler 
     }
 
     companion object {
-        fun getUserUsedCoupons(call: MethodCall): Unit? {
-            UserUsedCouponsApi().getUserUsedCoupons()
-            return null
+        suspend fun getUserUsedCoupons(call: MethodCall): String? {
+            val result = UserUsedCouponsApi().getUserUsedCoupons().toJsonResult<UserCouponsModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

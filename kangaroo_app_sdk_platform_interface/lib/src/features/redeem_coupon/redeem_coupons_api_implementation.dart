@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/redeem_c
 
 class RedeemCouponsApiFederated extends RedeemCouponsApiInterface {
   @override
-  redeemCoupon({ 
+Future<Result<CouponRedemptionResponseModel>?> redeemCoupon({ 
         required final RedeemCouponRequest redeemCouponRequest
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/redeem_coupon',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/redeem_coupon',
     {
       'redeemCouponRequest' : jsonEncode(redeemCouponRequest)
     }
+    );
+
+    return RedeemCouponsApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

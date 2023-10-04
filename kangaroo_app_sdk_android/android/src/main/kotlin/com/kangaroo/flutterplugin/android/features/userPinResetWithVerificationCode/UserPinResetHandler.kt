@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.userPinResetWithVerificationCode
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.userPinResetWithVerificationCode.UserPinResetApi
+
+import kangaroorewards.appsdk.core.io.EmptyResponse
 import features.userPinResetWithVerificationCode.serializeUserPinResetState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
     override val eventChannel: String
         get() = "customer_sdk/events/reset_pin"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return resetPin(call)
     }
 
@@ -26,15 +33,21 @@ class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun resetPin(call: MethodCall): Unit? {
-            UserPinResetApi().resetPin(
+        suspend fun resetPin(call: MethodCall): String? {
+            val result = UserPinResetApi().resetPin(
                 verificationCode = call.argument<String>("verificationCode") as String,
                 pinCode = call.argument<String>("pinCode") as String,
                 email = call.argument<String?>("email"),
                 phone = call.argument<String?>("phone"),
                 countryCode = call.argument<String?>("countryCode")
-            )
-            return null
+            ).toJsonResult<EmptyResponse>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

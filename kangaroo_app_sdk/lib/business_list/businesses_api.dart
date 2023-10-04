@@ -6,8 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/business_list/businesses_platform_interface.dart';
 
 class BusinessesApi {
-  static getBusinesses() {
-    BusinessesApiInterface.instance.getBusinesses();
+  static Future<Result<Businesses>?> getBusinesses() {
+    return BusinessesApiInterface.instance.getBusinesses();
   }
 
   static Stream<Result<Businesses>> get businessesStream {

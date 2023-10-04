@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -27,11 +28,16 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
         final String? countryCode,
         final String? language
     }) {
-    UserRegistrationApi().createAccount(
-      email,
+    final Future<String?> request = promiseToFuture<String?>(
+        UserRegistrationApi().createAccount(
+        email,
       phone,
       countryCode,
       language
+    ),);
+
+    return UserRegistrationApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -67,7 +73,7 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
 class UserRegistrationApi {
   external UserRegistrationApi();
 
-  external void createAccount( 
+  external dynamic createAccount( 
         String? email,
         String? phone,
         String? countryCode,

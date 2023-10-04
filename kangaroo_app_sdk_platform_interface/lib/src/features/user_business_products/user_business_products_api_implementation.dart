@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_p
 
 class UserBusinessProductsApiFederated extends UserBusinessProductsApiInterface {
   @override
-  getUserBusinessProducts({ 
+Future<Result<UserProductsModel>?> getUserBusinessProducts({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_products',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_products',
     {
       'businessId' : businessId
     }
+    );
+
+    return UserBusinessProductsApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

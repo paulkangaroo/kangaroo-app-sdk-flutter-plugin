@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_balance_transfer/balance_transfer_platform_interface.dart';
 
 class BalanceTransferApi {
-  static transfer({ 
+  static Future<Result<TransferResponseModel>?> transfer({ 
     required final TransferRequestModel transferRequest,
   }) {
-    BalanceTransferApiInterface.instance.transfer( 
+    return BalanceTransferApiInterface.instance.transfer( 
       transferRequest: transferRequest,
     );
   }

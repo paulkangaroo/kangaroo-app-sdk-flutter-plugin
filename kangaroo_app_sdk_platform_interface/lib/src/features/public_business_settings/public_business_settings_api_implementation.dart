@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_business
 
 class PublicBusinessSettingsApiFederated extends PublicBusinessSettingsApiInterface {
   @override
-  getPublicBusinessSettings() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_business_settings');
+Future<Result<PublicBusinessSettings>?> getPublicBusinessSettings() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_business_settings');
+
+    return PublicBusinessSettingsApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _publicBusinessSettingsEvent =

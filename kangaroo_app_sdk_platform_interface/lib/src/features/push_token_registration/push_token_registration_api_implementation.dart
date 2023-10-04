@@ -10,15 +10,19 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/push_token_regi
 
 class PushTokenRegistrationApiFederated extends PushTokenRegistrationApiInterface {
   @override
-  registerPushToken({ 
+Future<Result<UserProfileModel>?> registerPushToken({ 
         final String? androidDeviceToken,
         final String? iosDeviceToken
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/register_push_token',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/register_push_token',
     {
       'androidDeviceToken' : androidDeviceToken,
       'iosDeviceToken' : iosDeviceToken
     }
+    );
+
+    return PushTokenRegistrationApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

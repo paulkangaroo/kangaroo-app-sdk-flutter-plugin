@@ -6,10 +6,10 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_frequent_buyer_programs/user_business_frequent_buyer_programs_platform_interface.dart';
 
 class UserBusinessFrequentBuyerProgramsApi {
-  static getUserBusinessFrequentBuyerPrograms({ 
+  static Future<Result<FrequentBuyerProgramsModel>?> getUserBusinessFrequentBuyerPrograms({ 
     required final String businessId,
   }) {
-    UserBusinessFrequentBuyerProgramsApiInterface.instance.getUserBusinessFrequentBuyerPrograms( 
+    return UserBusinessFrequentBuyerProgramsApiInterface.instance.getUserBusinessFrequentBuyerPrograms( 
       businessId: businessId,
     );
   }

@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_ala_carte/
 
 class AlaCarteProductsApiFederated extends AlaCarteProductsApiInterface {
   @override
-  getAlaCarteProducts() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_ala_carte_products');
+Future<Result<AlaCarteProductsModel>?> getAlaCarteProducts() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_ala_carte_products');
+
+    return AlaCarteProductsApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _alaCarteProductsEvent =

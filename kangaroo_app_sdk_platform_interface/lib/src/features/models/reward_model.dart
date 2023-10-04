@@ -34,6 +34,8 @@ class RewardModel {
 
   final bool? partnerReward;
 
+  final int? partnerRewardType;
+
   final bool? redeemForGiftCard;
 
   final String? type;
@@ -64,6 +66,7 @@ class RewardModel {
     required this.realValue,
     required this.discountValue,
     required this.partnerReward,
+    required this.partnerRewardType,
     required this.redeemForGiftCard,
     required this.type,
     required this.title,

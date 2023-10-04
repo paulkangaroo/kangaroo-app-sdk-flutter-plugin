@@ -5,6 +5,7 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
@@ -24,8 +25,13 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
   updateNotificationPreferences({ 
         required final NotificationSettingsUpdateRequest notificationPreferencesRequest
     }) {
-    UpdateNotificationPreferencesApi().updateNotificationPreferences(
-      jsonEncode(notificationPreferencesRequest)
+    final Future<String?> request = promiseToFuture<String?>(
+        UpdateNotificationPreferencesApi().updateNotificationPreferences(
+        jsonEncode(notificationPreferencesRequest)
+    ),);
+
+    return UpdateNotificationPreferencesApiInterface.deSerializedPlatformResponse(
+      request,
     );
   }
 
@@ -61,7 +67,7 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
 class UpdateNotificationPreferencesApi {
   external UpdateNotificationPreferencesApi();
 
-  external void updateNotificationPreferences( 
+  external dynamic updateNotificationPreferences( 
         String notificationPreferencesRequest
     );
 

@@ -6,14 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/make_pay_pal_payment/pay_pal_payment_platform_interface.dart';
 
 class PayPalPaymentApi {
-  static makePayPalPayment({ 
+  static Future<Result<PayPalPaymentModel>?> makePayPalPayment({ 
     final String intent = "buy_giftcard",
     final String provider = "paypal",
     required final int giftcardId,
     required final String paypalReturnUrl,
     required final String paypalCancelUrl,
   }) {
-    PayPalPaymentApiInterface.instance.makePayPalPayment( 
+    return PayPalPaymentApiInterface.instance.makePayPalPayment( 
       intent: intent,
       provider: provider,
       giftcardId: giftcardId,

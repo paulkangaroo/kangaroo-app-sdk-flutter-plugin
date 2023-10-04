@@ -1,11 +1,18 @@
+@file:Suppress("INLINE_FROM_HIGHER_PLATFORM")
+@file:OptIn(ExperimentalJsExport::class)
 package com.kangaroo.flutterplugin.android.features.publicProducts
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.base.pushSerializedResultToEventSink
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
+import kotlin.js.ExperimentalJsExport
 import features.publicProducts.PublicProductsApi
+import features.publicProducts.models.PublicProductsModel
+
 import features.publicProducts.serializePublicProductsState
+import kangaroorewards.appsdk.core.domain.SerializedResult
+import kangaroorewards.appsdk.core.domain.toJsonResult
 
 
 class PublicProductsHandler : EventChannel.StreamHandler, PluginChannelHandler {
@@ -17,7 +24,7 @@ class PublicProductsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     override val eventChannel: String
         get() = "customer_sdk/events/get_public_products"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): String? {
         return getPublicProducts(call)
     }
 
@@ -26,9 +33,15 @@ class PublicProductsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     }
 
     companion object {
-        fun getPublicProducts(call: MethodCall): Unit? {
-            PublicProductsApi().getPublicProducts()
-            return null
+        suspend fun getPublicProducts(call: MethodCall): String? {
+            val result = PublicProductsApi().getPublicProducts().toJsonResult<PublicProductsModel>()
+
+            return when (result) {
+                is SerializedResult.Success -> result.data
+                is SerializedResult.UnauthorizedError -> result.error
+                is SerializedResult.UnknownError -> result.error
+                else -> null
+            }
         }
     }
 

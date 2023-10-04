@@ -10,13 +10,17 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_a
 
 class UserBusinessAlaCarteProductsApiFederated extends UserBusinessAlaCarteProductsApiInterface {
   @override
-  getUserBusinessAlaCarteProducts({ 
+Future<Result<AlaCarteProductsModel>?> getUserBusinessAlaCarteProducts({ 
         required final String businessId
-    }) {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_ala_carte_products',
+    }) async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_ala_carte_products',
     {
       'businessId' : businessId
     }
+    );
+
+    return UserBusinessAlaCarteProductsApiInterface.deSerializedPlatformResponse(
+      response,
     );
   }
 

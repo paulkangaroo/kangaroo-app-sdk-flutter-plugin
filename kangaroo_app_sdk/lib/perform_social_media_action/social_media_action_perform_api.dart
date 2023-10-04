@@ -6,11 +6,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/perform_social_media_action/social_media_action_perform_platform_interface.dart';
 
 class SocialMediaActionPerformApi {
-  static performSocialMediaAction({ 
+  static Future<Result<PerformSocialMediaActionResponseModel>?> performSocialMediaAction({ 
     required final PerformSocialMediaActionRequestModel performSocialMediaActionRequest,
     required final String businessId,
   }) {
-    SocialMediaActionPerformApiInterface.instance.performSocialMediaAction( 
+    return SocialMediaActionPerformApiInterface.instance.performSocialMediaAction( 
       performSocialMediaActionRequest: performSocialMediaActionRequest,
       businessId: businessId,
     );

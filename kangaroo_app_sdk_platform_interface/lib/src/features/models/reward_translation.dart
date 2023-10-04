@@ -4,7 +4,9 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/language.dart';
 
+
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/language.dart';
+
 
 part 'reward_translation.g.dart';
 
@@ -25,6 +27,8 @@ class RewardTranslation {
 
   final Language? language;
 
+  final String? note;
+
   RewardTranslation({
     required this.id,
     required this.languageId,
@@ -33,6 +37,7 @@ class RewardTranslation {
     required this.termsConditions,
     required this.link,
     required this.language,
+    required this.note,
   });
 
   factory RewardTranslation.fromJson(Map<String, dynamic> data) => _$RewardTranslationFromJson(data);

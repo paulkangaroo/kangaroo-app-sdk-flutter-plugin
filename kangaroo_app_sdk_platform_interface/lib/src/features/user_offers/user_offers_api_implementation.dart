@@ -10,8 +10,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_offers/use
 
 class UserOffersApiFederated extends UserOffersApiInterface {
   @override
-  getUserOffers() {
-    sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_offers');
+Future<Result<UserOffersModel>?> getUserOffers() async {
+    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_offers');
+
+    return UserOffersApiInterface.deSerializedPlatformResponse(
+      response,
+    );
   }
 
   static const EventChannel _userOffersEvent =
