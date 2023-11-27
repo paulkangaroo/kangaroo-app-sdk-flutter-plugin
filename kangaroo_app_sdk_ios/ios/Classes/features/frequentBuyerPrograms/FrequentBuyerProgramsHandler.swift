@@ -9,8 +9,8 @@ class FrequentBuyerProgramsHandler: NSObject, FlutterStreamHandler, PluginChanne
 
     var eventChannel: String = "customer_sdk/events/get_frequent_buyer_programs"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        FrequentBuyerProgramsHandler.getFrequentBuyerPrograms(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await FrequentBuyerProgramsHandler.getFrequentBuyerPrograms(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class FrequentBuyerProgramsHandler: NSObject, FlutterStreamHandler, PluginChanne
     }
 
 
-    static func getFrequentBuyerPrograms(call: FlutterMethodCall) {
-        FrequentBuyerProgramsApi().getFrequentBuyerPrograms()
+    static func getFrequentBuyerPrograms(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await FrequentBuyerProgramsApi().getFrequentBuyerPrograms().serializeFrequentBuyerProgramsApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

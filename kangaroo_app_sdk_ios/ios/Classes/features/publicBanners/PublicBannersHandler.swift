@@ -9,8 +9,8 @@ class PublicBannersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
 
     var eventChannel: String = "customer_sdk/events/get_public_banners"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        PublicBannersHandler.getPublicBanners(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await PublicBannersHandler.getPublicBanners(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class PublicBannersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
     }
 
 
-    static func getPublicBanners(call: FlutterMethodCall) {
-        PublicBannersApi().getPublicBanners()
+    static func getPublicBanners(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await PublicBannersApi().getPublicBanners().serializePublicBannersApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

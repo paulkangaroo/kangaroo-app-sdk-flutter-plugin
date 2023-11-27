@@ -9,8 +9,8 @@ class UserProductsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
 
     var eventChannel: String = "customer_sdk/events/get_user_products"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserProductsHandler.getUserProducts(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserProductsHandler.getUserProducts(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class UserProductsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
     }
 
 
-    static func getUserProducts(call: FlutterMethodCall) {
-        UserProductsApi().getUserProducts()
+    static func getUserProducts(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await UserProductsApi().getUserProducts().serializeUserProductsApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

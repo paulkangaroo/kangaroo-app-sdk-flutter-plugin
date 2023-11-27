@@ -9,8 +9,8 @@ class SocialMediaLinksHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
     var eventChannel: String = "customer_sdk/events/get_social_media_links"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        SocialMediaLinksHandler.getSocialMediaLinks(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await SocialMediaLinksHandler.getSocialMediaLinks(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class SocialMediaLinksHandler: NSObject, FlutterStreamHandler, PluginChannelHand
     }
 
 
-    static func getSocialMediaLinks(call: FlutterMethodCall) {
-        SocialMediaLinksApi().getSocialMediaLinks()
+    static func getSocialMediaLinks(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await SocialMediaLinksApi().getSocialMediaLinks().serializeSocialMediaLinksApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

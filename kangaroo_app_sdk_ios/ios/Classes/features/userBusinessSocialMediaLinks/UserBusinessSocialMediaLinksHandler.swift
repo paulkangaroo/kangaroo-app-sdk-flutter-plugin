@@ -9,8 +9,8 @@ class UserBusinessSocialMediaLinksHandler: NSObject, FlutterStreamHandler, Plugi
 
     var eventChannel: String = "customer_sdk/events/get_user_business_social_media_links"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserBusinessSocialMediaLinksHandler.getUserBusinessSocialMediaLinks(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserBusinessSocialMediaLinksHandler.getUserBusinessSocialMediaLinks(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class UserBusinessSocialMediaLinksHandler: NSObject, FlutterStreamHandler, Plugi
     }
 
 
-    static func getUserBusinessSocialMediaLinks(call: FlutterMethodCall) {
+    static func getUserBusinessSocialMediaLinks(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
+         let result = try await UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
                 businessId: businessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

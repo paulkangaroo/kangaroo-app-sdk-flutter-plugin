@@ -9,8 +9,8 @@ class UserCouponsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     var eventChannel: String = "customer_sdk/events/get_user_coupons"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserCouponsHandler.getUserCoupons(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserCouponsHandler.getUserCoupons(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class UserCouponsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     }
 
 
-    static func getUserCoupons(call: FlutterMethodCall) {
-        UserCouponsApi().getUserCoupons()
+    static func getUserCoupons(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await UserCouponsApi().getUserCoupons().serializeUserCouponsApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

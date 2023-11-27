@@ -9,8 +9,8 @@ class UserTransactionHistoryHandler: NSObject, FlutterStreamHandler, PluginChann
 
     var eventChannel: String = "customer_sdk/events/get_user_transaction_history"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserTransactionHistoryHandler.getUserTransactionHistory(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserTransactionHistoryHandler.getUserTransactionHistory(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class UserTransactionHistoryHandler: NSObject, FlutterStreamHandler, PluginChann
     }
 
 
-    static func getUserTransactionHistory(call: FlutterMethodCall) {
-        UserTransactionHistoryApi().getUserTransactionHistory()
+    static func getUserTransactionHistory(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await UserTransactionHistoryApi().getUserTransactionHistory().serializeUserTransactionHistoryApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

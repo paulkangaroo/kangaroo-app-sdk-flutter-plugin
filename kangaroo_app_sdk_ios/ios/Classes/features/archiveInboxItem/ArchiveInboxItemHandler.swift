@@ -9,8 +9,8 @@ class ArchiveInboxItemHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
     var eventChannel: String = "customer_sdk/events/archive_inbox_item"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        ArchiveInboxItemHandler.archiveInboxItem(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await ArchiveInboxItemHandler.archiveInboxItem(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,15 +18,32 @@ class ArchiveInboxItemHandler: NSObject, FlutterStreamHandler, PluginChannelHand
     }
 
 
-    static func archiveInboxItem(call: FlutterMethodCall) {
+    static func archiveInboxItem(call: FlutterMethodCall) async -> String? {
         
 
         
-        ArchiveInboxItemApi().archiveInboxItem(methods: call.arguments as! [String : Any])
+        do {}
+        let result = try await ArchiveInboxItemApi().archiveInboxItem(methods: call.arguments as! [String : Any]).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        catch {
+            return nil
+        }
+
 
         
 
 
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

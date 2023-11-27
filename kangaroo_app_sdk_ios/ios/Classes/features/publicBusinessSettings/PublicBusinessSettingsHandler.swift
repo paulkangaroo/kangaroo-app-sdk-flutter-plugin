@@ -9,8 +9,8 @@ class PublicBusinessSettingsHandler: NSObject, FlutterStreamHandler, PluginChann
 
     var eventChannel: String = "customer_sdk/events/get_public_business_settings"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        PublicBusinessSettingsHandler.getPublicBusinessSettings(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await PublicBusinessSettingsHandler.getPublicBusinessSettings(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class PublicBusinessSettingsHandler: NSObject, FlutterStreamHandler, PluginChann
     }
 
 
-    static func getPublicBusinessSettings(call: FlutterMethodCall) {
-        PublicBusinessSettingsApi().getPublicBusinessSettings()
+    static func getPublicBusinessSettings(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await PublicBusinessSettingsApi().getPublicBusinessSettings().serializePublicBusinessSettingsApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

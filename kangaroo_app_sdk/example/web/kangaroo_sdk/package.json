@@ -1,10 +1,15 @@
 {
-  "name": "KangarooAppSDK",
-  "version": "1.0.0",
-  "main": "KangarooAppSDK.js",
-  "types": "KangarooAppSDK.d.ts",
+  "name": "KangarooAppCustomerSDK",
+  "version": "1.1.1",
+  "main": "KangarooAppCustomerSDK.js",
+  "types": "KangarooAppCustomerSDK.d.ts",
   "devDependencies": {},
-  "dependencies": {},
+  "dependencies": {
+    "node-fetch": "2.6.7",
+    "abort-controller": "3.0.0",
+    "ws": "8.5.0",
+    "format-util": "^1.0.5"
+  },
   "peerDependencies": {},
   "optionalDependencies": {},
   "bundledDependencies": []

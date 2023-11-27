@@ -9,8 +9,8 @@ class BusinessHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     var eventChannel: String = "customer_sdk/events/get_business"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        BusinessHandler.getBusiness(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await BusinessHandler.getBusiness(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class BusinessHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     }
 
 
-    static func getBusiness(call: FlutterMethodCall) {
+    static func getBusiness(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            BusinessApi().getBusiness(
+         let result = try await BusinessApi().getBusiness(
                 businessId: businessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

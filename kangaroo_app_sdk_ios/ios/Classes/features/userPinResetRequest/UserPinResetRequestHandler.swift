@@ -9,8 +9,8 @@ class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelH
 
     var eventChannel: String = "customer_sdk/events/request_pin_reset"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserPinResetRequestHandler.requestPinReset(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserPinResetRequestHandler.requestPinReset(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,29 +18,48 @@ class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelH
     }
 
 
-    static func requestPinReset(call: FlutterMethodCall) {
+    static func requestPinReset(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let mode = myArgs["mode"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let mode = myArgs["mode"] as? String else {return nil}
                 let email = myArgs["email"] as? String? ?? nil
                 let phone = myArgs["phone"] as? String? ?? nil
                 let countryCode = myArgs["countryCode"] as? String? ?? nil
 
-            UserPinResetRequestApi().requestPinReset(
+         let result = try await UserPinResetRequestApi().requestPinReset(
                 mode: mode,
                 email: email,
                 phone: phone,
                 countryCode: countryCode
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

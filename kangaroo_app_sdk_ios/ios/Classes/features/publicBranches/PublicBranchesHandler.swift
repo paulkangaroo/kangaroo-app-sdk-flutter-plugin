@@ -9,8 +9,8 @@ class PublicBranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
 
     var eventChannel: String = "customer_sdk/events/get_public_branches"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        PublicBranchesHandler.getPublicBranches(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await PublicBranchesHandler.getPublicBranches(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class PublicBranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
     }
 
 
-    static func getPublicBranches(call: FlutterMethodCall) {
-        PublicBranchesApi().getPublicBranches()
+    static func getPublicBranches(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await PublicBranchesApi().getPublicBranches().serializePublicBranchesApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

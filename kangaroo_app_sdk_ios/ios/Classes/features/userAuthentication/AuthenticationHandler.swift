@@ -5,31 +5,48 @@ import KangarooAppSdkCustomer
 class UserAuthenticationHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     var methodChannel: String = "customer_sdk/methods/user_authentication"
-    
+
     var eventChannel: String = "customer_sdk/events/user_authentication"
-    
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserAuthenticationHandler.authenticateUser(call: call)
+
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserAuthenticationHandler.authenticateUser(call: call)
     }
-    
+
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
         return self
     }
-    
+
     var sink: FlutterEventSink?
-    
-    static func authenticateUser(call: FlutterMethodCall) {
+
+    static func authenticateUser(call: FlutterMethodCall) async -> String? {
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any],
-           let username = myArgs["username"] as? String,
-           let password = myArgs["password"] as? String {
-            UserAuthenticationApi().authenticateUser(
-                username: username,
-                password: password
-            )
+
+        do {
+            if let myArgs = args as? [String: Any],
+               let username = myArgs["username"] as? String,
+               let password = myArgs["password"] as? String {
+                let result = try await UserAuthenticationApi().authenticateUser(
+                    username: username,
+                    password: password
+                ).serializeUserAuthenticationResult()
+
+                switch result {
+                case let result as SerializedResultSuccess:
+                    return result.data
+                case let result as SerializedResultUnauthorizedError:
+                    return result.error
+                case let result as SerializedResultUnknownError:
+                    return result.error
+                default:
+                    return nil
+                }
+            }
+        } catch {
+         return nil
         }
+        return nil
     }
     
     func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {

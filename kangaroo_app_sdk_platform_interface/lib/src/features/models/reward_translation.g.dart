@@ -20,7 +20,8 @@ RewardTranslation _$RewardTranslationFromJson(Map<String, dynamic> json) =>
             'description',
             'terms_conditions',
             'link',
-            'language'
+            'language',
+            'note'
           ],
         );
         final val = RewardTranslation(
@@ -36,6 +37,7 @@ RewardTranslation _$RewardTranslationFromJson(Map<String, dynamic> json) =>
               (v) => v == null
                   ? null
                   : Language.fromJson(v as Map<String, dynamic>)),
+          note: $checkedConvert('note', (v) => v as String?),
         );
         return val;
       },
@@ -54,4 +56,5 @@ Map<String, dynamic> _$RewardTranslationToJson(RewardTranslation instance) =>
       'terms_conditions': instance.termsConditions,
       'link': instance.link,
       'language': instance.language?.toJson(),
+      'note': instance.note,
     };

@@ -9,8 +9,8 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
 
     var eventChannel: String = "customer_sdk/events/update_user_profile"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserProfileUpdateHandler.updateUserProfile(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserProfileUpdateHandler.updateUserProfile(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,17 +18,19 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
     }
 
 
-    static func updateUserProfile(call: FlutterMethodCall) {
+    static func updateUserProfile(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
+        do {
+       if let myArgs = args as? [String: Any] {
                         let firstName = myArgs["firstName"] as? String? ?? nil
                 let lastName = myArgs["lastName"] as? String? ?? nil
                 let birthDate = myArgs["birthDate"] as? String? ?? nil
@@ -36,15 +38,32 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
                 let gender = myArgs["gender"] as? String? ?? nil
                 let profilePhoto = myArgs["profilePhoto"] as? String? ?? nil
 
-            UserProfileUpdateApi().updateUserProfile(
+         let result = try await UserProfileUpdateApi().updateUserProfile(
                 firstName: firstName,
                 lastName: lastName,
                 birthDate: birthDate,
                 language: language,
                 gender: gender,
                 profilePhoto: profilePhoto
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

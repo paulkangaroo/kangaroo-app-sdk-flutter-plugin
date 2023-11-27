@@ -9,8 +9,8 @@ class UserRegistrationWithCrmHandler: NSObject, FlutterStreamHandler, PluginChan
 
     var eventChannel: String = "customer_sdk/events/create_account_with_crm"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserRegistrationWithCrmHandler.createAccountWithCrm(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserRegistrationWithCrmHandler.createAccountWithCrm(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,15 +18,32 @@ class UserRegistrationWithCrmHandler: NSObject, FlutterStreamHandler, PluginChan
     }
 
 
-    static func createAccountWithCrm(call: FlutterMethodCall) {
+    static func createAccountWithCrm(call: FlutterMethodCall) async -> String? {
         
 
         
-        UserRegistrationWithCrmApi().createAccountWithCrm(methods: call.arguments as! [String : Any])
+        do {}
+        let result = try await UserRegistrationWithCrmApi().createAccountWithCrm(methods: call.arguments as! [String : Any]).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        catch {
+            return nil
+        }
+
 
         
 
 
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

@@ -9,8 +9,8 @@ class AlaCarteProductsHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
     var eventChannel: String = "customer_sdk/events/get_ala_carte_products"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        AlaCarteProductsHandler.getAlaCarteProducts(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await AlaCarteProductsHandler.getAlaCarteProducts(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class AlaCarteProductsHandler: NSObject, FlutterStreamHandler, PluginChannelHand
     }
 
 
-    static func getAlaCarteProducts(call: FlutterMethodCall) {
-        AlaCarteProductsApi().getAlaCarteProducts()
+    static func getAlaCarteProducts(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await AlaCarteProductsApi().getAlaCarteProducts().serializeAlaCarteProductsApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

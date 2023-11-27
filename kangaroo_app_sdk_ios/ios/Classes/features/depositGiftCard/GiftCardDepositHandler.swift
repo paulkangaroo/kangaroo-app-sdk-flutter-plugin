@@ -9,8 +9,8 @@ class GiftCardDepositHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
     var eventChannel: String = "customer_sdk/events/deposit_gift_card"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        GiftCardDepositHandler.depositGiftCard(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await GiftCardDepositHandler.depositGiftCard(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class GiftCardDepositHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
     }
 
 
-    static func depositGiftCard(call: FlutterMethodCall) {
+    static func depositGiftCard(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let depositId = myArgs["depositId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let depositId = myArgs["depositId"] as? String else {return nil}
 
-            GiftCardDepositApi().depositGiftCard(
+         let result = try await GiftCardDepositApi().depositGiftCard(
                 depositId: depositId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

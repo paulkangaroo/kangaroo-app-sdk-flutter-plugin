@@ -16,7 +16,7 @@ class UserAuthenticationHandler : EventChannel.StreamHandler, PluginChannelHandl
     override val eventChannel: String
         get() = "customer_sdk/events/user_authentication"
 
-    override fun onMethodCall(call: MethodCall): Unit? {
+    override suspend fun onMethodCall(call: MethodCall): Unit? {
         return authenticateUser(call)
     }
 

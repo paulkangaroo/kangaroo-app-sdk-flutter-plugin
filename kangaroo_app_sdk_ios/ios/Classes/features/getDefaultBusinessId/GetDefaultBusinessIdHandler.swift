@@ -9,8 +9,8 @@ class GetDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChannel
 
     var eventChannel: String = "customer_sdk/events/get_default_business_id"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        GetDefaultBusinessIdHandler.getDefaultBusinessId(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await GetDefaultBusinessIdHandler.getDefaultBusinessId(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class GetDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChannel
     }
 
 
-    static func getDefaultBusinessId(call: FlutterMethodCall) {
+    static func getDefaultBusinessId(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            GetDefaultBusinessIdApi().getDefaultBusinessId(
+         let result = try await GetDefaultBusinessIdApi().getDefaultBusinessId(
                 businessId: businessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

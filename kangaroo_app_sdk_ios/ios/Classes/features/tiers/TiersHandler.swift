@@ -9,8 +9,8 @@ class TiersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     var eventChannel: String = "customer_sdk/events/get_tiers"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        TiersHandler.getTiers(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await TiersHandler.getTiers(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class TiersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     }
 
 
-    static func getTiers(call: FlutterMethodCall) {
-        TiersApi().getTiers()
+    static func getTiers(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await TiersApi().getTiers().serializeTiersApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

@@ -9,8 +9,8 @@ class UpdateDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChan
 
     var eventChannel: String = "customer_sdk/events/update_default_business_id"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UpdateDefaultBusinessIdHandler.updateDefaultBusinessId(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UpdateDefaultBusinessIdHandler.updateDefaultBusinessId(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,25 +18,44 @@ class UpdateDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChan
     }
 
 
-    static func updateDefaultBusinessId(call: FlutterMethodCall) {
+    static func updateDefaultBusinessId(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
-                guard let defaultBusinessId = myArgs["defaultBusinessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
+                guard let defaultBusinessId = myArgs["defaultBusinessId"] as? String else {return nil}
 
-            UpdateDefaultBusinessIdApi().updateDefaultBusinessId(
+         let result = try await UpdateDefaultBusinessIdApi().updateDefaultBusinessId(
                 businessId: businessId,
                 defaultBusinessId: defaultBusinessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

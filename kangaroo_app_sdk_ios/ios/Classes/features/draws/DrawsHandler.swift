@@ -9,8 +9,8 @@ class DrawsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     var eventChannel: String = "customer_sdk/events/get_draws"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        DrawsHandler.getDraws(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await DrawsHandler.getDraws(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class DrawsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     }
 
 
-    static func getDraws(call: FlutterMethodCall) {
-        DrawsApi().getDraws()
+    static func getDraws(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await DrawsApi().getDraws().serializeDrawsApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

@@ -9,8 +9,8 @@ class UserPinUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
 
     var eventChannel: String = "customer_sdk/events/update_pin"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserPinUpdateHandler.updatePin(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserPinUpdateHandler.updatePin(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,15 +18,32 @@ class UserPinUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
     }
 
 
-    static func updatePin(call: FlutterMethodCall) {
+    static func updatePin(call: FlutterMethodCall) async -> String? {
         
 
         
-        UserPinUpdateApi().updatePin(methods: call.arguments as! [String : Any])
+        do {}
+        let result = try await UserPinUpdateApi().updatePin(methods: call.arguments as! [String : Any]).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        catch {
+            return nil
+        }
+
 
         
 
 
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

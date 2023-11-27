@@ -9,8 +9,8 @@ class BranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     var eventChannel: String = "customer_sdk/events/get_business_branches"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        BranchesHandler.getBusinessBranches(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await BranchesHandler.getBusinessBranches(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class BranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     }
 
 
-    static func getBusinessBranches(call: FlutterMethodCall) {
+    static func getBusinessBranches(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            BranchesApi().getBusinessBranches(
+         let result = try await BranchesApi().getBusinessBranches(
                 businessId: businessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

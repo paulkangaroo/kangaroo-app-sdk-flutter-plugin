@@ -9,8 +9,8 @@ class PushTokenRegistrationHandler: NSObject, FlutterStreamHandler, PluginChanne
 
     var eventChannel: String = "customer_sdk/events/register_push_token"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        PushTokenRegistrationHandler.registerPushToken(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await PushTokenRegistrationHandler.registerPushToken(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,25 +18,44 @@ class PushTokenRegistrationHandler: NSObject, FlutterStreamHandler, PluginChanne
     }
 
 
-    static func registerPushToken(call: FlutterMethodCall) {
+    static func registerPushToken(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
+        do {
+       if let myArgs = args as? [String: Any] {
                         let androidDeviceToken = myArgs["androidDeviceToken"] as? String? ?? nil
                 let iosDeviceToken = myArgs["iosDeviceToken"] as? String? ?? nil
 
-            PushTokenRegistrationApi().registerPushToken(
+         let result = try await PushTokenRegistrationApi().registerPushToken(
                 androidDeviceToken: androidDeviceToken,
                 iosDeviceToken: iosDeviceToken
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

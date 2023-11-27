@@ -9,8 +9,8 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
 
     var eventChannel: String = "customer_sdk/events/post_offer_facebook_share"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        OfferFacebookShareHandler.postOfferFacebookShare(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await OfferFacebookShareHandler.postOfferFacebookShare(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,31 +18,50 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
     }
 
 
-    static func postOfferFacebookShare(call: FlutterMethodCall) {
+    static func postOfferFacebookShare(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let offerId = myArgs["offerId"] as? String else {return}
-                guard let include = myArgs["include"] as? String else {return}
-                guard let facebookUserId = myArgs["facebookUserId"] as? String else {return}
-                guard let type = myArgs["type"] as? String else {return}
-                guard let friendsCount = myArgs["friendsCount"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let offerId = myArgs["offerId"] as? String else {return nil}
+                guard let include = myArgs["include"] as? String else {return nil}
+                guard let facebookUserId = myArgs["facebookUserId"] as? String else {return nil}
+                guard let type = myArgs["type"] as? String else {return nil}
+                guard let friendsCount = myArgs["friendsCount"] as? String else {return nil}
 
-            OfferFacebookShareApi().postOfferFacebookShare(
+         let result = try await OfferFacebookShareApi().postOfferFacebookShare(
                 offerId: offerId,
                 include: include,
                 facebookUserId: facebookUserId,
                 type: type,
                 friendsCount: friendsCount
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

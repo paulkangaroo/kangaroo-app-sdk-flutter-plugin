@@ -9,8 +9,8 @@ class UserBusinessTiersHandler: NSObject, FlutterStreamHandler, PluginChannelHan
 
     var eventChannel: String = "customer_sdk/events/get_user_business_tiers"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserBusinessTiersHandler.getUserBusinessTiers(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserBusinessTiersHandler.getUserBusinessTiers(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class UserBusinessTiersHandler: NSObject, FlutterStreamHandler, PluginChannelHan
     }
 
 
-    static func getUserBusinessTiers(call: FlutterMethodCall) {
+    static func getUserBusinessTiers(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let memberBusinessId = myArgs["memberBusinessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let memberBusinessId = myArgs["memberBusinessId"] as? String else {return nil}
 
-            UserBusinessTiersApi().getUserBusinessTiers(
+         let result = try await UserBusinessTiersApi().getUserBusinessTiers(
                 memberBusinessId: memberBusinessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

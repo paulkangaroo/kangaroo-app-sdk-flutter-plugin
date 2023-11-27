@@ -9,8 +9,8 @@ class SocialMediaActionPerformHandler: NSObject, FlutterStreamHandler, PluginCha
 
     var eventChannel: String = "customer_sdk/events/perform_social_media_action"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        SocialMediaActionPerformHandler.performSocialMediaAction(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await SocialMediaActionPerformHandler.performSocialMediaAction(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,28 +18,46 @@ class SocialMediaActionPerformHandler: NSObject, FlutterStreamHandler, PluginCha
     }
 
 
-    static func performSocialMediaAction(call: FlutterMethodCall) {
+    static func performSocialMediaAction(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let performSocialMediaActionRequest = call.arguments as? [String : Any] else {return}
-                guard let businessId = myArgs["businessId"] as? String else {return}
 
-            SocialMediaActionPerformApi().performSocialMediaAction(
+        do {
+           if let myArgs = args as? [String: Any] {
+                        guard let performSocialMediaActionRequest = call.arguments as? [String : Any] else {return}
+                guard let businessId = myArgs["businessId"] as? String else {return nil}
+
+            let result = try await SocialMediaActionPerformApi().performSocialMediaAction.serializeNative()(
                 methods: performSocialMediaActionRequest,
                 businessId: businessId,
 
-            )
+            ).serializeNative()
+        }
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
         }
         
 
 
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

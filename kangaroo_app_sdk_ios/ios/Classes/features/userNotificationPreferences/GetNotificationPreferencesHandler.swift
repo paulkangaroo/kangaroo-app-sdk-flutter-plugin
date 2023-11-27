@@ -9,8 +9,8 @@ class GetNotificationPreferencesHandler: NSObject, FlutterStreamHandler, PluginC
 
     var eventChannel: String = "customer_sdk/events/get_notification_preferences"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        GetNotificationPreferencesHandler.getNotificationPreferences(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await GetNotificationPreferencesHandler.getNotificationPreferences(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,14 +18,31 @@ class GetNotificationPreferencesHandler: NSObject, FlutterStreamHandler, PluginC
     }
 
 
-    static func getNotificationPreferences(call: FlutterMethodCall) {
-        GetNotificationPreferencesApi().getNotificationPreferences()
+    static func getNotificationPreferences(call: FlutterMethodCall) async -> String? {
+        do {
+        let result = try await GetNotificationPreferencesApi().getNotificationPreferences().serializeGetNotificationPreferencesApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
+
+        
+
 
         
 
         
-
-        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

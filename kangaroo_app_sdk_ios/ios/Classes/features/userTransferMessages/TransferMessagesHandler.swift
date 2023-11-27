@@ -9,8 +9,8 @@ class TransferMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
     var eventChannel: String = "customer_sdk/events/get_transfer_messages"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        TransferMessagesHandler.getTransferMessages(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await TransferMessagesHandler.getTransferMessages(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class TransferMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
     }
 
 
-    static func getTransferMessages(call: FlutterMethodCall) {
+    static func getTransferMessages(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            TransferMessagesApi().getTransferMessages(
+         let result = try await TransferMessagesApi().getTransferMessages(
                 businessId: businessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

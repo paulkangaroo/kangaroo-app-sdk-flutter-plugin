@@ -9,8 +9,8 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
 
     var eventChannel: String = "customer_sdk/events/recall_transfer"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        TransferRecallHandler.recallTransfer(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await TransferRecallHandler.recallTransfer(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
     }
 
 
-    static func recallTransfer(call: FlutterMethodCall) {
+    static func recallTransfer(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let recallId = myArgs["recallId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let recallId = myArgs["recallId"] as? String else {return nil}
 
-            TransferRecallApi().recallTransfer(
+         let result = try await TransferRecallApi().recallTransfer(
                 recallId: recallId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

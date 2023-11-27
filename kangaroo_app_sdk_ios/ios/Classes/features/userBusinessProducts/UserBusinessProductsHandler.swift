@@ -9,8 +9,8 @@ class UserBusinessProductsHandler: NSObject, FlutterStreamHandler, PluginChannel
 
     var eventChannel: String = "customer_sdk/events/get_user_business_products"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserBusinessProductsHandler.getUserBusinessProducts(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserBusinessProductsHandler.getUserBusinessProducts(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class UserBusinessProductsHandler: NSObject, FlutterStreamHandler, PluginChannel
     }
 
 
-    static func getUserBusinessProducts(call: FlutterMethodCall) {
+    static func getUserBusinessProducts(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            UserBusinessProductsApi().getUserBusinessProducts(
+         let result = try await UserBusinessProductsApi().getUserBusinessProducts(
                 businessId: businessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

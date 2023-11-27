@@ -9,8 +9,8 @@ class UserBusinessProfileHandler: NSObject, FlutterStreamHandler, PluginChannelH
 
     var eventChannel: String = "customer_sdk/events/get_user_business_profile"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserBusinessProfileHandler.getUserBusinessProfile(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserBusinessProfileHandler.getUserBusinessProfile(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class UserBusinessProfileHandler: NSObject, FlutterStreamHandler, PluginChannelH
     }
 
 
-    static func getUserBusinessProfile(call: FlutterMethodCall) {
+    static func getUserBusinessProfile(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            UserBusinessProfileApi().getUserBusinessProfile(
+         let result = try await UserBusinessProfileApi().getUserBusinessProfile(
                 businessId: businessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

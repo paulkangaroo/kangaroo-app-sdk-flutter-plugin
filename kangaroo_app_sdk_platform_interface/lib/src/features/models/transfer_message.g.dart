@@ -24,7 +24,8 @@ TransferMessage _$TransferMessageFromJson(Map<String, dynamic> json) =>
             'created_at',
             'offer',
             'gift_card_queue',
-            'actions'
+            'actions',
+            'archived'
           ],
         );
         final val = TransferMessage(
@@ -53,6 +54,7 @@ TransferMessage _$TransferMessageFromJson(Map<String, dynamic> json) =>
                   ?.map((e) => TransferMessageActions.fromJson(
                       e as Map<String, dynamic>))
                   .toList()),
+          archived: $checkedConvert('archived', (v) => v as bool?),
         );
         return val;
       },
@@ -76,4 +78,5 @@ Map<String, dynamic> _$TransferMessageToJson(TransferMessage instance) =>
       'offer': instance.offer?.toJson(),
       'gift_card_queue': instance.giftCardQueue?.toJson(),
       'actions': instance.actions?.map((e) => e.toJson()).toList(),
+      'archived': instance.archived,
     };

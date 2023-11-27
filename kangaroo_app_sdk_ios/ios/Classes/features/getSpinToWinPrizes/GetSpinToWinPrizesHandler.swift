@@ -9,8 +9,8 @@ class GetSpinToWinPrizesHandler: NSObject, FlutterStreamHandler, PluginChannelHa
 
     var eventChannel: String = "customer_sdk/events/get_spin_to_win_prizes"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        GetSpinToWinPrizesHandler.getSpinToWinPrizes(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await GetSpinToWinPrizesHandler.getSpinToWinPrizes(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class GetSpinToWinPrizesHandler: NSObject, FlutterStreamHandler, PluginChannelHa
     }
 
 
-    static func getSpinToWinPrizes(call: FlutterMethodCall) {
+    static func getSpinToWinPrizes(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let businessId = myArgs["businessId"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            GetSpinToWinPrizesApi().getSpinToWinPrizes(
+         let result = try await GetSpinToWinPrizesApi().getSpinToWinPrizes(
                 businessId: businessId
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:kangaroo_app_sdk/get_crm_fields/get_crm_fields_api.dart';
 import 'package:kangaroo_app_sdk/kangaroo_app_sdk.dart';
 import 'package:kangaroo_app_sdk/user_authentication/user_authentication_api.dart'
     as UserAuthenticationApi;
@@ -32,19 +33,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    UserAuthenticationApi.UserAuthenticationApi.authenticationStream
-        .listen((authResult) {
-      authResult.when(
-        idle: () {},
-        loading: () => Fluttertoast.showToast(msg: "loading"),
-        success: (authData) => Fluttertoast.showToast(
-            msg: authData?.accessToken ?? "no access token"),
-        unauthorized: (int code, String message) =>
-            Fluttertoast.showToast(msg: message),
-        error: (int code, String message) =>
-            Fluttertoast.showToast(msg: message),
-      );
-    });
   }
 
   authenticateUser() {
@@ -57,6 +45,18 @@ class _MyAppState extends State<MyApp> {
 
   getUserProfile() {
     UserProfileApi.UserProfileApi.getUserProfile();
+  }
+
+  getCrmFields() async {
+    GetCrmFieldsApi.getCrmFields().then((value) {
+      value?.whenOrNull(success: (success) {
+        success?.data?.forEach((element) {
+          debugPrint('success crm fields: ${element.label}');
+        });
+      }, error: (code, msg) {
+        debugPrint('failed to get crm fields; $msg');
+      });
+    });
   }
 
   getOffers() async {
@@ -151,6 +151,17 @@ class _MyAppState extends State<MyApp> {
                 child: Center(
                   child: Text(
                     'reset pin',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              MaterialButton(
+                onPressed: getCrmFields,
+                color: Colors.red.shade800,
+                height: 100,
+                child: Center(
+                  child: Text(
+                    'get crm fields',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

@@ -9,8 +9,8 @@ class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
     var eventChannel: String = "customer_sdk/events/transfer"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        BalanceTransferHandler.transfer(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await BalanceTransferHandler.transfer(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,15 +18,32 @@ class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
     }
 
 
-    static func transfer(call: FlutterMethodCall) {
+    static func transfer(call: FlutterMethodCall) async -> String? {
         
 
         
-        BalanceTransferApi().transfer(methods: call.arguments as! [String : Any])
+        do {}
+        let result = try await BalanceTransferApi().transfer(methods: call.arguments as! [String : Any]).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        catch {
+            return nil
+        }
+
 
         
 
 
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

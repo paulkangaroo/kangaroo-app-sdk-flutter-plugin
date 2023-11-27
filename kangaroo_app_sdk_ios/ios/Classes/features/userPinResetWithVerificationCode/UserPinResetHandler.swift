@@ -9,8 +9,8 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
 
     var eventChannel: String = "customer_sdk/events/reset_pin"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserPinResetHandler.resetPin(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserPinResetHandler.resetPin(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,31 +18,50 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
     }
 
 
-    static func resetPin(call: FlutterMethodCall) {
+    static func resetPin(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let verificationCode = myArgs["verificationCode"] as? String else {return}
-                guard let pinCode = myArgs["pinCode"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let verificationCode = myArgs["verificationCode"] as? String else {return nil}
+                guard let pinCode = myArgs["pinCode"] as? String else {return nil}
                 let email = myArgs["email"] as? String? ?? nil
                 let phone = myArgs["phone"] as? String? ?? nil
                 let countryCode = myArgs["countryCode"] as? String? ?? nil
 
-            UserPinResetApi().resetPin(
+         let result = try await UserPinResetApi().resetPin(
                 verificationCode: verificationCode,
                 pinCode: pinCode,
                 email: email,
                 phone: phone,
                 countryCode: countryCode
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

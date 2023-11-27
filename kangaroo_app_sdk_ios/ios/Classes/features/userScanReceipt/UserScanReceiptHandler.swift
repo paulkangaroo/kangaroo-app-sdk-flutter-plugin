@@ -9,8 +9,8 @@ class UserScanReceiptHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
     var eventChannel: String = "customer_sdk/events/scan_receipt"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserScanReceiptHandler.scanReceipt(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserScanReceiptHandler.scanReceipt(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,15 +18,32 @@ class UserScanReceiptHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
     }
 
 
-    static func scanReceipt(call: FlutterMethodCall) {
+    static func scanReceipt(call: FlutterMethodCall) async -> String? {
         
 
         
-        UserScanReceiptApi().scanReceipt(methods: call.arguments as! [String : Any])
+        do {}
+        let result = try await UserScanReceiptApi().scanReceipt(methods: call.arguments as! [String : Any]).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        catch {
+            return nil
+        }
+
 
         
 
 
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

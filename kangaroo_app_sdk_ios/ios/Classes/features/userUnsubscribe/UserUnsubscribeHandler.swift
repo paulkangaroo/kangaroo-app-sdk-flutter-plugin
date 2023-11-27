@@ -9,8 +9,8 @@ class UserUnsubscribeHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
     var eventChannel: String = "customer_sdk/events/unsubscribe"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserUnsubscribeHandler.unsubscribe(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserUnsubscribeHandler.unsubscribe(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,25 +18,44 @@ class UserUnsubscribeHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
     }
 
 
-    static func unsubscribe(call: FlutterMethodCall) {
+    static func unsubscribe(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let campaignId = myArgs["campaignId"] as? String else {return}
-                guard let token = myArgs["token"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let campaignId = myArgs["campaignId"] as? String else {return nil}
+                guard let token = myArgs["token"] as? String else {return nil}
 
-            UserUnsubscribeApi().unsubscribe(
+         let result = try await UserUnsubscribeApi().unsubscribe(
                 campaignId: campaignId,
                 token: token
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

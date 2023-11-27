@@ -9,8 +9,8 @@ class UserCheckInHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     var eventChannel: String = "customer_sdk/events/user_check_in"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserCheckInHandler.userCheckIn(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserCheckInHandler.userCheckIn(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,15 +18,32 @@ class UserCheckInHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     }
 
 
-    static func userCheckIn(call: FlutterMethodCall) {
+    static func userCheckIn(call: FlutterMethodCall) async -> String? {
         
 
         
-        UserCheckInApi().userCheckIn(methods: call.arguments as! [String : Any])
+        do {}
+        let result = try await UserCheckInApi().userCheckIn(methods: call.arguments as! [String : Any]).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        catch {
+            return nil
+        }
+
 
         
 
 
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

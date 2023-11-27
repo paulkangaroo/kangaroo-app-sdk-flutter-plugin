@@ -20,7 +20,8 @@ Banner _$BannerFromJson(Map<String, dynamic> json) => $checkedCreate(
             'created_at',
             'published_at',
             'expires_at',
-            'language'
+            'language',
+            'archived'
           ],
         );
         final val = Banner(
@@ -36,6 +37,7 @@ Banner _$BannerFromJson(Map<String, dynamic> json) => $checkedCreate(
               (v) => v == null
                   ? null
                   : Language.fromJson(v as Map<String, dynamic>)),
+          archived: $checkedConvert('archived', (v) => v as bool?),
         );
         return val;
       },
@@ -56,4 +58,5 @@ Map<String, dynamic> _$BannerToJson(Banner instance) => <String, dynamic>{
       'published_at': instance.publishedAt,
       'expires_at': instance.expiresAt,
       'language': instance.language?.toJson(),
+      'archived': instance.archived,
     };

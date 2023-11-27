@@ -9,8 +9,8 @@ class PublicRewardHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
 
     var eventChannel: String = "customer_sdk/events/get_public_reward"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        PublicRewardHandler.getPublicReward(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await PublicRewardHandler.getPublicReward(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class PublicRewardHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
     }
 
 
-    static func getPublicReward(call: FlutterMethodCall) {
+    static func getPublicReward(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let rewardSlug = myArgs["rewardSlug"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let rewardSlug = myArgs["rewardSlug"] as? String else {return nil}
 
-            PublicRewardApi().getPublicReward(
+         let result = try await PublicRewardApi().getPublicReward(
                 rewardSlug: rewardSlug
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

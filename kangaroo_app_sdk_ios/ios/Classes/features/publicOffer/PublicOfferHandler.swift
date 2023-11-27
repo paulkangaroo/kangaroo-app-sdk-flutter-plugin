@@ -9,8 +9,8 @@ class PublicOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
     var eventChannel: String = "customer_sdk/events/get_public_offer"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        PublicOfferHandler.getPublicOffer(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await PublicOfferHandler.getPublicOffer(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,23 +18,42 @@ class PublicOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     }
 
 
-    static func getPublicOffer(call: FlutterMethodCall) {
+    static func getPublicOffer(call: FlutterMethodCall) async -> String? {
         
 
         
+
 
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any] {
-                        guard let offerSlug = myArgs["offerSlug"] as? String else {return}
+        do {
+       if let myArgs = args as? [String: Any] {
+                        guard let offerSlug = myArgs["offerSlug"] as? String else {return nil}
 
-            PublicOfferApi().getPublicOffer(
+         let result = try await PublicOfferApi().getPublicOffer(
                 offerSlug: offerSlug
-            )
+            ).serializeNative()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping

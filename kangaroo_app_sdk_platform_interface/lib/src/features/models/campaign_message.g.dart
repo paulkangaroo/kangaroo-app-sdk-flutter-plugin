@@ -18,6 +18,7 @@ CampaignMessage _$CampaignMessageFromJson(Map<String, dynamic> json) =>
             'cell_email',
             'subject',
             'sent_at',
+            'archived',
             'message',
             'campaign'
           ],
@@ -27,6 +28,7 @@ CampaignMessage _$CampaignMessageFromJson(Map<String, dynamic> json) =>
           cellEmail: $checkedConvert('cell_email', (v) => v as int?),
           subject: $checkedConvert('subject', (v) => v as String?),
           sentAt: $checkedConvert('sent_at', (v) => v as String?),
+          archived: $checkedConvert('archived', (v) => v as bool?),
           message: $checkedConvert('message', (v) => v as String?),
           campaign: $checkedConvert(
               'campaign',
@@ -45,6 +47,7 @@ Map<String, dynamic> _$CampaignMessageToJson(CampaignMessage instance) =>
       'cell_email': instance.cellEmail,
       'subject': instance.subject,
       'sent_at': instance.sentAt,
+      'archived': instance.archived,
       'message': instance.message,
       'campaign': instance.campaign?.toJson(),
     };

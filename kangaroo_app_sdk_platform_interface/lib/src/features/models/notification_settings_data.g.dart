@@ -19,7 +19,8 @@ NotificationSettingsData _$NotificationSettingsDataFromJson(
             'business',
             'allow_email',
             'allow_sms',
-            'allow_push'
+            'allow_push',
+            'allow_sms_status'
           ],
         );
         final val = NotificationSettingsData(
@@ -28,18 +29,19 @@ NotificationSettingsData _$NotificationSettingsDataFromJson(
               'business',
               (v) => v == null
                   ? null
-                  : NotificationBusinessPayload.fromJson(
-                      v as Map<String, dynamic>)),
+                  : NotificationBusiness.fromJson(v as Map<String, dynamic>)),
           allowEmail: $checkedConvert('allow_email', (v) => v as bool?),
           allowSms: $checkedConvert('allow_sms', (v) => v as bool?),
           allowPush: $checkedConvert('allow_push', (v) => v as bool?),
+          allowSmsStatus: $checkedConvert('allow_sms_status', (v) => v as int?),
         );
         return val;
       },
       fieldKeyMap: const {
         'allowEmail': 'allow_email',
         'allowSms': 'allow_sms',
-        'allowPush': 'allow_push'
+        'allowPush': 'allow_push',
+        'allowSmsStatus': 'allow_sms_status'
       },
     );
 
@@ -51,4 +53,5 @@ Map<String, dynamic> _$NotificationSettingsDataToJson(
       'allow_email': instance.allowEmail,
       'allow_sms': instance.allowSms,
       'allow_push': instance.allowPush,
+      'allow_sms_status': instance.allowSmsStatus,
     };

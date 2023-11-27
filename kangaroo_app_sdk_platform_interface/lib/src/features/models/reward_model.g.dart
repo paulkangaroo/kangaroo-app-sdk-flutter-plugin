@@ -22,6 +22,7 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
             'real_value',
             'discount_value',
             'partner_reward',
+            'partner_reward_type',
             'redeem_for_gift_card',
             'type',
             'title',
@@ -46,6 +47,8 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           discountValue:
               $checkedConvert('discount_value', (v) => (v as num?)?.toDouble()),
           partnerReward: $checkedConvert('partner_reward', (v) => v as bool?),
+          partnerRewardType:
+              $checkedConvert('partner_reward_type', (v) => v as int?),
           redeemForGiftCard:
               $checkedConvert('redeem_for_gift_card', (v) => v as bool?),
           type: $checkedConvert('type', (v) => v as String?),
@@ -78,6 +81,7 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
         'realValue': 'real_value',
         'discountValue': 'discount_value',
         'partnerReward': 'partner_reward',
+        'partnerRewardType': 'partner_reward_type',
         'redeemForGiftCard': 'redeem_for_gift_card',
         'neverExpiresFlag': 'never_expires_flag',
         'termsConditions': 'terms_conditions',
@@ -96,6 +100,7 @@ Map<String, dynamic> _$RewardModelToJson(RewardModel instance) =>
       'real_value': instance.realValue,
       'discount_value': instance.discountValue,
       'partner_reward': instance.partnerReward,
+      'partner_reward_type': instance.partnerRewardType,
       'redeem_for_gift_card': instance.redeemForGiftCard,
       'type': instance.type,
       'title': instance.title,

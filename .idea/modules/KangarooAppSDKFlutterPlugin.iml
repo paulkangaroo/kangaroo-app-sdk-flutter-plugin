@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/../.." dumb="true">
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/kangaroo_app_sdk_ios/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/kangaroo_app_sdk_ios/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/kangaroo_app_sdk_ios/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_android/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_android/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_android/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_ios/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_ios/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_ios/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_macos/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_macos/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_macos/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_platform_interface/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_platform_interface/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_platform_interface/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_web/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_web/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_web/build" />
+    </content>
+  </component>
+</module>
