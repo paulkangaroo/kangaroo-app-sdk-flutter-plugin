@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/frequent_buyer_
 class FrequentBuyerProgramsApiFederated extends FrequentBuyerProgramsApiInterface {
   @override
 Future<Result<FrequentBuyerProgramsModel>?> getFrequentBuyerPrograms() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_frequent_buyer_programs');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_frequent_buyer_programs');
 
     return FrequentBuyerProgramsApiInterface.deSerializedPlatformResponse(
       response,

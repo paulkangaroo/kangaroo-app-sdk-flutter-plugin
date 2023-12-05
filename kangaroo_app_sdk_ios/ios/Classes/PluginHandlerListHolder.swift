@@ -57,6 +57,8 @@ class PluginHandlerListHolder {
 
     PublicProductsHandler(),
 
+    GetPublicPromotionsHandler(),
+
     PublicRewardHandler(),
 
     PublicRewardsHandler(),
@@ -87,9 +89,13 @@ class PluginHandlerListHolder {
 
     UserBusinessRewardsHandler(),
 
+    UserBusinessCouponsHandler(),
+
     UserBusinessSocialMediaLinksHandler(),
 
     UserBusinessTiersHandler(),
+
+    UserBusinessUsedCouponsHandler(),
 
     UserCouponsHandler(),
 

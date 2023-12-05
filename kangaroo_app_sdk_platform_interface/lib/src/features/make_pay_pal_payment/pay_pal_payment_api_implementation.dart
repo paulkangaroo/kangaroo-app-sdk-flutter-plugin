@@ -17,7 +17,7 @@ Future<Result<PayPalPaymentModel>?> makePayPalPayment({
         required final String paypalReturnUrl,
         required final String paypalCancelUrl
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/make_pay_pal_payment',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/make_pay_pal_payment',
     {
       'intent' : intent,
       'provider' : provider,

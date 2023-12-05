@@ -13,7 +13,7 @@ class UserBusinessSocialMediaLinksApiFederated extends UserBusinessSocialMediaLi
 Future<Result<SocialMediaLinksModel>?> getUserBusinessSocialMediaLinks({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_social_media_links',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_social_media_links',
     {
       'businessId' : businessId
     }

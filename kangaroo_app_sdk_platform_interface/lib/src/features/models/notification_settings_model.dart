@@ -11,6 +11,7 @@ part 'notification_settings_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class NotificationSettingsModel {
+  @JsonKey(name: "data")
   final List<NotificationSettingsData>? data;
 
   NotificationSettingsModel({

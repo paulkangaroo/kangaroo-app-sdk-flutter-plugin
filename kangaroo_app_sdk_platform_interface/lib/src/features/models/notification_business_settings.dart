@@ -9,6 +9,7 @@ part 'notification_business_settings.g.dart';
 /// The settings of this business. 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class NotificationBusinessSettings {
+  @JsonKey(name: "double_opt_in")
   final bool? doubleOptIn;
 
   NotificationBusinessSettings({

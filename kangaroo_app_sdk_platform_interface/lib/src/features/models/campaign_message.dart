@@ -12,23 +12,30 @@ part 'campaign_message.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CampaignMessage {
   ///Unique campaign ID. 
+  @JsonKey(name: "id")
   final String? id;
 
   ///The original delivery method for this campaign 
+  @JsonKey(name: "cell_email")
   final int? cellEmail;
 
   ///The title for this campaign. 
+  @JsonKey(name: "subject")
   final String? subject;
 
   ///The original send date of this campaign. 
+  @JsonKey(name: "sent_at")
   final String? sentAt;
 
   ///If this campaign message is archived or not. 
+  @JsonKey(name: "archived")
   final bool? archived;
 
   ///A short / simple message for this campaign. 
+  @JsonKey(name: "message")
   final String? message;
 
+  @JsonKey(name: "campaign")
   final Campaign? campaign;
 
   CampaignMessage({

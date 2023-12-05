@@ -12,6 +12,7 @@ part 'user_offers_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserOffersModel {
   ///A list of all offers available to this user 
+  @JsonKey(name: "data")
   final List<OfferModel> data;
 
   UserOffersModel({

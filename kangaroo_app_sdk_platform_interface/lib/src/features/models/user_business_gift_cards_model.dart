@@ -16,9 +16,11 @@ part 'user_business_gift_cards_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserBusinessGiftCardsModel {
   ///Contains business data 
+  @JsonKey(name: "data")
   final BusinessData data;
 
   ///Contains all gift cards items 
+  @JsonKey(name: "included")
   final UserBusinessGiftCardsIncluded? included;
 
   UserBusinessGiftCardsModel({

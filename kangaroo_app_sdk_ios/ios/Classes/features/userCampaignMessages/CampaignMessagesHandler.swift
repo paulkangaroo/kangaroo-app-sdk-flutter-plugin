@@ -35,7 +35,7 @@ class CampaignMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
          let result = try await CampaignMessagesApi().getCampaignMessages(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeCampaignMessagesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

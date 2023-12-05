@@ -35,7 +35,7 @@ class BusinessHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
          let result = try await BusinessApi().getBusiness(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeBusinessApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

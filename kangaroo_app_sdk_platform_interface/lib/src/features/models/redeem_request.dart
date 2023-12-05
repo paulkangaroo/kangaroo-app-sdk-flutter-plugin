@@ -13,11 +13,14 @@ part 'redeem_request.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class RedeemRequest {
+  @JsonKey(name: "branch_id")
   final String branchId;
 
   ///A list of rewards to redeem. 
+  @JsonKey(name: "catalog_items")
   final List<RedemptionModel> catalogItems;
 
+  @JsonKey(name: "intent")
   final String intent;
 
   RedeemRequest({

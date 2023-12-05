@@ -11,6 +11,7 @@ part 'transfer_action_result_model.g.dart';
 /// Contains the result of a transfer action.
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferActionResultModel {
+  @JsonKey(name: "data")
   final TransferMessage? data;
 
   TransferActionResultModel({

@@ -28,35 +28,47 @@ part 'draw.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Draw {
   ///Unique draw id. 
+  @JsonKey(name: "id")
   final int? id;
 
   ///start date of the draw. 
+  @JsonKey(name: "start_date")
   final String? startDate;
 
   ///end date of the draw. 
+  @JsonKey(name: "end_date")
   final String? endDate;
 
   ///The draw title. 
+  @JsonKey(name: "title")
   final String? title;
 
   ///The draw description. 
+  @JsonKey(name: "description")
   final String? description;
 
   ///The images attached to this draw. There are 3 available sizes: thumbnail, medium, and large.  
+  @JsonKey(name: "images")
   final List<Image>? images;
 
   ///If this draw is enabled or not. 
+  @JsonKey(name: "enabled")
   final bool? enabled;
 
   ///If this draw is expired or not. 
+  @JsonKey(name: "is_expired")
   final bool? isExpired;
 
+  @JsonKey(name: "draw_branches")
   final List<DrawBranches>? drawBranches;
 
+  @JsonKey(name: "languages")
   final List<Languages>? languages;
 
+  @JsonKey(name: "draw_rules")
   final List<DrawRule>? drawRules;
 
+  @JsonKey(name: "draw_prizes")
   final List<DrawPrize>? drawPrizes;
 
   Draw({

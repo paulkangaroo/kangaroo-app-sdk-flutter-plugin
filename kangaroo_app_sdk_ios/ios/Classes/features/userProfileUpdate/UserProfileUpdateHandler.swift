@@ -45,7 +45,7 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
                 language: language,
                 gender: gender,
                 profilePhoto: profilePhoto
-            ).serializeNative()
+            ).serializeUserProfileUpdateApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

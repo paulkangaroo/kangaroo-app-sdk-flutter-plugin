@@ -13,7 +13,7 @@ class ArchiveInboxItemApiFederated extends ArchiveInboxItemApiInterface {
 Future<Result<ArchiveResponseModel>?> archiveInboxItem({ 
         required final ArchiveRequest archiveRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/archive_inbox_item',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/archive_inbox_item',
     {
       'archiveRequest' : jsonEncode(archiveRequest)
     }

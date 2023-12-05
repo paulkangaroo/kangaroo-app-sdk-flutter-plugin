@@ -16,9 +16,11 @@ part 'frequent_buyer_programs_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class FrequentBuyerProgramsModel {
   ///Contains all user data 
+  @JsonKey(name: "data")
   final UserProfileDataModel? data;
 
   ///Contains frequent buyer programs 
+  @JsonKey(name: "included")
   final FrequentBuyerProgramsIncluded? included;
 
   FrequentBuyerProgramsModel({

@@ -35,7 +35,7 @@ class PublicOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
          let result = try await PublicOfferApi().getPublicOffer(
                 offerSlug: offerSlug
-            ).serializeNative()
+            ).serializePublicOfferApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

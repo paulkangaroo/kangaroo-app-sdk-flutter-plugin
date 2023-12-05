@@ -11,6 +11,7 @@ part 'frequent_buyer_programs_included.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class FrequentBuyerProgramsIncluded {
+  @JsonKey(name: "frequent_buyer_programs")
   final FrequentBuyerProgramList? frequentBuyerPrograms;
 
   FrequentBuyerProgramsIncluded({

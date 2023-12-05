@@ -35,7 +35,7 @@ class PublicRewardHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
 
          let result = try await PublicRewardApi().getPublicReward(
                 rewardSlug: rewardSlug
-            ).serializeNative()
+            ).serializePublicRewardApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

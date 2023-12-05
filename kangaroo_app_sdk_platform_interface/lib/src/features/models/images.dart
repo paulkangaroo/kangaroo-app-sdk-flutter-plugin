@@ -9,12 +9,16 @@ part 'images.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Images {
+  @JsonKey(name: "path")
   final String? path;
 
+  @JsonKey(name: "large")
   final String? large;
 
+  @JsonKey(name: "medium")
   final String? medium;
 
+  @JsonKey(name: "thumbnail")
   final String? thumbnail;
 
   @JsonKey(name: "default")

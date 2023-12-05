@@ -12,6 +12,7 @@ part 'public_products_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PublicProductsModel {
   ///A list of products available to all users. 
+  @JsonKey(name: "data")
   final ProductsList? data;
 
   PublicProductsModel({

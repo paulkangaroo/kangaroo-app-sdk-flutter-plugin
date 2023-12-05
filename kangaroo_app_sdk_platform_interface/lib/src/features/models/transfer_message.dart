@@ -22,36 +22,48 @@ part 'transfer_message.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferMessage {
   ///The unique ID of this transfer. 
+  @JsonKey(name: "id")
   final int? id;
 
   ///The type ID of this transfer. 
+  @JsonKey(name: "type_id")
   final int? typeId;
 
   ///A string representation of this transfer type. 
+  @JsonKey(name: "type")
   final String? type;
 
   ///The description of this transfer. 
+  @JsonKey(name: "description")
   final String? description;
 
   ///The amount of points sent in this transfer. 
+  @JsonKey(name: "points")
   final int? points;
 
   ///The amount in $ sent in this transfer. 
+  @JsonKey(name: "amount")
   final double? amount;
 
+  @JsonKey(name: "hidden")
   final bool? hidden;
 
   ///The orignal send date of this transfer. 
+  @JsonKey(name: "created_at")
   final String? createdAt;
 
   ///The gift card in this transfer if applicable. Gift cards are an offer sub-type in Kangaroo.  
+  @JsonKey(name: "offer")
   final OfferModel? offer;
 
+  @JsonKey(name: "gift_card_queue")
   final TransferMessageGiftCardQueue? giftCardQueue;
 
+  @JsonKey(name: "actions")
   final List<TransferMessageActions>? actions;
 
   ///If this transfer message is archived or not. 
+  @JsonKey(name: "archived")
   final bool? archived;
 
   TransferMessage({

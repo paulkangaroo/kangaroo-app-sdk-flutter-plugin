@@ -22,8 +22,8 @@ class UserScanReceiptHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
         
 
         
-        do {}
-        let result = try await UserScanReceiptApi().scanReceipt(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await UserScanReceiptApi().scanReceipt(methods: call.arguments as! [String : Any]).serializeUserScanReceiptApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class UserScanReceiptHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

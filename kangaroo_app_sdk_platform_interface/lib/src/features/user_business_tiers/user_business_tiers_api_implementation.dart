@@ -13,7 +13,7 @@ class UserBusinessTiersApiFederated extends UserBusinessTiersApiInterface {
 Future<Result<UserProfileWithTierProgram>?> getUserBusinessTiers({ 
         required final String memberBusinessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_tiers',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_tiers',
     {
       'memberBusinessId' : memberBusinessId
     }

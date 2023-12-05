@@ -15,16 +15,21 @@ part 'redeem_coupon_request.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class RedeemCouponRequest {
+  @JsonKey(name: "intent")
   final String intent;
 
+  @JsonKey(name: "pin_code")
   final String pinCode;
 
   ///The coupon being redeemed 
+  @JsonKey(name: "coupon")
   final CouponRedemptionModel coupon;
 
   ///The offer that created this coupon 
+  @JsonKey(name: "offer")
   final OfferRedemptionModel offer;
 
+  @JsonKey(name: "int")
   final String? int;
 
   RedeemCouponRequest({

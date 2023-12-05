@@ -13,12 +13,16 @@ part 'social_media_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class SocialMediaModel {
+  @JsonKey(name: "icon")
   final String? icon;
 
+  @JsonKey(name: "url")
   final String? url;
 
+  @JsonKey(name: "business_action")
   final BusinessActionModel? businessAction;
 
+  @JsonKey(name: "user_action_completed")
   final bool? userActionCompleted;
 
   SocialMediaModel({

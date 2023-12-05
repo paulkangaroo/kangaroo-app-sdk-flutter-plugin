@@ -9,10 +9,13 @@ part 'user_consent.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserConsent {
+  @JsonKey(name: "allow_sms")
   final bool allowSms;
 
+  @JsonKey(name: "allow_email")
   final bool allowEmail;
 
+  @JsonKey(name: "allow_push")
   final bool allowPush;
 
   UserConsent({

@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/strings/strings
 class StringsApiFederated extends StringsApiInterface {
   @override
 Future<Result<ApplicationStringsModel>?> getStrings() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_strings');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_strings');
 
     return StringsApiInterface.deSerializedPlatformResponse(
       response,

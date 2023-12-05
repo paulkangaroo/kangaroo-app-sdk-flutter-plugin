@@ -13,7 +13,7 @@ class TransferMessagesApiFederated extends TransferMessagesApiInterface {
 Future<Result<TransferMessagesModel>?> getTransferMessages({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_transfer_messages',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_transfer_messages',
     {
       'businessId' : businessId
     }

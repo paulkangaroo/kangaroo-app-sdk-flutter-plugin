@@ -35,7 +35,7 @@ class GetSpinToWinPrizesHandler: NSObject, FlutterStreamHandler, PluginChannelHa
 
          let result = try await GetSpinToWinPrizesApi().getSpinToWinPrizes(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeGetSpinToWinPrizesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

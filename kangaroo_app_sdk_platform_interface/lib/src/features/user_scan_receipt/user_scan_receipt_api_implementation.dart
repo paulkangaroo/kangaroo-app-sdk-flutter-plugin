@@ -13,7 +13,7 @@ class UserScanReceiptApiFederated extends UserScanReceiptApiInterface {
 Future<Result<ScanReceiptResponseModel>?> scanReceipt({ 
         required final ScanReceiptRequest scanReceiptRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/scan_receipt',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/scan_receipt',
     {
       'scanReceiptRequest' : jsonEncode(scanReceiptRequest)
     }

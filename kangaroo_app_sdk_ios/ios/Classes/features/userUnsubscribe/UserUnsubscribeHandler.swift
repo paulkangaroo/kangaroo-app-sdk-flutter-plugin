@@ -37,7 +37,7 @@ class UserUnsubscribeHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
          let result = try await UserUnsubscribeApi().unsubscribe(
                 campaignId: campaignId,
                 token: token
-            ).serializeNative()
+            ).serializeUserUnsubscribeApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

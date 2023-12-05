@@ -22,8 +22,8 @@ class UserPinUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
         
 
         
-        do {}
-        let result = try await UserPinUpdateApi().updatePin(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await UserPinUpdateApi().updatePin(methods: call.arguments as! [String : Any]).serializeUserPinUpdateApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class UserPinUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

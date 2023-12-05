@@ -10,9 +10,11 @@ part 'default_business_data.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class DefaultBusinessData {
   ///Unique branch Id 
+  @JsonKey(name: "default_branch_id")
   final String? defaultBranchId;
 
   ///Unique business Id 
+  @JsonKey(name: "default_business_id")
   final String? defaultBusinessId;
 
   DefaultBusinessData({

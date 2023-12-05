@@ -9,14 +9,19 @@ part 'gift_card_purchase_response_gift_card_data.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class GiftCardPurchaseResponseGiftCardData {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "title")
   final String? title;
 
+  @JsonKey(name: "price")
   final double? price;
 
+  @JsonKey(name: "currency")
   final String? currency;
 
+  @JsonKey(name: "quantity")
   final String? quantity;
 
   GiftCardPurchaseResponseGiftCardData({

@@ -11,10 +11,13 @@ part 'ala_carte_item_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class AlaCarteItemModel {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "points")
   final int? points;
 
+  @JsonKey(name: "product")
   final Product? product;
 
   AlaCarteItemModel({

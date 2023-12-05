@@ -13,7 +13,7 @@ class UserBusinessBannersApiFederated extends UserBusinessBannersApiInterface {
 Future<Result<UserBusinessBannersModel>?> getUserBusinessBanners({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_banners',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_banners',
     {
       'businessId' : businessId
     }

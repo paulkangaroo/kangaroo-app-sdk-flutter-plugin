@@ -18,7 +18,7 @@ Future<Result<UserProfileModel>?> updateUserProfile({
         final String? gender,
         final String? profilePhoto
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/update_user_profile',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/update_user_profile',
     {
       'firstName' : firstName,
       'lastName' : lastName,

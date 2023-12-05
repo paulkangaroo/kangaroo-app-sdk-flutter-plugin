@@ -13,7 +13,7 @@ class UserBusinessProfileApiFederated extends UserBusinessProfileApiInterface {
 Future<Result<UserBusinessProfileModel>?> getUserBusinessProfile({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_profile',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_profile',
     {
       'businessId' : businessId
     }

@@ -13,7 +13,7 @@ class GetSpinToWinPrizesApiFederated extends GetSpinToWinPrizesApiInterface {
 Future<Result<SpinToWinPrizesModel>?> getSpinToWinPrizes({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_spin_to_win_prizes',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_spin_to_win_prizes',
     {
       'businessId' : businessId
     }

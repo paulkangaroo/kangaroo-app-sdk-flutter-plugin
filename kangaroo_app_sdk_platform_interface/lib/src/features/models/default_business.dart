@@ -12,6 +12,7 @@ part 'default_business.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class DefaultBusiness {
   ///Details about the default business 
+  @JsonKey(name: "data")
   final DefaultBusinessData? data;
 
   DefaultBusiness({

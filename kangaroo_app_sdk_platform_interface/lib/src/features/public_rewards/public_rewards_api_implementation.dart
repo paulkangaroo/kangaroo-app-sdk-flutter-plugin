@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_rewards/
 class PublicRewardsApiFederated extends PublicRewardsApiInterface {
   @override
 Future<Result<PublicRewardsModel>?> getPublicRewards() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_rewards');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_rewards');
 
     return PublicRewardsApiInterface.deSerializedPlatformResponse(
       response,

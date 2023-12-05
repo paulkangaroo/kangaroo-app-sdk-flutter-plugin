@@ -9,8 +9,10 @@ part 'notification_business_payload.g.dart';
 /// The business who these settings this affect. This is not required when updating notification settings. 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class NotificationBusinessPayload {
+  @JsonKey(name: "id")
   final String? id;
 
+  @JsonKey(name: "name")
   final String? name;
 
   NotificationBusinessPayload({

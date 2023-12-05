@@ -20,27 +20,36 @@ part 'draw_prize.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class DrawPrize {
   ///Unique draw prize id. 
+  @JsonKey(name: "id")
   final int? id;
 
   ///The draw prize title. 
+  @JsonKey(name: "title")
   final String? title;
 
   ///The draw prize description. 
+  @JsonKey(name: "description")
   final String? description;
 
   ///Unique draw id. 
+  @JsonKey(name: "draw_id")
   final int? drawId;
 
+  @JsonKey(name: "offer")
   final OfferModel? offer;
 
+  @JsonKey(name: "catalog_item")
   final RewardModel? catalogItem;
 
   ///If this draw prize is enabled or not. 
+  @JsonKey(name: "enabled")
   final bool? enabled;
 
   ///If this draw prize is expired or not. 
+  @JsonKey(name: "is_expired")
   final bool? isExpired;
 
+  @JsonKey(name: "languages")
   final List<Languages>? languages;
 
   DrawPrize({

@@ -22,8 +22,8 @@ class RedeemRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
         
 
         
-        do {}
-        let result = try await RedeemRewardsApi().redeemReward(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await RedeemRewardsApi().redeemReward(methods: call.arguments as! [String : Any]).serializeRedeemRewardsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class RedeemRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

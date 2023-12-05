@@ -9,16 +9,22 @@ part 'user_address.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserAddress {
+  @JsonKey(name: "street")
   final String? street;
 
+  @JsonKey(name: "city")
   final String? city;
 
+  @JsonKey(name: "region")
   final String? region;
 
+  @JsonKey(name: "country")
   final String? country;
 
+  @JsonKey(name: "country_code")
   final String? countryCode;
 
+  @JsonKey(name: "zip_code")
   final String? zipCode;
 
   UserAddress({

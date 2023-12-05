@@ -20,7 +20,11 @@ public class KangarooAppSDKiOSFlutterPlugin: NSObject, FlutterPlugin {
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         PluginHandlerListHolder.pluginHandlerList.forEach { it in
             if (call.method == it.methodChannel) {
-                it.onMethodCall(call: call)
+                Task {
+//                    let data = await it.onMethodCall(call: call)
+                    await result(it.onMethodCall(call: call))
+                }
+            
             }
         }
         if (call.method == "core/methods/initializeSdk") {

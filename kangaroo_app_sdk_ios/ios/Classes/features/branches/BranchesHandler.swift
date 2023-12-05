@@ -35,7 +35,7 @@ class BranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
          let result = try await BranchesApi().getBusinessBranches(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeBranchesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

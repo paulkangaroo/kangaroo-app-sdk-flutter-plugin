@@ -16,6 +16,7 @@ part 'draw_rule.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class DrawRule {
   ///Unique draw rule id. 
+  @JsonKey(name: "draw_rule_id")
   final int? drawRuleId;
 
   ///If this draw rule is required or not. 
@@ -23,13 +24,17 @@ class DrawRule {
   final bool? isRequired;
 
   ///If this draw rule is completed or not. 
+  @JsonKey(name: "completed")
   final bool? completed;
 
+  @JsonKey(name: "languages")
   final List<Languages>? languages;
 
   ///The draw rule title. 
+  @JsonKey(name: "text")
   final String? text;
 
+  @JsonKey(name: "conditions")
   final List<DrawRuleCondition>? conditions;
 
   DrawRule({

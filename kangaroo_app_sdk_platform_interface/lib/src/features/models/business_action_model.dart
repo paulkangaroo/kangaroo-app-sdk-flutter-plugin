@@ -9,10 +9,13 @@ part 'business_action_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class BusinessActionModel {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "points")
   final int? points;
 
+  @JsonKey(name: "action_id")
   final int? actionId;
 
   BusinessActionModel({

@@ -37,7 +37,7 @@ class UpdateDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChan
          let result = try await UpdateDefaultBusinessIdApi().updateDefaultBusinessId(
                 businessId: businessId,
                 defaultBusinessId: defaultBusinessId
-            ).serializeNative()
+            ).serializeUpdateDefaultBusinessIdApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

@@ -35,7 +35,7 @@ class UserBusinessFrequentBuyerProgramsHandler: NSObject, FlutterStreamHandler, 
 
          let result = try await UserBusinessFrequentBuyerProgramsApi().getUserBusinessFrequentBuyerPrograms(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeUserBusinessFrequentBuyerProgramsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

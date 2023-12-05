@@ -10,6 +10,7 @@ part 'coupon_redemption_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CouponRedemptionModel {
   ///A unique ID identifying this coupon. 
+  @JsonKey(name: "id")
   final int id;
 
   CouponRedemptionModel({

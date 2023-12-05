@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/social_media_li
 class SocialMediaLinksApiFederated extends SocialMediaLinksApiInterface {
   @override
 Future<Result<SocialMediaLinksModel>?> getSocialMediaLinks() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_social_media_links');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_social_media_links');
 
     return SocialMediaLinksApiInterface.deSerializedPlatformResponse(
       response,

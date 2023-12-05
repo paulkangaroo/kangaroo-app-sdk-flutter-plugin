@@ -13,7 +13,7 @@ class UpdateNotificationPreferencesApiFederated extends UpdateNotificationPrefer
 Future<Result<NotificationSettingsModel>?> updateNotificationPreferences({ 
         required final NotificationSettingsUpdateRequest notificationPreferencesRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/update_notification_preferences',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/update_notification_preferences',
     {
       'notificationPreferencesRequest' : jsonEncode(notificationPreferencesRequest)
     }

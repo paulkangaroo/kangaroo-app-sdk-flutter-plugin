@@ -12,6 +12,7 @@ part 'crm_fields.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CrmFields {
   ///A list of the business crm fields. 
+  @JsonKey(name: "data")
   final List<CrmFieldData>? data;
 
   CrmFields({

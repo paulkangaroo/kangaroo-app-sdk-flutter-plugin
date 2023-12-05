@@ -13,7 +13,7 @@ class UserRegistrationWithCrmApiFederated extends UserRegistrationWithCrmApiInte
 Future<Result<UserProfileDataModel>?> createAccountWithCrm({ 
         required final CrmRegisterRequest registerWithCrmRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/create_account_with_crm',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/create_account_with_crm',
     {
       'registerWithCrmRequest' : jsonEncode(registerWithCrmRequest)
     }

@@ -9,10 +9,13 @@ part 'archive_request.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class ArchiveRequest {
+  @JsonKey(name: "business_id")
   final String businessId;
 
+  @JsonKey(name: "type")
   final String type;
 
+  @JsonKey(name: "key")
   final int key;
 
   ArchiveRequest({

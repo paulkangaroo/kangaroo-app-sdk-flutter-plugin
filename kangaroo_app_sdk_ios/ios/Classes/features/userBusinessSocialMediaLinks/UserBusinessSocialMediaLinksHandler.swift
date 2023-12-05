@@ -35,7 +35,7 @@ class UserBusinessSocialMediaLinksHandler: NSObject, FlutterStreamHandler, Plugi
 
          let result = try await UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeUserBusinessSocialMediaLinksApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

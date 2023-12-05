@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/business_list/b
 class BusinessesApiFederated extends BusinessesApiInterface {
   @override
 Future<Result<Businesses>?> getBusinesses() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_businesses');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_businesses');
 
     return BusinessesApiInterface.deSerializedPlatformResponse(
       response,

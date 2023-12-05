@@ -35,7 +35,7 @@ class TransferMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
          let result = try await TransferMessagesApi().getTransferMessages(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeTransferMessagesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

@@ -16,9 +16,11 @@ part 'user_profile_with_tier_program.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProfileWithTierProgram {
   ///Contains all user profile data 
+  @JsonKey(name: "data")
   final UserProfileDataModel? data;
 
   ///Contains user balance data 
+  @JsonKey(name: "included")
   final TierProgramInclude? included;
 
   UserProfileWithTierProgram({

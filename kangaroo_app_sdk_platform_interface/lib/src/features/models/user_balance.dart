@@ -10,9 +10,11 @@ part 'user_balance.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserBalance {
   ///The number of points this user currently has. 
+  @JsonKey(name: "points")
   final int? points;
 
   ///The amount of store credit in the users&#39; e-wallet. 
+  @JsonKey(name: "giftcard")
   final double? giftcard;
 
   UserBalance({

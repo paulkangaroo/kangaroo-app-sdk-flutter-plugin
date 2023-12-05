@@ -15,7 +15,7 @@ Future<Result<PerformSocialMediaActionResponseModel>?> performSocialMediaAction(
         required final PerformSocialMediaActionRequestModel performSocialMediaActionRequest,
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/perform_social_media_action',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/perform_social_media_action',
     {
       'performSocialMediaActionRequest' : jsonEncode(performSocialMediaActionRequest),
       'businessId' : businessId

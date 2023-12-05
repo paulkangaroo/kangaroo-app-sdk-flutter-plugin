@@ -43,7 +43,7 @@ class UserAccountVerificationHandler: NSObject, FlutterStreamHandler, PluginChan
                 email: email,
                 phone: phone,
                 countryCode: countryCode
-            ).serializeNative()
+            ).serializeUserAccountVerificationApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

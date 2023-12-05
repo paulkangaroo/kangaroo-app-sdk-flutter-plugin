@@ -16,9 +16,11 @@ part 'user_business_profile_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserBusinessProfileModel {
   ///Contains business data 
+  @JsonKey(name: "data")
   final BusinessData? data;
 
   ///Contains user balance data 
+  @JsonKey(name: "included")
   final UserProfileInclude? included;
 
   UserBusinessProfileModel({

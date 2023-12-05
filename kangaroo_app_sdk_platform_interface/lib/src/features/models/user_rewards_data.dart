@@ -12,6 +12,7 @@ part 'user_rewards_data.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserRewardsData {
   ///Contains a list of all rewards available to this user 
+  @JsonKey(name: "catalog_items")
   final Rewards? catalogItems;
 
   UserRewardsData({

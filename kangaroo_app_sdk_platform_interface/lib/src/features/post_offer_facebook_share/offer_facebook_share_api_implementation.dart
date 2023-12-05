@@ -17,7 +17,7 @@ Future<Result<UserProfileModel>?> postOfferFacebookShare({
         final String type = "facebook_share",
         final String friendsCount = "1"
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/post_offer_facebook_share',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/post_offer_facebook_share',
     {
       'offerId' : offerId,
       'include' : include,

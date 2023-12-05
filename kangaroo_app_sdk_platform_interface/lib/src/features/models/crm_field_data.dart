@@ -9,22 +9,31 @@ part 'crm_field_data.g.dart';
 /// CRM Field data
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CrmFieldData {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "name")
   final String? name;
 
+  @JsonKey(name: "label")
   final String? label;
 
+  @JsonKey(name: "value")
   final String? value;
 
+  @JsonKey(name: "is_hidden")
   final bool? isHidden;
 
+  @JsonKey(name: "is_required")
   final bool? isRequired;
 
+  @JsonKey(name: "field_type")
   final String? fieldType;
 
+  @JsonKey(name: "is_custom_field")
   final bool? isCustomField;
 
+  @JsonKey(name: "display_order")
   final int? displayOrder;
 
   CrmFieldData({

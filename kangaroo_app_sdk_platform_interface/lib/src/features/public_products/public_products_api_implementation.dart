@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_products
 class PublicProductsApiFederated extends PublicProductsApiInterface {
   @override
 Future<Result<PublicProductsModel>?> getPublicProducts() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_products');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_products');
 
     return PublicProductsApiInterface.deSerializedPlatformResponse(
       response,

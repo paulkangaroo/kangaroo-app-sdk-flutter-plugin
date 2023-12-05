@@ -10,8 +10,10 @@ part 'draw_branches.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class DrawBranches {
   ///Unique branch id. 
+  @JsonKey(name: "id")
   final String? id;
 
+  @JsonKey(name: "name")
   final String? name;
 
   DrawBranches({

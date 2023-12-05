@@ -13,7 +13,7 @@ class BranchesApiFederated extends BranchesApiInterface {
 Future<Result<Business>?> getBusinessBranches({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_business_branches',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_business_branches',
     {
       'businessId' : businessId
     }

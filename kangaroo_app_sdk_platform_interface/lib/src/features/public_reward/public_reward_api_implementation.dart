@@ -13,7 +13,7 @@ class PublicRewardApiFederated extends PublicRewardApiInterface {
 Future<Result<PublicRewardModel>?> getPublicReward({ 
         required final String rewardSlug
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_reward',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_reward',
     {
       'rewardSlug' : rewardSlug
     }

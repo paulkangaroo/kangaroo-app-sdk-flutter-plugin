@@ -16,9 +16,11 @@ part 'user_business_offers_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserBusinessOffersModel {
   ///Contains business data 
+  @JsonKey(name: "data")
   final BusinessData data;
 
   ///Contains all offers items 
+  @JsonKey(name: "included")
   final UserBusinessOffersIncluded? included;
 
   UserBusinessOffersModel({

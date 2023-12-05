@@ -14,7 +14,7 @@ Future<Result<ClaimedOfferModel>?> claimOffer({
         required final int offerId,
         required final String customerId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/claim_offer',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/claim_offer',
     {
       'offerId' : offerId,
       'customerId' : customerId

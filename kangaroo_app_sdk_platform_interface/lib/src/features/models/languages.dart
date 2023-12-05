@@ -11,12 +11,16 @@ part 'languages.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Languages {
+  @JsonKey(name: "language_id")
   final int? languageId;
 
+  @JsonKey(name: "title")
   final String? title;
 
+  @JsonKey(name: "description")
   final String? description;
 
+  @JsonKey(name: "language")
   final Language? language;
 
   Languages({

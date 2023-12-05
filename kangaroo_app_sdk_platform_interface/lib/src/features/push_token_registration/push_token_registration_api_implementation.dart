@@ -14,7 +14,7 @@ Future<Result<UserProfileModel>?> registerPushToken({
         final String? androidDeviceToken,
         final String? iosDeviceToken
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/register_push_token',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/register_push_token',
     {
       'androidDeviceToken' : androidDeviceToken,
       'iosDeviceToken' : iosDeviceToken

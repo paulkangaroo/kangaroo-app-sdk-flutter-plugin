@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_offers/use
 class UserOffersApiFederated extends UserOffersApiInterface {
   @override
 Future<Result<UserOffersModel>?> getUserOffers() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_offers');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_offers');
 
     return UserOffersApiInterface.deSerializedPlatformResponse(
       response,

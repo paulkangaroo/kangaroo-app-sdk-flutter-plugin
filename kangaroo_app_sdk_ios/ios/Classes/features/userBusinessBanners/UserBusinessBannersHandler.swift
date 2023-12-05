@@ -35,7 +35,7 @@ class UserBusinessBannersHandler: NSObject, FlutterStreamHandler, PluginChannelH
 
          let result = try await UserBusinessBannersApi().getUserBusinessBanners(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeUserBusinessBannersApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

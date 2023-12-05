@@ -10,6 +10,7 @@ part 'offer_redemption_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class OfferRedemptionModel {
   ///A unique ID identifying this offer. 
+  @JsonKey(name: "id")
   final int id;
 
   OfferRedemptionModel({

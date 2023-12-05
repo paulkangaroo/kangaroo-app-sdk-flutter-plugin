@@ -9,18 +9,25 @@ part 'branch_address.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class BranchAddress {
+  @JsonKey(name: "formatted")
   final String? formatted;
 
+  @JsonKey(name: "street")
   final String? street;
 
+  @JsonKey(name: "city")
   final String? city;
 
+  @JsonKey(name: "region")
   final String? region;
 
+  @JsonKey(name: "country")
   final String? country;
 
+  @JsonKey(name: "lat")
   final double? lat;
 
+  @JsonKey(name: "long")
   final double? long;
 
   BranchAddress({

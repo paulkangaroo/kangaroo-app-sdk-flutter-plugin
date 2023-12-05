@@ -22,8 +22,8 @@ class UserCheckInHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         
 
         
-        do {}
-        let result = try await UserCheckInApi().userCheckIn(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await UserCheckInApi().userCheckIn(methods: call.arguments as! [String : Any]).serializeUserCheckInApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class UserCheckInHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

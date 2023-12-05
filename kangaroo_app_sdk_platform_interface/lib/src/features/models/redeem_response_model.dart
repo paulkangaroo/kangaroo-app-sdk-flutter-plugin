@@ -11,6 +11,7 @@ part 'redeem_response_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class RedeemResponseModel {
+  @JsonKey(name: "data")
   final RedeemResponseData data;
 
   RedeemResponseModel({

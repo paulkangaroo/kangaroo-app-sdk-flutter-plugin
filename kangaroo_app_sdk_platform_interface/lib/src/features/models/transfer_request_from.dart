@@ -9,6 +9,7 @@ part 'transfer_request_from.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferRequestFrom {
+  @JsonKey(name: "name")
   final String? name;
 
   TransferRequestFrom({

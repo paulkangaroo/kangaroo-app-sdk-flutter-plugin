@@ -13,7 +13,7 @@ class RedeemRewardsApiFederated extends RedeemRewardsApiInterface {
 Future<Result<RedeemResponseModel>?> redeemReward({ 
         required final RedeemRequest redeemRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/redeem_reward',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/redeem_reward',
     {
       'redeemRequest' : jsonEncode(redeemRequest)
     }

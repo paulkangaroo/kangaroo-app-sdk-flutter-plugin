@@ -14,7 +14,7 @@ Future<Result<EmptyResponse>?> unsubscribe({
         required final String campaignId,
         required final String token
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/unsubscribe',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/unsubscribe',
     {
       'campaignId' : campaignId,
       'token' : token

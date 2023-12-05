@@ -22,8 +22,8 @@ class GiftCardPurchaseHandler: NSObject, FlutterStreamHandler, PluginChannelHand
         
 
         
-        do {}
-        let result = try await GiftCardPurchaseApi().purchaseGiftCard(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await GiftCardPurchaseApi().purchaseGiftCard(methods: call.arguments as! [String : Any]).serializeGiftCardPurchaseApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class GiftCardPurchaseHandler: NSObject, FlutterStreamHandler, PluginChannelHand
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

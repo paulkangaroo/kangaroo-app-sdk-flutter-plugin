@@ -9,8 +9,10 @@ part 'check_in_request.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CheckInRequest {
+  @JsonKey(name: "branch_id")
   final String branchId;
 
+  @JsonKey(name: "intent")
   final String intent;
 
   CheckInRequest({

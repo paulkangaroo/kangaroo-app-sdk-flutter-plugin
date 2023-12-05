@@ -35,7 +35,7 @@ class GiftCardDepositHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
          let result = try await GiftCardDepositApi().depositGiftCard(
                 depositId: depositId
-            ).serializeNative()
+            ).serializeGiftCardDepositApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

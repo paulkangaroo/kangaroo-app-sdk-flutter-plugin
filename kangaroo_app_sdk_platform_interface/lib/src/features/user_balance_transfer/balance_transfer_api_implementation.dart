@@ -13,7 +13,7 @@ class BalanceTransferApiFederated extends BalanceTransferApiInterface {
 Future<Result<TransferResponseModel>?> transfer({ 
         required final TransferRequestModel transferRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/transfer',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/transfer',
     {
       'transferRequest' : jsonEncode(transferRequest)
     }

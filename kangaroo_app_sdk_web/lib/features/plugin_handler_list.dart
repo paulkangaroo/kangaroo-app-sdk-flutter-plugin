@@ -27,6 +27,7 @@ import 'public_business_settings/public_business_settings_handler.dart';
 import 'public_offer/public_offer_handler.dart';
 import 'public_offers/public_offers_handler.dart';
 import 'public_products/public_products_handler.dart';
+import 'get_public_promotions/get_public_promotions_handler.dart';
 import 'public_reward/public_reward_handler.dart';
 import 'public_rewards/public_rewards_handler.dart';
 import 'social_media_links/social_media_links_handler.dart';
@@ -42,8 +43,10 @@ import 'user_business_offers/user_business_offers_handler.dart';
 import 'user_business_products/user_business_products_handler.dart';
 import 'user_business_profile/user_business_profile_handler.dart';
 import 'user_business_rewards/user_business_rewards_handler.dart';
+import 'user_business_coupons/user_business_coupons_handler.dart';
 import 'user_business_social_media_links/user_business_social_media_links_handler.dart';
 import 'user_business_tiers/user_business_tiers_handler.dart';
+import 'user_business_used_coupons/user_business_used_coupons_handler.dart';
 import 'user_coupons/user_coupons_handler.dart';
 import 'user_details/user_details_handler.dart';
 import 'user_offers/user_offers_handler.dart';
@@ -128,6 +131,8 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   PublicProductsHandler(),
 
+  GetPublicPromotionsHandler(),
+
   PublicRewardHandler(),
 
   PublicRewardsHandler(),
@@ -158,9 +163,13 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   UserBusinessRewardsHandler(),
 
+  UserBusinessCouponsHandler(),
+
   UserBusinessSocialMediaLinksHandler(),
 
   UserBusinessTiersHandler(),
+
+  UserBusinessUsedCouponsHandler(),
 
   UserCouponsHandler(),
 

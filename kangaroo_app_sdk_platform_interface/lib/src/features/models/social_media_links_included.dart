@@ -11,6 +11,7 @@ part 'social_media_links_included.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class SocialMediaLinksIncluded {
+  @JsonKey(name: "social_media")
   final SocialMediaLinkList? socialMedia;
 
   SocialMediaLinksIncluded({

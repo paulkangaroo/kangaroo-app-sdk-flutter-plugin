@@ -13,7 +13,7 @@ class BusinessApiFederated extends BusinessApiInterface {
 Future<Result<Business>?> getBusiness({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_business',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_business',
     {
       'businessId' : businessId
     }

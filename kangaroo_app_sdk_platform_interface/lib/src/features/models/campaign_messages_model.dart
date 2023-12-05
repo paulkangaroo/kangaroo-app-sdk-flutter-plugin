@@ -12,6 +12,7 @@ part 'campaign_messages_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CampaignMessagesModel {
   ///List of campaign messages. 
+  @JsonKey(name: "data")
   final List<CampaignMessage>? data;
 
   CampaignMessagesModel({

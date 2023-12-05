@@ -31,16 +31,15 @@ class SocialMediaActionPerformHandler: NSObject, FlutterStreamHandler, PluginCha
 
         do {
            if let myArgs = args as? [String: Any] {
-                        guard let performSocialMediaActionRequest = call.arguments as? [String : Any] else {return}
+                        guard let performSocialMediaActionRequest = call.arguments as? [String : Any] else {return nil}
                 guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-            let result = try await SocialMediaActionPerformApi().performSocialMediaAction.serializeNative()(
+            let result = try await SocialMediaActionPerformApi().performSocialMediaAction(
                 methods: performSocialMediaActionRequest,
-                businessId: businessId,
+                businessId: businessId
+            ).serializeSocialMediaActionPerformApiResult()
 
-            ).serializeNative()
-        }
-
+        // bruh
         switch result {
             case let result as SerializedResultSuccess:
                 return result.data
@@ -51,6 +50,7 @@ class SocialMediaActionPerformHandler: NSObject, FlutterStreamHandler, PluginCha
             default:
                 return nil
             }
+        }
         } catch {
             return nil
         }

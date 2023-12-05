@@ -22,8 +22,8 @@ class ArchiveInboxItemHandler: NSObject, FlutterStreamHandler, PluginChannelHand
         
 
         
-        do {}
-        let result = try await ArchiveInboxItemApi().archiveInboxItem(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await ArchiveInboxItemApi().archiveInboxItem(methods: call.arguments as! [String : Any]).serializeArchiveInboxItemApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class ArchiveInboxItemHandler: NSObject, FlutterStreamHandler, PluginChannelHand
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

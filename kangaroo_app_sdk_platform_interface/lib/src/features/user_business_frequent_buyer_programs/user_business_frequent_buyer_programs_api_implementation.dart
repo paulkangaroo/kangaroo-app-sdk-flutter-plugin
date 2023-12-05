@@ -13,7 +13,7 @@ class UserBusinessFrequentBuyerProgramsApiFederated extends UserBusinessFrequent
 Future<Result<FrequentBuyerProgramsModel>?> getUserBusinessFrequentBuyerPrograms({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_frequent_buyer_programs',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_frequent_buyer_programs',
     {
       'businessId' : businessId
     }

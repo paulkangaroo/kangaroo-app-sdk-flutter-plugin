@@ -13,7 +13,7 @@ class GiftCardDepositApiFederated extends GiftCardDepositApiInterface {
 Future<Result<TransferActionResultModel>?> depositGiftCard({ 
         required final String depositId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/deposit_gift_card',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/deposit_gift_card',
     {
       'depositId' : depositId
     }

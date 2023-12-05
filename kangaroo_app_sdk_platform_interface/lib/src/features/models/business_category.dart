@@ -10,12 +10,15 @@ part 'business_category.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class BusinessCategory {
   ///Name of this category 
+  @JsonKey(name: "name")
   final String? name;
 
   ///Url to this category&#39;s icon 
+  @JsonKey(name: "icon")
   final String? icon;
 
   ///Unique ategory code for this category 
+  @JsonKey(name: "code")
   final String? code;
 
   BusinessCategory({

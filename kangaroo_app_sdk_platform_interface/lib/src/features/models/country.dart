@@ -10,18 +10,23 @@ part 'country.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Country {
   ///Unique country ID. 
+  @JsonKey(name: "id")
   final int? id;
 
   ///The name of this country 
+  @JsonKey(name: "name")
   final String? name;
 
   ///The two character country code for this country. Follows ISO standards.  
+  @JsonKey(name: "code")
   final String? code;
 
   ///The three character country code for this country. Follows ISO standards.  
+  @JsonKey(name: "code_iso3")
   final String? codeIso3;
 
   ///The international phoen code for this country. 
+  @JsonKey(name: "phone_code")
   final int? phoneCode;
 
   Country({

@@ -9,8 +9,10 @@ part 'perform_action_response_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PerformActionResponseModel {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "status")
   final String? status;
 
   PerformActionResponseModel({

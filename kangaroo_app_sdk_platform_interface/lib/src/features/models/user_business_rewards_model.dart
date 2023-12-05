@@ -16,9 +16,11 @@ part 'user_business_rewards_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserBusinessRewardsModel {
   ///Contains business data 
+  @JsonKey(name: "data")
   final BusinessData? data;
 
   ///Contains all rewards items 
+  @JsonKey(name: "included")
   final UserRewardsData? included;
 
   UserBusinessRewardsModel({

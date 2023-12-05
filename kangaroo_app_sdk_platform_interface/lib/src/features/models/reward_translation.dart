@@ -13,20 +13,28 @@ part 'reward_translation.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class RewardTranslation {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "language_id")
   final int? languageId;
 
+  @JsonKey(name: "title")
   final String? title;
 
+  @JsonKey(name: "description")
   final String? description;
 
+  @JsonKey(name: "terms_conditions")
   final String? termsConditions;
 
+  @JsonKey(name: "link")
   final String? link;
 
+  @JsonKey(name: "language")
   final Language? language;
 
+  @JsonKey(name: "note")
   final String? note;
 
   RewardTranslation({

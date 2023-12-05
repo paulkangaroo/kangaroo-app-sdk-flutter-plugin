@@ -16,9 +16,11 @@ part 'user_profile_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProfileModel {
   ///Contains all user profile data 
+  @JsonKey(name: "data")
   final UserProfileDataModel? data;
 
   ///Contains user balance data 
+  @JsonKey(name: "included")
   final UserProfileInclude? included;
 
   UserProfileModel({

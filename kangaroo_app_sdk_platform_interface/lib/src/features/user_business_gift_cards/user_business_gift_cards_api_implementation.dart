@@ -13,7 +13,7 @@ class UserBusinessGiftCardsApiFederated extends UserBusinessGiftCardsApiInterfac
 Future<Result<UserBusinessGiftCardsModel>?> getUserBusinessGiftCards({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_gift_cards',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_gift_cards',
     {
       'businessId' : businessId
     }

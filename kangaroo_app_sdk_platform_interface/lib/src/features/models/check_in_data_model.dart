@@ -9,16 +9,22 @@ part 'check_in_data_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CheckInDataModel {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "amount")
   final double? amount;
 
+  @JsonKey(name: "points")
   final int? points;
 
+  @JsonKey(name: "name")
   final String? name;
 
+  @JsonKey(name: "created_at")
   final String? createdAt;
 
+  @JsonKey(name: "updated_at")
   final String? updatedAt;
 
   CheckInDataModel({

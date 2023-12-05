@@ -9,12 +9,16 @@ part 'transfer_request_to.g.dart';
 /// The recipient data for this transfer. Either a phone number or an email address is required. If a phone number is used, the two character ISO country code must be supplied as well. 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferRequestTo {
+  @JsonKey(name: "name")
   final String? name;
 
+  @JsonKey(name: "phone")
   final String? phone;
 
+  @JsonKey(name: "country_code")
   final String? countryCode;
 
+  @JsonKey(name: "email")
   final String? email;
 
   TransferRequestTo({

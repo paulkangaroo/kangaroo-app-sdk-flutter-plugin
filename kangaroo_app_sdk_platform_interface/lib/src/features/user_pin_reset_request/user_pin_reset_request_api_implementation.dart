@@ -16,7 +16,7 @@ Future<Result<UserPinResetRequest>?> requestPinReset({
         final String? phone,
         final String? countryCode
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/request_pin_reset',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/request_pin_reset',
     {
       'mode' : mode,
       'email' : email,

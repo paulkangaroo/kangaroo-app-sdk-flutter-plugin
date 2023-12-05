@@ -11,39 +11,51 @@ part 'offer_translation.g.dart';
 /// A language translation of this offer.
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class OfferTranslation {
+  @JsonKey(name: "id")
   final int id;
 
   ///The ID of this specific translation 
+  @JsonKey(name: "language_id")
   final int? languageId;
 
   ///The translated offer title. 
+  @JsonKey(name: "offer_title")
   final String? offerTitle;
 
   ///The translated offer description. 
+  @JsonKey(name: "offer_description")
   final String? offerDescription;
 
   ///The translated offer terms and conditions. 
+  @JsonKey(name: "offer_terms_conditions")
   final String? offerTermsConditions;
 
   ///The language appropriate link of this offer. 
+  @JsonKey(name: "offer_link")
   final String? offerLink;
 
   ///The translated coupon title. 
+  @JsonKey(name: "coupon_title")
   final String? couponTitle;
 
   ///The translated coupon description. 
+  @JsonKey(name: "coupon_description")
   final String? couponDescription;
 
   ///The translated coupon terms and conditions. 
+  @JsonKey(name: "coupon_terms_conditions")
   final String? couponTermsConditions;
 
   ///The language appropriate link of this coupon. 
+  @JsonKey(name: "coupon_link")
   final String? couponLink;
 
   ///where is this coupon available at. 
+  @JsonKey(name: "coupon_available_at")
   final String? couponAvailableAt;
 
   ///The language for which this translation applies. 
+  @JsonKey(name: "language")
   final Language? language;
 
   OfferTranslation({

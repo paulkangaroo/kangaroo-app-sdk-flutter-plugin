@@ -9,12 +9,16 @@ part 'archive_response_data.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class ArchiveResponseData {
+  @JsonKey(name: "id")
   final int id;
 
+  @JsonKey(name: "type")
   final String? type;
 
+  @JsonKey(name: "key")
   final int? key;
 
+  @JsonKey(name: "created_at")
   final String? createdAt;
 
   ArchiveResponseData({

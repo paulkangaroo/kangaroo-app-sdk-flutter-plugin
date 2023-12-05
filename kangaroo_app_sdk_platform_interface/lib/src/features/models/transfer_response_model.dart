@@ -12,6 +12,7 @@ part 'transfer_response_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferResponseModel {
   ///Contains all user profile data 
+  @JsonKey(name: "data")
   final TransferDataModel? data;
 
   TransferResponseModel({

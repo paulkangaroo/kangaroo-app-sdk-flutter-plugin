@@ -13,7 +13,7 @@ class PublicOfferApiFederated extends PublicOfferApiInterface {
 Future<Result<PublicOfferModel>?> getPublicOffer({ 
         required final String offerSlug
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_offer',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_offer',
     {
       'offerSlug' : offerSlug
     }

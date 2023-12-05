@@ -9,6 +9,7 @@ part 'offer_action.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class OfferAction {
+  @JsonKey(name: "type")
   final String? type;
 
   OfferAction({

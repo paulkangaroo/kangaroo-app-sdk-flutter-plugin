@@ -12,9 +12,11 @@ part 'spin_to_win_prizes_data.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class SpinToWinPrizesData {
   ///spin to win id 
+  @JsonKey(name: "spin_win_id")
   final int? spinWinId;
 
   ///List of prizes 
+  @JsonKey(name: "spin_prizes")
   final List<PrizeModel>? spinPrizes;
 
   SpinToWinPrizesData({

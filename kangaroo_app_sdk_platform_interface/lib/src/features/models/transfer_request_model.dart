@@ -16,21 +16,29 @@ part 'transfer_request_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TransferRequestModel {
   ///The transfer intent for this transfer. This can be transfer_amount or transfer_points  
+  @JsonKey(name: "intent")
   final String intent;
 
+  @JsonKey(name: "business_id")
   final String businessId;
 
   ///The two character language code of the language that this transfer should be sent in.  
+  @JsonKey(name: "language")
   final String language;
 
+  @JsonKey(name: "from")
   final TransferRequestFrom from;
 
+  @JsonKey(name: "to")
   final TransferRequestTo to;
 
+  @JsonKey(name: "points")
   final int? points;
 
+  @JsonKey(name: "amount")
   final double? amount;
 
+  @JsonKey(name: "giftcard_id")
   final int? giftcardId;
 
   TransferRequestModel({

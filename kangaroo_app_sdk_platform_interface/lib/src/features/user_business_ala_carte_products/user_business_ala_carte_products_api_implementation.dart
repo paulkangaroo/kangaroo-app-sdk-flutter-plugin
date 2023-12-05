@@ -13,7 +13,7 @@ class UserBusinessAlaCarteProductsApiFederated extends UserBusinessAlaCarteProdu
 Future<Result<AlaCarteProductsModel>?> getUserBusinessAlaCarteProducts({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_ala_carte_products',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_ala_carte_products',
     {
       'businessId' : businessId
     }

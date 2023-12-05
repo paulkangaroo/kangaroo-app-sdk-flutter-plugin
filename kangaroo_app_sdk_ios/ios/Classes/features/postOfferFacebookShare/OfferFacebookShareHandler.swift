@@ -43,7 +43,7 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
                 facebookUserId: facebookUserId,
                 type: type,
                 friendsCount: friendsCount
-            ).serializeNative()
+            ).serializeOfferFacebookShareApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

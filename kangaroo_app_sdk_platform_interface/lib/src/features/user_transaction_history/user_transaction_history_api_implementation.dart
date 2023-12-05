@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_transactio
 class UserTransactionHistoryApiFederated extends UserTransactionHistoryApiInterface {
   @override
 Future<Result<UserTransactionHistoryModel>?> getUserTransactionHistory() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_transaction_history');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_transaction_history');
 
     return UserTransactionHistoryApiInterface.deSerializedPlatformResponse(
       response,

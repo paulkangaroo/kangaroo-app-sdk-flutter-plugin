@@ -11,20 +11,28 @@ part 'coupon_redemption_response_data.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CouponRedemptionResponseData {
+  @JsonKey(name: "id")
   final int id;
 
+  @JsonKey(name: "amount")
   final double? amount;
 
+  @JsonKey(name: "points")
   final int? points;
 
+  @JsonKey(name: "name")
   final String? name;
 
+  @JsonKey(name: "transaction_type")
   final int? transactionType;
 
+  @JsonKey(name: "created_at")
   final String? createdAt;
 
+  @JsonKey(name: "updated_at")
   final String? updatedAt;
 
+  @JsonKey(name: "customer")
   final UserProfileModel? customer;
 
   CouponRedemptionResponseData({

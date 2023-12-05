@@ -10,18 +10,23 @@ part 'user_tier_level.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserTierLevel {
   ///The ID for this tier. 
+  @JsonKey(name: "id")
   final int? id;
 
   ///The name of this tier level. 
+  @JsonKey(name: "name")
   final String? name;
 
   ///The amount of money spent required to reach this tier. 
+  @JsonKey(name: "reach_spend")
   final int? reachSpend;
 
   ///The amount of visits made to reach this tier. 
+  @JsonKey(name: "reach_visits")
   final int? reachVisits;
 
   ///The amount of points acquired that is required to reach this tier. 
+  @JsonKey(name: "reach_points")
   final int? reachPoints;
 
   UserTierLevel({

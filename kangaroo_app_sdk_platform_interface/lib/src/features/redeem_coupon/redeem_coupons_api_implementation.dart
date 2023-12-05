@@ -13,7 +13,7 @@ class RedeemCouponsApiFederated extends RedeemCouponsApiInterface {
 Future<Result<CouponRedemptionResponseModel>?> redeemCoupon({ 
         required final RedeemCouponRequest redeemCouponRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/redeem_coupon',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/redeem_coupon',
     {
       'redeemCouponRequest' : jsonEncode(redeemCouponRequest)
     }

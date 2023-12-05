@@ -16,9 +16,11 @@ part 'social_media_links_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class SocialMediaLinksModel {
   ///Contains all user data 
+  @JsonKey(name: "data")
   final UserProfileDataModel? data;
 
   ///Contains social media links 
+  @JsonKey(name: "included")
   final SocialMediaLinksIncluded? included;
 
   SocialMediaLinksModel({

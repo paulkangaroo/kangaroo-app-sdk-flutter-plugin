@@ -12,27 +12,37 @@ part 'coupon_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CouponModel {
   ///A unique ID identifying this coupon 
+  @JsonKey(name: "id")
   final int? id;
 
   ///The coupon title. 
+  @JsonKey(name: "title")
   final String? title;
 
   ///The coupon description. 
+  @JsonKey(name: "description")
   final String? description;
 
   ///The terms and conditions attached to this coupon. 
+  @JsonKey(name: "terms_conditions")
   final String? termsConditions;
 
+  @JsonKey(name: "qrcode")
   final String? qrcode;
 
+  @JsonKey(name: "coupon_locked")
   final bool? couponLocked;
 
+  @JsonKey(name: "coupon_redeemed")
   final bool? couponRedeemed;
 
+  @JsonKey(name: "coupon_type")
   final String? couponType;
 
+  @JsonKey(name: "expires_at")
   final String? expiresAt;
 
+  @JsonKey(name: "offer")
   final OfferModel? offer;
 
   CouponModel({

@@ -35,7 +35,7 @@ class UserBusinessGiftCardsHandler: NSObject, FlutterStreamHandler, PluginChanne
 
          let result = try await UserBusinessGiftCardsApi().getUserBusinessGiftCards(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeUserBusinessGiftCardsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

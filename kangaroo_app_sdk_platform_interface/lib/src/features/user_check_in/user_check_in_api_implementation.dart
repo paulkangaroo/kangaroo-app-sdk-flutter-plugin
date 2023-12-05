@@ -13,7 +13,7 @@ class UserCheckInApiFederated extends UserCheckInApiInterface {
 Future<Result<CheckInResponseModel>?> userCheckIn({ 
         required final CheckInRequest checkInRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/user_check_in',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/user_check_in',
     {
       'checkInRequest' : jsonEncode(checkInRequest)
     }

@@ -22,8 +22,8 @@ class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
         
 
         
-        do {}
-        let result = try await BalanceTransferApi().transfer(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await BalanceTransferApi().transfer(methods: call.arguments as! [String : Any]).serializeBalanceTransferApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

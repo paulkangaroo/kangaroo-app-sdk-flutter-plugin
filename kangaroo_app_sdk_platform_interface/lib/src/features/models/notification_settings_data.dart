@@ -14,16 +14,22 @@ part 'notification_settings_data.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class NotificationSettingsData {
   ///The notification settings id. This is not required when updating notification settings.  
+  @JsonKey(name: "id")
   final String? id;
 
+  @JsonKey(name: "business")
   final NotificationBusiness? business;
 
+  @JsonKey(name: "allow_email")
   final bool? allowEmail;
 
+  @JsonKey(name: "allow_sms")
   final bool? allowSms;
 
+  @JsonKey(name: "allow_push")
   final bool? allowPush;
 
+  @JsonKey(name: "allow_sms_status")
   final int? allowSmsStatus;
 
   NotificationSettingsData({

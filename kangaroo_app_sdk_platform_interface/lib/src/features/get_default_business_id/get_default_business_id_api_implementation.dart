@@ -13,7 +13,7 @@ class GetDefaultBusinessIdApiFederated extends GetDefaultBusinessIdApiInterface 
 Future<Result<DefaultBusiness>?> getDefaultBusinessId({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_default_business_id',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_default_business_id',
     {
       'businessId' : businessId
     }

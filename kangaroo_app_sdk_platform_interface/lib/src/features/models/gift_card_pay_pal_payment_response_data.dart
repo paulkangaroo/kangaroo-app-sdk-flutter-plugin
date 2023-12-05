@@ -15,12 +15,16 @@ part 'gift_card_pay_pal_payment_response_data.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class GiftCardPayPalPaymentResponseData {
+  @JsonKey(name: "id")
   final String? id;
 
+  @JsonKey(name: "provider")
   final String? provider;
 
+  @JsonKey(name: "giftcard")
   final GiftCardPurchaseResponseGiftCardData? giftcard;
 
+  @JsonKey(name: "balance")
   final UserBalance? balance;
 
   GiftCardPayPalPaymentResponseData({

@@ -9,12 +9,16 @@ part 'branch_phone.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class BranchPhone {
+  @JsonKey(name: "number")
   final String? number;
 
+  @JsonKey(name: "country_code")
   final String? countryCode;
 
+  @JsonKey(name: "national_format")
   final String? nationalFormat;
 
+  @JsonKey(name: "intl_format")
   final String? intlFormat;
 
   BranchPhone({

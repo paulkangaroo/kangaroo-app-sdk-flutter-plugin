@@ -10,9 +10,11 @@ part 'redemption_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class RedemptionModel {
   ///A unique ID identifying this reward. 
+  @JsonKey(name: "id")
   final int id;
 
   ///The amount of times to redeem this reward 
+  @JsonKey(name: "quantity")
   final int quantity;
 
   RedemptionModel({

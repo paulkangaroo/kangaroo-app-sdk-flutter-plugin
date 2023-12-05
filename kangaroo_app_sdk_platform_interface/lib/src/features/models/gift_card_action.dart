@@ -9,6 +9,7 @@ part 'gift_card_action.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class GiftCardAction {
+  @JsonKey(name: "type")
   final String? type;
 
   GiftCardAction({

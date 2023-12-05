@@ -10,12 +10,15 @@ part 'language.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Language {
   ///The Kangaroo ID of this language. 
+  @JsonKey(name: "id")
   final int id;
 
   ///A two letter abbreviation of this language. Follows ISO standards (en, fr, es)  
+  @JsonKey(name: "abbreviation")
   final String? abbreviation;
 
   ///The full name of this language (English, French, Spanish) 
+  @JsonKey(name: "name")
   final String? name;
 
   Language({

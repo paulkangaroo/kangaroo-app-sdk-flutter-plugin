@@ -16,7 +16,7 @@ Future<Result<UserProfileDataModel>?> createAccount({
         final String? countryCode,
         final String? language
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/create_account',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/create_account',
     {
       'email' : email,
       'phone' : phone,

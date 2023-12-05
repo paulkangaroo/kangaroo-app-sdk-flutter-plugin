@@ -11,6 +11,7 @@ part 'public_branches_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PublicBranchesModel {
+  @JsonKey(name: "data")
   final List<Branch>? data;
 
   PublicBranchesModel({

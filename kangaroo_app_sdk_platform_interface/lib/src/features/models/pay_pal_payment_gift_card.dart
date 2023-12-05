@@ -10,14 +10,19 @@ part 'pay_pal_payment_gift_card.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PayPalPaymentGiftCard {
   ///Unique gift card ID. 
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "title")
   final String? title;
 
+  @JsonKey(name: "price")
   final double? price;
 
+  @JsonKey(name: "currency")
   final String? currency;
 
+  @JsonKey(name: "quantity")
   final int? quantity;
 
   PayPalPaymentGiftCard({

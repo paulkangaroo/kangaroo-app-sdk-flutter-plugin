@@ -43,7 +43,7 @@ class PayPalPaymentHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
                 giftcardId: giftcardId,
                 paypalReturnUrl: paypalReturnUrl,
                 paypalCancelUrl: paypalCancelUrl
-            ).serializeNative()
+            ).serializePayPalPaymentApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

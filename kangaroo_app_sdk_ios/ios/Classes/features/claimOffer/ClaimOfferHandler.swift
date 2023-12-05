@@ -37,7 +37,7 @@ class ClaimOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
          let result = try await ClaimOfferApi().claimOffer(
                 offerId: offerId,
                 customerId: customerId
-            ).serializeNative()
+            ).serializeClaimOfferApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

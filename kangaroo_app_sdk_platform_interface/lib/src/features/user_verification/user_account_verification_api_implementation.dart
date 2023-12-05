@@ -17,7 +17,7 @@ Future<Result<UserProfileModel>?> verifyAccount({
         final String? phone,
         final String? countryCode
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/verify_account',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/verify_account',
     {
       'intent' : intent,
       'token' : token,

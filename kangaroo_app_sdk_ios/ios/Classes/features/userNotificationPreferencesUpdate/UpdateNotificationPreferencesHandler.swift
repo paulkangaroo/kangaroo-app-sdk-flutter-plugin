@@ -22,8 +22,8 @@ class UpdateNotificationPreferencesHandler: NSObject, FlutterStreamHandler, Plug
         
 
         
-        do {}
-        let result = try await UpdateNotificationPreferencesApi().updateNotificationPreferences(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await UpdateNotificationPreferencesApi().updateNotificationPreferences(methods: call.arguments as! [String : Any]).serializeUpdateNotificationPreferencesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class UpdateNotificationPreferencesHandler: NSObject, FlutterStreamHandler, Plug
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

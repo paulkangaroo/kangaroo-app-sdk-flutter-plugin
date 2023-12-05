@@ -9,18 +9,25 @@ part 'frequent_buyer_program_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class FrequentBuyerProgramModel {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "enabled")
   final bool? enabled;
 
+  @JsonKey(name: "title")
   final String? title;
 
+  @JsonKey(name: "buy_units")
   final int? buyUnits;
 
+  @JsonKey(name: "get_units")
   final int? getUnits;
 
+  @JsonKey(name: "reset_interval")
   final int? resetInterval;
 
+  @JsonKey(name: "created_at")
   final String? createdAt;
 
   FrequentBuyerProgramModel({

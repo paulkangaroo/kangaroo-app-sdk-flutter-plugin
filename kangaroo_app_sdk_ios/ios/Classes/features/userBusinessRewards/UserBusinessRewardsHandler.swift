@@ -35,7 +35,7 @@ class UserBusinessRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelH
 
          let result = try await UserBusinessRewardsApi().getUserBusinessRewards(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeUserBusinessRewardsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

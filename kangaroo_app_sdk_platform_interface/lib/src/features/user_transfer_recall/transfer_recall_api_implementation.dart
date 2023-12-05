@@ -13,7 +13,7 @@ class TransferRecallApiFederated extends TransferRecallApiInterface {
 Future<Result<TransferActionResultModel>?> recallTransfer({ 
         required final String recallId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/recall_transfer',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/recall_transfer',
     {
       'recallId' : recallId
     }

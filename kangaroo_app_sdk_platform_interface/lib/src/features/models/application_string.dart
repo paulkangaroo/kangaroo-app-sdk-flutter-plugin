@@ -9,12 +9,16 @@ part 'application_string.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class ApplicationString {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "key")
   final String? key;
 
+  @JsonKey(name: "string")
   final String? string;
 
+  @JsonKey(name: "created_at")
   final String? createdAt;
 
   ApplicationString({

@@ -16,9 +16,11 @@ part 'user_products_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProductsModel {
   ///Contains all user data 
+  @JsonKey(name: "data")
   final UserProfileDataModel? data;
 
   ///Contains products available to this user 
+  @JsonKey(name: "included")
   final UserProductsIncluded? included;
 
   UserProductsModel({

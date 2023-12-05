@@ -11,6 +11,7 @@ part 'archive_response_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class ArchiveResponseModel {
+  @JsonKey(name: "data")
   final ArchiveResponseData data;
 
   ArchiveResponseModel({

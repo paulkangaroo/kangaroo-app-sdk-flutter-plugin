@@ -12,6 +12,7 @@ part 'public_business_settings.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PublicBusinessSettings {
   ///Details about the business public settings 
+  @JsonKey(name: "data")
   final PublicBusinessSettingsData? data;
 
   PublicBusinessSettings({

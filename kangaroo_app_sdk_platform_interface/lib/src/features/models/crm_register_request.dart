@@ -15,44 +15,64 @@ part 'crm_register_request.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CrmRegisterRequest {
+  @JsonKey(name: "first_name")
   final String? firstName;
 
+  @JsonKey(name: "last_name")
   final String? lastName;
 
+  @JsonKey(name: "email")
   final String? email;
 
+  @JsonKey(name: "phone")
   final String? phone;
 
+  @JsonKey(name: "country_code")
   final String? countryCode;
 
+  @JsonKey(name: "gender")
   final String? gender;
 
+  @JsonKey(name: "referral_code")
   final String? referralCode;
 
+  @JsonKey(name: "birth_date")
   final String? birthDate;
 
+  @JsonKey(name: "postal_code")
   final String? postalCode;
 
+  @JsonKey(name: "country")
   final String? country;
 
+  @JsonKey(name: "branch_id")
   final String? branchId;
 
+  @JsonKey(name: "promotions_mail")
   final bool? promotionsMail;
 
+  @JsonKey(name: "terms_and_conditions")
   final bool? termsAndConditions;
 
+  @JsonKey(name: "consent")
   final UserConsent? consent;
 
+  @JsonKey(name: "custom_field_1")
   final String? customField1;
 
+  @JsonKey(name: "custom_field_2")
   final String? customField2;
 
+  @JsonKey(name: "custom_field_3")
   final String? customField3;
 
+  @JsonKey(name: "custom_field_4")
   final String? customField4;
 
+  @JsonKey(name: "custom_field_5")
   final String? customField5;
 
+  @JsonKey(name: "address")
   final UserAddress? address;
 
   CrmRegisterRequest({

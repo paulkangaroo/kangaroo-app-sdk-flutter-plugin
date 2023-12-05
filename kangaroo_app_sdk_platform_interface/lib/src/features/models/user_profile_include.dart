@@ -24,15 +24,19 @@ part 'user_profile_include.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserProfileInclude {
   ///User Profile balance data. 
+  @JsonKey(name: "balance")
   final UserBalance? balance;
 
   ///User&#39;s tier status.  
+  @JsonKey(name: "tier_level")
   final TierLevel? tierLevel;
 
   ///User&#39;s tier progress and status. If a user&#39;s tier status is statically fixed, this will be null as they do not progress from tier to tier.  
+  @JsonKey(name: "tier_progress")
   final TierProgress? tierProgress;
 
   ///A list of referral programs the user has access to. 
+  @JsonKey(name: "referral_programs")
   final List<ReferralProgram>? referralPrograms;
 
   UserProfileInclude({

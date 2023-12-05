@@ -35,7 +35,7 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
 
          let result = try await TransferRecallApi().recallTransfer(
                 recallId: recallId
-            ).serializeNative()
+            ).serializeTransferRecallApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

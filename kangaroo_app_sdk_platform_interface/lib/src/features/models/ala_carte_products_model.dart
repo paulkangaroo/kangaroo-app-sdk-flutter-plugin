@@ -16,9 +16,11 @@ part 'ala_carte_products_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class AlaCarteProductsModel {
   ///Contains all user data 
+  @JsonKey(name: "data")
   final UserProfileDataModel? data;
 
   ///Contains all A la carte items 
+  @JsonKey(name: "included")
   final UserAlaCarteIncluded? included;
 
   AlaCarteProductsModel({

@@ -11,6 +11,7 @@ part 'business_branches_data.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class BusinessBranchesData {
+  @JsonKey(name: "branches")
   final List<Branch>? branches;
 
   BusinessBranchesData({

@@ -37,7 +37,7 @@ class PushTokenRegistrationHandler: NSObject, FlutterStreamHandler, PluginChanne
          let result = try await PushTokenRegistrationApi().registerPushToken(
                 androidDeviceToken: androidDeviceToken,
                 iosDeviceToken: iosDeviceToken
-            ).serializeNative()
+            ).serializePushTokenRegistrationApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

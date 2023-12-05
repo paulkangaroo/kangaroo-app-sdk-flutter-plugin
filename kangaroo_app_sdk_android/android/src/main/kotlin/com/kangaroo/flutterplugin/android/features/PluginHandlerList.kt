@@ -29,6 +29,7 @@ import com.kangaroo.flutterplugin.android.features.publicBusinessSettings.Public
 import com.kangaroo.flutterplugin.android.features.publicOffer.PublicOfferHandler
 import com.kangaroo.flutterplugin.android.features.publicOffers.PublicOffersHandler
 import com.kangaroo.flutterplugin.android.features.publicProducts.PublicProductsHandler
+import com.kangaroo.flutterplugin.android.features.getPublicPromotions.GetPublicPromotionsHandler
 import com.kangaroo.flutterplugin.android.features.publicReward.PublicRewardHandler
 import com.kangaroo.flutterplugin.android.features.publicRewards.PublicRewardsHandler
 import com.kangaroo.flutterplugin.android.features.socialMediaLinks.SocialMediaLinksHandler
@@ -44,8 +45,10 @@ import com.kangaroo.flutterplugin.android.features.userBusinessOffers.UserBusine
 import com.kangaroo.flutterplugin.android.features.userBusinessProducts.UserBusinessProductsHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessProfile.UserBusinessProfileHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessRewards.UserBusinessRewardsHandler
+import com.kangaroo.flutterplugin.android.features.userBusinessCoupons.UserBusinessCouponsHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessSocialMediaLinks.UserBusinessSocialMediaLinksHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessTiers.UserBusinessTiersHandler
+import com.kangaroo.flutterplugin.android.features.userBusinessUsedCoupons.UserBusinessUsedCouponsHandler
 import com.kangaroo.flutterplugin.android.features.userCoupons.UserCouponsHandler
 import com.kangaroo.flutterplugin.android.features.userDetails.UserDetailsHandler
 import com.kangaroo.flutterplugin.android.features.userOffers.UserOffersHandler
@@ -129,6 +132,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     PublicProductsHandler(),
 
+    GetPublicPromotionsHandler(),
+
     PublicRewardHandler(),
 
     PublicRewardsHandler(),
@@ -159,9 +164,13 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     UserBusinessRewardsHandler(),
 
+    UserBusinessCouponsHandler(),
+
     UserBusinessSocialMediaLinksHandler(),
 
     UserBusinessTiersHandler(),
+
+    UserBusinessUsedCouponsHandler(),
 
     UserCouponsHandler(),
 

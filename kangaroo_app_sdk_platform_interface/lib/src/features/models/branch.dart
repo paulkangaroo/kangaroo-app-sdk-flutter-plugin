@@ -24,20 +24,27 @@ part 'branch.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Branch {
   ///Unique ID for this branch 
+  @JsonKey(name: "id")
   final String? id;
 
   ///The name of this branch 
+  @JsonKey(name: "name")
   final String? name;
 
   ///The website for this branch 
+  @JsonKey(name: "web_site")
   final String? webSite;
 
+  @JsonKey(name: "phone")
   final BranchPhone? phone;
 
+  @JsonKey(name: "logo")
   final Image? logo;
 
+  @JsonKey(name: "cover_photo")
   final Image? coverPhoto;
 
+  @JsonKey(name: "address")
   final BranchAddress? address;
 
   Branch({

@@ -10,12 +10,15 @@ part 'user_pin_reset_request.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserPinResetRequest {
   ///The response code for the pin reset request. Anything within the 200 range indicates a success  
+  @JsonKey(name: "status_code")
   final int statusCode;
 
   ///The message and status returned by the pin reset request 
+  @JsonKey(name: "message")
   final String message;
 
   ///A description of the pin reset request 
+  @JsonKey(name: "description")
   final String description;
 
   UserPinResetRequest({

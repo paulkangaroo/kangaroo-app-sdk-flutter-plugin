@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_a_la_car
 class PublicAlaCarteProductsApiFederated extends PublicAlaCarteProductsApiInterface {
   @override
 Future<Result<PublicALaCarteProductsModel>?> getPublicAlaCarteProducts() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_ala_carte_products');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_ala_carte_products');
 
     return PublicAlaCarteProductsApiInterface.deSerializedPlatformResponse(
       response,

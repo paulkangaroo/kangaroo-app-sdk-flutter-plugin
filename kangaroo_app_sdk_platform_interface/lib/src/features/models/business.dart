@@ -16,9 +16,11 @@ part 'business.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Business {
   ///Details about a business 
+  @JsonKey(name: "data")
   final BusinessData? data;
 
   ///Details about a business&#39; branches 
+  @JsonKey(name: "included")
   final BusinessBranchesData? included;
 
   Business({

@@ -15,24 +15,34 @@ part 'product.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class Product {
+  @JsonKey(name: "id")
   final int? id;
 
+  @JsonKey(name: "title")
   final String? title;
 
+  @JsonKey(name: "description")
   final String? description;
 
+  @JsonKey(name: "images")
   final List<Images>? images;
 
+  @JsonKey(name: "product_sku")
   final String? productSku;
 
+  @JsonKey(name: "actual_price")
   final double? actualPrice;
 
+  @JsonKey(name: "real_price")
   final double? realPrice;
 
+  @JsonKey(name: "terms_conditions")
   final String? termsConditions;
 
+  @JsonKey(name: "link")
   final String? link;
 
+  @JsonKey(name: "product_languages")
   final List<Languages>? productLanguages;
 
   Product({

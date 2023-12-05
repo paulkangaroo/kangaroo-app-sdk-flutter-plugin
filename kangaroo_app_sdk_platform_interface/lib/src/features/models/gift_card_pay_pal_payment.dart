@@ -9,12 +9,16 @@ part 'gift_card_pay_pal_payment.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class GiftCardPayPalPayment {
+  @JsonKey(name: "payment_id")
   final String paymentId;
 
+  @JsonKey(name: "payer_id")
   final String payerId;
 
+  @JsonKey(name: "token")
   final String token;
 
+  @JsonKey(name: "success")
   final bool? success;
 
   GiftCardPayPalPayment({

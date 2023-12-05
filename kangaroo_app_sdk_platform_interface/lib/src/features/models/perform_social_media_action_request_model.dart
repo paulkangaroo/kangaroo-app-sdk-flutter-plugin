@@ -9,8 +9,10 @@ part 'perform_social_media_action_request_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PerformSocialMediaActionRequestModel {
+  @JsonKey(name: "action_id")
   final int actionId;
 
+  @JsonKey(name: "branch_id")
   final String branchId;
 
   PerformSocialMediaActionRequestModel({

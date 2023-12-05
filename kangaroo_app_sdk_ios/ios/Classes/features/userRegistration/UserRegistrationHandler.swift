@@ -41,7 +41,7 @@ class UserRegistrationHandler: NSObject, FlutterStreamHandler, PluginChannelHand
                 phone: phone,
                 countryCode: countryCode,
                 language: language
-            ).serializeNative()
+            ).serializeUserRegistrationApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

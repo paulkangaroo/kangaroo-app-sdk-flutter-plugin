@@ -11,6 +11,7 @@ part 'draws_model.g.dart';
 /// Business draws. Used to display draw contests.
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class DrawsModel {
+  @JsonKey(name: "data")
   final List<Draw>? data;
 
   DrawsModel({

@@ -12,6 +12,7 @@ part 'perform_social_media_action_response_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PerformSocialMediaActionResponseModel {
   ///Contains social media action data 
+  @JsonKey(name: "data")
   final PerformActionResponseModel? data;
 
   PerformSocialMediaActionResponseModel({

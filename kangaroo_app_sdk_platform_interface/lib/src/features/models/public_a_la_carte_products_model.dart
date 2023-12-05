@@ -12,6 +12,7 @@ part 'public_a_la_carte_products_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PublicALaCarteProductsModel {
   ///A list of a la carte products available to all users. 
+  @JsonKey(name: "data")
   final AlaCarteList? data;
 
   PublicALaCarteProductsModel({

@@ -11,6 +11,7 @@ part 'coupon_redemption_response_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CouponRedemptionResponseModel {
+  @JsonKey(name: "data")
   final CouponRedemptionResponseData data;
 
   CouponRedemptionResponseModel({

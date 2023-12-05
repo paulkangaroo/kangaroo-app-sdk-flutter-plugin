@@ -10,6 +10,7 @@ part 'update_pin_request.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UpdatePinRequest {
   ///The new PIN 
+  @JsonKey(name: "pin_code")
   final String pinCode;
 
   UpdatePinRequest({

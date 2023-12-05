@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_rewards/us
 class UserRewardsApiFederated extends UserRewardsApiInterface {
   @override
 Future<Result<UserRewardsModel>?> getUserRewards() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_rewards');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_rewards');
 
     return UserRewardsApiInterface.deSerializedPlatformResponse(
       response,

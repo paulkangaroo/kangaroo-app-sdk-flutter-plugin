@@ -12,6 +12,7 @@ part 'check_in_response_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class CheckInResponseModel {
   ///Contains all user profile data 
+  @JsonKey(name: "data")
   final CheckInDataModel? data;
 
   CheckInResponseModel({

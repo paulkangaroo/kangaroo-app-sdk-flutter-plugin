@@ -13,7 +13,7 @@ class UserPinUpdateApiFederated extends UserPinUpdateApiInterface {
 Future<Result<UserProfileModel>?> updatePin({ 
         required final UpdatePinRequest updatePinRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/update_pin',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/update_pin',
     {
       'updatePinRequest' : jsonEncode(updatePinRequest)
     }

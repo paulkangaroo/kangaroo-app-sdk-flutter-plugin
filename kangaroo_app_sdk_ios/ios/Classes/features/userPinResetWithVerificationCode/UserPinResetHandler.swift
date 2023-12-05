@@ -43,7 +43,7 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
                 email: email,
                 phone: phone,
                 countryCode: countryCode
-            ).serializeNative()
+            ).serializeUserPinResetApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

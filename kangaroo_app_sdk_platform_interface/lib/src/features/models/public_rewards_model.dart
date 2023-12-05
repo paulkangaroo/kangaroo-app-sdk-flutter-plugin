@@ -11,6 +11,7 @@ part 'public_rewards_model.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PublicRewardsModel {
+  @JsonKey(name: "data")
   final Rewards? data;
 
   PublicRewardsModel({

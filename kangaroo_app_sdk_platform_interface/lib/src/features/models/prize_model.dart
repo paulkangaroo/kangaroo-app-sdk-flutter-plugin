@@ -10,15 +10,19 @@ part 'prize_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PrizeModel {
   ///fill style color 
+  @JsonKey(name: "fill_style")
   final String? fillStyle;
 
   ///prize name 
+  @JsonKey(name: "text")
   final String? text;
 
   ///prize description 
+  @JsonKey(name: "desc")
   final String? desc;
 
   ///prize id 
+  @JsonKey(name: "prize_id")
   final int? prizeId;
 
   PrizeModel({

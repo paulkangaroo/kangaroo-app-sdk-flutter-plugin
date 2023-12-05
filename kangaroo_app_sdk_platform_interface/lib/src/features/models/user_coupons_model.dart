@@ -12,6 +12,7 @@ part 'user_coupons_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class UserCouponsModel {
   ///Contains a list of all coupons available to this user 
+  @JsonKey(name: "data")
   final UserCouponsData? data;
 
   UserCouponsModel({

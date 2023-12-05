@@ -20,12 +20,15 @@ part 'tier_program_include.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TierProgramInclude {
   ///User&#39;s tier status.  
+  @JsonKey(name: "tier_level")
   final UserTierLevel? tierLevel;
 
   ///Information about the tier program. Users can move through different tiers if a business has activated their tier program. By acquire points, making purchases, and visiting the business, the user can be rewarded with different tier levels.  
+  @JsonKey(name: "tiers")
   final Tiers? tiers;
 
   ///User&#39;s tier progress and status. If a user&#39;s tier status is statically fixed, this will be null as they do not progress from tier to tier.  
+  @JsonKey(name: "tier_progress")
   final TierProgress? tierProgress;
 
   TierProgramInclude({

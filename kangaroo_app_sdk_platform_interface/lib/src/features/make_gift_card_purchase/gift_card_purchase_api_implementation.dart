@@ -13,7 +13,7 @@ class GiftCardPurchaseApiFederated extends GiftCardPurchaseApiInterface {
 Future<Result<GiftCardPayPalPaymentResponseModel>?> purchaseGiftCard({ 
         required final GiftCardPurchaseRequest purchaseGiftCardRequest
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/purchase_gift_card',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/purchase_gift_card',
     {
       'purchaseGiftCardRequest' : jsonEncode(purchaseGiftCardRequest)
     }

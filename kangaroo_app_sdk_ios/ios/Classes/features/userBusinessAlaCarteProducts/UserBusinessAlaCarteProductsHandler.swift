@@ -35,7 +35,7 @@ class UserBusinessAlaCarteProductsHandler: NSObject, FlutterStreamHandler, Plugi
 
          let result = try await UserBusinessAlaCarteProductsApi().getUserBusinessAlaCarteProducts(
                 businessId: businessId
-            ).serializeNative()
+            ).serializeUserBusinessAlaCarteProductsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

@@ -12,12 +12,15 @@ part 'tier_perk_translation.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class TierPerkTranslation {
   ///The ID of teh language. 
+  @JsonKey(name: "language_id")
   final int? languageId;
 
   ///The name of this tier level as translated. 
+  @JsonKey(name: "title")
   final String? title;
 
   ///The language for which this translation applies. 
+  @JsonKey(name: "language")
   final Language? language;
 
   TierPerkTranslation({

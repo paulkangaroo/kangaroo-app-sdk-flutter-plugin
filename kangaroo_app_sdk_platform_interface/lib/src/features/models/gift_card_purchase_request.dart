@@ -11,12 +11,16 @@ part 'gift_card_purchase_request.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class GiftCardPurchaseRequest {
+  @JsonKey(name: "intent")
   final String intent;
 
+  @JsonKey(name: "provider")
   final String provider;
 
+  @JsonKey(name: "giftcard_id")
   final int giftcardId;
 
+  @JsonKey(name: "paypal_payment")
   final GiftCardPayPalPayment paypalPayment;
 
   GiftCardPurchaseRequest({

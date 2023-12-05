@@ -22,8 +22,8 @@ class UserRegistrationWithCrmHandler: NSObject, FlutterStreamHandler, PluginChan
         
 
         
-        do {}
-        let result = try await UserRegistrationWithCrmApi().createAccountWithCrm(methods: call.arguments as! [String : Any]).serializeNative()
+        do {
+        let result = try await UserRegistrationWithCrmApi().createAccountWithCrm(methods: call.arguments as! [String : Any]).serializeUserRegistrationWithCrmApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -35,6 +35,7 @@ class UserRegistrationWithCrmHandler: NSObject, FlutterStreamHandler, PluginChan
             default:
                 return nil
             }
+        }
         catch {
             return nil
         }

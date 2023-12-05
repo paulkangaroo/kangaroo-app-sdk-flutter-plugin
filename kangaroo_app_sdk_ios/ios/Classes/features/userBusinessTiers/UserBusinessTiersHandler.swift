@@ -35,7 +35,7 @@ class UserBusinessTiersHandler: NSObject, FlutterStreamHandler, PluginChannelHan
 
          let result = try await UserBusinessTiersApi().getUserBusinessTiers(
                 memberBusinessId: memberBusinessId
-            ).serializeNative()
+            ).serializeUserBusinessTiersApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

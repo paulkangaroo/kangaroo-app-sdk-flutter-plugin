@@ -17,7 +17,7 @@ Future<Result<EmptyResponse>?> resetPin({
         final String? phone,
         final String? countryCode
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/reset_pin',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/reset_pin',
     {
       'verificationCode' : verificationCode,
       'pinCode' : pinCode,

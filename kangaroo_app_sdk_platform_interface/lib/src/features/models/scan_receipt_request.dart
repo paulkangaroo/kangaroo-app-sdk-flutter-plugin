@@ -9,8 +9,10 @@ part 'scan_receipt_request.g.dart';
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class ScanReceiptRequest {
+  @JsonKey(name: "qr_code_info")
   final String qrCodeInfo;
 
+  @JsonKey(name: "intent")
   final String intent;
 
   ScanReceiptRequest({

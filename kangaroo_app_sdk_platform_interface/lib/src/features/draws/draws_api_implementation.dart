@@ -11,7 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/draws/draws_api
 class DrawsApiFederated extends DrawsApiInterface {
   @override
 Future<Result<DrawsModel>?> getDraws() async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_draws');
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_draws');
 
     return DrawsApiInterface.deSerializedPlatformResponse(
       response,

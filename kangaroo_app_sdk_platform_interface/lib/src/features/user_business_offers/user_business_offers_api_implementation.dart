@@ -13,7 +13,7 @@ class UserBusinessOffersApiFederated extends UserBusinessOffersApiInterface {
 Future<Result<UserBusinessOffersModel>?> getUserBusinessOffers({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_offers',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_offers',
     {
       'businessId' : businessId
     }

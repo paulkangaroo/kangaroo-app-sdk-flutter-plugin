@@ -13,7 +13,7 @@ class CampaignMessagesApiFederated extends CampaignMessagesApiInterface {
 Future<Result<CampaignMessagesModel>?> getCampaignMessages({ 
         required final String businessId
     }) async {
-    final response = await sdkMethodChannel.invokeMethod('customer_sdk/methods/get_campaign_messages',
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_campaign_messages',
     {
       'businessId' : businessId
     }

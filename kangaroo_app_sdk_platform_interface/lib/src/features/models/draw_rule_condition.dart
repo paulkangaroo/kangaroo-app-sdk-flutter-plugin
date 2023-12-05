@@ -12,14 +12,18 @@ part 'draw_rule_condition.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class DrawRuleCondition {
   ///Unique draw rule condition id. 
+  @JsonKey(name: "id")
   final int? id;
 
   ///The draw rule condition title. 
+  @JsonKey(name: "title")
   final String? title;
 
   ///The draw rule condition description. 
+  @JsonKey(name: "description")
   final String? description;
 
+  @JsonKey(name: "languages")
   final List<Languages>? languages;
 
   DrawRuleCondition({

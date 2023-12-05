@@ -12,6 +12,7 @@ part 'pay_pal_payment_model.g.dart';
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PayPalPaymentModel {
   ///A paypal payment response data 
+  @JsonKey(name: "data")
   final PayPalPayment? data;
 
   PayPalPaymentModel({

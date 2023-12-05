@@ -15,7 +15,7 @@ plugins {
     id("de.undercouch.download") version "4.1.2"
 }
 
-val kangarooApiVersion = "0.0.428"
+val kangarooApiVersion = "0.0.479"
 
 /**
  * Download api spec from GitHub to build folder
