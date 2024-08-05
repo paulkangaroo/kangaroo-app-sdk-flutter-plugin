@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/archive_
 class ArchiveInboxItemApiFederated extends ArchiveInboxItemApiInterface {
   @override
 Future<Result<ArchiveResponseModel>?> archiveInboxItem({ 
+        final Map<String, String>? overrideHeaders,
         required final ArchiveRequest archiveRequest
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/archive_inbox_item',
     {
+      'overrideHeaders' : overrideHeaders,
       'archiveRequest' : jsonEncode(archiveRequest)
     }
     );

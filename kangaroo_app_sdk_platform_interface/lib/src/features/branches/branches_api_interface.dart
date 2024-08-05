@@ -28,6 +28,7 @@ abstract class BranchesApiInterface extends PlatformInterface {
   }
 
 Future<Result<Business>?> getBusinessBranches({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getBusinessBranches has not been implemented.');

@@ -28,6 +28,7 @@ abstract class UserPinUpdateApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserProfileModel>?> updatePin({ 
+        final Map<String, String>? overrideHeaders,
         required final UpdatePinRequest updatePinRequest,
     }) {
     throw UnimplementedError('updatePin has not been implemented.');

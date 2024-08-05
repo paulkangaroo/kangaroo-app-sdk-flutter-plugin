@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/get_spin_to_win
 class GetSpinToWinPrizesApiFederated extends GetSpinToWinPrizesApiInterface {
   @override
 Future<Result<SpinToWinPrizesModel>?> getSpinToWinPrizes({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_spin_to_win_prizes',
     {
+      'overrideHeaders' : overrideHeaders,
       'businessId' : businessId
     }
     );

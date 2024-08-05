@@ -28,6 +28,7 @@ abstract class RedeemRewardsApiInterface extends PlatformInterface {
   }
 
 Future<Result<RedeemResponseModel>?> redeemReward({ 
+        final Map<String, String>? overrideHeaders,
         required final RedeemRequest redeemRequest,
     }) {
     throw UnimplementedError('redeemReward has not been implemented.');

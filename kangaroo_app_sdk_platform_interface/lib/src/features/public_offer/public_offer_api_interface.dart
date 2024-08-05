@@ -28,6 +28,7 @@ abstract class PublicOfferApiInterface extends PlatformInterface {
   }
 
 Future<Result<PublicOfferModel>?> getPublicOffer({ 
+        final Map<String, String>? overrideHeaders,
         required final String offerSlug,
     }) {
     throw UnimplementedError('getPublicOffer has not been implemented.');

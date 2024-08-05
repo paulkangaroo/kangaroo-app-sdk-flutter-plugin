@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_reward/p
 class PublicRewardApiFederated extends PublicRewardApiInterface {
   @override
 Future<Result<PublicRewardModel>?> getPublicReward({ 
+        final Map<String, String>? overrideHeaders,
         required final String rewardSlug
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_reward',
     {
+      'overrideHeaders' : overrideHeaders,
       'rewardSlug' : rewardSlug
     }
     );

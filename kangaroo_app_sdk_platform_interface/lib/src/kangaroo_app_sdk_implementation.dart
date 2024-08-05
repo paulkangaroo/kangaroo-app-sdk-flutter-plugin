@@ -9,12 +9,14 @@ class KangarooAppSdkFederated extends KangarooAppSdkInterface {
     final String? clientId,
     final String? clientSecret,
     final String? environment,
+    final String? baseURL,
   }) {
     sdkMethodChannel.invokeMethod('core/methods/initializeSdk', {
       'applicationKey': applicationKey,
       'clientId': clientId,
       'clientSecret': clientSecret,
       'environment': environment,
+      'baseURL': baseURL,
     });
   }
 

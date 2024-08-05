@@ -11,11 +11,13 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/push_token_regi
 class PushTokenRegistrationApiFederated extends PushTokenRegistrationApiInterface {
   @override
 Future<Result<UserProfileModel>?> registerPushToken({ 
+        final Map<String, String>? overrideHeaders,
         final String? androidDeviceToken,
         final String? iosDeviceToken
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/register_push_token',
     {
+      'overrideHeaders' : overrideHeaders,
       'androidDeviceToken' : androidDeviceToken,
       'iosDeviceToken' : iosDeviceToken
     }

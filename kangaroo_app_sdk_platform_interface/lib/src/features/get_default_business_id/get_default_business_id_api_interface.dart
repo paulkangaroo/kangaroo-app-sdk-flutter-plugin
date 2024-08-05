@@ -28,6 +28,7 @@ abstract class GetDefaultBusinessIdApiInterface extends PlatformInterface {
   }
 
 Future<Result<DefaultBusiness>?> getDefaultBusinessId({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getDefaultBusinessId has not been implemented.');

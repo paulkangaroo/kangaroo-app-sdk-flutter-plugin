@@ -27,7 +27,10 @@ abstract class UserUsedCouponsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserCouponsModel>?> getUserUsedCoupons() {
+Future<Result<UserCouponsModel>?> getUserUsedCoupons({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getUserUsedCoupons has not been implemented.');
   }
 

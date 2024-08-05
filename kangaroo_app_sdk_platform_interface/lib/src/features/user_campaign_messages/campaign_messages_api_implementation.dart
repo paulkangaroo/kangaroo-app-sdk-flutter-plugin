@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_campaign_m
 class CampaignMessagesApiFederated extends CampaignMessagesApiInterface {
   @override
 Future<Result<CampaignMessagesModel>?> getCampaignMessages({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_campaign_messages',
     {
+      'overrideHeaders' : overrideHeaders,
       'businessId' : businessId
     }
     );

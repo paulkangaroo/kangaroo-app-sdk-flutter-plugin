@@ -12,11 +12,13 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/perform_
 class SocialMediaActionPerformApiFederated extends SocialMediaActionPerformApiInterface {
   @override
 Future<Result<PerformSocialMediaActionResponseModel>?> performSocialMediaAction({ 
+        final Map<String, String>? overrideHeaders,
         required final PerformSocialMediaActionRequestModel performSocialMediaActionRequest,
         required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/perform_social_media_action',
     {
+      'overrideHeaders' : overrideHeaders,
       'performSocialMediaActionRequest' : jsonEncode(performSocialMediaActionRequest),
       'businessId' : businessId
     }

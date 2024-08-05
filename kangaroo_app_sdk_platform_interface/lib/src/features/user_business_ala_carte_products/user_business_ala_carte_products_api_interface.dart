@@ -28,6 +28,7 @@ abstract class UserBusinessAlaCarteProductsApiInterface extends PlatformInterfac
   }
 
 Future<Result<AlaCarteProductsModel>?> getUserBusinessAlaCarteProducts({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getUserBusinessAlaCarteProducts has not been implemented.');

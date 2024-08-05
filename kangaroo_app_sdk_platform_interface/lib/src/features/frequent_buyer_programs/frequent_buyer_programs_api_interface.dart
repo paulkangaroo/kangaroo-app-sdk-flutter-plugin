@@ -27,7 +27,10 @@ abstract class FrequentBuyerProgramsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<FrequentBuyerProgramsModel>?> getFrequentBuyerPrograms() {
+Future<Result<FrequentBuyerProgramsModel>?> getFrequentBuyerPrograms({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getFrequentBuyerPrograms has not been implemented.');
   }
 

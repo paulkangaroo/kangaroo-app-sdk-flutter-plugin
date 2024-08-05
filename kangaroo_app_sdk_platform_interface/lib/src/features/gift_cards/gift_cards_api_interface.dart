@@ -27,7 +27,10 @@ abstract class GiftCardsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<GiftCardsModel>?> getGiftCards() {
+Future<Result<GiftCardsModel>?> getGiftCards({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getGiftCards has not been implemented.');
   }
 

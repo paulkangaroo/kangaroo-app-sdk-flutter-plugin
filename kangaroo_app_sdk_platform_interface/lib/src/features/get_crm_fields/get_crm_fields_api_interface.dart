@@ -27,7 +27,10 @@ abstract class GetCrmFieldsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<CrmFields>?> getCrmFields() {
+Future<Result<CrmFields>?> getCrmFields({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getCrmFields has not been implemented.');
   }
 

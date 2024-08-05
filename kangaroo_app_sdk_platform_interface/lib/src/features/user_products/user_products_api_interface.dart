@@ -27,7 +27,10 @@ abstract class UserProductsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserProductsModel>?> getUserProducts() {
+Future<Result<UserProductsModel>?> getUserProducts({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getUserProducts has not been implemented.');
   }
 

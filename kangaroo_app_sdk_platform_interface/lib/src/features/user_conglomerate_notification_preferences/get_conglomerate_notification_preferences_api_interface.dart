@@ -27,7 +27,10 @@ abstract class GetConglomerateNotificationPreferencesApiInterface extends Platfo
     _instance = instance;
   }
 
-Future<Result<NotificationSettingsModel>?> getConglomerateNotificationPreferences() {
+Future<Result<NotificationSettingsModel>?> getConglomerateNotificationPreferences({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getConglomerateNotificationPreferences has not been implemented.');
   }
 

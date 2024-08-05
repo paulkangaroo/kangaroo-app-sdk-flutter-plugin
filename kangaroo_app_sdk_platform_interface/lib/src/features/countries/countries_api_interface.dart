@@ -27,7 +27,10 @@ abstract class CountriesApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<Countries>?> getCountries() {
+Future<Result<Countries>?> getCountries({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getCountries has not been implemented.');
   }
 

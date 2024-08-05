@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_a
 class UserBusinessAlaCarteProductsApiFederated extends UserBusinessAlaCarteProductsApiInterface {
   @override
 Future<Result<AlaCarteProductsModel>?> getUserBusinessAlaCarteProducts({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_ala_carte_products',
     {
+      'overrideHeaders' : overrideHeaders,
       'businessId' : businessId
     }
     );

@@ -11,11 +11,13 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/claim_offer/cla
 class ClaimOfferApiFederated extends ClaimOfferApiInterface {
   @override
 Future<Result<ClaimedOfferModel>?> claimOffer({ 
+        final Map<String, String>? overrideHeaders,
         required final int offerId,
         required final String customerId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/claim_offer',
     {
+      'overrideHeaders' : overrideHeaders,
       'offerId' : offerId,
       'customerId' : customerId
     }

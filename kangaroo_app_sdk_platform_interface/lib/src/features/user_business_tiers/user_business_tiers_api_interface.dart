@@ -28,6 +28,7 @@ abstract class UserBusinessTiersApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserProfileWithTierProgram>?> getUserBusinessTiers({ 
+        final Map<String, String>? overrideHeaders,
         required final String memberBusinessId,
     }) {
     throw UnimplementedError('getUserBusinessTiers has not been implemented.');

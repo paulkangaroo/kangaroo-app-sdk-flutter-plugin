@@ -27,7 +27,10 @@ abstract class DrawsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<DrawsModel>?> getDraws() {
+Future<Result<DrawsModel>?> getDraws({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getDraws has not been implemented.');
   }
 

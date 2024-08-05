@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_f
 class UserBusinessFrequentBuyerProgramsApiFederated extends UserBusinessFrequentBuyerProgramsApiInterface {
   @override
 Future<Result<FrequentBuyerProgramsModel>?> getUserBusinessFrequentBuyerPrograms({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_frequent_buyer_programs',
     {
+      'overrideHeaders' : overrideHeaders,
       'businessId' : businessId
     }
     );

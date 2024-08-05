@@ -28,6 +28,7 @@ abstract class UserProfileUpdateApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserProfileModel>?> updateUserProfile({ 
+        final Map<String, String>? overrideHeaders,
         final String? firstName,
         final String? lastName,
         final String? birthDate,

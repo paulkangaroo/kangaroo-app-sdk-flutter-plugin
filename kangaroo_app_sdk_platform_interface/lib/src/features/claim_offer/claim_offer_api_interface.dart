@@ -28,6 +28,7 @@ abstract class ClaimOfferApiInterface extends PlatformInterface {
   }
 
 Future<Result<ClaimedOfferModel>?> claimOffer({ 
+        final Map<String, String>? overrideHeaders,
         required final int offerId,
         required final String customerId,
     }) {

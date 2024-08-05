@@ -28,6 +28,7 @@ abstract class UserBusinessGiftCardsApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserBusinessGiftCardsModel>?> getUserBusinessGiftCards({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getUserBusinessGiftCards has not been implemented.');

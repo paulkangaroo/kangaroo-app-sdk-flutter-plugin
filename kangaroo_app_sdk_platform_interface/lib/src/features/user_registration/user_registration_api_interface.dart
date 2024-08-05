@@ -28,6 +28,7 @@ abstract class UserRegistrationApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserProfileDataModel>?> createAccount({ 
+        final Map<String, String>? overrideHeaders,
         final String? email,
         final String? phone,
         final String? countryCode,

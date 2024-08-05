@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/check_in
 class UserCheckInApiFederated extends UserCheckInApiInterface {
   @override
 Future<Result<CheckInResponseModel>?> userCheckIn({ 
+        final Map<String, String>? overrideHeaders,
         required final CheckInRequest checkInRequest
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/user_check_in',
     {
+      'overrideHeaders' : overrideHeaders,
       'checkInRequest' : jsonEncode(checkInRequest)
     }
     );

@@ -30,6 +30,7 @@ abstract class SocialMediaActionPerformApiInterface extends PlatformInterface {
   }
 
 Future<Result<PerformSocialMediaActionResponseModel>?> performSocialMediaAction({ 
+        final Map<String, String>? overrideHeaders,
         required final PerformSocialMediaActionRequestModel performSocialMediaActionRequest,
         required final String businessId,
     }) {

@@ -27,7 +27,10 @@ abstract class PublicProductsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<PublicProductsModel>?> getPublicProducts() {
+Future<Result<PublicProductsModel>?> getPublicProducts({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getPublicProducts has not been implemented.');
   }
 

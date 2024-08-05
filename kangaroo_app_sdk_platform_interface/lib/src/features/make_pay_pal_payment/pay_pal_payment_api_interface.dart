@@ -28,6 +28,7 @@ abstract class PayPalPaymentApiInterface extends PlatformInterface {
   }
 
 Future<Result<PayPalPaymentModel>?> makePayPalPayment({ 
+        final Map<String, String>? overrideHeaders,
         final String intent = "buy_giftcard",
         final String provider = "paypal",
         required final int giftcardId,

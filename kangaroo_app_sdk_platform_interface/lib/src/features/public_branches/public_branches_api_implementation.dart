@@ -10,8 +10,16 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_branches
 
 class PublicBranchesApiFederated extends PublicBranchesApiInterface {
   @override
-Future<Result<PublicBranchesModel>?> getPublicBranches() async {
-    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_branches');
+Future<Result<PublicBranchesModel>?> getPublicBranches({ 
+        final Map<String, String>? overrideHeaders,
+        required final int perPage
+    }) async {
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_branches',
+    {
+      'overrideHeaders' : overrideHeaders,
+      'perPage' : perPage
+    }
+    );
 
     return PublicBranchesApiInterface.deSerializedPlatformResponse(
       response,

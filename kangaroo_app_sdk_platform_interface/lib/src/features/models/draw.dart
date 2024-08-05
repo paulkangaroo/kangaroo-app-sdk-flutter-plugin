@@ -2,7 +2,7 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/draw_branches.dart';
 
@@ -12,7 +12,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/draw_rul
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/draw_prize.dart';
 
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/draw_branches.dart';
 
@@ -49,7 +49,7 @@ class Draw {
 
   ///The images attached to this draw. There are 3 available sizes: thumbnail, medium, and large.  
   @JsonKey(name: "images")
-  final List<Image>? images;
+  final List<ImageModel>? images;
 
   ///If this draw is enabled or not. 
   @JsonKey(name: "enabled")

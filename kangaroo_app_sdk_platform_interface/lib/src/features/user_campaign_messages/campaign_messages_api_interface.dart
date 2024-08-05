@@ -28,6 +28,7 @@ abstract class CampaignMessagesApiInterface extends PlatformInterface {
   }
 
 Future<Result<CampaignMessagesModel>?> getCampaignMessages({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getCampaignMessages has not been implemented.');

@@ -28,6 +28,7 @@ abstract class UserBusinessOffersApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserBusinessOffersModel>?> getUserBusinessOffers({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getUserBusinessOffers has not been implemented.');

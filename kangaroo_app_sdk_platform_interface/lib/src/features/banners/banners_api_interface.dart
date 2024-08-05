@@ -27,7 +27,10 @@ abstract class BannersApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<BannersModel>?> getBanners() {
+Future<Result<BannersModel>?> getBanners({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getBanners has not been implemented.');
   }
 

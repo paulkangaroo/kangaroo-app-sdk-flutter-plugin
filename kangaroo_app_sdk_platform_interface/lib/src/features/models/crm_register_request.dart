@@ -6,9 +6,11 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_con
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_address.dart';
 
+
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_consent.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_address.dart';
+
 
 part 'crm_register_request.g.dart';
 
@@ -75,6 +77,9 @@ class CrmRegisterRequest {
   @JsonKey(name: "address")
   final UserAddress? address;
 
+  @JsonKey(name: "language")
+  final String? language;
+
   CrmRegisterRequest({
     required this.firstName,
     required this.lastName,
@@ -96,6 +101,7 @@ class CrmRegisterRequest {
     required this.customField4,
     required this.customField5,
     required this.address,
+    required this.language,
   });
 
   factory CrmRegisterRequest.fromJson(Map<String, dynamic> data) => _$CrmRegisterRequestFromJson(data);

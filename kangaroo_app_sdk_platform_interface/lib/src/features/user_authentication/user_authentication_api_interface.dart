@@ -24,9 +24,19 @@ abstract class UserAuthenticationApiInterface extends PlatformInterface {
   }
 
   authenticateUser(
-    final String username,
-    final String password,
+    final String? username,
+    final String? password,
+    final String? googleToken,
+    final Map<String, String>? overrideHeaders
   ) {
+    assert(
+    (googleToken == null &&
+    username?.isNotEmpty == true &&
+    password?.isNotEmpty == true) ||
+    (googleToken?.isNotEmpty == true &&
+    username == null &&
+    password == null),
+    'Invalid combination of googleToken with username, and password.');
     throw UnimplementedError('authenticateUser has not been implemented.');
   }
 

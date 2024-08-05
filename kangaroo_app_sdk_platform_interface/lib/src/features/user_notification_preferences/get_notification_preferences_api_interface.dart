@@ -27,7 +27,10 @@ abstract class GetNotificationPreferencesApiInterface extends PlatformInterface 
     _instance = instance;
   }
 
-Future<Result<NotificationSettingsModel>?> getNotificationPreferences() {
+Future<Result<NotificationSettingsModel>?> getNotificationPreferences({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getNotificationPreferences has not been implemented.');
   }
 

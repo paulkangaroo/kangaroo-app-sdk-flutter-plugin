@@ -11,6 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_pin_reset_
 class UserPinResetRequestApiFederated extends UserPinResetRequestApiInterface {
   @override
 Future<Result<UserPinResetRequest>?> requestPinReset({ 
+        final Map<String, String>? overrideHeaders,
         final String mode = "verification_code",
         final String? email,
         final String? phone,
@@ -18,6 +19,7 @@ Future<Result<UserPinResetRequest>?> requestPinReset({
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/request_pin_reset',
     {
+      'overrideHeaders' : overrideHeaders,
       'mode' : mode,
       'email' : email,
       'phone' : phone,

@@ -76,7 +76,7 @@ OfferModel _$OfferModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           images: $checkedConvert(
               'images',
               (v) => (v as List<dynamic>?)
-                  ?.map((e) => Image.fromJson(e as Map<String, dynamic>))
+                  ?.map((e) => ImageModel.fromJson(e as Map<String, dynamic>))
                   .toList()),
           neverExpiresFlag:
               $checkedConvert('never_expires_flag', (v) => v as bool?),

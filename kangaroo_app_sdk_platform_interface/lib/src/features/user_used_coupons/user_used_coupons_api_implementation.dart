@@ -10,7 +10,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_used_coupo
 
 class UserUsedCouponsApiFederated extends UserUsedCouponsApiInterface {
   @override
-Future<Result<UserCouponsModel>?> getUserUsedCoupons() async {
+Future<Result<UserCouponsModel>?> getUserUsedCoupons({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_used_coupons');
 
     return UserUsedCouponsApiInterface.deSerializedPlatformResponse(

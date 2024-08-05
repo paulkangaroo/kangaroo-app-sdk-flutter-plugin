@@ -28,6 +28,7 @@ abstract class UserPinResetRequestApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserPinResetRequest>?> requestPinReset({ 
+        final Map<String, String>? overrideHeaders,
         final String mode = "verification_code",
         final String? email,
         final String? phone,

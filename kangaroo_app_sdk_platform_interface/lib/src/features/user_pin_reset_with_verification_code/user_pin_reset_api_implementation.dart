@@ -11,6 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart
 class UserPinResetApiFederated extends UserPinResetApiInterface {
   @override
 Future<Result<EmptyResponse>?> resetPin({ 
+        final Map<String, String>? overrideHeaders,
         required final String verificationCode,
         required final String pinCode,
         final String? email,
@@ -19,6 +20,7 @@ Future<Result<EmptyResponse>?> resetPin({
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/reset_pin',
     {
+      'overrideHeaders' : overrideHeaders,
       'verificationCode' : verificationCode,
       'pinCode' : pinCode,
       'email' : email,

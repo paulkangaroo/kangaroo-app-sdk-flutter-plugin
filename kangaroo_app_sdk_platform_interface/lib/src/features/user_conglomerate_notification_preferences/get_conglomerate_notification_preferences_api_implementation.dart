@@ -10,7 +10,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_conglomera
 
 class GetConglomerateNotificationPreferencesApiFederated extends GetConglomerateNotificationPreferencesApiInterface {
   @override
-Future<Result<NotificationSettingsModel>?> getConglomerateNotificationPreferences() async {
+Future<Result<NotificationSettingsModel>?> getConglomerateNotificationPreferences({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_conglomerate_notification_preferences');
 
     return GetConglomerateNotificationPreferencesApiInterface.deSerializedPlatformResponse(

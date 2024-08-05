@@ -28,6 +28,7 @@ abstract class RedeemCouponsApiInterface extends PlatformInterface {
   }
 
 Future<Result<CouponRedemptionResponseModel>?> redeemCoupon({ 
+        final Map<String, String>? overrideHeaders,
         required final RedeemCouponRequest redeemCouponRequest,
     }) {
     throw UnimplementedError('redeemCoupon has not been implemented.');

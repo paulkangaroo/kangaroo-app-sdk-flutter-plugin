@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/crm_regi
 class UserRegistrationWithCrmApiFederated extends UserRegistrationWithCrmApiInterface {
   @override
 Future<Result<UserProfileDataModel>?> createAccountWithCrm({ 
+        final Map<String, String>? overrideHeaders,
         required final CrmRegisterRequest registerWithCrmRequest
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/create_account_with_crm',
     {
+      'overrideHeaders' : overrideHeaders,
       'registerWithCrmRequest' : jsonEncode(registerWithCrmRequest)
     }
     );

@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_offer/pu
 class PublicOfferApiFederated extends PublicOfferApiInterface {
   @override
 Future<Result<PublicOfferModel>?> getPublicOffer({ 
+        final Map<String, String>? overrideHeaders,
         required final String offerSlug
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_public_offer',
     {
+      'overrideHeaders' : overrideHeaders,
       'offerSlug' : offerSlug
     }
     );

@@ -28,6 +28,7 @@ abstract class UserRegistrationWithCrmApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserProfileDataModel>?> createAccountWithCrm({ 
+        final Map<String, String>? overrideHeaders,
         required final CrmRegisterRequest registerWithCrmRequest,
     }) {
     throw UnimplementedError('createAccountWithCrm has not been implemented.');

@@ -27,6 +27,7 @@ abstract class UserUnsubscribeApiInterface extends PlatformInterface {
   }
 
 Future<Result<EmptyResponse>?> unsubscribe({ 
+        final Map<String, String>? overrideHeaders,
         required final String campaignId,
         required final String token,
     }) {

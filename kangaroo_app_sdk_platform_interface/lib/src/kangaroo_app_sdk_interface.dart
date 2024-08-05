@@ -22,6 +22,7 @@ abstract class KangarooAppSdkInterface extends PlatformInterface {
     final String? clientId,
     final String? clientSecret,
     final String? environment,
+    final String? baseURL,
   }) {
     throw UnimplementedError('initialize sdk has not been implemented.');
   }

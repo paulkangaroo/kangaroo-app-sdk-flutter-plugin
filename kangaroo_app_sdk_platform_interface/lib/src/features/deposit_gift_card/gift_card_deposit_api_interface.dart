@@ -28,6 +28,7 @@ abstract class GiftCardDepositApiInterface extends PlatformInterface {
   }
 
 Future<Result<TransferActionResultModel>?> depositGiftCard({ 
+        final Map<String, String>? overrideHeaders,
         required final String depositId,
     }) {
     throw UnimplementedError('depositGiftCard has not been implemented.');

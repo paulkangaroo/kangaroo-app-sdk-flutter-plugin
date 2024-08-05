@@ -28,6 +28,7 @@ abstract class UserBusinessRewardsApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserBusinessRewardsModel>?> getUserBusinessRewards({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getUserBusinessRewards has not been implemented.');

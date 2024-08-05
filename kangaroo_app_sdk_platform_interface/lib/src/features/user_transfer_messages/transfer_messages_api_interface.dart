@@ -28,6 +28,7 @@ abstract class TransferMessagesApiInterface extends PlatformInterface {
   }
 
 Future<Result<TransferMessagesModel>?> getTransferMessages({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getTransferMessages has not been implemented.');

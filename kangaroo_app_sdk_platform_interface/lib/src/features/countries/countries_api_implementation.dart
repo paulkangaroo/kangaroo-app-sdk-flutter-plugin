@@ -10,7 +10,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/countries/count
 
 class CountriesApiFederated extends CountriesApiInterface {
   @override
-Future<Result<Countries>?> getCountries() async {
+Future<Result<Countries>?> getCountries({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_countries');
 
     return CountriesApiInterface.deSerializedPlatformResponse(

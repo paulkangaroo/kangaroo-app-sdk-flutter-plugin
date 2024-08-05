@@ -28,6 +28,7 @@ abstract class UserScanReceiptApiInterface extends PlatformInterface {
   }
 
 Future<Result<ScanReceiptResponseModel>?> scanReceipt({ 
+        final Map<String, String>? overrideHeaders,
         required final ScanReceiptRequest scanReceiptRequest,
     }) {
     throw UnimplementedError('scanReceipt has not been implemented.');

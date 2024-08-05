@@ -27,7 +27,10 @@ abstract class TiersApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserProfileWithTierProgram>?> getTiers() {
+Future<Result<UserProfileWithTierProgram>?> getTiers({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getTiers has not been implemented.');
   }
 

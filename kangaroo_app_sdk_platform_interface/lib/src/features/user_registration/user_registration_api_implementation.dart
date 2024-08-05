@@ -11,6 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_registrati
 class UserRegistrationApiFederated extends UserRegistrationApiInterface {
   @override
 Future<Result<UserProfileDataModel>?> createAccount({ 
+        final Map<String, String>? overrideHeaders,
         final String? email,
         final String? phone,
         final String? countryCode,
@@ -18,6 +19,7 @@ Future<Result<UserProfileDataModel>?> createAccount({
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/create_account',
     {
+      'overrideHeaders' : overrideHeaders,
       'email' : email,
       'phone' : phone,
       'countryCode' : countryCode,

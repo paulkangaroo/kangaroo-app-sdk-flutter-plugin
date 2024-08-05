@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/deposit_gift_ca
 class GiftCardDepositApiFederated extends GiftCardDepositApiInterface {
   @override
 Future<Result<TransferActionResultModel>?> depositGiftCard({ 
+        final Map<String, String>? overrideHeaders,
         required final String depositId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/deposit_gift_card',
     {
+      'overrideHeaders' : overrideHeaders,
       'depositId' : depositId
     }
     );

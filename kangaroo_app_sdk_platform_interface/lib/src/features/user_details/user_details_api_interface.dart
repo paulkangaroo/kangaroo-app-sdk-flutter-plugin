@@ -27,7 +27,10 @@ abstract class UserDetailsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserDetailsModel>?> getUserDetails() {
+Future<Result<UserDetailsModel>?> getUserDetails({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getUserDetails has not been implemented.');
   }
 

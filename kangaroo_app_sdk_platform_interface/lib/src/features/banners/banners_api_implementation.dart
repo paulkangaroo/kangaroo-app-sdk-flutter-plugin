@@ -10,7 +10,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/banners/banners
 
 class BannersApiFederated extends BannersApiInterface {
   @override
-Future<Result<BannersModel>?> getBanners() async {
+Future<Result<BannersModel>?> getBanners({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_banners');
 
     return BannersApiInterface.deSerializedPlatformResponse(

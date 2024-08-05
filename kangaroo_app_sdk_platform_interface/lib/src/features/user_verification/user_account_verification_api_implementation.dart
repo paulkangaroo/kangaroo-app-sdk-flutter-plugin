@@ -11,6 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_verificati
 class UserAccountVerificationApiFederated extends UserAccountVerificationApiInterface {
   @override
 Future<Result<UserProfileModel>?> verifyAccount({ 
+        final Map<String, String>? overrideHeaders,
         required final String intent,
         required final String token,
         final String? email,
@@ -19,6 +20,7 @@ Future<Result<UserProfileModel>?> verifyAccount({
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/verify_account',
     {
+      'overrideHeaders' : overrideHeaders,
       'intent' : intent,
       'token' : token,
       'email' : email,

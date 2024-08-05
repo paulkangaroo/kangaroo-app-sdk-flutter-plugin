@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/business/busine
 class BusinessApiFederated extends BusinessApiInterface {
   @override
 Future<Result<Business>?> getBusiness({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_business',
     {
+      'overrideHeaders' : overrideHeaders,
       'businessId' : businessId
     }
     );

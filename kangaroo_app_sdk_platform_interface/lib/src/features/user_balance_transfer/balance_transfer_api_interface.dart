@@ -28,6 +28,7 @@ abstract class BalanceTransferApiInterface extends PlatformInterface {
   }
 
 Future<Result<TransferResponseModel>?> transfer({ 
+        final Map<String, String>? overrideHeaders,
         required final TransferRequestModel transferRequest,
     }) {
     throw UnimplementedError('transfer has not been implemented.');

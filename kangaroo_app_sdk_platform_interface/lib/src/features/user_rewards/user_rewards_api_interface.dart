@@ -27,7 +27,10 @@ abstract class UserRewardsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserRewardsModel>?> getUserRewards() {
+Future<Result<UserRewardsModel>?> getUserRewards({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getUserRewards has not been implemented.');
   }
 

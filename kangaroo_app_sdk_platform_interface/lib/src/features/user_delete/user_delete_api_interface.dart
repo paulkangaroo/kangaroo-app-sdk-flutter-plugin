@@ -26,7 +26,10 @@ abstract class UserDeleteApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<EmptyResponse>?> deleteUserAccount() {
+Future<Result<EmptyResponse>?> deleteUserAccount({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('deleteUserAccount has not been implemented.');
   }
 

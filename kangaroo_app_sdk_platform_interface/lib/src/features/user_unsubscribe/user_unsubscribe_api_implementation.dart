@@ -11,11 +11,13 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/empty_response.dart
 class UserUnsubscribeApiFederated extends UserUnsubscribeApiInterface {
   @override
 Future<Result<EmptyResponse>?> unsubscribe({ 
+        final Map<String, String>? overrideHeaders,
         required final String campaignId,
         required final String token
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/unsubscribe',
     {
+      'overrideHeaders' : overrideHeaders,
       'campaignId' : campaignId,
       'token' : token
     }

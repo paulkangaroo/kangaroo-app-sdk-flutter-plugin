@@ -11,6 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/make_pay_pal_pa
 class PayPalPaymentApiFederated extends PayPalPaymentApiInterface {
   @override
 Future<Result<PayPalPaymentModel>?> makePayPalPayment({ 
+        final Map<String, String>? overrideHeaders,
         final String intent = "buy_giftcard",
         final String provider = "paypal",
         required final int giftcardId,
@@ -19,6 +20,7 @@ Future<Result<PayPalPaymentModel>?> makePayPalPayment({
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/make_pay_pal_payment',
     {
+      'overrideHeaders' : overrideHeaders,
       'intent' : intent,
       'provider' : provider,
       'giftcardId' : giftcardId,

@@ -28,6 +28,7 @@ abstract class UpdateNotificationPreferencesApiInterface extends PlatformInterfa
   }
 
 Future<Result<NotificationSettingsModel>?> updateNotificationPreferences({ 
+        final Map<String, String>? overrideHeaders,
         required final NotificationSettingsUpdateRequest notificationPreferencesRequest,
     }) {
     throw UnimplementedError('updateNotificationPreferences has not been implemented.');

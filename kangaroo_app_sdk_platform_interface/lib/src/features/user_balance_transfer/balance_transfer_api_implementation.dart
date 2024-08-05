@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transfer
 class BalanceTransferApiFederated extends BalanceTransferApiInterface {
   @override
 Future<Result<TransferResponseModel>?> transfer({ 
+        final Map<String, String>? overrideHeaders,
         required final TransferRequestModel transferRequest
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/transfer',
     {
+      'overrideHeaders' : overrideHeaders,
       'transferRequest' : jsonEncode(transferRequest)
     }
     );

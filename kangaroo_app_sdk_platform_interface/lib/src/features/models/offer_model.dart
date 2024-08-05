@@ -2,13 +2,13 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_translation.dart';
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_action.dart';
 
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_translation.dart';
 
@@ -100,7 +100,7 @@ class OfferModel {
 
   ///The images attached to this offer. There are 3 available sizes: thumbnail, medium, and large.  
   @JsonKey(name: "images")
-  final List<Image>? images;
+  final List<ImageModel>? images;
 
   ///Whether this offer ever expires or not. If false, this offer is available indefinitely (provided any other requirements are met)  
   @JsonKey(name: "never_expires_flag")

@@ -28,6 +28,7 @@ abstract class UserBusinessBannersApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserBusinessBannersModel>?> getUserBusinessBanners({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getUserBusinessBanners has not been implemented.');

@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_business_s
 class UserBusinessSocialMediaLinksApiFederated extends UserBusinessSocialMediaLinksApiInterface {
   @override
 Future<Result<SocialMediaLinksModel>?> getUserBusinessSocialMediaLinks({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_social_media_links',
     {
+      'overrideHeaders' : overrideHeaders,
       'businessId' : businessId
     }
     );

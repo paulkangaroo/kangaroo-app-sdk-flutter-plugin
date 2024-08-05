@@ -27,7 +27,10 @@ abstract class PublicBranchesApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<PublicBranchesModel>?> getPublicBranches() {
+Future<Result<PublicBranchesModel>?> getPublicBranches({ 
+        final Map<String, String>? overrideHeaders,
+        required final int perPage,
+    }) {
     throw UnimplementedError('getPublicBranches has not been implemented.');
   }
 

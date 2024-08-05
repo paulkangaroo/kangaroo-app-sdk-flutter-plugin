@@ -28,6 +28,7 @@ abstract class UserBusinessSocialMediaLinksApiInterface extends PlatformInterfac
   }
 
 Future<Result<SocialMediaLinksModel>?> getUserBusinessSocialMediaLinks({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getUserBusinessSocialMediaLinks has not been implemented.');

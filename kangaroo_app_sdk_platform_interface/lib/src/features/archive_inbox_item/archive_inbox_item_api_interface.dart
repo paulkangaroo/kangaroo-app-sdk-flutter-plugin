@@ -28,6 +28,7 @@ abstract class ArchiveInboxItemApiInterface extends PlatformInterface {
   }
 
 Future<Result<ArchiveResponseModel>?> archiveInboxItem({ 
+        final Map<String, String>? overrideHeaders,
         required final ArchiveRequest archiveRequest,
     }) {
     throw UnimplementedError('archiveInboxItem has not been implemented.');

@@ -28,6 +28,7 @@ abstract class PushTokenRegistrationApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserProfileModel>?> registerPushToken({ 
+        final Map<String, String>? overrideHeaders,
         final String? androidDeviceToken,
         final String? iosDeviceToken,
     }) {

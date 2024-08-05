@@ -28,6 +28,7 @@ abstract class GiftCardPurchaseApiInterface extends PlatformInterface {
   }
 
 Future<Result<GiftCardPayPalPaymentResponseModel>?> purchaseGiftCard({ 
+        final Map<String, String>? overrideHeaders,
         required final GiftCardPurchaseRequest purchaseGiftCardRequest,
     }) {
     throw UnimplementedError('purchaseGiftCard has not been implemented.');

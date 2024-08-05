@@ -28,6 +28,7 @@ abstract class UserCheckInApiInterface extends PlatformInterface {
   }
 
 Future<Result<CheckInResponseModel>?> userCheckIn({ 
+        final Map<String, String>? overrideHeaders,
         required final CheckInRequest checkInRequest,
     }) {
     throw UnimplementedError('userCheckIn has not been implemented.');

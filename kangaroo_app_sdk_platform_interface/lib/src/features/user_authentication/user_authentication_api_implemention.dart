@@ -10,13 +10,10 @@ import 'models/user_authentication_model.dart';
 
 class UserAuthenticationApiFederated extends UserAuthenticationApiInterface {
   @override
-  authenticateUser(final String username, final String password) {
+  authenticateUser(final String? username, final String? password, final String? googleToken, final Map<String, String>? overrideHeaders,) {
     sdkMethodChannel.invokeMethod(
       'customer_sdk/methods/user_authentication',
-      {
-        'username': username,
-        'password': password,
-      },
+      {'username': username, 'password': password, 'googleToken': googleToken, 'overrideHeaders': overrideHeaders},
     );
   }
 

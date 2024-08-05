@@ -27,7 +27,10 @@ abstract class SocialMediaLinksApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<SocialMediaLinksModel>?> getSocialMediaLinks() {
+Future<Result<SocialMediaLinksModel>?> getSocialMediaLinks({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getSocialMediaLinks has not been implemented.');
   }
 

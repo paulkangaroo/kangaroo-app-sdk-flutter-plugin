@@ -28,6 +28,7 @@ abstract class UserBusinessFrequentBuyerProgramsApiInterface extends PlatformInt
   }
 
 Future<Result<FrequentBuyerProgramsModel>?> getUserBusinessFrequentBuyerPrograms({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getUserBusinessFrequentBuyerPrograms has not been implemented.');

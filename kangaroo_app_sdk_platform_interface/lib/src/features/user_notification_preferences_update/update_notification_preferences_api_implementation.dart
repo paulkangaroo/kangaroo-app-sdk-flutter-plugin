@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/notifica
 class UpdateNotificationPreferencesApiFederated extends UpdateNotificationPreferencesApiInterface {
   @override
 Future<Result<NotificationSettingsModel>?> updateNotificationPreferences({ 
+        final Map<String, String>? overrideHeaders,
         required final NotificationSettingsUpdateRequest notificationPreferencesRequest
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/update_notification_preferences',
     {
+      'overrideHeaders' : overrideHeaders,
       'notificationPreferencesRequest' : jsonEncode(notificationPreferencesRequest)
     }
     );

@@ -35,16 +35,19 @@ BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) =>
           about: $checkedConvert('about', (v) => v as String?),
           logo: $checkedConvert(
               'logo',
-              (v) =>
-                  v == null ? null : Image.fromJson(v as Map<String, dynamic>)),
+              (v) => v == null
+                  ? null
+                  : ImageModel.fromJson(v as Map<String, dynamic>)),
           logoTransparentBackground: $checkedConvert(
               'logo_transparent_background',
-              (v) =>
-                  v == null ? null : Image.fromJson(v as Map<String, dynamic>)),
+              (v) => v == null
+                  ? null
+                  : ImageModel.fromJson(v as Map<String, dynamic>)),
           coverPhoto: $checkedConvert(
               'cover_photo',
-              (v) =>
-                  v == null ? null : Image.fromJson(v as Map<String, dynamic>)),
+              (v) => v == null
+                  ? null
+                  : ImageModel.fromJson(v as Map<String, dynamic>)),
           category: $checkedConvert(
               'category',
               (v) => v == null

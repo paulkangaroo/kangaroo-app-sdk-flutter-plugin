@@ -10,7 +10,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_products/u
 
 class UserProductsApiFederated extends UserProductsApiInterface {
   @override
-Future<Result<UserProductsModel>?> getUserProducts() async {
+Future<Result<UserProductsModel>?> getUserProducts({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_products');
 
     return UserProductsApiInterface.deSerializedPlatformResponse(

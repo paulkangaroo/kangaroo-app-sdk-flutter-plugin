@@ -27,7 +27,10 @@ abstract class UserProfileApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserProfileModel>?> getUserProfile() {
+Future<Result<UserProfileModel>?> getUserProfile({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getUserProfile has not been implemented.');
   }
 

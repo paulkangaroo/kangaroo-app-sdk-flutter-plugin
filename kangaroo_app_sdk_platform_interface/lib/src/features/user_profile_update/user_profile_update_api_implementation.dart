@@ -11,6 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_profile_up
 class UserProfileUpdateApiFederated extends UserProfileUpdateApiInterface {
   @override
 Future<Result<UserProfileModel>?> updateUserProfile({ 
+        final Map<String, String>? overrideHeaders,
         final String? firstName,
         final String? lastName,
         final String? birthDate,
@@ -20,6 +21,7 @@ Future<Result<UserProfileModel>?> updateUserProfile({
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/update_user_profile',
     {
+      'overrideHeaders' : overrideHeaders,
       'firstName' : firstName,
       'lastName' : lastName,
       'birthDate' : birthDate,

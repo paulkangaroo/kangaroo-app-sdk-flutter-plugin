@@ -27,7 +27,10 @@ abstract class PublicBusinessSettingsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<PublicBusinessSettings>?> getPublicBusinessSettings() {
+Future<Result<PublicBusinessSettings>?> getPublicBusinessSettings({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getPublicBusinessSettings has not been implemented.');
   }
 

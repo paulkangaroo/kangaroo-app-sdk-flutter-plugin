@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/scan_rec
 class UserScanReceiptApiFederated extends UserScanReceiptApiInterface {
   @override
 Future<Result<ScanReceiptResponseModel>?> scanReceipt({ 
+        final Map<String, String>? overrideHeaders,
         required final ScanReceiptRequest scanReceiptRequest
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/scan_receipt',
     {
+      'overrideHeaders' : overrideHeaders,
       'scanReceiptRequest' : jsonEncode(scanReceiptRequest)
     }
     );

@@ -10,7 +10,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_profile/us
 
 class UserProfileApiFederated extends UserProfileApiInterface {
   @override
-Future<Result<UserProfileModel>?> getUserProfile() async {
+Future<Result<UserProfileModel>?> getUserProfile({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_profile');
 
     return UserProfileApiInterface.deSerializedPlatformResponse(

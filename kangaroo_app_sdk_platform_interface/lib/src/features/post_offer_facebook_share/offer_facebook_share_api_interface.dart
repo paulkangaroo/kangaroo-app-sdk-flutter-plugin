@@ -28,6 +28,7 @@ abstract class OfferFacebookShareApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserProfileModel>?> postOfferFacebookShare({ 
+        final Map<String, String>? overrideHeaders,
         required final String offerId,
         final String include = "balance",
         required final String facebookUserId,

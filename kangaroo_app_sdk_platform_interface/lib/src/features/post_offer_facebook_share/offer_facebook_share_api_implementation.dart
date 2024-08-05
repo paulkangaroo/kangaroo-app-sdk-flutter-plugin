@@ -11,6 +11,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/post_offer_face
 class OfferFacebookShareApiFederated extends OfferFacebookShareApiInterface {
   @override
 Future<Result<UserProfileModel>?> postOfferFacebookShare({ 
+        final Map<String, String>? overrideHeaders,
         required final String offerId,
         final String include = "balance",
         required final String facebookUserId,
@@ -19,6 +20,7 @@ Future<Result<UserProfileModel>?> postOfferFacebookShare({
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/post_offer_facebook_share',
     {
+      'overrideHeaders' : overrideHeaders,
       'offerId' : offerId,
       'include' : include,
       'facebookUserId' : facebookUserId,

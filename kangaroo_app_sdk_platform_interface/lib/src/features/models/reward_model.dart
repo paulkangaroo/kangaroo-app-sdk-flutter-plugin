@@ -2,11 +2,11 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
 
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
 
@@ -62,7 +62,7 @@ class RewardModel {
   final String? slug;
 
   @JsonKey(name: "images")
-  final List<Image>? images;
+  final List<ImageModel>? images;
 
   @JsonKey(name: "never_expires_flag")
   final bool? neverExpiresFlag;

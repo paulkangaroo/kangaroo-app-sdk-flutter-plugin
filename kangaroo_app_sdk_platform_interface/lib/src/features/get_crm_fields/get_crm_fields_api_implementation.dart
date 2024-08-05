@@ -10,7 +10,10 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/get_crm_fields/
 
 class GetCrmFieldsApiFederated extends GetCrmFieldsApiInterface {
   @override
-Future<Result<CrmFields>?> getCrmFields() async {
+Future<Result<CrmFields>?> getCrmFields({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_crm_fields');
 
     return GetCrmFieldsApiInterface.deSerializedPlatformResponse(

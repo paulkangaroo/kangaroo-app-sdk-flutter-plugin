@@ -33,12 +33,14 @@ Branch _$BranchFromJson(Map<String, dynamic> json) => $checkedCreate(
                   : BranchPhone.fromJson(v as Map<String, dynamic>)),
           logo: $checkedConvert(
               'logo',
-              (v) =>
-                  v == null ? null : Image.fromJson(v as Map<String, dynamic>)),
+              (v) => v == null
+                  ? null
+                  : ImageModel.fromJson(v as Map<String, dynamic>)),
           coverPhoto: $checkedConvert(
               'cover_photo',
-              (v) =>
-                  v == null ? null : Image.fromJson(v as Map<String, dynamic>)),
+              (v) => v == null
+                  ? null
+                  : ImageModel.fromJson(v as Map<String, dynamic>)),
           address: $checkedConvert(
               'address',
               (v) => v == null

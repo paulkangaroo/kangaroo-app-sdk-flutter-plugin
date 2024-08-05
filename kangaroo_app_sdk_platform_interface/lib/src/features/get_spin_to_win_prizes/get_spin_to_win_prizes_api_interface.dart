@@ -28,6 +28,7 @@ abstract class GetSpinToWinPrizesApiInterface extends PlatformInterface {
   }
 
 Future<Result<SpinToWinPrizesModel>?> getSpinToWinPrizes({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
     }) {
     throw UnimplementedError('getSpinToWinPrizes has not been implemented.');

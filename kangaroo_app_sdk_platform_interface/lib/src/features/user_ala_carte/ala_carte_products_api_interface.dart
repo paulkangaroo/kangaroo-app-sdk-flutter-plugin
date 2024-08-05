@@ -27,7 +27,10 @@ abstract class AlaCarteProductsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<AlaCarteProductsModel>?> getAlaCarteProducts() {
+Future<Result<AlaCarteProductsModel>?> getAlaCarteProducts({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getAlaCarteProducts has not been implemented.');
   }
 

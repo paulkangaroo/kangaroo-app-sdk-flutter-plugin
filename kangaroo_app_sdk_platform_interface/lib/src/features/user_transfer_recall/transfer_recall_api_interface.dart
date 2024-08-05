@@ -28,6 +28,7 @@ abstract class TransferRecallApiInterface extends PlatformInterface {
   }
 
 Future<Result<TransferActionResultModel>?> recallTransfer({ 
+        final Map<String, String>? overrideHeaders,
         required final String recallId,
     }) {
     throw UnimplementedError('recallTransfer has not been implemented.');

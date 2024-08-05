@@ -28,6 +28,7 @@ abstract class UpdateDefaultBusinessIdApiInterface extends PlatformInterface {
   }
 
 Future<Result<DefaultBusiness>?> updateDefaultBusinessId({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId,
         required final String defaultBusinessId,
     }) {

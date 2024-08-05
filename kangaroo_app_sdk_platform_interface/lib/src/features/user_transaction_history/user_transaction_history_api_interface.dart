@@ -27,7 +27,10 @@ abstract class UserTransactionHistoryApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserTransactionHistoryModel>?> getUserTransactionHistory() {
+Future<Result<UserTransactionHistoryModel>?> getUserTransactionHistory({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getUserTransactionHistory has not been implemented.');
   }
 

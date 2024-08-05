@@ -27,7 +27,10 @@ abstract class StringsApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<ApplicationStringsModel>?> getStrings() {
+Future<Result<ApplicationStringsModel>?> getStrings({ 
+        final Map<String, String>? overrideHeaders,
+
+    }) {
     throw UnimplementedError('getStrings has not been implemented.');
   }
 

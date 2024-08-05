@@ -11,10 +11,12 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_transfer_m
 class TransferMessagesApiFederated extends TransferMessagesApiInterface {
   @override
 Future<Result<TransferMessagesModel>?> getTransferMessages({ 
+        final Map<String, String>? overrideHeaders,
         required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_transfer_messages',
     {
+      'overrideHeaders' : overrideHeaders,
       'businessId' : businessId
     }
     );

@@ -28,6 +28,7 @@ abstract class UserAccountVerificationApiInterface extends PlatformInterface {
   }
 
 Future<Result<UserProfileModel>?> verifyAccount({ 
+        final Map<String, String>? overrideHeaders,
         required final String intent,
         required final String token,
         final String? email,
