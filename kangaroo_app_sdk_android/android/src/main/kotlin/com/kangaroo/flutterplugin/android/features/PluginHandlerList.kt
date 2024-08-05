@@ -2,6 +2,7 @@ package com.kangaroo.flutterplugin.android.features
 
 import com.kangaroo.flutterplugin.android.base.PluginChannelHandler
 import com.kangaroo.flutterplugin.android.features.userAuthentication.UserAuthenticationHandler
+import com.kangaroo.flutterplugin.android.features.uploadImage.UploadImageHandler
 import com.kangaroo.flutterplugin.android.features.archiveInboxItem.ArchiveInboxItemHandler
 import com.kangaroo.flutterplugin.android.features.claimOffer.ClaimOfferHandler
 import com.kangaroo.flutterplugin.android.features.userRegistration.UserRegistrationHandler
@@ -225,6 +226,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     UserCheckInHandler(),
 
     UserAccountVerificationHandler(),
+
+    UploadImageHandler(),
 
     UserAuthenticationHandler()
 )

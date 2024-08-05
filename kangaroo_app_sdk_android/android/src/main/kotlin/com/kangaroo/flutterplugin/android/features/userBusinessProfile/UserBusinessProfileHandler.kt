@@ -35,6 +35,7 @@ class UserBusinessProfileHandler : EventChannel.StreamHandler, PluginChannelHand
     companion object {
         suspend fun getUserBusinessProfile(call: MethodCall): String? {
             val result = UserBusinessProfileApi().getUserBusinessProfile(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<UserBusinessProfileModel>()
 

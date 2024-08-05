@@ -37,6 +37,7 @@ class UserScanReceiptHandler : EventChannel.StreamHandler, PluginChannelHandler 
     companion object {
         suspend fun scanReceipt(call: MethodCall): String? {
             val result = UserScanReceiptApi().scanReceipt(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 scanReceiptRequest = Json.decodeFromString(call.argument<String>("scanReceiptRequest") as String)
             ).toJsonResult<ScanReceiptResponseModel>()
 

@@ -35,6 +35,7 @@ class UserProfileUpdateHandler : EventChannel.StreamHandler, PluginChannelHandle
     companion object {
         suspend fun updateUserProfile(call: MethodCall): String? {
             val result = UserProfileUpdateApi().updateUserProfile(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 firstName = call.argument<String?>("firstName"),
                 lastName = call.argument<String?>("lastName"),
                 birthDate = call.argument<String?>("birthDate"),

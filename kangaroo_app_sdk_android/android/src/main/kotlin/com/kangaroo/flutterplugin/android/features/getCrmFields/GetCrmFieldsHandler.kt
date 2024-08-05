@@ -34,7 +34,10 @@ class GetCrmFieldsHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getCrmFields(call: MethodCall): String? {
-            val result = GetCrmFieldsApi().getCrmFields().toJsonResult<CrmFields>()
+            val result = GetCrmFieldsApi().getCrmFields(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<CrmFields>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

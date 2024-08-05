@@ -35,6 +35,7 @@ class PayPalPaymentHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun makePayPalPayment(call: MethodCall): String? {
             val result = PayPalPaymentApi().makePayPalPayment(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 intent = call.argument<String>("intent") as String,
                 provider = call.argument<String>("provider") as String,
                 giftcardId = call.argument<Int>("giftcardId") as Int,

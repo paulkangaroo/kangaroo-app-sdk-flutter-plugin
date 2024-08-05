@@ -35,6 +35,7 @@ class OfferFacebookShareHandler : EventChannel.StreamHandler, PluginChannelHandl
     companion object {
         suspend fun postOfferFacebookShare(call: MethodCall): String? {
             val result = OfferFacebookShareApi().postOfferFacebookShare(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 offerId = call.argument<String>("offerId") as String,
                 include = call.argument<String>("include") as String,
                 facebookUserId = call.argument<String>("facebookUserId") as String,

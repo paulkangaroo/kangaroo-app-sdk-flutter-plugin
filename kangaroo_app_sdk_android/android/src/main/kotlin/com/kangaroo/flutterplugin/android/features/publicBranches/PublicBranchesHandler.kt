@@ -34,7 +34,10 @@ class PublicBranchesHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getPublicBranches(call: MethodCall): String? {
-            val result = PublicBranchesApi().getPublicBranches().toJsonResult<PublicBranchesModel>()
+            val result = PublicBranchesApi().getPublicBranches(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+                perPage = call.argument<Int>("perPage") as Int
+            ).toJsonResult<PublicBranchesModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

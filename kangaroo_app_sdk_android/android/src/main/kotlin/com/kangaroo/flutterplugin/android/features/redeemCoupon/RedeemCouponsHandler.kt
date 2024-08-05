@@ -37,6 +37,7 @@ class RedeemCouponsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun redeemCoupon(call: MethodCall): String? {
             val result = RedeemCouponsApi().redeemCoupon(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 redeemCouponRequest = Json.decodeFromString(call.argument<String>("redeemCouponRequest") as String)
             ).toJsonResult<CouponRedemptionResponseModel>()
 

@@ -35,6 +35,7 @@ class UserPinResetHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun resetPin(call: MethodCall): String? {
             val result = UserPinResetApi().resetPin(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 verificationCode = call.argument<String>("verificationCode") as String,
                 pinCode = call.argument<String>("pinCode") as String,
                 email = call.argument<String?>("email"),

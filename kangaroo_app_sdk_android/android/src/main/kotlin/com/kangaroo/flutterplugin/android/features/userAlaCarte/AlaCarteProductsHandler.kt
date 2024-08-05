@@ -34,7 +34,10 @@ class AlaCarteProductsHandler : EventChannel.StreamHandler, PluginChannelHandler
 
     companion object {
         suspend fun getAlaCarteProducts(call: MethodCall): String? {
-            val result = AlaCarteProductsApi().getAlaCarteProducts().toJsonResult<AlaCarteProductsModel>()
+            val result = AlaCarteProductsApi().getAlaCarteProducts(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<AlaCarteProductsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

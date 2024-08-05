@@ -34,7 +34,10 @@ class GetNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChan
 
     companion object {
         suspend fun getNotificationPreferences(call: MethodCall): String? {
-            val result = GetNotificationPreferencesApi().getNotificationPreferences().toJsonResult<NotificationSettingsModel>()
+            val result = GetNotificationPreferencesApi().getNotificationPreferences(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<NotificationSettingsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

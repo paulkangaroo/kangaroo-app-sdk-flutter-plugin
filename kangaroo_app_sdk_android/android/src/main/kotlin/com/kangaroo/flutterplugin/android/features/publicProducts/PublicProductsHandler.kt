@@ -34,7 +34,10 @@ class PublicProductsHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getPublicProducts(call: MethodCall): String? {
-            val result = PublicProductsApi().getPublicProducts().toJsonResult<PublicProductsModel>()
+            val result = PublicProductsApi().getPublicProducts(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<PublicProductsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

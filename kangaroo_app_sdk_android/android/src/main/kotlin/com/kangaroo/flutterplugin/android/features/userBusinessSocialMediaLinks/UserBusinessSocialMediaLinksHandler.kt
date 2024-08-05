@@ -35,6 +35,7 @@ class UserBusinessSocialMediaLinksHandler : EventChannel.StreamHandler, PluginCh
     companion object {
         suspend fun getUserBusinessSocialMediaLinks(call: MethodCall): String? {
             val result = UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<SocialMediaLinksModel>()
 

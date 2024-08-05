@@ -38,6 +38,7 @@ class SocialMediaActionPerformHandler : EventChannel.StreamHandler, PluginChanne
     companion object {
         suspend fun performSocialMediaAction(call: MethodCall): String? {
             val result = SocialMediaActionPerformApi().performSocialMediaAction(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 performSocialMediaActionRequest = Json.decodeFromString(call.argument<String>("performSocialMediaActionRequest") as String),
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<PerformSocialMediaActionResponseModel>()

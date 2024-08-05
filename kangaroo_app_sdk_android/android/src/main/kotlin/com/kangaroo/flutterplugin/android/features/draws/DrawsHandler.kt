@@ -34,7 +34,10 @@ class DrawsHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getDraws(call: MethodCall): String? {
-            val result = DrawsApi().getDraws().toJsonResult<DrawsModel>()
+            val result = DrawsApi().getDraws(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<DrawsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

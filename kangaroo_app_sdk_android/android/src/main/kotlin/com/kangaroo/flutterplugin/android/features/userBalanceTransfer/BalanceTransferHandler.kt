@@ -37,6 +37,7 @@ class BalanceTransferHandler : EventChannel.StreamHandler, PluginChannelHandler 
     companion object {
         suspend fun transfer(call: MethodCall): String? {
             val result = BalanceTransferApi().transfer(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 transferRequest = Json.decodeFromString(call.argument<String>("transferRequest") as String)
             ).toJsonResult<TransferResponseModel>()
 

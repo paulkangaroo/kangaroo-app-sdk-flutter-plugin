@@ -34,7 +34,10 @@ class UserTransactionHistoryHandler : EventChannel.StreamHandler, PluginChannelH
 
     companion object {
         suspend fun getUserTransactionHistory(call: MethodCall): String? {
-            val result = UserTransactionHistoryApi().getUserTransactionHistory().toJsonResult<UserTransactionHistoryModel>()
+            val result = UserTransactionHistoryApi().getUserTransactionHistory(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<UserTransactionHistoryModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

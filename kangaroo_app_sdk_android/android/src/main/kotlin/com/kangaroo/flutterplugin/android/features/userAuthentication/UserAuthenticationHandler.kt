@@ -30,8 +30,10 @@ class UserAuthenticationHandler : EventChannel.StreamHandler, PluginChannelHandl
     companion object {
         suspend fun authenticateUser(call: MethodCall): String? {
             val result = UserAuthenticationApi().authenticateUser(
-                username = call.argument<String>("username") ?: "null username",
-                password = call.argument<String>("password") ?: "null password",
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") ?: null,
+                username = call.argument<String>("username") ?: null,
+                password = call.argument<String>("password") ?: null,
+                googleToken = call.argument<String>("googleToken") ?: null,
             ).toJsonResult<UserAuthenticationModel>()
 
             return when (result) {

@@ -34,7 +34,10 @@ class TiersHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getTiers(call: MethodCall): String? {
-            val result = TiersApi().getTiers().toJsonResult<UserProfileWithTierProgram>()
+            val result = TiersApi().getTiers(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<UserProfileWithTierProgram>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

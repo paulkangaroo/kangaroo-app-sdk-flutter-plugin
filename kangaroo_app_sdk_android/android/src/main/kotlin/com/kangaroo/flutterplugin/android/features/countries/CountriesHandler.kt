@@ -34,7 +34,10 @@ class CountriesHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getCountries(call: MethodCall): String? {
-            val result = CountriesApi().getCountries().toJsonResult<Countries>()
+            val result = CountriesApi().getCountries(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<Countries>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

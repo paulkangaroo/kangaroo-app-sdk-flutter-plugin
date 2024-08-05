@@ -35,6 +35,7 @@ class UserBusinessGiftCardsHandler : EventChannel.StreamHandler, PluginChannelHa
     companion object {
         suspend fun getUserBusinessGiftCards(call: MethodCall): String? {
             val result = UserBusinessGiftCardsApi().getUserBusinessGiftCards(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<UserBusinessGiftCardsModel>()
 

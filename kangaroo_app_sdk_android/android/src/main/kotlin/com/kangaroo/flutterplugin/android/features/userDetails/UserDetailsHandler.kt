@@ -34,7 +34,10 @@ class UserDetailsHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getUserDetails(call: MethodCall): String? {
-            val result = UserDetailsApi().getUserDetails().toJsonResult<UserDetailsModel>()
+            val result = UserDetailsApi().getUserDetails(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<UserDetailsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

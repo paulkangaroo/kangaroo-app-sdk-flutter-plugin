@@ -35,6 +35,7 @@ class GetDefaultBusinessIdHandler : EventChannel.StreamHandler, PluginChannelHan
     companion object {
         suspend fun getDefaultBusinessId(call: MethodCall): String? {
             val result = GetDefaultBusinessIdApi().getDefaultBusinessId(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<DefaultBusiness>()
 

@@ -34,7 +34,10 @@ class FrequentBuyerProgramsHandler : EventChannel.StreamHandler, PluginChannelHa
 
     companion object {
         suspend fun getFrequentBuyerPrograms(call: MethodCall): String? {
-            val result = FrequentBuyerProgramsApi().getFrequentBuyerPrograms().toJsonResult<FrequentBuyerProgramsModel>()
+            val result = FrequentBuyerProgramsApi().getFrequentBuyerPrograms(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<FrequentBuyerProgramsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

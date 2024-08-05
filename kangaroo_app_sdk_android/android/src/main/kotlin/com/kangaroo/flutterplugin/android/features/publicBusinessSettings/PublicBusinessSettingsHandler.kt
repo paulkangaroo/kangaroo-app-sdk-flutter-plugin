@@ -34,7 +34,10 @@ class PublicBusinessSettingsHandler : EventChannel.StreamHandler, PluginChannelH
 
     companion object {
         suspend fun getPublicBusinessSettings(call: MethodCall): String? {
-            val result = PublicBusinessSettingsApi().getPublicBusinessSettings().toJsonResult<PublicBusinessSettings>()
+            val result = PublicBusinessSettingsApi().getPublicBusinessSettings(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<PublicBusinessSettings>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

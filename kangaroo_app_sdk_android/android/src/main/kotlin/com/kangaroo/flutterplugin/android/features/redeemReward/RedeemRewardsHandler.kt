@@ -37,6 +37,7 @@ class RedeemRewardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun redeemReward(call: MethodCall): String? {
             val result = RedeemRewardsApi().redeemReward(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 redeemRequest = Json.decodeFromString(call.argument<String>("redeemRequest") as String)
             ).toJsonResult<RedeemResponseModel>()
 

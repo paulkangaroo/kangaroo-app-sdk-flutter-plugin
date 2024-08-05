@@ -34,7 +34,10 @@ class UserDeleteHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun deleteUserAccount(call: MethodCall): String? {
-            val result = UserDeleteApi().deleteUserAccount().toJsonResult<EmptyResponse>()
+            val result = UserDeleteApi().deleteUserAccount(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<EmptyResponse>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

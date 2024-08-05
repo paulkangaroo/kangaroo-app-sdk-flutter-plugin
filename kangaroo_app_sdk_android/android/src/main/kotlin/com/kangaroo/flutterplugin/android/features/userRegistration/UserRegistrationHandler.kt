@@ -35,6 +35,7 @@ class UserRegistrationHandler : EventChannel.StreamHandler, PluginChannelHandler
     companion object {
         suspend fun createAccount(call: MethodCall): String? {
             val result = UserRegistrationApi().createAccount(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 email = call.argument<String?>("email"),
                 phone = call.argument<String?>("phone"),
                 countryCode = call.argument<String?>("countryCode"),

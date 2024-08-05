@@ -34,7 +34,10 @@ class GetConglomerateNotificationPreferencesHandler : EventChannel.StreamHandler
 
     companion object {
         suspend fun getConglomerateNotificationPreferences(call: MethodCall): String? {
-            val result = GetConglomerateNotificationPreferencesApi().getConglomerateNotificationPreferences().toJsonResult<NotificationSettingsModel>()
+            val result = GetConglomerateNotificationPreferencesApi().getConglomerateNotificationPreferences(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<NotificationSettingsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

@@ -35,6 +35,7 @@ class UserPinResetRequestHandler : EventChannel.StreamHandler, PluginChannelHand
     companion object {
         suspend fun requestPinReset(call: MethodCall): String? {
             val result = UserPinResetRequestApi().requestPinReset(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 mode = call.argument<String>("mode") as String,
                 email = call.argument<String?>("email"),
                 phone = call.argument<String?>("phone"),

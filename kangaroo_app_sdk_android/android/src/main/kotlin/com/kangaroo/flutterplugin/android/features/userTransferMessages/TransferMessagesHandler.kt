@@ -35,6 +35,7 @@ class TransferMessagesHandler : EventChannel.StreamHandler, PluginChannelHandler
     companion object {
         suspend fun getTransferMessages(call: MethodCall): String? {
             val result = TransferMessagesApi().getTransferMessages(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<TransferMessagesModel>()
 

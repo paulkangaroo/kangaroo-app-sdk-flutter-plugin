@@ -35,6 +35,7 @@ class GetSpinToWinPrizesHandler : EventChannel.StreamHandler, PluginChannelHandl
     companion object {
         suspend fun getSpinToWinPrizes(call: MethodCall): String? {
             val result = GetSpinToWinPrizesApi().getSpinToWinPrizes(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<SpinToWinPrizesModel>()
 

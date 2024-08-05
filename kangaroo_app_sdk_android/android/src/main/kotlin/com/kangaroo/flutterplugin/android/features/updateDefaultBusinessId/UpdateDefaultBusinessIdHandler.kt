@@ -35,6 +35,7 @@ class UpdateDefaultBusinessIdHandler : EventChannel.StreamHandler, PluginChannel
     companion object {
         suspend fun updateDefaultBusinessId(call: MethodCall): String? {
             val result = UpdateDefaultBusinessIdApi().updateDefaultBusinessId(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String,
                 defaultBusinessId = call.argument<String>("defaultBusinessId") as String
             ).toJsonResult<DefaultBusiness>()

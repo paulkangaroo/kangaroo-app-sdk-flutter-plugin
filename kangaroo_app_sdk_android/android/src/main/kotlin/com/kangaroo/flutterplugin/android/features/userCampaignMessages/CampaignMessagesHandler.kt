@@ -35,6 +35,7 @@ class CampaignMessagesHandler : EventChannel.StreamHandler, PluginChannelHandler
     companion object {
         suspend fun getCampaignMessages(call: MethodCall): String? {
             val result = CampaignMessagesApi().getCampaignMessages(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<CampaignMessagesModel>()
 

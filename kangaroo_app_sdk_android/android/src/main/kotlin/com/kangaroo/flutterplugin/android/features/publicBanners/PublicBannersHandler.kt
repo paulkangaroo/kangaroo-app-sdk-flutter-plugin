@@ -34,7 +34,10 @@ class PublicBannersHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getPublicBanners(call: MethodCall): String? {
-            val result = PublicBannersApi().getPublicBanners().toJsonResult<BannersModel>()
+            val result = PublicBannersApi().getPublicBanners(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<BannersModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

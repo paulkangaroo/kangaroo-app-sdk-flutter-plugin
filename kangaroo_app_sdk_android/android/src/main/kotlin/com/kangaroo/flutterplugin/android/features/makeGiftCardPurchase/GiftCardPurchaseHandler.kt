@@ -37,6 +37,7 @@ class GiftCardPurchaseHandler : EventChannel.StreamHandler, PluginChannelHandler
     companion object {
         suspend fun purchaseGiftCard(call: MethodCall): String? {
             val result = GiftCardPurchaseApi().purchaseGiftCard(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 purchaseGiftCardRequest = Json.decodeFromString(call.argument<String>("purchaseGiftCardRequest") as String)
             ).toJsonResult<GiftCardPayPalPaymentResponseModel>()
 

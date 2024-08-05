@@ -34,7 +34,10 @@ class PublicRewardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getPublicRewards(call: MethodCall): String? {
-            val result = PublicRewardsApi().getPublicRewards().toJsonResult<PublicRewardsModel>()
+            val result = PublicRewardsApi().getPublicRewards(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<PublicRewardsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

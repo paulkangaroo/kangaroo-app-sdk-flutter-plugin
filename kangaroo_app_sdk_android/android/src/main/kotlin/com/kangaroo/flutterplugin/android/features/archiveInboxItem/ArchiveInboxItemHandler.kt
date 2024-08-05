@@ -37,6 +37,7 @@ class ArchiveInboxItemHandler : EventChannel.StreamHandler, PluginChannelHandler
     companion object {
         suspend fun archiveInboxItem(call: MethodCall): String? {
             val result = ArchiveInboxItemApi().archiveInboxItem(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 archiveRequest = Json.decodeFromString(call.argument<String>("archiveRequest") as String)
             ).toJsonResult<ArchiveResponseModel>()
 

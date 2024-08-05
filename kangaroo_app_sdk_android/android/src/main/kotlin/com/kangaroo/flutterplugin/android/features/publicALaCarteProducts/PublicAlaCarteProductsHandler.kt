@@ -34,7 +34,10 @@ class PublicAlaCarteProductsHandler : EventChannel.StreamHandler, PluginChannelH
 
     companion object {
         suspend fun getPublicAlaCarteProducts(call: MethodCall): String? {
-            val result = PublicAlaCarteProductsApi().getPublicAlaCarteProducts().toJsonResult<PublicALaCarteProductsModel>()
+            val result = PublicAlaCarteProductsApi().getPublicAlaCarteProducts(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<PublicALaCarteProductsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

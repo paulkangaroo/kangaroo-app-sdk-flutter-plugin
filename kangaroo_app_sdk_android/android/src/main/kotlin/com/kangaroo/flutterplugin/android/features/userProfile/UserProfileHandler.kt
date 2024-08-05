@@ -34,7 +34,10 @@ class UserProfileHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getUserProfile(call: MethodCall): String? {
-            val result = UserProfileApi().getUserProfile().toJsonResult<UserProfileModel>()
+            val result = UserProfileApi().getUserProfile(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<UserProfileModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

@@ -35,6 +35,7 @@ class UserUnsubscribeHandler : EventChannel.StreamHandler, PluginChannelHandler 
     companion object {
         suspend fun unsubscribe(call: MethodCall): String? {
             val result = UserUnsubscribeApi().unsubscribe(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 campaignId = call.argument<String>("campaignId") as String,
                 token = call.argument<String>("token") as String
             ).toJsonResult<EmptyResponse>()

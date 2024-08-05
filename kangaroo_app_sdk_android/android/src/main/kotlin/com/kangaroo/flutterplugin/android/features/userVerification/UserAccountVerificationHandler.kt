@@ -35,6 +35,7 @@ class UserAccountVerificationHandler : EventChannel.StreamHandler, PluginChannel
     companion object {
         suspend fun verifyAccount(call: MethodCall): String? {
             val result = UserAccountVerificationApi().verifyAccount(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 intent = call.argument<String>("intent") as String,
                 token = call.argument<String>("token") as String,
                 email = call.argument<String?>("email"),

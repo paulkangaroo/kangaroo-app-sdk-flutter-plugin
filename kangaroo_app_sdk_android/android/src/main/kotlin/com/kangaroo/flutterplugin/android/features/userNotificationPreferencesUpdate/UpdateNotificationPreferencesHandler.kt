@@ -37,6 +37,7 @@ class UpdateNotificationPreferencesHandler : EventChannel.StreamHandler, PluginC
     companion object {
         suspend fun updateNotificationPreferences(call: MethodCall): String? {
             val result = UpdateNotificationPreferencesApi().updateNotificationPreferences(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 notificationPreferencesRequest = Json.decodeFromString(call.argument<String>("notificationPreferencesRequest") as String)
             ).toJsonResult<NotificationSettingsModel>()
 

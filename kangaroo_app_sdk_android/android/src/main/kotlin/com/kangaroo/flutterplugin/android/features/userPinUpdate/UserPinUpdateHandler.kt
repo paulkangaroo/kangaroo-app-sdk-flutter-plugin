@@ -37,6 +37,7 @@ class UserPinUpdateHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun updatePin(call: MethodCall): String? {
             val result = UserPinUpdateApi().updatePin(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 updatePinRequest = Json.decodeFromString(call.argument<String>("updatePinRequest") as String)
             ).toJsonResult<UserProfileModel>()
 

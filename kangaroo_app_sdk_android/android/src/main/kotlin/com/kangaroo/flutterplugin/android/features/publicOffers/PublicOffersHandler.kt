@@ -34,7 +34,10 @@ class PublicOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getPublicOffers(call: MethodCall): String? {
-            val result = PublicOffersApi().getPublicOffers().toJsonResult<UserOffersModel>()
+            val result = PublicOffersApi().getPublicOffers(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<UserOffersModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

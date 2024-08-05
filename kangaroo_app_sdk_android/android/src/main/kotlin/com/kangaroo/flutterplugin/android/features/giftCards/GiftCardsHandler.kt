@@ -34,7 +34,10 @@ class GiftCardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getGiftCards(call: MethodCall): String? {
-            val result = GiftCardsApi().getGiftCards().toJsonResult<GiftCardsModel>()
+            val result = GiftCardsApi().getGiftCards(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<GiftCardsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

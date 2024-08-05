@@ -35,6 +35,7 @@ class UserBusinessAlaCarteProductsHandler : EventChannel.StreamHandler, PluginCh
     companion object {
         suspend fun getUserBusinessAlaCarteProducts(call: MethodCall): String? {
             val result = UserBusinessAlaCarteProductsApi().getUserBusinessAlaCarteProducts(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<AlaCarteProductsModel>()
 

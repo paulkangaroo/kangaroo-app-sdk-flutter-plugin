@@ -37,6 +37,7 @@ class UserCheckInHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun userCheckIn(call: MethodCall): String? {
             val result = UserCheckInApi().userCheckIn(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 checkInRequest = Json.decodeFromString(call.argument<String>("checkInRequest") as String)
             ).toJsonResult<CheckInResponseModel>()
 

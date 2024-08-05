@@ -37,6 +37,7 @@ class ClaimOfferHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun claimOffer(call: MethodCall): String? {
             val result = ClaimOfferApi().claimOffer(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 offerId = call.argument<Int>("offerId") as Int,
                 customerId = call.argument<String>("customerId") as String
             ).toJsonResult<ClaimedOfferModel>()

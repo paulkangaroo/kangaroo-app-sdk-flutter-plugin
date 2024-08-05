@@ -35,6 +35,7 @@ class BusinessHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun getBusiness(call: MethodCall): String? {
             val result = BusinessApi().getBusiness(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<Business>()
 

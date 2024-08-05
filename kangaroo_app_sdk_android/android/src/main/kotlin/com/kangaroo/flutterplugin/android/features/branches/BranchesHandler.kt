@@ -35,6 +35,7 @@ class BranchesHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun getBusinessBranches(call: MethodCall): String? {
             val result = BranchesApi().getBusinessBranches(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<Business>()
 

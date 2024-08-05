@@ -34,7 +34,10 @@ class StringsHandler : EventChannel.StreamHandler, PluginChannelHandler {
 
     companion object {
         suspend fun getStrings(call: MethodCall): String? {
-            val result = StringsApi().getStrings().toJsonResult<ApplicationStringsModel>()
+            val result = StringsApi().getStrings(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<ApplicationStringsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

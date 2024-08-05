@@ -37,6 +37,7 @@ class TransferRecallHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun recallTransfer(call: MethodCall): String? {
             val result = TransferRecallApi().recallTransfer(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 recallId = call.argument<String>("recallId") as String
             ).toJsonResult<TransferActionResultModel>()
 

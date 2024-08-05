@@ -34,7 +34,10 @@ class UserUsedCouponsHandler : EventChannel.StreamHandler, PluginChannelHandler 
 
     companion object {
         suspend fun getUserUsedCoupons(call: MethodCall): String? {
-            val result = UserUsedCouponsApi().getUserUsedCoupons().toJsonResult<UserCouponsModel>()
+            val result = UserUsedCouponsApi().getUserUsedCoupons(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<UserCouponsModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

@@ -35,6 +35,7 @@ class UserBusinessFrequentBuyerProgramsHandler : EventChannel.StreamHandler, Plu
     companion object {
         suspend fun getUserBusinessFrequentBuyerPrograms(call: MethodCall): String? {
             val result = UserBusinessFrequentBuyerProgramsApi().getUserBusinessFrequentBuyerPrograms(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<FrequentBuyerProgramsModel>()
 

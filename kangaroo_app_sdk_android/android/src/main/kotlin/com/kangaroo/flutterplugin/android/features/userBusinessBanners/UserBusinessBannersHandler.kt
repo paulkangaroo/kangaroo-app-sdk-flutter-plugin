@@ -35,6 +35,7 @@ class UserBusinessBannersHandler : EventChannel.StreamHandler, PluginChannelHand
     companion object {
         suspend fun getUserBusinessBanners(call: MethodCall): String? {
             val result = UserBusinessBannersApi().getUserBusinessBanners(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 businessId = call.argument<String>("businessId") as String
             ).toJsonResult<UserBusinessBannersModel>()
 

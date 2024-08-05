@@ -37,6 +37,7 @@ class GiftCardDepositHandler : EventChannel.StreamHandler, PluginChannelHandler 
     companion object {
         suspend fun depositGiftCard(call: MethodCall): String? {
             val result = GiftCardDepositApi().depositGiftCard(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 depositId = call.argument<String>("depositId") as String
             ).toJsonResult<TransferActionResultModel>()
 

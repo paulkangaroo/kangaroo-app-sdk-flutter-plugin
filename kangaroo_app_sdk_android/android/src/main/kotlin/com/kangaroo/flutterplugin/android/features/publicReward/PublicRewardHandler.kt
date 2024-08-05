@@ -35,6 +35,7 @@ class PublicRewardHandler : EventChannel.StreamHandler, PluginChannelHandler {
     companion object {
         suspend fun getPublicReward(call: MethodCall): String? {
             val result = PublicRewardApi().getPublicReward(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 rewardSlug = call.argument<String>("rewardSlug") as String
             ).toJsonResult<PublicRewardModel>()
 

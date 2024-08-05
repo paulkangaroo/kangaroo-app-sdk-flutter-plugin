@@ -34,7 +34,10 @@ class SocialMediaLinksHandler : EventChannel.StreamHandler, PluginChannelHandler
 
     companion object {
         suspend fun getSocialMediaLinks(call: MethodCall): String? {
-            val result = SocialMediaLinksApi().getSocialMediaLinks().toJsonResult<SocialMediaLinksModel>()
+            val result = SocialMediaLinksApi().getSocialMediaLinks(
+                overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
+
+            ).toJsonResult<SocialMediaLinksModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data
