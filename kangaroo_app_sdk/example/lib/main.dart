@@ -1,9 +1,12 @@
+import 'dart:io';
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter/services.dart';
 import 'package:kangaroo_app_sdk/get_crm_fields/get_crm_fields_api.dart';
 import 'package:kangaroo_app_sdk/kangaroo_app_sdk.dart';
+import 'package:kangaroo_app_sdk/upload_image/upload_image_api.dart';
 import 'package:kangaroo_app_sdk/user_authentication/user_authentication_api.dart'
     as UserAuthenticationApi;
 import 'package:kangaroo_app_sdk/user_business_offers/user_business_offers_api.dart';
@@ -13,15 +16,17 @@ import 'package:kangaroo_app_sdk/user_profile/user_profile_api.dart'
     as UserProfileApi;
 import 'package:kangaroo_app_sdk/user_transaction_history/user_transaction_history_api.dart'
     as UserTransactionHistoryApi;
+import 'package:path_provider/path_provider.dart';
+import 'package:universal_io/io.dart';
 
 void main() {
   runApp(MyApp());
   KangarooAppSdk.initializeSdk(
-    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImJ1c2luZXNzSWQiOiIxMjUiLCJicmFuY2hJZCI6IjE2NCIsImNvYWxpdGlvbiI6IjAiLCJjb25nbG9tZXJhdGUiOiIwIn19.d67S2oT7E-HHJ8v-GhuLSkY_SEPWJVnf3n5Pl_U16KE',
-    '10125648',
-    'E1ahTZCex75kNOM4VDOMflwmXaCKaR6KzEJ6akYW',
-    'development',
-  );
+      'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImJ1c2luZXNzSWQiOiIxMjUiLCJicmFuY2hJZCI6IjE2NCIsImNvYWxpdGlvbiI6IjAiLCJjb25nbG9tZXJhdGUiOiIwIn19.d67S2oT7E-HHJ8v-GhuLSkY_SEPWJVnf3n5Pl_U16KE',
+      '10125648',
+      'E1ahTZCex75kNOM4VDOMflwmXaCKaR6KzEJ6akYW',
+      'development',
+      '');
 }
 
 class MyApp extends StatefulWidget {
@@ -38,9 +43,7 @@ class _MyAppState extends State<MyApp> {
   authenticateUser() {
     debugPrint('authenticating...');
     UserAuthenticationApi.UserAuthenticationApi.authenticateUser(
-      "support@kangaroorewards.com",
-      "1111",
-    );
+        "support@kangaroorewards.com", "1111", null, null);
   }
 
   getUserProfile() {
@@ -87,6 +90,50 @@ class _MyAppState extends State<MyApp> {
   resetPin() {
     UserPinUpdateApi.UserPinUpdateApi.updatePin(
         updatePinRequest: UserPinUpdateApi.UpdatePinRequest(pinCode: "1111"));
+  }
+
+  uploadImage() async {
+    String path = "";
+
+    if (kIsWeb) {
+      ///TODO needs implementation
+      debugPrint('web image path: $path');
+    } else {
+      final ByteData bytes =
+          await rootBundle.load('assets/images/icon_flat.png');
+      final Uint8List uint8List = bytes.buffer.asUint8List();
+      try {
+        Directory root = await getTemporaryDirectory();
+        String directoryPath = '${root.path}/KangarooSDKSandBoxTestApp';
+
+        /// Create the directory if it doesn't exist
+        await Directory(directoryPath).create(recursive: true);
+        String filePath = '$directoryPath/icon_flat.png';
+        final file = await File(filePath).writeAsBytes(uint8List);
+        path = file.path;
+      } catch (e) {
+        debugPrint(e.toString());
+      }
+    }
+
+    final uploadImageResult = await UploadImageApi.uploadImage(
+        uploadImageBodyRequest: UploadImageRequestModel(images: [
+      KRMultiPartFormFileModel(name: 'image', filePath: path),
+    ], module: 0));
+
+    uploadImageResult?.whenOrNull(
+      success: (success) {
+        debugPrint('upload image result success');
+        final image = success?.data.path;
+        debugPrint('upload image result: ${image}');
+      },
+      unauthorized: (_, __) {
+        debugPrint('upload image result unauthorized');
+      },
+      error: (errorCode, error) {
+        debugPrint('upload image result error: $error');
+      },
+    );
   }
 
   @override
@@ -162,6 +209,17 @@ class _MyAppState extends State<MyApp> {
                 child: Center(
                   child: Text(
                     'get crm fields',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              MaterialButton(
+                onPressed: uploadImage,
+                color: Colors.blue.shade800,
+                height: 100,
+                child: Center(
+                  child: Text(
+                    'upload an image',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
