@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/frequent_buyer_programs/frequent_buyer_programs_platform_interface.dart';
 
 class FrequentBuyerProgramsApi {
-  static Future<Result<FrequentBuyerProgramsModel>?> getFrequentBuyerPrograms() {
-    return FrequentBuyerProgramsApiInterface.instance.getFrequentBuyerPrograms();
+  static Future<Result<FrequentBuyerProgramsModel>?> getFrequentBuyerPrograms({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return FrequentBuyerProgramsApiInterface.instance.getFrequentBuyerPrograms( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<FrequentBuyerProgramsModel>> get frequentBuyerProgramsStream {

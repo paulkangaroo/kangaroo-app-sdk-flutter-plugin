@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class TransferRecallApi {
   static Future<Result<TransferActionResultModel>?> recallTransfer({ 
+    final Map<String, String>? overrideHeaders,
     required final String recallId,
   }) {
     return TransferRecallApiInterface.instance.recallTransfer( 
+      overrideHeaders: overrideHeaders,
       recallId: recallId,
     );
   }

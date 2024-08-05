@@ -7,6 +7,7 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class OfferFacebookShareApi {
   static Future<Result<UserProfileModel>?> postOfferFacebookShare({ 
+    final Map<String, String>? overrideHeaders,
     required final String offerId,
     final String include = "balance",
     required final String facebookUserId,
@@ -14,6 +15,7 @@ class OfferFacebookShareApi {
     final String friendsCount = "1",
   }) {
     return OfferFacebookShareApiInterface.instance.postOfferFacebookShare( 
+      overrideHeaders: overrideHeaders,
       offerId: offerId,
       include: include,
       facebookUserId: facebookUserId,

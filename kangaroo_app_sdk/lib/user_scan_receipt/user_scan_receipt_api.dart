@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserScanReceiptApi {
   static Future<Result<ScanReceiptResponseModel>?> scanReceipt({ 
+    final Map<String, String>? overrideHeaders,
     required final ScanReceiptRequest scanReceiptRequest,
   }) {
     return UserScanReceiptApiInterface.instance.scanReceipt( 
+      overrideHeaders: overrideHeaders,
       scanReceiptRequest: scanReceiptRequest,
     );
   }

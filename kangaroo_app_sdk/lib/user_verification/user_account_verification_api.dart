@@ -7,6 +7,7 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserAccountVerificationApi {
   static Future<Result<UserProfileModel>?> verifyAccount({ 
+    final Map<String, String>? overrideHeaders,
     required final String intent,
     required final String token,
     final String? email,
@@ -14,6 +15,7 @@ class UserAccountVerificationApi {
     final String? countryCode,
   }) {
     return UserAccountVerificationApiInterface.instance.verifyAccount( 
+      overrideHeaders: overrideHeaders,
       intent: intent,
       token: token,
       email: email,

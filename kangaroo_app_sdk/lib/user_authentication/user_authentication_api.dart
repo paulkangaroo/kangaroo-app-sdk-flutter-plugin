@@ -7,10 +7,12 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
     show UserAuthenticationModel;
 
 class UserAuthenticationApi {
-  static authenticateUser(String username, String password) {
+  static authenticateUser(String? username, String? password, String? googleToken, Map<String, String>? overrideHeaders) {
     UserAuthenticationApiInterface.instance.authenticateUser(
       username,
       password,
+      googleToken,
+      overrideHeaders,
     );
   }
 

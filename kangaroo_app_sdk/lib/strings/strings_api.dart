@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/strings/strings_platform_interface.dart';
 
 class StringsApi {
-  static Future<Result<ApplicationStringsModel>?> getStrings() {
-    return StringsApiInterface.instance.getStrings();
+  static Future<Result<ApplicationStringsModel>?> getStrings({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return StringsApiInterface.instance.getStrings( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<ApplicationStringsModel>> get stringsStream {

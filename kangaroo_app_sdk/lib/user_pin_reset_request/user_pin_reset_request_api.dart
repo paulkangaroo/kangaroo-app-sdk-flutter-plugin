@@ -7,12 +7,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserPinResetRequestApi {
   static Future<Result<UserPinResetRequest>?> requestPinReset({ 
+    final Map<String, String>? overrideHeaders,
     final String mode = "verification_code",
     final String? email,
     final String? phone,
     final String? countryCode,
   }) {
     return UserPinResetRequestApiInterface.instance.requestPinReset( 
+      overrideHeaders: overrideHeaders,
       mode: mode,
       email: email,
       phone: phone,

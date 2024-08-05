@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserBusinessFrequentBuyerProgramsApi {
   static Future<Result<FrequentBuyerProgramsModel>?> getUserBusinessFrequentBuyerPrograms({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
   }) {
     return UserBusinessFrequentBuyerProgramsApiInterface.instance.getUserBusinessFrequentBuyerPrograms( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
     );
   }

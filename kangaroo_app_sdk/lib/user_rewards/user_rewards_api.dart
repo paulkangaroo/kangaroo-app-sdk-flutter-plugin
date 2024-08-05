@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_rewards/user_rewards_platform_interface.dart';
 
 class UserRewardsApi {
-  static Future<Result<UserRewardsModel>?> getUserRewards() {
-    return UserRewardsApiInterface.instance.getUserRewards();
+  static Future<Result<UserRewardsModel>?> getUserRewards({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return UserRewardsApiInterface.instance.getUserRewards( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<UserRewardsModel>> get userRewardsStream {

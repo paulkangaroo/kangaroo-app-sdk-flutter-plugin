@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class CampaignMessagesApi {
   static Future<Result<CampaignMessagesModel>?> getCampaignMessages({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
   }) {
     return CampaignMessagesApiInterface.instance.getCampaignMessages( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
     );
   }

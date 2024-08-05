@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class GiftCardPurchaseApi {
   static Future<Result<GiftCardPayPalPaymentResponseModel>?> purchaseGiftCard({ 
+    final Map<String, String>? overrideHeaders,
     required final GiftCardPurchaseRequest purchaseGiftCardRequest,
   }) {
     return GiftCardPurchaseApiInterface.instance.purchaseGiftCard( 
+      overrideHeaders: overrideHeaders,
       purchaseGiftCardRequest: purchaseGiftCardRequest,
     );
   }

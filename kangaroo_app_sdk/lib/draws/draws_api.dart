@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/draws/draws_platform_interface.dart';
 
 class DrawsApi {
-  static Future<Result<DrawsModel>?> getDraws() {
-    return DrawsApiInterface.instance.getDraws();
+  static Future<Result<DrawsModel>?> getDraws({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return DrawsApiInterface.instance.getDraws( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<DrawsModel>> get drawsStream {

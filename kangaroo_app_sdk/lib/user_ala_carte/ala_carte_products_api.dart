@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_ala_carte/ala_carte_products_platform_interface.dart';
 
 class AlaCarteProductsApi {
-  static Future<Result<AlaCarteProductsModel>?> getAlaCarteProducts() {
-    return AlaCarteProductsApiInterface.instance.getAlaCarteProducts();
+  static Future<Result<AlaCarteProductsModel>?> getAlaCarteProducts({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return AlaCarteProductsApiInterface.instance.getAlaCarteProducts( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<AlaCarteProductsModel>> get alaCarteProductsStream {

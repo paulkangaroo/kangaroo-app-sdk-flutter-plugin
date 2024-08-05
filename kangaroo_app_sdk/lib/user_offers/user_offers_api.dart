@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_offers/user_offers_platform_interface.dart';
 
 class UserOffersApi {
-  static Future<Result<UserOffersModel>?> getUserOffers() {
-    return UserOffersApiInterface.instance.getUserOffers();
+  static Future<Result<UserOffersModel>?> getUserOffers({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return UserOffersApiInterface.instance.getUserOffers( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<UserOffersModel>> get userOffersStream {

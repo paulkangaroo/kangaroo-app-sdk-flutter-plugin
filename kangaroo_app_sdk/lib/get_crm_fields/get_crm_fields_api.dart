@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/get_crm_fields/get_crm_fields_platform_interface.dart';
 
 class GetCrmFieldsApi {
-  static Future<Result<CrmFields>?> getCrmFields() {
-    return GetCrmFieldsApiInterface.instance.getCrmFields();
+  static Future<Result<CrmFields>?> getCrmFields({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return GetCrmFieldsApiInterface.instance.getCrmFields( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<CrmFields>> get getCrmFieldsStream {

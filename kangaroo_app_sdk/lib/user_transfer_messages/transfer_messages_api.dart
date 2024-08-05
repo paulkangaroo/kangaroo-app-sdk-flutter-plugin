@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class TransferMessagesApi {
   static Future<Result<TransferMessagesModel>?> getTransferMessages({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
   }) {
     return TransferMessagesApiInterface.instance.getTransferMessages( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
     );
   }

@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserBusinessRewardsApi {
   static Future<Result<UserBusinessRewardsModel>?> getUserBusinessRewards({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
   }) {
     return UserBusinessRewardsApiInterface.instance.getUserBusinessRewards( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
     );
   }

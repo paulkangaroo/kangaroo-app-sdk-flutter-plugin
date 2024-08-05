@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserCheckInApi {
   static Future<Result<CheckInResponseModel>?> userCheckIn({ 
+    final Map<String, String>? overrideHeaders,
     required final CheckInRequest checkInRequest,
   }) {
     return UserCheckInApiInterface.instance.userCheckIn( 
+      overrideHeaders: overrideHeaders,
       checkInRequest: checkInRequest,
     );
   }

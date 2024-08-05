@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class BranchesApi {
   static Future<Result<Business>?> getBusinessBranches({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
   }) {
     return BranchesApiInterface.instance.getBusinessBranches( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
     );
   }

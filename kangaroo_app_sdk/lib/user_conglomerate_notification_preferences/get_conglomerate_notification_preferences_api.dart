@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_conglomerate_notification_preferences/get_conglomerate_notification_preferences_platform_interface.dart';
 
 class GetConglomerateNotificationPreferencesApi {
-  static Future<Result<NotificationSettingsModel>?> getConglomerateNotificationPreferences() {
-    return GetConglomerateNotificationPreferencesApiInterface.instance.getConglomerateNotificationPreferences();
+  static Future<Result<NotificationSettingsModel>?> getConglomerateNotificationPreferences({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return GetConglomerateNotificationPreferencesApiInterface.instance.getConglomerateNotificationPreferences( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<NotificationSettingsModel>> get getConglomerateNotificationPreferencesStream {

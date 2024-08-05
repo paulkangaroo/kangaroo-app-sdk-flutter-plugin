@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserPinUpdateApi {
   static Future<Result<UserProfileModel>?> updatePin({ 
+    final Map<String, String>? overrideHeaders,
     required final UpdatePinRequest updatePinRequest,
   }) {
     return UserPinUpdateApiInterface.instance.updatePin( 
+      overrideHeaders: overrideHeaders,
       updatePinRequest: updatePinRequest,
     );
   }

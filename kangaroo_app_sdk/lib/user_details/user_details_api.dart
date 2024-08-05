@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_details/user_details_platform_interface.dart';
 
 class UserDetailsApi {
-  static Future<Result<UserDetailsModel>?> getUserDetails() {
-    return UserDetailsApiInterface.instance.getUserDetails();
+  static Future<Result<UserDetailsModel>?> getUserDetails({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return UserDetailsApiInterface.instance.getUserDetails( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<UserDetailsModel>> get userDetailsStream {

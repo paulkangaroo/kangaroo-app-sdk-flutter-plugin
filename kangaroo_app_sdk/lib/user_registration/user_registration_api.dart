@@ -7,12 +7,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserRegistrationApi {
   static Future<Result<UserProfileDataModel>?> createAccount({ 
+    final Map<String, String>? overrideHeaders,
     final String? email,
     final String? phone,
     final String? countryCode,
     final String? language,
   }) {
     return UserRegistrationApiInterface.instance.createAccount( 
+      overrideHeaders: overrideHeaders,
       email: email,
       phone: phone,
       countryCode: countryCode,

@@ -7,10 +7,12 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class PushTokenRegistrationApi {
   static Future<Result<UserProfileModel>?> registerPushToken({ 
+    final Map<String, String>? overrideHeaders,
     final String? androidDeviceToken,
     final String? iosDeviceToken,
   }) {
     return PushTokenRegistrationApiInterface.instance.registerPushToken( 
+      overrideHeaders: overrideHeaders,
       androidDeviceToken: androidDeviceToken,
       iosDeviceToken: iosDeviceToken,
     );

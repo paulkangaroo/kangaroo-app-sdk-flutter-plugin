@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/tiers/tiers_platform_interface.dart';
 
 class TiersApi {
-  static Future<Result<UserProfileWithTierProgram>?> getTiers() {
-    return TiersApiInterface.instance.getTiers();
+  static Future<Result<UserProfileWithTierProgram>?> getTiers({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return TiersApiInterface.instance.getTiers( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<UserProfileWithTierProgram>> get tiersStream {

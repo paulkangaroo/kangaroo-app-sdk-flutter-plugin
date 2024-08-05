@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class RedeemRewardsApi {
   static Future<Result<RedeemResponseModel>?> redeemReward({ 
+    final Map<String, String>? overrideHeaders,
     required final RedeemRequest redeemRequest,
   }) {
     return RedeemRewardsApiInterface.instance.redeemReward( 
+      overrideHeaders: overrideHeaders,
       redeemRequest: redeemRequest,
     );
   }

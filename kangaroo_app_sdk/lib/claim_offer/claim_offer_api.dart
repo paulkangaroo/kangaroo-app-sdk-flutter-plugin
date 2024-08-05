@@ -7,10 +7,12 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class ClaimOfferApi {
   static Future<Result<ClaimedOfferModel>?> claimOffer({ 
+    final Map<String, String>? overrideHeaders,
     required final int offerId,
     required final String customerId,
   }) {
     return ClaimOfferApiInterface.instance.claimOffer( 
+      overrideHeaders: overrideHeaders,
       offerId: offerId,
       customerId: customerId,
     );

@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserRegistrationWithCrmApi {
   static Future<Result<UserProfileDataModel>?> createAccountWithCrm({ 
+    final Map<String, String>? overrideHeaders,
     required final CrmRegisterRequest registerWithCrmRequest,
   }) {
     return UserRegistrationWithCrmApiInterface.instance.createAccountWithCrm( 
+      overrideHeaders: overrideHeaders,
       registerWithCrmRequest: registerWithCrmRequest,
     );
   }

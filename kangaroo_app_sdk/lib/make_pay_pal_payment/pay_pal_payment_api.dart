@@ -7,6 +7,7 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class PayPalPaymentApi {
   static Future<Result<PayPalPaymentModel>?> makePayPalPayment({ 
+    final Map<String, String>? overrideHeaders,
     final String intent = "buy_giftcard",
     final String provider = "paypal",
     required final int giftcardId,
@@ -14,6 +15,7 @@ class PayPalPaymentApi {
     required final String paypalCancelUrl,
   }) {
     return PayPalPaymentApiInterface.instance.makePayPalPayment( 
+      overrideHeaders: overrideHeaders,
       intent: intent,
       provider: provider,
       giftcardId: giftcardId,

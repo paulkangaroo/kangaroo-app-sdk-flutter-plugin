@@ -7,10 +7,12 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UpdateDefaultBusinessIdApi {
   static Future<Result<DefaultBusiness>?> updateDefaultBusinessId({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
     required final String defaultBusinessId,
   }) {
     return UpdateDefaultBusinessIdApiInterface.instance.updateDefaultBusinessId( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
       defaultBusinessId: defaultBusinessId,
     );

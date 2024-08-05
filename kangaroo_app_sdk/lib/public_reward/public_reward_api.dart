@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class PublicRewardApi {
   static Future<Result<PublicRewardModel>?> getPublicReward({ 
+    final Map<String, String>? overrideHeaders,
     required final String rewardSlug,
   }) {
     return PublicRewardApiInterface.instance.getPublicReward( 
+      overrideHeaders: overrideHeaders,
       rewardSlug: rewardSlug,
     );
   }

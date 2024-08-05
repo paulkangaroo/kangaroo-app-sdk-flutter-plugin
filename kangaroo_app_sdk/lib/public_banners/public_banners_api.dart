@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_banners/public_banners_platform_interface.dart';
 
 class PublicBannersApi {
-  static Future<Result<BannersModel>?> getPublicBanners() {
-    return PublicBannersApiInterface.instance.getPublicBanners();
+  static Future<Result<BannersModel>?> getPublicBanners({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return PublicBannersApiInterface.instance.getPublicBanners( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<BannersModel>> get publicBannersStream {

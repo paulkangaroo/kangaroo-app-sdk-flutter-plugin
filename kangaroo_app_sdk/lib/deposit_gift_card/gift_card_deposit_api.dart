@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class GiftCardDepositApi {
   static Future<Result<TransferActionResultModel>?> depositGiftCard({ 
+    final Map<String, String>? overrideHeaders,
     required final String depositId,
   }) {
     return GiftCardDepositApiInterface.instance.depositGiftCard( 
+      overrideHeaders: overrideHeaders,
       depositId: depositId,
     );
   }

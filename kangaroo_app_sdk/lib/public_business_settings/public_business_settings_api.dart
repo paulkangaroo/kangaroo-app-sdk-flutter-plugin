@@ -6,8 +6,14 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_business_settings/public_business_settings_platform_interface.dart';
 
 class PublicBusinessSettingsApi {
-  static Future<Result<PublicBusinessSettings>?> getPublicBusinessSettings() {
-    return PublicBusinessSettingsApiInterface.instance.getPublicBusinessSettings();
+  static Future<Result<PublicBusinessSettings>?> getPublicBusinessSettings({ 
+    final Map<String, String>? overrideHeaders,
+
+  }) {
+    return PublicBusinessSettingsApiInterface.instance.getPublicBusinessSettings( 
+      overrideHeaders: overrideHeaders,
+
+    );
   }
 
   static Stream<Result<PublicBusinessSettings>> get publicBusinessSettingsStream {

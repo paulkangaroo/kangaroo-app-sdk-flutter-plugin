@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserBusinessAlaCarteProductsApi {
   static Future<Result<AlaCarteProductsModel>?> getUserBusinessAlaCarteProducts({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
   }) {
     return UserBusinessAlaCarteProductsApiInterface.instance.getUserBusinessAlaCarteProducts( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
     );
   }

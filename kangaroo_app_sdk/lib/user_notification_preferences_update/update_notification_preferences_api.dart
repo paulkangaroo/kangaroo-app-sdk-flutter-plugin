@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UpdateNotificationPreferencesApi {
   static Future<Result<NotificationSettingsModel>?> updateNotificationPreferences({ 
+    final Map<String, String>? overrideHeaders,
     required final NotificationSettingsUpdateRequest notificationPreferencesRequest,
   }) {
     return UpdateNotificationPreferencesApiInterface.instance.updateNotificationPreferences( 
+      overrideHeaders: overrideHeaders,
       notificationPreferencesRequest: notificationPreferencesRequest,
     );
   }

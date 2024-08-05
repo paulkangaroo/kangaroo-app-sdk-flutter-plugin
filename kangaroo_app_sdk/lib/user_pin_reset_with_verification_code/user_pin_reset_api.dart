@@ -7,6 +7,7 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserPinResetApi {
   static Future<Result<EmptyResponse>?> resetPin({ 
+    final Map<String, String>? overrideHeaders,
     required final String verificationCode,
     required final String pinCode,
     final String? email,
@@ -14,6 +15,7 @@ class UserPinResetApi {
     final String? countryCode,
   }) {
     return UserPinResetApiInterface.instance.resetPin( 
+      overrideHeaders: overrideHeaders,
       verificationCode: verificationCode,
       pinCode: pinCode,
       email: email,

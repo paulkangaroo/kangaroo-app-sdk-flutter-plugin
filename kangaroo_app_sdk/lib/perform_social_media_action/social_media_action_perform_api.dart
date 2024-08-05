@@ -7,10 +7,12 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class SocialMediaActionPerformApi {
   static Future<Result<PerformSocialMediaActionResponseModel>?> performSocialMediaAction({ 
+    final Map<String, String>? overrideHeaders,
     required final PerformSocialMediaActionRequestModel performSocialMediaActionRequest,
     required final String businessId,
   }) {
     return SocialMediaActionPerformApiInterface.instance.performSocialMediaAction( 
+      overrideHeaders: overrideHeaders,
       performSocialMediaActionRequest: performSocialMediaActionRequest,
       businessId: businessId,
     );

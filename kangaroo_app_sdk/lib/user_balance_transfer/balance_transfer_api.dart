@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class BalanceTransferApi {
   static Future<Result<TransferResponseModel>?> transfer({ 
+    final Map<String, String>? overrideHeaders,
     required final TransferRequestModel transferRequest,
   }) {
     return BalanceTransferApiInterface.instance.transfer( 
+      overrideHeaders: overrideHeaders,
       transferRequest: transferRequest,
     );
   }

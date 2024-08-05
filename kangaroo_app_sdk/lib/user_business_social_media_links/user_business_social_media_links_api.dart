@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class UserBusinessSocialMediaLinksApi {
   static Future<Result<SocialMediaLinksModel>?> getUserBusinessSocialMediaLinks({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
   }) {
     return UserBusinessSocialMediaLinksApiInterface.instance.getUserBusinessSocialMediaLinks( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
     );
   }

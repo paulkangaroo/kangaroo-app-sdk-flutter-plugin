@@ -7,9 +7,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 
 class GetDefaultBusinessIdApi {
   static Future<Result<DefaultBusiness>?> getDefaultBusinessId({ 
+    final Map<String, String>? overrideHeaders,
     required final String businessId,
   }) {
     return GetDefaultBusinessIdApiInterface.instance.getDefaultBusinessId( 
+      overrideHeaders: overrideHeaders,
       businessId: businessId,
     );
   }
