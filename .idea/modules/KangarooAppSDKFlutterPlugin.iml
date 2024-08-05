@@ -8,15 +8,6 @@
       <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/build" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/build" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/example/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/example/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/fluttertoast/example/build" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/kangaroo_app_sdk_ios/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/kangaroo_app_sdk_ios/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk/example/ios/.symlinks/plugins/kangaroo_app_sdk_ios/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_android/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_android/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/../../kangaroo_app_sdk_android/build" />
