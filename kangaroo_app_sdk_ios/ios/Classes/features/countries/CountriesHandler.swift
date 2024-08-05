@@ -19,8 +19,19 @@ class CountriesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getCountries(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await CountriesApi().getCountries().serializeCountriesApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await CountriesApi().getCountries(overrideHeaders: overrideHeaders).serializeCountriesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

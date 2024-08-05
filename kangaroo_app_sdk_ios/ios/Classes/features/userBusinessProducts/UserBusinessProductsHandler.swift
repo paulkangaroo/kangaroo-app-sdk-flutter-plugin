@@ -19,7 +19,7 @@ class UserBusinessProductsHandler: NSObject, FlutterStreamHandler, PluginChannel
 
 
     static func getUserBusinessProducts(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class UserBusinessProductsHandler: NSObject, FlutterStreamHandler, PluginChannel
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await UserBusinessProductsApi().getUserBusinessProducts(
+        let result = try await UserBusinessProductsApi().getUserBusinessProducts(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeUserBusinessProductsApiResult()
+           ).serializeUserBusinessProductsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

@@ -19,7 +19,7 @@ class GiftCardDepositHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
 
     static func depositGiftCard(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class GiftCardDepositHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let depositId = myArgs["depositId"] as? String else {return nil}
 
-         let result = try await GiftCardDepositApi().depositGiftCard(
+        let result = try await GiftCardDepositApi().depositGiftCard(
+                overrideHeaders: overrideHeaders,
                 depositId: depositId
-            ).serializeGiftCardDepositApiResult()
+           ).serializeGiftCardDepositApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

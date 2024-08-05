@@ -19,8 +19,19 @@ class StringsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getStrings(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await StringsApi().getStrings().serializeStringsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await StringsApi().getStrings(overrideHeaders: overrideHeaders).serializeStringsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

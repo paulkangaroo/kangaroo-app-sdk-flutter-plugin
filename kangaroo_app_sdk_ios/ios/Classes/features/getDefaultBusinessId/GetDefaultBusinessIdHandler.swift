@@ -19,7 +19,7 @@ class GetDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChannel
 
 
     static func getDefaultBusinessId(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class GetDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChannel
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await GetDefaultBusinessIdApi().getDefaultBusinessId(
+        let result = try await GetDefaultBusinessIdApi().getDefaultBusinessId(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeGetDefaultBusinessIdApiResult()
+           ).serializeGetDefaultBusinessIdApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

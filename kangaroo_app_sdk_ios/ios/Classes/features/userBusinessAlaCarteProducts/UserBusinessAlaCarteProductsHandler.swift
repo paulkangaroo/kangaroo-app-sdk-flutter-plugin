@@ -19,7 +19,7 @@ class UserBusinessAlaCarteProductsHandler: NSObject, FlutterStreamHandler, Plugi
 
 
     static func getUserBusinessAlaCarteProducts(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class UserBusinessAlaCarteProductsHandler: NSObject, FlutterStreamHandler, Plugi
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await UserBusinessAlaCarteProductsApi().getUserBusinessAlaCarteProducts(
+        let result = try await UserBusinessAlaCarteProductsApi().getUserBusinessAlaCarteProducts(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeUserBusinessAlaCarteProductsApiResult()
+           ).serializeUserBusinessAlaCarteProductsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

@@ -19,7 +19,7 @@ class UserUnsubscribeHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
 
     static func unsubscribe(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,13 +31,15 @@ class UserUnsubscribeHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let campaignId = myArgs["campaignId"] as? String else {return nil}
                 guard let token = myArgs["token"] as? String else {return nil}
 
-         let result = try await UserUnsubscribeApi().unsubscribe(
+        let result = try await UserUnsubscribeApi().unsubscribe(
+                overrideHeaders: overrideHeaders,
                 campaignId: campaignId,
                 token: token
-            ).serializeUserUnsubscribeApiResult()
+           ).serializeUserUnsubscribeApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

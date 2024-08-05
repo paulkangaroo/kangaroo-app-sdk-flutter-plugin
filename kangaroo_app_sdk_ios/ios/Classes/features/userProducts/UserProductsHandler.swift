@@ -19,8 +19,19 @@ class UserProductsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
 
 
     static func getUserProducts(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await UserProductsApi().getUserProducts().serializeUserProductsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await UserProductsApi().getUserProducts(overrideHeaders: overrideHeaders).serializeUserProductsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

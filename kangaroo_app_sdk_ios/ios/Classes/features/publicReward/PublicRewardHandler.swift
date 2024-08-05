@@ -19,7 +19,7 @@ class PublicRewardHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
 
 
     static func getPublicReward(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class PublicRewardHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let rewardSlug = myArgs["rewardSlug"] as? String else {return nil}
 
-         let result = try await PublicRewardApi().getPublicReward(
+        let result = try await PublicRewardApi().getPublicReward(
+                overrideHeaders: overrideHeaders,
                 rewardSlug: rewardSlug
-            ).serializePublicRewardApiResult()
+           ).serializePublicRewardApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

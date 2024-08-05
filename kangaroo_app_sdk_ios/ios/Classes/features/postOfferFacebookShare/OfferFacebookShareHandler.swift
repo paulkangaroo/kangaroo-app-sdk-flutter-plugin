@@ -19,7 +19,7 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
 
 
     static func postOfferFacebookShare(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,19 +31,21 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let offerId = myArgs["offerId"] as? String else {return nil}
                 guard let include = myArgs["include"] as? String else {return nil}
                 guard let facebookUserId = myArgs["facebookUserId"] as? String else {return nil}
                 guard let type = myArgs["type"] as? String else {return nil}
                 guard let friendsCount = myArgs["friendsCount"] as? String else {return nil}
 
-         let result = try await OfferFacebookShareApi().postOfferFacebookShare(
+        let result = try await OfferFacebookShareApi().postOfferFacebookShare(
+                overrideHeaders: overrideHeaders,
                 offerId: offerId,
                 include: include,
                 facebookUserId: facebookUserId,
                 type: type,
                 friendsCount: friendsCount
-            ).serializeOfferFacebookShareApiResult()
+           ).serializeOfferFacebookShareApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

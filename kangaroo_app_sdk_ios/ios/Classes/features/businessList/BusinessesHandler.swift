@@ -19,8 +19,19 @@ class BusinessesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getBusinesses(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await BusinessesApi().getBusinesses().serializeBusinessesApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await BusinessesApi().getBusinesses(overrideHeaders: overrideHeaders).serializeBusinessesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

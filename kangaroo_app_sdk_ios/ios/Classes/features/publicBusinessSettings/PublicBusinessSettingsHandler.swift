@@ -19,8 +19,19 @@ class PublicBusinessSettingsHandler: NSObject, FlutterStreamHandler, PluginChann
 
 
     static func getPublicBusinessSettings(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await PublicBusinessSettingsApi().getPublicBusinessSettings().serializePublicBusinessSettingsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await PublicBusinessSettingsApi().getPublicBusinessSettings(overrideHeaders: overrideHeaders).serializePublicBusinessSettingsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

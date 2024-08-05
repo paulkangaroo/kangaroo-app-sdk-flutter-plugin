@@ -19,7 +19,7 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
 
 
     static func updateUserProfile(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,6 +31,7 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         let firstName = myArgs["firstName"] as? String? ?? nil
                 let lastName = myArgs["lastName"] as? String? ?? nil
                 let birthDate = myArgs["birthDate"] as? String? ?? nil
@@ -38,14 +39,15 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
                 let gender = myArgs["gender"] as? String? ?? nil
                 let profilePhoto = myArgs["profilePhoto"] as? String? ?? nil
 
-         let result = try await UserProfileUpdateApi().updateUserProfile(
+        let result = try await UserProfileUpdateApi().updateUserProfile(
+                overrideHeaders: overrideHeaders,
                 firstName: firstName,
                 lastName: lastName,
                 birthDate: birthDate,
                 language: language,
                 gender: gender,
                 profilePhoto: profilePhoto
-            ).serializeUserProfileUpdateApiResult()
+           ).serializeUserProfileUpdateApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

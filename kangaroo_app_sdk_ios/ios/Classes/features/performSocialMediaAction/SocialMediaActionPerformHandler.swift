@@ -19,7 +19,7 @@ class SocialMediaActionPerformHandler: NSObject, FlutterStreamHandler, PluginCha
 
 
     static func performSocialMediaAction(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,15 +31,17 @@ class SocialMediaActionPerformHandler: NSObject, FlutterStreamHandler, PluginCha
 
         do {
            if let myArgs = args as? [String: Any] {
+              let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let performSocialMediaActionRequest = call.arguments as? [String : Any] else {return nil}
                 guard let businessId = myArgs["businessId"] as? String else {return nil}
 
             let result = try await SocialMediaActionPerformApi().performSocialMediaAction(
+                overrideHeaders: overrideHeaders,
                 methods: performSocialMediaActionRequest,
                 businessId: businessId
             ).serializeSocialMediaActionPerformApiResult()
 
-        // bruh
+
         switch result {
             case let result as SerializedResultSuccess:
                 return result.data

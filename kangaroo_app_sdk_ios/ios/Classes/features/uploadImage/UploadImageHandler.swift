@@ -2,15 +2,15 @@ import Foundation
 import Flutter
 import KangarooAppSdkCustomer
 
-class UserRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
+class UploadImageHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
 
-    var methodChannel: String = "customer_sdk/methods/get_user_rewards"
+    var methodChannel: String = "customer_sdk/methods/upload_image"
 
-    var eventChannel: String = "customer_sdk/events/get_user_rewards"
+    var eventChannel: String = "customer_sdk/events/upload_image"
 
     func onMethodCall(call: FlutterMethodCall) async -> Any? {
-        return await UserRewardsHandler.getUserRewards(call: call)
+        return await UploadImageHandler.uploadImage(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,9 +18,12 @@ class UserRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     }
 
 
-    static func getUserRewards(call: FlutterMethodCall) async -> String? {
-        let args = call.arguments
-    do {
+    static func uploadImage(call: FlutterMethodCall) async -> String? {
+
+
+        
+    let args = call.arguments
+        do {
 
         var overrideHeaders: [String: String]?
 
@@ -31,36 +34,36 @@ class UserRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
             overrideHeaders = [:]
         }
 
-        let result = try await UserRewardsApi().getUserRewards(overrideHeaders: overrideHeaders).serializeUserRewardsApiResult()
+        let result = try await UploadImageApi().uploadImage(overrideHeaders: overrideHeaders, methods: call.arguments as! [String : Any]).serializeUploadImageApiResult()
 
-        switch result {
-            case let result as SerializedResultSuccess:
-                return result.data
-            case let result as SerializedResultUnauthorizedError:
-                return result.error
-            case let result as SerializedResultUnknownError:
-                return result.error
-            default:
-                return nil
+            switch result {
+                case let result as SerializedResultSuccess:
+                    return result.data
+                case let result as SerializedResultUnauthorizedError:
+                    return result.error
+                case let result as SerializedResultUnknownError:
+                    return result.error
+                default:
+                    return nil
             }
-        } catch {
+
+        }
+        catch {
             return nil
         }
 
-        
-
 
         
 
-        
+
         return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
         FlutterEventSink) -> FlutterError? {
         sink = events
-        UserRewardsApi().userRewardsState
-            .serializeUserRewardsState().observe { result in
+        UploadImageApi().uploadImageState
+            .serializeUploadImageState().observe { result in
             switch result {
             case let result as SerializedResultIdle:
                 self.sink?(result.state)

@@ -19,7 +19,7 @@ class UserAccountVerificationHandler: NSObject, FlutterStreamHandler, PluginChan
 
 
     static func verifyAccount(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,19 +31,21 @@ class UserAccountVerificationHandler: NSObject, FlutterStreamHandler, PluginChan
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let intent = myArgs["intent"] as? String else {return nil}
                 guard let token = myArgs["token"] as? String else {return nil}
                 let email = myArgs["email"] as? String? ?? nil
                 let phone = myArgs["phone"] as? String? ?? nil
                 let countryCode = myArgs["countryCode"] as? String? ?? nil
 
-         let result = try await UserAccountVerificationApi().verifyAccount(
+        let result = try await UserAccountVerificationApi().verifyAccount(
+                overrideHeaders: overrideHeaders,
                 intent: intent,
                 token: token,
                 email: email,
                 phone: phone,
                 countryCode: countryCode
-            ).serializeUserAccountVerificationApiResult()
+           ).serializeUserAccountVerificationApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

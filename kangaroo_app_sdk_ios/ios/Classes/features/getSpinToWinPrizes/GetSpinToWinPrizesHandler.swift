@@ -19,7 +19,7 @@ class GetSpinToWinPrizesHandler: NSObject, FlutterStreamHandler, PluginChannelHa
 
 
     static func getSpinToWinPrizes(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class GetSpinToWinPrizesHandler: NSObject, FlutterStreamHandler, PluginChannelHa
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await GetSpinToWinPrizesApi().getSpinToWinPrizes(
+        let result = try await GetSpinToWinPrizesApi().getSpinToWinPrizes(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeGetSpinToWinPrizesApiResult()
+           ).serializeGetSpinToWinPrizesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

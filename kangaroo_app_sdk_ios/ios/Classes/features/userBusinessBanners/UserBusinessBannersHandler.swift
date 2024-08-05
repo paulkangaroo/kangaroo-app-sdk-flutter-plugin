@@ -19,7 +19,7 @@ class UserBusinessBannersHandler: NSObject, FlutterStreamHandler, PluginChannelH
 
 
     static func getUserBusinessBanners(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class UserBusinessBannersHandler: NSObject, FlutterStreamHandler, PluginChannelH
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await UserBusinessBannersApi().getUserBusinessBanners(
+        let result = try await UserBusinessBannersApi().getUserBusinessBanners(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeUserBusinessBannersApiResult()
+           ).serializeUserBusinessBannersApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

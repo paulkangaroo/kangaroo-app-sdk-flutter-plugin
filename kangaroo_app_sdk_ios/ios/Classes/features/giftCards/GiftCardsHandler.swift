@@ -19,8 +19,19 @@ class GiftCardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getGiftCards(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await GiftCardsApi().getGiftCards().serializeGiftCardsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await GiftCardsApi().getGiftCards(overrideHeaders: overrideHeaders).serializeGiftCardsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

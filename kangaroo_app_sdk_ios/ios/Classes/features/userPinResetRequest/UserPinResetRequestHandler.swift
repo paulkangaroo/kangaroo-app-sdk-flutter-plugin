@@ -19,7 +19,7 @@ class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelH
 
 
     static func requestPinReset(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,17 +31,19 @@ class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelH
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let mode = myArgs["mode"] as? String else {return nil}
                 let email = myArgs["email"] as? String? ?? nil
                 let phone = myArgs["phone"] as? String? ?? nil
                 let countryCode = myArgs["countryCode"] as? String? ?? nil
 
-         let result = try await UserPinResetRequestApi().requestPinReset(
+        let result = try await UserPinResetRequestApi().requestPinReset(
+                overrideHeaders: overrideHeaders,
                 mode: mode,
                 email: email,
                 phone: phone,
                 countryCode: countryCode
-            ).serializeUserPinResetRequestApiResult()
+           ).serializeUserPinResetRequestApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

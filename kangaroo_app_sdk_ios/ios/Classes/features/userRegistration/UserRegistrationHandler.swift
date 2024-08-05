@@ -19,7 +19,7 @@ class UserRegistrationHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
 
     static func createAccount(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,17 +31,19 @@ class UserRegistrationHandler: NSObject, FlutterStreamHandler, PluginChannelHand
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         let email = myArgs["email"] as? String? ?? nil
                 let phone = myArgs["phone"] as? String? ?? nil
                 let countryCode = myArgs["countryCode"] as? String? ?? nil
                 let language = myArgs["language"] as? String? ?? nil
 
-         let result = try await UserRegistrationApi().createAccount(
+        let result = try await UserRegistrationApi().createAccount(
+                overrideHeaders: overrideHeaders,
                 email: email,
                 phone: phone,
                 countryCode: countryCode,
                 language: language
-            ).serializeUserRegistrationApiResult()
+           ).serializeUserRegistrationApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

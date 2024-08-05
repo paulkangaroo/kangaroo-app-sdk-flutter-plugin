@@ -19,8 +19,19 @@ class UserDeleteHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func deleteUserAccount(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await UserDeleteApi().deleteUserAccount().serializeUserDeleteApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await UserDeleteApi().deleteUserAccount(overrideHeaders: overrideHeaders).serializeUserDeleteApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

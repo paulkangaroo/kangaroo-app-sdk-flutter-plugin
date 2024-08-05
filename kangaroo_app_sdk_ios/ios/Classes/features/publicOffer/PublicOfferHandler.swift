@@ -19,7 +19,7 @@ class PublicOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getPublicOffer(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class PublicOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let offerSlug = myArgs["offerSlug"] as? String else {return nil}
 
-         let result = try await PublicOfferApi().getPublicOffer(
+        let result = try await PublicOfferApi().getPublicOffer(
+                overrideHeaders: overrideHeaders,
                 offerSlug: offerSlug
-            ).serializePublicOfferApiResult()
+           ).serializePublicOfferApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

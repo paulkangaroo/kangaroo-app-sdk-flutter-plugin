@@ -19,8 +19,19 @@ class UserCouponsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getUserCoupons(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await UserCouponsApi().getUserCoupons().serializeUserCouponsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await UserCouponsApi().getUserCoupons(overrideHeaders: overrideHeaders).serializeUserCouponsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

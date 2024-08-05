@@ -19,7 +19,7 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
 
 
     static func resetPin(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,19 +31,21 @@ class UserPinResetHandler: NSObject, FlutterStreamHandler, PluginChannelHandler 
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let verificationCode = myArgs["verificationCode"] as? String else {return nil}
                 guard let pinCode = myArgs["pinCode"] as? String else {return nil}
                 let email = myArgs["email"] as? String? ?? nil
                 let phone = myArgs["phone"] as? String? ?? nil
                 let countryCode = myArgs["countryCode"] as? String? ?? nil
 
-         let result = try await UserPinResetApi().resetPin(
+        let result = try await UserPinResetApi().resetPin(
+                overrideHeaders: overrideHeaders,
                 verificationCode: verificationCode,
                 pinCode: pinCode,
                 email: email,
                 phone: phone,
                 countryCode: countryCode
-            ).serializeUserPinResetApiResult()
+           ).serializeUserPinResetApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

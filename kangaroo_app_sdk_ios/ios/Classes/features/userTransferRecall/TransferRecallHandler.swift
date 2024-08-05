@@ -19,7 +19,7 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
 
 
     static func recallTransfer(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let recallId = myArgs["recallId"] as? String else {return nil}
 
-         let result = try await TransferRecallApi().recallTransfer(
+        let result = try await TransferRecallApi().recallTransfer(
+                overrideHeaders: overrideHeaders,
                 recallId: recallId
-            ).serializeTransferRecallApiResult()
+           ).serializeTransferRecallApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

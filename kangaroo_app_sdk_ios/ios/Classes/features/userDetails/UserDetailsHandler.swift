@@ -19,8 +19,19 @@ class UserDetailsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getUserDetails(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await UserDetailsApi().getUserDetails().serializeUserDetailsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await UserDetailsApi().getUserDetails(overrideHeaders: overrideHeaders).serializeUserDetailsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

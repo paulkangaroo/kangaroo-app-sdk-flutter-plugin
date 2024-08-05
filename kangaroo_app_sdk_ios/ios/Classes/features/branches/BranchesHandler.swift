@@ -19,7 +19,7 @@ class BranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getBusinessBranches(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class BranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await BranchesApi().getBusinessBranches(
+        let result = try await BranchesApi().getBusinessBranches(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeBranchesApiResult()
+           ).serializeBranchesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

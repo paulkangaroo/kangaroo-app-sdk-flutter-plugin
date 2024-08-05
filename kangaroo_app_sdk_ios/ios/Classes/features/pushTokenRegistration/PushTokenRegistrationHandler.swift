@@ -19,7 +19,7 @@ class PushTokenRegistrationHandler: NSObject, FlutterStreamHandler, PluginChanne
 
 
     static func registerPushToken(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,13 +31,15 @@ class PushTokenRegistrationHandler: NSObject, FlutterStreamHandler, PluginChanne
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         let androidDeviceToken = myArgs["androidDeviceToken"] as? String? ?? nil
                 let iosDeviceToken = myArgs["iosDeviceToken"] as? String? ?? nil
 
-         let result = try await PushTokenRegistrationApi().registerPushToken(
+        let result = try await PushTokenRegistrationApi().registerPushToken(
+                overrideHeaders: overrideHeaders,
                 androidDeviceToken: androidDeviceToken,
                 iosDeviceToken: iosDeviceToken
-            ).serializePushTokenRegistrationApiResult()
+           ).serializePushTokenRegistrationApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

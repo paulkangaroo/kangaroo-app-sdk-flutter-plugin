@@ -19,7 +19,7 @@ class UpdateDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChan
 
 
     static func updateDefaultBusinessId(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,13 +31,15 @@ class UpdateDefaultBusinessIdHandler: NSObject, FlutterStreamHandler, PluginChan
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
                 guard let defaultBusinessId = myArgs["defaultBusinessId"] as? String else {return nil}
 
-         let result = try await UpdateDefaultBusinessIdApi().updateDefaultBusinessId(
+        let result = try await UpdateDefaultBusinessIdApi().updateDefaultBusinessId(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId,
                 defaultBusinessId: defaultBusinessId
-            ).serializeUpdateDefaultBusinessIdApiResult()
+           ).serializeUpdateDefaultBusinessIdApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

@@ -19,7 +19,7 @@ class CampaignMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
 
     static func getCampaignMessages(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class CampaignMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await CampaignMessagesApi().getCampaignMessages(
+        let result = try await CampaignMessagesApi().getCampaignMessages(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeCampaignMessagesApiResult()
+           ).serializeCampaignMessagesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

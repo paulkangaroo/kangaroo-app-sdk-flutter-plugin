@@ -19,7 +19,7 @@ class ClaimOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func claimOffer(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,13 +31,15 @@ class ClaimOfferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let offerId = myArgs["offerId"] as? Int32 else {return nil}
                 guard let customerId = myArgs["customerId"] as? String else {return nil}
 
-         let result = try await ClaimOfferApi().claimOffer(
+        let result = try await ClaimOfferApi().claimOffer(
+                overrideHeaders: overrideHeaders,
                 offerId: offerId,
                 customerId: customerId
-            ).serializeClaimOfferApiResult()
+           ).serializeClaimOfferApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

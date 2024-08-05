@@ -19,8 +19,19 @@ class DrawsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getDraws(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await DrawsApi().getDraws().serializeDrawsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await DrawsApi().getDraws(overrideHeaders: overrideHeaders).serializeDrawsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

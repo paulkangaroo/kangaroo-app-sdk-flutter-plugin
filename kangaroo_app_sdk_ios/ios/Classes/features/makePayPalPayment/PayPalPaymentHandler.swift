@@ -19,7 +19,7 @@ class PayPalPaymentHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
 
 
     static func makePayPalPayment(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,19 +31,21 @@ class PayPalPaymentHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let intent = myArgs["intent"] as? String else {return nil}
                 guard let provider = myArgs["provider"] as? String else {return nil}
                 guard let giftcardId = myArgs["giftcardId"] as? Int32 else {return nil}
                 guard let paypalReturnUrl = myArgs["paypalReturnUrl"] as? String else {return nil}
                 guard let paypalCancelUrl = myArgs["paypalCancelUrl"] as? String else {return nil}
 
-         let result = try await PayPalPaymentApi().makePayPalPayment(
+        let result = try await PayPalPaymentApi().makePayPalPayment(
+                overrideHeaders: overrideHeaders,
                 intent: intent,
                 provider: provider,
                 giftcardId: giftcardId,
                 paypalReturnUrl: paypalReturnUrl,
                 paypalCancelUrl: paypalCancelUrl
-            ).serializePayPalPaymentApiResult()
+           ).serializePayPalPaymentApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

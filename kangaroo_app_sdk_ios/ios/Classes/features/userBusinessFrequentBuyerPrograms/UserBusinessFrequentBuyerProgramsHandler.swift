@@ -19,7 +19,7 @@ class UserBusinessFrequentBuyerProgramsHandler: NSObject, FlutterStreamHandler, 
 
 
     static func getUserBusinessFrequentBuyerPrograms(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class UserBusinessFrequentBuyerProgramsHandler: NSObject, FlutterStreamHandler, 
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await UserBusinessFrequentBuyerProgramsApi().getUserBusinessFrequentBuyerPrograms(
+        let result = try await UserBusinessFrequentBuyerProgramsApi().getUserBusinessFrequentBuyerPrograms(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeUserBusinessFrequentBuyerProgramsApiResult()
+           ).serializeUserBusinessFrequentBuyerProgramsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

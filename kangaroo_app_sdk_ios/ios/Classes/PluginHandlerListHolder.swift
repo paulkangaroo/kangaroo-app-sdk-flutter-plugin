@@ -151,6 +151,8 @@ class PluginHandlerListHolder {
 
     UserAccountVerificationHandler(),
 
+    UploadImageHandler(),
+
     UserAuthenticationHandler()
         ]
 }

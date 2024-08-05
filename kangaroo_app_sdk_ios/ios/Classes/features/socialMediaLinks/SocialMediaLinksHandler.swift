@@ -19,8 +19,19 @@ class SocialMediaLinksHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
 
     static func getSocialMediaLinks(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await SocialMediaLinksApi().getSocialMediaLinks().serializeSocialMediaLinksApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await SocialMediaLinksApi().getSocialMediaLinks(overrideHeaders: overrideHeaders).serializeSocialMediaLinksApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

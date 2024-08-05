@@ -2,15 +2,15 @@ import Foundation
 import Flutter
 import KangarooAppSdkCustomer
 
-class UserBusinessRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
+class UserBusinessUsedCouponsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
 
-    var methodChannel: String = "customer_sdk/methods/get_user_business_rewards"
+    var methodChannel: String = "customer_sdk/methods/get_user_business_used_coupons"
 
-    var eventChannel: String = "customer_sdk/events/get_user_business_rewards"
+    var eventChannel: String = "customer_sdk/events/get_user_business_used_coupons"
 
     func onMethodCall(call: FlutterMethodCall) async -> Any? {
-        return await UserBusinessRewardsHandler.getUserBusinessRewards(call: call)
+        return await UserBusinessUsedCouponsHandler.getUserBusinessUsedCoupons(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,7 +18,7 @@ class UserBusinessRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelH
     }
 
 
-    static func getUserBusinessRewards(call: FlutterMethodCall) async -> String? {
+    static func getUserBusinessUsedCoupons(call: FlutterMethodCall) async -> String? {
 
 
         
@@ -34,10 +34,10 @@ class UserBusinessRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelH
           let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-        let result = try await UserBusinessRewardsApi().getUserBusinessRewards(
+        let result = try await UserBusinessUsedCouponsApi().getUserBusinessUsedCoupons(
                 overrideHeaders: overrideHeaders,
                 businessId: businessId
-           ).serializeUserBusinessRewardsApiResult()
+           ).serializeUserBusinessUsedCouponsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -61,8 +61,8 @@ class UserBusinessRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelH
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
         FlutterEventSink) -> FlutterError? {
         sink = events
-        UserBusinessRewardsApi().userBusinessRewardsState
-            .serializeUserBusinessRewardsState().observe { result in
+        UserBusinessUsedCouponsApi().userBusinessUsedCouponsState
+            .serializeUserBusinessUsedCouponsState().observe { result in
             switch result {
             case let result as SerializedResultIdle:
                 self.sink?(result.state)

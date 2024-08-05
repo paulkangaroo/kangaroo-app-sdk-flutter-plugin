@@ -19,7 +19,7 @@ class TransferMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
 
     static func getTransferMessages(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class TransferMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await TransferMessagesApi().getTransferMessages(
+        let result = try await TransferMessagesApi().getTransferMessages(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeTransferMessagesApiResult()
+           ).serializeTransferMessagesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

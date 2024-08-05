@@ -19,8 +19,19 @@ class FrequentBuyerProgramsHandler: NSObject, FlutterStreamHandler, PluginChanne
 
 
     static func getFrequentBuyerPrograms(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await FrequentBuyerProgramsApi().getFrequentBuyerPrograms().serializeFrequentBuyerProgramsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await FrequentBuyerProgramsApi().getFrequentBuyerPrograms(overrideHeaders: overrideHeaders).serializeFrequentBuyerProgramsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

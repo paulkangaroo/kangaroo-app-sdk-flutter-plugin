@@ -19,8 +19,19 @@ class PublicRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
 
 
     static func getPublicRewards(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await PublicRewardsApi().getPublicRewards().serializePublicRewardsApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await PublicRewardsApi().getPublicRewards(overrideHeaders: overrideHeaders).serializePublicRewardsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

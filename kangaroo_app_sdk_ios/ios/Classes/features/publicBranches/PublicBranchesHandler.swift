@@ -19,8 +19,25 @@ class PublicBranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
 
 
     static func getPublicBranches(call: FlutterMethodCall) async -> String? {
+
+
+        
+
+
+        
+
+        guard let args = call.arguments else {
+            return nil
+        }
         do {
-        let result = try await PublicBranchesApi().getPublicBranches().serializePublicBranchesApiResult()
+       if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+                        guard let perPage = myArgs["perPage"] as? Int32 else {return nil}
+
+        let result = try await PublicBranchesApi().getPublicBranches(
+                overrideHeaders: overrideHeaders,
+                perPage: perPage
+           ).serializePublicBranchesApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -31,16 +48,12 @@ class PublicBranchesHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
                 return result.error
             default:
                 return nil
+                }
             }
-        } catch {
+        }
+        catch {
             return nil
         }
-
-        
-
-
-        
-
         
         return nil
     }

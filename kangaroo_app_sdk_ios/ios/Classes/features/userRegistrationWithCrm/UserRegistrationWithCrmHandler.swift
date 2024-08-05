@@ -19,22 +19,34 @@ class UserRegistrationWithCrmHandler: NSObject, FlutterStreamHandler, PluginChan
 
 
     static func createAccountWithCrm(call: FlutterMethodCall) async -> String? {
-        
+
 
         
+    let args = call.arguments
         do {
-        let result = try await UserRegistrationWithCrmApi().createAccountWithCrm(methods: call.arguments as! [String : Any]).serializeUserRegistrationWithCrmApiResult()
 
-        switch result {
-            case let result as SerializedResultSuccess:
-                return result.data
-            case let result as SerializedResultUnauthorizedError:
-                return result.error
-            case let result as SerializedResultUnknownError:
-                return result.error
-            default:
-                return nil
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await UserRegistrationWithCrmApi().createAccountWithCrm(overrideHeaders: overrideHeaders, methods: call.arguments as! [String : Any]).serializeUserRegistrationWithCrmApiResult()
+
+            switch result {
+                case let result as SerializedResultSuccess:
+                    return result.data
+                case let result as SerializedResultUnauthorizedError:
+                    return result.error
+                case let result as SerializedResultUnknownError:
+                    return result.error
+                default:
+                    return nil
             }
+
         }
         catch {
             return nil

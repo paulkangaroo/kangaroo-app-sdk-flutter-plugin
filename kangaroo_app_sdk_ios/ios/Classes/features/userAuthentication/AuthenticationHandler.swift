@@ -24,12 +24,17 @@ class UserAuthenticationHandler: NSObject, FlutterStreamHandler, PluginChannelHa
         }
 
         do {
-            if let myArgs = args as? [String: Any],
-               let username = myArgs["username"] as? String,
-               let password = myArgs["password"] as? String {
+            if let myArgs = args as? [String: Any]{
+               let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+               let username = myArgs["username"] as? String
+               let password = myArgs["password"] as? String
+               let googleToken = myArgs["googleToken"] as? String
+
                 let result = try await UserAuthenticationApi().authenticateUser(
                     username: username,
-                    password: password
+                    password: password,
+                    googleToken: googleToken,
+                    overrideHeaders: overrideHeaders
                 ).serializeUserAuthenticationResult()
 
                 switch result {

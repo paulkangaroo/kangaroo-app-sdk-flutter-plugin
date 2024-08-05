@@ -19,7 +19,7 @@ class UserBusinessSocialMediaLinksHandler: NSObject, FlutterStreamHandler, Plugi
 
 
     static func getUserBusinessSocialMediaLinks(call: FlutterMethodCall) async -> String? {
-        
+
 
         
 
@@ -31,11 +31,13 @@ class UserBusinessSocialMediaLinksHandler: NSObject, FlutterStreamHandler, Plugi
         }
         do {
        if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         guard let businessId = myArgs["businessId"] as? String else {return nil}
 
-         let result = try await UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
+        let result = try await UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            ).serializeUserBusinessSocialMediaLinksApiResult()
+           ).serializeUserBusinessSocialMediaLinksApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:

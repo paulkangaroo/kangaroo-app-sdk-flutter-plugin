@@ -19,8 +19,19 @@ class BannersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getBanners(call: FlutterMethodCall) async -> String? {
-        do {
-        let result = try await BannersApi().getBanners().serializeBannersApiResult()
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await BannersApi().getBanners(overrideHeaders: overrideHeaders).serializeBannersApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
