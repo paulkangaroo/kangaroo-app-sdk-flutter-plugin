@@ -23,10 +23,12 @@ class GetDefaultBusinessIdHandler extends GetDefaultBusinessIdApiInterface
 
   @override
   getDefaultBusinessId({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         GetDefaultBusinessIdApi().getDefaultBusinessId(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class GetDefaultBusinessIdApi {
   external GetDefaultBusinessIdApi();
 
   external dynamic getDefaultBusinessId( 
+        String? overrideHeaders, 
         String businessId
     );
 

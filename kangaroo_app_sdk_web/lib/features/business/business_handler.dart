@@ -23,10 +23,12 @@ class BusinessHandler extends BusinessApiInterface
 
   @override
   getBusiness({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         BusinessApi().getBusiness(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class BusinessApi {
   external BusinessApi();
 
   external dynamic getBusiness( 
+        String? overrideHeaders, 
         String businessId
     );
 

@@ -23,6 +23,7 @@ class UserPinResetRequestHandler extends UserPinResetRequestApiInterface
 
   @override
   requestPinReset({ 
+      final Map<String, String>? overrideHeaders,
         final String mode = "verification_code",
         final String? email,
         final String? phone,
@@ -30,6 +31,7 @@ class UserPinResetRequestHandler extends UserPinResetRequestApiInterface
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserPinResetRequestApi().requestPinReset(
+        jsonEncode(overrideHeaders),
         mode,
       email,
       phone,
@@ -74,6 +76,7 @@ class UserPinResetRequestApi {
   external UserPinResetRequestApi();
 
   external dynamic requestPinReset( 
+        String? overrideHeaders, 
         String mode,
         String? email,
         String? phone,

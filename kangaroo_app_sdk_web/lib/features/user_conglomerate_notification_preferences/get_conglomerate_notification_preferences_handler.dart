@@ -22,9 +22,15 @@ class GetConglomerateNotificationPreferencesHandler extends GetConglomerateNotif
   }
 
   @override
-  getConglomerateNotificationPreferences() {
+  getConglomerateNotificationPreferences({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        GetConglomerateNotificationPreferencesApi().getConglomerateNotificationPreferences());
+        GetConglomerateNotificationPreferencesApi().getConglomerateNotificationPreferences(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return GetConglomerateNotificationPreferencesApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class GetConglomerateNotificationPreferencesHandler extends GetConglomerateNotif
 class GetConglomerateNotificationPreferencesApi {
   external GetConglomerateNotificationPreferencesApi();
 
-  external dynamic getConglomerateNotificationPreferences();
+  external dynamic getConglomerateNotificationPreferences( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeGetConglomerateNotificationPreferencesState(
     Function(String) onData,

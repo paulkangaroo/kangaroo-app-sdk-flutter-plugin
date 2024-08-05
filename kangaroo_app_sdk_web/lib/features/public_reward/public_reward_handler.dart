@@ -23,10 +23,12 @@ class PublicRewardHandler extends PublicRewardApiInterface
 
   @override
   getPublicReward({ 
+      final Map<String, String>? overrideHeaders,
         required final String rewardSlug
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         PublicRewardApi().getPublicReward(
+        jsonEncode(overrideHeaders),
         rewardSlug
     ),);
 
@@ -68,6 +70,7 @@ class PublicRewardApi {
   external PublicRewardApi();
 
   external dynamic getPublicReward( 
+        String? overrideHeaders, 
         String rewardSlug
     );
 

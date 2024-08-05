@@ -22,9 +22,15 @@ class UserTransactionHistoryHandler extends UserTransactionHistoryApiInterface
   }
 
   @override
-  getUserTransactionHistory() {
+  getUserTransactionHistory({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        UserTransactionHistoryApi().getUserTransactionHistory());
+        UserTransactionHistoryApi().getUserTransactionHistory(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return UserTransactionHistoryApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class UserTransactionHistoryHandler extends UserTransactionHistoryApiInterface
 class UserTransactionHistoryApi {
   external UserTransactionHistoryApi();
 
-  external dynamic getUserTransactionHistory();
+  external dynamic getUserTransactionHistory( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeUserTransactionHistoryState(
     Function(String) onData,

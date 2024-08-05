@@ -22,9 +22,15 @@ class PublicBranchesHandler extends PublicBranchesApiInterface
   }
 
   @override
-  getPublicBranches() {
+  getPublicBranches({ 
+      final Map<String, String>? overrideHeaders,
+        required final int perPage
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        PublicBranchesApi().getPublicBranches());
+        PublicBranchesApi().getPublicBranches(
+        jsonEncode(overrideHeaders),
+        perPage
+    ),);
 
     return PublicBranchesApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class PublicBranchesHandler extends PublicBranchesApiInterface
 class PublicBranchesApi {
   external PublicBranchesApi();
 
-  external dynamic getPublicBranches();
+  external dynamic getPublicBranches( 
+        String? overrideHeaders, 
+        int perPage
+    );
 
   external void observePublicBranchesState(
     Function(String) onData,

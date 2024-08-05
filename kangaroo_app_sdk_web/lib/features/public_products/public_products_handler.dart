@@ -22,9 +22,15 @@ class PublicProductsHandler extends PublicProductsApiInterface
   }
 
   @override
-  getPublicProducts() {
+  getPublicProducts({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        PublicProductsApi().getPublicProducts());
+        PublicProductsApi().getPublicProducts(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return PublicProductsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class PublicProductsHandler extends PublicProductsApiInterface
 class PublicProductsApi {
   external PublicProductsApi();
 
-  external dynamic getPublicProducts();
+  external dynamic getPublicProducts( 
+        String? overrideHeaders, 
+
+    );
 
   external void observePublicProductsState(
     Function(String) onData,

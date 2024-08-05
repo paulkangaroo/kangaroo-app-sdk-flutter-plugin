@@ -23,10 +23,12 @@ class UserCheckInHandler extends UserCheckInApiInterface
 
   @override
   userCheckIn({ 
+      final Map<String, String>? overrideHeaders,
         required final CheckInRequest checkInRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserCheckInApi().userCheckIn(
+        jsonEncode(overrideHeaders),
         jsonEncode(checkInRequest)
     ),);
 
@@ -68,6 +70,7 @@ class UserCheckInApi {
   external UserCheckInApi();
 
   external dynamic userCheckIn( 
+        String? overrideHeaders, 
         String checkInRequest
     );
 

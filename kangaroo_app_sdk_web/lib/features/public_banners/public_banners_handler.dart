@@ -22,9 +22,15 @@ class PublicBannersHandler extends PublicBannersApiInterface
   }
 
   @override
-  getPublicBanners() {
+  getPublicBanners({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        PublicBannersApi().getPublicBanners());
+        PublicBannersApi().getPublicBanners(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return PublicBannersApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class PublicBannersHandler extends PublicBannersApiInterface
 class PublicBannersApi {
   external PublicBannersApi();
 
-  external dynamic getPublicBanners();
+  external dynamic getPublicBanners( 
+        String? overrideHeaders, 
+
+    );
 
   external void observePublicBannersState(
     Function(String) onData,

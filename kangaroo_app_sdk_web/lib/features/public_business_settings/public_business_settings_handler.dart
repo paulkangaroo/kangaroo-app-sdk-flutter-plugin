@@ -22,9 +22,15 @@ class PublicBusinessSettingsHandler extends PublicBusinessSettingsApiInterface
   }
 
   @override
-  getPublicBusinessSettings() {
+  getPublicBusinessSettings({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        PublicBusinessSettingsApi().getPublicBusinessSettings());
+        PublicBusinessSettingsApi().getPublicBusinessSettings(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return PublicBusinessSettingsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class PublicBusinessSettingsHandler extends PublicBusinessSettingsApiInterface
 class PublicBusinessSettingsApi {
   external PublicBusinessSettingsApi();
 
-  external dynamic getPublicBusinessSettings();
+  external dynamic getPublicBusinessSettings( 
+        String? overrideHeaders, 
+
+    );
 
   external void observePublicBusinessSettingsState(
     Function(String) onData,

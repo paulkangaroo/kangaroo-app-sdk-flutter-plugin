@@ -22,9 +22,15 @@ class FrequentBuyerProgramsHandler extends FrequentBuyerProgramsApiInterface
   }
 
   @override
-  getFrequentBuyerPrograms() {
+  getFrequentBuyerPrograms({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        FrequentBuyerProgramsApi().getFrequentBuyerPrograms());
+        FrequentBuyerProgramsApi().getFrequentBuyerPrograms(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return FrequentBuyerProgramsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class FrequentBuyerProgramsHandler extends FrequentBuyerProgramsApiInterface
 class FrequentBuyerProgramsApi {
   external FrequentBuyerProgramsApi();
 
-  external dynamic getFrequentBuyerPrograms();
+  external dynamic getFrequentBuyerPrograms( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeFrequentBuyerProgramsState(
     Function(String) onData,

@@ -22,9 +22,15 @@ class PublicAlaCarteProductsHandler extends PublicAlaCarteProductsApiInterface
   }
 
   @override
-  getPublicAlaCarteProducts() {
+  getPublicAlaCarteProducts({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        PublicAlaCarteProductsApi().getPublicAlaCarteProducts());
+        PublicAlaCarteProductsApi().getPublicAlaCarteProducts(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return PublicAlaCarteProductsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class PublicAlaCarteProductsHandler extends PublicAlaCarteProductsApiInterface
 class PublicAlaCarteProductsApi {
   external PublicAlaCarteProductsApi();
 
-  external dynamic getPublicAlaCarteProducts();
+  external dynamic getPublicAlaCarteProducts( 
+        String? overrideHeaders, 
+
+    );
 
   external void observePublicAlaCarteProductsState(
     Function(String) onData,

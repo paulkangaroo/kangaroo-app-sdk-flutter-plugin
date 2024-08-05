@@ -23,10 +23,12 @@ class UserBusinessProfileHandler extends UserBusinessProfileApiInterface
 
   @override
   getUserBusinessProfile({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserBusinessProfileApi().getUserBusinessProfile(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class UserBusinessProfileApi {
   external UserBusinessProfileApi();
 
   external dynamic getUserBusinessProfile( 
+        String? overrideHeaders, 
         String businessId
     );
 

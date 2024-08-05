@@ -23,10 +23,12 @@ class TransferRecallHandler extends TransferRecallApiInterface
 
   @override
   recallTransfer({ 
+      final Map<String, String>? overrideHeaders,
         required final String recallId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         TransferRecallApi().recallTransfer(
+        jsonEncode(overrideHeaders),
         recallId
     ),);
 
@@ -68,6 +70,7 @@ class TransferRecallApi {
   external TransferRecallApi();
 
   external dynamic recallTransfer( 
+        String? overrideHeaders, 
         String recallId
     );
 

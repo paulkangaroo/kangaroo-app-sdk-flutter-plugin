@@ -23,10 +23,12 @@ class UserBusinessFrequentBuyerProgramsHandler extends UserBusinessFrequentBuyer
 
   @override
   getUserBusinessFrequentBuyerPrograms({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserBusinessFrequentBuyerProgramsApi().getUserBusinessFrequentBuyerPrograms(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class UserBusinessFrequentBuyerProgramsApi {
   external UserBusinessFrequentBuyerProgramsApi();
 
   external dynamic getUserBusinessFrequentBuyerPrograms( 
+        String? overrideHeaders, 
         String businessId
     );
 

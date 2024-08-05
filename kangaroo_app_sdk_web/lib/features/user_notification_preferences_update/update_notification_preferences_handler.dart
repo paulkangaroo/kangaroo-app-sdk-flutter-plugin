@@ -23,10 +23,12 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
 
   @override
   updateNotificationPreferences({ 
+      final Map<String, String>? overrideHeaders,
         required final NotificationSettingsUpdateRequest notificationPreferencesRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UpdateNotificationPreferencesApi().updateNotificationPreferences(
+        jsonEncode(overrideHeaders),
         jsonEncode(notificationPreferencesRequest)
     ),);
 
@@ -68,6 +70,7 @@ class UpdateNotificationPreferencesApi {
   external UpdateNotificationPreferencesApi();
 
   external dynamic updateNotificationPreferences( 
+        String? overrideHeaders, 
         String notificationPreferencesRequest
     );
 

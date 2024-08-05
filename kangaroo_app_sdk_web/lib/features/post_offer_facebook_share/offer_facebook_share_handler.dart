@@ -23,6 +23,7 @@ class OfferFacebookShareHandler extends OfferFacebookShareApiInterface
 
   @override
   postOfferFacebookShare({ 
+      final Map<String, String>? overrideHeaders,
         required final String offerId,
         final String include = "balance",
         required final String facebookUserId,
@@ -31,6 +32,7 @@ class OfferFacebookShareHandler extends OfferFacebookShareApiInterface
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         OfferFacebookShareApi().postOfferFacebookShare(
+        jsonEncode(overrideHeaders),
         offerId,
       include,
       facebookUserId,
@@ -76,6 +78,7 @@ class OfferFacebookShareApi {
   external OfferFacebookShareApi();
 
   external dynamic postOfferFacebookShare( 
+        String? overrideHeaders, 
         String offerId,
         String include,
         String facebookUserId,

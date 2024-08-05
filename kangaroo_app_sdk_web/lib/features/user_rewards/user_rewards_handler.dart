@@ -22,9 +22,15 @@ class UserRewardsHandler extends UserRewardsApiInterface
   }
 
   @override
-  getUserRewards() {
+  getUserRewards({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        UserRewardsApi().getUserRewards());
+        UserRewardsApi().getUserRewards(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return UserRewardsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class UserRewardsHandler extends UserRewardsApiInterface
 class UserRewardsApi {
   external UserRewardsApi();
 
-  external dynamic getUserRewards();
+  external dynamic getUserRewards( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeUserRewardsState(
     Function(String) onData,

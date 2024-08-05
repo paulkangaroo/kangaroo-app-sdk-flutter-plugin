@@ -22,9 +22,15 @@ class GiftCardsHandler extends GiftCardsApiInterface
   }
 
   @override
-  getGiftCards() {
+  getGiftCards({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        GiftCardsApi().getGiftCards());
+        GiftCardsApi().getGiftCards(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return GiftCardsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class GiftCardsHandler extends GiftCardsApiInterface
 class GiftCardsApi {
   external GiftCardsApi();
 
-  external dynamic getGiftCards();
+  external dynamic getGiftCards( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeGiftCardsState(
     Function(String) onData,

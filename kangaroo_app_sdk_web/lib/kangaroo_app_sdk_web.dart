@@ -43,12 +43,14 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
     final String? clientId,
     final String? clientSecret,
     final String? environment = "production",
+    final String? baseURL,
   }) {
     KangarooSdk().initialize(
       applicationKey,
       clientId,
       clientSecret,
       environment,
+      baseURL,
     );
   }
 
@@ -77,12 +79,8 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
 class KangarooSdk {
   external KangarooSdk();
 
-  external void initialize(
-    String? applicationKey,
-    String? clientId,
-    String? clientSecret,
-    String? environment,
-  );
+  external void initialize(String? applicationKey, String? clientId,
+      String? clientSecret, String? environment, String? baseURL);
 
   external Future<String?> getSession();
 

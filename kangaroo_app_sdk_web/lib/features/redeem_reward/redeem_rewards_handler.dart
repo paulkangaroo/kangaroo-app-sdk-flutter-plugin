@@ -23,10 +23,12 @@ class RedeemRewardsHandler extends RedeemRewardsApiInterface
 
   @override
   redeemReward({ 
+      final Map<String, String>? overrideHeaders,
         required final RedeemRequest redeemRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         RedeemRewardsApi().redeemReward(
+        jsonEncode(overrideHeaders),
         jsonEncode(redeemRequest)
     ),);
 
@@ -68,6 +70,7 @@ class RedeemRewardsApi {
   external RedeemRewardsApi();
 
   external dynamic redeemReward( 
+        String? overrideHeaders, 
         String redeemRequest
     );
 

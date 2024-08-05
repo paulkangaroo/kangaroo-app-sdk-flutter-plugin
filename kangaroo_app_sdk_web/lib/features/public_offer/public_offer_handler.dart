@@ -23,10 +23,12 @@ class PublicOfferHandler extends PublicOfferApiInterface
 
   @override
   getPublicOffer({ 
+      final Map<String, String>? overrideHeaders,
         required final String offerSlug
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         PublicOfferApi().getPublicOffer(
+        jsonEncode(overrideHeaders),
         offerSlug
     ),);
 
@@ -68,6 +70,7 @@ class PublicOfferApi {
   external PublicOfferApi();
 
   external dynamic getPublicOffer( 
+        String? overrideHeaders, 
         String offerSlug
     );
 

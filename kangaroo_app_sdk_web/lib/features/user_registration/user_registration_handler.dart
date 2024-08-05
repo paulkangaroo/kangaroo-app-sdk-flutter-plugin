@@ -23,6 +23,7 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
 
   @override
   createAccount({ 
+      final Map<String, String>? overrideHeaders,
         final String? email,
         final String? phone,
         final String? countryCode,
@@ -30,6 +31,7 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserRegistrationApi().createAccount(
+        jsonEncode(overrideHeaders),
         email,
       phone,
       countryCode,
@@ -74,6 +76,7 @@ class UserRegistrationApi {
   external UserRegistrationApi();
 
   external dynamic createAccount( 
+        String? overrideHeaders, 
         String? email,
         String? phone,
         String? countryCode,

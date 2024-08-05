@@ -23,10 +23,12 @@ class TransferMessagesHandler extends TransferMessagesApiInterface
 
   @override
   getTransferMessages({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         TransferMessagesApi().getTransferMessages(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class TransferMessagesApi {
   external TransferMessagesApi();
 
   external dynamic getTransferMessages( 
+        String? overrideHeaders, 
         String businessId
     );
 

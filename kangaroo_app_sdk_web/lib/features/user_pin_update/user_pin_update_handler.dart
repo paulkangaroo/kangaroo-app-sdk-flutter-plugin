@@ -23,10 +23,12 @@ class UserPinUpdateHandler extends UserPinUpdateApiInterface
 
   @override
   updatePin({ 
+      final Map<String, String>? overrideHeaders,
         required final UpdatePinRequest updatePinRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserPinUpdateApi().updatePin(
+        jsonEncode(overrideHeaders),
         jsonEncode(updatePinRequest)
     ),);
 
@@ -68,6 +70,7 @@ class UserPinUpdateApi {
   external UserPinUpdateApi();
 
   external dynamic updatePin( 
+        String? overrideHeaders, 
         String updatePinRequest
     );
 

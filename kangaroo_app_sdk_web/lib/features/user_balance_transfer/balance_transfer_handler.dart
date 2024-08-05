@@ -23,10 +23,12 @@ class BalanceTransferHandler extends BalanceTransferApiInterface
 
   @override
   transfer({ 
+      final Map<String, String>? overrideHeaders,
         required final TransferRequestModel transferRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         BalanceTransferApi().transfer(
+        jsonEncode(overrideHeaders),
         jsonEncode(transferRequest)
     ),);
 
@@ -68,6 +70,7 @@ class BalanceTransferApi {
   external BalanceTransferApi();
 
   external dynamic transfer( 
+        String? overrideHeaders, 
         String transferRequest
     );
 

@@ -23,6 +23,7 @@ class PayPalPaymentHandler extends PayPalPaymentApiInterface
 
   @override
   makePayPalPayment({ 
+      final Map<String, String>? overrideHeaders,
         final String intent = "buy_giftcard",
         final String provider = "paypal",
         required final int giftcardId,
@@ -31,6 +32,7 @@ class PayPalPaymentHandler extends PayPalPaymentApiInterface
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         PayPalPaymentApi().makePayPalPayment(
+        jsonEncode(overrideHeaders),
         intent,
       provider,
       giftcardId,
@@ -76,6 +78,7 @@ class PayPalPaymentApi {
   external PayPalPaymentApi();
 
   external dynamic makePayPalPayment( 
+        String? overrideHeaders, 
         String intent,
         String provider,
         int giftcardId,

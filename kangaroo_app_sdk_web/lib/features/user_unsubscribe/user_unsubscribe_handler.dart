@@ -23,11 +23,13 @@ class UserUnsubscribeHandler extends UserUnsubscribeApiInterface
 
   @override
   unsubscribe({ 
+      final Map<String, String>? overrideHeaders,
         required final String campaignId,
         required final String token
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserUnsubscribeApi().unsubscribe(
+        jsonEncode(overrideHeaders),
         campaignId,
       token
     ),);
@@ -70,6 +72,7 @@ class UserUnsubscribeApi {
   external UserUnsubscribeApi();
 
   external dynamic unsubscribe( 
+        String? overrideHeaders, 
         String campaignId,
         String token
     );

@@ -22,9 +22,15 @@ class PublicRewardsHandler extends PublicRewardsApiInterface
   }
 
   @override
-  getPublicRewards() {
+  getPublicRewards({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        PublicRewardsApi().getPublicRewards());
+        PublicRewardsApi().getPublicRewards(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return PublicRewardsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class PublicRewardsHandler extends PublicRewardsApiInterface
 class PublicRewardsApi {
   external PublicRewardsApi();
 
-  external dynamic getPublicRewards();
+  external dynamic getPublicRewards( 
+        String? overrideHeaders, 
+
+    );
 
   external void observePublicRewardsState(
     Function(String) onData,

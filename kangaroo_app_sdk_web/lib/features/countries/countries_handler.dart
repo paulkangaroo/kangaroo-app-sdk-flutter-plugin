@@ -22,9 +22,15 @@ class CountriesHandler extends CountriesApiInterface
   }
 
   @override
-  getCountries() {
+  getCountries({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        CountriesApi().getCountries());
+        CountriesApi().getCountries(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return CountriesApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class CountriesHandler extends CountriesApiInterface
 class CountriesApi {
   external CountriesApi();
 
-  external dynamic getCountries();
+  external dynamic getCountries( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeCountriesState(
     Function(String) onData,

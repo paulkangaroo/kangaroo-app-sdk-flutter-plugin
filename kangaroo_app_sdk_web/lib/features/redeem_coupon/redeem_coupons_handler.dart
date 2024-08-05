@@ -23,10 +23,12 @@ class RedeemCouponsHandler extends RedeemCouponsApiInterface
 
   @override
   redeemCoupon({ 
+      final Map<String, String>? overrideHeaders,
         required final RedeemCouponRequest redeemCouponRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         RedeemCouponsApi().redeemCoupon(
+        jsonEncode(overrideHeaders),
         jsonEncode(redeemCouponRequest)
     ),);
 
@@ -68,6 +70,7 @@ class RedeemCouponsApi {
   external RedeemCouponsApi();
 
   external dynamic redeemCoupon( 
+        String? overrideHeaders, 
         String redeemCouponRequest
     );
 

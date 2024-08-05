@@ -23,6 +23,7 @@ class UserProfileUpdateHandler extends UserProfileUpdateApiInterface
 
   @override
   updateUserProfile({ 
+      final Map<String, String>? overrideHeaders,
         final String? firstName,
         final String? lastName,
         final String? birthDate,
@@ -32,6 +33,7 @@ class UserProfileUpdateHandler extends UserProfileUpdateApiInterface
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserProfileUpdateApi().updateUserProfile(
+        jsonEncode(overrideHeaders),
         firstName,
       lastName,
       birthDate,
@@ -78,6 +80,7 @@ class UserProfileUpdateApi {
   external UserProfileUpdateApi();
 
   external dynamic updateUserProfile( 
+        String? overrideHeaders, 
         String? firstName,
         String? lastName,
         String? birthDate,

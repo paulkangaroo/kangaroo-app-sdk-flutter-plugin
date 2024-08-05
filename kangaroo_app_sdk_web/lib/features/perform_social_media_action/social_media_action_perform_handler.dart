@@ -23,11 +23,13 @@ class SocialMediaActionPerformHandler extends SocialMediaActionPerformApiInterfa
 
   @override
   performSocialMediaAction({ 
+      final Map<String, String>? overrideHeaders,
         required final PerformSocialMediaActionRequestModel performSocialMediaActionRequest,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         SocialMediaActionPerformApi().performSocialMediaAction(
+        jsonEncode(overrideHeaders),
         jsonEncode(performSocialMediaActionRequest),
       businessId
     ),);
@@ -70,6 +72,7 @@ class SocialMediaActionPerformApi {
   external SocialMediaActionPerformApi();
 
   external dynamic performSocialMediaAction( 
+        String? overrideHeaders, 
         String performSocialMediaActionRequest,
         String businessId
     );

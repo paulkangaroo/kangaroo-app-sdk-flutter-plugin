@@ -22,9 +22,15 @@ class DrawsHandler extends DrawsApiInterface
   }
 
   @override
-  getDraws() {
+  getDraws({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        DrawsApi().getDraws());
+        DrawsApi().getDraws(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return DrawsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class DrawsHandler extends DrawsApiInterface
 class DrawsApi {
   external DrawsApi();
 
-  external dynamic getDraws();
+  external dynamic getDraws( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeDrawsState(
     Function(String) onData,

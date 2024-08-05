@@ -23,10 +23,12 @@ class UserScanReceiptHandler extends UserScanReceiptApiInterface
 
   @override
   scanReceipt({ 
+      final Map<String, String>? overrideHeaders,
         required final ScanReceiptRequest scanReceiptRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserScanReceiptApi().scanReceipt(
+        jsonEncode(overrideHeaders),
         jsonEncode(scanReceiptRequest)
     ),);
 
@@ -68,6 +70,7 @@ class UserScanReceiptApi {
   external UserScanReceiptApi();
 
   external dynamic scanReceipt( 
+        String? overrideHeaders, 
         String scanReceiptRequest
     );
 

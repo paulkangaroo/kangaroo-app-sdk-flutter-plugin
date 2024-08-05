@@ -23,10 +23,12 @@ class CampaignMessagesHandler extends CampaignMessagesApiInterface
 
   @override
   getCampaignMessages({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         CampaignMessagesApi().getCampaignMessages(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class CampaignMessagesApi {
   external CampaignMessagesApi();
 
   external dynamic getCampaignMessages( 
+        String? overrideHeaders, 
         String businessId
     );
 

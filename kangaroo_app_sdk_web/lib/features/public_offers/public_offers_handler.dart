@@ -22,9 +22,15 @@ class PublicOffersHandler extends PublicOffersApiInterface
   }
 
   @override
-  getPublicOffers() {
+  getPublicOffers({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        PublicOffersApi().getPublicOffers());
+        PublicOffersApi().getPublicOffers(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return PublicOffersApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class PublicOffersHandler extends PublicOffersApiInterface
 class PublicOffersApi {
   external PublicOffersApi();
 
-  external dynamic getPublicOffers();
+  external dynamic getPublicOffers( 
+        String? overrideHeaders, 
+
+    );
 
   external void observePublicOffersState(
     Function(String) onData,

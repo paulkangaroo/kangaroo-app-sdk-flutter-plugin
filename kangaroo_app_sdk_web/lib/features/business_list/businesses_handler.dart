@@ -22,9 +22,15 @@ class BusinessesHandler extends BusinessesApiInterface
   }
 
   @override
-  getBusinesses() {
+  getBusinesses({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        BusinessesApi().getBusinesses());
+        BusinessesApi().getBusinesses(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return BusinessesApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class BusinessesHandler extends BusinessesApiInterface
 class BusinessesApi {
   external BusinessesApi();
 
-  external dynamic getBusinesses();
+  external dynamic getBusinesses( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeBusinessesState(
     Function(String) onData,

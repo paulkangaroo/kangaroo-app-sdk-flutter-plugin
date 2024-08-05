@@ -23,6 +23,7 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
 
   @override
   verifyAccount({ 
+      final Map<String, String>? overrideHeaders,
         required final String intent,
         required final String token,
         final String? email,
@@ -31,6 +32,7 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserAccountVerificationApi().verifyAccount(
+        jsonEncode(overrideHeaders),
         intent,
       token,
       email,
@@ -76,6 +78,7 @@ class UserAccountVerificationApi {
   external UserAccountVerificationApi();
 
   external dynamic verifyAccount( 
+        String? overrideHeaders, 
         String intent,
         String token,
         String? email,

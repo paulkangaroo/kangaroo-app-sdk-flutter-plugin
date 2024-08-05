@@ -22,9 +22,15 @@ class UserDeleteHandler extends UserDeleteApiInterface
   }
 
   @override
-  deleteUserAccount() {
+  deleteUserAccount({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        UserDeleteApi().deleteUserAccount());
+        UserDeleteApi().deleteUserAccount(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return UserDeleteApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class UserDeleteHandler extends UserDeleteApiInterface
 class UserDeleteApi {
   external UserDeleteApi();
 
-  external dynamic deleteUserAccount();
+  external dynamic deleteUserAccount( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeUserDeleteState(
     Function(String) onData,

@@ -22,9 +22,15 @@ class GetNotificationPreferencesHandler extends GetNotificationPreferencesApiInt
   }
 
   @override
-  getNotificationPreferences() {
+  getNotificationPreferences({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        GetNotificationPreferencesApi().getNotificationPreferences());
+        GetNotificationPreferencesApi().getNotificationPreferences(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return GetNotificationPreferencesApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class GetNotificationPreferencesHandler extends GetNotificationPreferencesApiInt
 class GetNotificationPreferencesApi {
   external GetNotificationPreferencesApi();
 
-  external dynamic getNotificationPreferences();
+  external dynamic getNotificationPreferences( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeGetNotificationPreferencesState(
     Function(String) onData,

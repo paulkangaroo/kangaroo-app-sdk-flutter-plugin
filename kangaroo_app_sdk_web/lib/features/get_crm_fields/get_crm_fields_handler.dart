@@ -22,9 +22,15 @@ class GetCrmFieldsHandler extends GetCrmFieldsApiInterface
   }
 
   @override
-  getCrmFields() {
+  getCrmFields({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        GetCrmFieldsApi().getCrmFields());
+        GetCrmFieldsApi().getCrmFields(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return GetCrmFieldsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class GetCrmFieldsHandler extends GetCrmFieldsApiInterface
 class GetCrmFieldsApi {
   external GetCrmFieldsApi();
 
-  external dynamic getCrmFields();
+  external dynamic getCrmFields( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeGetCrmFieldsState(
     Function(String) onData,

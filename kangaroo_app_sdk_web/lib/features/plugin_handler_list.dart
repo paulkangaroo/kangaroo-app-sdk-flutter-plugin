@@ -1,5 +1,6 @@
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_web/features/user_authentication/user_authentication_handler.dart';
+import 'package:kangaroo_app_sdk_web/features/upload_image/upload_image_handler.dart';
 import 'archive_inbox_item/archive_inbox_item_handler.dart';
 import 'claim_offer/claim_offer_handler.dart';
 import 'user_registration/user_registration_handler.dart';
@@ -224,6 +225,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   UserCheckInHandler(),
 
   UserAccountVerificationHandler(),
+
+  UploadImageHandler(),
 
   UserAuthenticationHandler()
 ];

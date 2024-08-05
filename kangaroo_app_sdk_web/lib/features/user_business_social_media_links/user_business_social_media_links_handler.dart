@@ -23,10 +23,12 @@ class UserBusinessSocialMediaLinksHandler extends UserBusinessSocialMediaLinksAp
 
   @override
   getUserBusinessSocialMediaLinks({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class UserBusinessSocialMediaLinksApi {
   external UserBusinessSocialMediaLinksApi();
 
   external dynamic getUserBusinessSocialMediaLinks( 
+        String? overrideHeaders, 
         String businessId
     );
 

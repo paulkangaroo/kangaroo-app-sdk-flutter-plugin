@@ -23,10 +23,12 @@ class GetSpinToWinPrizesHandler extends GetSpinToWinPrizesApiInterface
 
   @override
   getSpinToWinPrizes({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         GetSpinToWinPrizesApi().getSpinToWinPrizes(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class GetSpinToWinPrizesApi {
   external GetSpinToWinPrizesApi();
 
   external dynamic getSpinToWinPrizes( 
+        String? overrideHeaders, 
         String businessId
     );
 

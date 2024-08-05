@@ -22,9 +22,15 @@ class SocialMediaLinksHandler extends SocialMediaLinksApiInterface
   }
 
   @override
-  getSocialMediaLinks() {
+  getSocialMediaLinks({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        SocialMediaLinksApi().getSocialMediaLinks());
+        SocialMediaLinksApi().getSocialMediaLinks(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return SocialMediaLinksApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class SocialMediaLinksHandler extends SocialMediaLinksApiInterface
 class SocialMediaLinksApi {
   external SocialMediaLinksApi();
 
-  external dynamic getSocialMediaLinks();
+  external dynamic getSocialMediaLinks( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeSocialMediaLinksState(
     Function(String) onData,

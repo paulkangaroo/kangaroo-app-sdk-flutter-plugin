@@ -23,10 +23,12 @@ class UserRegistrationWithCrmHandler extends UserRegistrationWithCrmApiInterface
 
   @override
   createAccountWithCrm({ 
+      final Map<String, String>? overrideHeaders,
         required final CrmRegisterRequest registerWithCrmRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserRegistrationWithCrmApi().createAccountWithCrm(
+        jsonEncode(overrideHeaders),
         jsonEncode(registerWithCrmRequest)
     ),);
 
@@ -68,6 +70,7 @@ class UserRegistrationWithCrmApi {
   external UserRegistrationWithCrmApi();
 
   external dynamic createAccountWithCrm( 
+        String? overrideHeaders, 
         String registerWithCrmRequest
     );
 

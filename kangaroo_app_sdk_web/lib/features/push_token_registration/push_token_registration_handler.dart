@@ -23,11 +23,13 @@ class PushTokenRegistrationHandler extends PushTokenRegistrationApiInterface
 
   @override
   registerPushToken({ 
+      final Map<String, String>? overrideHeaders,
         final String? androidDeviceToken,
         final String? iosDeviceToken
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         PushTokenRegistrationApi().registerPushToken(
+        jsonEncode(overrideHeaders),
         androidDeviceToken,
       iosDeviceToken
     ),);
@@ -70,6 +72,7 @@ class PushTokenRegistrationApi {
   external PushTokenRegistrationApi();
 
   external dynamic registerPushToken( 
+        String? overrideHeaders, 
         String? androidDeviceToken,
         String? iosDeviceToken
     );

@@ -19,13 +19,13 @@ class UserAuthenticationHandler extends UserAuthenticationApiInterface
   }
 
   @override
-  authenticateUser(
-    final String username,
-    final String password,
-  ) {
+  authenticateUser(final String? username, final String? password,
+      final String? googleToken, final Map<String, String>? overrideHeaders) {
     UserAuthenticationApi().authenticateUser(
       username,
       password,
+      googleToken,
+      jsonEncode(overrideHeaders),
     );
   }
 
@@ -61,9 +61,11 @@ class UserAuthenticationHandler extends UserAuthenticationApiInterface
 class UserAuthenticationApi {
   external UserAuthenticationApi();
 
-  external void authenticateUser(
-    String username,
-    final String password,
+  external dynamic authenticateUser(
+    final String? username,
+    final String? password,
+    final String? googleToken,
+    final String? overrideHeaders,
   );
 
   external void observeUserAuthenticationSerialized(

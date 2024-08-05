@@ -22,9 +22,15 @@ class TiersHandler extends TiersApiInterface
   }
 
   @override
-  getTiers() {
+  getTiers({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        TiersApi().getTiers());
+        TiersApi().getTiers(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return TiersApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class TiersHandler extends TiersApiInterface
 class TiersApi {
   external TiersApi();
 
-  external dynamic getTiers();
+  external dynamic getTiers( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeTiersState(
     Function(String) onData,

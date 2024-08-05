@@ -23,10 +23,12 @@ class GiftCardPurchaseHandler extends GiftCardPurchaseApiInterface
 
   @override
   purchaseGiftCard({ 
+      final Map<String, String>? overrideHeaders,
         required final GiftCardPurchaseRequest purchaseGiftCardRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         GiftCardPurchaseApi().purchaseGiftCard(
+        jsonEncode(overrideHeaders),
         jsonEncode(purchaseGiftCardRequest)
     ),);
 
@@ -68,6 +70,7 @@ class GiftCardPurchaseApi {
   external GiftCardPurchaseApi();
 
   external dynamic purchaseGiftCard( 
+        String? overrideHeaders, 
         String purchaseGiftCardRequest
     );
 

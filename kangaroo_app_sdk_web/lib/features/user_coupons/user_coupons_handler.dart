@@ -22,9 +22,15 @@ class UserCouponsHandler extends UserCouponsApiInterface
   }
 
   @override
-  getUserCoupons() {
+  getUserCoupons({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        UserCouponsApi().getUserCoupons());
+        UserCouponsApi().getUserCoupons(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return UserCouponsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class UserCouponsHandler extends UserCouponsApiInterface
 class UserCouponsApi {
   external UserCouponsApi();
 
-  external dynamic getUserCoupons();
+  external dynamic getUserCoupons( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeUserCouponsState(
     Function(String) onData,

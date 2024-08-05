@@ -22,9 +22,15 @@ class UserProfileHandler extends UserProfileApiInterface
   }
 
   @override
-  getUserProfile() {
+  getUserProfile({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        UserProfileApi().getUserProfile());
+        UserProfileApi().getUserProfile(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return UserProfileApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class UserProfileHandler extends UserProfileApiInterface
 class UserProfileApi {
   external UserProfileApi();
 
-  external dynamic getUserProfile();
+  external dynamic getUserProfile( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeUserProfileState(
     Function(String) onData,

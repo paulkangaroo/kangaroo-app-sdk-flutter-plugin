@@ -22,9 +22,15 @@ class StringsHandler extends StringsApiInterface
   }
 
   @override
-  getStrings() {
+  getStrings({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        StringsApi().getStrings());
+        StringsApi().getStrings(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return StringsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class StringsHandler extends StringsApiInterface
 class StringsApi {
   external StringsApi();
 
-  external dynamic getStrings();
+  external dynamic getStrings( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeStringsState(
     Function(String) onData,

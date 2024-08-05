@@ -23,10 +23,12 @@ class GiftCardDepositHandler extends GiftCardDepositApiInterface
 
   @override
   depositGiftCard({ 
+      final Map<String, String>? overrideHeaders,
         required final String depositId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         GiftCardDepositApi().depositGiftCard(
+        jsonEncode(overrideHeaders),
         depositId
     ),);
 
@@ -68,6 +70,7 @@ class GiftCardDepositApi {
   external GiftCardDepositApi();
 
   external dynamic depositGiftCard( 
+        String? overrideHeaders, 
         String depositId
     );
 

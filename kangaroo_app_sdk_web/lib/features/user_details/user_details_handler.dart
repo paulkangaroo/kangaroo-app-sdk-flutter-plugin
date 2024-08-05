@@ -22,9 +22,15 @@ class UserDetailsHandler extends UserDetailsApiInterface
   }
 
   @override
-  getUserDetails() {
+  getUserDetails({ 
+      final Map<String, String>? overrideHeaders,
+
+    }) {
     final Future<String?> request = promiseToFuture<String?>(
-        UserDetailsApi().getUserDetails());
+        UserDetailsApi().getUserDetails(
+        jsonEncode(overrideHeaders),
+        
+    ),);
 
     return UserDetailsApiInterface.deSerializedPlatformResponse(
       request,
@@ -63,7 +69,10 @@ class UserDetailsHandler extends UserDetailsApiInterface
 class UserDetailsApi {
   external UserDetailsApi();
 
-  external dynamic getUserDetails();
+  external dynamic getUserDetails( 
+        String? overrideHeaders, 
+
+    );
 
   external void observeUserDetailsState(
     Function(String) onData,

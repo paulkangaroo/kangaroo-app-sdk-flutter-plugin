@@ -23,10 +23,12 @@ class UserBusinessOffersHandler extends UserBusinessOffersApiInterface
 
   @override
   getUserBusinessOffers({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserBusinessOffersApi().getUserBusinessOffers(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class UserBusinessOffersApi {
   external UserBusinessOffersApi();
 
   external dynamic getUserBusinessOffers( 
+        String? overrideHeaders, 
         String businessId
     );
 

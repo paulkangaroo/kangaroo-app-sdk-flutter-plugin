@@ -23,10 +23,12 @@ class ArchiveInboxItemHandler extends ArchiveInboxItemApiInterface
 
   @override
   archiveInboxItem({ 
+      final Map<String, String>? overrideHeaders,
         required final ArchiveRequest archiveRequest
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         ArchiveInboxItemApi().archiveInboxItem(
+        jsonEncode(overrideHeaders),
         jsonEncode(archiveRequest)
     ),);
 
@@ -68,6 +70,7 @@ class ArchiveInboxItemApi {
   external ArchiveInboxItemApi();
 
   external dynamic archiveInboxItem( 
+        String? overrideHeaders, 
         String archiveRequest
     );
 

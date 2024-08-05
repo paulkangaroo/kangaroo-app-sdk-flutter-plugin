@@ -23,10 +23,12 @@ class BranchesHandler extends BranchesApiInterface
 
   @override
   getBusinessBranches({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         BranchesApi().getBusinessBranches(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class BranchesApi {
   external BranchesApi();
 
   external dynamic getBusinessBranches( 
+        String? overrideHeaders, 
         String businessId
     );
 

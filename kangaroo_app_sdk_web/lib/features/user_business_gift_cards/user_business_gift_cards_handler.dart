@@ -23,10 +23,12 @@ class UserBusinessGiftCardsHandler extends UserBusinessGiftCardsApiInterface
 
   @override
   getUserBusinessGiftCards({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserBusinessGiftCardsApi().getUserBusinessGiftCards(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class UserBusinessGiftCardsApi {
   external UserBusinessGiftCardsApi();
 
   external dynamic getUserBusinessGiftCards( 
+        String? overrideHeaders, 
         String businessId
     );
 

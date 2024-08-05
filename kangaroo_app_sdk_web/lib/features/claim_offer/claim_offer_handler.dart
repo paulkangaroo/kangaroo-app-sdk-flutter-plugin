@@ -23,11 +23,13 @@ class ClaimOfferHandler extends ClaimOfferApiInterface
 
   @override
   claimOffer({ 
+      final Map<String, String>? overrideHeaders,
         required final int offerId,
         required final String customerId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         ClaimOfferApi().claimOffer(
+        jsonEncode(overrideHeaders),
         offerId,
       customerId
     ),);
@@ -70,6 +72,7 @@ class ClaimOfferApi {
   external ClaimOfferApi();
 
   external dynamic claimOffer( 
+        String? overrideHeaders, 
         int offerId,
         String customerId
     );

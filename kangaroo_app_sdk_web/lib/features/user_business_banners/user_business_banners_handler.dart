@@ -23,10 +23,12 @@ class UserBusinessBannersHandler extends UserBusinessBannersApiInterface
 
   @override
   getUserBusinessBanners({ 
+      final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserBusinessBannersApi().getUserBusinessBanners(
+        jsonEncode(overrideHeaders),
         businessId
     ),);
 
@@ -68,6 +70,7 @@ class UserBusinessBannersApi {
   external UserBusinessBannersApi();
 
   external dynamic getUserBusinessBanners( 
+        String? overrideHeaders, 
         String businessId
     );
 
