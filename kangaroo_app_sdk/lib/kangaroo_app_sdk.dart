@@ -2,18 +2,16 @@ import 'package:kangaroo_app_sdk_platform_interface/platform_interface/kangaroo_
 
 class KangarooAppSdk {
   static initializeSdk(
-    String applicationKey,
-    String clientId,
-    String clientSecret,
-    String environment,
-    String baseURL,
-  ) {
+    String appId,
+    String? firebaseAppCheckToken,
+    String? firebaseAuthToken, {
+    String? environment,
+  }) {
     KangarooAppSdkInterface.instance.initializeSdk(
-      applicationKey: applicationKey,
-      clientId: clientId,
-      clientSecret: clientSecret,
+      appId: appId,
       environment: environment,
-      baseURL: baseURL,
+      firebaseAppCheckToken: firebaseAppCheckToken,
+      firebaseAuthToken: firebaseAuthToken,
     );
   }
 

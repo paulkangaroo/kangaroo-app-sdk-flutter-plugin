@@ -18,11 +18,10 @@ abstract class KangarooAppSdkInterface extends PlatformInterface {
   }
 
   initializeSdk({
-    final String? applicationKey,
-    final String? clientId,
-    final String? clientSecret,
+    final String? appId,
     final String? environment,
-    final String? baseURL,
+    final String? firebaseAppCheckToken,
+    final String? firebaseAuthToken,
   }) {
     throw UnimplementedError('initialize sdk has not been implemented.');
   }

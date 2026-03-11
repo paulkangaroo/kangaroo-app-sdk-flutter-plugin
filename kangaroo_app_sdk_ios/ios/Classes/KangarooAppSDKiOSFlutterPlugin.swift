@@ -3,20 +3,20 @@ import UIKit
 import KangarooAppSdkCustomer
 
 public class KangarooAppSDKiOSFlutterPlugin: NSObject, FlutterPlugin {
-    
+
     let kangarooSdk = KangarooSdk()
-    
+
     public static func register(with registrar: FlutterPluginRegistrar) {
 
         let channel = FlutterMethodChannel(name: "kangaroo_sdk/method_channel", binaryMessenger: registrar.messenger())
-        
+
         let instance = KangarooAppSDKiOSFlutterPlugin()
-        
+
         registrar.addMethodCallDelegate(instance, channel: channel)
-                
+
         registerStreamHandlers(flutterPluginRegistrar: registrar)
     }
-    
+
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         PluginHandlerListHolder.pluginHandlerList.forEach { it in
             if (call.method == it.methodChannel) {
@@ -24,7 +24,7 @@ public class KangarooAppSDKiOSFlutterPlugin: NSObject, FlutterPlugin {
 //                    let data = await it.onMethodCall(call: call)
                     await result(it.onMethodCall(call: call))
                 }
-            
+
             }
         }
         if (call.method == "core/methods/initializeSdk") {
@@ -34,21 +34,21 @@ public class KangarooAppSDKiOSFlutterPlugin: NSObject, FlutterPlugin {
                 guard let args = call.arguments else {
                     return
                 }
-                if let myArgs = args as? [String: Any],
-                                let applicationKey = myArgs["applicationKey"] as? String?,
-                        let clientId = myArgs["clientId"] as? String?,
-                        let clientSecret = myArgs["clientSecret"] as? String?,
-                        let environment = myArgs["environment"] as? String?,
-                        let baseURL = myArgs["baseURL"] as? String?
-                    {
-                    kangarooSdk.initialize(
-                        applicationKey: applicationKey ?? "",
-                        clientId: clientId ?? "",
-                        clientSecret: clientSecret ?? "",
-                        environment: environment ?? "production",
-                        baseURL: baseURL ?? ""
-                    )
-                }
+            if let myArgs = args as? [String: Any],
+               let appId = myArgs["appId"] as? String,
+               !appId.isEmpty {
+
+                let environment = myArgs["environment"] as? String
+                let firebaseAppCheckToken = myArgs["firebaseAppCheckToken"] as? String
+                let firebaseAuthToken = myArgs["firebaseAuthToken"] as? String
+
+                kangarooSdk.initialize(
+                    appId: appId,
+                    environment: environment ?? "production",
+                    firebaseAppCheckToken: firebaseAppCheckToken ?? "",
+                    firebaseAuthToken: firebaseAuthToken ?? ""
+                )
+            }
         } else if (call.method == "core/methods/getSession") {
             /**
              Get the current app session. Returns an access token or null if there is no session
@@ -77,12 +77,12 @@ public class KangarooAppSDKiOSFlutterPlugin: NSObject, FlutterPlugin {
             /**
              Gets the SDK's preferred language.
              */
-        
+
             let language: String? = kangarooSdk.getPreferredLanguage()
             result(language)
         }
     }
-    
+
     private static func registerStreamHandlers(flutterPluginRegistrar: FlutterPluginRegistrar) -> Void {
         PluginHandlerListHolder.pluginHandlerList.forEach { it in
             let eventChannel: FlutterEventChannel = FlutterEventChannel(
@@ -93,3 +93,4 @@ public class KangarooAppSDKiOSFlutterPlugin: NSObject, FlutterPlugin {
             }
     }
 }
+

@@ -30,19 +30,21 @@ public class KangarooAppSDKiOSFlutterPlugin: NSObject, FlutterPlugin {
                 guard let args = call.arguments else {
                     return
                 }
-                if let myArgs = args as? [String: Any],
-                                let applicationKey = myArgs["applicationKey"] as? String?,
-                        let clientId = myArgs["clientId"] as? String?,
-                        let clientSecret = myArgs["clientSecret"] as? String?,
-                        let environment = myArgs["environment"] as? String?
-                    {
-                    kangarooSdk.initialize(
-                        applicationKey: applicationKey ?? "",
-                        clientId: clientId ?? "",
-                        clientSecret: clientSecret ?? "",
-                        environment: environment ?? "production"
-                    )
-                }
+               if let myArgs = args as? [String: Any],
+                  let appId = myArgs["appId"] as? String,
+                  !appId.isEmpty {
+
+                   let environment = myArgs["environment"] as? String
+                   let firebaseAppCheckToken = myArgs["firebaseAppCheckToken"] as? String
+                   let firebaseAuthToken = myArgs["firebaseAuthToken"] as? String
+
+                   kangarooSdk.initialize(
+                       appId: appId,
+                       environment: environment ?? "production",
+                       firebaseAppCheckToken: firebaseAppCheckToken ?? "",
+                       firebaseAuthToken: firebaseAuthToken ?? ""
+                   )
+               }
         } else if (call.method == "core/methods/getSession") {
             /**
              Get the current app session. Returns an access token or null if there is no session

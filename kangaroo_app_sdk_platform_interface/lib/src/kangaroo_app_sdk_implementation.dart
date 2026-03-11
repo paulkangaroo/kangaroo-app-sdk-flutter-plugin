@@ -5,18 +5,16 @@ import 'kangaroo_app_sdk_interface.dart';
 class KangarooAppSdkFederated extends KangarooAppSdkInterface {
   @override
   initializeSdk({
-    final String? applicationKey,
-    final String? clientId,
-    final String? clientSecret,
+    final String? appId,
     final String? environment,
-    final String? baseURL,
+    final String? firebaseAppCheckToken,
+    final String? firebaseAuthToken,
   }) {
     sdkMethodChannel.invokeMethod('core/methods/initializeSdk', {
-      'applicationKey': applicationKey,
-      'clientId': clientId,
-      'clientSecret': clientSecret,
+      'appId': appId,
       'environment': environment,
-      'baseURL': baseURL,
+      'firebaseAppCheckToken': firebaseAppCheckToken,
+      'firebaseAuthToken': firebaseAuthToken,
     });
   }
 

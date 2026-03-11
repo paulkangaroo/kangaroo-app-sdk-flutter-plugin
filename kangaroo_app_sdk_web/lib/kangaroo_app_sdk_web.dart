@@ -39,18 +39,16 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
 
   @override
   initializeSdk({
-    final String? applicationKey,
-    final String? clientId,
-    final String? clientSecret,
+    final String? appId,
     final String? environment = "production",
-    final String? baseURL,
+    final String? firebaseAppCheckToken,
+    final String? firebaseAuthToken,
   }) {
     KangarooSdk().initialize(
-      applicationKey,
-      clientId,
-      clientSecret,
+      appId,
       environment,
-      baseURL,
+      firebaseAppCheckToken,
+      firebaseAuthToken,
     );
   }
 
@@ -79,8 +77,12 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
 class KangarooSdk {
   external KangarooSdk();
 
-  external void initialize(String? applicationKey, String? clientId,
-      String? clientSecret, String? environment, String? baseURL);
+  external void initialize(
+    String? appId,
+    String? environment,
+    String? firebaseAppCheckToken,
+    String? firebaseAuthToken,
+  );
 
   external Future<String?> getSession();
 

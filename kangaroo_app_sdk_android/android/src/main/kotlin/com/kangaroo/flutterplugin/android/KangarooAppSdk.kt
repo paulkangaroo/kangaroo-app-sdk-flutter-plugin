@@ -13,11 +13,10 @@ class KangarooAppSdk {
     companion object {
         fun initializeSdk(call: MethodCall, context: Context): Unit? {
             KangarooSdk(context).initialize(
-                applicationKey = call.argument<String?>("applicationKey") ?: "",
-                clientId = call.argument<String?>("clientId") ?: "",
-                clientSecret = call.argument<String?>("clientSecret") ?: "",
+                appId = call.argument<String?>("appId") ?: "",
                 environment = call.argument<String?>("environment") ?: "",
-                baseURL = call.argument<String?>("baseURL") ?: "",
+                firebaseAppCheckToken = call.argument<String?>("firebaseAppCheckToken") ?: "",
+                firebaseAuthToken = call.argument<String?>("firebaseAuthToken") ?: "",
             )
             return null
         }
