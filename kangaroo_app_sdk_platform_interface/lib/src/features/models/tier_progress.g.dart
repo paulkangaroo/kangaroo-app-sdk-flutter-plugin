@@ -38,14 +38,18 @@ TierProgress _$TierProgressFromJson(Map<String, dynamic> json) =>
               $checkedConvert('next_tier_level', (v) => v as String?),
           tierProgress:
               $checkedConvert('tier_progress', (v) => (v as num?)?.toDouble()),
-          leftPoints: $checkedConvert('left_points', (v) => v as int?),
+          leftPoints:
+              $checkedConvert('left_points', (v) => (v as num?)?.toInt()),
           leftAmount:
               $checkedConvert('left_amount', (v) => (v as num?)?.toDouble()),
-          leftVisits: $checkedConvert('left_visits', (v) => v as int?),
-          totalPoints: $checkedConvert('total_points', (v) => v as int?),
+          leftVisits:
+              $checkedConvert('left_visits', (v) => (v as num?)?.toInt()),
+          totalPoints:
+              $checkedConvert('total_points', (v) => (v as num?)?.toInt()),
           totalAmount:
               $checkedConvert('total_amount', (v) => (v as num?)?.toDouble()),
-          totalVisits: $checkedConvert('total_visits', (v) => v as int?),
+          totalVisits:
+              $checkedConvert('total_visits', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

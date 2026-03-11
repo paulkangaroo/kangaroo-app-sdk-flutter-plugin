@@ -25,8 +25,9 @@ RewardTranslation _$RewardTranslationFromJson(Map<String, dynamic> json) =>
           ],
         );
         final val = RewardTranslation(
-          id: $checkedConvert('id', (v) => v as int?),
-          languageId: $checkedConvert('language_id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          languageId:
+              $checkedConvert('language_id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
           termsConditions:

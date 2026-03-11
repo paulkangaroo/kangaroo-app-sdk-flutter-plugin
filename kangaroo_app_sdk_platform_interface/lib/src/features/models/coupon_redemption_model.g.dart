@@ -17,7 +17,7 @@ CouponRedemptionModel _$CouponRedemptionModelFromJson(
           allowedKeys: const ['id'],
         );
         final val = CouponRedemptionModel(
-          id: $checkedConvert('id', (v) => v as int),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
         );
         return val;
       },

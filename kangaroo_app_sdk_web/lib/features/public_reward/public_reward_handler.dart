@@ -38,7 +38,7 @@ class PublicRewardHandler extends PublicRewardApiInterface
   }
 
   @override
-  Stream<Result<PublicRewardModel>> get publicRewardStream {
+  Stream<Result<PublicRewardResponseModel>> get publicRewardStream {
     var controller = StreamController<String>();
 
     PublicRewardApi().observePublicRewardState(
@@ -49,12 +49,12 @@ class PublicRewardHandler extends PublicRewardApiInterface
     return controller.stream.distinct().map((event) {
       dynamic result;
       try {
-        result = PublicRewardModel.fromJson(jsonDecode(event));
+        result = PublicRewardResponseModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case PublicRewardModel:
+        case PublicRewardResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

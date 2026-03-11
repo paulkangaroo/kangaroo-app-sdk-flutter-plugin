@@ -24,7 +24,7 @@ GiftCardPurchaseRequest _$GiftCardPurchaseRequestFromJson(
         final val = GiftCardPurchaseRequest(
           intent: $checkedConvert('intent', (v) => v as String),
           provider: $checkedConvert('provider', (v) => v as String),
-          giftcardId: $checkedConvert('giftcard_id', (v) => v as int),
+          giftcardId: $checkedConvert('giftcard_id', (v) => (v as num).toInt()),
           paypalPayment: $checkedConvert('paypal_payment',
               (v) => GiftCardPayPalPayment.fromJson(v as Map<String, dynamic>)),
         );

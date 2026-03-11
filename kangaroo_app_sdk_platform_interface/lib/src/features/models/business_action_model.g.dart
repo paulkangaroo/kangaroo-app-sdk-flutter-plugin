@@ -16,9 +16,9 @@ BusinessActionModel _$BusinessActionModelFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['id', 'points', 'action_id'],
         );
         final val = BusinessActionModel(
-          id: $checkedConvert('id', (v) => v as int?),
-          points: $checkedConvert('points', (v) => v as int?),
-          actionId: $checkedConvert('action_id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
+          actionId: $checkedConvert('action_id', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

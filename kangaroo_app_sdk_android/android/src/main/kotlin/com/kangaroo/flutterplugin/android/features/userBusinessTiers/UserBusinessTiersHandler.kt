@@ -36,7 +36,7 @@ class UserBusinessTiersHandler : EventChannel.StreamHandler, PluginChannelHandle
         suspend fun getUserBusinessTiers(call: MethodCall): String? {
             val result = UserBusinessTiersApi().getUserBusinessTiers(
                 overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
-                memberBusinessId = call.argument<String>("memberBusinessId") as String
+                businessId = call.argument<String>("businessId") as String
             ).toJsonResult<UserProfileWithTierProgram>()
 
             return when (result) {

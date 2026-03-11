@@ -13,6 +13,8 @@ import features.userNotificationPreferences.models.NotificationSettingsModel
 import features.userNotificationPreferences.serializeGetNotificationPreferencesState
 import kangaroorewards.appsdk.core.domain.SerializedResult
 import kangaroorewards.appsdk.core.domain.toJsonResult
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
 
 
 class GetNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChannelHandler {

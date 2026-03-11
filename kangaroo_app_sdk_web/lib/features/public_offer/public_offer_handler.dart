@@ -38,7 +38,7 @@ class PublicOfferHandler extends PublicOfferApiInterface
   }
 
   @override
-  Stream<Result<PublicOfferModel>> get publicOfferStream {
+  Stream<Result<PublicOfferResponseModel>> get publicOfferStream {
     var controller = StreamController<String>();
 
     PublicOfferApi().observePublicOfferState(
@@ -49,12 +49,12 @@ class PublicOfferHandler extends PublicOfferApiInterface
     return controller.stream.distinct().map((event) {
       dynamic result;
       try {
-        result = PublicOfferModel.fromJson(jsonDecode(event));
+        result = PublicOfferResponseModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case PublicOfferModel:
+        case PublicOfferResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

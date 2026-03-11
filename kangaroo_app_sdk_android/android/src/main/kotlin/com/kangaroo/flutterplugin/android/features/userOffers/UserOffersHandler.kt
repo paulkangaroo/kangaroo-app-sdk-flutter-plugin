@@ -36,7 +36,7 @@ class UserOffersHandler : EventChannel.StreamHandler, PluginChannelHandler {
         suspend fun getUserOffers(call: MethodCall): String? {
             val result = UserOffersApi().getUserOffers(
                 overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
-
+                perPage = call.argument<Int>("perPage") as Int
             ).toJsonResult<UserOffersModel>()
 
             return when (result) {

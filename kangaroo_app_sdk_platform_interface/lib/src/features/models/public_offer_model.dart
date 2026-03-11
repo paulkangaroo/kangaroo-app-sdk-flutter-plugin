@@ -10,6 +10,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_ac
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
+
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_translation.dart';
@@ -18,12 +20,14 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/offer_ac
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
+
 part 'public_offer_model.g.dart';
 
 
 @JsonSerializable(explicitToJson: true, fieldRename: FieldRename.snake, checked: true, disallowUnrecognizedKeys: true,)
 class PublicOfferModel {
-  ///A unique ID identifying this reward 
+  ///A unique ID identifying this offer 
   @JsonKey(name: "id")
   final int id;
 
@@ -129,6 +133,9 @@ class PublicOfferModel {
   @JsonKey(name: "branch")
   final Branch? branch;
 
+  @JsonKey(name: "business")
+  final BusinessData? business;
+
   PublicOfferModel({
     required this.id,
     required this.points,
@@ -158,6 +165,7 @@ class PublicOfferModel {
     required this.offerLanguages,
     required this.actions,
     required this.branch,
+    required this.business,
   });
 
   factory PublicOfferModel.fromJson(Map<String, dynamic> data) => _$PublicOfferModelFromJson(data);

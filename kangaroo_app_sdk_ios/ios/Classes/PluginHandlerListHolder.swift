@@ -17,15 +17,21 @@ class PluginHandlerListHolder {
 
     AlaCarteProductsHandler(),
 
+    GetAmazonProductVariantsHandler(),
+
     BannersHandler(),
 
     BusinessHandler(),
 
     BranchesHandler(),
 
+    GeofencesHandler(),
+
     BusinessesHandler(),
 
     CampaignMessagesHandler(),
+
+    ConglomerateMembershipsHandler(),
 
     GetConglomerateNotificationPreferencesHandler(),
 
@@ -43,13 +49,21 @@ class PluginHandlerListHolder {
 
     GetNotificationPreferencesHandler(),
 
+    OrderStatusHandler(),
+
     PublicAlaCarteProductsHandler(),
+
+    PublicAmazonCatalogueHandler(),
+
+    GetPublicAmazonProductVariantsHandler(),
 
     PublicBannersHandler(),
 
     PublicBranchesHandler(),
 
     PublicBusinessSettingsHandler(),
+
+    GetPublicCampaignHandler(),
 
     PublicOfferHandler(),
 
@@ -58,6 +72,8 @@ class PluginHandlerListHolder {
     PublicProductsHandler(),
 
     GetPublicPromotionsHandler(),
+
+    GetPublicQrCodeScanTokenHandler(),
 
     PublicRewardHandler(),
 
@@ -72,6 +88,8 @@ class PluginHandlerListHolder {
     TiersHandler(),
 
     TransferMessagesHandler(),
+
+    UserAmazonCatalogueHandler(),
 
     UserBusinessAlaCarteProductsHandler(),
 
@@ -119,9 +137,13 @@ class PluginHandlerListHolder {
 
     OfferFacebookShareHandler(),
 
+    PublicDepositGiftCardHandler(),
+
     GiftCardPurchaseHandler(),
 
     TransferRecallHandler(),
+
+    RedeemAmazonCatalogueItemsHandler(),
 
     RedeemCouponsHandler(),
 
@@ -133,9 +155,15 @@ class PluginHandlerListHolder {
 
     UserPinResetHandler(),
 
+    UserPinResetWithTokenHandler(),
+
+    ScanningPublicQrCodeHandler(),
+
     UserScanReceiptHandler(),
 
     BalanceTransferHandler(),
+
+    TriggerGeofencesHandler(),
 
     UserUnsubscribeHandler(),
 

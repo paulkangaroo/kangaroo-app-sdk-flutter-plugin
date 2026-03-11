@@ -17,7 +17,8 @@ TierLevelTranslation _$TierLevelTranslationFromJson(
           allowedKeys: const ['language_id', 'name', 'description', 'language'],
         );
         final val = TierLevelTranslation(
-          languageId: $checkedConvert('language_id', (v) => v as int?),
+          languageId:
+              $checkedConvert('language_id', (v) => (v as num?)?.toInt()),
           name: $checkedConvert('name', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
           language: $checkedConvert(

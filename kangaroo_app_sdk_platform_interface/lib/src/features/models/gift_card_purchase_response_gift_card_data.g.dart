@@ -23,7 +23,7 @@ GiftCardPurchaseResponseGiftCardData
               ],
             );
             final val = GiftCardPurchaseResponseGiftCardData(
-              id: $checkedConvert('id', (v) => v as int?),
+              id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
               title: $checkedConvert('title', (v) => v as String?),
               price: $checkedConvert('price', (v) => (v as num?)?.toDouble()),
               currency: $checkedConvert('currency', (v) => v as String?),

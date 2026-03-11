@@ -2,11 +2,11 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/images.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/images2.dart';
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/languages.dart';
 
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/images.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/images2.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/languages.dart';
 
@@ -25,7 +25,7 @@ class Product {
   final String? description;
 
   @JsonKey(name: "images")
-  final List<Images>? images;
+  final List<Images2>? images;
 
   @JsonKey(name: "product_sku")
   final String? productSku;

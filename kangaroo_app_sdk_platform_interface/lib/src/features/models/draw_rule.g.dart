@@ -22,7 +22,8 @@ DrawRule _$DrawRuleFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = DrawRule(
-          drawRuleId: $checkedConvert('draw_rule_id', (v) => v as int?),
+          drawRuleId:
+              $checkedConvert('draw_rule_id', (v) => (v as num?)?.toInt()),
           isRequired: $checkedConvert('required', (v) => v as bool?),
           completed: $checkedConvert('completed', (v) => v as bool?),
           languages: $checkedConvert(

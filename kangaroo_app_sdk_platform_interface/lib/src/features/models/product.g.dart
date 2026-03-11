@@ -26,13 +26,13 @@ Product _$ProductFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = Product(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
           images: $checkedConvert(
               'images',
               (v) => (v as List<dynamic>?)
-                  ?.map((e) => Images.fromJson(e as Map<String, dynamic>))
+                  ?.map((e) => Images2.fromJson(e as Map<String, dynamic>))
                   .toList()),
           productSku: $checkedConvert('product_sku', (v) => v as String?),
           actualPrice:

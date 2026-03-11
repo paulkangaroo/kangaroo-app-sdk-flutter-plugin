@@ -17,7 +17,7 @@ PerformSocialMediaActionRequestModel
               allowedKeys: const ['action_id', 'branch_id'],
             );
             final val = PerformSocialMediaActionRequestModel(
-              actionId: $checkedConvert('action_id', (v) => v as int),
+              actionId: $checkedConvert('action_id', (v) => (v as num).toInt()),
               branchId: $checkedConvert('branch_id', (v) => v as String),
             );
             return val;

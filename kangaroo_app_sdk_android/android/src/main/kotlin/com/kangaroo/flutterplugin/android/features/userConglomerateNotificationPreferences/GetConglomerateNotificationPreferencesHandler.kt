@@ -13,6 +13,8 @@ import features.userConglomerateNotificationPreferences.models.NotificationSetti
 import features.userConglomerateNotificationPreferences.serializeGetConglomerateNotificationPreferencesState
 import kangaroorewards.appsdk.core.domain.SerializedResult
 import kangaroorewards.appsdk.core.domain.toJsonResult
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
 
 
 class GetConglomerateNotificationPreferencesHandler : EventChannel.StreamHandler, PluginChannelHandler {

@@ -25,12 +25,13 @@ FrequentBuyerProgramModel _$FrequentBuyerProgramModelFromJson(
           ],
         );
         final val = FrequentBuyerProgramModel(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           enabled: $checkedConvert('enabled', (v) => v as bool?),
           title: $checkedConvert('title', (v) => v as String?),
-          buyUnits: $checkedConvert('buy_units', (v) => v as int?),
-          getUnits: $checkedConvert('get_units', (v) => v as int?),
-          resetInterval: $checkedConvert('reset_interval', (v) => v as int?),
+          buyUnits: $checkedConvert('buy_units', (v) => (v as num?)?.toInt()),
+          getUnits: $checkedConvert('get_units', (v) => (v as num?)?.toInt()),
+          resetInterval:
+              $checkedConvert('reset_interval', (v) => (v as num?)?.toInt()),
           createdAt: $checkedConvert('created_at', (v) => v as String?),
         );
         return val;

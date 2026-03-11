@@ -24,9 +24,9 @@ RedeemResponseData _$RedeemResponseDataFromJson(Map<String, dynamic> json) =>
           ],
         );
         final val = RedeemResponseData(
-          id: $checkedConvert('id', (v) => v as int),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
           amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
-          points: $checkedConvert('points', (v) => v as int?),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           name: $checkedConvert('name', (v) => v as String?),
           createdAt: $checkedConvert('created_at', (v) => v as String?),
           updatedAt: $checkedConvert('updated_at', (v) => v as String?),

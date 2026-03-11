@@ -6,13 +6,21 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_mo
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/external_products.dart';
+
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch.dart';
+
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/external_products.dart';
+
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
 
 part 'public_reward_model.g.dart';
 
@@ -77,11 +85,20 @@ class PublicRewardModel {
   @JsonKey(name: "link")
   final String? link;
 
+  @JsonKey(name: "virtual")
+  final bool? virtual;
+
   @JsonKey(name: "reward_languages")
   final List<RewardTranslation>? rewardLanguages;
 
+  @JsonKey(name: "external_products")
+  final List<ExternalProducts>? externalProducts;
+
   @JsonKey(name: "branch")
   final Branch? branch;
+
+  @JsonKey(name: "business")
+  final BusinessData? business;
 
   PublicRewardModel({
     required this.id,
@@ -103,8 +120,11 @@ class PublicRewardModel {
     required this.neverExpiresFlag,
     required this.termsConditions,
     required this.link,
+    required this.virtual,
     required this.rewardLanguages,
+    required this.externalProducts,
     required this.branch,
+    required this.business,
   });
 
   factory PublicRewardModel.fromJson(Map<String, dynamic> data) => _$PublicRewardModelFromJson(data);

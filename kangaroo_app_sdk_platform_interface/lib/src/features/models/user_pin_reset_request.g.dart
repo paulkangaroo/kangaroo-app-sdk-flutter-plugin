@@ -16,7 +16,7 @@ UserPinResetRequest _$UserPinResetRequestFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['status_code', 'message', 'description'],
         );
         final val = UserPinResetRequest(
-          statusCode: $checkedConvert('status_code', (v) => v as int),
+          statusCode: $checkedConvert('status_code', (v) => (v as num).toInt()),
           message: $checkedConvert('message', (v) => v as String),
           description: $checkedConvert('description', (v) => v as String),
         );

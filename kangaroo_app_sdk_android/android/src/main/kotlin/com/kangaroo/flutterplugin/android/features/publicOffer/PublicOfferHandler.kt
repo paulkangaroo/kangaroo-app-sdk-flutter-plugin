@@ -8,7 +8,7 @@ import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
 import kotlin.js.ExperimentalJsExport
 import features.publicOffer.PublicOfferApi
-import features.publicOffer.models.PublicOfferModel
+import features.publicOffer.models.PublicOfferResponseModel
 
 import features.publicOffer.serializePublicOfferState
 import kangaroorewards.appsdk.core.domain.SerializedResult
@@ -37,7 +37,7 @@ class PublicOfferHandler : EventChannel.StreamHandler, PluginChannelHandler {
             val result = PublicOfferApi().getPublicOffer(
                 overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 offerSlug = call.argument<String>("offerSlug") as String
-            ).toJsonResult<PublicOfferModel>()
+            ).toJsonResult<PublicOfferResponseModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

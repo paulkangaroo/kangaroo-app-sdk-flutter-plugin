@@ -17,7 +17,7 @@ OfferRedemptionModel _$OfferRedemptionModelFromJson(
           allowedKeys: const ['id'],
         );
         final val = OfferRedemptionModel(
-          id: $checkedConvert('id', (v) => v as int),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
         );
         return val;
       },

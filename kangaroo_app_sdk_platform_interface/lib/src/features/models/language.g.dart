@@ -15,7 +15,7 @@ Language _$LanguageFromJson(Map<String, dynamic> json) => $checkedCreate(
           allowedKeys: const ['id', 'abbreviation', 'name'],
         );
         final val = Language(
-          id: $checkedConvert('id', (v) => v as int),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
           abbreviation: $checkedConvert('abbreviation', (v) => v as String?),
           name: $checkedConvert('name', (v) => v as String?),
         );

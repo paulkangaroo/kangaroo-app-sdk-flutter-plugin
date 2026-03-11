@@ -27,15 +27,18 @@ Tier _$TierFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = Tier(
-          id: $checkedConvert('id', (v) => v as int?),
-          tiersSequence: $checkedConvert('tiers_sequence',
-              (v) => (v as List<dynamic>?)?.map((e) => e as int).toList()),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          tiersSequence: $checkedConvert(
+              'tiers_sequence',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => (e as num).toInt())
+                  .toList()),
           isCombined: $checkedConvert('is_combined', (v) => v as bool?),
-          resetType: $checkedConvert('reset_type', (v) => v as int?),
-          resetPeriodMonth:
-              $checkedConvert('reset_period_month', (v) => v as int?),
-          basePreviousPeriod:
-              $checkedConvert('base_previous_period', (v) => v as int?),
+          resetType: $checkedConvert('reset_type', (v) => (v as num?)?.toInt()),
+          resetPeriodMonth: $checkedConvert(
+              'reset_period_month', (v) => (v as num?)?.toInt()),
+          basePreviousPeriod: $checkedConvert(
+              'base_previous_period', (v) => (v as num?)?.toInt()),
           enabled: $checkedConvert('enabled', (v) => v as bool?),
           defaultTierIcon:
               $checkedConvert('default_tier_icon', (v) => v as String?),

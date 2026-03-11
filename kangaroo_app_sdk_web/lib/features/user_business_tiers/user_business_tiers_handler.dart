@@ -24,12 +24,12 @@ class UserBusinessTiersHandler extends UserBusinessTiersApiInterface
   @override
   getUserBusinessTiers({ 
       final Map<String, String>? overrideHeaders,
-        required final String memberBusinessId
+        required final String businessId
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserBusinessTiersApi().getUserBusinessTiers(
         jsonEncode(overrideHeaders),
-        memberBusinessId
+        businessId
     ),);
 
     return UserBusinessTiersApiInterface.deSerializedPlatformResponse(
@@ -71,7 +71,7 @@ class UserBusinessTiersApi {
 
   external dynamic getUserBusinessTiers( 
         String? overrideHeaders, 
-        String memberBusinessId
+        String businessId
     );
 
   external void observeUserBusinessTiersState(

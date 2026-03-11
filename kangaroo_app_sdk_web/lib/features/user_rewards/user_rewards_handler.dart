@@ -24,12 +24,12 @@ class UserRewardsHandler extends UserRewardsApiInterface
   @override
   getUserRewards({ 
       final Map<String, String>? overrideHeaders,
-
+        required final int perPage
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserRewardsApi().getUserRewards(
         jsonEncode(overrideHeaders),
-        
+        perPage
     ),);
 
     return UserRewardsApiInterface.deSerializedPlatformResponse(
@@ -71,7 +71,7 @@ class UserRewardsApi {
 
   external dynamic getUserRewards( 
         String? overrideHeaders, 
-
+        int perPage
     );
 
   external void observeUserRewardsState(

@@ -10,8 +10,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_offers/p
 
 
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_offers_model.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_offers_model.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_offers_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_offers_model.dart';
 
 abstract class PublicOffersApiInterface extends PlatformInterface {
   PublicOffersApiInterface() : super(token: _token);
@@ -27,30 +27,30 @@ abstract class PublicOffersApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserOffersModel>?> getPublicOffers({ 
+Future<Result<PublicOffersModel>?> getPublicOffers({ 
         final Map<String, String>? overrideHeaders,
 
     }) {
     throw UnimplementedError('getPublicOffers has not been implemented.');
   }
 
-  Stream<Result<UserOffersModel>> get publicOffersStream {
+  Stream<Result<PublicOffersModel>> get publicOffersStream {
     throw UnimplementedError('getPublicOffersStream has not been implemented.');
   }
 
-  static Future<Result<UserOffersModel>?> deSerializedPlatformResponse(
+  static Future<Result<PublicOffersModel>?> deSerializedPlatformResponse(
     Future<String?> response,
   ) async {
     final serializedResult = await response;
     if (serializedResult != null) {
       dynamic result;
       try {
-        result = UserOffersModel.fromJson(jsonDecode(serializedResult));
+        result = PublicOffersModel.fromJson(jsonDecode(serializedResult));
       } catch (error) {
         result = State.fromJson(jsonDecode(serializedResult));
       }
       switch (result.runtimeType) {
-        case UserOffersModel:
+        case PublicOffersModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

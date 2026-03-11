@@ -10,9 +10,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_verificati
 
 class UserAccountVerificationApiFederated extends UserAccountVerificationApiInterface {
   @override
-Future<Result<UserProfileModel>?> verifyAccount({ 
+Future<Result<UserVerificationResponseModel>?> verifyAccount({ 
         final Map<String, String>? overrideHeaders,
-        required final String intent,
         required final String token,
         final String? email,
         final String? phone,
@@ -21,7 +20,6 @@ Future<Result<UserProfileModel>?> verifyAccount({
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/verify_account',
     {
       'overrideHeaders' : overrideHeaders,
-      'intent' : intent,
       'token' : token,
       'email' : email,
       'phone' : phone,
@@ -38,16 +36,16 @@ Future<Result<UserProfileModel>?> verifyAccount({
       const EventChannel("customer_sdk/events/verify_account");
 
   @override
-  Stream<Result<UserProfileModel>> get userAccountVerificationStream {
+  Stream<Result<UserVerificationResponseModel>> get userAccountVerificationStream {
     return _userAccountVerificationEvent.receiveBroadcastStream().distinct().map((event) {
       dynamic result;
       try {
-        result = UserProfileModel.fromJson(jsonDecode(event));
+        result = UserVerificationResponseModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case UserProfileModel:
+        case UserVerificationResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

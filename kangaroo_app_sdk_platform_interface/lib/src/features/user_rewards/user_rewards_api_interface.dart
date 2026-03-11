@@ -29,7 +29,7 @@ abstract class UserRewardsApiInterface extends PlatformInterface {
 
 Future<Result<UserRewardsModel>?> getUserRewards({ 
         final Map<String, String>? overrideHeaders,
-
+        required final int perPage,
     }) {
     throw UnimplementedError('getUserRewards has not been implemented.');
   }

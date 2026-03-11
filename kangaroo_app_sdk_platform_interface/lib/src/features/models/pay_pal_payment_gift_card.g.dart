@@ -17,11 +17,11 @@ PayPalPaymentGiftCard _$PayPalPaymentGiftCardFromJson(
           allowedKeys: const ['id', 'title', 'price', 'currency', 'quantity'],
         );
         final val = PayPalPaymentGiftCard(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
           price: $checkedConvert('price', (v) => (v as num?)?.toDouble()),
           currency: $checkedConvert('currency', (v) => v as String?),
-          quantity: $checkedConvert('quantity', (v) => v as int?),
+          quantity: $checkedConvert('quantity', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

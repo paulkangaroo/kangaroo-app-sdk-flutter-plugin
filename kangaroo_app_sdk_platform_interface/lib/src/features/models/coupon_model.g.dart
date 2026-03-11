@@ -26,7 +26,7 @@ CouponModel _$CouponModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = CouponModel(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
           termsConditions:

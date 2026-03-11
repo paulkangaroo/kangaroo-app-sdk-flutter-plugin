@@ -16,7 +16,7 @@ ApplicationString _$ApplicationStringFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['id', 'key', 'string', 'created_at'],
         );
         final val = ApplicationString(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           key: $checkedConvert('key', (v) => v as String?),
           string: $checkedConvert('string', (v) => v as String?),
           createdAt: $checkedConvert('created_at', (v) => v as String?),

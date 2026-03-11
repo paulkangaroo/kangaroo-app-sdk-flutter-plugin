@@ -41,12 +41,13 @@ PublicOfferModel _$PublicOfferModelFromJson(Map<String, dynamic> json) =>
             'link',
             'offer_languages',
             'actions',
-            'branch'
+            'branch',
+            'business'
           ],
         );
         final val = PublicOfferModel(
-          id: $checkedConvert('id', (v) => v as int),
-          points: $checkedConvert('points', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           publishAt: $checkedConvert('publish_at', (v) => v as String?),
           expiresAt: $checkedConvert('expires_at', (v) => v as String?),
           isPublished: $checkedConvert('is_published', (v) => v as bool?),
@@ -65,8 +66,8 @@ PublicOfferModel _$PublicOfferModelFromJson(Map<String, dynamic> json) =>
           appsOnly: $checkedConvert('apps_only', (v) => v as bool?),
           isCouponRedeemed:
               $checkedConvert('is_coupon_redeemed', (v) => v as bool?),
-          offerFrequencyId:
-              $checkedConvert('offer_frequency_id', (v) => v as int?),
+          offerFrequencyId: $checkedConvert(
+              'offer_frequency_id', (v) => (v as num?)?.toInt()),
           freqDetails: $checkedConvert('freq_details',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           peakFrom: $checkedConvert('peak_from', (v) => v as String?),
@@ -101,6 +102,11 @@ PublicOfferModel _$PublicOfferModelFromJson(Map<String, dynamic> json) =>
               (v) => v == null
                   ? null
                   : Branch.fromJson(v as Map<String, dynamic>)),
+          business: $checkedConvert(
+              'business',
+              (v) => v == null
+                  ? null
+                  : BusinessData.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -157,4 +163,5 @@ Map<String, dynamic> _$PublicOfferModelToJson(PublicOfferModel instance) =>
           instance.offerLanguages?.map((e) => e.toJson()).toList(),
       'actions': instance.actions?.map((e) => e.toJson()).toList(),
       'branch': instance.branch?.toJson(),
+      'business': instance.business?.toJson(),
     };

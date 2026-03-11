@@ -10,8 +10,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/user_verificati
 
 
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_model.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_model.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_verification_response_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_verification_response_model.dart';
 
 abstract class UserAccountVerificationApiInterface extends PlatformInterface {
   UserAccountVerificationApiInterface() : super(token: _token);
@@ -27,9 +27,8 @@ abstract class UserAccountVerificationApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<UserProfileModel>?> verifyAccount({ 
+Future<Result<UserVerificationResponseModel>?> verifyAccount({ 
         final Map<String, String>? overrideHeaders,
-        required final String intent,
         required final String token,
         final String? email,
         final String? phone,
@@ -38,23 +37,23 @@ Future<Result<UserProfileModel>?> verifyAccount({
     throw UnimplementedError('verifyAccount has not been implemented.');
   }
 
-  Stream<Result<UserProfileModel>> get userAccountVerificationStream {
+  Stream<Result<UserVerificationResponseModel>> get userAccountVerificationStream {
     throw UnimplementedError('getUserAccountVerificationStream has not been implemented.');
   }
 
-  static Future<Result<UserProfileModel>?> deSerializedPlatformResponse(
+  static Future<Result<UserVerificationResponseModel>?> deSerializedPlatformResponse(
     Future<String?> response,
   ) async {
     final serializedResult = await response;
     if (serializedResult != null) {
       dynamic result;
       try {
-        result = UserProfileModel.fromJson(jsonDecode(serializedResult));
+        result = UserVerificationResponseModel.fromJson(jsonDecode(serializedResult));
       } catch (error) {
         result = State.fromJson(jsonDecode(serializedResult));
       }
       switch (result.runtimeType) {
-        case UserProfileModel:
+        case UserVerificationResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

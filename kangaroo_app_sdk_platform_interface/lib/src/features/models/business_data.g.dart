@@ -23,7 +23,12 @@ BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) =>
             'logo',
             'logo_transparent_background',
             'cover_photo',
-            'category'
+            'category',
+            'default_branch',
+            'balance',
+            'tier_level',
+            'catalog_items',
+            'address'
           ],
         );
         final val = BusinessData(
@@ -53,6 +58,31 @@ BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) =>
               (v) => v == null
                   ? null
                   : BusinessCategory.fromJson(v as Map<String, dynamic>)),
+          defaultBranch: $checkedConvert(
+              'default_branch',
+              (v) => v == null
+                  ? null
+                  : Branch.fromJson(v as Map<String, dynamic>)),
+          balance: $checkedConvert(
+              'balance',
+              (v) => v == null
+                  ? null
+                  : UserBalance.fromJson(v as Map<String, dynamic>)),
+          tierLevel: $checkedConvert(
+              'tier_level',
+              (v) => v == null
+                  ? null
+                  : TierLevel.fromJson(v as Map<String, dynamic>)),
+          catalogItems: $checkedConvert(
+              'catalog_items',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => RewardModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          address: $checkedConvert(
+              'address',
+              (v) => v == null
+                  ? null
+                  : AddressDataModel.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -60,7 +90,10 @@ BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) =>
         'loyaltyType': 'loyalty_type',
         'whiteLabel': 'white_label',
         'logoTransparentBackground': 'logo_transparent_background',
-        'coverPhoto': 'cover_photo'
+        'coverPhoto': 'cover_photo',
+        'defaultBranch': 'default_branch',
+        'tierLevel': 'tier_level',
+        'catalogItems': 'catalog_items'
       },
     );
 
@@ -77,4 +110,9 @@ Map<String, dynamic> _$BusinessDataToJson(BusinessData instance) =>
           instance.logoTransparentBackground?.toJson(),
       'cover_photo': instance.coverPhoto?.toJson(),
       'category': instance.category?.toJson(),
+      'default_branch': instance.defaultBranch?.toJson(),
+      'balance': instance.balance?.toJson(),
+      'tier_level': instance.tierLevel?.toJson(),
+      'catalog_items': instance.catalogItems?.map((e) => e.toJson()).toList(),
+      'address': instance.address?.toJson(),
     };

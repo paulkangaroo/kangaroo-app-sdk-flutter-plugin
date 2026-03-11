@@ -8,11 +8,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 class UserBusinessTiersApi {
   static Future<Result<UserProfileWithTierProgram>?> getUserBusinessTiers({ 
     final Map<String, String>? overrideHeaders,
-    required final String memberBusinessId,
+    required final String businessId,
   }) {
     return UserBusinessTiersApiInterface.instance.getUserBusinessTiers( 
       overrideHeaders: overrideHeaders,
-      memberBusinessId: memberBusinessId,
+      businessId: businessId,
     );
   }
 

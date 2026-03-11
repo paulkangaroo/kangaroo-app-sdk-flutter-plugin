@@ -32,11 +32,11 @@ class UserBusinessTiersHandler: NSObject, FlutterStreamHandler, PluginChannelHan
         do {
        if let myArgs = args as? [String: Any] {
           let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
-                        guard let memberBusinessId = myArgs["memberBusinessId"] as? String else {return nil}
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
 
         let result = try await UserBusinessTiersApi().getUserBusinessTiers(
                 overrideHeaders: overrideHeaders,
-                memberBusinessId: memberBusinessId
+                businessId: businessId
            ).serializeUserBusinessTiersApiResult()
 
         switch result {

@@ -10,8 +10,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_reward/p
 
 
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_reward_model.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_reward_model.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_reward_response_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_reward_response_model.dart';
 
 abstract class PublicRewardApiInterface extends PlatformInterface {
   PublicRewardApiInterface() : super(token: _token);
@@ -27,30 +27,30 @@ abstract class PublicRewardApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<PublicRewardModel>?> getPublicReward({ 
+Future<Result<PublicRewardResponseModel>?> getPublicReward({ 
         final Map<String, String>? overrideHeaders,
         required final String rewardSlug,
     }) {
     throw UnimplementedError('getPublicReward has not been implemented.');
   }
 
-  Stream<Result<PublicRewardModel>> get publicRewardStream {
+  Stream<Result<PublicRewardResponseModel>> get publicRewardStream {
     throw UnimplementedError('getPublicRewardStream has not been implemented.');
   }
 
-  static Future<Result<PublicRewardModel>?> deSerializedPlatformResponse(
+  static Future<Result<PublicRewardResponseModel>?> deSerializedPlatformResponse(
     Future<String?> response,
   ) async {
     final serializedResult = await response;
     if (serializedResult != null) {
       dynamic result;
       try {
-        result = PublicRewardModel.fromJson(jsonDecode(serializedResult));
+        result = PublicRewardResponseModel.fromJson(jsonDecode(serializedResult));
       } catch (error) {
         result = State.fromJson(jsonDecode(serializedResult));
       }
       switch (result.runtimeType) {
-        case PublicRewardModel:
+        case PublicRewardResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

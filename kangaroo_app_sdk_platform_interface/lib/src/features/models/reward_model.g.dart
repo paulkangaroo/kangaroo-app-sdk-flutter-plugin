@@ -32,12 +32,14 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
             'never_expires_flag',
             'terms_conditions',
             'link',
-            'reward_languages'
+            'virtual',
+            'reward_languages',
+            'external_products'
           ],
         );
         final val = RewardModel(
-          id: $checkedConvert('id', (v) => v as int?),
-          points: $checkedConvert('points', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           publishAt: $checkedConvert('publish_at', (v) => v as String?),
           expiresAt: $checkedConvert('expires_at', (v) => v as String?),
           isPublished: $checkedConvert('is_published', (v) => v as bool?),
@@ -47,8 +49,8 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           discountValue:
               $checkedConvert('discount_value', (v) => (v as num?)?.toDouble()),
           partnerReward: $checkedConvert('partner_reward', (v) => v as bool?),
-          partnerRewardType:
-              $checkedConvert('partner_reward_type', (v) => v as int?),
+          partnerRewardType: $checkedConvert(
+              'partner_reward_type', (v) => (v as num?)?.toInt()),
           redeemForGiftCard:
               $checkedConvert('redeem_for_gift_card', (v) => v as bool?),
           type: $checkedConvert('type', (v) => v as String?),
@@ -65,11 +67,18 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           termsConditions:
               $checkedConvert('terms_conditions', (v) => v as String?),
           link: $checkedConvert('link', (v) => v as String?),
+          virtual: $checkedConvert('virtual', (v) => v as bool?),
           rewardLanguages: $checkedConvert(
               'reward_languages',
               (v) => (v as List<dynamic>?)
                   ?.map((e) =>
                       RewardTranslation.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          externalProducts: $checkedConvert(
+              'external_products',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      ExternalProducts.fromJson(e as Map<String, dynamic>))
                   .toList()),
         );
         return val;
@@ -85,7 +94,8 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
         'redeemForGiftCard': 'redeem_for_gift_card',
         'neverExpiresFlag': 'never_expires_flag',
         'termsConditions': 'terms_conditions',
-        'rewardLanguages': 'reward_languages'
+        'rewardLanguages': 'reward_languages',
+        'externalProducts': 'external_products'
       },
     );
 
@@ -110,6 +120,9 @@ Map<String, dynamic> _$RewardModelToJson(RewardModel instance) =>
       'never_expires_flag': instance.neverExpiresFlag,
       'terms_conditions': instance.termsConditions,
       'link': instance.link,
+      'virtual': instance.virtual,
       'reward_languages':
           instance.rewardLanguages?.map((e) => e.toJson()).toList(),
+      'external_products':
+          instance.externalProducts?.map((e) => e.toJson()).toList(),
     };
