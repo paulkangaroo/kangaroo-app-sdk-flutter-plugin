@@ -7,8 +7,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/result.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/user_profile_update/user_profile_update_api_implementation.dart';
 
-
-
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/update_user_profile_request.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/update_user_profile_request.dart';
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_model.dart';
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_profile_model.dart';
@@ -29,12 +29,7 @@ abstract class UserProfileUpdateApiInterface extends PlatformInterface {
 
 Future<Result<UserProfileModel>?> updateUserProfile({ 
         final Map<String, String>? overrideHeaders,
-        final String? firstName,
-        final String? lastName,
-        final String? birthDate,
-        final String? language,
-        final String? gender,
-        final String? profilePhoto,
+        required final UpdateUserProfileRequest updateUserProfileRequest,
     }) {
     throw UnimplementedError('updateUserProfile has not been implemented.');
   }

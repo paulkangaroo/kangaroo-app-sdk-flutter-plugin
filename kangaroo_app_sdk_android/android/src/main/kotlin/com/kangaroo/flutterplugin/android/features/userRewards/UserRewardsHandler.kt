@@ -36,7 +36,7 @@ class UserRewardsHandler : EventChannel.StreamHandler, PluginChannelHandler {
         suspend fun getUserRewards(call: MethodCall): String? {
             val result = UserRewardsApi().getUserRewards(
                 overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
-
+                perPage = call.argument<Int>("perPage") as Int
             ).toJsonResult<UserRewardsModel>()
 
             return when (result) {

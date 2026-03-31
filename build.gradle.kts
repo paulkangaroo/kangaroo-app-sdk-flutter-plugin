@@ -15,7 +15,7 @@ plugins {
     id("de.undercouch.download") version "4.1.2"
 }
 
-val kangarooApiVersion = "0.0.649"
+val kangarooApiVersion = "0.0.676"
 //flutter packages pub run build_runner build --delete-conflicting-outputs
 
 /**

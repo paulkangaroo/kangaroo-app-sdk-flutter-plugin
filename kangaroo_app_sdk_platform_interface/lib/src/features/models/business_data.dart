@@ -18,6 +18,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_lev
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/rewards.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/address_data_model.dart';
+
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
@@ -33,6 +35,8 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_bal
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_level.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/rewards.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/address_data_model.dart';
 
 part 'business_data.g.dart';
 
@@ -91,6 +95,9 @@ class BusinessData {
   @JsonKey(name: "catalog_items")
   final Rewards? catalogItems;
 
+  @JsonKey(name: "address")
+  final AddressDataModel? address;
+
   BusinessData({
     required this.id,
     required this.name,
@@ -106,6 +113,7 @@ class BusinessData {
     required this.balance,
     required this.tierLevel,
     required this.catalogItems,
+    required this.address,
   });
 
   factory BusinessData.fromJson(Map<String, dynamic> data) => _$BusinessDataFromJson(data);

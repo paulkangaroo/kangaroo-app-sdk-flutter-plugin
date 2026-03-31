@@ -8,11 +8,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 class UserRewardsApi {
   static Future<Result<UserRewardsModel>?> getUserRewards({ 
     final Map<String, String>? overrideHeaders,
-
+    required final int perPage,
   }) {
     return UserRewardsApiInterface.instance.getUserRewards( 
       overrideHeaders: overrideHeaders,
-
+      perPage: perPage,
     );
   }
 
