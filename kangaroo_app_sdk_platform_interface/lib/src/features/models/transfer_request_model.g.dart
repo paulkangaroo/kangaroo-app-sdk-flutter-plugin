@@ -33,9 +33,10 @@ TransferRequestModel _$TransferRequestModelFromJson(
               (v) => TransferRequestFrom.fromJson(v as Map<String, dynamic>)),
           to: $checkedConvert('to',
               (v) => TransferRequestTo.fromJson(v as Map<String, dynamic>)),
-          points: $checkedConvert('points', (v) => v as int?),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
-          giftcardId: $checkedConvert('giftcard_id', (v) => v as int?),
+          giftcardId:
+              $checkedConvert('giftcard_id', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

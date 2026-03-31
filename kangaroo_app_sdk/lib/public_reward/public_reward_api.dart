@@ -6,7 +6,7 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_reward/public_reward_platform_interface.dart';
 
 class PublicRewardApi {
-  static Future<Result<PublicRewardModel>?> getPublicReward({ 
+  static Future<Result<PublicRewardResponseModel>?> getPublicReward({ 
     final Map<String, String>? overrideHeaders,
     required final String rewardSlug,
   }) {
@@ -16,7 +16,7 @@ class PublicRewardApi {
     );
   }
 
-  static Stream<Result<PublicRewardModel>> get publicRewardStream {
+  static Stream<Result<PublicRewardResponseModel>> get publicRewardStream {
     return PublicRewardApiInterface.instance.publicRewardStream;
   }
 }

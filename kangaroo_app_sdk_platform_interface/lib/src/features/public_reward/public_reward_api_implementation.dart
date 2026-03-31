@@ -10,7 +10,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_reward/p
 
 class PublicRewardApiFederated extends PublicRewardApiInterface {
   @override
-Future<Result<PublicRewardModel>?> getPublicReward({ 
+Future<Result<PublicRewardResponseModel>?> getPublicReward({ 
         final Map<String, String>? overrideHeaders,
         required final String rewardSlug
     }) async {
@@ -30,16 +30,16 @@ Future<Result<PublicRewardModel>?> getPublicReward({
       const EventChannel("customer_sdk/events/get_public_reward");
 
   @override
-  Stream<Result<PublicRewardModel>> get publicRewardStream {
+  Stream<Result<PublicRewardResponseModel>> get publicRewardStream {
     return _publicRewardEvent.receiveBroadcastStream().distinct().map((event) {
       dynamic result;
       try {
-        result = PublicRewardModel.fromJson(jsonDecode(event));
+        result = PublicRewardResponseModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case PublicRewardModel:
+        case PublicRewardResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

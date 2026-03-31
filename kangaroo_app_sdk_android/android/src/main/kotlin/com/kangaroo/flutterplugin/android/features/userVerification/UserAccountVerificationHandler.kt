@@ -8,7 +8,7 @@ import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
 import kotlin.js.ExperimentalJsExport
 import features.userVerification.UserAccountVerificationApi
-import features.userVerification.models.UserProfileModel
+import features.userVerification.models.UserVerificationResponseModel
 
 import features.userVerification.serializeUserAccountVerificationState
 import kangaroorewards.appsdk.core.domain.SerializedResult
@@ -36,12 +36,11 @@ class UserAccountVerificationHandler : EventChannel.StreamHandler, PluginChannel
         suspend fun verifyAccount(call: MethodCall): String? {
             val result = UserAccountVerificationApi().verifyAccount(
                 overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
-                intent = call.argument<String>("intent") as String,
                 token = call.argument<String>("token") as String,
                 email = call.argument<String?>("email"),
                 phone = call.argument<String?>("phone"),
                 countryCode = call.argument<String?>("countryCode")
-            ).toJsonResult<UserProfileModel>()
+            ).toJsonResult<UserVerificationResponseModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

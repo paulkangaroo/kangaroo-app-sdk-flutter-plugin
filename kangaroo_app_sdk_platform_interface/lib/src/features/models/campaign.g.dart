@@ -26,7 +26,7 @@ Campaign _$CampaignFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = Campaign(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           subject: $checkedConvert('subject', (v) => v as String?),
           htmlContent: $checkedConvert('html_content', (v) => v as String?),
           plainContent: $checkedConvert('plain_content', (v) => v as String?),

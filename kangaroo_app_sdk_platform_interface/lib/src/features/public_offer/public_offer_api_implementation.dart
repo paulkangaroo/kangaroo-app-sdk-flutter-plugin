@@ -10,7 +10,7 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_offer/pu
 
 class PublicOfferApiFederated extends PublicOfferApiInterface {
   @override
-Future<Result<PublicOfferModel>?> getPublicOffer({ 
+Future<Result<PublicOfferResponseModel>?> getPublicOffer({ 
         final Map<String, String>? overrideHeaders,
         required final String offerSlug
     }) async {
@@ -30,16 +30,16 @@ Future<Result<PublicOfferModel>?> getPublicOffer({
       const EventChannel("customer_sdk/events/get_public_offer");
 
   @override
-  Stream<Result<PublicOfferModel>> get publicOfferStream {
+  Stream<Result<PublicOfferResponseModel>> get publicOfferStream {
     return _publicOfferEvent.receiveBroadcastStream().distinct().map((event) {
       dynamic result;
       try {
-        result = PublicOfferModel.fromJson(jsonDecode(event));
+        result = PublicOfferResponseModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case PublicOfferModel:
+        case PublicOfferResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

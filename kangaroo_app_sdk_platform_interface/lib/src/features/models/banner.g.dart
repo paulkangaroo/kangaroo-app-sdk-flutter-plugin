@@ -25,8 +25,8 @@ Banner _$BannerFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = Banner(
-          id: $checkedConvert('id', (v) => v as int?),
-          type: $checkedConvert('type', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          type: $checkedConvert('type', (v) => (v as num?)?.toInt()),
           imagePath: $checkedConvert('image_path', (v) => v as String?),
           link: $checkedConvert('link', (v) => v as String?),
           createdAt: $checkedConvert('created_at', (v) => v as String?),

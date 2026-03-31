@@ -13,8 +13,10 @@ import com.kangaroo.flutterplugin.android.features.userAlaCarte.AlaCarteProducts
 import com.kangaroo.flutterplugin.android.features.banners.BannersHandler
 import com.kangaroo.flutterplugin.android.features.business.BusinessHandler
 import com.kangaroo.flutterplugin.android.features.branches.BranchesHandler
+import com.kangaroo.flutterplugin.android.features.geofences.GeofencesHandler
 import com.kangaroo.flutterplugin.android.features.businessList.BusinessesHandler
 import com.kangaroo.flutterplugin.android.features.userCampaignMessages.CampaignMessagesHandler
+import com.kangaroo.flutterplugin.android.features.conglomerateMemberships.ConglomerateMembershipsHandler
 import com.kangaroo.flutterplugin.android.features.userConglomerateNotificationPreferences.GetConglomerateNotificationPreferencesHandler
 import com.kangaroo.flutterplugin.android.features.countries.CountriesHandler
 import com.kangaroo.flutterplugin.android.features.getCrmFields.GetCrmFieldsHandler
@@ -27,10 +29,12 @@ import com.kangaroo.flutterplugin.android.features.publicALaCarteProducts.Public
 import com.kangaroo.flutterplugin.android.features.publicBanners.PublicBannersHandler
 import com.kangaroo.flutterplugin.android.features.publicBranches.PublicBranchesHandler
 import com.kangaroo.flutterplugin.android.features.publicBusinessSettings.PublicBusinessSettingsHandler
+import com.kangaroo.flutterplugin.android.features.getPublicCampaign.GetPublicCampaignHandler
 import com.kangaroo.flutterplugin.android.features.publicOffer.PublicOfferHandler
 import com.kangaroo.flutterplugin.android.features.publicOffers.PublicOffersHandler
 import com.kangaroo.flutterplugin.android.features.publicProducts.PublicProductsHandler
 import com.kangaroo.flutterplugin.android.features.getPublicPromotions.GetPublicPromotionsHandler
+import com.kangaroo.flutterplugin.android.features.getPublicQrCodeScanToken.GetPublicQrCodeScanTokenHandler
 import com.kangaroo.flutterplugin.android.features.publicReward.PublicRewardHandler
 import com.kangaroo.flutterplugin.android.features.publicRewards.PublicRewardsHandler
 import com.kangaroo.flutterplugin.android.features.socialMediaLinks.SocialMediaLinksHandler
@@ -61,6 +65,7 @@ import com.kangaroo.flutterplugin.android.features.userUsedCoupons.UserUsedCoupo
 import com.kangaroo.flutterplugin.android.features.makePayPalPayment.PayPalPaymentHandler
 import com.kangaroo.flutterplugin.android.features.performSocialMediaAction.SocialMediaActionPerformHandler
 import com.kangaroo.flutterplugin.android.features.postOfferFacebookShare.OfferFacebookShareHandler
+import com.kangaroo.flutterplugin.android.features.publicDepositGiftCard.PublicDepositGiftCardHandler
 import com.kangaroo.flutterplugin.android.features.makeGiftCardPurchase.GiftCardPurchaseHandler
 import com.kangaroo.flutterplugin.android.features.userTransferRecall.TransferRecallHandler
 import com.kangaroo.flutterplugin.android.features.redeemCoupon.RedeemCouponsHandler
@@ -68,8 +73,11 @@ import com.kangaroo.flutterplugin.android.features.redeemReward.RedeemRewardsHan
 import com.kangaroo.flutterplugin.android.features.pushTokenRegistration.PushTokenRegistrationHandler
 import com.kangaroo.flutterplugin.android.features.userPinResetRequest.UserPinResetRequestHandler
 import com.kangaroo.flutterplugin.android.features.userPinResetWithVerificationCode.UserPinResetHandler
+import com.kangaroo.flutterplugin.android.features.userPinResetWithToken.UserPinResetWithTokenHandler
+import com.kangaroo.flutterplugin.android.features.publicQrCodeScan.ScanningPublicQrCodeHandler
 import com.kangaroo.flutterplugin.android.features.userScanReceipt.UserScanReceiptHandler
 import com.kangaroo.flutterplugin.android.features.userBalanceTransfer.BalanceTransferHandler
+import com.kangaroo.flutterplugin.android.features.triggerGeofence.TriggerGeofencesHandler
 import com.kangaroo.flutterplugin.android.features.userUnsubscribe.UserUnsubscribeHandler
 import com.kangaroo.flutterplugin.android.features.updateDefaultBusinessId.UpdateDefaultBusinessIdHandler
 import com.kangaroo.flutterplugin.android.features.userNotificationPreferencesUpdate.UpdateNotificationPreferencesHandler
@@ -99,9 +107,13 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     BranchesHandler(),
 
+    GeofencesHandler(),
+
     BusinessesHandler(),
 
     CampaignMessagesHandler(),
+
+    ConglomerateMembershipsHandler(),
 
     GetConglomerateNotificationPreferencesHandler(),
 
@@ -127,6 +139,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     PublicBusinessSettingsHandler(),
 
+    GetPublicCampaignHandler(),
+
     PublicOfferHandler(),
 
     PublicOffersHandler(),
@@ -134,6 +148,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     PublicProductsHandler(),
 
     GetPublicPromotionsHandler(),
+
+    GetPublicQrCodeScanTokenHandler(),
 
     PublicRewardHandler(),
 
@@ -195,6 +211,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     OfferFacebookShareHandler(),
 
+    PublicDepositGiftCardHandler(),
+
     GiftCardPurchaseHandler(),
 
     TransferRecallHandler(),
@@ -209,9 +227,15 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     UserPinResetHandler(),
 
+    UserPinResetWithTokenHandler(),
+
+    ScanningPublicQrCodeHandler(),
+
     UserScanReceiptHandler(),
 
     BalanceTransferHandler(),
+
+    TriggerGeofencesHandler(),
 
     UserUnsubscribeHandler(),
 

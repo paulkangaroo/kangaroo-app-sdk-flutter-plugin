@@ -34,12 +34,13 @@ PublicRewardModel _$PublicRewardModelFromJson(Map<String, dynamic> json) =>
             'terms_conditions',
             'link',
             'reward_languages',
-            'branch'
+            'branch',
+            'business'
           ],
         );
         final val = PublicRewardModel(
-          id: $checkedConvert('id', (v) => v as int?),
-          points: $checkedConvert('points', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           publishAt: $checkedConvert('publish_at', (v) => v as String?),
           expiresAt: $checkedConvert('expires_at', (v) => v as String?),
           isPublished: $checkedConvert('is_published', (v) => v as bool?),
@@ -49,8 +50,8 @@ PublicRewardModel _$PublicRewardModelFromJson(Map<String, dynamic> json) =>
           discountValue:
               $checkedConvert('discount_value', (v) => (v as num?)?.toDouble()),
           partnerReward: $checkedConvert('partner_reward', (v) => v as bool?),
-          partnerRewardType:
-              $checkedConvert('partner_reward_type', (v) => v as int?),
+          partnerRewardType: $checkedConvert(
+              'partner_reward_type', (v) => (v as num?)?.toInt()),
           redeemForGiftCard:
               $checkedConvert('redeem_for_gift_card', (v) => v as bool?),
           type: $checkedConvert('type', (v) => v as String?),
@@ -78,6 +79,11 @@ PublicRewardModel _$PublicRewardModelFromJson(Map<String, dynamic> json) =>
               (v) => v == null
                   ? null
                   : Branch.fromJson(v as Map<String, dynamic>)),
+          business: $checkedConvert(
+              'business',
+              (v) => v == null
+                  ? null
+                  : BusinessData.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -120,4 +126,5 @@ Map<String, dynamic> _$PublicRewardModelToJson(PublicRewardModel instance) =>
       'reward_languages':
           instance.rewardLanguages?.map((e) => e.toJson()).toList(),
       'branch': instance.branch?.toJson(),
+      'business': instance.business?.toJson(),
     };

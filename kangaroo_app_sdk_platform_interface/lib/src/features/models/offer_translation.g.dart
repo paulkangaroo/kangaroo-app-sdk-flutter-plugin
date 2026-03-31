@@ -29,8 +29,9 @@ OfferTranslation _$OfferTranslationFromJson(Map<String, dynamic> json) =>
           ],
         );
         final val = OfferTranslation(
-          id: $checkedConvert('id', (v) => v as int),
-          languageId: $checkedConvert('language_id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
+          languageId:
+              $checkedConvert('language_id', (v) => (v as num?)?.toInt()),
           offerTitle: $checkedConvert('offer_title', (v) => v as String?),
           offerDescription:
               $checkedConvert('offer_description', (v) => v as String?),

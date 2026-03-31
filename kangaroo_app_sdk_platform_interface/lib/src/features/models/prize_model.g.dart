@@ -18,7 +18,7 @@ PrizeModel _$PrizeModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           fillStyle: $checkedConvert('fill_style', (v) => v as String?),
           text: $checkedConvert('text', (v) => v as String?),
           desc: $checkedConvert('desc', (v) => v as String?),
-          prizeId: $checkedConvert('prize_id', (v) => v as int?),
+          prizeId: $checkedConvert('prize_id', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

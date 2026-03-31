@@ -15,7 +15,7 @@ UserBalance _$UserBalanceFromJson(Map<String, dynamic> json) => $checkedCreate(
           allowedKeys: const ['points', 'giftcard'],
         );
         final val = UserBalance(
-          points: $checkedConvert('points', (v) => v as int?),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           giftcard: $checkedConvert('giftcard', (v) => (v as num?)?.toDouble()),
         );
         return val;

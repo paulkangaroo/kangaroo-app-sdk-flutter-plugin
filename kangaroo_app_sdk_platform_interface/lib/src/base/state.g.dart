@@ -8,7 +8,7 @@ part of 'state.dart';
 
 State _$StateFromJson(Map<String, dynamic> json) => State(
       type: json['type'] as String,
-      code: json['code'] as int,
+      code: (json['code'] as num).toInt(),
       msg: json['msg'] as String,
     );
 

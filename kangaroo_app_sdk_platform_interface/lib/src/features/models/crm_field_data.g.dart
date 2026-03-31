@@ -26,7 +26,7 @@ CrmFieldData _$CrmFieldDataFromJson(Map<String, dynamic> json) =>
           ],
         );
         final val = CrmFieldData(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           name: $checkedConvert('name', (v) => v as String?),
           label: $checkedConvert('label', (v) => v as String?),
           value: $checkedConvert('value', (v) => v as String?),
@@ -34,7 +34,8 @@ CrmFieldData _$CrmFieldDataFromJson(Map<String, dynamic> json) =>
           isRequired: $checkedConvert('is_required', (v) => v as bool?),
           fieldType: $checkedConvert('field_type', (v) => v as String?),
           isCustomField: $checkedConvert('is_custom_field', (v) => v as bool?),
-          displayOrder: $checkedConvert('display_order', (v) => v as int?),
+          displayOrder:
+              $checkedConvert('display_order', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

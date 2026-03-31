@@ -16,7 +16,8 @@ TierPerkTranslation _$TierPerkTranslationFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['language_id', 'title', 'language'],
         );
         final val = TierPerkTranslation(
-          languageId: $checkedConvert('language_id', (v) => v as int?),
+          languageId:
+              $checkedConvert('language_id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
           language: $checkedConvert(
               'language',

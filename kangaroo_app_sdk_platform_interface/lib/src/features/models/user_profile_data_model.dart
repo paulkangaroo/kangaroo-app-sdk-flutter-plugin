@@ -2,7 +2,13 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/profiles_data_model.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/profiles_data_model.dart';
 
 part 'user_profile_data_model.g.dart';
 
@@ -73,6 +79,13 @@ class UserProfileDataModel {
   @JsonKey(name: "phone_verified")
   final bool? phoneVerified;
 
+  @JsonKey(name: "business")
+  final BusinessData? business;
+
+  ///A list business this user is associated to 
+  @JsonKey(name: "profiles")
+  final List<ProfilesDataModel>? profiles;
+
   UserProfileDataModel({
     required this.id,
     required this.email,
@@ -90,6 +103,8 @@ class UserProfileDataModel {
     required this.enabled,
     required this.emailVerified,
     required this.phoneVerified,
+    required this.business,
+    required this.profiles,
   });
 
   factory UserProfileDataModel.fromJson(Map<String, dynamic> data) => _$UserProfileDataModelFromJson(data);

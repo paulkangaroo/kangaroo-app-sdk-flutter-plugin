@@ -23,7 +23,7 @@ TransferDataModel _$TransferDataModelFromJson(Map<String, dynamic> json) =>
           ],
         );
         final val = TransferDataModel(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
           name: $checkedConvert('name', (v) => v as String?),
           createdAt: $checkedConvert('created_at', (v) => v as String?),

@@ -16,8 +16,8 @@ RedemptionModel _$RedemptionModelFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['id', 'quantity'],
         );
         final val = RedemptionModel(
-          id: $checkedConvert('id', (v) => v as int),
-          quantity: $checkedConvert('quantity', (v) => v as int),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
+          quantity: $checkedConvert('quantity', (v) => (v as num).toInt()),
         );
         return val;
       },

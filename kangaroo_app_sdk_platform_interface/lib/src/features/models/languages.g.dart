@@ -20,7 +20,8 @@ Languages _$LanguagesFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = Languages(
-          languageId: $checkedConvert('language_id', (v) => v as int?),
+          languageId:
+              $checkedConvert('language_id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
           language: $checkedConvert(

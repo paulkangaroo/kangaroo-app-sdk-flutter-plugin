@@ -22,11 +22,14 @@ UserTierLevel _$UserTierLevelFromJson(Map<String, dynamic> json) =>
           ],
         );
         final val = UserTierLevel(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           name: $checkedConvert('name', (v) => v as String?),
-          reachSpend: $checkedConvert('reach_spend', (v) => v as int?),
-          reachVisits: $checkedConvert('reach_visits', (v) => v as int?),
-          reachPoints: $checkedConvert('reach_points', (v) => v as int?),
+          reachSpend:
+              $checkedConvert('reach_spend', (v) => (v as num?)?.toInt()),
+          reachVisits:
+              $checkedConvert('reach_visits', (v) => (v as num?)?.toInt()),
+          reachPoints:
+              $checkedConvert('reach_points', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

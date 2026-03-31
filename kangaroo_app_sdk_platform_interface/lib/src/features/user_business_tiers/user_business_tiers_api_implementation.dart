@@ -12,12 +12,12 @@ class UserBusinessTiersApiFederated extends UserBusinessTiersApiInterface {
   @override
 Future<Result<UserProfileWithTierProgram>?> getUserBusinessTiers({ 
         final Map<String, String>? overrideHeaders,
-        required final String memberBusinessId
+        required final String businessId
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_business_tiers',
     {
       'overrideHeaders' : overrideHeaders,
-      'memberBusinessId' : memberBusinessId
+      'businessId' : businessId
     }
     );
 

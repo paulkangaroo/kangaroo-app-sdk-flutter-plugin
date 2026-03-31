@@ -33,7 +33,8 @@ NotificationSettingsData _$NotificationSettingsDataFromJson(
           allowEmail: $checkedConvert('allow_email', (v) => v as bool?),
           allowSms: $checkedConvert('allow_sms', (v) => v as bool?),
           allowPush: $checkedConvert('allow_push', (v) => v as bool?),
-          allowSmsStatus: $checkedConvert('allow_sms_status', (v) => v as int?),
+          allowSmsStatus:
+              $checkedConvert('allow_sms_status', (v) => (v as num?)?.toInt()),
         );
         return val;
       },

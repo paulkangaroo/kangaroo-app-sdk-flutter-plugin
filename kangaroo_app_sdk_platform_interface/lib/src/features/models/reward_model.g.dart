@@ -36,8 +36,8 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = RewardModel(
-          id: $checkedConvert('id', (v) => v as int?),
-          points: $checkedConvert('points', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           publishAt: $checkedConvert('publish_at', (v) => v as String?),
           expiresAt: $checkedConvert('expires_at', (v) => v as String?),
           isPublished: $checkedConvert('is_published', (v) => v as bool?),
@@ -47,8 +47,8 @@ RewardModel _$RewardModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           discountValue:
               $checkedConvert('discount_value', (v) => (v as num?)?.toDouble()),
           partnerReward: $checkedConvert('partner_reward', (v) => v as bool?),
-          partnerRewardType:
-              $checkedConvert('partner_reward_type', (v) => v as int?),
+          partnerRewardType: $checkedConvert(
+              'partner_reward_type', (v) => (v as num?)?.toInt()),
           redeemForGiftCard:
               $checkedConvert('redeem_for_gift_card', (v) => v as bool?),
           type: $checkedConvert('type', (v) => v as String?),

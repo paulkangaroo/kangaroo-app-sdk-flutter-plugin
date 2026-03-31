@@ -16,8 +16,8 @@ AlaCarteItemModel _$AlaCarteItemModelFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['id', 'points', 'product'],
         );
         final val = AlaCarteItemModel(
-          id: $checkedConvert('id', (v) => v as int?),
-          points: $checkedConvert('points', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           product: $checkedConvert(
               'product',
               (v) => v == null

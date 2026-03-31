@@ -8,7 +8,7 @@ import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
 import kotlin.js.ExperimentalJsExport
 import features.publicReward.PublicRewardApi
-import features.publicReward.models.PublicRewardModel
+import features.publicReward.models.PublicRewardResponseModel
 
 import features.publicReward.serializePublicRewardState
 import kangaroorewards.appsdk.core.domain.SerializedResult
@@ -37,7 +37,7 @@ class PublicRewardHandler : EventChannel.StreamHandler, PluginChannelHandler {
             val result = PublicRewardApi().getPublicReward(
                 overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 rewardSlug = call.argument<String>("rewardSlug") as String
-            ).toJsonResult<PublicRewardModel>()
+            ).toJsonResult<PublicRewardResponseModel>()
 
             return when (result) {
                 is SerializedResult.Success -> result.data

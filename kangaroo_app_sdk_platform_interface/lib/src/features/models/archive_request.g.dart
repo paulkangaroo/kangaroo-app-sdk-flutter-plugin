@@ -18,7 +18,7 @@ ArchiveRequest _$ArchiveRequestFromJson(Map<String, dynamic> json) =>
         final val = ArchiveRequest(
           businessId: $checkedConvert('business_id', (v) => v as String),
           type: $checkedConvert('type', (v) => v as String),
-          key: $checkedConvert('key', (v) => v as int),
+          key: $checkedConvert('key', (v) => (v as num).toInt()),
         );
         return val;
       },

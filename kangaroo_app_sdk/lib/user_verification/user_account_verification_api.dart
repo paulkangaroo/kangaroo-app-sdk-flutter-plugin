@@ -6,9 +6,8 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_verification/user_account_verification_platform_interface.dart';
 
 class UserAccountVerificationApi {
-  static Future<Result<UserProfileModel>?> verifyAccount({ 
+  static Future<Result<UserVerificationResponseModel>?> verifyAccount({ 
     final Map<String, String>? overrideHeaders,
-    required final String intent,
     required final String token,
     final String? email,
     final String? phone,
@@ -16,7 +15,6 @@ class UserAccountVerificationApi {
   }) {
     return UserAccountVerificationApiInterface.instance.verifyAccount( 
       overrideHeaders: overrideHeaders,
-      intent: intent,
       token: token,
       email: email,
       phone: phone,
@@ -24,7 +22,7 @@ class UserAccountVerificationApi {
     );
   }
 
-  static Stream<Result<UserProfileModel>> get userAccountVerificationStream {
+  static Stream<Result<UserVerificationResponseModel>> get userAccountVerificationStream {
     return UserAccountVerificationApiInterface.instance.userAccountVerificationStream;
   }
 }

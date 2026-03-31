@@ -30,7 +30,9 @@ UserProfileDataModel _$UserProfileDataModelFromJson(
             'updated_at',
             'enabled',
             'email_verified',
-            'phone_verified'
+            'phone_verified',
+            'business',
+            'profiles'
           ],
         );
         final val = UserProfileDataModel(
@@ -50,6 +52,17 @@ UserProfileDataModel _$UserProfileDataModelFromJson(
           enabled: $checkedConvert('enabled', (v) => v as bool?),
           emailVerified: $checkedConvert('email_verified', (v) => v as bool?),
           phoneVerified: $checkedConvert('phone_verified', (v) => v as bool?),
+          business: $checkedConvert(
+              'business',
+              (v) => v == null
+                  ? null
+                  : BusinessData.fromJson(v as Map<String, dynamic>)),
+          profiles: $checkedConvert(
+              'profiles',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      ProfilesDataModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
         );
         return val;
       },
@@ -85,4 +98,6 @@ Map<String, dynamic> _$UserProfileDataModelToJson(
       'enabled': instance.enabled,
       'email_verified': instance.emailVerified,
       'phone_verified': instance.phoneVerified,
+      'business': instance.business?.toJson(),
+      'profiles': instance.profiles?.map((e) => e.toJson()).toList(),
     };

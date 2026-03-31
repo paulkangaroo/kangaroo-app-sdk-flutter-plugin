@@ -14,19 +14,20 @@ ScanReceiptResponseModel _$ScanReceiptResponseModelFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          allowedKeys: const ['qr_code_info'],
+          allowedKeys: const ['data'],
         );
         final val = ScanReceiptResponseModel(
-          qrCodeInfo: $checkedConvert('qr_code_info',
-              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          data: $checkedConvert(
+              'data',
+              (v) => ScanReceiptResponseDataModel.fromJson(
+                  v as Map<String, dynamic>)),
         );
         return val;
       },
-      fieldKeyMap: const {'qrCodeInfo': 'qr_code_info'},
     );
 
 Map<String, dynamic> _$ScanReceiptResponseModelToJson(
         ScanReceiptResponseModel instance) =>
     <String, dynamic>{
-      'qr_code_info': instance.qrCodeInfo,
+      'data': instance.data.toJson(),
     };

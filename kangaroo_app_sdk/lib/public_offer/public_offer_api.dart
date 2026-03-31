@@ -6,7 +6,7 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_plat
 export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_offer/public_offer_platform_interface.dart';
 
 class PublicOfferApi {
-  static Future<Result<PublicOfferModel>?> getPublicOffer({ 
+  static Future<Result<PublicOfferResponseModel>?> getPublicOffer({ 
     final Map<String, String>? overrideHeaders,
     required final String offerSlug,
   }) {
@@ -16,7 +16,7 @@ class PublicOfferApi {
     );
   }
 
-  static Stream<Result<PublicOfferModel>> get publicOfferStream {
+  static Stream<Result<PublicOfferResponseModel>> get publicOfferStream {
     return PublicOfferApiInterface.instance.publicOfferStream;
   }
 }

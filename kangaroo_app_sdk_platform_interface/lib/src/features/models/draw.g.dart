@@ -28,7 +28,7 @@ Draw _$DrawFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = Draw(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           startDate: $checkedConvert('start_date', (v) => v as String?),
           endDate: $checkedConvert('end_date', (v) => v as String?),
           title: $checkedConvert('title', (v) => v as String?),

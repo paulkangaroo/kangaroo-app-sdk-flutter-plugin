@@ -12,7 +12,7 @@ part of 'result.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$Result<T> {
@@ -89,6 +89,9 @@ class _$ResultCopyWithImpl<T, $Res, $Val extends Result<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -105,6 +108,9 @@ class __$$IdleImplCopyWithImpl<T, $Res>
   __$$IdleImplCopyWithImpl(
       _$IdleImpl<T> _value, $Res Function(_$IdleImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -120,11 +126,11 @@ class _$IdleImpl<T> with DiagnosticableTreeMixin implements Idle<T> {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'Result<$T>.idle'));
+    properties..add(DiagnosticsProperty('type', 'Result<$T>.idle'));
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$IdleImpl<T>);
   }
@@ -231,6 +237,9 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -246,11 +255,11 @@ class _$LoadingImpl<T> with DiagnosticableTreeMixin implements Loading<T> {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'Result<$T>.loading'));
+    properties..add(DiagnosticsProperty('type', 'Result<$T>.loading'));
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$LoadingImpl<T>);
   }
@@ -360,6 +369,8 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
       _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -396,7 +407,7 @@ class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl<T> &&
@@ -407,7 +418,9 @@ class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
@@ -498,7 +511,10 @@ abstract class Success<T> implements Result<T> {
   const factory Success({final T? data}) = _$SuccessImpl<T>;
 
   T? get data;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -520,6 +536,8 @@ class __$$UnauthorizedImplCopyWithImpl<T, $Res>
       _$UnauthorizedImpl<T> _value, $Res Function(_$UnauthorizedImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -568,7 +586,7 @@ class _$UnauthorizedImpl<T>
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UnauthorizedImpl<T> &&
@@ -579,7 +597,9 @@ class _$UnauthorizedImpl<T>
   @override
   int get hashCode => Object.hash(runtimeType, code, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UnauthorizedImplCopyWith<T, _$UnauthorizedImpl<T>> get copyWith =>
@@ -673,7 +693,10 @@ abstract class Unauthorized<T> implements Result<T> {
 
   int get code;
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnauthorizedImplCopyWith<T, _$UnauthorizedImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -695,6 +718,8 @@ class __$$ErrorImplCopyWithImpl<T, $Res>
       _$ErrorImpl<T> _value, $Res Function(_$ErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -741,7 +766,7 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl<T> &&
@@ -752,7 +777,9 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
   @override
   int get hashCode => Object.hash(runtimeType, code, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
@@ -844,7 +871,10 @@ abstract class Error<T> implements Result<T> {
 
   int get code;
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Result
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

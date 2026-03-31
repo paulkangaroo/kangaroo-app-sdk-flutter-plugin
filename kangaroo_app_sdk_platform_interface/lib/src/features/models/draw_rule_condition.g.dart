@@ -16,7 +16,7 @@ DrawRuleCondition _$DrawRuleConditionFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['id', 'title', 'description', 'languages'],
         );
         final val = DrawRuleCondition(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
           languages: $checkedConvert(

@@ -10,6 +10,14 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_mo
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_category.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch.dart';
+
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_balance.dart';
+
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_level.dart';
+
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/rewards.dart';
+
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
@@ -17,6 +25,14 @@ export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_mo
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_category.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/user_balance.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/tier_level.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/rewards.dart';
 
 part 'business_data.g.dart';
 
@@ -59,6 +75,22 @@ class BusinessData {
   @JsonKey(name: "category")
   final BusinessCategory? category;
 
+  ///The default branch for this business 
+  @JsonKey(name: "default_branch")
+  final Branch? defaultBranch;
+
+  ///The users point and gift card balance 
+  @JsonKey(name: "balance")
+  final UserBalance? balance;
+
+  ///The users tier status 
+  @JsonKey(name: "tier_level")
+  final TierLevel? tierLevel;
+
+  ///Contains a list of all rewards available to this user 
+  @JsonKey(name: "catalog_items")
+  final Rewards? catalogItems;
+
   BusinessData({
     required this.id,
     required this.name,
@@ -70,6 +102,10 @@ class BusinessData {
     required this.logoTransparentBackground,
     required this.coverPhoto,
     required this.category,
+    required this.defaultBranch,
+    required this.balance,
+    required this.tierLevel,
+    required this.catalogItems,
   });
 
   factory BusinessData.fromJson(Map<String, dynamic> data) => _$BusinessDataFromJson(data);

@@ -25,10 +25,10 @@ DrawPrize _$DrawPrizeFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = DrawPrize(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
-          drawId: $checkedConvert('draw_id', (v) => v as int?),
+          drawId: $checkedConvert('draw_id', (v) => (v as num?)?.toInt()),
           offer: $checkedConvert(
               'offer',
               (v) => v == null

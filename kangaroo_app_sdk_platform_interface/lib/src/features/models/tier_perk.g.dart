@@ -24,11 +24,12 @@ TierPerk _$TierPerkFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = TierPerk(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           title: $checkedConvert('title', (v) => v as String?),
-          tierId: $checkedConvert('tier_id', (v) => v as int?),
-          offerId: $checkedConvert('offer_id', (v) => v as int?),
-          punchItemId: $checkedConvert('punch_item_id', (v) => v as int?),
+          tierId: $checkedConvert('tier_id', (v) => (v as num?)?.toInt()),
+          offerId: $checkedConvert('offer_id', (v) => (v as num?)?.toInt()),
+          punchItemId:
+              $checkedConvert('punch_item_id', (v) => (v as num?)?.toInt()),
           enabled: $checkedConvert('enabled', (v) => v as bool?),
           isExpired: $checkedConvert('is_expired', (v) => v as bool?),
           languages: $checkedConvert(

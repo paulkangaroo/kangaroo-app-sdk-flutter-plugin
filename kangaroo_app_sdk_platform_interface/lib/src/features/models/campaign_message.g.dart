@@ -25,7 +25,7 @@ CampaignMessage _$CampaignMessageFromJson(Map<String, dynamic> json) =>
         );
         final val = CampaignMessage(
           id: $checkedConvert('id', (v) => v as String?),
-          cellEmail: $checkedConvert('cell_email', (v) => v as int?),
+          cellEmail: $checkedConvert('cell_email', (v) => (v as num?)?.toInt()),
           subject: $checkedConvert('subject', (v) => v as String?),
           sentAt: $checkedConvert('sent_at', (v) => v as String?),
           archived: $checkedConvert('archived', (v) => v as bool?),

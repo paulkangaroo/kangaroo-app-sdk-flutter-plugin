@@ -2,7 +2,9 @@
 /// This code was generated for the Kangaroo Mobile SDK Flutter Plugin. Do not modify these files.
 
 import 'package:json_annotation/json_annotation.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/transaction_details.dart';
 
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/transaction_details.dart';
 
 part 'transaction.g.dart';
 
@@ -37,6 +39,9 @@ class Transaction {
   @JsonKey(name: "updated_at")
   final String? updatedAt;
 
+  @JsonKey(name: "transaction_details")
+  final TransactionDetails? transactionDetails;
+
   Transaction({
     required this.id,
     required this.amount,
@@ -45,6 +50,7 @@ class Transaction {
     required this.transactionType,
     required this.createdAt,
     required this.updatedAt,
+    required this.transactionDetails,
   });
 
   factory Transaction.fromJson(Map<String, dynamic> data) => _$TransactionFromJson(data);

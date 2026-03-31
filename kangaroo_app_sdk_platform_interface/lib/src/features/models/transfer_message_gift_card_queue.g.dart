@@ -27,12 +27,12 @@ TransferMessageGiftCardQueue _$TransferMessageGiftCardQueueFromJson(
           ],
         );
         final val = TransferMessageGiftCardQueue(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           enabled: $checkedConvert('enabled', (v) => v as bool?),
           senderName: $checkedConvert('sender_name', (v) => v as String?),
           recipientName: $checkedConvert('recipient_name', (v) => v as String?),
           emailPhone: $checkedConvert('email_phone', (v) => v as String?),
-          points: $checkedConvert('points', (v) => v as int?),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
           createdAt: $checkedConvert('created_at', (v) => v as String?),
           scheduledAt: $checkedConvert('scheduled_at', (v) => v as String?),

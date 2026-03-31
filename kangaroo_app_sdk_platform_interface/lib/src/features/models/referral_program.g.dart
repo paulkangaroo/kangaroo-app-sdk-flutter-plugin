@@ -26,13 +26,15 @@ ReferralProgram _$ReferralProgramFromJson(Map<String, dynamic> json) =>
           ],
         );
         final val = ReferralProgram(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           ruleName: $checkedConvert('rule_name', (v) => v as String?),
           condMinAmount: $checkedConvert(
               'cond_min_amount', (v) => (v as num?)?.toDouble()),
-          refereeEarns: $checkedConvert('referee_earns', (v) => v as int?),
-          refererEarns: $checkedConvert('referer_earns', (v) => v as int?),
-          expiresIn: $checkedConvert('expires_in', (v) => v as int?),
+          refereeEarns:
+              $checkedConvert('referee_earns', (v) => (v as num?)?.toInt()),
+          refererEarns:
+              $checkedConvert('referer_earns', (v) => (v as num?)?.toInt()),
+          expiresIn: $checkedConvert('expires_in', (v) => (v as num?)?.toInt()),
           enabled: $checkedConvert('enabled', (v) => v as bool?),
           linkReferralEnabled:
               $checkedConvert('link_referral_enabled', (v) => v as bool?),

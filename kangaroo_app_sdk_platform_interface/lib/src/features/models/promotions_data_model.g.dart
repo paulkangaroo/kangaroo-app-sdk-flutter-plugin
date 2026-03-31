@@ -16,7 +16,7 @@ PromotionsDataModel _$PromotionsDataModelFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['id', 'name', 'offers', 'rewards'],
         );
         final val = PromotionsDataModel(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           name: $checkedConvert('name', (v) => v as String?),
           offers: $checkedConvert(
               'offers',

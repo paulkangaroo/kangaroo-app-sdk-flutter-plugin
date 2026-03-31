@@ -11,8 +11,10 @@ import 'user_ala_carte/ala_carte_products_handler.dart';
 import 'banners/banners_handler.dart';
 import 'business/business_handler.dart';
 import 'branches/branches_handler.dart';
+import 'geofences/geofences_handler.dart';
 import 'business_list/businesses_handler.dart';
 import 'user_campaign_messages/campaign_messages_handler.dart';
+import 'conglomerate_memberships/conglomerate_memberships_handler.dart';
 import 'user_conglomerate_notification_preferences/get_conglomerate_notification_preferences_handler.dart';
 import 'countries/countries_handler.dart';
 import 'get_crm_fields/get_crm_fields_handler.dart';
@@ -25,10 +27,12 @@ import 'public_a_la_carte_products/public_ala_carte_products_handler.dart';
 import 'public_banners/public_banners_handler.dart';
 import 'public_branches/public_branches_handler.dart';
 import 'public_business_settings/public_business_settings_handler.dart';
+import 'get_public_campaign/get_public_campaign_handler.dart';
 import 'public_offer/public_offer_handler.dart';
 import 'public_offers/public_offers_handler.dart';
 import 'public_products/public_products_handler.dart';
 import 'get_public_promotions/get_public_promotions_handler.dart';
+import 'get_public_qr_code_scan_token/get_public_qr_code_scan_token_handler.dart';
 import 'public_reward/public_reward_handler.dart';
 import 'public_rewards/public_rewards_handler.dart';
 import 'social_media_links/social_media_links_handler.dart';
@@ -59,6 +63,7 @@ import 'user_used_coupons/user_used_coupons_handler.dart';
 import 'make_pay_pal_payment/pay_pal_payment_handler.dart';
 import 'perform_social_media_action/social_media_action_perform_handler.dart';
 import 'post_offer_facebook_share/offer_facebook_share_handler.dart';
+import 'public_deposit_gift_card/public_deposit_gift_card_handler.dart';
 import 'make_gift_card_purchase/gift_card_purchase_handler.dart';
 import 'user_transfer_recall/transfer_recall_handler.dart';
 import 'redeem_coupon/redeem_coupons_handler.dart';
@@ -66,8 +71,11 @@ import 'redeem_reward/redeem_rewards_handler.dart';
 import 'push_token_registration/push_token_registration_handler.dart';
 import 'user_pin_reset_request/user_pin_reset_request_handler.dart';
 import 'user_pin_reset_with_verification_code/user_pin_reset_handler.dart';
+import 'user_pin_reset_with_token/user_pin_reset_with_token_handler.dart';
+import 'public_qr_code_scan/scanning_public_qr_code_handler.dart';
 import 'user_scan_receipt/user_scan_receipt_handler.dart';
 import 'user_balance_transfer/balance_transfer_handler.dart';
+import 'trigger_geofence/trigger_geofences_handler.dart';
 import 'user_unsubscribe/user_unsubscribe_handler.dart';
 import 'update_default_business_id/update_default_business_id_handler.dart';
 import 'user_notification_preferences_update/update_notification_preferences_handler.dart';
@@ -98,9 +106,13 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   BranchesHandler(),
 
+  GeofencesHandler(),
+
   BusinessesHandler(),
 
   CampaignMessagesHandler(),
+
+  ConglomerateMembershipsHandler(),
 
   GetConglomerateNotificationPreferencesHandler(),
 
@@ -126,6 +138,8 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   PublicBusinessSettingsHandler(),
 
+  GetPublicCampaignHandler(),
+
   PublicOfferHandler(),
 
   PublicOffersHandler(),
@@ -133,6 +147,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   PublicProductsHandler(),
 
   GetPublicPromotionsHandler(),
+
+  GetPublicQrCodeScanTokenHandler(),
 
   PublicRewardHandler(),
 
@@ -194,6 +210,8 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   OfferFacebookShareHandler(),
 
+  PublicDepositGiftCardHandler(),
+
   GiftCardPurchaseHandler(),
 
   TransferRecallHandler(),
@@ -208,9 +226,15 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   UserPinResetHandler(),
 
+  UserPinResetWithTokenHandler(),
+
+  ScanningPublicQrCodeHandler(),
+
   UserScanReceiptHandler(),
 
   BalanceTransferHandler(),
+
+  TriggerGeofencesHandler(),
 
   UserUnsubscribeHandler(),
 

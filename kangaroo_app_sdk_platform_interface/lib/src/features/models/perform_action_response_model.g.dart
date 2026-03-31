@@ -17,7 +17,7 @@ PerformActionResponseModel _$PerformActionResponseModelFromJson(
           allowedKeys: const ['id', 'status'],
         );
         final val = PerformActionResponseModel(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           status: $checkedConvert('status', (v) => v as String?),
         );
         return val;

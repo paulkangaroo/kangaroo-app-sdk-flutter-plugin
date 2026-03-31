@@ -26,12 +26,12 @@ CouponRedemptionResponseData _$CouponRedemptionResponseDataFromJson(
           ],
         );
         final val = CouponRedemptionResponseData(
-          id: $checkedConvert('id', (v) => v as int),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
           amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
-          points: $checkedConvert('points', (v) => v as int?),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           name: $checkedConvert('name', (v) => v as String?),
           transactionType:
-              $checkedConvert('transaction_type', (v) => v as int?),
+              $checkedConvert('transaction_type', (v) => (v as num?)?.toInt()),
           createdAt: $checkedConvert('created_at', (v) => v as String?),
           updatedAt: $checkedConvert('updated_at', (v) => v as String?),
           customer: $checkedConvert(

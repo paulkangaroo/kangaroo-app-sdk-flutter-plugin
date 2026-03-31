@@ -29,11 +29,11 @@ TransferMessage _$TransferMessageFromJson(Map<String, dynamic> json) =>
           ],
         );
         final val = TransferMessage(
-          id: $checkedConvert('id', (v) => v as int?),
-          typeId: $checkedConvert('type_id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
+          typeId: $checkedConvert('type_id', (v) => (v as num?)?.toInt()),
           type: $checkedConvert('type', (v) => v as String?),
           description: $checkedConvert('description', (v) => v as String?),
-          points: $checkedConvert('points', (v) => v as int?),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
           hidden: $checkedConvert('hidden', (v) => v as bool?),
           createdAt: $checkedConvert('created_at', (v) => v as String?),

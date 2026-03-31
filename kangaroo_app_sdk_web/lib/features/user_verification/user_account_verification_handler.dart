@@ -24,7 +24,6 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
   @override
   verifyAccount({ 
       final Map<String, String>? overrideHeaders,
-        required final String intent,
         required final String token,
         final String? email,
         final String? phone,
@@ -33,8 +32,7 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
     final Future<String?> request = promiseToFuture<String?>(
         UserAccountVerificationApi().verifyAccount(
         jsonEncode(overrideHeaders),
-        intent,
-      token,
+        token,
       email,
       phone,
       countryCode
@@ -46,7 +44,7 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
   }
 
   @override
-  Stream<Result<UserProfileModel>> get userAccountVerificationStream {
+  Stream<Result<UserVerificationResponseModel>> get userAccountVerificationStream {
     var controller = StreamController<String>();
 
     UserAccountVerificationApi().observeUserAccountVerificationState(
@@ -57,12 +55,12 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
     return controller.stream.distinct().map((event) {
       dynamic result;
       try {
-        result = UserProfileModel.fromJson(jsonDecode(event));
+        result = UserVerificationResponseModel.fromJson(jsonDecode(event));
       } catch (error) {
         result = State.fromJson(jsonDecode(event));
       }
       switch (result.runtimeType) {
-        case UserProfileModel:
+        case UserVerificationResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);
@@ -79,7 +77,6 @@ class UserAccountVerificationApi {
 
   external dynamic verifyAccount( 
         String? overrideHeaders, 
-        String intent,
         String token,
         String? email,
         String? phone,

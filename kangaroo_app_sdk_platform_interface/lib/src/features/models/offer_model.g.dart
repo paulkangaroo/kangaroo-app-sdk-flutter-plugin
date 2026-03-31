@@ -43,8 +43,8 @@ OfferModel _$OfferModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = OfferModel(
-          id: $checkedConvert('id', (v) => v as int),
-          points: $checkedConvert('points', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
           publishAt: $checkedConvert('publish_at', (v) => v as String?),
           expiresAt: $checkedConvert('expires_at', (v) => v as String?),
           isPublished: $checkedConvert('is_published', (v) => v as bool?),
@@ -63,8 +63,8 @@ OfferModel _$OfferModelFromJson(Map<String, dynamic> json) => $checkedCreate(
           appsOnly: $checkedConvert('apps_only', (v) => v as bool?),
           isCouponRedeemed:
               $checkedConvert('is_coupon_redeemed', (v) => v as bool?),
-          offerFrequencyId:
-              $checkedConvert('offer_frequency_id', (v) => v as int?),
+          offerFrequencyId: $checkedConvert(
+              'offer_frequency_id', (v) => (v as num?)?.toInt()),
           freqDetails: $checkedConvert('freq_details',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           peakFrom: $checkedConvert('peak_from', (v) => v as String?),

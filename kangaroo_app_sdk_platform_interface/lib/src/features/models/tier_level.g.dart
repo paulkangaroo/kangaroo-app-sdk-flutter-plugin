@@ -24,12 +24,14 @@ TierLevel _$TierLevelFromJson(Map<String, dynamic> json) => $checkedCreate(
           ],
         );
         final val = TierLevel(
-          id: $checkedConvert('id', (v) => v as int?),
+          id: $checkedConvert('id', (v) => (v as num?)?.toInt()),
           name: $checkedConvert('name', (v) => v as String?),
           reachSpend:
               $checkedConvert('reach_spend', (v) => (v as num?)?.toDouble()),
-          reachVisits: $checkedConvert('reach_visits', (v) => v as int?),
-          reachPoints: $checkedConvert('reach_points', (v) => v as int?),
+          reachVisits:
+              $checkedConvert('reach_visits', (v) => (v as num?)?.toInt()),
+          reachPoints:
+              $checkedConvert('reach_points', (v) => (v as num?)?.toInt()),
           icon: $checkedConvert('icon', (v) => v as String?),
           tierPerks: $checkedConvert(
               'tier_perks',

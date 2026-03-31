@@ -8,11 +8,15 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_t
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch.dart';
 
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
+
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/branch.dart';
+
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/business_data.dart';
 
 part 'public_reward_model.g.dart';
 
@@ -83,6 +87,9 @@ class PublicRewardModel {
   @JsonKey(name: "branch")
   final Branch? branch;
 
+  @JsonKey(name: "business")
+  final BusinessData? business;
+
   PublicRewardModel({
     required this.id,
     required this.points,
@@ -105,6 +112,7 @@ class PublicRewardModel {
     required this.link,
     required this.rewardLanguages,
     required this.branch,
+    required this.business,
   });
 
   factory PublicRewardModel.fromJson(Map<String, dynamic> data) => _$PublicRewardModelFromJson(data);

@@ -16,9 +16,9 @@ ArchiveResponseData _$ArchiveResponseDataFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['id', 'type', 'key', 'created_at'],
         );
         final val = ArchiveResponseData(
-          id: $checkedConvert('id', (v) => v as int),
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
           type: $checkedConvert('type', (v) => v as String?),
-          key: $checkedConvert('key', (v) => v as int?),
+          key: $checkedConvert('key', (v) => (v as num?)?.toInt()),
           createdAt: $checkedConvert('created_at', (v) => v as String?),
         );
         return val;

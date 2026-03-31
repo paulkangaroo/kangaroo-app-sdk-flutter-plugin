@@ -10,8 +10,8 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/public_offer/pu
 
 
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_offer_model.dart';
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_offer_model.dart';
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_offer_response_model.dart';
+export 'package:kangaroo_app_sdk_platform_interface/src/features/models/public_offer_response_model.dart';
 
 abstract class PublicOfferApiInterface extends PlatformInterface {
   PublicOfferApiInterface() : super(token: _token);
@@ -27,30 +27,30 @@ abstract class PublicOfferApiInterface extends PlatformInterface {
     _instance = instance;
   }
 
-Future<Result<PublicOfferModel>?> getPublicOffer({ 
+Future<Result<PublicOfferResponseModel>?> getPublicOffer({ 
         final Map<String, String>? overrideHeaders,
         required final String offerSlug,
     }) {
     throw UnimplementedError('getPublicOffer has not been implemented.');
   }
 
-  Stream<Result<PublicOfferModel>> get publicOfferStream {
+  Stream<Result<PublicOfferResponseModel>> get publicOfferStream {
     throw UnimplementedError('getPublicOfferStream has not been implemented.');
   }
 
-  static Future<Result<PublicOfferModel>?> deSerializedPlatformResponse(
+  static Future<Result<PublicOfferResponseModel>?> deSerializedPlatformResponse(
     Future<String?> response,
   ) async {
     final serializedResult = await response;
     if (serializedResult != null) {
       dynamic result;
       try {
-        result = PublicOfferModel.fromJson(jsonDecode(serializedResult));
+        result = PublicOfferResponseModel.fromJson(jsonDecode(serializedResult));
       } catch (error) {
         result = State.fromJson(jsonDecode(serializedResult));
       }
       switch (result.runtimeType) {
-        case PublicOfferModel:
+        case PublicOfferResponseModel:
           return Success(data: result);
         case State:
           return mapState(result as State);

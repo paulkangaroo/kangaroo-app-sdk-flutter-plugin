@@ -23,9 +23,13 @@ class PluginHandlerListHolder {
 
     BranchesHandler(),
 
+    GeofencesHandler(),
+
     BusinessesHandler(),
 
     CampaignMessagesHandler(),
+
+    ConglomerateMembershipsHandler(),
 
     GetConglomerateNotificationPreferencesHandler(),
 
@@ -51,6 +55,8 @@ class PluginHandlerListHolder {
 
     PublicBusinessSettingsHandler(),
 
+    GetPublicCampaignHandler(),
+
     PublicOfferHandler(),
 
     PublicOffersHandler(),
@@ -58,6 +64,8 @@ class PluginHandlerListHolder {
     PublicProductsHandler(),
 
     GetPublicPromotionsHandler(),
+
+    GetPublicQrCodeScanTokenHandler(),
 
     PublicRewardHandler(),
 
@@ -119,6 +127,8 @@ class PluginHandlerListHolder {
 
     OfferFacebookShareHandler(),
 
+    PublicDepositGiftCardHandler(),
+
     GiftCardPurchaseHandler(),
 
     TransferRecallHandler(),
@@ -133,9 +143,15 @@ class PluginHandlerListHolder {
 
     UserPinResetHandler(),
 
+    UserPinResetWithTokenHandler(),
+
+    ScanningPublicQrCodeHandler(),
+
     UserScanReceiptHandler(),
 
     BalanceTransferHandler(),
+
+    TriggerGeofencesHandler(),
 
     UserUnsubscribeHandler(),
 

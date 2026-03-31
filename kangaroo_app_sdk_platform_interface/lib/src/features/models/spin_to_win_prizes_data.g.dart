@@ -16,7 +16,8 @@ SpinToWinPrizesData _$SpinToWinPrizesDataFromJson(Map<String, dynamic> json) =>
           allowedKeys: const ['spin_win_id', 'spin_prizes'],
         );
         final val = SpinToWinPrizesData(
-          spinWinId: $checkedConvert('spin_win_id', (v) => v as int?),
+          spinWinId:
+              $checkedConvert('spin_win_id', (v) => (v as num?)?.toInt()),
           spinPrizes: $checkedConvert(
               'spin_prizes',
               (v) => (v as List<dynamic>?)
