@@ -22,7 +22,8 @@ mixin _$Result<T> {
     required TResult Function() loading,
     required TResult Function(T? data) success,
     required TResult Function(int code, String message) unauthorized,
-    required TResult Function(int code, String message) error,
+    required TResult Function(int code, String message, String description)
+        error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +32,7 @@ mixin _$Result<T> {
     TResult? Function()? loading,
     TResult? Function(T? data)? success,
     TResult? Function(int code, String message)? unauthorized,
-    TResult? Function(int code, String message)? error,
+    TResult? Function(int code, String message, String description)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +41,7 @@ mixin _$Result<T> {
     TResult Function()? loading,
     TResult Function(T? data)? success,
     TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult Function(int code, String message, String description)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -145,7 +146,8 @@ class _$IdleImpl<T> with DiagnosticableTreeMixin implements Idle<T> {
     required TResult Function() loading,
     required TResult Function(T? data) success,
     required TResult Function(int code, String message) unauthorized,
-    required TResult Function(int code, String message) error,
+    required TResult Function(int code, String message, String description)
+        error,
   }) {
     return idle();
   }
@@ -157,7 +159,7 @@ class _$IdleImpl<T> with DiagnosticableTreeMixin implements Idle<T> {
     TResult? Function()? loading,
     TResult? Function(T? data)? success,
     TResult? Function(int code, String message)? unauthorized,
-    TResult? Function(int code, String message)? error,
+    TResult? Function(int code, String message, String description)? error,
   }) {
     return idle?.call();
   }
@@ -169,7 +171,7 @@ class _$IdleImpl<T> with DiagnosticableTreeMixin implements Idle<T> {
     TResult Function()? loading,
     TResult Function(T? data)? success,
     TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult Function(int code, String message, String description)? error,
     required TResult orElse(),
   }) {
     if (idle != null) {
@@ -274,7 +276,8 @@ class _$LoadingImpl<T> with DiagnosticableTreeMixin implements Loading<T> {
     required TResult Function() loading,
     required TResult Function(T? data) success,
     required TResult Function(int code, String message) unauthorized,
-    required TResult Function(int code, String message) error,
+    required TResult Function(int code, String message, String description)
+        error,
   }) {
     return loading();
   }
@@ -286,7 +289,7 @@ class _$LoadingImpl<T> with DiagnosticableTreeMixin implements Loading<T> {
     TResult? Function()? loading,
     TResult? Function(T? data)? success,
     TResult? Function(int code, String message)? unauthorized,
-    TResult? Function(int code, String message)? error,
+    TResult? Function(int code, String message, String description)? error,
   }) {
     return loading?.call();
   }
@@ -298,7 +301,7 @@ class _$LoadingImpl<T> with DiagnosticableTreeMixin implements Loading<T> {
     TResult Function()? loading,
     TResult Function(T? data)? success,
     TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult Function(int code, String message, String description)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -433,7 +436,8 @@ class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
     required TResult Function() loading,
     required TResult Function(T? data) success,
     required TResult Function(int code, String message) unauthorized,
-    required TResult Function(int code, String message) error,
+    required TResult Function(int code, String message, String description)
+        error,
   }) {
     return success(data);
   }
@@ -445,7 +449,7 @@ class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
     TResult? Function()? loading,
     TResult? Function(T? data)? success,
     TResult? Function(int code, String message)? unauthorized,
-    TResult? Function(int code, String message)? error,
+    TResult? Function(int code, String message, String description)? error,
   }) {
     return success?.call(data);
   }
@@ -457,7 +461,7 @@ class _$SuccessImpl<T> with DiagnosticableTreeMixin implements Success<T> {
     TResult Function()? loading,
     TResult Function(T? data)? success,
     TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult Function(int code, String message, String description)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -613,7 +617,8 @@ class _$UnauthorizedImpl<T>
     required TResult Function() loading,
     required TResult Function(T? data) success,
     required TResult Function(int code, String message) unauthorized,
-    required TResult Function(int code, String message) error,
+    required TResult Function(int code, String message, String description)
+        error,
   }) {
     return unauthorized(code, message);
   }
@@ -625,7 +630,7 @@ class _$UnauthorizedImpl<T>
     TResult? Function()? loading,
     TResult? Function(T? data)? success,
     TResult? Function(int code, String message)? unauthorized,
-    TResult? Function(int code, String message)? error,
+    TResult? Function(int code, String message, String description)? error,
   }) {
     return unauthorized?.call(code, message);
   }
@@ -637,7 +642,7 @@ class _$UnauthorizedImpl<T>
     TResult Function()? loading,
     TResult Function(T? data)? success,
     TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult Function(int code, String message, String description)? error,
     required TResult orElse(),
   }) {
     if (unauthorized != null) {
@@ -707,7 +712,7 @@ abstract class _$$ErrorImplCopyWith<T, $Res> {
           _$ErrorImpl<T> value, $Res Function(_$ErrorImpl<T>) then) =
       __$$ErrorImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({int code, String message});
+  $Res call({int code, String message, String description});
 }
 
 /// @nodoc
@@ -725,6 +730,7 @@ class __$$ErrorImplCopyWithImpl<T, $Res>
   $Res call({
     Object? code = null,
     Object? message = null,
+    Object? description = null,
   }) {
     return _then(_$ErrorImpl<T>(
       code: null == code
@@ -735,6 +741,10 @@ class __$$ErrorImplCopyWithImpl<T, $Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -742,7 +752,10 @@ class __$$ErrorImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
-  const _$ErrorImpl({this.code = -1, this.message = 'unknown error'});
+  const _$ErrorImpl(
+      {this.code = -1,
+      this.message = 'unknown error',
+      this.description = 'unknown error'});
 
   @override
   @JsonKey()
@@ -750,10 +763,13 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
   @override
   @JsonKey()
   final String message;
+  @override
+  @JsonKey()
+  final String description;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Result<$T>.error(code: $code, message: $message)';
+    return 'Result<$T>.error(code: $code, message: $message, description: $description)';
   }
 
   @override
@@ -762,7 +778,8 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
     properties
       ..add(DiagnosticsProperty('type', 'Result<$T>.error'))
       ..add(DiagnosticsProperty('code', code))
-      ..add(DiagnosticsProperty('message', message));
+      ..add(DiagnosticsProperty('message', message))
+      ..add(DiagnosticsProperty('description', description));
   }
 
   @override
@@ -771,11 +788,13 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl<T> &&
             (identical(other.code, code) || other.code == code) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.description, description) ||
+                other.description == description));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, code, message);
+  int get hashCode => Object.hash(runtimeType, code, message, description);
 
   /// Create a copy of Result
   /// with the given fields replaced by the non-null parameter values.
@@ -792,9 +811,10 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
     required TResult Function() loading,
     required TResult Function(T? data) success,
     required TResult Function(int code, String message) unauthorized,
-    required TResult Function(int code, String message) error,
+    required TResult Function(int code, String message, String description)
+        error,
   }) {
-    return error(code, message);
+    return error(code, message, description);
   }
 
   @override
@@ -804,9 +824,9 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
     TResult? Function()? loading,
     TResult? Function(T? data)? success,
     TResult? Function(int code, String message)? unauthorized,
-    TResult? Function(int code, String message)? error,
+    TResult? Function(int code, String message, String description)? error,
   }) {
-    return error?.call(code, message);
+    return error?.call(code, message, description);
   }
 
   @override
@@ -816,11 +836,11 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
     TResult Function()? loading,
     TResult Function(T? data)? success,
     TResult Function(int code, String message)? unauthorized,
-    TResult Function(int code, String message)? error,
+    TResult Function(int code, String message, String description)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
-      return error(code, message);
+      return error(code, message, description);
     }
     return orElse();
   }
@@ -867,10 +887,14 @@ class _$ErrorImpl<T> with DiagnosticableTreeMixin implements Error<T> {
 }
 
 abstract class Error<T> implements Result<T> {
-  const factory Error({final int code, final String message}) = _$ErrorImpl<T>;
+  const factory Error(
+      {final int code,
+      final String message,
+      final String description}) = _$ErrorImpl<T>;
 
   int get code;
   String get message;
+  String get description;
 
   /// Create a copy of Result
   /// with the given fields replaced by the non-null parameter values.

@@ -19,5 +19,6 @@ abstract class Result<T> with _$Result<T> {
   const factory Result.error({
     @Default(-1) int code,
     @Default('unknown error') String message,
+    @Default('unknown error') String description,
   }) = Error<T>;
 }

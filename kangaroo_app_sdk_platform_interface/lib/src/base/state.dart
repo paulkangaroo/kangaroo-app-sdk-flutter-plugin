@@ -10,8 +10,13 @@ class State {
   final String type;
   final int code;
   final String msg;
+  final String description;
 
-  State({required this.type, required this.code, required this.msg});
+  State(
+      {required this.type,
+      required this.code,
+      required this.msg,
+      required this.description});
 
   factory State.fromJson(Map<String, dynamic> data) => _$StateFromJson(data);
 
@@ -27,6 +32,7 @@ Result<T> mapState<T>(State state) {
     case "UnauthorizedError":
       return Unauthorized<T>(code: state.code, message: state.msg);
     default:
-      return Error<T>(code: state.code, message: state.msg);
+      return Error<T>(
+          code: state.code, message: state.msg, description: state.description);
   }
 }
