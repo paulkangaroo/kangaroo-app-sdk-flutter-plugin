@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
 
     var eventChannel: String = "customer_sdk/events/update_user_profile"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserProfileUpdateHandler.updateUserProfile(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserProfileUpdateHandler.updateUserProfile(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,29 +18,54 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
     }
 
 
-    static func updateUserProfile(call: FlutterMethodCall) {
+    static func updateUserProfile(call: FlutterMethodCall) async -> String? {
+
+
+        
+
+
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any],
-                        let firstName = myArgs["firstName"] as? String?,
-                let lastName = myArgs["lastName"] as? String?,
-                let birthDate = myArgs["birthDate"] as? String?,
-                let language = myArgs["language"] as? String?,
-                let gender = myArgs["gender"] as? String?,
-                let profilePhoto = myArgs["profilePhoto"] as? String?
-            {
-            UserProfileUpdateApi().updateUserProfile(
+        do {
+       if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+                        let firstName = myArgs["firstName"] as? String? ?? nil
+                let lastName = myArgs["lastName"] as? String? ?? nil
+                let birthDate = myArgs["birthDate"] as? String? ?? nil
+                let language = myArgs["language"] as? String? ?? nil
+                let gender = myArgs["gender"] as? String? ?? nil
+                let profilePhoto = myArgs["profilePhoto"] as? String? ?? nil
+
+        let result = try await UserProfileUpdateApi().updateUserProfile(
+                overrideHeaders: overrideHeaders,
                 firstName: firstName,
                 lastName: lastName,
                 birthDate: birthDate,
                 language: language,
                 gender: gender,
                 profilePhoto: profilePhoto
-            )
+           ).serializeUserProfileUpdateApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -55,6 +80,8 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

@@ -32,8 +32,7 @@ UserProfileDataModel _$UserProfileDataModelFromJson(
             'email_verified',
             'phone_verified',
             'business',
-            'profiles',
-            'address'
+            'profiles'
           ],
         );
         final val = UserProfileDataModel(
@@ -64,11 +63,6 @@ UserProfileDataModel _$UserProfileDataModelFromJson(
                   ?.map((e) =>
                       ProfilesDataModel.fromJson(e as Map<String, dynamic>))
                   .toList()),
-          address: $checkedConvert(
-              'address',
-              (v) => v == null
-                  ? null
-                  : AddressDataModel.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -106,5 +100,4 @@ Map<String, dynamic> _$UserProfileDataModelToJson(
       'phone_verified': instance.phoneVerified,
       'business': instance.business?.toJson(),
       'profiles': instance.profiles?.map((e) => e.toJson()).toList(),
-      'address': instance.address?.toJson(),
     };

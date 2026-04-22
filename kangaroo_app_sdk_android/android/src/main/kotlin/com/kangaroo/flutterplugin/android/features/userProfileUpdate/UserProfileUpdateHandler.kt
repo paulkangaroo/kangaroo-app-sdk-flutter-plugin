@@ -13,9 +13,7 @@ import features.userProfileUpdate.models.UserProfileModel
 import features.userProfileUpdate.serializeUserProfileUpdateState
 import kangaroorewards.appsdk.core.domain.SerializedResult
 import kangaroorewards.appsdk.core.domain.toJsonResult
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
-import features.userProfileUpdate.models.UpdateUserProfileRequest
+
 
 class UserProfileUpdateHandler : EventChannel.StreamHandler, PluginChannelHandler {
     var sink: EventChannel.EventSink? = null
@@ -38,7 +36,12 @@ class UserProfileUpdateHandler : EventChannel.StreamHandler, PluginChannelHandle
         suspend fun updateUserProfile(call: MethodCall): String? {
             val result = UserProfileUpdateApi().updateUserProfile(
                 overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
-                updateUserProfileRequest = Json.decodeFromString(call.argument<String>("updateUserProfileRequest") as String)
+                firstName = call.argument<String?>("firstName"),
+                lastName = call.argument<String?>("lastName"),
+                birthDate = call.argument<String?>("birthDate"),
+                language = call.argument<String?>("language"),
+                gender = call.argument<String?>("gender"),
+                profilePhoto = call.argument<String?>("profilePhoto")
             ).toJsonResult<UserProfileModel>()
 
             return when (result) {

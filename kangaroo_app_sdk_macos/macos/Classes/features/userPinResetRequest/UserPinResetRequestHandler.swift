@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelH
 
     var eventChannel: String = "customer_sdk/events/request_pin_reset"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserPinResetRequestHandler.requestPinReset(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserPinResetRequestHandler.requestPinReset(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,25 +18,50 @@ class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelH
     }
 
 
-    static func requestPinReset(call: FlutterMethodCall) {
+    static func requestPinReset(call: FlutterMethodCall) async -> String? {
+
+
+        
+
+
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any],
-                        let mode = myArgs["mode"] as? String,
-                let email = myArgs["email"] as? String?,
-                let phone = myArgs["phone"] as? String?,
-                let countryCode = myArgs["countryCode"] as? String?
-            {
-            UserPinResetRequestApi().requestPinReset(
+        do {
+       if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+                        guard let mode = myArgs["mode"] as? String else {return nil}
+                let email = myArgs["email"] as? String? ?? nil
+                let phone = myArgs["phone"] as? String? ?? nil
+                let countryCode = myArgs["countryCode"] as? String? ?? nil
+
+        let result = try await UserPinResetRequestApi().requestPinReset(
+                overrideHeaders: overrideHeaders,
                 mode: mode,
                 email: email,
                 phone: phone,
                 countryCode: countryCode
-            )
+           ).serializeUserPinResetRequestApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -51,6 +76,8 @@ class UserPinResetRequestHandler: NSObject, FlutterStreamHandler, PluginChannelH
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

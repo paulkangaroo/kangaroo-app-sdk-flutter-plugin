@@ -12,14 +12,9 @@ class UserRewardsApiFederated extends UserRewardsApiInterface {
   @override
 Future<Result<UserRewardsModel>?> getUserRewards({ 
         final Map<String, String>? overrideHeaders,
-        required final int perPage
+
     }) async {
-    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_rewards',
-    {
-      'overrideHeaders' : overrideHeaders,
-      'perPage' : perPage
-    }
-    );
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_rewards');
 
     return UserRewardsApiInterface.deSerializedPlatformResponse(
       response,

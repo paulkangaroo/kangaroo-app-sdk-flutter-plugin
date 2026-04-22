@@ -19,25 +19,19 @@ class UserOffersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getUserOffers(call: FlutterMethodCall) async -> String? {
+        let args = call.arguments
+    do {
 
+        var overrideHeaders: [String: String]?
 
-        
-
-
-        
-
-        guard let args = call.arguments else {
-            return nil
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
         }
-        do {
-       if let myArgs = args as? [String: Any] {
-          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
-                        guard let perPage = myArgs["perPage"] as? Int32 else {return nil}
+        else {
+            overrideHeaders = [:]
+        }
 
-        let result = try await UserOffersApi().getUserOffers(
-                overrideHeaders: overrideHeaders,
-                perPage: perPage
-           ).serializeUserOffersApiResult()
+        let result = try await UserOffersApi().getUserOffers(overrideHeaders: overrideHeaders).serializeUserOffersApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -48,12 +42,16 @@ class UserOffersHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
                 return result.error
             default:
                 return nil
-                }
             }
-        }
-        catch {
+        } catch {
             return nil
         }
+
+        
+
+
+        
+
         
         return nil
     }

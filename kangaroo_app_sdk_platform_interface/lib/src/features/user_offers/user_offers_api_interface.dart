@@ -29,7 +29,7 @@ abstract class UserOffersApiInterface extends PlatformInterface {
 
 Future<Result<UserOffersModel>?> getUserOffers({ 
         final Map<String, String>? overrideHeaders,
-        required final int perPage,
+
     }) {
     throw UnimplementedError('getUserOffers has not been implemented.');
   }

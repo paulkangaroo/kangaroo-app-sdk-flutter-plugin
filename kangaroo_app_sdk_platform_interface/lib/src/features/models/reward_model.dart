@@ -6,13 +6,9 @@ import 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_mo
 
 import 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
 
-import 'package:kangaroo_app_sdk_platform_interface/src/features/models/external_products.dart';
-
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/image_model.dart';
 
 export 'package:kangaroo_app_sdk_platform_interface/src/features/models/reward_translation.dart';
-
-export 'package:kangaroo_app_sdk_platform_interface/src/features/models/external_products.dart';
 
 part 'reward_model.g.dart';
 
@@ -77,14 +73,8 @@ class RewardModel {
   @JsonKey(name: "link")
   final String? link;
 
-  @JsonKey(name: "virtual")
-  final bool? virtual;
-
   @JsonKey(name: "reward_languages")
   final List<RewardTranslation>? rewardLanguages;
-
-  @JsonKey(name: "external_products")
-  final List<ExternalProducts>? externalProducts;
 
   RewardModel({
     required this.id,
@@ -106,9 +96,7 @@ class RewardModel {
     required this.neverExpiresFlag,
     required this.termsConditions,
     required this.link,
-    required this.virtual,
     required this.rewardLanguages,
-    required this.externalProducts,
   });
 
   factory RewardModel.fromJson(Map<String, dynamic> data) => _$RewardModelFromJson(data);

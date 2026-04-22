@@ -27,8 +27,7 @@ BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) =>
             'default_branch',
             'balance',
             'tier_level',
-            'catalog_items',
-            'address'
+            'catalog_items'
           ],
         );
         final val = BusinessData(
@@ -78,11 +77,6 @@ BusinessData _$BusinessDataFromJson(Map<String, dynamic> json) =>
               (v) => (v as List<dynamic>?)
                   ?.map((e) => RewardModel.fromJson(e as Map<String, dynamic>))
                   .toList()),
-          address: $checkedConvert(
-              'address',
-              (v) => v == null
-                  ? null
-                  : AddressDataModel.fromJson(v as Map<String, dynamic>)),
         );
         return val;
       },
@@ -114,5 +108,4 @@ Map<String, dynamic> _$BusinessDataToJson(BusinessData instance) =>
       'balance': instance.balance?.toJson(),
       'tier_level': instance.tierLevel?.toJson(),
       'catalog_items': instance.catalogItems?.map((e) => e.toJson()).toList(),
-      'address': instance.address?.toJson(),
     };

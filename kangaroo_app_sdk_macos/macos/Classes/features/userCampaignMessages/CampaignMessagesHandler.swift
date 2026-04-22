@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class CampaignMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class CampaignMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
     var eventChannel: String = "customer_sdk/events/get_campaign_messages"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        CampaignMessagesHandler.getCampaignMessages(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await CampaignMessagesHandler.getCampaignMessages(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,19 +18,44 @@ class CampaignMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
     }
 
 
-    static func getCampaignMessages(call: FlutterMethodCall) {
+    static func getCampaignMessages(call: FlutterMethodCall) async -> String? {
+
+
+        
+
+
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any],
-                        let businessId = myArgs["businessId"] as? String
-            {
-            CampaignMessagesApi().getCampaignMessages(
+        do {
+       if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+                        guard let businessId = myArgs["businessId"] as? String else {return nil}
+
+        let result = try await CampaignMessagesApi().getCampaignMessages(
+                overrideHeaders: overrideHeaders,
                 businessId: businessId
-            )
+           ).serializeCampaignMessagesApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -45,6 +70,8 @@ class CampaignMessagesHandler: NSObject, FlutterStreamHandler, PluginChannelHand
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

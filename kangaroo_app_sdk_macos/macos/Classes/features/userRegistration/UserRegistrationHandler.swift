@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class UserRegistrationHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class UserRegistrationHandler: NSObject, FlutterStreamHandler, PluginChannelHand
 
     var eventChannel: String = "customer_sdk/events/create_account"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserRegistrationHandler.createAccount(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserRegistrationHandler.createAccount(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,25 +18,50 @@ class UserRegistrationHandler: NSObject, FlutterStreamHandler, PluginChannelHand
     }
 
 
-    static func createAccount(call: FlutterMethodCall) {
+    static func createAccount(call: FlutterMethodCall) async -> String? {
+
+
+        
+
+
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any],
-                        let email = myArgs["email"] as? String?,
-                let phone = myArgs["phone"] as? String?,
-                let countryCode = myArgs["countryCode"] as? String?,
-                let language = myArgs["language"] as? String?
-            {
-            UserRegistrationApi().createAccount(
+        do {
+       if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+                        let email = myArgs["email"] as? String? ?? nil
+                let phone = myArgs["phone"] as? String? ?? nil
+                let countryCode = myArgs["countryCode"] as? String? ?? nil
+                let language = myArgs["language"] as? String? ?? nil
+
+        let result = try await UserRegistrationApi().createAccount(
+                overrideHeaders: overrideHeaders,
                 email: email,
                 phone: phone,
                 countryCode: countryCode,
                 language: language
-            )
+           ).serializeUserRegistrationApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -51,6 +76,8 @@ class UserRegistrationHandler: NSObject, FlutterStreamHandler, PluginChannelHand
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

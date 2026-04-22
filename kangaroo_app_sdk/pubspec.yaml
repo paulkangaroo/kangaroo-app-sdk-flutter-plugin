@@ -28,6 +28,8 @@ dependencies:
 #      path: kangaroo_app_sdk_ios
 #      ref: multi-module
     path: ../kangaroo_app_sdk_ios
+  kangaroo_app_sdk_macos:
+    path: ../kangaroo_app_sdk_macos
   kangaroo_app_sdk_web:
 #    git:
 #      url: https://github.com/paulkangaroo/kangaroo-app-sdk-flutter-plugin.git
@@ -49,5 +51,7 @@ flutter:
         default_package: kangaroo_app_sdk_android
       ios:
         default_package: kangaroo_app_sdk_ios
+      macos:
+        default_package: kangaroo_app_sdk_macos
       web:
         default_package: kangaroo_app_sdk_web

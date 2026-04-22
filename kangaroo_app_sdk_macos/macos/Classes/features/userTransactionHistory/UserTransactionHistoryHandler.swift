@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class UserTransactionHistoryHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class UserTransactionHistoryHandler: NSObject, FlutterStreamHandler, PluginChann
 
     var eventChannel: String = "customer_sdk/events/get_user_transaction_history"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        UserTransactionHistoryHandler.getUserTransactionHistory(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await UserTransactionHistoryHandler.getUserTransactionHistory(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,10 +18,42 @@ class UserTransactionHistoryHandler: NSObject, FlutterStreamHandler, PluginChann
     }
 
 
-    static func getUserTransactionHistory(call: FlutterMethodCall) {
-        UserTransactionHistoryApi().getUserTransactionHistory()
+    static func getUserTransactionHistory(call: FlutterMethodCall) async -> String? {
+        let args = call.arguments
+    do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await UserTransactionHistoryApi().getUserTransactionHistory(overrideHeaders: overrideHeaders).serializeUserTransactionHistoryApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+            }
+        } catch {
+            return nil
+        }
 
         
+
+
+        
+
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -36,6 +68,8 @@ class UserTransactionHistoryHandler: NSObject, FlutterStreamHandler, PluginChann
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

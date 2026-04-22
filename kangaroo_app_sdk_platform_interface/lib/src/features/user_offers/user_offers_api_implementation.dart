@@ -12,14 +12,9 @@ class UserOffersApiFederated extends UserOffersApiInterface {
   @override
 Future<Result<UserOffersModel>?> getUserOffers({ 
         final Map<String, String>? overrideHeaders,
-        required final int perPage
+
     }) async {
-    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_offers',
-    {
-      'overrideHeaders' : overrideHeaders,
-      'perPage' : perPage
-    }
-    );
+    final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/get_user_offers');
 
     return UserOffersApiInterface.deSerializedPlatformResponse(
       response,

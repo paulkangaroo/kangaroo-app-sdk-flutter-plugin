@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class RedeemRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class RedeemRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
 
     var eventChannel: String = "customer_sdk/events/redeem_reward"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        RedeemRewardsHandler.redeemReward(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await RedeemRewardsHandler.redeemReward(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,10 +18,45 @@ class RedeemRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
     }
 
 
-    static func redeemReward(call: FlutterMethodCall) {
-        
-        RedeemRewardsApi().redeemReward(methods: call.arguments as! [String : Any])
+    static func redeemReward(call: FlutterMethodCall) async -> String? {
 
+
+        
+    let args = call.arguments
+        do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await RedeemRewardsApi().redeemReward(overrideHeaders: overrideHeaders, methods: call.arguments as! [String : Any]).serializeRedeemRewardsApiResult()
+
+            switch result {
+                case let result as SerializedResultSuccess:
+                    return result.data
+                case let result as SerializedResultUnauthorizedError:
+                    return result.error
+                case let result as SerializedResultUnknownError:
+                    return result.error
+                default:
+                    return nil
+            }
+
+        }
+        catch {
+            return nil
+        }
+
+
+        
+
+
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -36,6 +71,8 @@ class RedeemRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

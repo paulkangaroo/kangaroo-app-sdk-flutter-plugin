@@ -33,9 +33,7 @@ PublicRewardModel _$PublicRewardModelFromJson(Map<String, dynamic> json) =>
             'never_expires_flag',
             'terms_conditions',
             'link',
-            'virtual',
             'reward_languages',
-            'external_products',
             'branch',
             'business'
           ],
@@ -70,18 +68,11 @@ PublicRewardModel _$PublicRewardModelFromJson(Map<String, dynamic> json) =>
           termsConditions:
               $checkedConvert('terms_conditions', (v) => v as String?),
           link: $checkedConvert('link', (v) => v as String?),
-          virtual: $checkedConvert('virtual', (v) => v as bool?),
           rewardLanguages: $checkedConvert(
               'reward_languages',
               (v) => (v as List<dynamic>?)
                   ?.map((e) =>
                       RewardTranslation.fromJson(e as Map<String, dynamic>))
-                  .toList()),
-          externalProducts: $checkedConvert(
-              'external_products',
-              (v) => (v as List<dynamic>?)
-                  ?.map((e) =>
-                      ExternalProducts.fromJson(e as Map<String, dynamic>))
                   .toList()),
           branch: $checkedConvert(
               'branch',
@@ -107,8 +98,7 @@ PublicRewardModel _$PublicRewardModelFromJson(Map<String, dynamic> json) =>
         'redeemForGiftCard': 'redeem_for_gift_card',
         'neverExpiresFlag': 'never_expires_flag',
         'termsConditions': 'terms_conditions',
-        'rewardLanguages': 'reward_languages',
-        'externalProducts': 'external_products'
+        'rewardLanguages': 'reward_languages'
       },
     );
 
@@ -133,11 +123,8 @@ Map<String, dynamic> _$PublicRewardModelToJson(PublicRewardModel instance) =>
       'never_expires_flag': instance.neverExpiresFlag,
       'terms_conditions': instance.termsConditions,
       'link': instance.link,
-      'virtual': instance.virtual,
       'reward_languages':
           instance.rewardLanguages?.map((e) => e.toJson()).toList(),
-      'external_products':
-          instance.externalProducts?.map((e) => e.toJson()).toList(),
       'branch': instance.branch?.toJson(),
       'business': instance.business?.toJson(),
     };

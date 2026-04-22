@@ -8,11 +8,21 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 class UserProfileUpdateApi {
   static Future<Result<UserProfileModel>?> updateUserProfile({ 
     final Map<String, String>? overrideHeaders,
-    required final UpdateUserProfileRequest updateUserProfileRequest,
+    final String? firstName,
+    final String? lastName,
+    final String? birthDate,
+    final String? language,
+    final String? gender,
+    final String? profilePhoto,
   }) {
     return UserProfileUpdateApiInterface.instance.updateUserProfile( 
       overrideHeaders: overrideHeaders,
-      updateUserProfileRequest: updateUserProfileRequest,
+      firstName: firstName,
+      lastName: lastName,
+      birthDate: birthDate,
+      language: language,
+      gender: gender,
+      profilePhoto: profilePhoto,
     );
   }
 

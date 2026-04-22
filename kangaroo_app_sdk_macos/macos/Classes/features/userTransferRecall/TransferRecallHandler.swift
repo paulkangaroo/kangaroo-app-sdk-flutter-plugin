@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
 
     var eventChannel: String = "customer_sdk/events/recall_transfer"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        TransferRecallHandler.recallTransfer(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await TransferRecallHandler.recallTransfer(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,19 +18,44 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
     }
 
 
-    static func recallTransfer(call: FlutterMethodCall) {
+    static func recallTransfer(call: FlutterMethodCall) async -> String? {
+
+
+        
+
+
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any],
-                        let recallId = myArgs["recallId"] as? String
-            {
-            TransferRecallApi().recallTransfer(
+        do {
+       if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+                        guard let recallId = myArgs["recallId"] as? String else {return nil}
+
+        let result = try await TransferRecallApi().recallTransfer(
+                overrideHeaders: overrideHeaders,
                 recallId: recallId
-            )
+           ).serializeTransferRecallApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -45,6 +70,8 @@ class TransferRecallHandler: NSObject, FlutterStreamHandler, PluginChannelHandle
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

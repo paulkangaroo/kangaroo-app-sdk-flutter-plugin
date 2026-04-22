@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
 
     var eventChannel: String = "customer_sdk/events/transfer"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        BalanceTransferHandler.transfer(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await BalanceTransferHandler.transfer(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,10 +18,45 @@ class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
     }
 
 
-    static func transfer(call: FlutterMethodCall) {
-        
-        BalanceTransferApi().transfer(methods: call.arguments as! [String : Any])
+    static func transfer(call: FlutterMethodCall) async -> String? {
 
+
+        
+    let args = call.arguments
+        do {
+
+        var overrideHeaders: [String: String]?
+
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await BalanceTransferApi().transfer(overrideHeaders: overrideHeaders, methods: call.arguments as! [String : Any]).serializeBalanceTransferApiResult()
+
+            switch result {
+                case let result as SerializedResultSuccess:
+                    return result.data
+                case let result as SerializedResultUnauthorizedError:
+                    return result.error
+                case let result as SerializedResultUnknownError:
+                    return result.error
+                default:
+                    return nil
+            }
+
+        }
+        catch {
+            return nil
+        }
+
+
+        
+
+
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -36,6 +71,8 @@ class BalanceTransferHandler: NSObject, FlutterStreamHandler, PluginChannelHandl
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

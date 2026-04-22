@@ -14,10 +14,10 @@ UploadImageRequestModel _$UploadImageRequestModelFromJson(
       ($checkedConvert) {
         $checkKeys(
           json,
-          allowedKeys: const ['module','images'],
+          allowedKeys: const ['module', 'images'],
         );
         final val = UploadImageRequestModel(
-          module: $checkedConvert('module', (v) => v as int),
+          module: $checkedConvert('module', (v) => (v as num).toInt()),
           images: $checkedConvert(
               'images',
               (v) => (v as List<dynamic>?)

@@ -24,12 +24,22 @@ class UserProfileUpdateHandler extends UserProfileUpdateApiInterface
   @override
   updateUserProfile({ 
       final Map<String, String>? overrideHeaders,
-        required final UpdateUserProfileRequest updateUserProfileRequest
+        final String? firstName,
+        final String? lastName,
+        final String? birthDate,
+        final String? language,
+        final String? gender,
+        final String? profilePhoto
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserProfileUpdateApi().updateUserProfile(
         jsonEncode(overrideHeaders),
-        jsonEncode(updateUserProfileRequest)
+        firstName,
+      lastName,
+      birthDate,
+      language,
+      gender,
+      profilePhoto
     ),);
 
     return UserProfileUpdateApiInterface.deSerializedPlatformResponse(
@@ -71,7 +81,12 @@ class UserProfileUpdateApi {
 
   external dynamic updateUserProfile( 
         String? overrideHeaders, 
-        String updateUserProfileRequest
+        String? firstName,
+        String? lastName,
+        String? birthDate,
+        String? language,
+        String? gender,
+        String? profilePhoto
     );
 
   external void observeUserProfileUpdateState(

@@ -1,6 +1,6 @@
 import Foundation
-import Flutter
-import KangarooAppSDKiOS
+import FlutterMacOS
+import KangarooAppSdkCustomer
 
 class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
     var sink: FlutterEventSink?
@@ -9,8 +9,8 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
 
     var eventChannel: String = "customer_sdk/events/post_offer_facebook_share"
 
-    func onMethodCall(call: FlutterMethodCall) -> Void? {
-        OfferFacebookShareHandler.postOfferFacebookShare(call: call)
+    func onMethodCall(call: FlutterMethodCall) async -> Any? {
+        return await OfferFacebookShareHandler.postOfferFacebookShare(call: call)
     }
 
     func getStreamHandler() -> (FlutterStreamHandler & NSObjectProtocol)? {
@@ -18,27 +18,52 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
     }
 
 
-    static func postOfferFacebookShare(call: FlutterMethodCall) {
+    static func postOfferFacebookShare(call: FlutterMethodCall) async -> String? {
+
+
+        
+
+
         
 
         guard let args = call.arguments else {
-            return
+            return nil
         }
-        if let myArgs = args as? [String: Any],
-                        let offerId = myArgs["offerId"] as? String,
-                let include = myArgs["include"] as? String,
-                let facebookUserId = myArgs["facebookUserId"] as? String,
-                let type = myArgs["type"] as? String,
-                let friendsCount = myArgs["friendsCount"] as? String
-            {
-            OfferFacebookShareApi().postOfferFacebookShare(
+        do {
+       if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+                        guard let offerId = myArgs["offerId"] as? String else {return nil}
+                guard let include = myArgs["include"] as? String else {return nil}
+                guard let facebookUserId = myArgs["facebookUserId"] as? String else {return nil}
+                guard let type = myArgs["type"] as? String else {return nil}
+                guard let friendsCount = myArgs["friendsCount"] as? String else {return nil}
+
+        let result = try await OfferFacebookShareApi().postOfferFacebookShare(
+                overrideHeaders: overrideHeaders,
                 offerId: offerId,
                 include: include,
                 facebookUserId: facebookUserId,
                 type: type,
                 friendsCount: friendsCount
-            )
+           ).serializeOfferFacebookShareApiResult()
+
+        switch result {
+            case let result as SerializedResultSuccess:
+                return result.data
+            case let result as SerializedResultUnauthorizedError:
+                return result.error
+            case let result as SerializedResultUnknownError:
+                return result.error
+            default:
+                return nil
+                }
+            }
         }
+        catch {
+            return nil
+        }
+        
+        return nil
     }
 
     func onListen(withArguments arguments: Any?, eventSink events: @escaping
@@ -53,6 +78,8 @@ class OfferFacebookShareHandler: NSObject, FlutterStreamHandler, PluginChannelHa
                 self.sink?(result.state)
             case let result as SerializedResultSuccess:
                 self.sink?(result.data)
+            case let result as SerializedResultEmptyResponse:
+                self.sink?(result.body)
             case let result as SerializedResultUnauthorizedError:
                 self.sink?(result.error)
             case let result as SerializedResultUnknownError:

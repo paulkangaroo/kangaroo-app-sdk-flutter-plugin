@@ -1,16 +1,29 @@
 PODS:
   - FlutterMacOS (1.0.0)
+  - kangaroo_app_sdk_macos (0.0.1):
+    - FlutterMacOS
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
 
 DEPENDENCIES:
   - FlutterMacOS (from `Flutter/ephemeral`)
+  - kangaroo_app_sdk_macos (from `Flutter/ephemeral/.symlinks/plugins/kangaroo_app_sdk_macos/macos`)
+  - path_provider_foundation (from `Flutter/ephemeral/.symlinks/plugins/path_provider_foundation/darwin`)
 
 EXTERNAL SOURCES:
   FlutterMacOS:
     :path: Flutter/ephemeral
+  kangaroo_app_sdk_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/kangaroo_app_sdk_macos/macos
+  path_provider_foundation:
+    :path: Flutter/ephemeral/.symlinks/plugins/path_provider_foundation/darwin
 
 SPEC CHECKSUMS:
-  FlutterMacOS: 57701585bf7de1b3fc2bb61f6378d73bbdea8424
+  FlutterMacOS: d0db08ddef1a9af05a5ec4b724367152bb0500b1
+  kangaroo_app_sdk_macos: 04840506856929f7a9a0d4e2e58ff36a337d6755
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
 
-PODFILE CHECKSUM: bfd3c8324f39ba3667e764683f068645c8bde6fc
+PODFILE CHECKSUM: 9d9b4aefbe157cf5082b0dd647775a94f73ed018
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.15.2

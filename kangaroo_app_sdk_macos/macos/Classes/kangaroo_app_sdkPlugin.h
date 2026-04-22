@@ -1,4 +1,4 @@
-#import <Flutter/Flutter.h>
+#import <FlutterMacOS/FlutterMacOS.h>
 
-@interface kangaroo_app_sdkPlugin : NSObject<FlutterPlugin>
+@interface kangaroo_app_sdk_macosPlugin : NSObject<FlutterPlugin>
 @end
