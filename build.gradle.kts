@@ -15,7 +15,7 @@ plugins {
     id("de.undercouch.download") version "4.1.2"
 }
 
-val kangarooApiVersion = "0.0.676"
+val kangarooApiVersion = "0.0.649"
 //flutter packages pub run build_runner build --delete-conflicting-outputs
 
 /**
@@ -336,6 +336,66 @@ val flutterWebPackageGradleTask = "_generateWebPackage".apply {
     tasks.getByName(this@apply).dependsOn(gradleTaskName)
 }
 
+/**
+ * Code block to generate the macOS specific code of
+ * the Flutter plugin. When deployed on a macOS device,
+ * the platform interface will communicate with the macOS code.
+ */
+val fluttermacOSPackageGradleTask = "_generatemacOSPackage".apply {
+
+    tasks.create(this) {
+        group = "flutter macOS package generator"
+    }
+
+    swaggerList.forEach {
+        val apiName = it.name.removeSuffix(".yaml")
+        val gradleTaskName = "generate${apiName.capitalize()}Api$this"
+        val config = project.extensions.create(
+            "generateSwagger${apiName}$this",
+            GenerateTaskConfiguration::class.java,
+            project
+        )
+        tasks.create(gradleTaskName, GenerateTask::class) {
+            flutterPluginPackageName?.set("kangaroo_app_sdk")
+            platform.set(FLUTTER_MACOS_PLUGIN_HANDLER_GEN_TASK)
+            packageName.set("features.${apiName.toCamelCase()}")
+            inputFile.set(file(it))
+            outputDir.set(
+                file(
+                    "./kangaroo_app_sdk_macos/macos/Classes"
+                )
+            )
+            specName.set("$apiName-spec")
+            specVersion.set("1")
+            features = config.features
+            group = "flutter macOS package generator"
+        }
+        tasks.getByName(this).dependsOn(gradleTaskName)
+    }
+
+    val apiName = "pluginHandlerList"
+    val gradleTaskName = "_generate${apiName.capitalize()}Api$this"
+    val config =
+        project.extensions.create("generateSwagger${apiName}$this", GenerateTaskConfiguration::class.java, project)
+
+    tasks.create(gradleTaskName, GenerateTask::class) {
+        flutterPluginPackageName?.set("kangaroo_app_sdk")
+        platform.set(FLUTTER_MACOS_PLUGIN_HANDLER_LIST_GEN_TASK)
+        packageName.set("")
+        inputFile.set(file("$apiDir/_index.yaml"))
+        outputDir.set(
+            file(
+                "./kangaroo_app_sdk_macos/macos/Classes"
+            )
+        )
+        specName.set("$apiName-spec")
+        specVersion.set("1")
+        features = config.features
+        group = "flutter macOS package generator"
+    }
+    tasks.getByName(this@apply).dependsOn(gradleTaskName)
+}
+
 repositories {
     mavenLocal()
     google()
@@ -366,6 +426,7 @@ val kangarooPublishingGradleTask = "generateFlutterPluginCode".apply {
         tasks.getByName(flutterAppFacingPackageGradleTask),
         tasks.getByName(flutterAndroidPackageGradleTask),
         tasks.getByName(flutteriOSPackageGradleTask),
+        tasks.getByName(fluttermacOSPackageGradleTask),
         tasks.getByName(flutterWebPackageGradleTask)
     )
 }
