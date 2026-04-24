@@ -10,13 +10,13 @@ class State {
   final String type;
   final int code;
   final String msg;
-  final String description;
+  final String? description;
 
   State(
       {required this.type,
       required this.code,
       required this.msg,
-      required this.description});
+      this.description});
 
   factory State.fromJson(Map<String, dynamic> data) => _$StateFromJson(data);
 
