@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_rewards/public_rewards_platform_interface.dart';
@@ -26,11 +25,10 @@ class PublicRewardsHandler extends PublicRewardsApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        PublicRewardsApi().getPublicRewards(
+    final Future<String?> request = PublicRewardsApi().getPublicRewards(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return PublicRewardsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class PublicRewardsHandler extends PublicRewardsApiInterface
     var controller = StreamController<String>();
 
     PublicRewardsApi().observePublicRewardsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class PublicRewardsHandler extends PublicRewardsApiInterface
 }
 
 @JS('js.features.publicRewards.PublicRewardsApi')
-class PublicRewardsApi {
-  external PublicRewardsApi();
+extension type PublicRewardsApi._(JSObject _) implements JSObject {
+  external factory PublicRewardsApi();
 
-  external dynamic getPublicRewards( 
+  external JSPromise<JSString?> getPublicRewards( 
         String? overrideHeaders, 
 
     );
 
   external void observePublicRewardsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

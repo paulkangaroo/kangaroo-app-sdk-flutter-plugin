@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/business/business_platform_interface.dart';
@@ -26,11 +25,10 @@ class BusinessHandler extends BusinessApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        BusinessApi().getBusiness(
+    final Future<String?> request = BusinessApi().getBusiness(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return BusinessApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class BusinessHandler extends BusinessApiInterface
     var controller = StreamController<String>();
 
     BusinessApi().observeBusinessState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class BusinessHandler extends BusinessApiInterface
 }
 
 @JS('js.features.business.BusinessApi')
-class BusinessApi {
-  external BusinessApi();
+extension type BusinessApi._(JSObject _) implements JSObject {
+  external factory BusinessApi();
 
-  external dynamic getBusiness( 
+  external JSPromise<JSString?> getBusiness( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeBusinessState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

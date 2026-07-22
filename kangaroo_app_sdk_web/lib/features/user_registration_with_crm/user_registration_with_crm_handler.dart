@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_registration_with_crm/user_registration_with_crm_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserRegistrationWithCrmHandler extends UserRegistrationWithCrmApiInterface
       final Map<String, String>? overrideHeaders,
         required final CrmRegisterRequest registerWithCrmRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserRegistrationWithCrmApi().createAccountWithCrm(
+    final Future<String?> request = UserRegistrationWithCrmApi().createAccountWithCrm(
         jsonEncode(overrideHeaders),
         jsonEncode(registerWithCrmRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserRegistrationWithCrmApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserRegistrationWithCrmHandler extends UserRegistrationWithCrmApiInterface
     var controller = StreamController<String>();
 
     UserRegistrationWithCrmApi().observeUserRegistrationWithCrmState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserRegistrationWithCrmHandler extends UserRegistrationWithCrmApiInterface
 }
 
 @JS('js.features.userRegistrationWithCrm.UserRegistrationWithCrmApi')
-class UserRegistrationWithCrmApi {
-  external UserRegistrationWithCrmApi();
+extension type UserRegistrationWithCrmApi._(JSObject _) implements JSObject {
+  external factory UserRegistrationWithCrmApi();
 
-  external dynamic createAccountWithCrm( 
+  external JSPromise<JSString?> createAccountWithCrm( 
         String? overrideHeaders, 
         String registerWithCrmRequest
     );
 
   external void observeUserRegistrationWithCrmState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

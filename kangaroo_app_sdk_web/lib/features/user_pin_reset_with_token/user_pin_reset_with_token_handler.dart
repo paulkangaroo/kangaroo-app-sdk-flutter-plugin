@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_pin_reset_with_token/user_pin_reset_with_token_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserPinResetWithTokenHandler extends UserPinResetWithTokenApiInterface
       final Map<String, String>? overrideHeaders,
         required final PinResetWithTokenRequestModel pinResetWithTokenRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserPinResetWithTokenApi().resetPinWithToken(
+    final Future<String?> request = UserPinResetWithTokenApi().resetPinWithToken(
         jsonEncode(overrideHeaders),
         jsonEncode(pinResetWithTokenRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserPinResetWithTokenApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserPinResetWithTokenHandler extends UserPinResetWithTokenApiInterface
     var controller = StreamController<String>();
 
     UserPinResetWithTokenApi().observeUserPinResetWithTokenState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserPinResetWithTokenHandler extends UserPinResetWithTokenApiInterface
 }
 
 @JS('js.features.userPinResetWithToken.UserPinResetWithTokenApi')
-class UserPinResetWithTokenApi {
-  external UserPinResetWithTokenApi();
+extension type UserPinResetWithTokenApi._(JSObject _) implements JSObject {
+  external factory UserPinResetWithTokenApi();
 
-  external dynamic resetPinWithToken( 
+  external JSPromise<JSString?> resetPinWithToken( 
         String? overrideHeaders, 
         String pinResetWithTokenRequest
     );
 
   external void observeUserPinResetWithTokenState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

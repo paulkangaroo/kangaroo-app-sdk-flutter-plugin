@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/push_token_registration/push_token_registration_platform_interface.dart';
@@ -28,13 +27,12 @@ class PushTokenRegistrationHandler extends PushTokenRegistrationApiInterface
         final String? iosDeviceToken,
         final String? webDeviceToken
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        PushTokenRegistrationApi().registerPushToken(
+    final Future<String?> request = PushTokenRegistrationApi().registerPushToken(
         jsonEncode(overrideHeaders),
         androidDeviceToken,
       iosDeviceToken,
       webDeviceToken
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return PushTokenRegistrationApiInterface.deSerializedPlatformResponse(
       request,
@@ -46,8 +44,8 @@ class PushTokenRegistrationHandler extends PushTokenRegistrationApiInterface
     var controller = StreamController<String>();
 
     PushTokenRegistrationApi().observePushTokenRegistrationState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -70,10 +68,10 @@ class PushTokenRegistrationHandler extends PushTokenRegistrationApiInterface
 }
 
 @JS('js.features.pushTokenRegistration.PushTokenRegistrationApi')
-class PushTokenRegistrationApi {
-  external PushTokenRegistrationApi();
+extension type PushTokenRegistrationApi._(JSObject _) implements JSObject {
+  external factory PushTokenRegistrationApi();
 
-  external dynamic registerPushToken( 
+  external JSPromise<JSString?> registerPushToken( 
         String? overrideHeaders, 
         String? androidDeviceToken,
         String? iosDeviceToken,
@@ -81,8 +79,8 @@ class PushTokenRegistrationApi {
     );
 
   external void observePushTokenRegistrationState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

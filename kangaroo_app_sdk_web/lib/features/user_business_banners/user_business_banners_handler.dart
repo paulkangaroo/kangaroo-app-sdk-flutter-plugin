@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_banners/user_business_banners_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserBusinessBannersHandler extends UserBusinessBannersApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserBusinessBannersApi().getUserBusinessBanners(
+    final Future<String?> request = UserBusinessBannersApi().getUserBusinessBanners(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserBusinessBannersApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserBusinessBannersHandler extends UserBusinessBannersApiInterface
     var controller = StreamController<String>();
 
     UserBusinessBannersApi().observeUserBusinessBannersState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserBusinessBannersHandler extends UserBusinessBannersApiInterface
 }
 
 @JS('js.features.userBusinessBanners.UserBusinessBannersApi')
-class UserBusinessBannersApi {
-  external UserBusinessBannersApi();
+extension type UserBusinessBannersApi._(JSObject _) implements JSObject {
+  external factory UserBusinessBannersApi();
 
-  external dynamic getUserBusinessBanners( 
+  external JSPromise<JSString?> getUserBusinessBanners( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeUserBusinessBannersState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

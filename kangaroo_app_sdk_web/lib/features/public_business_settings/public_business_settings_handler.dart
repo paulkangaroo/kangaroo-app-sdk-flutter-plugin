@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_business_settings/public_business_settings_platform_interface.dart';
@@ -26,11 +25,10 @@ class PublicBusinessSettingsHandler extends PublicBusinessSettingsApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        PublicBusinessSettingsApi().getPublicBusinessSettings(
+    final Future<String?> request = PublicBusinessSettingsApi().getPublicBusinessSettings(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return PublicBusinessSettingsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class PublicBusinessSettingsHandler extends PublicBusinessSettingsApiInterface
     var controller = StreamController<String>();
 
     PublicBusinessSettingsApi().observePublicBusinessSettingsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class PublicBusinessSettingsHandler extends PublicBusinessSettingsApiInterface
 }
 
 @JS('js.features.publicBusinessSettings.PublicBusinessSettingsApi')
-class PublicBusinessSettingsApi {
-  external PublicBusinessSettingsApi();
+extension type PublicBusinessSettingsApi._(JSObject _) implements JSObject {
+  external factory PublicBusinessSettingsApi();
 
-  external dynamic getPublicBusinessSettings( 
+  external JSPromise<JSString?> getPublicBusinessSettings( 
         String? overrideHeaders, 
 
     );
 
   external void observePublicBusinessSettingsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

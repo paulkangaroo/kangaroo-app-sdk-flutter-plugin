@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_notifications/user_business_notifications_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserBusinessNotificationsHandler extends UserBusinessNotificationsApiInter
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserBusinessNotificationsApi().getUserBusinessNotifications(
+    final Future<String?> request = UserBusinessNotificationsApi().getUserBusinessNotifications(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserBusinessNotificationsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserBusinessNotificationsHandler extends UserBusinessNotificationsApiInter
     var controller = StreamController<String>();
 
     UserBusinessNotificationsApi().observeUserBusinessNotificationsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserBusinessNotificationsHandler extends UserBusinessNotificationsApiInter
 }
 
 @JS('js.features.userBusinessNotifications.UserBusinessNotificationsApi')
-class UserBusinessNotificationsApi {
-  external UserBusinessNotificationsApi();
+extension type UserBusinessNotificationsApi._(JSObject _) implements JSObject {
+  external factory UserBusinessNotificationsApi();
 
-  external dynamic getUserBusinessNotifications( 
+  external JSPromise<JSString?> getUserBusinessNotifications( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeUserBusinessNotificationsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

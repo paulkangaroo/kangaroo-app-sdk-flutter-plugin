@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/get_default_business_id/get_default_business_id_platform_interface.dart';
@@ -26,11 +25,10 @@ class GetDefaultBusinessIdHandler extends GetDefaultBusinessIdApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        GetDefaultBusinessIdApi().getDefaultBusinessId(
+    final Future<String?> request = GetDefaultBusinessIdApi().getDefaultBusinessId(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return GetDefaultBusinessIdApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class GetDefaultBusinessIdHandler extends GetDefaultBusinessIdApiInterface
     var controller = StreamController<String>();
 
     GetDefaultBusinessIdApi().observeGetDefaultBusinessIdState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class GetDefaultBusinessIdHandler extends GetDefaultBusinessIdApiInterface
 }
 
 @JS('js.features.getDefaultBusinessId.GetDefaultBusinessIdApi')
-class GetDefaultBusinessIdApi {
-  external GetDefaultBusinessIdApi();
+extension type GetDefaultBusinessIdApi._(JSObject _) implements JSObject {
+  external factory GetDefaultBusinessIdApi();
 
-  external dynamic getDefaultBusinessId( 
+  external JSPromise<JSString?> getDefaultBusinessId( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeGetDefaultBusinessIdState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

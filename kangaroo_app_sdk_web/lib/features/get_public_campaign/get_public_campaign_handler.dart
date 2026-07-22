@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/get_public_campaign/get_public_campaign_platform_interface.dart';
@@ -26,11 +25,10 @@ class GetPublicCampaignHandler extends GetPublicCampaignApiInterface
       final Map<String, String>? overrideHeaders,
         required final String campaignId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        GetPublicCampaignApi().getPublicCampaign(
+    final Future<String?> request = GetPublicCampaignApi().getPublicCampaign(
         jsonEncode(overrideHeaders),
         campaignId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return GetPublicCampaignApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class GetPublicCampaignHandler extends GetPublicCampaignApiInterface
     var controller = StreamController<String>();
 
     GetPublicCampaignApi().observeGetPublicCampaignState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class GetPublicCampaignHandler extends GetPublicCampaignApiInterface
 }
 
 @JS('js.features.getPublicCampaign.GetPublicCampaignApi')
-class GetPublicCampaignApi {
-  external GetPublicCampaignApi();
+extension type GetPublicCampaignApi._(JSObject _) implements JSObject {
+  external factory GetPublicCampaignApi();
 
-  external dynamic getPublicCampaign( 
+  external JSPromise<JSString?> getPublicCampaign( 
         String? overrideHeaders, 
         String campaignId
     );
 
   external void observeGetPublicCampaignState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

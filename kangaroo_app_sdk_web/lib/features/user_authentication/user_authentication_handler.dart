@@ -5,8 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_authentication/user_authentication.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
@@ -34,8 +34,8 @@ class UserAuthenticationHandler extends UserAuthenticationApiInterface
     var controller = StreamController<String>();
 
     UserAuthenticationApi().observeUserAuthenticationSerialized(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -58,10 +58,10 @@ class UserAuthenticationHandler extends UserAuthenticationApiInterface
 }
 
 @JS('js.features.userAuthentication.UserAuthenticationApi')
-class UserAuthenticationApi {
-  external UserAuthenticationApi();
+extension type UserAuthenticationApi._(JSObject _) implements JSObject {
+  external factory UserAuthenticationApi();
 
-  external dynamic authenticateUser(
+  external void authenticateUser(
     final String? username,
     final String? password,
     final String? googleToken,
@@ -69,7 +69,7 @@ class UserAuthenticationApi {
   );
 
   external void observeUserAuthenticationSerialized(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }

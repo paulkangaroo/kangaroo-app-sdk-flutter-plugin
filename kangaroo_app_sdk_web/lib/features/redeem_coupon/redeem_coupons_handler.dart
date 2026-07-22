@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/redeem_coupon/redeem_coupons_platform_interface.dart';
@@ -26,11 +25,10 @@ class RedeemCouponsHandler extends RedeemCouponsApiInterface
       final Map<String, String>? overrideHeaders,
         required final RedeemCouponRequest redeemCouponRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        RedeemCouponsApi().redeemCoupon(
+    final Future<String?> request = RedeemCouponsApi().redeemCoupon(
         jsonEncode(overrideHeaders),
         jsonEncode(redeemCouponRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return RedeemCouponsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class RedeemCouponsHandler extends RedeemCouponsApiInterface
     var controller = StreamController<String>();
 
     RedeemCouponsApi().observeRedeemCouponsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class RedeemCouponsHandler extends RedeemCouponsApiInterface
 }
 
 @JS('js.features.redeemCoupon.RedeemCouponsApi')
-class RedeemCouponsApi {
-  external RedeemCouponsApi();
+extension type RedeemCouponsApi._(JSObject _) implements JSObject {
+  external factory RedeemCouponsApi();
 
-  external dynamic redeemCoupon( 
+  external JSPromise<JSString?> redeemCoupon( 
         String? overrideHeaders, 
         String redeemCouponRequest
     );
 
   external void observeRedeemCouponsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

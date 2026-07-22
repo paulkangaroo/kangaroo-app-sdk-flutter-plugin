@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transfer_recall/transfer_recall_platform_interface.dart';
@@ -26,11 +25,10 @@ class TransferRecallHandler extends TransferRecallApiInterface
       final Map<String, String>? overrideHeaders,
         required final String recallId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        TransferRecallApi().recallTransfer(
+    final Future<String?> request = TransferRecallApi().recallTransfer(
         jsonEncode(overrideHeaders),
         recallId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return TransferRecallApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class TransferRecallHandler extends TransferRecallApiInterface
     var controller = StreamController<String>();
 
     TransferRecallApi().observeTransferRecallState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class TransferRecallHandler extends TransferRecallApiInterface
 }
 
 @JS('js.features.userTransferRecall.TransferRecallApi')
-class TransferRecallApi {
-  external TransferRecallApi();
+extension type TransferRecallApi._(JSObject _) implements JSObject {
+  external factory TransferRecallApi();
 
-  external dynamic recallTransfer( 
+  external JSPromise<JSString?> recallTransfer( 
         String? overrideHeaders, 
         String recallId
     );
 
   external void observeTransferRecallState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/social_media_links/social_media_links_platform_interface.dart';
@@ -26,11 +25,10 @@ class SocialMediaLinksHandler extends SocialMediaLinksApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        SocialMediaLinksApi().getSocialMediaLinks(
+    final Future<String?> request = SocialMediaLinksApi().getSocialMediaLinks(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return SocialMediaLinksApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class SocialMediaLinksHandler extends SocialMediaLinksApiInterface
     var controller = StreamController<String>();
 
     SocialMediaLinksApi().observeSocialMediaLinksState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class SocialMediaLinksHandler extends SocialMediaLinksApiInterface
 }
 
 @JS('js.features.socialMediaLinks.SocialMediaLinksApi')
-class SocialMediaLinksApi {
-  external SocialMediaLinksApi();
+extension type SocialMediaLinksApi._(JSObject _) implements JSObject {
+  external factory SocialMediaLinksApi();
 
-  external dynamic getSocialMediaLinks( 
+  external JSPromise<JSString?> getSocialMediaLinks( 
         String? overrideHeaders, 
 
     );
 
   external void observeSocialMediaLinksState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

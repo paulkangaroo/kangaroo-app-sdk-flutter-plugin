@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/deposit_gift_card/gift_card_deposit_platform_interface.dart';
@@ -26,11 +25,10 @@ class GiftCardDepositHandler extends GiftCardDepositApiInterface
       final Map<String, String>? overrideHeaders,
         required final String depositId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        GiftCardDepositApi().depositGiftCard(
+    final Future<String?> request = GiftCardDepositApi().depositGiftCard(
         jsonEncode(overrideHeaders),
         depositId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return GiftCardDepositApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class GiftCardDepositHandler extends GiftCardDepositApiInterface
     var controller = StreamController<String>();
 
     GiftCardDepositApi().observeGiftCardDepositState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class GiftCardDepositHandler extends GiftCardDepositApiInterface
 }
 
 @JS('js.features.depositGiftCard.GiftCardDepositApi')
-class GiftCardDepositApi {
-  external GiftCardDepositApi();
+extension type GiftCardDepositApi._(JSObject _) implements JSObject {
+  external factory GiftCardDepositApi();
 
-  external dynamic depositGiftCard( 
+  external JSPromise<JSString?> depositGiftCard( 
         String? overrideHeaders, 
         String depositId
     );
 
   external void observeGiftCardDepositState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

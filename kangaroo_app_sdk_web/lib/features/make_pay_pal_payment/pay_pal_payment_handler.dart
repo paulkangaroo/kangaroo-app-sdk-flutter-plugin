@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/make_pay_pal_payment/pay_pal_payment_platform_interface.dart';
@@ -30,15 +29,14 @@ class PayPalPaymentHandler extends PayPalPaymentApiInterface
         required final String paypalReturnUrl,
         required final String paypalCancelUrl
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        PayPalPaymentApi().makePayPalPayment(
+    final Future<String?> request = PayPalPaymentApi().makePayPalPayment(
         jsonEncode(overrideHeaders),
         intent,
       provider,
       giftcardId,
       paypalReturnUrl,
       paypalCancelUrl
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return PayPalPaymentApiInterface.deSerializedPlatformResponse(
       request,
@@ -50,8 +48,8 @@ class PayPalPaymentHandler extends PayPalPaymentApiInterface
     var controller = StreamController<String>();
 
     PayPalPaymentApi().observePayPalPaymentState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -74,10 +72,10 @@ class PayPalPaymentHandler extends PayPalPaymentApiInterface
 }
 
 @JS('js.features.makePayPalPayment.PayPalPaymentApi')
-class PayPalPaymentApi {
-  external PayPalPaymentApi();
+extension type PayPalPaymentApi._(JSObject _) implements JSObject {
+  external factory PayPalPaymentApi();
 
-  external dynamic makePayPalPayment( 
+  external JSPromise<JSString?> makePayPalPayment( 
         String? overrideHeaders, 
         String intent,
         String provider,
@@ -87,8 +85,8 @@ class PayPalPaymentApi {
     );
 
   external void observePayPalPaymentState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

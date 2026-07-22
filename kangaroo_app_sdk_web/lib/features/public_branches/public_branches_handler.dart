@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_branches/public_branches_platform_interface.dart';
@@ -26,11 +25,10 @@ class PublicBranchesHandler extends PublicBranchesApiInterface
       final Map<String, String>? overrideHeaders,
         required final int perPage
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        PublicBranchesApi().getPublicBranches(
+    final Future<String?> request = PublicBranchesApi().getPublicBranches(
         jsonEncode(overrideHeaders),
         perPage
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return PublicBranchesApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class PublicBranchesHandler extends PublicBranchesApiInterface
     var controller = StreamController<String>();
 
     PublicBranchesApi().observePublicBranchesState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class PublicBranchesHandler extends PublicBranchesApiInterface
 }
 
 @JS('js.features.publicBranches.PublicBranchesApi')
-class PublicBranchesApi {
-  external PublicBranchesApi();
+extension type PublicBranchesApi._(JSObject _) implements JSObject {
+  external factory PublicBranchesApi();
 
-  external dynamic getPublicBranches( 
+  external JSPromise<JSString?> getPublicBranches( 
         String? overrideHeaders, 
         int perPage
     );
 
   external void observePublicBranchesState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

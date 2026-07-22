@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/redeem_amazon_catalogue_item/redeem_amazon_catalogue_items_platform_interface.dart';
@@ -26,11 +25,10 @@ class RedeemAmazonCatalogueItemsHandler extends RedeemAmazonCatalogueItemsApiInt
       final Map<String, String>? overrideHeaders,
         required final RedeemAmazonItemRequest redeemAmazonItemRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        RedeemAmazonCatalogueItemsApi().redeemAmazonCatalogueItem(
+    final Future<String?> request = RedeemAmazonCatalogueItemsApi().redeemAmazonCatalogueItem(
         jsonEncode(overrideHeaders),
         jsonEncode(redeemAmazonItemRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return RedeemAmazonCatalogueItemsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class RedeemAmazonCatalogueItemsHandler extends RedeemAmazonCatalogueItemsApiInt
     var controller = StreamController<String>();
 
     RedeemAmazonCatalogueItemsApi().observeRedeemAmazonCatalogueItemsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class RedeemAmazonCatalogueItemsHandler extends RedeemAmazonCatalogueItemsApiInt
 }
 
 @JS('js.features.redeemAmazonCatalogueItem.RedeemAmazonCatalogueItemsApi')
-class RedeemAmazonCatalogueItemsApi {
-  external RedeemAmazonCatalogueItemsApi();
+extension type RedeemAmazonCatalogueItemsApi._(JSObject _) implements JSObject {
+  external factory RedeemAmazonCatalogueItemsApi();
 
-  external dynamic redeemAmazonCatalogueItem( 
+  external JSPromise<JSString?> redeemAmazonCatalogueItem( 
         String? overrideHeaders, 
         String redeemAmazonItemRequest
     );
 
   external void observeRedeemAmazonCatalogueItemsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

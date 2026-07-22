@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_check_in/user_check_in_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserCheckInHandler extends UserCheckInApiInterface
       final Map<String, String>? overrideHeaders,
         required final CheckInRequest checkInRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserCheckInApi().userCheckIn(
+    final Future<String?> request = UserCheckInApi().userCheckIn(
         jsonEncode(overrideHeaders),
         jsonEncode(checkInRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserCheckInApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserCheckInHandler extends UserCheckInApiInterface
     var controller = StreamController<String>();
 
     UserCheckInApi().observeUserCheckInState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserCheckInHandler extends UserCheckInApiInterface
 }
 
 @JS('js.features.userCheckIn.UserCheckInApi')
-class UserCheckInApi {
-  external UserCheckInApi();
+extension type UserCheckInApi._(JSObject _) implements JSObject {
+  external factory UserCheckInApi();
 
-  external dynamic userCheckIn( 
+  external JSPromise<JSString?> userCheckIn( 
         String? overrideHeaders, 
         String checkInRequest
     );
 
   external void observeUserCheckInState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

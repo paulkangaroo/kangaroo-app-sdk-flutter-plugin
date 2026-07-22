@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_used_coupons/user_business_used_coupons_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserBusinessUsedCouponsHandler extends UserBusinessUsedCouponsApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserBusinessUsedCouponsApi().getUserBusinessUsedCoupons(
+    final Future<String?> request = UserBusinessUsedCouponsApi().getUserBusinessUsedCoupons(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserBusinessUsedCouponsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserBusinessUsedCouponsHandler extends UserBusinessUsedCouponsApiInterface
     var controller = StreamController<String>();
 
     UserBusinessUsedCouponsApi().observeUserBusinessUsedCouponsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserBusinessUsedCouponsHandler extends UserBusinessUsedCouponsApiInterface
 }
 
 @JS('js.features.userBusinessUsedCoupons.UserBusinessUsedCouponsApi')
-class UserBusinessUsedCouponsApi {
-  external UserBusinessUsedCouponsApi();
+extension type UserBusinessUsedCouponsApi._(JSObject _) implements JSObject {
+  external factory UserBusinessUsedCouponsApi();
 
-  external dynamic getUserBusinessUsedCoupons( 
+  external JSPromise<JSString?> getUserBusinessUsedCoupons( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeUserBusinessUsedCouponsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

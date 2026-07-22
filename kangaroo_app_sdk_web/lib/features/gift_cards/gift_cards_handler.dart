@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/gift_cards/gift_cards_platform_interface.dart';
@@ -26,11 +25,10 @@ class GiftCardsHandler extends GiftCardsApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        GiftCardsApi().getGiftCards(
+    final Future<String?> request = GiftCardsApi().getGiftCards(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return GiftCardsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class GiftCardsHandler extends GiftCardsApiInterface
     var controller = StreamController<String>();
 
     GiftCardsApi().observeGiftCardsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class GiftCardsHandler extends GiftCardsApiInterface
 }
 
 @JS('js.features.giftCards.GiftCardsApi')
-class GiftCardsApi {
-  external GiftCardsApi();
+extension type GiftCardsApi._(JSObject _) implements JSObject {
+  external factory GiftCardsApi();
 
-  external dynamic getGiftCards( 
+  external JSPromise<JSString?> getGiftCards( 
         String? overrideHeaders, 
 
     );
 
   external void observeGiftCardsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_tiers/user_business_tiers_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserBusinessTiersHandler extends UserBusinessTiersApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserBusinessTiersApi().getUserBusinessTiers(
+    final Future<String?> request = UserBusinessTiersApi().getUserBusinessTiers(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserBusinessTiersApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserBusinessTiersHandler extends UserBusinessTiersApiInterface
     var controller = StreamController<String>();
 
     UserBusinessTiersApi().observeUserBusinessTiersState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserBusinessTiersHandler extends UserBusinessTiersApiInterface
 }
 
 @JS('js.features.userBusinessTiers.UserBusinessTiersApi')
-class UserBusinessTiersApi {
-  external UserBusinessTiersApi();
+extension type UserBusinessTiersApi._(JSObject _) implements JSObject {
+  external factory UserBusinessTiersApi();
 
-  external dynamic getUserBusinessTiers( 
+  external JSPromise<JSString?> getUserBusinessTiers( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeUserBusinessTiersState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_products/user_products_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserProductsHandler extends UserProductsApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserProductsApi().getUserProducts(
+    final Future<String?> request = UserProductsApi().getUserProducts(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserProductsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserProductsHandler extends UserProductsApiInterface
     var controller = StreamController<String>();
 
     UserProductsApi().observeUserProductsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserProductsHandler extends UserProductsApiInterface
 }
 
 @JS('js.features.userProducts.UserProductsApi')
-class UserProductsApi {
-  external UserProductsApi();
+extension type UserProductsApi._(JSObject _) implements JSObject {
+  external factory UserProductsApi();
 
-  external dynamic getUserProducts( 
+  external JSPromise<JSString?> getUserProducts( 
         String? overrideHeaders, 
 
     );
 
   external void observeUserProductsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

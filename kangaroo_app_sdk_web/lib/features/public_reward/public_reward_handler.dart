@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_reward/public_reward_platform_interface.dart';
@@ -26,11 +25,10 @@ class PublicRewardHandler extends PublicRewardApiInterface
       final Map<String, String>? overrideHeaders,
         required final String rewardSlug
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        PublicRewardApi().getPublicReward(
+    final Future<String?> request = PublicRewardApi().getPublicReward(
         jsonEncode(overrideHeaders),
         rewardSlug
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return PublicRewardApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class PublicRewardHandler extends PublicRewardApiInterface
     var controller = StreamController<String>();
 
     PublicRewardApi().observePublicRewardState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class PublicRewardHandler extends PublicRewardApiInterface
 }
 
 @JS('js.features.publicReward.PublicRewardApi')
-class PublicRewardApi {
-  external PublicRewardApi();
+extension type PublicRewardApi._(JSObject _) implements JSObject {
+  external factory PublicRewardApi();
 
-  external dynamic getPublicReward( 
+  external JSPromise<JSString?> getPublicReward( 
         String? overrideHeaders, 
         String rewardSlug
     );
 
   external void observePublicRewardState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_social_media_links/user_business_social_media_links_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserBusinessSocialMediaLinksHandler extends UserBusinessSocialMediaLinksAp
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
+    final Future<String?> request = UserBusinessSocialMediaLinksApi().getUserBusinessSocialMediaLinks(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserBusinessSocialMediaLinksApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserBusinessSocialMediaLinksHandler extends UserBusinessSocialMediaLinksAp
     var controller = StreamController<String>();
 
     UserBusinessSocialMediaLinksApi().observeUserBusinessSocialMediaLinksState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserBusinessSocialMediaLinksHandler extends UserBusinessSocialMediaLinksAp
 }
 
 @JS('js.features.userBusinessSocialMediaLinks.UserBusinessSocialMediaLinksApi')
-class UserBusinessSocialMediaLinksApi {
-  external UserBusinessSocialMediaLinksApi();
+extension type UserBusinessSocialMediaLinksApi._(JSObject _) implements JSObject {
+  external factory UserBusinessSocialMediaLinksApi();
 
-  external dynamic getUserBusinessSocialMediaLinks( 
+  external JSPromise<JSString?> getUserBusinessSocialMediaLinks( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeUserBusinessSocialMediaLinksState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

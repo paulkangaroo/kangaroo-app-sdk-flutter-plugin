@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_ala_carte/ala_carte_products_platform_interface.dart';
@@ -26,11 +25,10 @@ class AlaCarteProductsHandler extends AlaCarteProductsApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        AlaCarteProductsApi().getAlaCarteProducts(
+    final Future<String?> request = AlaCarteProductsApi().getAlaCarteProducts(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return AlaCarteProductsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class AlaCarteProductsHandler extends AlaCarteProductsApiInterface
     var controller = StreamController<String>();
 
     AlaCarteProductsApi().observeAlaCarteProductsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class AlaCarteProductsHandler extends AlaCarteProductsApiInterface
 }
 
 @JS('js.features.userAlaCarte.AlaCarteProductsApi')
-class AlaCarteProductsApi {
-  external AlaCarteProductsApi();
+extension type AlaCarteProductsApi._(JSObject _) implements JSObject {
+  external factory AlaCarteProductsApi();
 
-  external dynamic getAlaCarteProducts( 
+  external JSPromise<JSString?> getAlaCarteProducts( 
         String? overrideHeaders, 
 
     );
 
   external void observeAlaCarteProductsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

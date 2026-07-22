@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_delete/user_delete_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserDeleteHandler extends UserDeleteApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserDeleteApi().deleteUserAccount(
+    final Future<String?> request = UserDeleteApi().deleteUserAccount(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserDeleteApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserDeleteHandler extends UserDeleteApiInterface
     var controller = StreamController<String>();
 
     UserDeleteApi().observeUserDeleteState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserDeleteHandler extends UserDeleteApiInterface
 }
 
 @JS('js.features.userDelete.UserDeleteApi')
-class UserDeleteApi {
-  external UserDeleteApi();
+extension type UserDeleteApi._(JSObject _) implements JSObject {
+  external factory UserDeleteApi();
 
-  external dynamic deleteUserAccount( 
+  external JSPromise<JSString?> deleteUserAccount( 
         String? overrideHeaders, 
 
     );
 
   external void observeUserDeleteState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

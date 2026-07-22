@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_verification/user_account_verification_platform_interface.dart';
@@ -29,14 +28,13 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
         final String? phone,
         final String? countryCode
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserAccountVerificationApi().verifyAccount(
+    final Future<String?> request = UserAccountVerificationApi().verifyAccount(
         jsonEncode(overrideHeaders),
         token,
       email,
       phone,
       countryCode
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserAccountVerificationApiInterface.deSerializedPlatformResponse(
       request,
@@ -48,8 +46,8 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
     var controller = StreamController<String>();
 
     UserAccountVerificationApi().observeUserAccountVerificationState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -72,10 +70,10 @@ class UserAccountVerificationHandler extends UserAccountVerificationApiInterface
 }
 
 @JS('js.features.userVerification.UserAccountVerificationApi')
-class UserAccountVerificationApi {
-  external UserAccountVerificationApi();
+extension type UserAccountVerificationApi._(JSObject _) implements JSObject {
+  external factory UserAccountVerificationApi();
 
-  external dynamic verifyAccount( 
+  external JSPromise<JSString?> verifyAccount( 
         String? overrideHeaders, 
         String token,
         String? email,
@@ -84,8 +82,8 @@ class UserAccountVerificationApi {
     );
 
   external void observeUserAccountVerificationState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

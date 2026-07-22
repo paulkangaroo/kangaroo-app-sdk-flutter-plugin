@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/banners/banners_platform_interface.dart';
@@ -26,11 +25,10 @@ class BannersHandler extends BannersApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        BannersApi().getBanners(
+    final Future<String?> request = BannersApi().getBanners(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return BannersApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class BannersHandler extends BannersApiInterface
     var controller = StreamController<String>();
 
     BannersApi().observeBannersState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class BannersHandler extends BannersApiInterface
 }
 
 @JS('js.features.banners.BannersApi')
-class BannersApi {
-  external BannersApi();
+extension type BannersApi._(JSObject _) implements JSObject {
+  external factory BannersApi();
 
-  external dynamic getBanners( 
+  external JSPromise<JSString?> getBanners( 
         String? overrideHeaders, 
 
     );
 
   external void observeBannersState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

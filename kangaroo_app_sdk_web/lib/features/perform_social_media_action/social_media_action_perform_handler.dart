@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/perform_social_media_action/social_media_action_perform_platform_interface.dart';
@@ -27,12 +26,11 @@ class SocialMediaActionPerformHandler extends SocialMediaActionPerformApiInterfa
         required final PerformSocialMediaActionRequestModel performSocialMediaActionRequest,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        SocialMediaActionPerformApi().performSocialMediaAction(
+    final Future<String?> request = SocialMediaActionPerformApi().performSocialMediaAction(
         jsonEncode(overrideHeaders),
         jsonEncode(performSocialMediaActionRequest),
       businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return SocialMediaActionPerformApiInterface.deSerializedPlatformResponse(
       request,
@@ -44,8 +42,8 @@ class SocialMediaActionPerformHandler extends SocialMediaActionPerformApiInterfa
     var controller = StreamController<String>();
 
     SocialMediaActionPerformApi().observeSocialMediaActionPerformState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -68,18 +66,18 @@ class SocialMediaActionPerformHandler extends SocialMediaActionPerformApiInterfa
 }
 
 @JS('js.features.performSocialMediaAction.SocialMediaActionPerformApi')
-class SocialMediaActionPerformApi {
-  external SocialMediaActionPerformApi();
+extension type SocialMediaActionPerformApi._(JSObject _) implements JSObject {
+  external factory SocialMediaActionPerformApi();
 
-  external dynamic performSocialMediaAction( 
+  external JSPromise<JSString?> performSocialMediaAction( 
         String? overrideHeaders, 
         String performSocialMediaActionRequest,
         String businessId
     );
 
   external void observeSocialMediaActionPerformState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_used_coupons/user_used_coupons_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserUsedCouponsHandler extends UserUsedCouponsApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserUsedCouponsApi().getUserUsedCoupons(
+    final Future<String?> request = UserUsedCouponsApi().getUserUsedCoupons(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserUsedCouponsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserUsedCouponsHandler extends UserUsedCouponsApiInterface
     var controller = StreamController<String>();
 
     UserUsedCouponsApi().observeUserUsedCouponsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserUsedCouponsHandler extends UserUsedCouponsApiInterface
 }
 
 @JS('js.features.userUsedCoupons.UserUsedCouponsApi')
-class UserUsedCouponsApi {
-  external UserUsedCouponsApi();
+extension type UserUsedCouponsApi._(JSObject _) implements JSObject {
+  external factory UserUsedCouponsApi();
 
-  external dynamic getUserUsedCoupons( 
+  external JSPromise<JSString?> getUserUsedCoupons( 
         String? overrideHeaders, 
 
     );
 
   external void observeUserUsedCouponsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

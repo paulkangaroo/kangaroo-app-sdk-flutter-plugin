@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_amazon_catalogue/user_amazon_catalogue_platform_interface.dart';
@@ -29,14 +28,13 @@ class UserAmazonCatalogueHandler extends UserAmazonCatalogueApiInterface
         required final String? keywords,
         required final String? filters
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserAmazonCatalogueApi().getUserAmazonCatalogue(
+    final Future<String?> request = UserAmazonCatalogueApi().getUserAmazonCatalogue(
         jsonEncode(overrideHeaders),
         pageNumber,
       perPage,
       keywords,
       filters
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserAmazonCatalogueApiInterface.deSerializedPlatformResponse(
       request,
@@ -48,8 +46,8 @@ class UserAmazonCatalogueHandler extends UserAmazonCatalogueApiInterface
     var controller = StreamController<String>();
 
     UserAmazonCatalogueApi().observeUserAmazonCatalogueState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -72,10 +70,10 @@ class UserAmazonCatalogueHandler extends UserAmazonCatalogueApiInterface
 }
 
 @JS('js.features.userAmazonCatalogue.UserAmazonCatalogueApi')
-class UserAmazonCatalogueApi {
-  external UserAmazonCatalogueApi();
+extension type UserAmazonCatalogueApi._(JSObject _) implements JSObject {
+  external factory UserAmazonCatalogueApi();
 
-  external dynamic getUserAmazonCatalogue( 
+  external JSPromise<JSString?> getUserAmazonCatalogue( 
         String? overrideHeaders, 
         int pageNumber,
         int perPage,
@@ -84,8 +82,8 @@ class UserAmazonCatalogueApi {
     );
 
   external void observeUserAmazonCatalogueState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

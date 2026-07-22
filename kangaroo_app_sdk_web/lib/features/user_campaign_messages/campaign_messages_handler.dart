@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_campaign_messages/campaign_messages_platform_interface.dart';
@@ -26,11 +25,10 @@ class CampaignMessagesHandler extends CampaignMessagesApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        CampaignMessagesApi().getCampaignMessages(
+    final Future<String?> request = CampaignMessagesApi().getCampaignMessages(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return CampaignMessagesApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class CampaignMessagesHandler extends CampaignMessagesApiInterface
     var controller = StreamController<String>();
 
     CampaignMessagesApi().observeCampaignMessagesState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class CampaignMessagesHandler extends CampaignMessagesApiInterface
 }
 
 @JS('js.features.userCampaignMessages.CampaignMessagesApi')
-class CampaignMessagesApi {
-  external CampaignMessagesApi();
+extension type CampaignMessagesApi._(JSObject _) implements JSObject {
+  external factory CampaignMessagesApi();
 
-  external dynamic getCampaignMessages( 
+  external JSPromise<JSString?> getCampaignMessages( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeCampaignMessagesState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

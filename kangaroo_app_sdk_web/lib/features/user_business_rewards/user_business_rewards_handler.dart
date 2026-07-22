@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_rewards/user_business_rewards_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserBusinessRewardsHandler extends UserBusinessRewardsApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserBusinessRewardsApi().getUserBusinessRewards(
+    final Future<String?> request = UserBusinessRewardsApi().getUserBusinessRewards(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserBusinessRewardsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserBusinessRewardsHandler extends UserBusinessRewardsApiInterface
     var controller = StreamController<String>();
 
     UserBusinessRewardsApi().observeUserBusinessRewardsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserBusinessRewardsHandler extends UserBusinessRewardsApiInterface
 }
 
 @JS('js.features.userBusinessRewards.UserBusinessRewardsApi')
-class UserBusinessRewardsApi {
-  external UserBusinessRewardsApi();
+extension type UserBusinessRewardsApi._(JSObject _) implements JSObject {
+  external factory UserBusinessRewardsApi();
 
-  external dynamic getUserBusinessRewards( 
+  external JSPromise<JSString?> getUserBusinessRewards( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeUserBusinessRewardsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_a_la_carte_products/public_ala_carte_products_platform_interface.dart';
@@ -26,11 +25,10 @@ class PublicAlaCarteProductsHandler extends PublicAlaCarteProductsApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        PublicAlaCarteProductsApi().getPublicAlaCarteProducts(
+    final Future<String?> request = PublicAlaCarteProductsApi().getPublicAlaCarteProducts(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return PublicAlaCarteProductsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class PublicAlaCarteProductsHandler extends PublicAlaCarteProductsApiInterface
     var controller = StreamController<String>();
 
     PublicAlaCarteProductsApi().observePublicAlaCarteProductsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class PublicAlaCarteProductsHandler extends PublicAlaCarteProductsApiInterface
 }
 
 @JS('js.features.publicALaCarteProducts.PublicAlaCarteProductsApi')
-class PublicAlaCarteProductsApi {
-  external PublicAlaCarteProductsApi();
+extension type PublicAlaCarteProductsApi._(JSObject _) implements JSObject {
+  external factory PublicAlaCarteProductsApi();
 
-  external dynamic getPublicAlaCarteProducts( 
+  external JSPromise<JSString?> getPublicAlaCarteProducts( 
         String? overrideHeaders, 
 
     );
 
   external void observePublicAlaCarteProductsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

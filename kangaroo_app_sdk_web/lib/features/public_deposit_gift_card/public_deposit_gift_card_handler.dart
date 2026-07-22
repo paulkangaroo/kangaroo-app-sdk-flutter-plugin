@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_deposit_gift_card/public_deposit_gift_card_platform_interface.dart';
@@ -27,12 +26,11 @@ class PublicDepositGiftCardHandler extends PublicDepositGiftCardApiInterface
         required final String userId,
         required final String messageId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        PublicDepositGiftCardApi().publicDepositGiftCard(
+    final Future<String?> request = PublicDepositGiftCardApi().publicDepositGiftCard(
         jsonEncode(overrideHeaders),
         userId,
       messageId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return PublicDepositGiftCardApiInterface.deSerializedPlatformResponse(
       request,
@@ -44,8 +42,8 @@ class PublicDepositGiftCardHandler extends PublicDepositGiftCardApiInterface
     var controller = StreamController<String>();
 
     PublicDepositGiftCardApi().observePublicDepositGiftCardState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -68,18 +66,18 @@ class PublicDepositGiftCardHandler extends PublicDepositGiftCardApiInterface
 }
 
 @JS('js.features.publicDepositGiftCard.PublicDepositGiftCardApi')
-class PublicDepositGiftCardApi {
-  external PublicDepositGiftCardApi();
+extension type PublicDepositGiftCardApi._(JSObject _) implements JSObject {
+  external factory PublicDepositGiftCardApi();
 
-  external dynamic publicDepositGiftCard( 
+  external JSPromise<JSString?> publicDepositGiftCard( 
         String? overrideHeaders, 
         String userId,
         String messageId
     );
 
   external void observePublicDepositGiftCardState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

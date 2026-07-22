@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transfer_messages/transfer_messages_platform_interface.dart';
@@ -26,11 +25,10 @@ class TransferMessagesHandler extends TransferMessagesApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        TransferMessagesApi().getTransferMessages(
+    final Future<String?> request = TransferMessagesApi().getTransferMessages(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return TransferMessagesApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class TransferMessagesHandler extends TransferMessagesApiInterface
     var controller = StreamController<String>();
 
     TransferMessagesApi().observeTransferMessagesState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class TransferMessagesHandler extends TransferMessagesApiInterface
 }
 
 @JS('js.features.userTransferMessages.TransferMessagesApi')
-class TransferMessagesApi {
-  external TransferMessagesApi();
+extension type TransferMessagesApi._(JSObject _) implements JSObject {
+  external factory TransferMessagesApi();
 
-  external dynamic getTransferMessages( 
+  external JSPromise<JSString?> getTransferMessages( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeTransferMessagesState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

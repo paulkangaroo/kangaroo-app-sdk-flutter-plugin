@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_scan_receipt/user_scan_receipt_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserScanReceiptHandler extends UserScanReceiptApiInterface
       final Map<String, String>? overrideHeaders,
         required final ScanReceiptRequest scanReceiptRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserScanReceiptApi().scanReceipt(
+    final Future<String?> request = UserScanReceiptApi().scanReceipt(
         jsonEncode(overrideHeaders),
         jsonEncode(scanReceiptRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserScanReceiptApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserScanReceiptHandler extends UserScanReceiptApiInterface
     var controller = StreamController<String>();
 
     UserScanReceiptApi().observeUserScanReceiptState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserScanReceiptHandler extends UserScanReceiptApiInterface
 }
 
 @JS('js.features.userScanReceipt.UserScanReceiptApi')
-class UserScanReceiptApi {
-  external UserScanReceiptApi();
+extension type UserScanReceiptApi._(JSObject _) implements JSObject {
+  external factory UserScanReceiptApi();
 
-  external dynamic scanReceipt( 
+  external JSPromise<JSString?> scanReceipt( 
         String? overrideHeaders, 
         String scanReceiptRequest
     );
 
   external void observeUserScanReceiptState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

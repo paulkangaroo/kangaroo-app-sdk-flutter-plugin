@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_profile/user_business_profile_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserBusinessProfileHandler extends UserBusinessProfileApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserBusinessProfileApi().getUserBusinessProfile(
+    final Future<String?> request = UserBusinessProfileApi().getUserBusinessProfile(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserBusinessProfileApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserBusinessProfileHandler extends UserBusinessProfileApiInterface
     var controller = StreamController<String>();
 
     UserBusinessProfileApi().observeUserBusinessProfileState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserBusinessProfileHandler extends UserBusinessProfileApiInterface
 }
 
 @JS('js.features.userBusinessProfile.UserBusinessProfileApi')
-class UserBusinessProfileApi {
-  external UserBusinessProfileApi();
+extension type UserBusinessProfileApi._(JSObject _) implements JSObject {
+  external factory UserBusinessProfileApi();
 
-  external dynamic getUserBusinessProfile( 
+  external JSPromise<JSString?> getUserBusinessProfile( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeUserBusinessProfileState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

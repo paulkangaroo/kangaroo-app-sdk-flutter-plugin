@@ -4,8 +4,9 @@
 @JS('KangarooAppCustomerSDK')
 library kangaroo_app_customer_sdk.js;
 
+import 'dart:js_interop';
+
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/kangaroo_app_sdk_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
@@ -56,7 +57,7 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
 
   @override
   Future<String?> getSession() {
-    return KangarooSdk().getSession();
+    return KangarooSdk().getSession().toDart.then((value) => value?.toDart);
   }
 
   @override
@@ -66,7 +67,10 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
 
   @override
   Future<String?> getPreferredLanguage() {
-    return KangarooSdk().getPreferredLanguage();
+    return KangarooSdk()
+        .getPreferredLanguage()
+        .toDart
+        .then((value) => value?.toDart);
   }
 
   @override
@@ -76,17 +80,17 @@ class KangarooAppSdkHandler extends KangarooAppSdkInterface
 }
 
 @JS('kangaroorewards.js.appsdk.KangarooSdk')
-class KangarooSdk {
-  external KangarooSdk();
+extension type KangarooSdk._(JSObject _) implements JSObject {
+  external factory KangarooSdk();
 
   external void initialize(String? applicationKey, String? clientId,
       String? clientSecret, String? environment, String? baseURL);
 
-  external Future<String?> getSession();
+  external JSPromise<JSString?> getSession();
 
   external void killSession();
 
-  external Future<String?> getPreferredLanguage();
+  external JSPromise<JSString?> getPreferredLanguage();
 
   external void setPreferredLanguage(String? preferredLanguage);
 }

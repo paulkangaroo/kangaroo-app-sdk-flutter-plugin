@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/branches/branches_platform_interface.dart';
@@ -26,11 +25,10 @@ class BranchesHandler extends BranchesApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        BranchesApi().getBusinessBranches(
+    final Future<String?> request = BranchesApi().getBusinessBranches(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return BranchesApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class BranchesHandler extends BranchesApiInterface
     var controller = StreamController<String>();
 
     BranchesApi().observeBranchesState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class BranchesHandler extends BranchesApiInterface
 }
 
 @JS('js.features.branches.BranchesApi')
-class BranchesApi {
-  external BranchesApi();
+extension type BranchesApi._(JSObject _) implements JSObject {
+  external factory BranchesApi();
 
-  external dynamic getBusinessBranches( 
+  external JSPromise<JSString?> getBusinessBranches( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeBranchesState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

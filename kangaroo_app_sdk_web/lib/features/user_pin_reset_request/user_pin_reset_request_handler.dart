@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_pin_reset_request/user_pin_reset_request_platform_interface.dart';
@@ -29,14 +28,13 @@ class UserPinResetRequestHandler extends UserPinResetRequestApiInterface
         final String? phone,
         final String? countryCode
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserPinResetRequestApi().requestPinReset(
+    final Future<String?> request = UserPinResetRequestApi().requestPinReset(
         jsonEncode(overrideHeaders),
         mode,
       email,
       phone,
       countryCode
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserPinResetRequestApiInterface.deSerializedPlatformResponse(
       request,
@@ -48,8 +46,8 @@ class UserPinResetRequestHandler extends UserPinResetRequestApiInterface
     var controller = StreamController<String>();
 
     UserPinResetRequestApi().observeUserPinResetRequestState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -72,10 +70,10 @@ class UserPinResetRequestHandler extends UserPinResetRequestApiInterface
 }
 
 @JS('js.features.userPinResetRequest.UserPinResetRequestApi')
-class UserPinResetRequestApi {
-  external UserPinResetRequestApi();
+extension type UserPinResetRequestApi._(JSObject _) implements JSObject {
+  external factory UserPinResetRequestApi();
 
-  external dynamic requestPinReset( 
+  external JSPromise<JSString?> requestPinReset( 
         String? overrideHeaders, 
         String mode,
         String? email,
@@ -84,8 +82,8 @@ class UserPinResetRequestApi {
     );
 
   external void observeUserPinResetRequestState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

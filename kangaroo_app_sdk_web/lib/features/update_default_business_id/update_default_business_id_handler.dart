@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/update_default_business_id/update_default_business_id_platform_interface.dart';
@@ -27,12 +26,11 @@ class UpdateDefaultBusinessIdHandler extends UpdateDefaultBusinessIdApiInterface
         required final String businessId,
         required final String defaultBusinessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UpdateDefaultBusinessIdApi().updateDefaultBusinessId(
+    final Future<String?> request = UpdateDefaultBusinessIdApi().updateDefaultBusinessId(
         jsonEncode(overrideHeaders),
         businessId,
       defaultBusinessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UpdateDefaultBusinessIdApiInterface.deSerializedPlatformResponse(
       request,
@@ -44,8 +42,8 @@ class UpdateDefaultBusinessIdHandler extends UpdateDefaultBusinessIdApiInterface
     var controller = StreamController<String>();
 
     UpdateDefaultBusinessIdApi().observeUpdateDefaultBusinessIdState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -68,18 +66,18 @@ class UpdateDefaultBusinessIdHandler extends UpdateDefaultBusinessIdApiInterface
 }
 
 @JS('js.features.updateDefaultBusinessId.UpdateDefaultBusinessIdApi')
-class UpdateDefaultBusinessIdApi {
-  external UpdateDefaultBusinessIdApi();
+extension type UpdateDefaultBusinessIdApi._(JSObject _) implements JSObject {
+  external factory UpdateDefaultBusinessIdApi();
 
-  external dynamic updateDefaultBusinessId( 
+  external JSPromise<JSString?> updateDefaultBusinessId( 
         String? overrideHeaders, 
         String businessId,
         String defaultBusinessId
     );
 
   external void observeUpdateDefaultBusinessIdState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

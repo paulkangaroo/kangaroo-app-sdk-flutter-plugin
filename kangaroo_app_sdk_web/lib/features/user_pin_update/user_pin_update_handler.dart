@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_pin_update/user_pin_update_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserPinUpdateHandler extends UserPinUpdateApiInterface
       final Map<String, String>? overrideHeaders,
         required final UpdatePinRequest updatePinRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserPinUpdateApi().updatePin(
+    final Future<String?> request = UserPinUpdateApi().updatePin(
         jsonEncode(overrideHeaders),
         jsonEncode(updatePinRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserPinUpdateApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserPinUpdateHandler extends UserPinUpdateApiInterface
     var controller = StreamController<String>();
 
     UserPinUpdateApi().observeUserPinUpdateState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserPinUpdateHandler extends UserPinUpdateApiInterface
 }
 
 @JS('js.features.userPinUpdate.UserPinUpdateApi')
-class UserPinUpdateApi {
-  external UserPinUpdateApi();
+extension type UserPinUpdateApi._(JSObject _) implements JSObject {
+  external factory UserPinUpdateApi();
 
-  external dynamic updatePin( 
+  external JSPromise<JSString?> updatePin( 
         String? overrideHeaders, 
         String updatePinRequest
     );
 
   external void observeUserPinUpdateState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

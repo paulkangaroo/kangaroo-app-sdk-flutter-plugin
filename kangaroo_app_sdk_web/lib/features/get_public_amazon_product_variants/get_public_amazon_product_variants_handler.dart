@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/get_public_amazon_product_variants/get_public_amazon_product_variants_platform_interface.dart';
@@ -27,12 +26,11 @@ class GetPublicAmazonProductVariantsHandler extends GetPublicAmazonProductVarian
         required final String rewardSlug,
         required final String externalProductId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        GetPublicAmazonProductVariantsApi().getPublicAmazonProductVariants(
+    final Future<String?> request = GetPublicAmazonProductVariantsApi().getPublicAmazonProductVariants(
         jsonEncode(overrideHeaders),
         rewardSlug,
       externalProductId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return GetPublicAmazonProductVariantsApiInterface.deSerializedPlatformResponse(
       request,
@@ -44,8 +42,8 @@ class GetPublicAmazonProductVariantsHandler extends GetPublicAmazonProductVarian
     var controller = StreamController<String>();
 
     GetPublicAmazonProductVariantsApi().observeGetPublicAmazonProductVariantsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -68,18 +66,18 @@ class GetPublicAmazonProductVariantsHandler extends GetPublicAmazonProductVarian
 }
 
 @JS('js.features.getPublicAmazonProductVariants.GetPublicAmazonProductVariantsApi')
-class GetPublicAmazonProductVariantsApi {
-  external GetPublicAmazonProductVariantsApi();
+extension type GetPublicAmazonProductVariantsApi._(JSObject _) implements JSObject {
+  external factory GetPublicAmazonProductVariantsApi();
 
-  external dynamic getPublicAmazonProductVariants( 
+  external JSPromise<JSString?> getPublicAmazonProductVariants( 
         String? overrideHeaders, 
         String rewardSlug,
         String externalProductId
     );
 
   external void observeGetPublicAmazonProductVariantsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

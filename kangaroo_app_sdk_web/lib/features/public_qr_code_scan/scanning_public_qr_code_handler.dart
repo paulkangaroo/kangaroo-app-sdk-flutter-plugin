@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/public_qr_code_scan/scanning_public_qr_code_platform_interface.dart';
@@ -26,11 +25,10 @@ class ScanningPublicQrCodeHandler extends ScanningPublicQrCodeApiInterface
       final Map<String, String>? overrideHeaders,
         required final ScanPublicQrCodeRequest scanPublicQrCodeRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        ScanningPublicQrCodeApi().scanPublicQrCode(
+    final Future<String?> request = ScanningPublicQrCodeApi().scanPublicQrCode(
         jsonEncode(overrideHeaders),
         jsonEncode(scanPublicQrCodeRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return ScanningPublicQrCodeApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class ScanningPublicQrCodeHandler extends ScanningPublicQrCodeApiInterface
     var controller = StreamController<String>();
 
     ScanningPublicQrCodeApi().observeScanningPublicQrCodeState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class ScanningPublicQrCodeHandler extends ScanningPublicQrCodeApiInterface
 }
 
 @JS('js.features.publicQrCodeScan.ScanningPublicQrCodeApi')
-class ScanningPublicQrCodeApi {
-  external ScanningPublicQrCodeApi();
+extension type ScanningPublicQrCodeApi._(JSObject _) implements JSObject {
+  external factory ScanningPublicQrCodeApi();
 
-  external dynamic scanPublicQrCode( 
+  external JSPromise<JSString?> scanPublicQrCode( 
         String? overrideHeaders, 
         String scanPublicQrCodeRequest
     );
 
   external void observeScanningPublicQrCodeState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

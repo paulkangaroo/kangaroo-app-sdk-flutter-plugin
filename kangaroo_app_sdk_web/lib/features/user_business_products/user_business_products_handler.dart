@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_business_products/user_business_products_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserBusinessProductsHandler extends UserBusinessProductsApiInterface
       final Map<String, String>? overrideHeaders,
         required final String businessId
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserBusinessProductsApi().getUserBusinessProducts(
+    final Future<String?> request = UserBusinessProductsApi().getUserBusinessProducts(
         jsonEncode(overrideHeaders),
         businessId
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserBusinessProductsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserBusinessProductsHandler extends UserBusinessProductsApiInterface
     var controller = StreamController<String>();
 
     UserBusinessProductsApi().observeUserBusinessProductsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserBusinessProductsHandler extends UserBusinessProductsApiInterface
 }
 
 @JS('js.features.userBusinessProducts.UserBusinessProductsApi')
-class UserBusinessProductsApi {
-  external UserBusinessProductsApi();
+extension type UserBusinessProductsApi._(JSObject _) implements JSObject {
+  external factory UserBusinessProductsApi();
 
-  external dynamic getUserBusinessProducts( 
+  external JSPromise<JSString?> getUserBusinessProducts( 
         String? overrideHeaders, 
         String businessId
     );
 
   external void observeUserBusinessProductsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

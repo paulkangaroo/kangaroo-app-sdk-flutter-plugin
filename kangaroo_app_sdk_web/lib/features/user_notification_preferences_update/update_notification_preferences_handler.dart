@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_notification_preferences_update/update_notification_preferences_platform_interface.dart';
@@ -26,11 +25,10 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
       final Map<String, String>? overrideHeaders,
         required final NotificationSettingsUpdateRequest notificationPreferencesRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UpdateNotificationPreferencesApi().updateNotificationPreferences(
+    final Future<String?> request = UpdateNotificationPreferencesApi().updateNotificationPreferences(
         jsonEncode(overrideHeaders),
         jsonEncode(notificationPreferencesRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UpdateNotificationPreferencesApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
     var controller = StreamController<String>();
 
     UpdateNotificationPreferencesApi().observeUpdateNotificationPreferencesState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UpdateNotificationPreferencesHandler extends UpdateNotificationPreferences
 }
 
 @JS('js.features.userNotificationPreferencesUpdate.UpdateNotificationPreferencesApi')
-class UpdateNotificationPreferencesApi {
-  external UpdateNotificationPreferencesApi();
+extension type UpdateNotificationPreferencesApi._(JSObject _) implements JSObject {
+  external factory UpdateNotificationPreferencesApi();
 
-  external dynamic updateNotificationPreferences( 
+  external JSPromise<JSString?> updateNotificationPreferences( 
         String? overrideHeaders, 
         String notificationPreferencesRequest
     );
 
   external void observeUpdateNotificationPreferencesState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_pin_reset_with_verification_code/user_pin_reset_platform_interface.dart';
@@ -30,15 +29,14 @@ class UserPinResetHandler extends UserPinResetApiInterface
         final String? phone,
         final String? countryCode
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserPinResetApi().resetPin(
+    final Future<String?> request = UserPinResetApi().resetPin(
         jsonEncode(overrideHeaders),
         verificationCode,
       pinCode,
       email,
       phone,
       countryCode
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserPinResetApiInterface.deSerializedPlatformResponse(
       request,
@@ -50,8 +48,8 @@ class UserPinResetHandler extends UserPinResetApiInterface
     var controller = StreamController<String>();
 
     UserPinResetApi().observeUserPinResetState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -74,10 +72,10 @@ class UserPinResetHandler extends UserPinResetApiInterface
 }
 
 @JS('js.features.userPinResetWithVerificationCode.UserPinResetApi')
-class UserPinResetApi {
-  external UserPinResetApi();
+extension type UserPinResetApi._(JSObject _) implements JSObject {
+  external factory UserPinResetApi();
 
-  external dynamic resetPin( 
+  external JSPromise<JSString?> resetPin( 
         String? overrideHeaders, 
         String verificationCode,
         String pinCode,
@@ -87,8 +85,8 @@ class UserPinResetApi {
     );
 
   external void observeUserPinResetState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

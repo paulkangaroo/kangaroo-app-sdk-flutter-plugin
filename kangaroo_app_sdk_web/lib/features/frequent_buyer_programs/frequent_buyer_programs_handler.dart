@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/frequent_buyer_programs/frequent_buyer_programs_platform_interface.dart';
@@ -26,11 +25,10 @@ class FrequentBuyerProgramsHandler extends FrequentBuyerProgramsApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        FrequentBuyerProgramsApi().getFrequentBuyerPrograms(
+    final Future<String?> request = FrequentBuyerProgramsApi().getFrequentBuyerPrograms(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return FrequentBuyerProgramsApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class FrequentBuyerProgramsHandler extends FrequentBuyerProgramsApiInterface
     var controller = StreamController<String>();
 
     FrequentBuyerProgramsApi().observeFrequentBuyerProgramsState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class FrequentBuyerProgramsHandler extends FrequentBuyerProgramsApiInterface
 }
 
 @JS('js.features.frequentBuyerPrograms.FrequentBuyerProgramsApi')
-class FrequentBuyerProgramsApi {
-  external FrequentBuyerProgramsApi();
+extension type FrequentBuyerProgramsApi._(JSObject _) implements JSObject {
+  external factory FrequentBuyerProgramsApi();
 
-  external dynamic getFrequentBuyerPrograms( 
+  external JSPromise<JSString?> getFrequentBuyerPrograms( 
         String? overrideHeaders, 
 
     );
 
   external void observeFrequentBuyerProgramsState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

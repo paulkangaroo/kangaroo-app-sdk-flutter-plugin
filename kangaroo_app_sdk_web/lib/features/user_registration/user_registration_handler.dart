@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_registration/user_registration_platform_interface.dart';
@@ -29,14 +28,13 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
         final String? countryCode,
         final String? language
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserRegistrationApi().createAccount(
+    final Future<String?> request = UserRegistrationApi().createAccount(
         jsonEncode(overrideHeaders),
         email,
       phone,
       countryCode,
       language
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserRegistrationApiInterface.deSerializedPlatformResponse(
       request,
@@ -48,8 +46,8 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
     var controller = StreamController<String>();
 
     UserRegistrationApi().observeUserRegistrationState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -72,10 +70,10 @@ class UserRegistrationHandler extends UserRegistrationApiInterface
 }
 
 @JS('js.features.userRegistration.UserRegistrationApi')
-class UserRegistrationApi {
-  external UserRegistrationApi();
+extension type UserRegistrationApi._(JSObject _) implements JSObject {
+  external factory UserRegistrationApi();
 
-  external dynamic createAccount( 
+  external JSPromise<JSString?> createAccount( 
         String? overrideHeaders, 
         String? email,
         String? phone,
@@ -84,8 +82,8 @@ class UserRegistrationApi {
     );
 
   external void observeUserRegistrationState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

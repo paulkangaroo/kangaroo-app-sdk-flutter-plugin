@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/user_transaction_history/user_transaction_history_platform_interface.dart';
@@ -26,11 +25,10 @@ class UserTransactionHistoryHandler extends UserTransactionHistoryApiInterface
       final Map<String, String>? overrideHeaders,
 
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        UserTransactionHistoryApi().getUserTransactionHistory(
+    final Future<String?> request = UserTransactionHistoryApi().getUserTransactionHistory(
         jsonEncode(overrideHeaders),
         
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return UserTransactionHistoryApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class UserTransactionHistoryHandler extends UserTransactionHistoryApiInterface
     var controller = StreamController<String>();
 
     UserTransactionHistoryApi().observeUserTransactionHistoryState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class UserTransactionHistoryHandler extends UserTransactionHistoryApiInterface
 }
 
 @JS('js.features.userTransactionHistory.UserTransactionHistoryApi')
-class UserTransactionHistoryApi {
-  external UserTransactionHistoryApi();
+extension type UserTransactionHistoryApi._(JSObject _) implements JSObject {
+  external factory UserTransactionHistoryApi();
 
-  external dynamic getUserTransactionHistory( 
+  external JSPromise<JSString?> getUserTransactionHistory( 
         String? overrideHeaders, 
 
     );
 
   external void observeUserTransactionHistoryState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 

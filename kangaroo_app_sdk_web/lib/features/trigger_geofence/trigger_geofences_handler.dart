@@ -5,9 +5,8 @@ library kangaroo_app_customer_sdk.js;
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:js_util';
+import 'dart:js_interop';
 
-import 'package:js/js.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/base_platform_interface.dart';
 import 'package:kangaroo_app_sdk_web/base/plugin_channel_handler.dart';
 import 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/trigger_geofence/trigger_geofences_platform_interface.dart';
@@ -26,11 +25,10 @@ class TriggerGeofencesHandler extends TriggerGeofencesApiInterface
       final Map<String, String>? overrideHeaders,
         required final TriggerGeofenceRequest triggerGeofenceRequest
     }) {
-    final Future<String?> request = promiseToFuture<String?>(
-        TriggerGeofencesApi().triggerGeofence(
+    final Future<String?> request = TriggerGeofencesApi().triggerGeofence(
         jsonEncode(overrideHeaders),
         jsonEncode(triggerGeofenceRequest)
-    ),);
+    ).toDart.then((value) => value?.toDart);
 
     return TriggerGeofencesApiInterface.deSerializedPlatformResponse(
       request,
@@ -42,8 +40,8 @@ class TriggerGeofencesHandler extends TriggerGeofencesApiInterface
     var controller = StreamController<String>();
 
     TriggerGeofencesApi().observeTriggerGeofencesState(
-      allowInterop((success) => {controller.add(success)}),
-      allowInterop((error) => {print("Flutter Response: $error")}),
+      ((JSString success) => controller.add(success.toDart)).toJS,
+      ((JSString error) => print("Flutter Response: ${error.toDart}")).toJS,
     );
 
     return controller.stream.distinct().map((event) {
@@ -66,17 +64,17 @@ class TriggerGeofencesHandler extends TriggerGeofencesApiInterface
 }
 
 @JS('js.features.triggerGeofence.TriggerGeofencesApi')
-class TriggerGeofencesApi {
-  external TriggerGeofencesApi();
+extension type TriggerGeofencesApi._(JSObject _) implements JSObject {
+  external factory TriggerGeofencesApi();
 
-  external dynamic triggerGeofence( 
+  external JSPromise<JSString?> triggerGeofence( 
         String? overrideHeaders, 
         String triggerGeofenceRequest
     );
 
   external void observeTriggerGeofencesState(
-    Function(String) onData,
-    Function(String) onStreamError,
+    JSFunction onData,
+    JSFunction onStreamError,
   );
 }
 
