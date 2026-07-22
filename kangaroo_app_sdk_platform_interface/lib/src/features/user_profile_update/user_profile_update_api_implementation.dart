@@ -6,28 +6,18 @@ import 'package:kangaroo_app_sdk_platform_interface/src/base/result.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/base/state.dart';
 import 'package:kangaroo_app_sdk_platform_interface/src/features/user_profile_update/user_profile_update_api_interface.dart';
 
-
+import 'package:kangaroo_app_sdk_platform_interface/src/features/models/update_user_profile_request.dart';
 
 class UserProfileUpdateApiFederated extends UserProfileUpdateApiInterface {
   @override
 Future<Result<UserProfileModel>?> updateUserProfile({ 
         final Map<String, String>? overrideHeaders,
-        final String? firstName,
-        final String? lastName,
-        final String? birthDate,
-        final String? language,
-        final String? gender,
-        final String? profilePhoto
+        required final UpdateUserProfileRequest updateUserProfileRequest
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/update_user_profile',
     {
       'overrideHeaders' : overrideHeaders,
-      'firstName' : firstName,
-      'lastName' : lastName,
-      'birthDate' : birthDate,
-      'language' : language,
-      'gender' : gender,
-      'profilePhoto' : profilePhoto
+      'updateUserProfileRequest' : jsonEncode(updateUserProfileRequest)
     }
     );
 

@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/public_deposit_gift_card/public_deposit_gift_card_api_interface.dart';

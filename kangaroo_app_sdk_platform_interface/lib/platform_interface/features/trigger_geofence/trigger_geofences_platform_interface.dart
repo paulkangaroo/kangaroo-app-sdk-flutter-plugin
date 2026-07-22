@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/trigger_geofence/trigger_geofences_api_interface.dart';

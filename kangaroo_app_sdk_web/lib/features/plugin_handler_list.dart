@@ -8,6 +8,7 @@ import 'user_registration_with_crm/user_registration_with_crm_handler.dart';
 import 'user_delete/user_delete_handler.dart';
 import 'deposit_gift_card/gift_card_deposit_handler.dart';
 import 'user_ala_carte/ala_carte_products_handler.dart';
+import 'get_amazon_product_variants/get_amazon_product_variants_handler.dart';
 import 'banners/banners_handler.dart';
 import 'business/business_handler.dart';
 import 'branches/branches_handler.dart';
@@ -23,7 +24,10 @@ import 'draws/draws_handler.dart';
 import 'frequent_buyer_programs/frequent_buyer_programs_handler.dart';
 import 'gift_cards/gift_cards_handler.dart';
 import 'user_notification_preferences/get_notification_preferences_handler.dart';
+import 'order_status/order_status_handler.dart';
 import 'public_a_la_carte_products/public_ala_carte_products_handler.dart';
+import 'public_amazon_catalogue/public_amazon_catalogue_handler.dart';
+import 'get_public_amazon_product_variants/get_public_amazon_product_variants_handler.dart';
 import 'public_banners/public_banners_handler.dart';
 import 'public_branches/public_branches_handler.dart';
 import 'public_business_settings/public_business_settings_handler.dart';
@@ -40,10 +44,12 @@ import 'get_spin_to_win_prizes/get_spin_to_win_prizes_handler.dart';
 import 'strings/strings_handler.dart';
 import 'tiers/tiers_handler.dart';
 import 'user_transfer_messages/transfer_messages_handler.dart';
+import 'user_amazon_catalogue/user_amazon_catalogue_handler.dart';
 import 'user_business_ala_carte_products/user_business_ala_carte_products_handler.dart';
 import 'user_business_banners/user_business_banners_handler.dart';
 import 'user_business_frequent_buyer_programs/user_business_frequent_buyer_programs_handler.dart';
 import 'user_business_gift_cards/user_business_gift_cards_handler.dart';
+import 'user_business_notifications/user_business_notifications_handler.dart';
 import 'user_business_offers/user_business_offers_handler.dart';
 import 'user_business_products/user_business_products_handler.dart';
 import 'user_business_profile/user_business_profile_handler.dart';
@@ -66,6 +72,7 @@ import 'post_offer_facebook_share/offer_facebook_share_handler.dart';
 import 'public_deposit_gift_card/public_deposit_gift_card_handler.dart';
 import 'make_gift_card_purchase/gift_card_purchase_handler.dart';
 import 'user_transfer_recall/transfer_recall_handler.dart';
+import 'redeem_amazon_catalogue_item/redeem_amazon_catalogue_items_handler.dart';
 import 'redeem_coupon/redeem_coupons_handler.dart';
 import 'redeem_reward/redeem_rewards_handler.dart';
 import 'push_token_registration/push_token_registration_handler.dart';
@@ -100,6 +107,8 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   AlaCarteProductsHandler(),
 
+  GetAmazonProductVariantsHandler(),
+
   BannersHandler(),
 
   BusinessHandler(),
@@ -130,7 +139,13 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   GetNotificationPreferencesHandler(),
 
+  OrderStatusHandler(),
+
   PublicAlaCarteProductsHandler(),
+
+  PublicAmazonCatalogueHandler(),
+
+  GetPublicAmazonProductVariantsHandler(),
 
   PublicBannersHandler(),
 
@@ -164,6 +179,8 @@ List<PluginChannelHandler> pluginHandlerList = [
 
   TransferMessagesHandler(),
 
+  UserAmazonCatalogueHandler(),
+
   UserBusinessAlaCarteProductsHandler(),
 
   UserBusinessBannersHandler(),
@@ -171,6 +188,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   UserBusinessFrequentBuyerProgramsHandler(),
 
   UserBusinessGiftCardsHandler(),
+
+  UserBusinessNotificationsHandler(),
 
   UserBusinessOffersHandler(),
 
@@ -215,6 +234,8 @@ List<PluginChannelHandler> pluginHandlerList = [
   GiftCardPurchaseHandler(),
 
   TransferRecallHandler(),
+
+  RedeemAmazonCatalogueItemsHandler(),
 
   RedeemCouponsHandler(),
 

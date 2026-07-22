@@ -37,7 +37,8 @@ class PushTokenRegistrationHandler : EventChannel.StreamHandler, PluginChannelHa
             val result = PushTokenRegistrationApi().registerPushToken(
                 overrideHeaders = call.argument<Map<String, String>>("overrideHeaders") as Map<String, String>?,
                 androidDeviceToken = call.argument<String?>("androidDeviceToken"),
-                iosDeviceToken = call.argument<String?>("iosDeviceToken")
+                iosDeviceToken = call.argument<String?>("iosDeviceToken"),
+                webDeviceToken = call.argument<String?>("webDeviceToken")
             ).toJsonResult<UserProfileModel>()
 
             return when (result) {

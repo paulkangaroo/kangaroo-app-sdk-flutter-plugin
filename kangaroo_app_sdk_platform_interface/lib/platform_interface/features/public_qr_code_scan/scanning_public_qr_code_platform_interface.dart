@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/public_qr_code_scan/scanning_public_qr_code_api_interface.dart';

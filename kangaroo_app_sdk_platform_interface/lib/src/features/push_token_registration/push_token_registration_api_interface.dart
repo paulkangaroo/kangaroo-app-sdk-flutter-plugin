@@ -31,6 +31,7 @@ Future<Result<UserProfileModel>?> registerPushToken({
         final Map<String, String>? overrideHeaders,
         final String? androidDeviceToken,
         final String? iosDeviceToken,
+        final String? webDeviceToken,
     }) {
     throw UnimplementedError('registerPushToken has not been implemented.');
   }

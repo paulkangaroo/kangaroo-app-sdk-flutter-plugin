@@ -13,13 +13,15 @@ class PushTokenRegistrationApiFederated extends PushTokenRegistrationApiInterfac
 Future<Result<UserProfileModel>?> registerPushToken({ 
         final Map<String, String>? overrideHeaders,
         final String? androidDeviceToken,
-        final String? iosDeviceToken
+        final String? iosDeviceToken,
+        final String? webDeviceToken
     }) async {
     final Future<String?> response = sdkMethodChannel.invokeMethod('customer_sdk/methods/register_push_token',
     {
       'overrideHeaders' : overrideHeaders,
       'androidDeviceToken' : androidDeviceToken,
-      'iosDeviceToken' : iosDeviceToken
+      'iosDeviceToken' : iosDeviceToken,
+      'webDeviceToken' : webDeviceToken
     }
     );
 

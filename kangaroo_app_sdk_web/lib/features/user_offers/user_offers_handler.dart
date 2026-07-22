@@ -24,12 +24,12 @@ class UserOffersHandler extends UserOffersApiInterface
   @override
   getUserOffers({ 
       final Map<String, String>? overrideHeaders,
-
+        required final int perPage
     }) {
     final Future<String?> request = promiseToFuture<String?>(
         UserOffersApi().getUserOffers(
         jsonEncode(overrideHeaders),
-        
+        perPage
     ),);
 
     return UserOffersApiInterface.deSerializedPlatformResponse(
@@ -71,7 +71,7 @@ class UserOffersApi {
 
   external dynamic getUserOffers( 
         String? overrideHeaders, 
-
+        int perPage
     );
 
   external void observeUserOffersState(
