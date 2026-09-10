@@ -30,7 +30,7 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace 'com.kangaroo.flutterplugin.android'
-    compileSdkVersion 33
+    compileSdkVersion 36
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
