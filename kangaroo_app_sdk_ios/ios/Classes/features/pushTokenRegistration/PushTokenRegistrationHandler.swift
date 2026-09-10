@@ -34,11 +34,13 @@ class PushTokenRegistrationHandler: NSObject, FlutterStreamHandler, PluginChanne
           let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
                         let androidDeviceToken = myArgs["androidDeviceToken"] as? String? ?? nil
                 let iosDeviceToken = myArgs["iosDeviceToken"] as? String? ?? nil
+                let webDeviceToken = myArgs["webDeviceToken"] as? String? ?? nil
 
         let result = try await PushTokenRegistrationApi().registerPushToken(
                 overrideHeaders: overrideHeaders,
                 androidDeviceToken: androidDeviceToken,
-                iosDeviceToken: iosDeviceToken
+                iosDeviceToken: iosDeviceToken,
+                webDeviceToken: webDeviceToken
            ).serializePushTokenRegistrationApiResult()
 
         switch result {

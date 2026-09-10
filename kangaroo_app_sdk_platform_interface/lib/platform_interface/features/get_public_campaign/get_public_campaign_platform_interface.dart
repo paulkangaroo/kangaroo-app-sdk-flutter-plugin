@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/get_public_campaign/get_public_campaign_api_interface.dart';

@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/conglomerate_memberships/conglomerate_memberships_api_interface.dart';

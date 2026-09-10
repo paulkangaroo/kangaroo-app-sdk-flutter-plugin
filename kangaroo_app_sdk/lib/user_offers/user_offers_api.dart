@@ -8,11 +8,11 @@ export 'package:kangaroo_app_sdk_platform_interface/platform_interface/features/
 class UserOffersApi {
   static Future<Result<UserOffersModel>?> getUserOffers({ 
     final Map<String, String>? overrideHeaders,
-
+    required final int perPage,
   }) {
     return UserOffersApiInterface.instance.getUserOffers( 
       overrideHeaders: overrideHeaders,
-
+      perPage: perPage,
     );
   }
 

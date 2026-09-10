@@ -10,11 +10,13 @@ class PushTokenRegistrationApi {
     final Map<String, String>? overrideHeaders,
     final String? androidDeviceToken,
     final String? iosDeviceToken,
+    final String? webDeviceToken,
   }) {
     return PushTokenRegistrationApiInterface.instance.registerPushToken( 
       overrideHeaders: overrideHeaders,
       androidDeviceToken: androidDeviceToken,
       iosDeviceToken: iosDeviceToken,
+      webDeviceToken: webDeviceToken,
     );
   }
 

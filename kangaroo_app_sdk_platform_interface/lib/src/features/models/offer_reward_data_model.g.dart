@@ -1,0 +1,182 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'offer_reward_data_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+OfferRewardDataModel _$OfferRewardDataModelFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      'OfferRewardDataModel',
+      json,
+      ($checkedConvert) {
+        $checkKeys(
+          json,
+          allowedKeys: const [
+            'id',
+            'points',
+            'publish_at',
+            'expires_at',
+            'is_published',
+            'coupon_convertible',
+            'real_value',
+            'discount_value',
+            'multip_factor',
+            'min_purchase',
+            'max_purchase',
+            'apps_only',
+            'is_coupon_redeemed',
+            'offer_frequency_id',
+            'freq_details',
+            'peak_from',
+            'peak_to',
+            'type',
+            'title',
+            'description',
+            'slug',
+            'images',
+            'never_expires_flag',
+            'terms_conditions',
+            'link',
+            'offer_languages',
+            'actions',
+            'amount',
+            'partner_reward',
+            'partner_reward_type',
+            'redeem_for_gift_card',
+            'reward_languages'
+          ],
+        );
+        final val = OfferRewardDataModel(
+          id: $checkedConvert('id', (v) => (v as num).toInt()),
+          points: $checkedConvert('points', (v) => (v as num?)?.toInt()),
+          publishAt: $checkedConvert('publish_at', (v) => v as String?),
+          expiresAt: $checkedConvert('expires_at', (v) => v as String?),
+          isPublished: $checkedConvert('is_published', (v) => v as bool?),
+          couponConvertible:
+              $checkedConvert('coupon_convertible', (v) => v as bool?),
+          realValue:
+              $checkedConvert('real_value', (v) => (v as num?)?.toDouble()),
+          discountValue:
+              $checkedConvert('discount_value', (v) => (v as num?)?.toDouble()),
+          multipFactor:
+              $checkedConvert('multip_factor', (v) => (v as num?)?.toDouble()),
+          minPurchase:
+              $checkedConvert('min_purchase', (v) => (v as num?)?.toDouble()),
+          maxPurchase:
+              $checkedConvert('max_purchase', (v) => (v as num?)?.toDouble()),
+          appsOnly: $checkedConvert('apps_only', (v) => v as bool?),
+          isCouponRedeemed:
+              $checkedConvert('is_coupon_redeemed', (v) => v as bool?),
+          offerFrequencyId: $checkedConvert(
+              'offer_frequency_id', (v) => (v as num?)?.toInt()),
+          freqDetails: $checkedConvert('freq_details',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          peakFrom: $checkedConvert('peak_from', (v) => v as String?),
+          peakTo: $checkedConvert('peak_to', (v) => v as String?),
+          type: $checkedConvert('type', (v) => v as String?),
+          title: $checkedConvert('title', (v) => v as String?),
+          description: $checkedConvert('description', (v) => v as String?),
+          slug: $checkedConvert('slug', (v) => v as String?),
+          images: $checkedConvert(
+              'images',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => ImageModel.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          neverExpiresFlag:
+              $checkedConvert('never_expires_flag', (v) => v as bool?),
+          termsConditions:
+              $checkedConvert('terms_conditions', (v) => v as String?),
+          link: $checkedConvert('link', (v) => v as String?),
+          offerLanguages: $checkedConvert(
+              'offer_languages',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      OfferTranslation.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          actions: $checkedConvert(
+              'actions',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => OfferAction.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+          amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
+          partnerReward: $checkedConvert('partner_reward', (v) => v as bool?),
+          partnerRewardType: $checkedConvert(
+              'partner_reward_type', (v) => (v as num?)?.toInt()),
+          redeemForGiftCard:
+              $checkedConvert('redeem_for_gift_card', (v) => v as bool?),
+          rewardLanguages: $checkedConvert(
+              'reward_languages',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) =>
+                      RewardTranslation.fromJson(e as Map<String, dynamic>))
+                  .toList()),
+        );
+        return val;
+      },
+      fieldKeyMap: const {
+        'publishAt': 'publish_at',
+        'expiresAt': 'expires_at',
+        'isPublished': 'is_published',
+        'couponConvertible': 'coupon_convertible',
+        'realValue': 'real_value',
+        'discountValue': 'discount_value',
+        'multipFactor': 'multip_factor',
+        'minPurchase': 'min_purchase',
+        'maxPurchase': 'max_purchase',
+        'appsOnly': 'apps_only',
+        'isCouponRedeemed': 'is_coupon_redeemed',
+        'offerFrequencyId': 'offer_frequency_id',
+        'freqDetails': 'freq_details',
+        'peakFrom': 'peak_from',
+        'peakTo': 'peak_to',
+        'neverExpiresFlag': 'never_expires_flag',
+        'termsConditions': 'terms_conditions',
+        'offerLanguages': 'offer_languages',
+        'partnerReward': 'partner_reward',
+        'partnerRewardType': 'partner_reward_type',
+        'redeemForGiftCard': 'redeem_for_gift_card',
+        'rewardLanguages': 'reward_languages'
+      },
+    );
+
+Map<String, dynamic> _$OfferRewardDataModelToJson(
+        OfferRewardDataModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'points': instance.points,
+      'publish_at': instance.publishAt,
+      'expires_at': instance.expiresAt,
+      'is_published': instance.isPublished,
+      'coupon_convertible': instance.couponConvertible,
+      'real_value': instance.realValue,
+      'discount_value': instance.discountValue,
+      'multip_factor': instance.multipFactor,
+      'min_purchase': instance.minPurchase,
+      'max_purchase': instance.maxPurchase,
+      'apps_only': instance.appsOnly,
+      'is_coupon_redeemed': instance.isCouponRedeemed,
+      'offer_frequency_id': instance.offerFrequencyId,
+      'freq_details': instance.freqDetails,
+      'peak_from': instance.peakFrom,
+      'peak_to': instance.peakTo,
+      'type': instance.type,
+      'title': instance.title,
+      'description': instance.description,
+      'slug': instance.slug,
+      'images': instance.images?.map((e) => e.toJson()).toList(),
+      'never_expires_flag': instance.neverExpiresFlag,
+      'terms_conditions': instance.termsConditions,
+      'link': instance.link,
+      'offer_languages':
+          instance.offerLanguages?.map((e) => e.toJson()).toList(),
+      'actions': instance.actions?.map((e) => e.toJson()).toList(),
+      'amount': instance.amount,
+      'partner_reward': instance.partnerReward,
+      'partner_reward_type': instance.partnerRewardType,
+      'redeem_for_gift_card': instance.redeemForGiftCard,
+      'reward_languages':
+          instance.rewardLanguages?.map((e) => e.toJson()).toList(),
+    };

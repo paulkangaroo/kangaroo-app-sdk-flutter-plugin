@@ -19,19 +19,25 @@ class UserRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
 
 
     static func getUserRewards(call: FlutterMethodCall) async -> String? {
-        let args = call.arguments
-    do {
 
-        var overrideHeaders: [String: String]?
 
-        if let myArgs = args as? [String: Any] {
-            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        
+
+
+        
+
+        guard let args = call.arguments else {
+            return nil
         }
-        else {
-            overrideHeaders = [:]
-        }
+        do {
+       if let myArgs = args as? [String: Any] {
+          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+                        guard let perPage = myArgs["perPage"] as? Int32 else {return nil}
 
-        let result = try await UserRewardsApi().getUserRewards(overrideHeaders: overrideHeaders).serializeUserRewardsApiResult()
+        let result = try await UserRewardsApi().getUserRewards(
+                overrideHeaders: overrideHeaders,
+                perPage: perPage
+           ).serializeUserRewardsApiResult()
 
         switch result {
             case let result as SerializedResultSuccess:
@@ -42,16 +48,12 @@ class UserRewardsHandler: NSObject, FlutterStreamHandler, PluginChannelHandler {
                 return result.error
             default:
                 return nil
+                }
             }
-        } catch {
+        }
+        catch {
             return nil
         }
-
-        
-
-
-        
-
         
         return nil
     }

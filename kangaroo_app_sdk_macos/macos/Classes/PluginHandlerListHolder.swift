@@ -17,6 +17,8 @@ class PluginHandlerListHolder {
 
     AlaCarteProductsHandler(),
 
+    GetAmazonProductVariantsHandler(),
+
     BannersHandler(),
 
     BusinessHandler(),
@@ -47,7 +49,13 @@ class PluginHandlerListHolder {
 
     GetNotificationPreferencesHandler(),
 
+    OrderStatusHandler(),
+
     PublicAlaCarteProductsHandler(),
+
+    PublicAmazonCatalogueHandler(),
+
+    GetPublicAmazonProductVariantsHandler(),
 
     PublicBannersHandler(),
 
@@ -81,6 +89,8 @@ class PluginHandlerListHolder {
 
     TransferMessagesHandler(),
 
+    UserAmazonCatalogueHandler(),
+
     UserBusinessAlaCarteProductsHandler(),
 
     UserBusinessBannersHandler(),
@@ -88,6 +98,8 @@ class PluginHandlerListHolder {
     UserBusinessFrequentBuyerProgramsHandler(),
 
     UserBusinessGiftCardsHandler(),
+
+    UserBusinessNotificationsHandler(),
 
     UserBusinessOffersHandler(),
 
@@ -132,6 +144,8 @@ class PluginHandlerListHolder {
     GiftCardPurchaseHandler(),
 
     TransferRecallHandler(),
+
+    RedeemAmazonCatalogueItemsHandler(),
 
     RedeemCouponsHandler(),
 

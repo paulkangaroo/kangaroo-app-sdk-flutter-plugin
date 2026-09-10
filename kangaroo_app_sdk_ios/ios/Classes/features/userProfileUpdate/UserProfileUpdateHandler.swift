@@ -22,49 +22,40 @@ class UserProfileUpdateHandler: NSObject, FlutterStreamHandler, PluginChannelHan
 
 
         
-
-
-        
-
-        guard let args = call.arguments else {
-            return nil
-        }
+    let args = call.arguments
         do {
-       if let myArgs = args as? [String: Any] {
-          let overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
-                        let firstName = myArgs["firstName"] as? String? ?? nil
-                let lastName = myArgs["lastName"] as? String? ?? nil
-                let birthDate = myArgs["birthDate"] as? String? ?? nil
-                let language = myArgs["language"] as? String? ?? nil
-                let gender = myArgs["gender"] as? String? ?? nil
-                let profilePhoto = myArgs["profilePhoto"] as? String? ?? nil
 
-        let result = try await UserProfileUpdateApi().updateUserProfile(
-                overrideHeaders: overrideHeaders,
-                firstName: firstName,
-                lastName: lastName,
-                birthDate: birthDate,
-                language: language,
-                gender: gender,
-                profilePhoto: profilePhoto
-           ).serializeUserProfileUpdateApiResult()
+        var overrideHeaders: [String: String]?
 
-        switch result {
-            case let result as SerializedResultSuccess:
-                return result.data
-            case let result as SerializedResultUnauthorizedError:
-                return result.error
-            case let result as SerializedResultUnknownError:
-                return result.error
-            default:
-                return nil
-                }
+        if let myArgs = args as? [String: Any] {
+            overrideHeaders = myArgs["overrideHeaders"] as? [String: String]
+        }
+        else {
+            overrideHeaders = [:]
+        }
+
+        let result = try await UserProfileUpdateApi().updateUserProfile(overrideHeaders: overrideHeaders, methods: call.arguments as! [String : Any]).serializeUserProfileUpdateApiResult()
+
+            switch result {
+                case let result as SerializedResultSuccess:
+                    return result.data
+                case let result as SerializedResultUnauthorizedError:
+                    return result.error
+                case let result as SerializedResultUnknownError:
+                    return result.error
+                default:
+                    return nil
             }
+
         }
         catch {
             return nil
         }
+
+
         
+
+
         return nil
     }
 

@@ -10,6 +10,7 @@ import com.kangaroo.flutterplugin.android.features.userRegistrationWithCrm.UserR
 import com.kangaroo.flutterplugin.android.features.userDelete.UserDeleteHandler
 import com.kangaroo.flutterplugin.android.features.depositGiftCard.GiftCardDepositHandler
 import com.kangaroo.flutterplugin.android.features.userAlaCarte.AlaCarteProductsHandler
+import com.kangaroo.flutterplugin.android.features.getAmazonProductVariants.GetAmazonProductVariantsHandler
 import com.kangaroo.flutterplugin.android.features.banners.BannersHandler
 import com.kangaroo.flutterplugin.android.features.business.BusinessHandler
 import com.kangaroo.flutterplugin.android.features.branches.BranchesHandler
@@ -25,7 +26,10 @@ import com.kangaroo.flutterplugin.android.features.draws.DrawsHandler
 import com.kangaroo.flutterplugin.android.features.frequentBuyerPrograms.FrequentBuyerProgramsHandler
 import com.kangaroo.flutterplugin.android.features.giftCards.GiftCardsHandler
 import com.kangaroo.flutterplugin.android.features.userNotificationPreferences.GetNotificationPreferencesHandler
+import com.kangaroo.flutterplugin.android.features.orderStatus.OrderStatusHandler
 import com.kangaroo.flutterplugin.android.features.publicALaCarteProducts.PublicAlaCarteProductsHandler
+import com.kangaroo.flutterplugin.android.features.publicAmazonCatalogue.PublicAmazonCatalogueHandler
+import com.kangaroo.flutterplugin.android.features.getPublicAmazonProductVariants.GetPublicAmazonProductVariantsHandler
 import com.kangaroo.flutterplugin.android.features.publicBanners.PublicBannersHandler
 import com.kangaroo.flutterplugin.android.features.publicBranches.PublicBranchesHandler
 import com.kangaroo.flutterplugin.android.features.publicBusinessSettings.PublicBusinessSettingsHandler
@@ -42,10 +46,12 @@ import com.kangaroo.flutterplugin.android.features.getSpinToWinPrizes.GetSpinToW
 import com.kangaroo.flutterplugin.android.features.strings.StringsHandler
 import com.kangaroo.flutterplugin.android.features.tiers.TiersHandler
 import com.kangaroo.flutterplugin.android.features.userTransferMessages.TransferMessagesHandler
+import com.kangaroo.flutterplugin.android.features.userAmazonCatalogue.UserAmazonCatalogueHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessAlaCarteProducts.UserBusinessAlaCarteProductsHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessBanners.UserBusinessBannersHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessFrequentBuyerPrograms.UserBusinessFrequentBuyerProgramsHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessGiftCards.UserBusinessGiftCardsHandler
+import com.kangaroo.flutterplugin.android.features.userBusinessNotifications.UserBusinessNotificationsHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessOffers.UserBusinessOffersHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessProducts.UserBusinessProductsHandler
 import com.kangaroo.flutterplugin.android.features.userBusinessProfile.UserBusinessProfileHandler
@@ -68,6 +74,7 @@ import com.kangaroo.flutterplugin.android.features.postOfferFacebookShare.OfferF
 import com.kangaroo.flutterplugin.android.features.publicDepositGiftCard.PublicDepositGiftCardHandler
 import com.kangaroo.flutterplugin.android.features.makeGiftCardPurchase.GiftCardPurchaseHandler
 import com.kangaroo.flutterplugin.android.features.userTransferRecall.TransferRecallHandler
+import com.kangaroo.flutterplugin.android.features.redeemAmazonCatalogueItem.RedeemAmazonCatalogueItemsHandler
 import com.kangaroo.flutterplugin.android.features.redeemCoupon.RedeemCouponsHandler
 import com.kangaroo.flutterplugin.android.features.redeemReward.RedeemRewardsHandler
 import com.kangaroo.flutterplugin.android.features.pushTokenRegistration.PushTokenRegistrationHandler
@@ -101,6 +108,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     AlaCarteProductsHandler(),
 
+    GetAmazonProductVariantsHandler(),
+
     BannersHandler(),
 
     BusinessHandler(),
@@ -131,7 +140,13 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     GetNotificationPreferencesHandler(),
 
+    OrderStatusHandler(),
+
     PublicAlaCarteProductsHandler(),
+
+    PublicAmazonCatalogueHandler(),
+
+    GetPublicAmazonProductVariantsHandler(),
 
     PublicBannersHandler(),
 
@@ -165,6 +180,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
 
     TransferMessagesHandler(),
 
+    UserAmazonCatalogueHandler(),
+
     UserBusinessAlaCarteProductsHandler(),
 
     UserBusinessBannersHandler(),
@@ -172,6 +189,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     UserBusinessFrequentBuyerProgramsHandler(),
 
     UserBusinessGiftCardsHandler(),
+
+    UserBusinessNotificationsHandler(),
 
     UserBusinessOffersHandler(),
 
@@ -216,6 +235,8 @@ val pluginHandlerList: List<PluginChannelHandler> = listOf(
     GiftCardPurchaseHandler(),
 
     TransferRecallHandler(),
+
+    RedeemAmazonCatalogueItemsHandler(),
 
     RedeemCouponsHandler(),
 

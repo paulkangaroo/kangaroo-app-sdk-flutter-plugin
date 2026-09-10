@@ -1,0 +1,1 @@
+export 'package:kangaroo_app_sdk_platform_interface/src/features/user_amazon_catalogue/user_amazon_catalogue_api_interface.dart';
