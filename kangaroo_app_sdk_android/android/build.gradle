@@ -16,7 +16,16 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
-        mavenLocal()
+        mavenLocal()   // keep first: local dev resolves without a token
+        // GitHub Packages hosts the proprietary Kangaroo SDK AARs (CI resolves
+        // here when mavenLocal() is empty; see files/github_packages_aar_publish.md).
+        maven {
+            url = uri("https://maven.pkg.github.com/paulkangaroo/kangaroo-app-sdk-flutter-plugin")
+            credentials {
+                username = System.getenv("GITHUB_PACKAGES_USER") ?: "codemagic"
+                password = System.getenv("GITHUB_PACKAGES_PAT") ?: ""
+            }
+        }
 //        maven { url "https://kotlin.bintray.com/kotlinx" }
         mavenCentral()
         google()
